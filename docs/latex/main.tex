@@ -216,7 +216,7 @@ Zdarzenia takie jak przyjęcie nowego towaru, sprzedaż produktu lub zmiana zapo
 Metoda \textit{respondToEvent()} klasy \textbf{Simulation} jest wywoływana, aby zareagować na każde zdarzenie. Może to obejmować aktualizację stanu magazynu, zamówienie nowego towaru, przesunięcie zasobów lub wysłanie powiadomień do administratorów.\par
 Obiekty klasy \textbf{Warehouse}, które są częścią \textit{listOfWarehouses} w \textbf{Simulation}, są aktualizowane w odpowiedzi na zdarzenia. Metody takie jak \textit{checkStatus()} i \textit{updateStatus()} są używane do monitorowania i modyfikacji stanu magazynu.\par
 Produkty reprezentowane przez obiekty klasy \textbf{Product} są sprzedawane i zarządzane poprzez metody takie jak \textit{sell(), updatePrice() i changeQuantity()}, które są wywoływane w odpowiedzi na zdarzenia sprzedaży.\par
-Na koniec symulacji, metoda \textit{generateReport()} klasy \textbf{Report} jest wywoływana, aby utworzyć raport z wynikami symulacji, takimi jak koszty operacyjne i zysk netto. Raporty mogą być szczegółowe dla magazynów \textbf{(WarehouseReport)} lub sprzedaży \textbf{(SalesReport)}.\par
+Na koniec epoki oraz symulacji, metoda \textit{generateReport()} klasy \textbf{Report} jest wywoływana, aby utworzyć raport z wynikami symulacji, takimi jak koszty operacyjne i zysk netto. Raporty mogą być szczegółowe dla magazynów \textbf{(WarehouseReport)} lub sprzedaży \textbf{(SalesReport)}.\par
 Po zakończeniu określonej liczby cykli, symulacja kończy działanie, a użytkownik otrzymuje końcowy raport z wynikami.
 
 \end{document}
