@@ -14,6 +14,17 @@ target_link_libraries(${ADD_UT_NAME}Test PRIVATE
     gmock
     ${ADD_UT_NAME}Lib
     ${ADD_UT_DEPENDS}
+    Qt6::Core
+    Qt6::Widgets
+    Qt6::Test
+    EventLib
+    ReportLib
+    SalesReportLib
+    SimulationLib
+    StorageLib
+    ProductLib
+    WarehouseLib
+    WarehouseReportLib
     )
 target_include_directories(${ADD_UT_NAME}Test PRIVATE ${INCLUDE_DIR} ${TEST_INCLUDE_DIR})
 add_test(NAME ${ADD_UT_NAME}Test COMMAND ${ADD_UT_NAME}Test)

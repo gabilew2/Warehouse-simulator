@@ -5,6 +5,8 @@ include(${CMAKE_BASE_LIST_DIR}/cmake/add_ut.cmake)
 
 set_property(GLOBAL PROPERTY ALL_TESTS_LIST)
 
+find_package(Qt6 REQUIRED COMPONENTS Widgets Test)
+
 add_subdirectory(Event)
 add_subdirectory(Product)
 add_subdirectory(Report)
