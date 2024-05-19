@@ -54,6 +54,17 @@ public:
      */
     status changeQuantity(int quantity);
 
+    /**
+     * @brief Reset the product ID.
+     *
+     * This method resets the static product ID to 0. It is useful for testing purposes
+     * to ensure that each test starts with a clean slate of product IDs.
+     */
+    static void resetProductId()
+    {
+        productId = 0;
+    }
+
     // Getters
     QString getName();  ///< Get the name of the product.
     double getPrice();  ///< Get the price of the product.

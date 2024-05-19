@@ -6,61 +6,61 @@ int Warehouse::warehouseId = 0;
 /**
  * @brief Construct a new Warehouse object.
  */
-Warehouse::Warehouse(QString location, double warehouseCapacity): Storage(0)
+Warehouse::Warehouse(QString location, double warehouseCapacity) : Storage(0)
 {
-    this -> location = location;
+    this->location = location;
 
-    if(warehouseCapacity >= 0)
+    if (warehouseCapacity >= 0)
     {
-        this -> warehouseCapacity = warehouseCapacity;
+        this->warehouseCapacity = warehouseCapacity;
     }
     else
     {
-        this -> warehouseCapacity = 0;
+        this->warehouseCapacity = 0;
     }
 }
 
 /**
-  * @brief Check the current status of the warehouse and updates the capacity
-  * attribute inherited from the Storage class.
-  */
+ * @brief Check the current status of the warehouse and update the capacity
+ * attribute inherited from the Storage class.
+ */
 storageStatus Warehouse::checkStatus()
 {
-    if(warehouseCapacity == 0)
+    if (warehouseCapacity == 0)
     {
         return EMPTY;
     }
 
-    int sumOfProductInstances = 0; ///<The total number of the items in warehause.
+    int sumOfProductInstances = 0; ///< The total number of items in the warehouse.
 
-    for(Product product : productList)
+    for (Product& product : productList)
     {
         sumOfProductInstances += product.getQuantity();
     }
 
-    if(sumOfProductInstances == 0)
+    if (capacity == 1)
     {
-        return EMPTY;
+        return FULLY;
     }
 
-    capacity = (sumOfProductInstances)/warehouseCapacity;
+    capacity = static_cast<double>(sumOfProductInstances) / warehouseCapacity;
 
     return checkCapacity();
 }
 
 /**
-  * @brief Update the storage capacity of the warehouse.
-  */
+ * @brief Update the storage capacity of the warehouse.
+ */
 status Warehouse::updateStatus(double newCapacity)
 {
-    double sumOfProductInstances; ///<The total number of the items in warehause.
+    double sumOfProductInstances; ///< The total number of items in the warehouse.
 
     sumOfProductInstances = capacity * warehouseCapacity;
 
-    if(newCapacity >= sumOfProductInstances)
+    if (newCapacity >= sumOfProductInstances)
     {
         warehouseCapacity = newCapacity;
-        capacity = (sumOfProductInstances)/warehouseCapacity;
+        capacity = sumOfProductInstances / warehouseCapacity;
         return SUCCESS;
     }
     else
@@ -96,7 +96,7 @@ status Warehouse::updatePrice(double newPrice, int productId)
 {
     bool productFound = false; ///< Contains false if the product was not found in the productList.
 
-    for(Product product : productList)
+    for(Product& product : productList)
     {
         if(product.productId == productId)
         {
@@ -106,7 +106,7 @@ status Warehouse::updatePrice(double newPrice, int productId)
 
     if(productFound == false)
     {
-        //return ERROR;
+        return ERROR;
     }
 }
 
@@ -121,12 +121,10 @@ status Warehouse::changeQuantity(int quantity, int productId)
 
     bool productFound = false; ///< Contains false if the product was not found in the productList.
 
-    for(Product product : productList)
+    for(Product& product : productList)
     {
         if(product.productId == productId)
         {
-            productFound = true;
-
             double currentQuantity = product.getQuantity(); ///< Current product quantity.
 
             if(sumOfProductInstances - currentQuantity + quantity <= warehouseCapacity)
@@ -163,7 +161,7 @@ status Warehouse::sell(int quantityToSell, int productId)
 {
     bool productFound = false; ///< Contains false if the product was not found in the productList.
 
-    for(Product product : productList)
+    for(Product& product : productList)
     {
         if(product.productId == productId)
         {
@@ -184,7 +182,7 @@ QString Warehouse::getName(int productId)
 {
     bool productFound = false; ///< Contains false if the product was not found in the productList.
 
-    for(Product product : productList)
+    for(Product& product : productList)
     {
         if(product.productId == productId)
         {
@@ -205,7 +203,7 @@ double Warehouse::getPrice(int productId)
 {
     bool productFound = false; ///< Contains false if the product was not found in the productList.
 
-    for(Product product : productList)
+    for(Product& product : productList)
     {
         if(product.productId == productId)
         {
@@ -226,7 +224,7 @@ int Warehouse::getQuantity(int productId)
 {
     bool productFound = false; ///< Contains false if the product was not found in the productList.
 
-    for(Product product : productList)
+    for(Product& product : productList)
     {
         if(product.productId == productId)
         {

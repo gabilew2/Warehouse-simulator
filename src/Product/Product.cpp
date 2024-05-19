@@ -8,9 +8,8 @@ int Product::productId = 0;
  */
 Product::Product(QString name, double price, int quantity)
 {
-    productId++;
+    ++productId;
 
-    for(int i =0; i < productId; i++ ) std::cout << '\a';
     this -> name = name;
 
     if(price < 0)

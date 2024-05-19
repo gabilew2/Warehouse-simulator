@@ -24,10 +24,10 @@ TEST(StorageTest, checkCapacityShouldReturnEmpty)
 TEST(StorageTest, checkCapacityShouldReturnAvailable)
 {
     Storage storage(0.01);
-    Storage storage2(25);
-    Storage storage3(50);
-    Storage storage4(75);
-    Storage storage5(99.99);
+    Storage storage2(0.25);
+    Storage storage3(0.50);
+    Storage storage4(0.75);
+    Storage storage5(0.9999);
 
     EXPECT_EQ(storage.checkCapacity(), AVAILABLE);
     EXPECT_EQ(storage2.checkCapacity(), AVAILABLE);

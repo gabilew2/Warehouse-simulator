@@ -17,7 +17,7 @@ storageStatus Storage::checkCapacity()
     {
         return EMPTY;
     }
-    else if(capacity > 0 && capacity < 100)
+    else if(capacity > 0 && capacity < 1)
     {
         return AVAILABLE;
     }
