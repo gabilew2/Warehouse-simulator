@@ -79,6 +79,11 @@ status Product::changeQuantity(int quantity)
     }
 }
 
+void Product::resetProductId()
+{
+    productId = 0;
+}
+
 // Getters implementation
 
 QString Product::getName()
