@@ -5,6 +5,7 @@
 enum storageStatus {EMPTY, AVAILABLE, FULLY};
 
 /**
+ * @class Storage
  * @brief The Storage class represents a storage unit with a certain capacity.
  *
  * This class provides a method to check the current status of the storage

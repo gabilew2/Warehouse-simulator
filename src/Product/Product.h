@@ -7,6 +7,7 @@
 enum status {SUCCESS, ERROR};
 
 /**
+ * @class Product
  * @brief The Product class represents a product with a name, price, and quantity.
  *
  * This class provides methods to sell the product, update its price, and change its quantity.

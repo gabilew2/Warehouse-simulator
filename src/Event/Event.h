@@ -4,7 +4,8 @@
 #include <QDateTime>
 
 /**
- * @brief The Event class represents an event in the department store simulation.
+ * @class Event
+ * @brief The Event class represents an event in the store simulation.
  *
  * This class is responsible for handling events that occur within the simulation.
  * Each event has a type and a timestamp indicating when it occurred.

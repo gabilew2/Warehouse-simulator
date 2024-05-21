@@ -6,6 +6,7 @@
 #include <QList>
 
 /**
+ * @class Warehouse
  * @brief The Warehouse class represents a warehouse with storage capacity.
  *
  * This class inherits from Storage and provides additional functionality
