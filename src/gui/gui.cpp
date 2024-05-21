@@ -27,3 +27,8 @@ void GUI::handleEvents(GUIEvent& event)
 {
     // Implementation of handleEvents method
 }
+void GUI::on_addbutton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
