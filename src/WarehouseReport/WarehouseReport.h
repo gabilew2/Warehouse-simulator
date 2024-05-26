@@ -1,7 +1,6 @@
 #ifndef WAREHOUSEREPORT_H
 #define WAREHOUSEREPORT_H
 
-#include <Warehouse/Warehouse.h>
 #include <Report/Report.h>
 #include <QList>
 
@@ -17,9 +16,20 @@ class WarehouseReport : Report
 private:
     int warehouseId; ///< Unique identifier for the warehouse.
     double capacity; ///< Total storage capacity of the warehouse.
-    QList<Product> productList; ///< List of products stored in the warehouse.
+    QList<Product*> productList; ///< List of products stored in the warehouse.
 
 public:
+    /**
+     * @brief Construct a new WarehouseReport object.
+     *
+     * @param warehouseId Unique identifier for the warehouse.
+     * @param capacity Total storage capacity of the warehouse.
+     * @param productList List of products stored in the warehouse.
+     * @param operationalCosts Operational costs of the store.
+     * @param netProfit Net profit of the store.
+     */
+    WarehouseReport(int warehouseId, double capacity, QList<Product*> productList, double operationalCosts, double netProfit);
+
     /**
      * @brief Generates a detailed warehouse inventory report.
      * @return A formatted string representing the warehouse inventory report.

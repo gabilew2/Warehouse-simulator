@@ -7,6 +7,9 @@
 #include <Event/Event.h>
 #include <QList>
 #include <QDateTime>
+#include <QFile>
+#include <QRandomGenerator>
+#include <iostream>
 
 /**
  * @class Simulation
@@ -26,6 +29,11 @@ private:
 
 public:
     /**
+     * @brief Construct a new Simulation object.
+     */
+    Simulation();
+
+    /**
      * @brief Conducts a simulation cycle, processing events for the current cycle.
      * @return Status of the cycle (success or failure).
      */
@@ -36,7 +44,7 @@ public:
      * @param event The event to handle.
      * @return Status of event handling (success or failure).
      */
-    status respondToEvent(const Event& event);
+    status respondToEvent(Event& event);
 
     /**
      * @brief Initiates the simulation by running the main loop.

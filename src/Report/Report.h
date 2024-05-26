@@ -4,6 +4,11 @@
 #include <QString>
 
 /**
+ * @brief Forward declaration of the Product class.
+ */
+class Product;
+
+/**
  * @class Report
  * @brief Represents a report in the store simulation.
  *
