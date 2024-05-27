@@ -96,6 +96,9 @@ public:
      */
     void handleEvents(GUIEvent& event);
 
+private slots:
+    void on_addbutton_clicked();
+
 private:
     Ui::GUI *ui; ///<   Pointer to the user interface setup.
 
