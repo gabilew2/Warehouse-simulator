@@ -1,0 +1,1 @@
+add_ut(NAME SalesReport SOURCES SalesReportTest.cpp)
