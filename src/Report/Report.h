@@ -4,11 +4,6 @@
 #include <QString>
 
 /**
- * @brief Forward declaration of the Product class.
- */
-class Product;
-
-/**
  * @class Report
  * @brief Represents a report in the store simulation.
  *
@@ -20,7 +15,23 @@ private:
     double operationalCosts; ///<   Operational costs of the store.
     double netProfit;        ///<   Net profit of the store.
 
+    friend class SalesReport; ///<  Grants SalesReport access to private members of Report.
+
 public:
+
+    /**
+     * @struct ProductReport
+     * @brief Represents a report for a single product.
+     *
+     * This structure holds the details of a product for reporting purposes, including its name, price, and quantity.
+     */
+    struct ProductReport
+    {
+        QString name;
+        double price;
+        int quantity;
+    };
+
     /**
      * @brief Construct a new Report object.
      *

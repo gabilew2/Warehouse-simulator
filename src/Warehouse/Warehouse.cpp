@@ -8,6 +8,7 @@ int Warehouse::warehouseId = 0;
  */
 Warehouse::Warehouse(QString location, double warehouseCapacity) : Storage(0)
 {
+    ++warehouseId;
     this->location = location;
 
     if (warehouseCapacity >= 0)

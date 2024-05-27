@@ -21,3 +21,4 @@ QString Report::generateReport()
 
     return report;
 }
+

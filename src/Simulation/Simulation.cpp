@@ -31,7 +31,16 @@ Simulation::Simulation()
             QString name = in.readLine();
             double price = in.readLine().toDouble();
             int quantity = in.readLine().toInt();
-            std::cout << selectWarehouse.addProduct(name, price, quantity) << std::endl;
+
+            if(selectWarehouse.addProduct(name, price, quantity) == SUCCESS)
+            {
+                std::cout << "SUCCESS" << std::endl;
+            }
+            else
+            {
+                std::cout << "ERROR" << std::endl;
+            }
+
         }
         else if(line.contains("Set currentCycle;"))
         {
@@ -43,6 +52,17 @@ Simulation::Simulation()
     }
 
     settings.close();
+
+    QFile file("SimulationReport.txt");
+
+    if(file.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        file.close();
+    }
+    else
+    {
+        std::cerr << "Error while trying to prepare a report file." << std::endl;
+    }
 
 }
 
@@ -61,14 +81,19 @@ void Simulation::run()
         exit(1);
     }
 
+    generateReport();
+
+    std::cout << "Generating cycles." << std::endl;
+
     while(currentCycle > 0)
     {
-        int numberOfEvents = QRandomGenerator::global()->generate();
+        int numberOfEvents = QRandomGenerator::global()->bounded(100);
         for(numberOfEvents; numberOfEvents > 0; --numberOfEvents)
         {
             events.append(Event::generateEvent("Sell product"));
         }
 
+        std::cout << "Processing cycle." << std::endl;
         processEvents();
 
         QString cycleReport = generateReport();
@@ -126,8 +151,8 @@ status Simulation::conductCycle()
  */
 status Simulation::respondToEvent(Event& event)
 {
-    int productId = QRandomGenerator::global()->bounded(1000);
-    int warehouseId = QRandomGenerator::global()->bounded(10);
+    int warehouseId = QRandomGenerator::global()->bounded(Warehouses.size());
+    int productId = QRandomGenerator::global()->bounded((int)Warehouses[warehouseId].getCurrentCapacity());
 
     if(event.getEventType() == "Sell product")
     {
@@ -155,22 +180,46 @@ status Simulation::respondToEvent(Event& event)
 QString Simulation::generateReport()
 {
     QString report;
+    int id = 0;
+
+    std::cout << "Generating report" << std::endl;
 
     for(Warehouse& warehouse : Warehouses)
     {
-        QList<Product> productList = warehouse.getProductList();
-        QList<Product*> productPointerList;
-        for (Product& product : productList)
+        QList<Report::ProductReport> productNames;
+        for(Product& product : warehouse.getProductList())
         {
-            productPointerList.append(&product);
+            Report::ProductReport productReport;
+            productReport.name = product.getName();
+            productReport.price = product.getPrice();
+            productReport.quantity = product.getQuantity();
+
+            productNames.append(productReport);
         }
 
-        WarehouseReport warehouseReport = WarehouseReport(warehouse.warehouseId, warehouse.getCurrentCapacity(), productPointerList, 0, 0);
+        static int salesId = 0;
+
+        WarehouseReport warehouseReport(id++, warehouse.getCurrentCapacity(), productNames, 0, 0);
         report.append(warehouseReport.generateReport());
-        SalesReport salesReport = SalesReport(warehouse.warehouseId, currentTime, productPointerList, 0, 0);
+        report.append("--------------------\n");
+        SalesReport salesReport(salesId++, currentTime, productNames, 0, 0);
         report.append(salesReport.generateReport());
+        report.append("--------------------\n");
+    }
+
+    QFile file("SimulationReport.txt");
+
+    if(file.open(QIODevice::Append | QIODevice::Text))
+    {
+        QTextStream out(&file);
+        out << report;
+        out << "\n\n";
+        file.close();
+    }
+    else
+    {
+        std::cerr << "Error while trying to write a report to file." << std::endl;
     }
 
     return report;
-
 }

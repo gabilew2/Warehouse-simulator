@@ -4,6 +4,7 @@
 #include <Report/Report.h>
 #include <QDateTime>
 #include <QList>
+#include <QFile>
 
 /**
  * @class SalesReport
@@ -17,7 +18,7 @@ class SalesReport : Report
 private:
     int SalesId; ///< Unique identifier for the sales report.
     QDateTime time; ///< The time when the report is generated.
-    QList<Product*> productList; ///< List of products included in the sales report.
+    QList<ProductReport> productList; ///< List of products included in the sales report.
 
 public:
     /**
@@ -29,7 +30,7 @@ public:
      * @param operationalCosts Operational costs of the store.
      * @param netProfit Net profit of the store.
      */
-    SalesReport(int SalesId, QDateTime time, QList<Product*> productList, double operationalCosts, double netProfit);
+    SalesReport(int SalesId, QDateTime time, QList<ProductReport> productList, double operationalCosts, double netProfit);
 
     /**
      * @brief Generates a detailed sales report.

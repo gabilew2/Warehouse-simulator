@@ -17,14 +17,14 @@ target_link_libraries(${ADD_UT_NAME}Test PRIVATE
     Qt6::Core
     Qt6::Widgets
     Qt6::Test
-    EventLib
-    ReportLib
-    SalesReportLib
     SimulationLib
-    StorageLib
-    ProductLib
     WarehouseLib
+    SalesReportLib
     WarehouseReportLib
+    EventLib
+    ProductLib
+    ReportLib
+    StorageLib
     )
 target_include_directories(${ADD_UT_NAME}Test PRIVATE ${INCLUDE_DIR} ${TEST_INCLUDE_DIR})
 add_test(NAME ${ADD_UT_NAME}Test COMMAND ${ADD_UT_NAME}Test)

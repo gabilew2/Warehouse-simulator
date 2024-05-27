@@ -21,14 +21,14 @@ target_compile_definitions(${CMAKE_PROJECT_NAME}
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE
     Threads::Threads
     GuiLib
+    SimulationLib
+    WarehouseLib
+    SalesReportLib
+    WarehouseReportLib
     EventLib
     ProductLib
     ReportLib
-    SalesReportLib
-    SimulationLib
     StorageLib
-    WarehouseLib
-    WarehouseReportLib
     Qt6::Widgets
 )
 

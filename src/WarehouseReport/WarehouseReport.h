@@ -16,7 +16,7 @@ class WarehouseReport : Report
 private:
     int warehouseId; ///< Unique identifier for the warehouse.
     double capacity; ///< Total storage capacity of the warehouse.
-    QList<Product*> productList; ///< List of products stored in the warehouse.
+    QList<ProductReport> productList; ///< List of products stored in the warehouse.
 
 public:
     /**
@@ -28,7 +28,7 @@ public:
      * @param operationalCosts Operational costs of the store.
      * @param netProfit Net profit of the store.
      */
-    WarehouseReport(int warehouseId, double capacity, QList<Product*> productList, double operationalCosts, double netProfit);
+    WarehouseReport(int warehouseId, double capacity, QList<ProductReport> productList, double operationalCosts, double netProfit);
 
     /**
      * @brief Generates a detailed warehouse inventory report.

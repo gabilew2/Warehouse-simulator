@@ -3,7 +3,7 @@
 /**
  * @brief Construct a new WarehouseReport object.
  */
-WarehouseReport::WarehouseReport(int warehouseId, double capacity, QList<Product*> productList, double operationalCosts, double netProfit) : Report(operationalCosts, netProfit)
+WarehouseReport::WarehouseReport(int warehouseId, double capacity, QList<ProductReport> productList, double operationalCosts, double netProfit) : Report(operationalCosts, netProfit)
 {
     this -> warehouseId = warehouseId;
     this -> capacity = capacity;
@@ -15,5 +15,19 @@ WarehouseReport::WarehouseReport(int warehouseId, double capacity, QList<Product
  */
 QString WarehouseReport::generateReport()
 {
-    return Report::generateReport();
+    QString report;
+    report += QString("Warehouse ID: %1\nCapacity: %2\n")
+                  .arg(warehouseId)
+                  .arg(capacity);
+
+    report += "Product List:\n";
+    for(ProductReport product : productList)
+    {
+        report += QString("Name: %1, Price: %2, Quantity: %3\n")
+                      .arg(product.name)
+                      .arg(product.price)
+                      .arg(product.quantity);
+    }
+
+    return report;
 }
