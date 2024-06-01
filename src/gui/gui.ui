@@ -20,7 +20,7 @@
       <item>
        <widget class="QStackedWidget" name="stackedWidget">
         <property name="currentIndex">
-         <number>2</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="page">
          <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -42,9 +42,9 @@
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout">
             <item>
-             <widget class="QPushButton" name="addbutton">
+             <widget class="QPushButton" name="pushButton_6">
               <property name="text">
-               <string>add/edit storage</string>
+               <string>PushButton</string>
               </property>
              </widget>
             </item>
@@ -56,6 +56,13 @@
              </widget>
             </item>
            </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="addbutton">
+            <property name="text">
+             <string>add/edit storage</string>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>
@@ -71,8 +78,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>1305</width>
-               <height>1167</height>
+               <width>1316</width>
+               <height>1140</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_5">
