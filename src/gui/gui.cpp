@@ -36,3 +36,23 @@ void GUI::on_back_to_menu_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
 }
+
+void GUI::on_back_to_menu_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void GUI::on_back_to_menu_3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void GUI::on_settings_button_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+void GUI::on_start_simulation_button_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(3);
+}

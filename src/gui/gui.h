@@ -99,6 +99,10 @@ public:
 private slots:
     void on_addbutton_clicked();
     void on_back_to_menu_clicked();
+    void on_back_to_menu_2_clicked();
+    void on_back_to_menu_3_clicked();
+    void on_settings_button_clicked();
+    void on_start_simulation_button_clicked();
 
 private:
     Ui::GUI *ui; ///<   Pointer to the user interface setup.
