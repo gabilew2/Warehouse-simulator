@@ -31,3 +31,8 @@ void GUI::on_addbutton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
 }
+
+void GUI::on_back_to_menu_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}

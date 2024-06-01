@@ -20,7 +20,7 @@
       <item>
        <widget class="QStackedWidget" name="stackedWidget">
         <property name="currentIndex">
-         <number>2</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="page">
          <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -141,7 +141,7 @@
                    </font>
                   </property>
                   <property name="text">
-                   <string>Storage</string>
+                   <string>Warehouse</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
