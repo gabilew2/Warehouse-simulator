@@ -98,6 +98,7 @@ public:
 
 private slots:
     void on_addbutton_clicked();
+    void on_back_to_menu_clicked();
 
 private:
     Ui::GUI *ui; ///<   Pointer to the user interface setup.

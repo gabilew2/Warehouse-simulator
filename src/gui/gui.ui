@@ -148,7 +148,7 @@
                    </font>
                   </property>
                   <property name="text">
-                   <string>Storage</string>
+                   <string>Warehouse</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
