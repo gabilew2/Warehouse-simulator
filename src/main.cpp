@@ -8,7 +8,6 @@
 #include <iostream>
 #include <QFile>
 #include <QTextStream>
-
 #include <QApplication>
 
 /**
@@ -154,6 +153,40 @@ int main(int argc, char *argv[])
         else if(strcmp(argv[arg], "--noconfig") == 0)
         {
             _config = false;
+        }
+        else if(strcmp(argv[arg], "--file") == 0)
+        {
+            // Check if there is a filename argument following the --file flag.
+            if(arg + 1 < argc)
+            {
+                QString inputFileName = argv[arg + 1];
+
+                // Check if the file exists.
+                if(QFile::exists(inputFileName))
+                {
+                    // Rename the existing configuration file if it exists.
+                    if(QFile::exists("settings.csv"))
+                    {
+                        QFile::rename("settings.csv", "settings_old.csv");
+                    }
+
+                    // Copy the new configuration file.
+                    QFile::copy(inputFileName, "settings.csv");
+
+                    // Skip the filename argument so it's not processed as another flag.
+                    ++arg;
+                }
+                else
+                {
+                    std::cerr << "The specified file does not exist: " << inputFileName.toStdString();
+                    return -1;
+                }
+            }
+            else
+            {
+                std::cerr << "No filename was specified after the --file flag.";
+                return -1;
+            }
         }
     }
 
