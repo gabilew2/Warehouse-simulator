@@ -13,9 +13,8 @@ enum storageStatus {EMPTY, AVAILABLE, FULLY};
  */
 class Storage
 {
-private:
+protected:
     double capacity;    ///< Storage fill level.
-    friend class Warehouse; ///< Grants Warehouse access to private members of Storage.
 public:
     /**
      * @brief Construct a new Storage object with a specified capacity.
