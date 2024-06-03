@@ -29,7 +29,11 @@ void GUI::handleEvents(GUIEvent& event)
 }
 void GUI::on_addbutton_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(1);
+    QMessageBox::StandardButton reply = QMessageBox::question(this,"Warehouse","Czy chcesz wczytać dane z pliku?",QMessageBox::Yes | QMessageBox::No);
+    if(reply== QMessageBox::No)
+    {
+        ui->stackedWidget->setCurrentIndex(1);
+    }
 }
 
 void GUI::on_back_to_menu_clicked()
