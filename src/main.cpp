@@ -29,9 +29,11 @@ void createConfigFile()
         QTextStream out(&file);
 
         // Write the CSV header.
-        out << "Type,Location/Capacity/Name/Price/Quantity/Cycles\n";
+        out << "Type,Location/Capacity/Name/Price/Quantity/Cycles,Seed\n";
 
         unsigned short option = 0;
+        unsigned int seed = 0; // Default seed value
+
         // Interactive menu to configure simulation settings.
         while(option != 9)
         {
@@ -40,8 +42,9 @@ void createConfigFile()
                       << "* 1. Add warehouse        *" << std::endl
                       << "* 2. Add product          *" << std::endl
                       << "* 3. Set number of cycles *" << std::endl
-                      << "* 4. Undo last change     *" << std::endl
-                      << "* 9. Run simulation       *" << std::endl
+                      << "* 4. Set event seed       *" << std::endl
+                      << "* 5. Undo last change     *" << std::endl
+                      << "* 9. Exit configuration   *" << std::endl
                       << "***************************" << std::endl;
 
             std::cout << "\n\nEnter option: "; std::cin >> option;
@@ -87,6 +90,15 @@ void createConfigFile()
             }
             case 4:
             {
+                std::cout << "\n\nEnter seed for event generation: "; std::cin >> seed;
+
+                // Append the seed to the configuration.
+                tempLine = "Seed,,,,," + QString::number(seed);
+                configLines.push_back(tempLine);
+                break;
+            }
+            case 5:
+            {
                 // Undo the last change.
                 if(!configLines.isEmpty())
                 {
@@ -102,12 +114,14 @@ void createConfigFile()
             case 9:
             {
                 // Exit the configuration menu.
+                std::cout << "\nExiting configuration.\n";
                 break;
             }
             default:
             {
                 // Handle invalid input.
-                std::cout << "\n\nWrong option. Please try again.";
+                std::cout << "\n\nInvalid option. Please try again.";
+                break;
             }
             }
         }
@@ -171,10 +185,13 @@ int main(int argc, char *argv[])
                     }
 
                     // Copy the new configuration file.
+                    QFile::remove("settings.csv");
                     QFile::copy(inputFileName, "settings.csv");
 
                     // Skip the filename argument so it's not processed as another flag.
                     ++arg;
+
+                    _config = false;
                 }
                 else
                 {

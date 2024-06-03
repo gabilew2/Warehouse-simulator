@@ -22,9 +22,9 @@ class Simulation
 {
 private:
     int currentCycle; ///< Current simulation cycle.
+    int seed; ///< Random number generator seed.
     QList<Event> events; ///< List of scheduled events.
     QDateTime currentTime; ///< Current simulation time.
-    QString eventAgenda; ///< Description of event schedule.
     QList<Warehouse> Warehouses; ///< List of warehouse objects.
 
 public:

@@ -17,6 +17,8 @@ Simulation::Simulation()
     }
     QTextStream in(&settings);
 
+    seed = 100;
+
     while(!in.atEnd())
     {
         QString line = in.readLine();
@@ -63,15 +65,27 @@ Simulation::Simulation()
         }
         else if(fields[0] == "Cycles")
         {
-            if(fields.size() < 2)
+            if(fields.size() < 5)
             {
                 std::cerr << "Error: Incomplete cycle data." << std::endl;
                 continue;
             }
             std::cout << "Setting currentCycle: ";
-            int currentCycle = fields[1].toInt();
+            int currentCycle = fields[4].toInt();
             this -> currentCycle = currentCycle;
             std::cout << currentCycle << std::endl;
+        }
+        else if(fields[0] == "Seed")
+        {
+            if(fields.size() < 6)
+            {
+                std::cerr << "Error: Incomplete seed data." << std::endl;
+                continue;
+            }
+            std::cout << "Setting seed: ";
+            int readSeed = fields[5].toInt();
+            this->seed = readSeed;
+            std::cout << readSeed << std::endl;
         }
     }
 
@@ -102,7 +116,7 @@ void Simulation::run()
         int numberOfEvents = QRandomGenerator::global()->bounded(100);
         for(numberOfEvents; numberOfEvents > 0; --numberOfEvents)
         {
-            events.append(Event::generateEvent("Sell product"));
+            events.append(Event::generateEvent("Sell product", seed));
         }
 
         std::cout << "Processing cycle." << std::endl;
