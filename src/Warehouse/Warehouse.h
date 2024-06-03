@@ -43,7 +43,7 @@ public:
      * @param newCapacity The new capacity of the warehouse.
      * @return status SUCCESS if the operation is successful, ERROR otherwise.
      */
-    status updateStatus(double newCapacity);
+    status updateStatus(int newCapacity);
 
     // Product operations
 

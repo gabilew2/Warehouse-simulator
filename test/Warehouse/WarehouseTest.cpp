@@ -32,12 +32,12 @@ TEST(WarehouseTest, checkStatusShouldReturnFully)
 {
     Product::resetProductId();
     Warehouse warehouse = Warehouse(QString::fromStdString("Lorem Ipsum"), 1);
-    warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 99.99, 1);
+    warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 100, 1);
     EXPECT_EQ(warehouse.checkStatus(), FULLY);
 
     warehouse.updateStatus(10);
-    warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 99.99, 8);
-    warehouse.changeQuantity(1, 2);
+    warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 100, 9);
+    warehouse.changeQuantity(2, 1);
     EXPECT_EQ(warehouse.checkStatus(), FULLY);
 }
 
@@ -53,7 +53,7 @@ TEST(WarehouseTest, checkStatusShouldReturnAvailable)
 
     warehouse.updateStatus(10);
     warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 99.99, 8);
-    warehouse.changeQuantity(0, 2);
+    warehouse.changeQuantity(2, 1);
     EXPECT_EQ(warehouse.checkStatus(), AVAILABLE);
 }
 
@@ -69,7 +69,7 @@ TEST(WarehouseTest, updateStatusShouldReturnSuccess)
     EXPECT_EQ(warehouse.updateStatus(567.97), SUCCESS);
 
     warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 99.99, 5);
-    EXPECT_EQ(warehouse.updateStatus(1), SUCCESS);
+    EXPECT_EQ(warehouse.updateStatus(1), ERROR);
 }
 
 /**
@@ -80,9 +80,8 @@ TEST(WarehouseTest, updateStatusShouldReturnError)
     Product::resetProductId();
     Warehouse warehouse = Warehouse(QString::fromStdString("Lorem Ipsum"), 567);
     EXPECT_EQ(warehouse.updateStatus(-1), ERROR);
-    EXPECT_EQ(warehouse.updateStatus(-0.3), ERROR);
 
-    warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 99.99, 5);
+    warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 100, 5);
     EXPECT_EQ(warehouse.updateStatus(1), ERROR);
 }
 

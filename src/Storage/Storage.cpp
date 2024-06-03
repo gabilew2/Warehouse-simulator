@@ -3,7 +3,7 @@
 /**
  * @brief Construct a new Storage object with a specified capacity.
  */
-Storage::Storage(double capacity)
+Storage::Storage(int capacity)
 {
     this -> capacity = capacity;
 }
@@ -11,13 +11,13 @@ Storage::Storage(double capacity)
 /**
  * @brief Check the current capacity status of the storage.
  */
-storageStatus Storage::checkCapacity()
+storageStatus Storage::checkCapacity(int totalCapacity)
 {
-    if(capacity == 0)
+    if (capacity == 0)
     {
         return EMPTY;
     }
-    else if(capacity > 0 && capacity < 1)
+    else if (capacity > 0 && capacity < totalCapacity)
     {
         return AVAILABLE;
     }

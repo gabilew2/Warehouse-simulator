@@ -15,32 +15,26 @@ TEST(StorageTest, itLives)
 TEST(StorageTest, checkCapacityShouldReturnEmpty)
 {
     Storage storage(0);
-    EXPECT_EQ(storage.checkCapacity(), EMPTY);
+    EXPECT_EQ(storage.checkCapacity(100), EMPTY);
 }
 
 /**
- * @brief Test to verify that Storage is AVAILABLE when initialized with capacity less than 100.
+ * @brief Test to verify that Storage is AVAILABLE when initialized with capacity less than total capacity.
  */
 TEST(StorageTest, checkCapacityShouldReturnAvailable)
 {
-    Storage storage(0.01);
-    Storage storage2(0.25);
-    Storage storage3(0.50);
-    Storage storage4(0.75);
-    Storage storage5(0.9999);
-
-    EXPECT_EQ(storage.checkCapacity(), AVAILABLE);
-    EXPECT_EQ(storage2.checkCapacity(), AVAILABLE);
-    EXPECT_EQ(storage3.checkCapacity(), AVAILABLE);
-    EXPECT_EQ(storage4.checkCapacity(), AVAILABLE);
-    EXPECT_EQ(storage5.checkCapacity(), AVAILABLE);
+    Storage storage(10);
+    EXPECT_EQ(storage.checkCapacity(100), AVAILABLE);
 }
 
 /**
- * @brief Test to verify that Storage is FULLY when initialized with capacity of 100 or more.
+ * @brief Test to verify that Storage is FULLY when initialized with capacity equal to or greater than total capacity.
  */
 TEST(StorageTest, checkCapacityShouldReturnFully)
 {
     Storage storage(100);
-    EXPECT_EQ(storage.checkCapacity(), FULLY);
+    EXPECT_EQ(storage.checkCapacity(100), FULLY);
+
+    Storage storage2(150);
+    EXPECT_EQ(storage2.checkCapacity(100), FULLY);
 }
