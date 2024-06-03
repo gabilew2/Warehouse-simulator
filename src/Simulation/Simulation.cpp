@@ -10,6 +10,10 @@ Simulation::Simulation()
     currentTime = QDateTime::currentDateTime();
 
     QFile settings("settings.csv");
+
+    QFile::rename("SimulationReport.csv", "SimulationReportOld.csv");
+    QFile::remove("SimulationReport.csv");
+
     if(!settings.open(QIODevice::ReadOnly | QIODevice::Text))
     {
         std::cerr << "Error: Can't open settings file." << std::endl;
@@ -211,9 +215,6 @@ QString Simulation::generateReport()
 
     std::cout << "Generating report" << std::endl;
 
-    // Headers for the CSV report
-    csvReport += "Warehouse ID,Capacity,Product Name,Price,Quantity\n";
-
     for(Warehouse& warehouse : Warehouses)
     {
         readableReport.append(QString("---- Warehouse ID: %1 ----\n").arg(id));
@@ -230,14 +231,6 @@ QString Simulation::generateReport()
             productReport.quantity = product.getQuantity();
 
             productNames.append(productReport);
-
-            // Append data to CSV report
-            csvReport += QString("%1,%2,%3,%4,%5\n")
-                             .arg(id)
-                             .arg(warehouse.getCurrentCapacity())
-                             .arg(product.getName())
-                             .arg(product.getPrice())
-                             .arg(product.getQuantity());
 
             // Append data to readable report
             readableReport.append(QString("%1 | %2 | %3\n")
@@ -256,6 +249,9 @@ QString Simulation::generateReport()
         SalesReport salesReport(salesId++, currentTime, productNames, 0, 0);
         readableReport.append(salesReport.generateReport());
         readableReport.append("--------------------\n");
+
+        csvReport.append(warehouseReport.generateReport());
+        csvReport.append(salesReport.generateReport());
     }
 
     // Display the readable report on the screen
@@ -264,9 +260,10 @@ QString Simulation::generateReport()
     // Save the CSV report to a file
     QFile csvFile("SimulationReport.csv");
 
-    if(csvFile.open(QIODevice::WriteOnly | QIODevice::Text))
+    if(csvFile.open(QIODevice::Append | QIODevice::Text))
     {
         QTextStream out(&csvFile);
+        out << "\n";
         out << csvReport;
         csvFile.close();
     }
