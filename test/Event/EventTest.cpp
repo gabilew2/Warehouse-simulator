@@ -14,7 +14,7 @@ TEST(EventTest, itLives)
  */
 TEST(EventTest, generateEventShouldReturnCorrectValue)
 {
-    Event event = Event::generateEvent("Init");
+    Event event = Event::generateEvent("Init", 100);
 
     EXPECT_FALSE(event.getEventType().isEmpty());
     EXPECT_TRUE(event.getTime() > QDateTime::currentDateTime());

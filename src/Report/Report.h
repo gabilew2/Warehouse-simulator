@@ -11,11 +11,9 @@
  */
 class Report
 {
-private:
+protected:
     double operationalCosts; ///<   Operational costs of the store.
     double netProfit;        ///<   Net profit of the store.
-
-    friend class SalesReport; ///<  Grants SalesReport access to private members of Report.
 
 public:
 

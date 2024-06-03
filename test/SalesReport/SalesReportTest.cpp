@@ -17,24 +17,24 @@ TEST(SalesReportTest, itLives)
 }
 
 /**
- * @brief Test case to verify that the generateReport method returns the correct report format.
+ * @brief Test case to verify that the SalesReport::generateReport method returns the correct CSV format.
  */
 TEST(SalesReportTest, generateReportShouldReturnCorrectValue)
 {
     QDateTime time = QDateTime::currentDateTime();
     QList<Report::ProductReport> productList =
-    {
-        {"Product1", 10.0, 5},
-        {"Product2", 20.0, 3}
-    };
+        {
+            {"Product1", 10.0, 5},
+            {"Product2", 20.0, 3}
+        };
 
     double operationalCosts = 5000.0;
     double netProfit = 10000.0;
     int salesId = 1;
 
     SalesReport report(salesId, time, productList, operationalCosts, netProfit);
-    QString generatedReport = report.generateReport();
+    QString generatedCSV = report.generateReport();
 
-    ASSERT_TRUE(generatedReport.contains(QString("Sales ID: %1").arg(salesId)));
-    ASSERT_TRUE(generatedReport.contains(QString("Time: %1").arg(time.toString())));
+    QString expectedCSVStart = QString("Sales ID,%1,Time,%2\n").arg(salesId).arg(time.toString("yyyy-MM-dd hh:mm:ss"));
+    ASSERT_TRUE(generatedCSV.startsWith(expectedCSVStart));
 }

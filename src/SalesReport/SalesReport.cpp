@@ -15,14 +15,14 @@ SalesReport::SalesReport(int SalesId, QDateTime time, QList<ProductReport> produ
  */
 QString SalesReport::generateReport()
 {
-    QString report = "";
-    report += QString("Sales ID: %1\nTime: %2\n")
+    QString report;
+    report += QString("Sales ID,%1,Time,%2\n")
                   .arg(SalesId)
-                  .arg(time.toString());
+                  .arg(time.toString("yyyy-MM-dd hh:mm:ss"));
 
-    report += "Sold Products:\n";
+    report += "Product Name,Price,Quantity Sold\n";
 
-    QFile configFile("settings.sim");
+    QFile configFile("settings.csv");
     if(!configFile.open(QIODevice::ReadOnly | QIODevice::Text))
     {
         report += "Cannot open config file.\n";
@@ -33,19 +33,23 @@ QString SalesReport::generateReport()
     QString line;
     QMap<QString, int> initialQuantities;
 
+    // Read the initial quantities from the CSV file.
     while(!in.atEnd())
     {
         line = in.readLine();
-        if(line.contains("Add product;"))
+        QStringList fields = line.split(',');
+
+        if(fields.isEmpty() || fields[0] != "Product")
         {
-            QString productName = in.readLine().trimmed();
-            in.readLine();
-            int quantity = in.readLine().toInt();
-            initialQuantities[productName] = quantity;
+            continue;
         }
+
+        QString productName = fields[1].trimmed();
+        int quantity = fields[3].toInt();
+        initialQuantities[productName] = quantity;
     }
 
-    for(ProductReport product : productList)
+    for(const ProductReport& product : productList)
     {
         int initialQuantity = initialQuantities.value(product.name, 0);
         int soldQuantity = initialQuantity - product.quantity;
@@ -54,10 +58,10 @@ QString SalesReport::generateReport()
 
         if(soldQuantity == 0)
         {
-            break;
+            continue;
         }
 
-        report += QString("Name: %1, Price: %2, Quantity Sold: %3\n")
+        report += QString("%1,%2,%3\n")
                       .arg(product.name)
                       .arg(product.price)
                       .arg(soldQuantity);
@@ -67,7 +71,7 @@ QString SalesReport::generateReport()
 
     netProfit -= operationalCosts;
 
-    report += "********************\n";
+    report += "Operational Costs,Net Profit\n";
     report += Report::generateReport();
 
     configFile.close();

@@ -9,28 +9,54 @@ Simulation::Simulation()
 
     currentTime = QDateTime::currentDateTime();
 
-    QFile settings("settings.sim");
-    if(!settings.open(QIODevice::ReadOnly | QIODevice::Text)) return;
+    QFile settings("settings.csv");
+
+    QFile::rename("SimulationReport.csv", "SimulationReportOld.csv");
+    QFile::remove("SimulationReport.csv");
+
+    if(!settings.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        std::cerr << "Error: Can't open settings file." << std::endl;
+        return;
+    }
     QTextStream in(&settings);
+
+    seed = 100;
 
     while(!in.atEnd())
     {
         QString line = in.readLine();
+        QStringList fields = line.split(',');
 
-        if(line.contains("Add warehouse;"))
+        if(fields.isEmpty())
         {
+            continue;
+        }
+
+        if(fields[0] == "Warehouse")
+        {
+            if(fields.size() < 3)
+            {
+                std::cerr << "Error: Incomplete warehouse data." << std::endl;
+                continue;
+            }
             std::cout << "Adding warehouse." << std::endl;
-            QString location = in.readLine();
-            double capacity = in.readLine().toDouble();
+            QString location = fields[1];
+            double capacity = fields[2].toDouble();
             Warehouses.append(Warehouse(location, capacity));
         }
-        else if(line.contains("Add product;"))
+        else if(fields[0] == "Product")
         {
+            if(fields.size() < 4)
+            {
+                std::cerr << "Error: Incomplete product data." << std::endl;
+                continue;
+            }
             std::cout << "Adding product: ";
             Warehouse& selectWarehouse = Warehouses.last();
-            QString name = in.readLine();
-            double price = in.readLine().toDouble();
-            int quantity = in.readLine().toInt();
+            QString name = fields[1];
+            double price = fields[2].toDouble();
+            int quantity = fields[3].toInt();
 
             if(selectWarehouse.addProduct(name, price, quantity) == SUCCESS)
             {
@@ -38,32 +64,36 @@ Simulation::Simulation()
             }
             else
             {
-                std::cout << "ERROR" << std::endl;
+                std::cerr << "ERROR: Unable to add product." << std::endl;
             }
-
         }
-        else if(line.contains("Set currentCycle;"))
+        else if(fields[0] == "Cycles")
         {
+            if(fields.size() < 5)
+            {
+                std::cerr << "Error: Incomplete cycle data." << std::endl;
+                continue;
+            }
             std::cout << "Setting currentCycle: ";
-            int currentCycle = in.readLine().toInt();
+            int currentCycle = fields[4].toInt();
             this -> currentCycle = currentCycle;
             std::cout << currentCycle << std::endl;
+        }
+        else if(fields[0] == "Seed")
+        {
+            if(fields.size() < 6)
+            {
+                std::cerr << "Error: Incomplete seed data." << std::endl;
+                continue;
+            }
+            std::cout << "Setting seed: ";
+            int readSeed = fields[5].toInt();
+            this->seed = readSeed;
+            std::cout << readSeed << std::endl;
         }
     }
 
     settings.close();
-
-    QFile file("SimulationReport.txt");
-
-    if(file.open(QIODevice::WriteOnly | QIODevice::Text))
-    {
-        file.close();
-    }
-    else
-    {
-        std::cerr << "Error while trying to prepare a report file." << std::endl;
-    }
-
 }
 
 /**
@@ -90,7 +120,7 @@ void Simulation::run()
         int numberOfEvents = QRandomGenerator::global()->bounded(100);
         for(numberOfEvents; numberOfEvents > 0; --numberOfEvents)
         {
-            events.append(Event::generateEvent("Sell product"));
+            events.append(Event::generateEvent("Sell product", seed));
         }
 
         std::cout << "Processing cycle." << std::endl;
@@ -179,13 +209,19 @@ status Simulation::respondToEvent(Event& event)
  */
 QString Simulation::generateReport()
 {
-    QString report;
+    QString readableReport;
+    QString csvReport;
     int id = 0;
 
     std::cout << "Generating report" << std::endl;
 
     for(Warehouse& warehouse : Warehouses)
     {
+        readableReport.append(QString("---- Warehouse ID: %1 ----\n").arg(id));
+        readableReport.append(QString("Capacity: %1\n").arg(warehouse.getCurrentCapacity()));
+        readableReport.append("Product Name | Price | Quantity\n");
+        readableReport.append("---------------------------------\n");
+
         QList<Report::ProductReport> productNames;
         for(Product& product : warehouse.getProductList())
         {
@@ -195,31 +231,46 @@ QString Simulation::generateReport()
             productReport.quantity = product.getQuantity();
 
             productNames.append(productReport);
+
+            // Append data to readable report
+            readableReport.append(QString("%1 | %2 | %3\n")
+                                      .arg(product.getName())
+                                      .arg(product.getPrice())
+                                      .arg(product.getQuantity()));
         }
+
+        readableReport.append("--------------------\n");
 
         static int salesId = 0;
 
         WarehouseReport warehouseReport(id++, warehouse.getCurrentCapacity(), productNames, 0, 0);
-        report.append(warehouseReport.generateReport());
-        report.append("--------------------\n");
+        readableReport.append(warehouseReport.generateReport());
+        readableReport.append("--------------------\n");
         SalesReport salesReport(salesId++, currentTime, productNames, 0, 0);
-        report.append(salesReport.generateReport());
-        report.append("--------------------\n");
+        readableReport.append(salesReport.generateReport());
+        readableReport.append("--------------------\n");
+
+        csvReport.append(warehouseReport.generateReport());
+        csvReport.append(salesReport.generateReport());
     }
 
-    QFile file("SimulationReport.txt");
+    // Display the readable report on the screen
+    std::cout << readableReport.toStdString() << std::endl;
 
-    if(file.open(QIODevice::Append | QIODevice::Text))
+    // Save the CSV report to a file
+    QFile csvFile("SimulationReport.csv");
+
+    if(csvFile.open(QIODevice::Append | QIODevice::Text))
     {
-        QTextStream out(&file);
-        out << report;
-        out << "\n\n";
-        file.close();
+        QTextStream out(&csvFile);
+        out << "\n";
+        out << csvReport;
+        csvFile.close();
     }
     else
     {
-        std::cerr << "Error while trying to write a report to file." << std::endl;
+        std::cerr << "Error while trying to write the CSV report to file." << std::endl;
     }
 
-    return report;
+    return readableReport;
 }

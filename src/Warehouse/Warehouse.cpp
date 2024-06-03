@@ -32,36 +32,39 @@ storageStatus Warehouse::checkStatus()
         return EMPTY;
     }
 
-    int sumOfProductInstances = 0; ///< The total number of items in the warehouse.
+    int sumOfProductInstances = 0;
 
     for (Product& product : productList)
     {
         sumOfProductInstances += product.getQuantity();
     }
 
-    if (capacity == 1)
+    if (sumOfProductInstances == warehouseCapacity)
     {
         return FULLY;
     }
 
-    capacity = static_cast<double>(sumOfProductInstances) / warehouseCapacity;
+    capacity = sumOfProductInstances;
 
-    return checkCapacity();
+    return checkCapacity(warehouseCapacity);
 }
 
 /**
  * @brief Update the storage capacity of the warehouse.
  */
-status Warehouse::updateStatus(double newCapacity)
+status Warehouse::updateStatus(int newCapacity)
 {
-    double sumOfProductInstances; ///< The total number of items in the warehouse.
+    if (newCapacity < 0)
+    {
+        return ERROR;
+    }
 
-    sumOfProductInstances = capacity * warehouseCapacity;
+    int sumOfProductInstances = capacity;
 
     if (newCapacity >= sumOfProductInstances)
     {
         warehouseCapacity = newCapacity;
-        capacity = sumOfProductInstances / warehouseCapacity;
+        capacity = sumOfProductInstances;
         return SUCCESS;
     }
     else
@@ -75,13 +78,12 @@ status Warehouse::updateStatus(double newCapacity)
   */
 status Warehouse::addProduct(QString name, double price, int quantity)
 {
-    double sumOfProductInstances; ///<The total number of the items in warehause.
-
-    sumOfProductInstances = capacity * warehouseCapacity;
+    int sumOfProductInstances = capacity;
 
     if(sumOfProductInstances + quantity <= warehouseCapacity && quantity >= 0 && price >= 0)
     {
         productList.append(Product(name, price, quantity));
+        capacity += quantity;
         return SUCCESS;
     }
     else
@@ -116,17 +118,13 @@ status Warehouse::updatePrice(double newPrice, int productId)
   */
 status Warehouse::changeQuantity(int quantity, int productId)
 {
-    double sumOfProductInstances; ///<The total number of the items in warehause.
-
-    sumOfProductInstances = capacity * warehouseCapacity;
-
-    bool productFound = false; ///< Contains false if the product was not found in the productList.
+    int sumOfProductInstances = capacity;
 
     for(Product& product : productList)
     {
         if(product.productId == productId)
         {
-            double currentQuantity = product.getQuantity(); ///< Current product quantity.
+            int currentQuantity = product.getQuantity();
 
             if(sumOfProductInstances - currentQuantity + quantity <= warehouseCapacity)
             {
@@ -134,7 +132,7 @@ status Warehouse::changeQuantity(int quantity, int productId)
 
                 if(Status == SUCCESS)
                 {
-                    capacity = (sumOfProductInstances - currentQuantity + quantity)/warehouseCapacity;
+                    capacity = sumOfProductInstances - currentQuantity + quantity;
                     return SUCCESS;
                 }
                 else
@@ -148,11 +146,7 @@ status Warehouse::changeQuantity(int quantity, int productId)
             }
         }
     }
-
-    if(productFound == false)
-    {
-        return ERROR;
-    }
+    return ERROR;
 }
 
 /**

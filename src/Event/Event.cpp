@@ -13,11 +13,11 @@ Event::Event(QString eventType, QDateTime time)
 /**
  * @brief Generates an event.
  */
-Event Event::generateEvent(QString eventType)
+Event Event::generateEvent(QString eventType, int seed)
 {
     QDateTime time = QDateTime::currentDateTime();
     // FIXME
-    time = time.addMSecs(QRandomGenerator::global()->bounded(100));
+    time = time.addMSecs(QRandomGenerator::global()->bounded(seed));
 
     return Event(eventType, time);
 }

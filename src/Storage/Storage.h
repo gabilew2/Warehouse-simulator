@@ -13,23 +13,23 @@ enum storageStatus {EMPTY, AVAILABLE, FULLY};
  */
 class Storage
 {
-private:
-    double capacity;    ///< Storage fill level.
-    friend class Warehouse; ///< Grants Warehouse access to private members of Storage.
+protected:
+    int capacity;    ///< Storage fill level.
 public:
     /**
      * @brief Construct a new Storage object with a specified capacity.
      *
-     * @param initialCapacity The initial capacity of the storage.
+     * @param capacity The initial capacity of the storage.
      */
-    Storage(double capacity);
+    Storage(int capacity);
 
     /**
      * @brief Check the current capacity status of the storage.
      *
+     * @param totalCapacity The maximum capacity of the storage.
      * @return storageStatus The status of the storage: EMPTY, AVAILABLE, or FULLY.
      */
-    storageStatus checkCapacity();
+    storageStatus checkCapacity(int totalCapacity);
 };
 
 #endif

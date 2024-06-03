@@ -30,9 +30,10 @@ public:
      *
      * This static method is responsible for creating a new event with a specific type and time.
      * @param eventType Type of the event.
+     * @param seed Random number generator seed.
      * @return Event& The generated event object.
      */
-    static Event generateEvent(QString eventType);
+    static Event generateEvent(QString eventType, int seed);
 
     //Getters
     QString getEventType(); ///< Get type of the event.

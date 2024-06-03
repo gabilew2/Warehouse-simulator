@@ -8,28 +8,31 @@
 #include <iostream>
 #include <QFile>
 #include <QTextStream>
-
 #include <QApplication>
 
 /**
  * @brief Creates a configuration file for the simulation.
  *
  * This function prompts the user to configure the simulation settings
- * and writes them to a file named "settings.sim".
+ * and writes them to a CSV file named "settings.csv".
  */
 void createConfigFile()
 {
-    QFile file("settings.sim");
+    QVector<QString> configLines;
+    QString tempLine;
 
-    // Attempt to open the file for writing text.
+    // Open a CSV file for writing.
+    QFile file("settings.csv");
+
     if(file.open(QIODevice::WriteOnly | QIODevice::Text))
     {
         QTextStream out(&file);
 
-        // Write the header to the config file.
-        out << "Warehouse-simulator config file. Do not edit!\n";
+        // Write the CSV header.
+        out << "Type,Location/Capacity/Name/Price/Quantity/Cycles,Seed\n";
 
         unsigned short option = 0;
+        unsigned int seed = 0; // Default seed value
 
         // Interactive menu to configure simulation settings.
         while(option != 9)
@@ -39,7 +42,9 @@ void createConfigFile()
                       << "* 1. Add warehouse        *" << std::endl
                       << "* 2. Add product          *" << std::endl
                       << "* 3. Set number of cycles *" << std::endl
-                      << "* 9. Run simulation       *" << std::endl
+                      << "* 4. Set event seed       *" << std::endl
+                      << "* 5. Undo last change     *" << std::endl
+                      << "* 9. Exit configuration   *" << std::endl
                       << "***************************" << std::endl;
 
             std::cout << "\n\nEnter option: "; std::cin >> option;
@@ -55,9 +60,8 @@ void createConfigFile()
                 std::cout << "Enter capacity of warehouse: "; std::cin >> capacity;
 
                 // Write warehouse details to the config file.
-                out << "Add warehouse;\n";
-                out << QString::fromStdString(location) << "\n";
-                out << capacity << "\n";
+                tempLine = "Warehouse," + QString::fromStdString(location) + "," + QString::number(capacity);
+                configLines.push_back(tempLine);
                 break;
             }
             case 2:
@@ -70,10 +74,8 @@ void createConfigFile()
                 std::cout << "Enter quantity: "; std::cin >> quantity;
 
                 // Write product details to the config file.
-                out << "Add product;\n";
-                out << QString::fromStdString(name) << "\n";
-                out << price << "\n";
-                out << quantity << "\n";
+                tempLine = "Product," + QString::fromStdString(name) + "," + QString::number(price) + "," + QString::number(quantity);
+                configLines.push_back(tempLine);
                 break;
             }
             case 3:
@@ -82,21 +84,52 @@ void createConfigFile()
                 std::cout << "\n\nEnter number of cycles: "; std::cin >> cycles;
 
                 // Write the number of cycles to the config file.
-                out << "Set currentCycle;\n";
-                out << cycles << "\n";
+                tempLine = "Cycles,,,," + QString::number(cycles);
+                configLines.push_back(tempLine);
+                break;
+            }
+            case 4:
+            {
+                std::cout << "\n\nEnter seed for event generation: "; std::cin >> seed;
+
+                // Append the seed to the configuration.
+                tempLine = "Seed,,,,," + QString::number(seed);
+                configLines.push_back(tempLine);
+                break;
+            }
+            case 5:
+            {
+                // Undo the last change.
+                if(!configLines.isEmpty())
+                {
+                    configLines.pop_back();
+                    std::cout << "\nLast change undone.\n";
+                }
+                else
+                {
+                    std::cout << "\nNo changes to undo.\n";
+                }
                 break;
             }
             case 9:
             {
                 // Exit the configuration menu.
+                std::cout << "\nExiting configuration.\n";
                 break;
             }
             default:
             {
                 // Handle invalid input.
-                std::cout << "\n\nWrong option. Please try again.";
+                std::cout << "\n\nInvalid option. Please try again.";
+                break;
             }
             }
+        }
+
+        // Write all lines to the CSV file.
+        for(const QString &line : configLines)
+        {
+            out << line << "\n";
         }
 
         // Close the file after writing.
@@ -134,6 +167,43 @@ int main(int argc, char *argv[])
         else if(strcmp(argv[arg], "--noconfig") == 0)
         {
             _config = false;
+        }
+        else if(strcmp(argv[arg], "--file") == 0)
+        {
+            // Check if there is a filename argument following the --file flag.
+            if(arg + 1 < argc)
+            {
+                QString inputFileName = argv[arg + 1];
+
+                // Check if the file exists.
+                if(QFile::exists(inputFileName))
+                {
+                    // Rename the existing configuration file if it exists.
+                    if(QFile::exists("settings.csv"))
+                    {
+                        QFile::rename("settings.csv", "settings_old.csv");
+                    }
+
+                    // Copy the new configuration file.
+                    QFile::remove("settings.csv");
+                    QFile::copy(inputFileName, "settings.csv");
+
+                    // Skip the filename argument so it's not processed as another flag.
+                    ++arg;
+
+                    _config = false;
+                }
+                else
+                {
+                    std::cerr << "The specified file does not exist: " << inputFileName.toStdString();
+                    return -1;
+                }
+            }
+            else
+            {
+                std::cerr << "No filename was specified after the --file flag.";
+                return -1;
+            }
         }
     }
 
