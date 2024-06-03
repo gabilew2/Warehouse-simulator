@@ -15,22 +15,24 @@
  * @brief Creates a configuration file for the simulation.
  *
  * This function prompts the user to configure the simulation settings
- * and writes them to a file named "settings.sim".
+ * and writes them to a CSV file named "settings.csv".
  */
 void createConfigFile()
 {
-    QFile file("settings.sim");
+    QVector<QString> configLines;
+    QString tempLine;
 
-    // Attempt to open the file for writing text.
+    // Open a CSV file for writing.
+    QFile file("settings.csv");
+
     if(file.open(QIODevice::WriteOnly | QIODevice::Text))
     {
         QTextStream out(&file);
 
-        // Write the header to the config file.
-        out << "Warehouse-simulator config file. Do not edit!\n";
+        // Write the CSV header.
+        out << "Type,Location/Capacity/Name/Price/Quantity/Cycles\n";
 
         unsigned short option = 0;
-
         // Interactive menu to configure simulation settings.
         while(option != 9)
         {
@@ -39,6 +41,7 @@ void createConfigFile()
                       << "* 1. Add warehouse        *" << std::endl
                       << "* 2. Add product          *" << std::endl
                       << "* 3. Set number of cycles *" << std::endl
+                      << "* 4. Undo last change     *" << std::endl
                       << "* 9. Run simulation       *" << std::endl
                       << "***************************" << std::endl;
 
@@ -55,9 +58,8 @@ void createConfigFile()
                 std::cout << "Enter capacity of warehouse: "; std::cin >> capacity;
 
                 // Write warehouse details to the config file.
-                out << "Add warehouse;\n";
-                out << QString::fromStdString(location) << "\n";
-                out << capacity << "\n";
+                tempLine = "Warehouse," + QString::fromStdString(location) + "," + QString::number(capacity);
+                configLines.push_back(tempLine);
                 break;
             }
             case 2:
@@ -70,10 +72,8 @@ void createConfigFile()
                 std::cout << "Enter quantity: "; std::cin >> quantity;
 
                 // Write product details to the config file.
-                out << "Add product;\n";
-                out << QString::fromStdString(name) << "\n";
-                out << price << "\n";
-                out << quantity << "\n";
+                tempLine = "Product," + QString::fromStdString(name) + "," + QString::number(price) + "," + QString::number(quantity);
+                configLines.push_back(tempLine);
                 break;
             }
             case 3:
@@ -82,8 +82,22 @@ void createConfigFile()
                 std::cout << "\n\nEnter number of cycles: "; std::cin >> cycles;
 
                 // Write the number of cycles to the config file.
-                out << "Set currentCycle;\n";
-                out << cycles << "\n";
+                tempLine = "Cycles,,,," + QString::number(cycles);
+                configLines.push_back(tempLine);
+                break;
+            }
+            case 4:
+            {
+                // Undo the last change.
+                if(!configLines.isEmpty())
+                {
+                    configLines.pop_back();
+                    std::cout << "\nLast change undone.\n";
+                }
+                else
+                {
+                    std::cout << "\nNo changes to undo.\n";
+                }
                 break;
             }
             case 9:
@@ -97,6 +111,12 @@ void createConfigFile()
                 std::cout << "\n\nWrong option. Please try again.";
             }
             }
+        }
+
+        // Write all lines to the CSV file.
+        for(const QString &line : configLines)
+        {
+            out << line << "\n";
         }
 
         // Close the file after writing.

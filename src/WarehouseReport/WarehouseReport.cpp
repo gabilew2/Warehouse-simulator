@@ -16,14 +16,14 @@ WarehouseReport::WarehouseReport(int warehouseId, double capacity, QList<Product
 QString WarehouseReport::generateReport()
 {
     QString report;
-    report += QString("Warehouse ID: %1\nCapacity: %2\n")
+    report += QString("Warehouse ID,%1,Capacity,%2\n")
                   .arg(warehouseId)
                   .arg(capacity);
 
-    report += "Product List:\n";
-    for(ProductReport product : productList)
+    report += "Product Name,Price,Quantity\n";
+    for(const ProductReport& product : productList)
     {
-        report += QString("Name: %1, Price: %2, Quantity: %3\n")
+        report += QString("%1,%2,%3\n")
                       .arg(product.name)
                       .arg(product.price)
                       .arg(product.quantity);

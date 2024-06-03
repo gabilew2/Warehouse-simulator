@@ -12,7 +12,7 @@ TEST(SimulationTest, itLives)
 /**
  * @brief Test to validate the processEvents method.
  */
-TEST(SimulationTest, ProcessEvents)
+TEST(SimulationTest, processEvents)
 {
     Simulation simulation;
     simulation.processEvents();
@@ -21,7 +21,7 @@ TEST(SimulationTest, ProcessEvents)
 /**
  * @brief Test to check if the conductCycle method processes the simulation cycle successfully.
  */
-TEST(SimulationTest, ConductCycle)
+TEST(SimulationTest, conductCycle)
 {
     Simulation simulation;
     status result = simulation.conductCycle();
@@ -29,11 +29,15 @@ TEST(SimulationTest, ConductCycle)
 }
 
 /**
- * @brief Test to ensure that the generateReport method produces a non-empty report.
+ * @brief Test to ensure that the generateReport method produces a readable report.
  */
-TEST(SimulationTest, GenerateReport)
+TEST(SimulationTest, generateReadableReport)
 {
     Simulation simulation;
     QString report = simulation.generateReport();
-    ASSERT_FALSE(report.isEmpty());
+    ASSERT_TRUE(report.contains("---- Warehouse ID:"));
+    ASSERT_TRUE(report.contains("Capacity:"));
+    ASSERT_TRUE(report.contains("Product Name | Price | Quantity"));
+    ASSERT_TRUE(report.contains("---------------------------------"));
 }
+
