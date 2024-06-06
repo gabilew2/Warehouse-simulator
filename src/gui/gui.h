@@ -2,7 +2,14 @@
 #define GUI_H
 
 #include <QMainWindow>
+#include "Simulation/Simulation.h"
 #include <QMessageBox>
+#include <QFileDialog>
+#include <QFile>
+#include <QTextStream>
+#include <QInputDialog>
+#include <QTimer>
+#include <QThread>
 
 /**
  * @typedef GUIEvent
@@ -34,6 +41,17 @@ enum GUIState {
     IDLE,    ///< The GUI is in an idle state, waiting for user interaction.
     ACTIVE,  ///< The GUI is actively engaged in processing an event.
     DISABLED ///< The GUI is disabled and not responding to user interactions.
+};
+
+class SimulationThread : public QThread
+{
+    Q_OBJECT
+public:
+    void run() override
+    {
+        Simulation simulation;
+        simulation.run();
+    }
 };
 
 namespace Ui {
@@ -104,7 +122,18 @@ private slots:
     void on_back_to_menu_3_clicked();
     void on_settings_button_clicked();
     void on_start_simulation_button_clicked();
+    void on_aboutButton_clicked();
+    void on_configFileButton_clicked();
+    void on_back_to_menu_7_clicked();
+    void on_start_button_clicked();
+    void on_addProductButton_clicked();
+    void on_removeButton_clicked();
 
+    void on_previousWarehouse_clicked();
+
+    void on_nextWarehouse_clicked();
+
+    void on_removeWarehouseButton_clicked();
 
 private:
     Ui::GUI *ui; ///<   Pointer to the user interface setup.
@@ -126,6 +155,32 @@ private:
      * depending on its state.
      */
     GUIState interfaceState;
+
+    struct Product
+    {
+        QString name;
+        double price;
+        int quantity;
+    };
+
+    struct Warehouse
+    {
+        int id;
+        int capacity;
+        QString name;
+        QList<Product> products;
+    };
+
+    QList<Warehouse> warehouses;
+    int currentWarehouseIndex = 0;
+
+    QString filename;
+    int seed = 10;
+    int cycles = 100;
+
+    void loadCurrentWarehouseData();
+    void setupUpdateTimer();
+    void updateTablesFromCSV();
 };
 
 #endif // GUI_H

@@ -16,7 +16,7 @@ WarehouseReport::WarehouseReport(int warehouseId, double capacity, QList<Product
 QString WarehouseReport::generateReport()
 {
     QString report;
-    report += QString("Warehouse ID,%1,Capacity,%2\n")
+    report += QString("Warehouse ID,Capacity\n%1,%2\n")
                   .arg(warehouseId)
                   .arg(capacity);
 

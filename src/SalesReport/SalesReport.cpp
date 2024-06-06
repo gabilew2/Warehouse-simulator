@@ -16,7 +16,7 @@ SalesReport::SalesReport(int SalesId, QDateTime time, QList<ProductReport> produ
 QString SalesReport::generateReport()
 {
     QString report;
-    report += QString("Sales ID,%1,Time,%2\n")
+    report += QString("Sales ID,Time\n%1,%2\n")
                   .arg(SalesId)
                   .arg(time.toString("yyyy-MM-dd hh:mm:ss"));
 
@@ -71,7 +71,6 @@ QString SalesReport::generateReport()
 
     netProfit -= operationalCosts;
 
-    report += "Operational Costs,Net Profit\n";
     report += Report::generateReport();
 
     configFile.close();

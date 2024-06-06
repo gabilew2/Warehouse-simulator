@@ -35,6 +35,6 @@ TEST(SalesReportTest, generateReportShouldReturnCorrectValue)
     SalesReport report(salesId, time, productList, operationalCosts, netProfit);
     QString generatedCSV = report.generateReport();
 
-    QString expectedCSVStart = QString("Sales ID,%1,Time,%2\n").arg(salesId).arg(time.toString("yyyy-MM-dd hh:mm:ss"));
+    QString expectedCSVStart = QString("Sales ID,Time\n%1,%2\n").arg(salesId).arg(time.toString("yyyy-MM-dd hh:mm:ss"));
     ASSERT_TRUE(generatedCSV.startsWith(expectedCSVStart));
 }

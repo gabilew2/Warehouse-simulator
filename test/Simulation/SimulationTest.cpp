@@ -29,15 +29,14 @@ TEST(SimulationTest, conductCycle)
 }
 
 /**
- * @brief Test to ensure that the generateReport method produces a readable report.
+ * @brief Test to ensure that the generateReport method produces a report.
  */
-TEST(SimulationTest, generateReadableReport)
+TEST(SimulationTest, generateReport)
 {
     Simulation simulation;
     QString report = simulation.generateReport();
-    ASSERT_TRUE(report.contains("---- Warehouse ID:"));
-    ASSERT_TRUE(report.contains("Capacity:"));
-    ASSERT_TRUE(report.contains("Product Name | Price | Quantity"));
-    ASSERT_TRUE(report.contains("---------------------------------"));
+    ASSERT_TRUE(report.contains("Warehouse ID,"));
+    ASSERT_TRUE(report.contains("Capacity"));
+    ASSERT_TRUE(report.contains("Product Name,Price,Quantity"));
 }
 

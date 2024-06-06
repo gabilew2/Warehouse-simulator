@@ -35,7 +35,7 @@ TEST(WarehouseReportTest, generateReportShouldReturnCorrectValue)
     WarehouseReport report(warehouseId, capacity, productList, operationalCosts, netProfit);
     QString generatedCSV = report.generateReport();
 
-    QString expectedCSVStart = QString("Warehouse ID,%1,Capacity,%2\nProduct Name,Price,Quantity\n").arg(warehouseId).arg(capacity);
+    QString expectedCSVStart = QString("Warehouse ID,Capacity\n%1,%2\nProduct Name,Price,Quantity\n").arg(warehouseId).arg(capacity);
     ASSERT_TRUE(generatedCSV.startsWith(expectedCSVStart));
 }
 

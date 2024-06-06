@@ -209,7 +209,6 @@ status Simulation::respondToEvent(Event& event)
  */
 QString Simulation::generateReport()
 {
-    QString readableReport;
     QString csvReport;
     int id = 0;
 
@@ -217,11 +216,6 @@ QString Simulation::generateReport()
 
     for(Warehouse& warehouse : Warehouses)
     {
-        readableReport.append(QString("---- Warehouse ID: %1 ----\n").arg(id));
-        readableReport.append(QString("Capacity: %1\n").arg(warehouse.getCurrentCapacity()));
-        readableReport.append("Product Name | Price | Quantity\n");
-        readableReport.append("---------------------------------\n");
-
         QList<Report::ProductReport> productNames;
         for(Product& product : warehouse.getProductList())
         {
@@ -231,31 +225,19 @@ QString Simulation::generateReport()
             productReport.quantity = product.getQuantity();
 
             productNames.append(productReport);
-
-            // Append data to readable report
-            readableReport.append(QString("%1 | %2 | %3\n")
-                                      .arg(product.getName())
-                                      .arg(product.getPrice())
-                                      .arg(product.getQuantity()));
         }
-
-        readableReport.append("--------------------\n");
 
         static int salesId = 0;
 
         WarehouseReport warehouseReport(id++, warehouse.getCurrentCapacity(), productNames, 0, 0);
-        readableReport.append(warehouseReport.generateReport());
-        readableReport.append("--------------------\n");
         SalesReport salesReport(salesId++, currentTime, productNames, 0, 0);
-        readableReport.append(salesReport.generateReport());
-        readableReport.append("--------------------\n");
 
         csvReport.append(warehouseReport.generateReport());
         csvReport.append(salesReport.generateReport());
     }
 
-    // Display the readable report on the screen
-    std::cout << readableReport.toStdString() << std::endl;
+    // Display the CSV report on the screen
+    std::cout << csvReport.toStdString() << std::endl;
 
     // Save the CSV report to a file
     QFile csvFile("SimulationReport.csv");
@@ -272,5 +254,5 @@ QString Simulation::generateReport()
         std::cerr << "Error while trying to write the CSV report to file." << std::endl;
     }
 
-    return readableReport;
+    return csvReport;
 }
