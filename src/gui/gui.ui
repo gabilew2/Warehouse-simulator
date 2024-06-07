@@ -20,7 +20,7 @@
       <item>
        <widget class="QStackedWidget" name="stackedWidget">
         <property name="currentIndex">
-         <number>3</number>
+         <number>2</number>
         </property>
         <widget class="QWidget" name="page">
          <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -96,7 +96,7 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>1346</width>
+               <width>1018</width>
                <height>1140</height>
               </rect>
              </property>
@@ -719,12 +719,12 @@
                     </column>
                     <column>
                      <property name="text">
-                      <string>Capacity</string>
+                      <string>Sold products</string>
                      </property>
                     </column>
                     <column>
                      <property name="text">
-                      <string>Total Capacity</string>
+                      <string>Capacity</string>
                      </property>
                     </column>
                     <column>

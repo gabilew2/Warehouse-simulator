@@ -29,7 +29,7 @@ void createConfigFile()
         QTextStream out(&file);
 
         // Write the CSV header.
-        out << "Type,Location/Capacity/Name/Price/Quantity/Cycles,Seed\n";
+        out << "Type,Location,Capacity,Name,Price,Quantity,Cycles,Seed\n";
 
         unsigned short option = 0;
         unsigned int seed = 0; // Default seed value
