@@ -1,3 +1,8 @@
+/**
+ * @file WarehouseReport.h
+ * @brief Header file of the WarehouseReport class.
+ */
+
 #ifndef WAREHOUSEREPORT_H
 #define WAREHOUSEREPORT_H
 
@@ -34,7 +39,7 @@ public:
      * @brief Generates a detailed warehouse inventory report.
      * @return A formatted string representing the warehouse inventory report.
      */
-    QString generateReport();
+    QString generateReport() const;
 };
 
 #endif

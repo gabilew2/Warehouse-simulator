@@ -1,3 +1,8 @@
+/**
+ * @file ReportTest.cpp
+ * @brief Source file of tests for the Report class.
+ */
+
 #include <gtest/gtest.h>
 #include "Report/Report.h"
 

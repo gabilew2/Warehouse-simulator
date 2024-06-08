@@ -92,7 +92,6 @@ Simulation::Simulation()
             std::cout << "Setting seed: ";
             int readSeed = fields[5].toInt();
             this -> seed = QRandomGenerator::global() -> generate()/readSeed;
-            randomGenerator = QRandomGenerator(seed);
             std::cout << readSeed << std::endl;
         }
     }
@@ -123,7 +122,8 @@ void Simulation::run()
 
     while(currentCycle > 0)
     {
-        int numberOfEvents = randomGenerator.bounded(seed);
+        int numberOfEvents = QRandomGenerator::global()->bounded(seed);
+
         for(int event = 0; event < numberOfEvents; ++event)
         {
             events.append(Event::generateEvent("Sell product", seed));
@@ -197,14 +197,14 @@ status Simulation::conductCycle()
  */
 status Simulation::respondToEvent(Event& event)
 {
-    int warehouseId = randomGenerator.bounded(Warehouses.size());
+    int warehouseId = QRandomGenerator::global() -> bounded(Warehouses.size());
     Warehouse& warehouse = Warehouses[warehouseId];
 
     if(event.getEventType() == "Sell product")
     {
         try
         {
-            int productId = randomGenerator.bounded(warehouse.getProductList().size()) + 1;
+            int productId = QRandomGenerator::global() -> bounded(warehouse.getProductList().size()) + 1;
             status result = warehouse.sell(1, productId);
             if(result == ERROR)
             {
@@ -212,9 +212,9 @@ status Simulation::respondToEvent(Event& event)
                 return ERROR;
             }
         }
-        catch (...)
+        catch (const std::exception& e)
         {
-            std::cerr << "Exception caught: Error while selling product." << std::endl;
+            std::cerr << "General Exception caught: " << e.what() << std::endl;
             return ERROR;
         }
     }
@@ -222,7 +222,7 @@ status Simulation::respondToEvent(Event& event)
     {
         try
         {
-            int productId = randomGenerator.bounded(warehouse.getProductList().size()) + 1;
+            int productId = QRandomGenerator::global() -> bounded(warehouse.getProductList().size()) + 1;
             Product& product = warehouse.getProductList()[productId];
             int additionalQuantity = 50;
             status result = warehouse.changeQuantity(product.getQuantity() + additionalQuantity, productId);
@@ -232,9 +232,9 @@ status Simulation::respondToEvent(Event& event)
                 return ERROR;
             }
         }
-        catch (...)
+        catch (const std::exception& e)
         {
-            std::cerr << "Exception caught: Error while adding product quantity." << std::endl;
+            std::cerr << "General Exception caught: " << e.what() << std::endl;
             return ERROR;
         }
     }
@@ -242,7 +242,7 @@ status Simulation::respondToEvent(Event& event)
     {
         try
         {
-            int productId = randomGenerator.bounded(warehouse.getProductList().size()) + 1;
+            int productId = QRandomGenerator::global() -> bounded(warehouse.getProductList().size()) + 1;
             Product& productToTransfer = warehouse.getProductList()[productId];
             QString productName = productToTransfer.getName();
 
@@ -283,9 +283,9 @@ status Simulation::respondToEvent(Event& event)
                 return ERROR;
             }
         }
-        catch (...)
+        catch (const std::exception& e)
         {
-            std::cerr << "Exception caught: Error while transferring product." << std::endl;
+            std::cerr << "General Exception caught: " << e.what() << std::endl;
             return ERROR;
         }
     }

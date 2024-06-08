@@ -1,3 +1,8 @@
+/**
+ * @file Report.h
+ * @brief Header file for the Report class.
+ */
+
 #ifndef REPORT_H
 #define REPORT_H
 
@@ -12,8 +17,8 @@
 class Report
 {
 private:
-    static double operationalCosts; ///<   Operational costs of the store.
-    static double netProfit;        ///<   Net profit of the store.
+    static double operationalCosts; ///< Operational costs of the store.
+    static double netProfit;        ///< Net profit of the store.
 
 public:
 
@@ -25,9 +30,9 @@ public:
      */
     struct ProductReport
     {
-        QString name;
-        double price;
-        int quantity;
+        QString name;   ///< Name of the product.
+        double price;   ///< Price of the product.
+        int quantity;   ///< Quantity of the product.
     };
 
     /**
@@ -44,15 +49,15 @@ public:
      * This method compiles the operational costs and net profits into a readable format.
      * @return QString A summary report of the store's financial status.
      */
-    QString generateReport();
+    QString generateReport() const;
 
     // Setters
-    static void setOperationalCosts(double operationalCost); ///< Set value of operationalCosts.
-    static void setNetProfit(double Profit);                 ///< Set value of netProfit.
+    static void setOperationalCosts(double costs); ///< Set the operational costs.
+    static void setNetProfit(double profit);       ///< Set the net profit.
 
-    //Getters
-    static double getOperationalCosts();          ///< Get value of operationalCosts.
-    static double getNetProfit();                 ///< Get value of netProfit.
+    // Getters
+    static double getOperationalCosts(); ///< Get the operational costs.
+    static double getNetProfit();        ///< Get the net profit.
 };
 
 #endif // REPORT_H

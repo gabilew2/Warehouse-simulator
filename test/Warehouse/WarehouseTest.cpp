@@ -1,3 +1,8 @@
+/**
+ * @file WarehouseTest.cpp
+ * @brief Source file of tests for the Warehouse class.
+ */
+
 #include <gtest/gtest.h>
 #include "Product/Product.h"
 #include "Warehouse/Warehouse.h"

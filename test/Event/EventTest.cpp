@@ -1,3 +1,8 @@
+/**
+ * @file EventTest.cpp
+ * @brief Source file of tests for the Event class.
+ */
+
 #include <gtest/gtest.h>
 #include "Event/Event.h"
 

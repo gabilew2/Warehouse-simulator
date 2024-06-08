@@ -1,3 +1,10 @@
+/**
+ * @file gui.h
+ * @brief Header file for the GUI class.
+ *
+ * Declares the GUI class and its members, which manage the user interface for the application.
+ */
+
 #ifndef GUI_H
 #define GUI_H
 
@@ -272,8 +279,8 @@ private:
     int currentWarehouseIndex = 0; ///< Index of the currently selected warehouse.
 
     QString filename; ///< Path to the configuration file.
-    int seed = 10;    ///< Seed value used for simulation randomness. Defoult: 10
-    int cycles = 100; ///< Number of cycles the simulation will run. Default: 100
+    int seed = 100;    ///< Seed value used for simulation randomness. Defoult: 100
+    int cycles = 10; ///< Number of cycles the simulation will run. Default: 10
 
     QTimer *timer; ///< Timer used for periodic updates during the simulation.
 

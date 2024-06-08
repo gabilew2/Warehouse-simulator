@@ -1,3 +1,8 @@
+/**
+ * @file Event.cpp
+ * @brief Source file of the Event class.
+ */
+
 #include "Event.h"
 #include <QRandomGenerator>
 
@@ -11,25 +16,36 @@ Event::Event(QString eventType, QDateTime time)
 }
 
 /**
- * @brief Generates an event.
+ * @brief Generates an event with a random time offset.
+ *
+ * @param eventType The type of the event to generate.
+ * @param seed The seed for the random number generator.
+ * @return A new Event instance with the specified type and a random time.
  */
 Event Event::generateEvent(QString eventType, int seed)
 {
-    QDateTime time = QDateTime::currentDateTime();
-    QRandomGenerator randomGenerator(seed);
-    time = time.addMSecs(randomGenerator.bounded(seed));
-
+    QDateTime time = QDateTime::currentDateTime().addMSecs(QRandomGenerator::global() -> bounded(seed));
     return Event(eventType, time);
 }
 
 // Getters implementation
 
-QString Event::getEventType()
+/**
+ * @brief Retrieves the type of the event.
+ *
+ * @return The event type as a QString.
+ */
+QString Event::getEventType() const
 {
     return eventType;
 }
 
-QDateTime Event::getTime()
+/**
+ * @brief Retrieves the timestamp of the event.
+ *
+ * @return The event time as a QDateTime.
+ */
+QDateTime Event::getTime() const
 {
     return time;
 }

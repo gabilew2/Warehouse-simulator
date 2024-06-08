@@ -1,3 +1,8 @@
+/**
+ * @file Warehouse.h
+ * @brief Header file of the Warehouse class.
+ */
+
 #ifndef WAREHOUSE_H
 #define WAREHOUSE_H
 
@@ -112,9 +117,9 @@ public:
 
 
     //Getters
-    QString getLocation();      ///< Get the location of the warehouse.
-    QList<Product> getProductList();     ///< Get the list of the products.
-    double getCurrentCapacity();         ///< Get the capacity of the warehouse.
+    QString getLocation() const;      ///< Get the location of the warehouse.
+    QList<Product> getProductList() const;     ///< Get the list of the products.
+    double getCurrentCapacity() const;         ///< Get the capacity of the warehouse.
 };
 
 #endif

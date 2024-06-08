@@ -1,3 +1,8 @@
+/**
+ * @file Storage.cpp
+ * @brief Source file of the Storage class.
+ */
+
 #include "Storage.h"
 
 /**
@@ -11,7 +16,7 @@ Storage::Storage(int capacity)
 /**
  * @brief Check the current capacity status of the storage.
  */
-storageStatus Storage::checkCapacity(int totalCapacity)
+storageStatus Storage::checkCapacity(int totalCapacity) const
 {
     if (capacity == 0)
     {

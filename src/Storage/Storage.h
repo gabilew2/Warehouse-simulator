@@ -1,3 +1,8 @@
+/**
+ * @file Storage.h
+ * @brief Header file of the Storage class.
+ */
+
 #ifndef STORAGE_H
 #define STORAGE_H
 
@@ -29,7 +34,7 @@ public:
      * @param totalCapacity The maximum capacity of the storage.
      * @return storageStatus The status of the storage: EMPTY, AVAILABLE, or FULLY.
      */
-    storageStatus checkCapacity(int totalCapacity);
+    storageStatus checkCapacity(int totalCapacity) const;
 };
 
 #endif

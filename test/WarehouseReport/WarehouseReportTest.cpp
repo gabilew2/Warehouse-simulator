@@ -1,3 +1,8 @@
+/**
+ * @file WarehouseReportTest.cpp
+ * @brief Source file of tests for the WarehouseReport class.
+ */
+
 #include <gtest/gtest.h>
 #include "WarehouseReport/WarehouseReport.h"
 #include <QDateTime>

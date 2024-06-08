@@ -1,3 +1,8 @@
+/**
+ * @file SalesReport.cpp
+ * @brief Source file for the SalesReport class.
+ */
+
 #include "SalesReport.h"
 
 /**
@@ -5,7 +10,7 @@
  */
 SalesReport::SalesReport(int SalesId, QDateTime time, QList<ProductReport> productList, double operationalCosts, double netProfit) : Report(operationalCosts, netProfit)
 {
-    this -> SalesId = SalesId;
+    this -> salesId = SalesId;
     this -> time = time;
     this -> productList = productList;
 }
@@ -13,11 +18,11 @@ SalesReport::SalesReport(int SalesId, QDateTime time, QList<ProductReport> produ
 /**
  * @brief Generates a detailed sales report.
  */
-QString SalesReport::generateReport()
+QString SalesReport::generateReport() const
 {
     QString report;
     report += QString("Sales ID,Time\n%1,%2\n")
-                  .arg(SalesId)
+                  .arg(salesId)
                   .arg(time.toString("yyyy-MM-dd hh:mm:ss"));
 
     report += "Product Name,Price,Quantity Sold\n";

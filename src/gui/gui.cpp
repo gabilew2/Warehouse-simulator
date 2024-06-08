@@ -1,3 +1,8 @@
+/**
+ * @file gui.cpp
+ * @brief Source file for the GUI class.
+ */
+
 #include "gui.h"
 #include "./ui_gui.h"
 

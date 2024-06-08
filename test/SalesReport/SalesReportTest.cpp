@@ -1,3 +1,8 @@
+/**
+ * @file SalesReportTest.cpp
+ * @brief Source file of tests for the SalesReport class.
+ */
+
 #include <gtest/gtest.h>
 #include "SalesReport/SalesReport.h"
 #include <QDateTime>

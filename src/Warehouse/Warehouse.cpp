@@ -1,3 +1,8 @@
+/**
+ * @file Warehouse.h
+ * @brief Source file of the Warehouse class.
+ */
+
 #include "Warehouse.h"
 
 /** Static variable initialization. */
@@ -239,7 +244,7 @@ int Warehouse::getQuantity(int productId)
 /**
   * @brief Get the location of the warehouse.
   */
-QString Warehouse::getLocation()
+QString Warehouse::getLocation() const
 {
     return location;
 }
@@ -247,7 +252,7 @@ QString Warehouse::getLocation()
 /**
   * @brief Get the list of the products stored in the warehouse.
   */
-QList<Product> Warehouse::getProductList()
+QList<Product> Warehouse::getProductList() const
 {
     return productList;
 }
@@ -255,7 +260,7 @@ QList<Product> Warehouse::getProductList()
 /**
   * @brief Get the current capacity of the warehouse.
   */
-double Warehouse::getCurrentCapacity()
+double Warehouse::getCurrentCapacity() const
 {
     return warehouseCapacity;
 }

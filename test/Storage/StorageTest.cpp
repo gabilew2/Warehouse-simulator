@@ -1,3 +1,8 @@
+/**
+ * @file StorageTest.cpp
+ * @brief Source file of tests for the Storage class.
+ */
+
 #include <gtest/gtest.h>
 #include "Storage/Storage.h"
 

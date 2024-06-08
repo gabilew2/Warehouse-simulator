@@ -1,3 +1,8 @@
+/**
+ * @file Product.h
+ * @brief Header file for the Product class.
+ */
+
 #ifndef PRODUCT_H
 #define PRODUCT_H
 
@@ -56,9 +61,9 @@ public:
     status changeQuantity(int quantity);
 
     // Getters
-    QString getName();  ///< Get the name of the product.
-    double getPrice();  ///< Get the price of the product.
-    int getQuantity();  ///< Get the quantity of the product.
+    QString getName() const;  ///< Get the name of the product.
+    double getPrice() const;  ///< Get the price of the product.
+    int getQuantity() const;  ///< Get the quantity of the product.
 };
 
-#endif
+#endif // PRODUCT_H

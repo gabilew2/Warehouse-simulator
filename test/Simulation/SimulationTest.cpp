@@ -1,3 +1,8 @@
+/**
+ * @file SimulationTest.cpp
+ * @brief Source file of tests for the Simulation class.
+ */
+
 #include <gtest/gtest.h>
 #include "Simulation/Simulation.h"
 

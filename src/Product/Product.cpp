@@ -83,17 +83,17 @@ status Product::changeQuantity(int quantity)
 
 // Getters implementation
 
-QString Product::getName()
+QString Product::getName() const
 {
     return name;
 }
 
-double Product::getPrice()
+double Product::getPrice() const
 {
     return price;
 }
 
-int Product::getQuantity()
+int Product::getQuantity() const
 {
     return quantity;
 }

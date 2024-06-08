@@ -1,3 +1,8 @@
+/**
+ * @file WarehouseReport.cpp
+ * @brief Source file of the WarehouseReport class.
+ */
+
 #include "WarehouseReport.h"
 
 /**
@@ -13,7 +18,7 @@ WarehouseReport::WarehouseReport(int warehouseId, double capacity, QList<Product
 /**
  * @brief Generates a detailed warehouse inventory report.
  */
-QString WarehouseReport::generateReport()
+QString WarehouseReport::generateReport() const
 {
     QString report;
     report += QString("Warehouse ID,Capacity\n%1,%2\n")

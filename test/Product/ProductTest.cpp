@@ -1,3 +1,8 @@
+/**
+ * @file ProductTest.cpp
+ * @brief Source file of tests for the Product class.
+ */
+
 #include <gtest/gtest.h>
 #include "Product/Product.h"
 
