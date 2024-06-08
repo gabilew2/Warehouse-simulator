@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_sales_report_8cpp" kind="file" language="C++">
+    <compoundname>SalesReport.cpp</compoundname>
+    <includes refid="_sales_report_8h" local="yes">SalesReport.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>Report/Report.h</label>
+        <link refid="_report_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/SalesReport/SalesReport.cpp</label>
+        <link refid="_sales_report_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SalesReport.h</label>
+        <link refid="_sales_report_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QDateTime</label>
+      </node>
+      <node id="6">
+        <label>QList</label>
+      </node>
+      <node id="4">
+        <label>QString</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Source file for the <ref refid="class_sales_report" kindref="compound">SalesReport</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_sales_report_8h" kindref="compound">SalesReport.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_sales_report_1a2bd4ee648c88804b8bbb581d1626c49f" refkind="member"><highlight class="normal"><ref refid="class_sales_report_1a2bd4ee648c88804b8bbb581d1626c49f" kindref="member">SalesReport::SalesReport</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>SalesId,<sp/>QDateTime<sp/>time,<sp/>QList&lt;ProductReport&gt;<sp/>productList,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>operationalCosts,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>netProfit)<sp/>:<sp/><ref refid="class_report" kindref="compound">Report</ref>(operationalCosts,<sp/>netProfit)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>salesId<sp/>=<sp/>SalesId;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>time<sp/>=<sp/>time;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>productList<sp/>=<sp/>productList;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_sales_report_1adbcc82fb8fa70e87cd4f12bf4f3537ae" refkind="member"><highlight class="normal">QString<sp/><ref refid="class_sales_report_1adbcc82fb8fa70e87cd4f12bf4f3537ae" kindref="member">SalesReport::generateReport</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="22"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>report;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>report<sp/>+=<sp/>QString(</highlight><highlight class="stringliteral">&quot;Sales<sp/>ID,Time\n%1,%2\n&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.arg(salesId)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.arg(time.toString(</highlight><highlight class="stringliteral">&quot;yyyy-MM-dd<sp/>hh:mm:ss&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>report<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;Product<sp/>Name,Price,Quantity<sp/>Sold\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_report_1_1_product_report" kindref="compound">ProductReport</ref>&amp;<sp/>product<sp/>:<sp/>productList)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>initialQuantity<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>soldQuantity<sp/>=<sp/>abs(initialQuantity<sp/>-<sp/>product.quantity);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>initialQuantity<sp/>=<sp/>soldQuantity;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(soldQuantity<sp/>&lt;=<sp/>0)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>report<sp/>+=<sp/>QString(</highlight><highlight class="stringliteral">&quot;%1,%2,%3\n&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.arg(product.name)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.arg(product.price)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.arg(soldQuantity);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_report_1a4fe97f7f77d99b1e925c6024ed7c3913" kindref="member">setNetProfit</ref>(<ref refid="class_report_1af98f7f1cb07d06b29c081974cfc9a830" kindref="member">getNetProfit</ref>()+product.price<sp/>*<sp/>soldQuantity);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_report_1a4fe97f7f77d99b1e925c6024ed7c3913" kindref="member">setNetProfit</ref>(<ref refid="class_report_1af98f7f1cb07d06b29c081974cfc9a830" kindref="member">getNetProfit</ref>()-<ref refid="class_report_1a0280b260884973ffbb4ca95c438f30a6" kindref="member">getOperationalCosts</ref>());</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>report<sp/>+=<sp/><ref refid="class_report_1aab56d11c88e240affbc4b147474d4363" kindref="member">Report::generateReport</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_report_1a4fe97f7f77d99b1e925c6024ed7c3913" kindref="member">setNetProfit</ref>(<ref refid="class_report_1af98f7f1cb07d06b29c081974cfc9a830" kindref="member">getNetProfit</ref>()+<ref refid="class_report_1a0280b260884973ffbb4ca95c438f30a6" kindref="member">getOperationalCosts</ref>());</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>report;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/SalesReport/SalesReport.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gui_8h" xml:lang="en-US">
+<title>src/gui/gui.h File Reference</title>
+<indexterm><primary>src/gui/gui.h</primary></indexterm>
+<para>
+
+<para>Header file for the <link linkend="_class_g_u_i">GUI</link> class. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;QMainWindow&gt;<?linebreak?>#include &quot;Simulation/Simulation.h&quot;<?linebreak?>#include &lt;QMessageBox&gt;<?linebreak?>#include &lt;QFileDialog&gt;<?linebreak?>#include &lt;QFile&gt;<?linebreak?>#include &lt;QTextStream&gt;<?linebreak?>#include &lt;QInputDialog&gt;<?linebreak?>#include &lt;QTimer&gt;<?linebreak?>#include &lt;QThread&gt;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_simulation_thread">SimulationThread</link></para>
+
+<para>The <link linkend="_class_simulation_thread">SimulationThread</link> class is responsible for running the simulation in a separate thread. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_u_i">GUI</link></para>
+
+<para>The <link linkend="_class_g_u_i">GUI</link> class inherits from QMainWindow and represents the main window of the application. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_ui">Ui</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_gui_8h_1a4bf30075a0d0136f8daa83c001a2d75e">GUIEvent</link> = QEvent</para>
+
+<para>Alias for QEvent representing <link linkend="_class_g_u_i">GUI</link> events. </para>
+</listitem>
+            <listitem><para>using <link linkend="_gui_8h_1a41dc4eccf37447afba3e984031346842">GUIElement</link> = QWidget</para>
+
+<para>Alias for QWidget representing <link linkend="_class_g_u_i">GUI</link> elements. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file for the <link linkend="_class_g_u_i">GUI</link> class. </para>
+
+<para>Declares the <link linkend="_class_g_u_i">GUI</link> class and its members, which manage the user interface for the application. </para>
+<para>
+Definition in file <link linkend="_gui_8h_source">gui.h</link>.</para>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_gui_8h_1a41dc4eccf37447afba3e984031346842"/><section>
+    <title>GUIElement</title>
+<indexterm><primary>GUIElement</primary><secondary>gui.h</secondary></indexterm>
+<indexterm><primary>gui.h</primary><secondary>GUIElement</secondary></indexterm>
+<para><computeroutput><link linkend="_gui_8h_1a41dc4eccf37447afba3e984031346842">GUIElement</link> = QWidget</computeroutput></para><para>
+
+<para>Alias for QWidget representing <link linkend="_class_g_u_i">GUI</link> elements. </para>
+</para>
+
+<para>GUIElement is an alias for QWidget and represents the basic unit of user interface elements in Qt. It can be used to refer to any widget that is part of the <link linkend="_class_g_u_i">GUI</link>, such as buttons, labels, text fields, etc. </para>
+<para>
+Definition at line <link linkend="_gui_8h_source_1l00038">38</link> of file <link linkend="_gui_8h_source">gui.h</link>.</para>
+</section>
+<anchor xml:id="_gui_8h_1a4bf30075a0d0136f8daa83c001a2d75e"/><section>
+    <title>GUIEvent</title>
+<indexterm><primary>GUIEvent</primary><secondary>gui.h</secondary></indexterm>
+<indexterm><primary>gui.h</primary><secondary>GUIEvent</secondary></indexterm>
+<para><computeroutput><link linkend="_gui_8h_1a4bf30075a0d0136f8daa83c001a2d75e">GUIEvent</link> = QEvent</computeroutput></para><para>
+
+<para>Alias for QEvent representing <link linkend="_class_g_u_i">GUI</link> events. </para>
+</para>
+
+<para>GUIEvent is an alias for QEvent and is used to handle all user interactions with the graphical user interface, such as mouse clicks, key presses, and more. </para>
+<para>
+Definition at line <link linkend="_gui_8h_source_1l00028">28</link> of file <link linkend="_gui_8h_source">gui.h</link>.</para>
+</section>
+</section>
+</section>

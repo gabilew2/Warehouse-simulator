@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__sales_report_8h_source" xml:lang="en-US">
+<title>SalesReport.h</title>
+<indexterm><primary>src/SalesReport/SalesReport.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__sales_report_8h_source_1l00001"/>00001 
+<anchor xml:id="__sales_report_8h_source_1l00006"/>00006 <emphasis role="preprocessor">#ifndef&#32;SALESREPORT_H</emphasis>
+<anchor xml:id="__sales_report_8h_source_1l00007"/>00007 <emphasis role="preprocessor">#define&#32;SALESREPORT_H</emphasis>
+<anchor xml:id="__sales_report_8h_source_1l00008"/>00008 
+<anchor xml:id="__sales_report_8h_source_1l00009"/>00009 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__report_8h">Report/Report.h</link>&quot;</emphasis>
+<anchor xml:id="__sales_report_8h_source_1l00010"/>00010 <emphasis role="preprocessor">#include&#32;&lt;QDateTime&gt;</emphasis>
+<anchor xml:id="__sales_report_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&lt;QList&gt;</emphasis>
+<anchor xml:id="__sales_report_8h_source_1l00012"/>00012 
+<anchor xml:id="__sales_report_8h_source_1l00020"/><link linkend="_class_sales_report">00020</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_sales_report">SalesReport</link>&#32;:&#32;<link linkend="_class_report">Report</link>
+<anchor xml:id="__sales_report_8h_source_1l00021"/>00021 {
+<anchor xml:id="__sales_report_8h_source_1l00022"/>00022 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="__sales_report_8h_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;salesId;&#32;
+<anchor xml:id="__sales_report_8h_source_1l00024"/>00024 &#32;&#32;&#32;&#32;QDateTime&#32;time;&#32;
+<anchor xml:id="__sales_report_8h_source_1l00025"/>00025 &#32;&#32;&#32;&#32;QList&lt;ProductReport&gt;&#32;productList;&#32;
+<anchor xml:id="__sales_report_8h_source_1l00026"/>00026 
+<anchor xml:id="__sales_report_8h_source_1l00027"/>00027 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__sales_report_8h_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<link linkend="_class_sales_report_1a2bd4ee648c88804b8bbb581d1626c49f">SalesReport</link>(<emphasis role="keywordtype">int</emphasis>&#32;salesId,&#32;QDateTime&#32;time,&#32;QList&lt;ProductReport&gt;&#32;productList,&#32;<emphasis role="keywordtype">double</emphasis>&#32;operationalCosts,&#32;<emphasis role="keywordtype">double</emphasis>&#32;netProfit);
+<anchor xml:id="__sales_report_8h_source_1l00038"/>00038 
+<anchor xml:id="__sales_report_8h_source_1l00043"/>00043 &#32;&#32;&#32;&#32;QString&#32;<link linkend="_class_sales_report_1adbcc82fb8fa70e87cd4f12bf4f3537ae">generateReport</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="__sales_report_8h_source_1l00044"/>00044 };
+<anchor xml:id="__sales_report_8h_source_1l00045"/>00045 
+<anchor xml:id="__sales_report_8h_source_1l00046"/>00046 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;SALESREPORT_H</emphasis>
+</programlisting></section>

@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="struct_g_u_i_1_1_product" kind="struct" language="C++" prot="private">
+    <compoundname>GUI::Product</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_g_u_i_1_1_product_1a21a971b640f109fd21c506a4c41bab01" prot="public" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString GUI::Product::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>GUI::Product::name</qualifiedname>
+        <briefdescription>
+<para>Name of the product. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="258" column="17" bodyfile="src/gui/gui.h" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_g_u_i_1_1_product_1ab5d9c7e45610a3b93a415ff98c8850c5" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GUI::Product::price</definition>
+        <argsstring></argsstring>
+        <name>price</name>
+        <qualifiedname>GUI::Product::price</qualifiedname>
+        <briefdescription>
+<para>Price per unit of the product. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="259" column="16" bodyfile="src/gui/gui.h" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_g_u_i_1_1_product_1a14d56d2e7e91f279e14ad6a126823bfb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GUI::Product::quantity</definition>
+        <argsstring></argsstring>
+        <name>quantity</name>
+        <qualifiedname>GUI::Product::quantity</qualifiedname>
+        <briefdescription>
+<para>Quantity of the product available. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="260" column="13" bodyfile="src/gui/gui.h" bodystart="260" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents a product with a name, price, and quantity. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This structure is used to store information about a product, including its name, price per unit, and the quantity available in the warehouse. </para>
+    </detaileddescription>
+    <location file="src/gui/gui.h" line="256" column="5" bodyfile="src/gui/gui.h" bodystart="257" bodyend="261"/>
+    <listofallmembers>
+      <member refid="struct_g_u_i_1_1_product_1a21a971b640f109fd21c506a4c41bab01" prot="public" virt="non-virtual"><scope>GUI::Product</scope><name>name</name></member>
+      <member refid="struct_g_u_i_1_1_product_1ab5d9c7e45610a3b93a415ff98c8850c5" prot="public" virt="non-virtual"><scope>GUI::Product</scope><name>price</name></member>
+      <member refid="struct_g_u_i_1_1_product_1a14d56d2e7e91f279e14ad6a126823bfb" prot="public" virt="non-virtual"><scope>GUI::Product</scope><name>quantity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_e61c19fe538542bbffa80d70b1734032" xml:lang="en-US">
+<title>src/Storage Directory Reference</title>
+<indexterm><primary>src/Storage Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__storage_8cpp">Storage.cpp</link></para>
+
+<para>Source file of the <link linkend="_class_storage">Storage</link> class. </para>
+</listitem>
+            <listitem><para>file <link linkend="__storage_8h">Storage.h</link></para>
+
+<para>Header file of the <link linkend="_class_storage">Storage</link> class. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

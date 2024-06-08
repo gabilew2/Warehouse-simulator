@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__simulation_test_8cpp" xml:lang="en-US">
+<title>test/Simulation/SimulationTest.cpp File Reference</title>
+<indexterm><primary>test/Simulation/SimulationTest.cpp</primary></indexterm>
+<para>
+
+<para>Source file of tests for the <link linkend="_class_simulation">Simulation</link> class. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;gtest/gtest.h&gt;<?linebreak?>#include &quot;Simulation/Simulation.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2">TEST</link> (SimulationTest, itLives)</para>
+
+<para>Test to ensure that the constructor initializes the current time correctly. </para>
+</listitem>
+            <listitem><para><link linkend="__simulation_test_8cpp_1a26b65653dbc8b10b57767b80f92df2aa">TEST</link> (SimulationTest, processEvents)</para>
+
+<para>Test to validate the processEvents method. </para>
+</listitem>
+            <listitem><para><link linkend="__simulation_test_8cpp_1af69bc463335db94e30c8a973335caa26">TEST</link> (SimulationTest, conductCycle)</para>
+
+<para>Test to check if the conductCycle method processes the simulation cycle successfully. </para>
+</listitem>
+            <listitem><para><link linkend="__simulation_test_8cpp_1af6c06f4cec53cf42a47dfd064957530b">TEST</link> (SimulationTest, generateReport)</para>
+
+<para>Test to ensure that the generateReport method produces a report. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Source file of tests for the <link linkend="_class_simulation">Simulation</link> class. </para>
+<para>
+Definition in file <link linkend="__simulation_test_8cpp_source">SimulationTest.cpp</link>.</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__simulation_test_8cpp_1af69bc463335db94e30c8a973335caa26"/><section>
+    <title>TEST()<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>SimulationTest.cpp</secondary></indexterm>
+<indexterm><primary>SimulationTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (SimulationTest , conductCycle )</computeroutput></para><para>
+
+<para>Test to check if the conductCycle method processes the simulation cycle successfully. </para>
+</para>
+<para>
+Definition at line <link linkend="__simulation_test_8cpp_source_1l00029">29</link> of file <link linkend="__simulation_test_8cpp_source">SimulationTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__simulation_test_8cpp_1af6c06f4cec53cf42a47dfd064957530b"/><section>
+    <title>TEST()<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>SimulationTest.cpp</secondary></indexterm>
+<indexterm><primary>SimulationTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (SimulationTest , generateReport )</computeroutput></para><para>
+
+<para>Test to ensure that the generateReport method produces a report. </para>
+</para>
+<para>
+Definition at line <link linkend="__simulation_test_8cpp_source_1l00039">39</link> of file <link linkend="__simulation_test_8cpp_source">SimulationTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2"/><section>
+    <title>TEST()<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>SimulationTest.cpp</secondary></indexterm>
+<indexterm><primary>SimulationTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (SimulationTest , itLives )</computeroutput></para><para>
+
+<para>Test to ensure that the constructor initializes the current time correctly. </para>
+</para>
+<para>
+Definition at line <link linkend="__simulation_test_8cpp_source_1l00012">12</link> of file <link linkend="__simulation_test_8cpp_source">SimulationTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__simulation_test_8cpp_1a26b65653dbc8b10b57767b80f92df2aa"/><section>
+    <title>TEST()<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>SimulationTest.cpp</secondary></indexterm>
+<indexterm><primary>SimulationTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (SimulationTest , processEvents )</computeroutput></para><para>
+
+<para>Test to validate the processEvents method. </para>
+</para>
+<para>
+Definition at line <link linkend="__simulation_test_8cpp_source_1l00020">20</link> of file <link linkend="__simulation_test_8cpp_source">SimulationTest.cpp</link>.</para>
+</section>
+</section>
+</section>

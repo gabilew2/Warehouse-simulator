@@ -1,0 +1,338 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__simulation_8cpp_source" xml:lang="en-US">
+<title>Simulation.cpp</title>
+<indexterm><primary>src/Simulation/Simulation.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__simulation_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__simulation_8h">Simulation.h</link>&quot;</emphasis>
+<anchor xml:id="__simulation_8cpp_source_1l00002"/>00002 
+<anchor xml:id="__simulation_8cpp_source_1l00006"/><link linkend="_class_simulation_1a5b224cc5b36bcc8eb29689aff223de41">00006</link> <link linkend="_class_simulation_1a5b224cc5b36bcc8eb29689aff223de41">Simulation::Simulation</link>()
+<anchor xml:id="__simulation_8cpp_source_1l00007"/>00007 {
+<anchor xml:id="__simulation_8cpp_source_1l00008"/>00008 &#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Preparing&#32;simulation&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00009"/>00009 
+<anchor xml:id="__simulation_8cpp_source_1l00010"/>00010 &#32;&#32;&#32;&#32;currentTime&#32;=&#32;QDateTime::currentDateTime();
+<anchor xml:id="__simulation_8cpp_source_1l00011"/>00011 
+<anchor xml:id="__simulation_8cpp_source_1l00012"/>00012 &#32;&#32;&#32;&#32;QFile&#32;settings(<emphasis role="stringliteral">&quot;settings.csv&quot;</emphasis>);
+<anchor xml:id="__simulation_8cpp_source_1l00013"/>00013 
+<anchor xml:id="__simulation_8cpp_source_1l00014"/>00014 &#32;&#32;&#32;&#32;QFile::rename(<emphasis role="stringliteral">&quot;SimulationReport.csv&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;SimulationReportOld.csv&quot;</emphasis>);
+<anchor xml:id="__simulation_8cpp_source_1l00015"/>00015 &#32;&#32;&#32;&#32;QFile::remove(<emphasis role="stringliteral">&quot;SimulationReport.csv&quot;</emphasis>);
+<anchor xml:id="__simulation_8cpp_source_1l00016"/>00016 
+<anchor xml:id="__simulation_8cpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!settings.open(QIODevice::ReadOnly&#32;|&#32;QIODevice::Text))
+<anchor xml:id="__simulation_8cpp_source_1l00018"/>00018 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Error:&#32;Can&apos;t&#32;open&#32;settings&#32;file.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__simulation_8cpp_source_1l00021"/>00021 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;QTextStream&#32;in(&amp;settings);
+<anchor xml:id="__simulation_8cpp_source_1l00023"/>00023 
+<anchor xml:id="__simulation_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;seed&#32;=&#32;100;
+<anchor xml:id="__simulation_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;productIdCounter&#32;=&#32;1;
+<anchor xml:id="__simulation_8cpp_source_1l00026"/>00026 
+<anchor xml:id="__simulation_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(!in.atEnd())
+<anchor xml:id="__simulation_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QString&#32;line&#32;=&#32;in.readLine();
+<anchor xml:id="__simulation_8cpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QStringList&#32;fields&#32;=&#32;line.split(<emphasis role="charliteral">&apos;,&apos;</emphasis>);
+<anchor xml:id="__simulation_8cpp_source_1l00031"/>00031 
+<anchor xml:id="__simulation_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(fields.isEmpty())
+<anchor xml:id="__simulation_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="__simulation_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00036"/>00036 
+<anchor xml:id="__simulation_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(fields[0]&#32;==&#32;<emphasis role="stringliteral">&quot;Warehouse&quot;</emphasis>)
+<anchor xml:id="__simulation_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;productIdCounter&#32;=&#32;1;
+<anchor xml:id="__simulation_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(fields.size()&#32;&lt;&#32;3)
+<anchor xml:id="__simulation_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Error:&#32;Incomplete&#32;warehouse&#32;data.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="__simulation_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Adding&#32;warehouse.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QString&#32;location&#32;=&#32;fields[1];
+<anchor xml:id="__simulation_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;capacity&#32;=&#32;fields[2].toDouble();
+<anchor xml:id="__simulation_8cpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Warehouses.append(<link linkend="_class_warehouse">Warehouse</link>(location,&#32;capacity));
+<anchor xml:id="__simulation_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(fields[0]&#32;==&#32;<emphasis role="stringliteral">&quot;Product&quot;</emphasis>)
+<anchor xml:id="__simulation_8cpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(fields.size()&#32;&lt;&#32;4)
+<anchor xml:id="__simulation_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Error:&#32;Incomplete&#32;product&#32;data.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="__simulation_8cpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Adding&#32;product:&#32;&quot;</emphasis>;
+<anchor xml:id="__simulation_8cpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_warehouse">Warehouse</link>&amp;&#32;selectWarehouse&#32;=&#32;Warehouses.last();
+<anchor xml:id="__simulation_8cpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QString&#32;name&#32;=&#32;fields[1];
+<anchor xml:id="__simulation_8cpp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;price&#32;=&#32;fields[2].toDouble();
+<anchor xml:id="__simulation_8cpp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;quantity&#32;=&#32;fields[3].toInt();
+<anchor xml:id="__simulation_8cpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>&#32;=&#32;productIdCounter++;
+<anchor xml:id="__simulation_8cpp_source_1l00063"/>00063 
+<anchor xml:id="__simulation_8cpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(selectWarehouse.<link linkend="_class_warehouse_1adcc66b057690967cc902d3e999db8af9">addProduct</link>(name,&#32;price,&#32;quantity,&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>)&#32;==&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>)
+<anchor xml:id="__simulation_8cpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;SUCCESS&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__simulation_8cpp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;ERROR:&#32;Unable&#32;to&#32;add&#32;product.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(fields[0]&#32;==&#32;<emphasis role="stringliteral">&quot;Cycles&quot;</emphasis>)
+<anchor xml:id="__simulation_8cpp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(fields.size()&#32;&lt;&#32;5)
+<anchor xml:id="__simulation_8cpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Error:&#32;Incomplete&#32;cycle&#32;data.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="__simulation_8cpp_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Setting&#32;currentCycle:&#32;&quot;</emphasis>;
+<anchor xml:id="__simulation_8cpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentCycle&#32;=&#32;fields[4].toInt();
+<anchor xml:id="__simulation_8cpp_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">this</emphasis>&#32;-&gt;&#32;currentCycle&#32;=&#32;currentCycle;
+<anchor xml:id="__simulation_8cpp_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;currentCycle&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(fields[0]&#32;==&#32;<emphasis role="stringliteral">&quot;Seed&quot;</emphasis>)
+<anchor xml:id="__simulation_8cpp_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(fields.size()&#32;&lt;&#32;6)
+<anchor xml:id="__simulation_8cpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Error:&#32;Incomplete&#32;seed&#32;data.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="__simulation_8cpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Setting&#32;seed:&#32;&quot;</emphasis>;
+<anchor xml:id="__simulation_8cpp_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;readSeed&#32;=&#32;fields[5].toInt();
+<anchor xml:id="__simulation_8cpp_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">this</emphasis>&#32;-&gt;&#32;seed&#32;=&#32;QRandomGenerator::global()&#32;-&gt;&#32;generate()/readSeed;
+<anchor xml:id="__simulation_8cpp_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;readSeed&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00097"/>00097 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00098"/>00098 
+<anchor xml:id="__simulation_8cpp_source_1l00099"/>00099 &#32;&#32;&#32;&#32;settings.close();
+<anchor xml:id="__simulation_8cpp_source_1l00100"/>00100 }
+<anchor xml:id="__simulation_8cpp_source_1l00101"/>00101 
+<anchor xml:id="__simulation_8cpp_source_1l00105"/><link linkend="_class_simulation_1ae5c367f87c0b5dc9740bc6d00e44e72c">00105</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_simulation_1ae5c367f87c0b5dc9740bc6d00e44e72c">Simulation::run</link>()
+<anchor xml:id="__simulation_8cpp_source_1l00106"/>00106 {
+<anchor xml:id="__simulation_8cpp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Running&#32;simulation.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00108"/>00108 
+<anchor xml:id="__simulation_8cpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;QString&#32;report;
+<anchor xml:id="__simulation_8cpp_source_1l00110"/>00110 
+<anchor xml:id="__simulation_8cpp_source_1l00111"/>00111 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(Warehouses.isEmpty())
+<anchor xml:id="__simulation_8cpp_source_1l00112"/>00112 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Incorrect&#32;settings&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;exit(1);
+<anchor xml:id="__simulation_8cpp_source_1l00115"/>00115 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00116"/>00116 
+<anchor xml:id="__simulation_8cpp_source_1l00117"/>00117 &#32;&#32;&#32;&#32;<link linkend="_class_simulation_1ac2a7464b86a88a8ff09766825836590b">generateReport</link>();
+<anchor xml:id="__simulation_8cpp_source_1l00118"/>00118 
+<anchor xml:id="__simulation_8cpp_source_1l00119"/>00119 &#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Generating&#32;cycles.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00120"/>00120 
+<anchor xml:id="__simulation_8cpp_source_1l00121"/>00121 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;cycles&#32;=&#32;currentCycle;
+<anchor xml:id="__simulation_8cpp_source_1l00122"/>00122 
+<anchor xml:id="__simulation_8cpp_source_1l00123"/>00123 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(currentCycle&#32;&gt;&#32;0)
+<anchor xml:id="__simulation_8cpp_source_1l00124"/>00124 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;numberOfEvents&#32;=&#32;QRandomGenerator::global()-&gt;bounded(seed);
+<anchor xml:id="__simulation_8cpp_source_1l00126"/>00126 
+<anchor xml:id="__simulation_8cpp_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;event&#32;=&#32;0;&#32;<emphasis role="keyword">event</emphasis>&#32;&lt;&#32;numberOfEvents;&#32;++event)
+<anchor xml:id="__simulation_8cpp_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;events.append(<link linkend="_class_event_1a0a53e36a36fd4bfac0bb3d0de9cc521c">Event::generateEvent</link>(<emphasis role="stringliteral">&quot;Sell&#32;product&quot;</emphasis>,&#32;seed));
+<anchor xml:id="__simulation_8cpp_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00131"/>00131 
+<anchor xml:id="__simulation_8cpp_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<link linkend="_class_warehouse">Warehouse</link>&amp;&#32;warehouse&#32;:&#32;Warehouses)
+<anchor xml:id="__simulation_8cpp_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(warehouse.checkStatus()&#32;!=&#32;<link linkend="__storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa8fd6994b2300416d1ad947a50d833850">FULLY</link>)
+<anchor xml:id="__simulation_8cpp_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;events.append(<link linkend="_class_event_1a0a53e36a36fd4bfac0bb3d0de9cc521c">Event::generateEvent</link>(<emphasis role="stringliteral">&quot;Add&#32;Product&quot;</emphasis>,&#32;seed));
+<anchor xml:id="__simulation_8cpp_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;events.append(<link linkend="_class_event_1a0a53e36a36fd4bfac0bb3d0de9cc521c">Event::generateEvent</link>(<emphasis role="stringliteral">&quot;Transfer&#32;Product&quot;</emphasis>,&#32;seed));
+<anchor xml:id="__simulation_8cpp_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\033[33mWarning:&#32;Warehouse&#32;at&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;warehouse.getLocation().toStdString()
+<anchor xml:id="__simulation_8cpp_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;is&#32;full.&#32;Generated&#32;events&#32;to&#32;add&#32;more&#32;products&#32;or&#32;transfer&#32;them&#32;to&#32;another&#32;warehouse.\033[0m&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00142"/>00142 
+<anchor xml:id="__simulation_8cpp_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Processing&#32;cycle.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_simulation_1a03b8112bc675326b413cb67664dcd361">processEvents</link>();
+<anchor xml:id="__simulation_8cpp_source_1l00145"/>00145 
+<anchor xml:id="__simulation_8cpp_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QString&#32;cycleReport&#32;=&#32;<link linkend="_class_simulation_1ac2a7464b86a88a8ff09766825836590b">generateReport</link>();
+<anchor xml:id="__simulation_8cpp_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;report.append(cycleReport);
+<anchor xml:id="__simulation_8cpp_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;cycleReport.toStdString()&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentCycle--;
+<anchor xml:id="__simulation_8cpp_source_1l00150"/>00150 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00151"/>00151 
+<anchor xml:id="__simulation_8cpp_source_1l00152"/>00152 &#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;report.toStdString()&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00153"/>00153 
+<anchor xml:id="__simulation_8cpp_source_1l00154"/>00154 }
+<anchor xml:id="__simulation_8cpp_source_1l00155"/>00155 
+<anchor xml:id="__simulation_8cpp_source_1l00159"/><link linkend="_class_simulation_1a03b8112bc675326b413cb67664dcd361">00159</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_simulation_1a03b8112bc675326b413cb67664dcd361">Simulation::processEvents</link>()
+<anchor xml:id="__simulation_8cpp_source_1l00160"/>00160 {
+<anchor xml:id="__simulation_8cpp_source_1l00161"/>00161 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(<link linkend="_class_simulation_1aa0e23779d0aa555ae836a646b8b1d715">conductCycle</link>()&#32;==&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>)
+<anchor xml:id="__simulation_8cpp_source_1l00162"/>00162 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00163"/>00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Error&#32;while&#32;processing&#32;cycle&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00164"/>00164 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00165"/>00165 }
+<anchor xml:id="__simulation_8cpp_source_1l00166"/>00166 
+<anchor xml:id="__simulation_8cpp_source_1l00170"/><link linkend="_class_simulation_1aa0e23779d0aa555ae836a646b8b1d715">00170</link> <link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link>&#32;<link linkend="_class_simulation_1aa0e23779d0aa555ae836a646b8b1d715">Simulation::conductCycle</link>()
+<anchor xml:id="__simulation_8cpp_source_1l00171"/>00171 {
+<anchor xml:id="__simulation_8cpp_source_1l00172"/>00172 &#32;&#32;&#32;&#32;qint64&#32;deltaTime&#32;=&#32;0;
+<anchor xml:id="__simulation_8cpp_source_1l00173"/>00173 
+<anchor xml:id="__simulation_8cpp_source_1l00174"/>00174 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<link linkend="_class_event">Event</link>&amp;&#32;event&#32;:&#32;events)
+<anchor xml:id="__simulation_8cpp_source_1l00175"/>00175 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!<link linkend="_class_simulation_1a0caa90613b0a2e52360c7cd6f5530023">respondToEvent</link>(event))
+<anchor xml:id="__simulation_8cpp_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Error&#32;while&#32;processing&#32;event.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>;
+<anchor xml:id="__simulation_8cpp_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00181"/>00181 
+<anchor xml:id="__simulation_8cpp_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QDateTime&#32;Time&#32;=&#32;<emphasis role="keyword">event</emphasis>.getTime();
+<anchor xml:id="__simulation_8cpp_source_1l00183"/>00183 
+<anchor xml:id="__simulation_8cpp_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(Time.msecsTo(currentTime)&#32;&gt;&#32;deltaTime)
+<anchor xml:id="__simulation_8cpp_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;deltaTime&#32;=&#32;Time.msecsTo(currentTime);
+<anchor xml:id="__simulation_8cpp_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00188"/>00188 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00189"/>00189 
+<anchor xml:id="__simulation_8cpp_source_1l00190"/>00190 &#32;&#32;&#32;&#32;events.clear();
+<anchor xml:id="__simulation_8cpp_source_1l00191"/>00191 &#32;&#32;&#32;&#32;currentTime&#32;=&#32;currentTime.addSecs(deltaTime);
+<anchor xml:id="__simulation_8cpp_source_1l00192"/>00192 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>;
+<anchor xml:id="__simulation_8cpp_source_1l00193"/>00193 }
+<anchor xml:id="__simulation_8cpp_source_1l00194"/>00194 
+<anchor xml:id="__simulation_8cpp_source_1l00198"/><link linkend="_class_simulation_1a0caa90613b0a2e52360c7cd6f5530023">00198</link> <link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link>&#32;<link linkend="_class_simulation_1a0caa90613b0a2e52360c7cd6f5530023">Simulation::respondToEvent</link>(<link linkend="_class_event">Event</link>&amp;&#32;event)
+<anchor xml:id="__simulation_8cpp_source_1l00199"/>00199 {
+<anchor xml:id="__simulation_8cpp_source_1l00200"/>00200 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;warehouseId&#32;=&#32;QRandomGenerator::global()&#32;-&gt;&#32;bounded(Warehouses.size());
+<anchor xml:id="__simulation_8cpp_source_1l00201"/>00201 &#32;&#32;&#32;&#32;<link linkend="_class_warehouse">Warehouse</link>&amp;&#32;warehouse&#32;=&#32;Warehouses[warehouseId];
+<anchor xml:id="__simulation_8cpp_source_1l00202"/>00202 
+<anchor xml:id="__simulation_8cpp_source_1l00203"/>00203 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(event.<link linkend="_class_event_1a20074c3674655968a30e835b7e2e6cdb">getEventType</link>()&#32;==&#32;<emphasis role="stringliteral">&quot;Sell&#32;product&quot;</emphasis>)
+<anchor xml:id="__simulation_8cpp_source_1l00204"/>00204 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>
+<anchor xml:id="__simulation_8cpp_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00207"/>00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>&#32;=&#32;QRandomGenerator::global()&#32;-&gt;&#32;bounded(warehouse.<link linkend="_class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e">getProductList</link>().size())&#32;+&#32;1;
+<anchor xml:id="__simulation_8cpp_source_1l00208"/>00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link>&#32;result&#32;=&#32;warehouse.<link linkend="_class_warehouse_1a7ef00deb93a210331370beea2990c237">sell</link>(1,&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>);
+<anchor xml:id="__simulation_8cpp_source_1l00209"/>00209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(result&#32;==&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>)
+<anchor xml:id="__simulation_8cpp_source_1l00210"/>00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00211"/>00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;ERROR:&#32;Unable&#32;to&#32;sell&#32;product.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00212"/>00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>;
+<anchor xml:id="__simulation_8cpp_source_1l00213"/>00213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00214"/>00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00215"/>00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;std::exception&amp;&#32;e)
+<anchor xml:id="__simulation_8cpp_source_1l00216"/>00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00217"/>00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;General&#32;Exception&#32;caught:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;e.what()&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00218"/>00218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>;
+<anchor xml:id="__simulation_8cpp_source_1l00219"/>00219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00220"/>00220 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00221"/>00221 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(event.<link linkend="_class_event_1a20074c3674655968a30e835b7e2e6cdb">getEventType</link>()&#32;==&#32;<emphasis role="stringliteral">&quot;Add&#32;product&quot;</emphasis>)
+<anchor xml:id="__simulation_8cpp_source_1l00222"/>00222 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00223"/>00223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>
+<anchor xml:id="__simulation_8cpp_source_1l00224"/>00224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00225"/>00225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>&#32;=&#32;QRandomGenerator::global()&#32;-&gt;&#32;bounded(warehouse.<link linkend="_class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e">getProductList</link>().size())&#32;+&#32;1;
+<anchor xml:id="__simulation_8cpp_source_1l00226"/>00226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_product">Product</link>&amp;&#32;product&#32;=&#32;warehouse.<link linkend="_class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e">getProductList</link>()[<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>];
+<anchor xml:id="__simulation_8cpp_source_1l00227"/>00227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;additionalQuantity&#32;=&#32;50;
+<anchor xml:id="__simulation_8cpp_source_1l00228"/>00228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link>&#32;result&#32;=&#32;warehouse.<link linkend="_class_warehouse_1a12c143bfa6b7443be317cc66897491e9">changeQuantity</link>(product.<link linkend="_class_product_1a6a449b90b669aa4380d229b44eca686f">getQuantity</link>()&#32;+&#32;additionalQuantity,&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>);
+<anchor xml:id="__simulation_8cpp_source_1l00229"/>00229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(result&#32;==&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>)
+<anchor xml:id="__simulation_8cpp_source_1l00230"/>00230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00231"/>00231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;ERROR:&#32;Unable&#32;to&#32;add&#32;product&#32;quantity.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00232"/>00232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>;
+<anchor xml:id="__simulation_8cpp_source_1l00233"/>00233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00234"/>00234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00235"/>00235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;std::exception&amp;&#32;e)
+<anchor xml:id="__simulation_8cpp_source_1l00236"/>00236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00237"/>00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;General&#32;Exception&#32;caught:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;e.what()&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00238"/>00238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>;
+<anchor xml:id="__simulation_8cpp_source_1l00239"/>00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00240"/>00240 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00241"/>00241 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(event.<link linkend="_class_event_1a20074c3674655968a30e835b7e2e6cdb">getEventType</link>()&#32;==&#32;<emphasis role="stringliteral">&quot;Transfer&#32;product&quot;</emphasis>)
+<anchor xml:id="__simulation_8cpp_source_1l00242"/>00242 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00243"/>00243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>
+<anchor xml:id="__simulation_8cpp_source_1l00244"/>00244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00245"/>00245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>&#32;=&#32;QRandomGenerator::global()&#32;-&gt;&#32;bounded(warehouse.<link linkend="_class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e">getProductList</link>().size())&#32;+&#32;1;
+<anchor xml:id="__simulation_8cpp_source_1l00246"/>00246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_product">Product</link>&amp;&#32;productToTransfer&#32;=&#32;warehouse.<link linkend="_class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e">getProductList</link>()[<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>];
+<anchor xml:id="__simulation_8cpp_source_1l00247"/>00247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QString&#32;<link linkend="__warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464">productName</link>&#32;=&#32;productToTransfer.<link linkend="_class_product_1a4e07082760c0834ccc8cd44e44a6aae6">getName</link>();
+<anchor xml:id="__simulation_8cpp_source_1l00248"/>00248 
+<anchor xml:id="__simulation_8cpp_source_1l00249"/>00249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;targetWarehouseIt&#32;=&#32;Warehouses.end();
+<anchor xml:id="__simulation_8cpp_source_1l00250"/>00250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">auto</emphasis>&#32;it&#32;=&#32;Warehouses.begin();&#32;it&#32;!=&#32;Warehouses.end();&#32;++it)
+<anchor xml:id="__simulation_8cpp_source_1l00251"/>00251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00252"/>00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_warehouse">Warehouse</link>&amp;&#32;w&#32;=&#32;*it;
+<anchor xml:id="__simulation_8cpp_source_1l00253"/>00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;usedCapacity&#32;=&#32;0;
+<anchor xml:id="__simulation_8cpp_source_1l00254"/>00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<link linkend="_class_product">Product</link>&amp;&#32;p&#32;:&#32;w.<link linkend="_class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e">getProductList</link>())
+<anchor xml:id="__simulation_8cpp_source_1l00255"/>00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00256"/>00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;usedCapacity&#32;+=&#32;p.<link linkend="_class_warehouse_1a08808180a2c1f6db033a3ecc94b3c205">getQuantity</link>();
+<anchor xml:id="__simulation_8cpp_source_1l00257"/>00257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00258"/>00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<link linkend="_class_product">Product</link>&amp;&#32;p&#32;:&#32;w.<link linkend="_class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e">getProductList</link>())
+<anchor xml:id="__simulation_8cpp_source_1l00259"/>00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00260"/>00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(p.getName()&#32;==&#32;<link linkend="__warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464">productName</link>&#32;&amp;&amp;&#32;w.<link linkend="_class_warehouse_1ad5eb7e2175f702204e9e628c6658f777">getCurrentCapacity</link>()&#32;&gt;&#32;usedCapacity&#32;+&#32;productToTransfer.<link linkend="_class_product_1a6a449b90b669aa4380d229b44eca686f">getQuantity</link>())
+<anchor xml:id="__simulation_8cpp_source_1l00261"/>00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00262"/>00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;targetWarehouseIt&#32;=&#32;it;
+<anchor xml:id="__simulation_8cpp_source_1l00263"/>00263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__simulation_8cpp_source_1l00264"/>00264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00265"/>00265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00266"/>00266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(targetWarehouseIt&#32;!=&#32;Warehouses.end())
+<anchor xml:id="__simulation_8cpp_source_1l00267"/>00267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00268"/>00268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__simulation_8cpp_source_1l00269"/>00269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00270"/>00270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00271"/>00271 
+<anchor xml:id="__simulation_8cpp_source_1l00272"/>00272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(targetWarehouseIt&#32;!=&#32;Warehouses.end())
+<anchor xml:id="__simulation_8cpp_source_1l00273"/>00273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00274"/>00274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_warehouse">Warehouse</link>&amp;&#32;targetWarehouse&#32;=&#32;*targetWarehouseIt;
+<anchor xml:id="__simulation_8cpp_source_1l00275"/>00275 
+<anchor xml:id="__simulation_8cpp_source_1l00276"/>00276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;transferQuantity&#32;=&#32;productToTransfer.<link linkend="_class_product_1a6a449b90b669aa4380d229b44eca686f">getQuantity</link>();
+<anchor xml:id="__simulation_8cpp_source_1l00277"/>00277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;warehouse.<link linkend="_class_warehouse_1a12c143bfa6b7443be317cc66897491e9">changeQuantity</link>(warehouse.<link linkend="_class_warehouse_1a08808180a2c1f6db033a3ecc94b3c205">getQuantity</link>(<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>)&#32;-&#32;transferQuantity,&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>);
+<anchor xml:id="__simulation_8cpp_source_1l00278"/>00278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;targetWarehouse.<link linkend="_class_warehouse_1a12c143bfa6b7443be317cc66897491e9">changeQuantity</link>(targetWarehouse.<link linkend="_class_warehouse_1a08808180a2c1f6db033a3ecc94b3c205">getQuantity</link>(<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>)&#32;+&#32;transferQuantity,&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>);
+<anchor xml:id="__simulation_8cpp_source_1l00279"/>00279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00280"/>00280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__simulation_8cpp_source_1l00281"/>00281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00282"/>00282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;ERROR:&#32;No&#32;target&#32;warehouse&#32;found&#32;for&#32;product&#32;transfer.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00283"/>00283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>;
+<anchor xml:id="__simulation_8cpp_source_1l00284"/>00284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00285"/>00285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00286"/>00286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;std::exception&amp;&#32;e)
+<anchor xml:id="__simulation_8cpp_source_1l00287"/>00287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00288"/>00288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;General&#32;Exception&#32;caught:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;e.what()&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00289"/>00289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>;
+<anchor xml:id="__simulation_8cpp_source_1l00290"/>00290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00291"/>00291 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00292"/>00292 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>;
+<anchor xml:id="__simulation_8cpp_source_1l00293"/>00293 }
+<anchor xml:id="__simulation_8cpp_source_1l00294"/>00294 
+<anchor xml:id="__simulation_8cpp_source_1l00298"/><link linkend="_class_simulation_1ac2a7464b86a88a8ff09766825836590b">00298</link> QString&#32;<link linkend="_class_simulation_1ac2a7464b86a88a8ff09766825836590b">Simulation::generateReport</link>()
+<anchor xml:id="__simulation_8cpp_source_1l00299"/>00299 {
+<anchor xml:id="__simulation_8cpp_source_1l00300"/>00300 &#32;&#32;&#32;&#32;QString&#32;csvReport;
+<anchor xml:id="__simulation_8cpp_source_1l00301"/>00301 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>&#32;=&#32;0;
+<anchor xml:id="__simulation_8cpp_source_1l00302"/>00302 
+<anchor xml:id="__simulation_8cpp_source_1l00303"/>00303 &#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Generating&#32;report&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00304"/>00304 
+<anchor xml:id="__simulation_8cpp_source_1l00305"/>00305 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<link linkend="_class_warehouse">Warehouse</link>&amp;&#32;warehouse&#32;:&#32;Warehouses)
+<anchor xml:id="__simulation_8cpp_source_1l00306"/>00306 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00307"/>00307 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QList&lt;Report::ProductReport&gt;&#32;productNames;
+<anchor xml:id="__simulation_8cpp_source_1l00308"/>00308 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;featureOperationalCosts;
+<anchor xml:id="__simulation_8cpp_source_1l00309"/>00309 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<link linkend="_class_product">Product</link>&amp;&#32;product&#32;:&#32;warehouse.getProductList())
+<anchor xml:id="__simulation_8cpp_source_1l00310"/>00310 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00311"/>00311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_struct_report_1_1_product_report">Report::ProductReport</link>&#32;productReport;
+<anchor xml:id="__simulation_8cpp_source_1l00312"/>00312 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;productReport.<link linkend="_struct_report_1_1_product_report_1a3b1c5f3c0e92b0761fe098a093e45db2">name</link>&#32;=&#32;product.getName();
+<anchor xml:id="__simulation_8cpp_source_1l00313"/>00313 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;productReport.<link linkend="_struct_report_1_1_product_report_1a7dd6e2e624439db443cdbb842ef7651f">price</link>&#32;=&#32;product.getPrice();
+<anchor xml:id="__simulation_8cpp_source_1l00314"/>00314 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;productReport.<link linkend="_struct_report_1_1_product_report_1a2ed7f9fdb7c63a739e76ade173d6cdc7">quantity</link>&#32;=&#32;product.getQuantity();
+<anchor xml:id="__simulation_8cpp_source_1l00315"/>00315 
+<anchor xml:id="__simulation_8cpp_source_1l00316"/>00316 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;featureOperationalCosts&#32;+=&#32;productReport.<link linkend="_struct_report_1_1_product_report_1a7dd6e2e624439db443cdbb842ef7651f">price</link>&#32;+&#32;productReport.<link linkend="_struct_report_1_1_product_report_1a2ed7f9fdb7c63a739e76ade173d6cdc7">quantity</link>;
+<anchor xml:id="__simulation_8cpp_source_1l00317"/>00317 
+<anchor xml:id="__simulation_8cpp_source_1l00318"/>00318 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;productNames.append(productReport);
+<anchor xml:id="__simulation_8cpp_source_1l00319"/>00319 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00320"/>00320 
+<anchor xml:id="__simulation_8cpp_source_1l00321"/>00321 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;salesId&#32;=&#32;0;
+<anchor xml:id="__simulation_8cpp_source_1l00322"/>00322 
+<anchor xml:id="__simulation_8cpp_source_1l00323"/>00323 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_warehouse_report">WarehouseReport</link>&#32;warehouseReport(<emphasis role="keywordtype">id</emphasis>++,&#32;warehouse.getCurrentCapacity(),&#32;productNames,&#32;<link linkend="_class_report_1a0280b260884973ffbb4ca95c438f30a6">Report::getOperationalCosts</link>(),&#32;<link linkend="_class_report_1af98f7f1cb07d06b29c081974cfc9a830">Report::getNetProfit</link>());
+<anchor xml:id="__simulation_8cpp_source_1l00324"/>00324 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_sales_report">SalesReport</link>&#32;salesReport(salesId++,&#32;currentTime,&#32;productNames,&#32;<link linkend="_class_report_1a0280b260884973ffbb4ca95c438f30a6">Report::getOperationalCosts</link>(),&#32;<link linkend="_class_report_1af98f7f1cb07d06b29c081974cfc9a830">Report::getNetProfit</link>());
+<anchor xml:id="__simulation_8cpp_source_1l00325"/>00325 
+<anchor xml:id="__simulation_8cpp_source_1l00326"/>00326 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_report_1a7f5c6f19874a36e59c63051ab5b60400">Report::setOperationalCosts</link>(<link linkend="_class_report_1a0280b260884973ffbb4ca95c438f30a6">Report::getOperationalCosts</link>()+featureOperationalCosts);
+<anchor xml:id="__simulation_8cpp_source_1l00327"/>00327 
+<anchor xml:id="__simulation_8cpp_source_1l00328"/>00328 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;csvReport.append(warehouseReport.<link linkend="_class_warehouse_report_1a3a4c6655eb2584b3d842d0138b6e6ac9">generateReport</link>());
+<anchor xml:id="__simulation_8cpp_source_1l00329"/>00329 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;csvReport.append(salesReport.<link linkend="_class_sales_report_1adbcc82fb8fa70e87cd4f12bf4f3537ae">generateReport</link>());
+<anchor xml:id="__simulation_8cpp_source_1l00330"/>00330 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00331"/>00331 
+<anchor xml:id="__simulation_8cpp_source_1l00332"/>00332 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Display&#32;the&#32;CSV&#32;report&#32;on&#32;the&#32;screen</emphasis>
+<anchor xml:id="__simulation_8cpp_source_1l00333"/>00333 &#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;csvReport.toStdString()&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00334"/>00334 
+<anchor xml:id="__simulation_8cpp_source_1l00335"/>00335 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Save&#32;the&#32;CSV&#32;report&#32;to&#32;a&#32;file</emphasis>
+<anchor xml:id="__simulation_8cpp_source_1l00336"/>00336 &#32;&#32;&#32;&#32;QFile&#32;csvFile(<emphasis role="stringliteral">&quot;SimulationReport.csv&quot;</emphasis>);
+<anchor xml:id="__simulation_8cpp_source_1l00337"/>00337 
+<anchor xml:id="__simulation_8cpp_source_1l00338"/>00338 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(csvFile.open(QIODevice::Append&#32;|&#32;QIODevice::Text))
+<anchor xml:id="__simulation_8cpp_source_1l00339"/>00339 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00340"/>00340 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QTextStream&#32;out(&amp;csvFile);
+<anchor xml:id="__simulation_8cpp_source_1l00341"/>00341 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n&quot;</emphasis>;
+<anchor xml:id="__simulation_8cpp_source_1l00342"/>00342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;csvReport;
+<anchor xml:id="__simulation_8cpp_source_1l00343"/>00343 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;csvFile.close();
+<anchor xml:id="__simulation_8cpp_source_1l00344"/>00344 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00345"/>00345 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__simulation_8cpp_source_1l00346"/>00346 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__simulation_8cpp_source_1l00347"/>00347 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Error&#32;while&#32;trying&#32;to&#32;write&#32;the&#32;CSV&#32;report&#32;to&#32;file.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="__simulation_8cpp_source_1l00348"/>00348 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__simulation_8cpp_source_1l00349"/>00349 
+<anchor xml:id="__simulation_8cpp_source_1l00350"/>00350 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;csvReport;
+<anchor xml:id="__simulation_8cpp_source_1l00351"/>00351 }
+</programlisting></section>

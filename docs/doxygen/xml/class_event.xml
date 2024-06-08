@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_event" kind="class" language="C++" prot="public">
+    <compoundname>Event</compoundname>
+    <includes refid="_event_8h" local="no">Event.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_event_1a6fba6813629303cd3446995b1ba3d1d9" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString Event::eventType</definition>
+        <argsstring></argsstring>
+        <name>eventType</name>
+        <qualifiedname>Event::eventType</qualifiedname>
+        <briefdescription>
+<para>Type of the event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Event/Event.h" line="20" column="13" bodyfile="src/Event/Event.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_event_1a8e8535e580b94779452e0e8412de0283" prot="private" static="no" mutable="no">
+        <type>QDateTime</type>
+        <definition>QDateTime Event::time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <qualifiedname>Event::time</qualifiedname>
+        <briefdescription>
+<para>Timestamp of the event occurrence. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Event/Event.h" line="21" column="15" bodyfile="src/Event/Event.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_event_1ad93a0e3be8c8738a36970319e7110389" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Event::Event</definition>
+        <argsstring>(QString eventType, QDateTime time)</argsstring>
+        <name>Event</name>
+        <qualifiedname>Event::Event</qualifiedname>
+        <param>
+          <type>QString</type>
+          <declname>eventType</declname>
+        </param>
+        <param>
+          <type>QDateTime</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for the <ref refid="class_event" kindref="compound">Event</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct a new <ref refid="class_event" kindref="compound">Event</ref> object.</para>
+<para>Initializes a new instance of the <ref refid="class_event" kindref="compound">Event</ref> class with the specified type and time. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>eventType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the event. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The timestamp when the event occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Event/Event.h" line="31" column="5" bodyfile="src/Event/Event.cpp" bodystart="12" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_1a20074c3674655968a30e835b7e2e6cdb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString Event::getEventType</definition>
+        <argsstring>() const</argsstring>
+        <name>getEventType</name>
+        <qualifiedname>Event::getEventType</qualifiedname>
+        <briefdescription>
+<para>Retrieves the type of the event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The event type as a QString. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Event/Event.h" line="44" column="13" bodyfile="src/Event/Event.cpp" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_1a7dba066f88bda41545ea19491dc69760" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QDateTime</type>
+        <definition>QDateTime Event::getTime</definition>
+        <argsstring>() const</argsstring>
+        <name>getTime</name>
+        <qualifiedname>Event::getTime</qualifiedname>
+        <briefdescription>
+<para>Retrieves the timestamp of the event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The event time as a QDateTime. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Event/Event.h" line="45" column="15" bodyfile="src/Event/Event.cpp" bodystart="48" bodyend="51"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_event_1a0a53e36a36fd4bfac0bb3d0de9cc521c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_event" kindref="compound">Event</ref></type>
+        <definition>Event Event::generateEvent</definition>
+        <argsstring>(QString eventType, int seed)</argsstring>
+        <name>generateEvent</name>
+        <qualifiedname>Event::generateEvent</qualifiedname>
+        <param>
+          <type>QString</type>
+          <declname>eventType</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+<para>Generates a random event based on the given seed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates an event with a random time offset.</para>
+<para>This static method creates a new event with a random time offset based on the provided seed. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>eventType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the event to generate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The seed for the random number generator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="class_event" kindref="compound">Event</ref> instance with the specified type and a random time.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>eventType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the event to generate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The seed for the random number generator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="class_event" kindref="compound">Event</ref> instance with the specified type and a random time. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Event/Event.h" line="41" column="18" bodyfile="src/Event/Event.cpp" bodystart="25" bodyend="29"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_event" kindref="compound">Event</ref> class represents an event in the warehouse simulation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class encapsulates the details of an event, including its type and the time it occurred. </para>
+    </detaileddescription>
+    <location file="src/Event/Event.h" line="17" column="1" bodyfile="src/Event/Event.h" bodystart="18" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class_event_1ad93a0e3be8c8738a36970319e7110389" prot="public" virt="non-virtual"><scope>Event</scope><name>Event</name></member>
+      <member refid="class_event_1a6fba6813629303cd3446995b1ba3d1d9" prot="private" virt="non-virtual"><scope>Event</scope><name>eventType</name></member>
+      <member refid="class_event_1a0a53e36a36fd4bfac0bb3d0de9cc521c" prot="public" virt="non-virtual"><scope>Event</scope><name>generateEvent</name></member>
+      <member refid="class_event_1a20074c3674655968a30e835b7e2e6cdb" prot="public" virt="non-virtual"><scope>Event</scope><name>getEventType</name></member>
+      <member refid="class_event_1a7dba066f88bda41545ea19491dc69760" prot="public" virt="non-virtual"><scope>Event</scope><name>getTime</name></member>
+      <member refid="class_event_1a8e8535e580b94779452e0e8412de0283" prot="private" virt="non-virtual"><scope>Event</scope><name>time</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

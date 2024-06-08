@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_storage_8h" kind="file" language="C++">
+    <compoundname>Storage.h</compoundname>
+    <includedby refid="_storage_8cpp" local="yes">src/Storage/Storage.cpp</includedby>
+    <includedby refid="_warehouse_8h" local="yes">src/Warehouse/Warehouse.h</includedby>
+    <includedby refid="_storage_test_8cpp" local="yes">test/Storage/StorageTest.cpp</includedby>
+    <invincdepgraph>
+      <node id="5">
+        <label>src/Simulation/Simulation.cpp</label>
+        <link refid="_simulation_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/Simulation/Simulation.h</label>
+        <link refid="_simulation_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/Storage/Storage.cpp</label>
+        <link refid="_storage_8cpp"/>
+      </node>
+      <node id="1">
+        <label>src/Storage/Storage.h</label>
+        <link refid="_storage_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>src/Warehouse/Warehouse.cpp</label>
+        <link refid="_warehouse_8cpp"/>
+      </node>
+      <node id="3">
+        <label>src/Warehouse/Warehouse.h</label>
+        <link refid="_warehouse_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>src/gui/gui.cpp</label>
+        <link refid="gui_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/gui/gui.h</label>
+        <link refid="gui_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>src/main.cpp</label>
+        <link refid="src_2main_8cpp"/>
+      </node>
+      <node id="9">
+        <label>test/Simulation/SimulationTest.cpp</label>
+        <link refid="_simulation_test_8cpp"/>
+      </node>
+      <node id="12">
+        <label>test/Storage/StorageTest.cpp</label>
+        <link refid="_storage_test_8cpp"/>
+      </node>
+      <node id="11">
+        <label>test/Warehouse/WarehouseTest.cpp</label>
+        <link refid="_warehouse_test_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_storage" prot="public">Storage</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>storageStatus</name>
+        <enumvalue id="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa2f0d18fc0d0fa4a6cd92dc328501874d" prot="public">
+          <name>EMPTY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa1e229ccb8b53a57de4ebb11c2d15272e" prot="public">
+          <name>AVAILABLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa8fd6994b2300416d1ad947a50d833850" prot="public">
+          <name>FULLY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum representing the status of the <ref refid="class_storage" kindref="compound">Storage</ref> capacity. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Storage/Storage.h" line="10" column="1" bodyfile="src/Storage/Storage.h" bodystart="10" bodyend="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Header file of the <ref refid="class_storage" kindref="compound">Storage</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>STORAGE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STORAGE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa1e229ccb8b53a57de4ebb11c2d15272e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86f" kindref="member">storageStatus</ref><sp/>{<ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa2f0d18fc0d0fa4a6cd92dc328501874d" kindref="member">EMPTY</ref>,<sp/><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa1e229ccb8b53a57de4ebb11c2d15272e" kindref="member">AVAILABLE</ref>,<sp/><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa8fd6994b2300416d1ad947a50d833850" kindref="member">FULLY</ref>};</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="class_storage" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_storage" kindref="compound">Storage</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22" refid="class_storage_1a32a3a3044e508911dae197650dcf813e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_storage_1a32a3a3044e508911dae197650dcf813e" kindref="member">capacity</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_storage_1aa1694a20f74b18f46d68eb95d6d3f228" kindref="member">Storage</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_storage_1a32a3a3044e508911dae197650dcf813e" kindref="member">capacity</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86f" kindref="member">storageStatus</ref><sp/><ref refid="class_storage_1a21a267ec9e43c6147c56e56a347d5784" kindref="member">checkCapacity</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>totalCapacity)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/Storage/Storage.h"/>
+  </compounddef>
+</doxygen>

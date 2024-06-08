@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__event_test_8cpp_source" xml:lang="en-US">
+<title>EventTest.cpp</title>
+<indexterm><primary>test/Event/EventTest.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__event_test_8cpp_source_1l00001"/>00001 
+<anchor xml:id="__event_test_8cpp_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&lt;gtest/gtest.h&gt;</emphasis>
+<anchor xml:id="__event_test_8cpp_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__event_8h">Event/Event.h</link>&quot;</emphasis>
+<anchor xml:id="__event_test_8cpp_source_1l00008"/>00008 
+<anchor xml:id="__event_test_8cpp_source_1l00012"/><link linkend="__event_test_8cpp_1a214e3d121f02b4fa5971edca99668626">00012</link> <link linkend="__event_test_8cpp_1a214e3d121f02b4fa5971edca99668626">TEST</link>(EventTest,&#32;itLives)
+<anchor xml:id="__event_test_8cpp_source_1l00013"/>00013 {
+<anchor xml:id="__event_test_8cpp_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<link linkend="_class_event">Event</link>&#32;event(<emphasis role="stringliteral">&quot;Init&quot;</emphasis>,&#32;QDateTime::currentDateTime());
+<anchor xml:id="__event_test_8cpp_source_1l00015"/>00015 }
+<anchor xml:id="__event_test_8cpp_source_1l00016"/>00016 
+<anchor xml:id="__event_test_8cpp_source_1l00020"/><link linkend="__event_test_8cpp_1a6a7a17727afc00e53595ee22c45e48e7">00020</link> <link linkend="__event_test_8cpp_1a214e3d121f02b4fa5971edca99668626">TEST</link>(EventTest,&#32;generateEventShouldReturnCorrectValue)
+<anchor xml:id="__event_test_8cpp_source_1l00021"/>00021 {
+<anchor xml:id="__event_test_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<link linkend="_class_event">Event</link>&#32;<emphasis role="keyword">event</emphasis>&#32;=&#32;<link linkend="_class_event_1a0a53e36a36fd4bfac0bb3d0de9cc521c">Event::generateEvent</link>(<emphasis role="stringliteral">&quot;Init&quot;</emphasis>,&#32;100);
+<anchor xml:id="__event_test_8cpp_source_1l00023"/>00023 
+<anchor xml:id="__event_test_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;EXPECT_FALSE(event.getEventType().isEmpty());
+<anchor xml:id="__event_test_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;EXPECT_TRUE(event.getTime()&#32;&gt;&#32;QDateTime::currentDateTime());
+<anchor xml:id="__event_test_8cpp_source_1l00026"/>00026 }
+</programlisting></section>

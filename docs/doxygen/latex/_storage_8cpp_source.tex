@@ -1,0 +1,29 @@
+\doxysection{Storage.\+cpp}
+\hypertarget{_storage_8cpp_source}{}\label{_storage_8cpp_source}\index{src/Storage/Storage.cpp@{src/Storage/Storage.cpp}}
+\mbox{\hyperlink{_storage_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_storage_8h}{Storage.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00011}\mbox{\hyperlink{class_storage_aa1694a20f74b18f46d68eb95d6d3f228}{00011}}\ \mbox{\hyperlink{class_storage_aa1694a20f74b18f46d68eb95d6d3f228}{Storage::Storage}}(\textcolor{keywordtype}{int}\ capacity)}
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{this}\ -\/>\ \mbox{\hyperlink{class_storage_a32a3a3044e508911dae197650dcf813e}{capacity}}\ =\ \mbox{\hyperlink{class_storage_a32a3a3044e508911dae197650dcf813e}{capacity}};}
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00014}00014\ \}}
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00019}\mbox{\hyperlink{class_storage_a21a267ec9e43c6147c56e56a347d5784}{00019}}\ \mbox{\hyperlink{_storage_8h_aa3ad3663894c15a6c47a41a02d64e86f}{storageStatus}}\ \mbox{\hyperlink{class_storage_a21a267ec9e43c6147c56e56a347d5784}{Storage::checkCapacity}}(\textcolor{keywordtype}{int}\ totalCapacity)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00020}00020\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_storage_a32a3a3044e508911dae197650dcf813e}{capacity}}\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00022}00022\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{_storage_8h_aa3ad3663894c15a6c47a41a02d64e86fa2f0d18fc0d0fa4a6cd92dc328501874d}{EMPTY}};}
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_storage_a32a3a3044e508911dae197650dcf813e}{capacity}}\ >\ 0\ \&\&\ \mbox{\hyperlink{class_storage_a32a3a3044e508911dae197650dcf813e}{capacity}}\ <\ totalCapacity)}
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00026}00026\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{_storage_8h_aa3ad3663894c15a6c47a41a02d64e86fa1e229ccb8b53a57de4ebb11c2d15272e}{AVAILABLE}};}
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00030}00030\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{_storage_8h_aa3ad3663894c15a6c47a41a02d64e86fa8fd6994b2300416d1ad947a50d833850}{FULLY}};}
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00032}00032\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_storage_8cpp_source_l00033}00033\ \}}
+
+\end{DoxyCode}

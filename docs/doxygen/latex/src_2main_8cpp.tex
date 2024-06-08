@@ -1,0 +1,72 @@
+\doxysection{src/main.cpp File Reference}
+\hypertarget{src_2main_8cpp}{}\label{src_2main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+
+
+Main entry point for the \doxylink{class_warehouse}{Warehouse} Simulator application.  
+
+
+{\ttfamily \#include "{}gui/gui.\+h"{}}\newline
+{\ttfamily \#include "{}Simulation/\+Simulation.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$QFile$>$}\newline
+{\ttfamily \#include $<$QText\+Stream$>$}\newline
+{\ttfamily \#include $<$QApplication$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{src_2main_8cpp_a33b82bd3673a70e9b7e2dc97aaf112f1}{create\+Config\+File}} ()
+\begin{DoxyCompactList}\small\item\em Creates a configuration file for the simulation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{src_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Main function of the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main entry point for the \doxylink{class_warehouse}{Warehouse} Simulator application. 
+
+
+
+Definition in file \mbox{\hyperlink{src_2main_8cpp_source}{main.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{src_2main_8cpp_a33b82bd3673a70e9b7e2dc97aaf112f1}\label{src_2main_8cpp_a33b82bd3673a70e9b7e2dc97aaf112f1} 
+\index{main.cpp@{main.cpp}!createConfigFile@{createConfigFile}}
+\index{createConfigFile@{createConfigFile}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{createConfigFile()}{createConfigFile()}}
+{\footnotesize\ttfamily void create\+Config\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a configuration file for the simulation. 
+
+This function prompts the user to configure the simulation settings and writes them to a CSV file named "{}settings.\+csv"{}. 
+
+Definition at line \mbox{\hyperlink{src_2main_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{src_2main_8cpp_source}{main.\+cpp}}.
+
+\Hypertarget{src_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{src_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Main function of the application. 
+
+This function initializes the application, processes command-\/line arguments, and starts the \doxylink{class_g_u_i}{GUI} or simulation based on the provided options.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of command-\/line arguments. \\
+\hline
+{\em argv} & Array of command-\/line arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Exit code of the application. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{src_2main_8cpp_source_l00155}{155}} of file \mbox{\hyperlink{src_2main_8cpp_source}{main.\+cpp}}.
+

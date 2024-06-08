@@ -1,0 +1,33 @@
+\doxysection{Event.\+cpp}
+\hypertarget{_event_8cpp_source}{}\label{_event_8cpp_source}\index{src/Event/Event.cpp@{src/Event/Event.cpp}}
+\mbox{\hyperlink{_event_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_event_8h}{Event.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <QRandomGenerator>}}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00012}\mbox{\hyperlink{class_event_ad93a0e3be8c8738a36970319e7110389}{00012}}\ \mbox{\hyperlink{class_event_ad93a0e3be8c8738a36970319e7110389}{Event::Event}}(QString\ eventType,\ QDateTime\ time)}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{this}\ -\/>\ eventType\ =\ eventType;}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{this}\ -\/>\ time\ =\ time;}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00016}00016\ \}}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00025}\mbox{\hyperlink{class_event_a0a53e36a36fd4bfac0bb3d0de9cc521c}{00025}}\ \mbox{\hyperlink{class_event}{Event}}\ \mbox{\hyperlink{class_event_a0a53e36a36fd4bfac0bb3d0de9cc521c}{Event::generateEvent}}(QString\ eventType,\ \textcolor{keywordtype}{int}\ seed)}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00026}00026\ \{}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00027}00027\ \ \ \ \ QDateTime\ time\ =\ QDateTime::currentDateTime().addMSecs(QRandomGenerator::global()\ -\/>\ bounded(seed));}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_event_ad93a0e3be8c8738a36970319e7110389}{Event}}(eventType,\ time);}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00031}00031\ \textcolor{comment}{//\ Getters\ implementation}}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00038}\mbox{\hyperlink{class_event_a20074c3674655968a30e835b7e2e6cdb}{00038}}\ QString\ \mbox{\hyperlink{class_event_a20074c3674655968a30e835b7e2e6cdb}{Event::getEventType}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00039}00039\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{return}\ eventType;}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00041}00041\ \}}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00048}\mbox{\hyperlink{class_event_a7dba066f88bda41545ea19491dc69760}{00048}}\ QDateTime\ \mbox{\hyperlink{class_event_a7dba066f88bda41545ea19491dc69760}{Event::getTime}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00049}00049\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{keywordflow}{return}\ time;}
+\DoxyCodeLine{\Hypertarget{_event_8cpp_source_l00051}00051\ \}}
+
+\end{DoxyCode}

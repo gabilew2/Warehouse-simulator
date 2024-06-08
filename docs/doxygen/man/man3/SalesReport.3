@@ -1,0 +1,74 @@
+.TH "SalesReport" 3 "Version 1.0.0" "Warehouse Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SalesReport \- The \fBSalesReport\fP class extends the \fBReport\fP class to provide a report specifically for sales\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <SalesReport\&.h>\fP
+.PP
+Inherits \fBReport\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSalesReport\fP (int salesId, QDateTime time, QList< \fBProductReport\fP > productList, double operationalCosts, double netProfit)"
+.br
+.RI "Construct a new \fBSalesReport\fP object\&. "
+.ti -1c
+.RI "QString \fBgenerateReport\fP () const"
+.br
+.RI "Generates a detailed sales report\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBSalesReport\fP class extends the \fBReport\fP class to provide a report specifically for sales\&. 
+
+This class inherits from \fBReport\fP and is responsible for generating a sales report, which includes details such as sales ID, time, and a list of products sold\&. 
+.PP
+Definition at line \fB20\fP of file \fBSalesReport\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SalesReport::SalesReport (int salesId, QDateTime time, QList< \fBProductReport\fP > productList, double operationalCosts, double netProfit)"
+
+.PP
+Construct a new \fBSalesReport\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsalesId\fP Unique identifier for the sales report\&. 
+.br
+\fItime\fP The time when the report is generated\&. 
+.br
+\fIproductList\fP List of products included in the sales report\&. 
+.br
+\fIoperationalCosts\fP Operational costs of the store\&. 
+.br
+\fInetProfit\fP Net profit of the store\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB11\fP of file \fBSalesReport\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "QString SalesReport::generateReport () const"
+
+.PP
+Generates a detailed sales report\&. 
+.PP
+\fBReturns\fP
+.RS 4
+QString A formatted string representing the sales report\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB21\fP of file \fBSalesReport\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Warehouse Simulator from the source code\&.

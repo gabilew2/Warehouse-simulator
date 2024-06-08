@@ -1,0 +1,157 @@
+\doxysection{Report Class Reference}
+\hypertarget{class_report}{}\label{class_report}\index{Report@{Report}}
+
+
+Represents a report in the store simulation.  
+
+
+
+
+{\ttfamily \#include $<$Report.\+h$>$}
+
+Inheritance diagram for Report\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_report}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_report_1_1_product_report}{Product\+Report}}
+\begin{DoxyCompactList}\small\item\em Represents a report for a single product. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_report_a36e8866b9ef8fefbe4491f15d96ed503}{Report}} (double operational\+Costs, double net\+Profit)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_report}{Report} object. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_report_aab56d11c88e240affbc4b147474d4363}{generate\+Report}} () const
+\begin{DoxyCompactList}\small\item\em Generates a summary report as a QString. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_report_a7f5c6f19874a36e59c63051ab5b60400}{set\+Operational\+Costs}} (double costs)
+\begin{DoxyCompactList}\small\item\em Set the operational costs. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_report_a4fe97f7f77d99b1e925c6024ed7c3913}{set\+Net\+Profit}} (double profit)
+\begin{DoxyCompactList}\small\item\em Set the net profit. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_report_a0280b260884973ffbb4ca95c438f30a6}{get\+Operational\+Costs}} ()
+\begin{DoxyCompactList}\small\item\em Get the operational costs. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_report_af98f7f1cb07d06b29c081974cfc9a830}{get\+Net\+Profit}} ()
+\begin{DoxyCompactList}\small\item\em Get the net profit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a report in the store simulation. 
+
+This class is responsible for generating reports that summarize the operational costs and net profits. 
+
+Definition at line \mbox{\hyperlink{_report_8h_source_l00017}{17}} of file \mbox{\hyperlink{_report_8h_source}{Report.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_report_a36e8866b9ef8fefbe4491f15d96ed503}\label{class_report_a36e8866b9ef8fefbe4491f15d96ed503} 
+\index{Report@{Report}!Report@{Report}}
+\index{Report@{Report}!Report@{Report}}
+\doxysubsubsection{\texorpdfstring{Report()}{Report()}}
+{\footnotesize\ttfamily Report\+::\+Report (\begin{DoxyParamCaption}\item[{double}]{operational\+Costs,  }\item[{double}]{net\+Profit }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_report}{Report} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em operational\+Costs} & Operational costs of the store. \\
+\hline
+{\em net\+Profit} & Net profit of the store. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_report_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{_report_8cpp_source}{Report.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_report_aab56d11c88e240affbc4b147474d4363}\label{class_report_aab56d11c88e240affbc4b147474d4363} 
+\index{Report@{Report}!generateReport@{generateReport}}
+\index{generateReport@{generateReport}!Report@{Report}}
+\doxysubsubsection{\texorpdfstring{generateReport()}{generateReport()}}
+{\footnotesize\ttfamily QString Report\+::generate\+Report (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Generates a summary report as a QString. 
+
+This method compiles the operational costs and net profits into a readable format. \begin{DoxyReturn}{Returns}
+QString A summary report of the store\textquotesingle{}s financial status.
+
+QString A summary report of the store\textquotesingle{}s financial status. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_report_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{_report_8cpp_source}{Report.\+cpp}}.
+
+\Hypertarget{class_report_af98f7f1cb07d06b29c081974cfc9a830}\label{class_report_af98f7f1cb07d06b29c081974cfc9a830} 
+\index{Report@{Report}!getNetProfit@{getNetProfit}}
+\index{getNetProfit@{getNetProfit}!Report@{Report}}
+\doxysubsubsection{\texorpdfstring{getNetProfit()}{getNetProfit()}}
+{\footnotesize\ttfamily double Report\+::get\+Net\+Profit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the net profit. 
+
+
+
+Definition at line \mbox{\hyperlink{_report_8cpp_source_l00052}{52}} of file \mbox{\hyperlink{_report_8cpp_source}{Report.\+cpp}}.
+
+\Hypertarget{class_report_a0280b260884973ffbb4ca95c438f30a6}\label{class_report_a0280b260884973ffbb4ca95c438f30a6} 
+\index{Report@{Report}!getOperationalCosts@{getOperationalCosts}}
+\index{getOperationalCosts@{getOperationalCosts}!Report@{Report}}
+\doxysubsubsection{\texorpdfstring{getOperationalCosts()}{getOperationalCosts()}}
+{\footnotesize\ttfamily double Report\+::get\+Operational\+Costs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the operational costs. 
+
+
+
+Definition at line \mbox{\hyperlink{_report_8cpp_source_l00047}{47}} of file \mbox{\hyperlink{_report_8cpp_source}{Report.\+cpp}}.
+
+\Hypertarget{class_report_a4fe97f7f77d99b1e925c6024ed7c3913}\label{class_report_a4fe97f7f77d99b1e925c6024ed7c3913} 
+\index{Report@{Report}!setNetProfit@{setNetProfit}}
+\index{setNetProfit@{setNetProfit}!Report@{Report}}
+\doxysubsubsection{\texorpdfstring{setNetProfit()}{setNetProfit()}}
+{\footnotesize\ttfamily void Report\+::set\+Net\+Profit (\begin{DoxyParamCaption}\item[{double}]{profit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the net profit. 
+
+
+
+Definition at line \mbox{\hyperlink{_report_8cpp_source_l00041}{41}} of file \mbox{\hyperlink{_report_8cpp_source}{Report.\+cpp}}.
+
+\Hypertarget{class_report_a7f5c6f19874a36e59c63051ab5b60400}\label{class_report_a7f5c6f19874a36e59c63051ab5b60400} 
+\index{Report@{Report}!setOperationalCosts@{setOperationalCosts}}
+\index{setOperationalCosts@{setOperationalCosts}!Report@{Report}}
+\doxysubsubsection{\texorpdfstring{setOperationalCosts()}{setOperationalCosts()}}
+{\footnotesize\ttfamily void Report\+::set\+Operational\+Costs (\begin{DoxyParamCaption}\item[{double}]{costs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the operational costs. 
+
+
+
+Definition at line \mbox{\hyperlink{_report_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{_report_8cpp_source}{Report.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Report/\mbox{\hyperlink{_report_8h}{Report.\+h}}\item 
+src/\+Report/\mbox{\hyperlink{_report_8cpp}{Report.\+cpp}}\end{DoxyCompactItemize}

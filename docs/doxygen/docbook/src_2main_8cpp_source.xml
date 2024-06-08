@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_src_2main_8cpp_source" xml:lang="en-US">
+<title>main.cpp</title>
+<indexterm><primary>src/main.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_src_2main_8cpp_source_1l00001"/>00001 
+<anchor xml:id="_src_2main_8cpp_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_gui_8h">gui/gui.h</link>&quot;</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__simulation_8h">Simulation/Simulation.h</link>&quot;</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00008"/>00008 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00009"/>00009 <emphasis role="preprocessor">#include&#32;&lt;QFile&gt;</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00010"/>00010 <emphasis role="preprocessor">#include&#32;&lt;QTextStream&gt;</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&lt;QApplication&gt;</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00012"/>00012 
+<anchor xml:id="_src_2main_8cpp_source_1l00019"/><link linkend="_src_2main_8cpp_1a33b82bd3673a70e9b7e2dc97aaf112f1">00019</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_src_2main_8cpp_1a33b82bd3673a70e9b7e2dc97aaf112f1">createConfigFile</link>()
+<anchor xml:id="_src_2main_8cpp_source_1l00020"/>00020 {
+<anchor xml:id="_src_2main_8cpp_source_1l00021"/>00021 &#32;&#32;&#32;&#32;QVector&lt;QString&gt;&#32;configLines;
+<anchor xml:id="_src_2main_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;QString&#32;tempLine;
+<anchor xml:id="_src_2main_8cpp_source_1l00023"/>00023 
+<anchor xml:id="_src_2main_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Open&#32;a&#32;CSV&#32;file&#32;for&#32;writing.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;QFile&#32;file(<emphasis role="stringliteral">&quot;settings.csv&quot;</emphasis>);
+<anchor xml:id="_src_2main_8cpp_source_1l00026"/>00026 
+<anchor xml:id="_src_2main_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(file.open(QIODevice::WriteOnly&#32;|&#32;QIODevice::Text))
+<anchor xml:id="_src_2main_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QTextStream&#32;out(&amp;file);
+<anchor xml:id="_src_2main_8cpp_source_1l00030"/>00030 
+<anchor xml:id="_src_2main_8cpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Write&#32;the&#32;CSV&#32;header.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Type,Location,Capacity,Name,Price,Quantity,Cycles,Seed\n&quot;</emphasis>;
+<anchor xml:id="_src_2main_8cpp_source_1l00033"/>00033 
+<anchor xml:id="_src_2main_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">short</emphasis>&#32;option&#32;=&#32;0;
+<anchor xml:id="_src_2main_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;seed&#32;=&#32;0;&#32;<emphasis role="comment">//&#32;Default&#32;seed&#32;value</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00036"/>00036 
+<anchor xml:id="_src_2main_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Interactive&#32;menu&#32;to&#32;configure&#32;simulation&#32;settings.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(option&#32;!=&#32;9)
+<anchor xml:id="_src_2main_8cpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Display&#32;options&#32;to&#32;the&#32;user.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n\n***************************&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl
+<anchor xml:id="_src_2main_8cpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;*&#32;1.&#32;Add&#32;warehouse&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl
+<anchor xml:id="_src_2main_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;*&#32;2.&#32;Add&#32;product&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl
+<anchor xml:id="_src_2main_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;*&#32;3.&#32;Set&#32;number&#32;of&#32;cycles&#32;*&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl
+<anchor xml:id="_src_2main_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;*&#32;4.&#32;Set&#32;event&#32;seed&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl
+<anchor xml:id="_src_2main_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;*&#32;5.&#32;Undo&#32;last&#32;change&#32;&#32;&#32;&#32;&#32;*&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl
+<anchor xml:id="_src_2main_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;*&#32;9.&#32;Exit&#32;configuration&#32;&#32;&#32;*&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl
+<anchor xml:id="_src_2main_8cpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;***************************&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="_src_2main_8cpp_source_1l00049"/>00049 
+<anchor xml:id="_src_2main_8cpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n\nEnter&#32;option:&#32;&quot;</emphasis>;&#32;std::cin&#32;&gt;&gt;&#32;option;
+<anchor xml:id="_src_2main_8cpp_source_1l00051"/>00051 
+<anchor xml:id="_src_2main_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Handle&#32;user&#32;input&#32;based&#32;on&#32;selected&#32;option.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>(option)
+<anchor xml:id="_src_2main_8cpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;1:
+<anchor xml:id="_src_2main_8cpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;location;
+<anchor xml:id="_src_2main_8cpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;capacity;
+<anchor xml:id="_src_2main_8cpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n\nEnter&#32;warehouse&#32;location:&#32;&quot;</emphasis>;&#32;std::cin&#32;&gt;&gt;&#32;location;
+<anchor xml:id="_src_2main_8cpp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Enter&#32;capacity&#32;of&#32;warehouse:&#32;&quot;</emphasis>;&#32;std::cin&#32;&gt;&gt;&#32;capacity;
+<anchor xml:id="_src_2main_8cpp_source_1l00061"/>00061 
+<anchor xml:id="_src_2main_8cpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Write&#32;warehouse&#32;details&#32;to&#32;the&#32;config&#32;file.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tempLine&#32;=&#32;<emphasis role="stringliteral">&quot;Warehouse,&quot;</emphasis>&#32;+&#32;QString::fromStdString(location)&#32;+&#32;<emphasis role="stringliteral">&quot;,&quot;</emphasis>&#32;+&#32;QString::number(capacity);
+<anchor xml:id="_src_2main_8cpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;configLines.push_back(tempLine);
+<anchor xml:id="_src_2main_8cpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_src_2main_8cpp_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;2:
+<anchor xml:id="_src_2main_8cpp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;name;
+<anchor xml:id="_src_2main_8cpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;price;
+<anchor xml:id="_src_2main_8cpp_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;quantity;
+<anchor xml:id="_src_2main_8cpp_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n\nEnter&#32;product&#32;name:&#32;&quot;</emphasis>;&#32;std::cin&#32;&gt;&gt;&#32;name;
+<anchor xml:id="_src_2main_8cpp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Enter&#32;product&#32;price:&#32;&quot;</emphasis>;&#32;std::cin&#32;&gt;&gt;&#32;price;
+<anchor xml:id="_src_2main_8cpp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Enter&#32;quantity:&#32;&quot;</emphasis>;&#32;std::cin&#32;&gt;&gt;&#32;quantity;
+<anchor xml:id="_src_2main_8cpp_source_1l00075"/>00075 
+<anchor xml:id="_src_2main_8cpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Write&#32;product&#32;details&#32;to&#32;the&#32;config&#32;file.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tempLine&#32;=&#32;<emphasis role="stringliteral">&quot;Product,&quot;</emphasis>&#32;+&#32;QString::fromStdString(name)&#32;+&#32;<emphasis role="stringliteral">&quot;,&quot;</emphasis>&#32;+&#32;QString::number(price)&#32;+&#32;<emphasis role="stringliteral">&quot;,&quot;</emphasis>&#32;+&#32;QString::number(quantity);
+<anchor xml:id="_src_2main_8cpp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;configLines.push_back(tempLine);
+<anchor xml:id="_src_2main_8cpp_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_src_2main_8cpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;3:
+<anchor xml:id="_src_2main_8cpp_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;cycles;
+<anchor xml:id="_src_2main_8cpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n\nEnter&#32;number&#32;of&#32;cycles:&#32;&quot;</emphasis>;&#32;std::cin&#32;&gt;&gt;&#32;cycles;
+<anchor xml:id="_src_2main_8cpp_source_1l00085"/>00085 
+<anchor xml:id="_src_2main_8cpp_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Write&#32;the&#32;number&#32;of&#32;cycles&#32;to&#32;the&#32;config&#32;file.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tempLine&#32;=&#32;<emphasis role="stringliteral">&quot;Cycles,,,,&quot;</emphasis>&#32;+&#32;QString::number(cycles);
+<anchor xml:id="_src_2main_8cpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;configLines.push_back(tempLine);
+<anchor xml:id="_src_2main_8cpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_src_2main_8cpp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;4:
+<anchor xml:id="_src_2main_8cpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n\nEnter&#32;seed&#32;for&#32;event&#32;generation:&#32;&quot;</emphasis>;&#32;std::cin&#32;&gt;&gt;&#32;seed;
+<anchor xml:id="_src_2main_8cpp_source_1l00094"/>00094 
+<anchor xml:id="_src_2main_8cpp_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Append&#32;the&#32;seed&#32;to&#32;the&#32;configuration.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tempLine&#32;=&#32;<emphasis role="stringliteral">&quot;Seed,,,,,&quot;</emphasis>&#32;+&#32;QString::number(seed);
+<anchor xml:id="_src_2main_8cpp_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;configLines.push_back(tempLine);
+<anchor xml:id="_src_2main_8cpp_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_src_2main_8cpp_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;5:
+<anchor xml:id="_src_2main_8cpp_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Undo&#32;the&#32;last&#32;change.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!configLines.isEmpty())
+<anchor xml:id="_src_2main_8cpp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;configLines.pop_back();
+<anchor xml:id="_src_2main_8cpp_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\nLast&#32;change&#32;undone.\n&quot;</emphasis>;
+<anchor xml:id="_src_2main_8cpp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\nNo&#32;changes&#32;to&#32;undo.\n&quot;</emphasis>;
+<anchor xml:id="_src_2main_8cpp_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_src_2main_8cpp_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;9:
+<anchor xml:id="_src_2main_8cpp_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Exit&#32;the&#32;configuration&#32;menu.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\nExiting&#32;configuration.\n&quot;</emphasis>;
+<anchor xml:id="_src_2main_8cpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_src_2main_8cpp_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="_src_2main_8cpp_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Handle&#32;invalid&#32;input.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n\nInvalid&#32;option.&#32;Please&#32;try&#32;again.&quot;</emphasis>;
+<anchor xml:id="_src_2main_8cpp_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_src_2main_8cpp_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00128"/>00128 
+<anchor xml:id="_src_2main_8cpp_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Write&#32;all&#32;lines&#32;to&#32;the&#32;CSV&#32;file.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keyword">const</emphasis>&#32;QString&#32;&amp;line&#32;:&#32;configLines)
+<anchor xml:id="_src_2main_8cpp_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;line&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n&quot;</emphasis>;
+<anchor xml:id="_src_2main_8cpp_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00134"/>00134 
+<anchor xml:id="_src_2main_8cpp_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Close&#32;the&#32;file&#32;after&#32;writing.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;file.close();
+<anchor xml:id="_src_2main_8cpp_source_1l00137"/>00137 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00138"/>00138 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00139"/>00139 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Error&#32;handling&#32;if&#32;the&#32;file&#32;cannot&#32;be&#32;opened.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Error:&#32;Can&apos;t&#32;open&#32;file&#32;to&#32;write.&quot;</emphasis>;
+<anchor xml:id="_src_2main_8cpp_source_1l00142"/>00142 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00143"/>00143 }
+<anchor xml:id="_src_2main_8cpp_source_1l00144"/>00144 
+<anchor xml:id="_src_2main_8cpp_source_1l00155"/><link linkend="_src_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97">00155</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_src_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97">main</link>(<emphasis role="keywordtype">int</emphasis>&#32;argc,&#32;<emphasis role="keywordtype">char</emphasis>&#32;*argv[])
+<anchor xml:id="_src_2main_8cpp_source_1l00156"/>00156 {
+<anchor xml:id="_src_2main_8cpp_source_1l00157"/>00157 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;_gui&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_src_2main_8cpp_source_1l00158"/>00158 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;_config&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_src_2main_8cpp_source_1l00159"/>00159 
+<anchor xml:id="_src_2main_8cpp_source_1l00160"/>00160 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Process&#32;command-line&#32;arguments.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00161"/>00161 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;arg&#32;=&#32;1;&#32;arg&#32;&lt;&#32;argc;&#32;++arg)
+<anchor xml:id="_src_2main_8cpp_source_1l00162"/>00162 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00163"/>00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(strcmp(argv[arg],&#32;<emphasis role="stringliteral">&quot;--nogui&quot;</emphasis>)&#32;==&#32;0)
+<anchor xml:id="_src_2main_8cpp_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00165"/>00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_gui&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_src_2main_8cpp_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(strcmp(argv[arg],&#32;<emphasis role="stringliteral">&quot;--noconfig&quot;</emphasis>)&#32;==&#32;0)
+<anchor xml:id="_src_2main_8cpp_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00169"/>00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_config&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_src_2main_8cpp_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(strcmp(argv[arg],&#32;<emphasis role="stringliteral">&quot;--file&quot;</emphasis>)&#32;==&#32;0)
+<anchor xml:id="_src_2main_8cpp_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;if&#32;there&#32;is&#32;a&#32;filename&#32;argument&#32;following&#32;the&#32;--file&#32;flag.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(arg&#32;+&#32;1&#32;&lt;&#32;argc)
+<anchor xml:id="_src_2main_8cpp_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QString&#32;inputFileName&#32;=&#32;argv[arg&#32;+&#32;1];
+<anchor xml:id="_src_2main_8cpp_source_1l00177"/>00177 
+<anchor xml:id="_src_2main_8cpp_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;if&#32;the&#32;file&#32;exists.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(QFile::exists(inputFileName))
+<anchor xml:id="_src_2main_8cpp_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Rename&#32;the&#32;existing&#32;configuration&#32;file&#32;if&#32;it&#32;exists.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(QFile::exists(<emphasis role="stringliteral">&quot;settings.csv&quot;</emphasis>))
+<anchor xml:id="_src_2main_8cpp_source_1l00183"/>00183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QFile::rename(<emphasis role="stringliteral">&quot;settings.csv&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;settings_old.csv&quot;</emphasis>);
+<anchor xml:id="_src_2main_8cpp_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00186"/>00186 
+<anchor xml:id="_src_2main_8cpp_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Copy&#32;the&#32;new&#32;configuration&#32;file.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QFile::remove(<emphasis role="stringliteral">&quot;settings.csv&quot;</emphasis>);
+<anchor xml:id="_src_2main_8cpp_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QFile::copy(inputFileName,&#32;<emphasis role="stringliteral">&quot;settings.csv&quot;</emphasis>);
+<anchor xml:id="_src_2main_8cpp_source_1l00190"/>00190 
+<anchor xml:id="_src_2main_8cpp_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Skip&#32;the&#32;filename&#32;argument&#32;so&#32;it&apos;s&#32;not&#32;processed&#32;as&#32;another&#32;flag.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;++arg;
+<anchor xml:id="_src_2main_8cpp_source_1l00193"/>00193 
+<anchor xml:id="_src_2main_8cpp_source_1l00194"/>00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_config&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_src_2main_8cpp_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00196"/>00196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00197"/>00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;The&#32;specified&#32;file&#32;does&#32;not&#32;exist:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;inputFileName.toStdString();
+<anchor xml:id="_src_2main_8cpp_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;-1;
+<anchor xml:id="_src_2main_8cpp_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00202"/>00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;No&#32;filename&#32;was&#32;specified&#32;after&#32;the&#32;--file&#32;flag.&quot;</emphasis>;
+<anchor xml:id="_src_2main_8cpp_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;-1;
+<anchor xml:id="_src_2main_8cpp_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00207"/>00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00208"/>00208 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00209"/>00209 
+<anchor xml:id="_src_2main_8cpp_source_1l00210"/>00210 &#32;&#32;&#32;&#32;QApplication&#32;a(argc,&#32;argv);
+<anchor xml:id="_src_2main_8cpp_source_1l00211"/>00211 &#32;&#32;&#32;&#32;<link linkend="_class_g_u_i">GUI</link>&#32;w;
+<anchor xml:id="_src_2main_8cpp_source_1l00212"/>00212 
+<anchor xml:id="_src_2main_8cpp_source_1l00213"/>00213 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Start&#32;the&#32;GUI&#32;if&#32;enabled.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00214"/>00214 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(_gui)
+<anchor xml:id="_src_2main_8cpp_source_1l00215"/>00215 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00216"/>00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;w.show();
+<anchor xml:id="_src_2main_8cpp_source_1l00217"/>00217 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00218"/>00218 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00219"/>00219 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00220"/>00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Create&#32;a&#32;config&#32;file&#32;and&#32;run&#32;the&#32;simulation&#32;if&#32;enabled.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00221"/>00221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(_config)
+<anchor xml:id="_src_2main_8cpp_source_1l00222"/>00222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_src_2main_8cpp_source_1l00223"/>00223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_src_2main_8cpp_1a33b82bd3673a70e9b7e2dc97aaf112f1">createConfigFile</link>();
+<anchor xml:id="_src_2main_8cpp_source_1l00224"/>00224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00225"/>00225 
+<anchor xml:id="_src_2main_8cpp_source_1l00226"/>00226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_simulation">Simulation</link>&#32;simulation&#32;=&#32;<link linkend="_class_simulation">Simulation</link>();
+<anchor xml:id="_src_2main_8cpp_source_1l00227"/>00227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;simulation.<link linkend="_class_simulation_1ae5c367f87c0b5dc9740bc6d00e44e72c">run</link>();
+<anchor xml:id="_src_2main_8cpp_source_1l00228"/>00228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;exit(0);
+<anchor xml:id="_src_2main_8cpp_source_1l00229"/>00229 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_src_2main_8cpp_source_1l00230"/>00230 
+<anchor xml:id="_src_2main_8cpp_source_1l00231"/>00231 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Execute&#32;the&#32;application.</emphasis>
+<anchor xml:id="_src_2main_8cpp_source_1l00232"/>00232 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;a.exec();
+<anchor xml:id="_src_2main_8cpp_source_1l00233"/>00233 }
+</programlisting></section>

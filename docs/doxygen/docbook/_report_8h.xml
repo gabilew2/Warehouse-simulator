@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__report_8h" xml:lang="en-US">
+<title>src/Report/Report.h File Reference</title>
+<indexterm><primary>src/Report/Report.h</primary></indexterm>
+<para>
+
+<para>Header file for the <link linkend="_class_report">Report</link> class. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;QString&gt;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_report">Report</link></para>
+
+<para>Represents a report in the store simulation. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_report_1_1_product_report">Report::ProductReport</link></para>
+
+<para>Represents a report for a single product. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file for the <link linkend="_class_report">Report</link> class. </para>
+<para>
+Definition in file <link linkend="__report_8h_source">Report.h</link>.</para>
+</section>
+</section>

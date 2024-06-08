@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_sales_report" kind="class" language="C++" prot="public">
+    <compoundname>SalesReport</compoundname>
+    <basecompoundref refid="class_report" prot="private" virt="non-virtual">Report</basecompoundref>
+    <includes refid="_sales_report_8h" local="no">SalesReport.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sales_report_1a945b44ec8a63ce1d414efe2fda95271f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SalesReport::salesId</definition>
+        <argsstring></argsstring>
+        <name>salesId</name>
+        <qualifiedname>SalesReport::salesId</qualifiedname>
+        <briefdescription>
+<para>Unique identifier for the sales report. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SalesReport/SalesReport.h" line="23" column="9" bodyfile="src/SalesReport/SalesReport.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sales_report_1a043d0d10e44e013010d260a8e7dd7d10" prot="private" static="no" mutable="no">
+        <type>QDateTime</type>
+        <definition>QDateTime SalesReport::time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <qualifiedname>SalesReport::time</qualifiedname>
+        <briefdescription>
+<para>The time when the report is generated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SalesReport/SalesReport.h" line="24" column="15" bodyfile="src/SalesReport/SalesReport.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sales_report_1a833d47b3c6a2cb5da7357fe35d926cba" prot="private" static="no" mutable="no">
+        <type>QList&lt; <ref refid="struct_report_1_1_product_report" kindref="compound">ProductReport</ref> &gt;</type>
+        <definition>QList&lt;ProductReport&gt; SalesReport::productList</definition>
+        <argsstring></argsstring>
+        <name>productList</name>
+        <qualifiedname>SalesReport::productList</qualifiedname>
+        <briefdescription>
+<para>List of products included in the sales report. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SalesReport/SalesReport.h" line="25" column="11" bodyfile="src/SalesReport/SalesReport.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sales_report_1a2bd4ee648c88804b8bbb581d1626c49f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SalesReport::SalesReport</definition>
+        <argsstring>(int salesId, QDateTime time, QList&lt; ProductReport &gt; productList, double operationalCosts, double netProfit)</argsstring>
+        <name>SalesReport</name>
+        <qualifiedname>SalesReport::SalesReport</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>salesId</declname>
+        </param>
+        <param>
+          <type>QDateTime</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>QList&lt; <ref refid="struct_report_1_1_product_report" kindref="compound">ProductReport</ref> &gt;</type>
+          <declname>productList</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>operationalCosts</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>netProfit</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_sales_report" kindref="compound">SalesReport</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>salesId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unique identifier for the sales report. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time when the report is generated. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>productList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of products included in the sales report. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>operationalCosts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Operational costs of the store. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>netProfit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Net profit of the store. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SalesReport/SalesReport.h" line="37" column="5" bodyfile="src/SalesReport/SalesReport.cpp" bodystart="11" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sales_report_1adbcc82fb8fa70e87cd4f12bf4f3537ae" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString SalesReport::generateReport</definition>
+        <argsstring>() const</argsstring>
+        <name>generateReport</name>
+        <qualifiedname>SalesReport::generateReport</qualifiedname>
+        <briefdescription>
+<para>Generates a detailed sales report. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>QString A formatted string representing the sales report. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SalesReport/SalesReport.h" line="43" column="13" bodyfile="src/SalesReport/SalesReport.cpp" bodystart="21" bodyend="56"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_sales_report" kindref="compound">SalesReport</ref> class extends the <ref refid="class_report" kindref="compound">Report</ref> class to provide a report specifically for sales. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class inherits from <ref refid="class_report" kindref="compound">Report</ref> and is responsible for generating a sales report, which includes details such as sales ID, time, and a list of products sold. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Report</label>
+        <link refid="class_report"/>
+      </node>
+      <node id="1">
+        <label>SalesReport</label>
+        <link refid="class_sales_report"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Report</label>
+        <link refid="class_report"/>
+      </node>
+      <node id="1">
+        <label>SalesReport</label>
+        <link refid="class_sales_report"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/SalesReport/SalesReport.h" line="20" column="1" bodyfile="src/SalesReport/SalesReport.h" bodystart="21" bodyend="44"/>
+    <listofallmembers>
+      <member refid="class_sales_report_1adbcc82fb8fa70e87cd4f12bf4f3537ae" prot="public" virt="non-virtual"><scope>SalesReport</scope><name>generateReport</name></member>
+      <member refid="class_sales_report_1a833d47b3c6a2cb5da7357fe35d926cba" prot="private" virt="non-virtual"><scope>SalesReport</scope><name>productList</name></member>
+      <member refid="class_sales_report_1a945b44ec8a63ce1d414efe2fda95271f" prot="private" virt="non-virtual"><scope>SalesReport</scope><name>salesId</name></member>
+      <member refid="class_sales_report_1a2bd4ee648c88804b8bbb581d1626c49f" prot="public" virt="non-virtual"><scope>SalesReport</scope><name>SalesReport</name></member>
+      <member refid="class_sales_report_1a043d0d10e44e013010d260a8e7dd7d10" prot="private" virt="non-virtual"><scope>SalesReport</scope><name>time</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

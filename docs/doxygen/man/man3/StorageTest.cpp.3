@@ -1,0 +1,70 @@
+.TH "test/Storage/StorageTest.cpp" 3 "Version 1.0.0" "Warehouse Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+test/Storage/StorageTest.cpp \- Source file of tests for the \fBStorage\fP class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <gtest/gtest\&.h>\fP
+.br
+\fR#include 'Storage/Storage\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTEST\fP (StorageTest, itLives)"
+.br
+.RI "Test to ensure that a \fBStorage\fP object can be instantiated\&. "
+.ti -1c
+.RI "\fBTEST\fP (StorageTest, checkCapacityShouldReturnEmpty)"
+.br
+.RI "Test to verify that a new \fBStorage\fP is EMPTY when initialized with zero capacity\&. "
+.ti -1c
+.RI "\fBTEST\fP (StorageTest, checkCapacityShouldReturnAvailable)"
+.br
+.RI "Test to verify that \fBStorage\fP is AVAILABLE when initialized with capacity less than total capacity\&. "
+.ti -1c
+.RI "\fBTEST\fP (StorageTest, checkCapacityShouldReturnFully)"
+.br
+.RI "Test to verify that \fBStorage\fP is FULLY when initialized with capacity equal to or greater than total capacity\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Source file of tests for the \fBStorage\fP class\&. 
+
+
+.PP
+Definition in file \fBStorageTest\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "TEST (StorageTest, checkCapacityShouldReturnAvailable)"
+
+.PP
+Test to verify that \fBStorage\fP is AVAILABLE when initialized with capacity less than total capacity\&. 
+.PP
+Definition at line \fB29\fP of file \fBStorageTest\&.cpp\fP\&.
+.SS "TEST (StorageTest, checkCapacityShouldReturnEmpty)"
+
+.PP
+Test to verify that a new \fBStorage\fP is EMPTY when initialized with zero capacity\&. 
+.PP
+Definition at line \fB20\fP of file \fBStorageTest\&.cpp\fP\&.
+.SS "TEST (StorageTest, checkCapacityShouldReturnFully)"
+
+.PP
+Test to verify that \fBStorage\fP is FULLY when initialized with capacity equal to or greater than total capacity\&. 
+.PP
+Definition at line \fB38\fP of file \fBStorageTest\&.cpp\fP\&.
+.SS "TEST (StorageTest, itLives)"
+
+.PP
+Test to ensure that a \fBStorage\fP object can be instantiated\&. 
+.PP
+Definition at line \fB12\fP of file \fBStorageTest\&.cpp\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Warehouse Simulator from the source code\&.

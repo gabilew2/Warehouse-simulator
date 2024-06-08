@@ -1,0 +1,116 @@
+.TH "Simulation" 3 "Version 1.0.0" "Warehouse Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Simulation \- The \fBSimulation\fP class manages the overall department store simulation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Simulation\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSimulation\fP ()"
+.br
+.RI "Construct a new \fBSimulation\fP object\&. "
+.ti -1c
+.RI "\fBstatus\fP \fBconductCycle\fP ()"
+.br
+.RI "Conducts a simulation cycle, processing events for the current cycle\&. "
+.ti -1c
+.RI "\fBstatus\fP \fBrespondToEvent\fP (\fBEvent\fP &event)"
+.br
+.RI "Responds to a specific event\&. "
+.ti -1c
+.RI "void \fBrun\fP ()"
+.br
+.RI "Initiates the simulation by running the main loop\&. "
+.ti -1c
+.RI "void \fBprocessEvents\fP ()"
+.br
+.RI "Processes all scheduled events\&. "
+.ti -1c
+.RI "QString \fBgenerateReport\fP ()"
+.br
+.RI "Generates a report summarizing simulation results\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBSimulation\fP class manages the overall department store simulation\&. 
+
+This class orchestrates the simulation process, including event handling, warehouse management, product operations, and reporting\&. 
+.PP
+Definition at line \fB28\fP of file \fBSimulation\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Simulation::Simulation ()"
+
+.PP
+Construct a new \fBSimulation\fP object\&. Sets up the initial state of the simulation, including loading settings and preparing the environment\&. 
+.PP
+Definition at line \fB6\fP of file \fBSimulation\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBstatus\fP Simulation::conductCycle ()"
+
+.PP
+Conducts a simulation cycle, processing events for the current cycle\&. Processes events and updates the simulation state for each cycle\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Status of the cycle (success or failure)\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB170\fP of file \fBSimulation\&.cpp\fP\&.
+.SS "QString Simulation::generateReport ()"
+
+.PP
+Generates a report summarizing simulation results\&. Compiles data from the simulation into a formatted report string\&. 
+.PP
+\fBReturns\fP
+.RS 4
+QString A summary report of the simulation results\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB298\fP of file \fBSimulation\&.cpp\fP\&.
+.SS "void Simulation::processEvents ()"
+
+.PP
+Processes all scheduled events\&. Invokes conductCycle to process events for the current cycle\&. 
+.PP
+Definition at line \fB159\fP of file \fBSimulation\&.cpp\fP\&.
+.SS "\fBstatus\fP Simulation::respondToEvent (\fBEvent\fP & event)"
+
+.PP
+Responds to a specific event\&. Handles the given event based on its type and updates the simulation state accordingly\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP The event to handle\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Status of event handling (success or failure)\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB198\fP of file \fBSimulation\&.cpp\fP\&.
+.SS "void Simulation::run ()"
+
+.PP
+Initiates the simulation by running the main loop\&. Starts the simulation loop, generating cycles, processing events, and generating reports\&. 
+.PP
+Definition at line \fB105\fP of file \fBSimulation\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Warehouse Simulator from the source code\&.

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__event_8cpp" xml:lang="en-US">
+<title>src/Event/Event.cpp File Reference</title>
+<indexterm><primary>src/Event/Event.cpp</primary></indexterm>
+<para>
+
+<para>Source file of the <link linkend="_class_event">Event</link> class. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;Event.h&quot;<?linebreak?>#include &lt;QRandomGenerator&gt;<?linebreak?></programlisting><section>
+<title>Detailed Description</title>
+
+<para>Source file of the <link linkend="_class_event">Event</link> class. </para>
+<para>
+Definition in file <link linkend="__event_8cpp_source">Event.cpp</link>.</para>
+</section>
+</section>

@@ -1,0 +1,125 @@
+\doxysection{gui.\+h}
+\hypertarget{gui_8h_source}{}\label{gui_8h_source}\index{src/gui/gui.h@{src/gui/gui.h}}
+\mbox{\hyperlink{gui_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ GUI\_H}}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ GUI\_H}}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_simulation_8h}{Simulation/Simulation.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <QMessageBox>}}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <QFileDialog>}}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <QFile>}}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <QTextStream>}}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <QInputDialog>}}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <QTimer>}}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00019}00019\ \textcolor{preprocessor}{\#include\ <QThread>}}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00028}\mbox{\hyperlink{gui_8h_a4bf30075a0d0136f8daa83c001a2d75e}{00028}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{gui_8h_a4bf30075a0d0136f8daa83c001a2d75e}{GUIEvent}}\ =\ QEvent;}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00038}\mbox{\hyperlink{gui_8h_a41dc4eccf37447afba3e984031346842}{00038}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{gui_8h_a41dc4eccf37447afba3e984031346842}{GUIElement}}\ =\ QWidget;}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00047}\mbox{\hyperlink{class_simulation_thread}{00047}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_simulation_thread}{SimulationThread}}\ :\ \textcolor{keyword}{public}\ QThread}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00048}00048\ \{}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00049}00049\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00050}00050\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00058}\mbox{\hyperlink{class_simulation_thread_ac13a782fcf9163b7a6c3392e398d66b9}{00058}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_simulation_thread_ac13a782fcf9163b7a6c3392e398d66b9}{run}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00059}00059\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00060}00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_simulation}{Simulation}}\ simulation;}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00061}00061\ \ \ \ \ \ \ \ \ simulation.\mbox{\hyperlink{class_simulation_ae5c367f87c0b5dc9740bc6d00e44e72c}{run}}();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00062}00062\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{class_simulation_thread_a8ddb2d67e1c9e0f2e0602b015a52b648}{simulationFinished}}();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00064}00064\ signals:}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00068}\mbox{\hyperlink{class_simulation_thread_a8ddb2d67e1c9e0f2e0602b015a52b648}{00068}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_simulation_thread_a8ddb2d67e1c9e0f2e0602b015a52b648}{simulationFinished}}();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00069}00069\ \};}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00071}\mbox{\hyperlink{namespace_ui}{00071}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00072}00072\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i}{GUI}};}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00073}00073\ \}}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00082}\mbox{\hyperlink{class_g_u_i}{00082}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_u_i}{GUI}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00083}00083\ \{}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00084}00084\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00086}00086\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00092}00092\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_g_u_i_aa73b900295e12a915b80f34c418f7653}{GUI}}(\mbox{\hyperlink{gui_8h_a41dc4eccf37447afba3e984031346842}{GUIElement}}\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00097}00097\ \ \ \ \ \mbox{\hyperlink{class_g_u_i_ac9cae2328dcb5d83bdfaeca49a2eb695}{\string~GUI}}();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00106}00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_ae63efaa6d38814299c42540a5d4ea00b}{render}}();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00118}\mbox{\hyperlink{class_g_u_i_ab313545b5c5cfe552a77ec342c69b617}{00118}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_ab313545b5c5cfe552a77ec342c69b617}{updateGUI}}(\mbox{\hyperlink{gui_8h_a4bf30075a0d0136f8daa83c001a2d75e}{GUIEvent}}\&\ event);}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00130}\mbox{\hyperlink{class_g_u_i_a0b4a1e6d6a100198309a25c11dde336c}{00130}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_u_i_a0b4a1e6d6a100198309a25c11dde336c}{handleEvents}}(\mbox{\hyperlink{gui_8h_a4bf30075a0d0136f8daa83c001a2d75e}{GUIEvent}}\&\ event);}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00132}00132\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00139}00139\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_addbutton\_clicked();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00146}00146\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_back\_to\_menu\_clicked();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00154}00154\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_back\_to\_menu\_2\_clicked();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00162}00162\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_back\_to\_menu\_3\_clicked();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00163}00163\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00169}00169\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_settings\_button\_clicked();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00177}00177\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_start\_simulation\_button\_clicked();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00184}00184\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_aboutButton\_clicked();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00192}00192\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_configFileButton\_clicked();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00199}00199\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_back\_to\_menu\_7\_clicked();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00207}00207\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_start\_button\_clicked();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00208}00208\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00215}00215\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_addProductButton\_clicked();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00216}00216\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00222}00222\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_removeButton\_clicked();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00229}00229\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_previousWarehouse\_clicked();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00230}00230\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00237}00237\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_nextWarehouse\_clicked();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00238}00238\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00244}00244\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_removeWarehouseButton\_clicked();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00245}00245\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00246}00246\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00247}00247\ \ \ \ \ Ui::GUI\ *ui;\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00248}00248\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00256}00256\ \ \ \ \ \textcolor{keyword}{struct\ }Product}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00257}00257\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00258}00258\ \ \ \ \ \ \ \ \ QString\ name;\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00259}00259\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ price;\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00260}00260\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ quantity;\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00261}00261\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00262}00262\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00270}00270\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{class_warehouse}{Warehouse}}}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00271}00271\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00272}00272\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ id;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00273}00273\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ capacity;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00274}00274\ \ \ \ \ \ \ \ \ QString\ name;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00275}00275\ \ \ \ \ \ \ \ \ QList<Product>\ products;\ \ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00276}00276\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00277}00277\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00278}00278\ \ \ \ \ QList<Warehouse>\ warehouses;\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00279}00279\ \ \ \ \ \textcolor{keywordtype}{int}\ currentWarehouseIndex\ =\ 0;\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00280}00280\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00281}00281\ \ \ \ \ QString\ filename;\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00282}00282\ \ \ \ \ \textcolor{keywordtype}{int}\ seed\ =\ 100;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00283}00283\ \ \ \ \ \textcolor{keywordtype}{int}\ cycles\ =\ 10;\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00284}00284\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00285}00285\ \ \ \ \ QTimer\ *timer;\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00286}00286\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00293}00293\ \ \ \ \ \textcolor{keywordtype}{void}\ loadCurrentWarehouseData();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00294}00294\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00301}00301\ \ \ \ \ \textcolor{keywordtype}{void}\ setupUpdateTimer();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00302}00302\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00309}00309\ \ \ \ \ \textcolor{keywordtype}{void}\ updateTablesFromCSV();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00310}00310\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00317}00317\ \ \ \ \ \textcolor{keywordtype}{void}\ onSimulationFinished();}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00318}00318\ \};}
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00319}00319\ }
+\DoxyCodeLine{\Hypertarget{gui_8h_source_l00320}00320\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GUI\_H}}
+
+\end{DoxyCode}

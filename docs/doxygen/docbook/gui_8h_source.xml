@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gui_8h_source" xml:lang="en-US">
+<title>gui.h</title>
+<indexterm><primary>src/gui/gui.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_gui_8h_source_1l00001"/>00001 
+<anchor xml:id="_gui_8h_source_1l00008"/>00008 <emphasis role="preprocessor">#ifndef&#32;GUI_H</emphasis>
+<anchor xml:id="_gui_8h_source_1l00009"/>00009 <emphasis role="preprocessor">#define&#32;GUI_H</emphasis>
+<anchor xml:id="_gui_8h_source_1l00010"/>00010 
+<anchor xml:id="_gui_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&lt;QMainWindow&gt;</emphasis>
+<anchor xml:id="_gui_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__simulation_8h">Simulation/Simulation.h</link>&quot;</emphasis>
+<anchor xml:id="_gui_8h_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&lt;QMessageBox&gt;</emphasis>
+<anchor xml:id="_gui_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&lt;QFileDialog&gt;</emphasis>
+<anchor xml:id="_gui_8h_source_1l00015"/>00015 <emphasis role="preprocessor">#include&#32;&lt;QFile&gt;</emphasis>
+<anchor xml:id="_gui_8h_source_1l00016"/>00016 <emphasis role="preprocessor">#include&#32;&lt;QTextStream&gt;</emphasis>
+<anchor xml:id="_gui_8h_source_1l00017"/>00017 <emphasis role="preprocessor">#include&#32;&lt;QInputDialog&gt;</emphasis>
+<anchor xml:id="_gui_8h_source_1l00018"/>00018 <emphasis role="preprocessor">#include&#32;&lt;QTimer&gt;</emphasis>
+<anchor xml:id="_gui_8h_source_1l00019"/>00019 <emphasis role="preprocessor">#include&#32;&lt;QThread&gt;</emphasis>
+<anchor xml:id="_gui_8h_source_1l00020"/>00020 
+<anchor xml:id="_gui_8h_source_1l00028"/><link linkend="_gui_8h_1a4bf30075a0d0136f8daa83c001a2d75e">00028</link> <emphasis role="keyword">using&#32;</emphasis><link linkend="_gui_8h_1a4bf30075a0d0136f8daa83c001a2d75e">GUIEvent</link>&#32;=&#32;QEvent;
+<anchor xml:id="_gui_8h_source_1l00029"/>00029 
+<anchor xml:id="_gui_8h_source_1l00038"/><link linkend="_gui_8h_1a41dc4eccf37447afba3e984031346842">00038</link> <emphasis role="keyword">using&#32;</emphasis><link linkend="_gui_8h_1a41dc4eccf37447afba3e984031346842">GUIElement</link>&#32;=&#32;QWidget;
+<anchor xml:id="_gui_8h_source_1l00039"/>00039 
+<anchor xml:id="_gui_8h_source_1l00047"/><link linkend="_class_simulation_thread">00047</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_simulation_thread">SimulationThread</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;QThread
+<anchor xml:id="_gui_8h_source_1l00048"/>00048 {
+<anchor xml:id="_gui_8h_source_1l00049"/>00049 &#32;&#32;&#32;&#32;Q_OBJECT
+<anchor xml:id="_gui_8h_source_1l00050"/>00050 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_gui_8h_source_1l00058"/><link linkend="_class_simulation_thread_1ac13a782fcf9163b7a6c3392e398d66b9">00058</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_simulation_thread_1ac13a782fcf9163b7a6c3392e398d66b9">run</link>()<emphasis role="keyword">&#32;override</emphasis>
+<anchor xml:id="_gui_8h_source_1l00059"/>00059 <emphasis role="keyword">&#32;&#32;&#32;&#32;</emphasis>{
+<anchor xml:id="_gui_8h_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_simulation">Simulation</link>&#32;simulation;
+<anchor xml:id="_gui_8h_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;simulation.<link linkend="_class_simulation_1ae5c367f87c0b5dc9740bc6d00e44e72c">run</link>();
+<anchor xml:id="_gui_8h_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;emit&#32;<link linkend="_class_simulation_thread_1a8ddb2d67e1c9e0f2e0602b015a52b648">simulationFinished</link>();
+<anchor xml:id="_gui_8h_source_1l00063"/>00063 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8h_source_1l00064"/>00064 signals:
+<anchor xml:id="_gui_8h_source_1l00068"/><link linkend="_class_simulation_thread_1a8ddb2d67e1c9e0f2e0602b015a52b648">00068</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_simulation_thread_1a8ddb2d67e1c9e0f2e0602b015a52b648">simulationFinished</link>();
+<anchor xml:id="_gui_8h_source_1l00069"/>00069 };
+<anchor xml:id="_gui_8h_source_1l00070"/>00070 
+<anchor xml:id="_gui_8h_source_1l00071"/><link linkend="_namespace_ui">00071</link> <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_ui">Ui</link>&#32;{
+<anchor xml:id="_gui_8h_source_1l00072"/>00072 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_u_i">GUI</link>;
+<anchor xml:id="_gui_8h_source_1l00073"/>00073 }
+<anchor xml:id="_gui_8h_source_1l00074"/>00074 
+<anchor xml:id="_gui_8h_source_1l00082"/><link linkend="_class_g_u_i">00082</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_u_i">GUI</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;QMainWindow
+<anchor xml:id="_gui_8h_source_1l00083"/>00083 {
+<anchor xml:id="_gui_8h_source_1l00084"/>00084 &#32;&#32;&#32;&#32;Q_OBJECT
+<anchor xml:id="_gui_8h_source_1l00085"/>00085 
+<anchor xml:id="_gui_8h_source_1l00086"/>00086 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_gui_8h_source_1l00092"/>00092 &#32;&#32;&#32;&#32;<emphasis role="keyword">explicit</emphasis>&#32;<link linkend="_class_g_u_i_1aa73b900295e12a915b80f34c418f7653">GUI</link>(<link linkend="_gui_8h_1a41dc4eccf37447afba3e984031346842">GUIElement</link>&#32;*parent&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>);
+<anchor xml:id="_gui_8h_source_1l00093"/>00093 
+<anchor xml:id="_gui_8h_source_1l00097"/>00097 &#32;&#32;&#32;&#32;<link linkend="_class_g_u_i_1ac9cae2328dcb5d83bdfaeca49a2eb695">~GUI</link>();
+<anchor xml:id="_gui_8h_source_1l00098"/>00098 
+<anchor xml:id="_gui_8h_source_1l00106"/>00106 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_u_i_1ae63efaa6d38814299c42540a5d4ea00b">render</link>();
+<anchor xml:id="_gui_8h_source_1l00107"/>00107 
+<anchor xml:id="_gui_8h_source_1l00118"/><link linkend="_class_g_u_i_1ab313545b5c5cfe552a77ec342c69b617">00118</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_u_i_1ab313545b5c5cfe552a77ec342c69b617">updateGUI</link>(<link linkend="_gui_8h_1a4bf30075a0d0136f8daa83c001a2d75e">GUIEvent</link>&amp;&#32;event);
+<anchor xml:id="_gui_8h_source_1l00119"/>00119 
+<anchor xml:id="_gui_8h_source_1l00130"/><link linkend="_class_g_u_i_1a0b4a1e6d6a100198309a25c11dde336c">00130</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_u_i_1a0b4a1e6d6a100198309a25c11dde336c">handleEvents</link>(<link linkend="_gui_8h_1a4bf30075a0d0136f8daa83c001a2d75e">GUIEvent</link>&amp;&#32;event);
+<anchor xml:id="_gui_8h_source_1l00131"/>00131 
+<anchor xml:id="_gui_8h_source_1l00132"/>00132 <emphasis role="keyword">private</emphasis>&#32;slots:
+<anchor xml:id="_gui_8h_source_1l00139"/>00139 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;on_addbutton_clicked();
+<anchor xml:id="_gui_8h_source_1l00140"/>00140 
+<anchor xml:id="_gui_8h_source_1l00146"/>00146 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;on_back_to_menu_clicked();
+<anchor xml:id="_gui_8h_source_1l00147"/>00147 
+<anchor xml:id="_gui_8h_source_1l00154"/>00154 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;on_back_to_menu_2_clicked();
+<anchor xml:id="_gui_8h_source_1l00155"/>00155 
+<anchor xml:id="_gui_8h_source_1l00162"/>00162 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;on_back_to_menu_3_clicked();
+<anchor xml:id="_gui_8h_source_1l00163"/>00163 
+<anchor xml:id="_gui_8h_source_1l00169"/>00169 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;on_settings_button_clicked();
+<anchor xml:id="_gui_8h_source_1l00170"/>00170 
+<anchor xml:id="_gui_8h_source_1l00177"/>00177 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;on_start_simulation_button_clicked();
+<anchor xml:id="_gui_8h_source_1l00178"/>00178 
+<anchor xml:id="_gui_8h_source_1l00184"/>00184 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;on_aboutButton_clicked();
+<anchor xml:id="_gui_8h_source_1l00185"/>00185 
+<anchor xml:id="_gui_8h_source_1l00192"/>00192 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;on_configFileButton_clicked();
+<anchor xml:id="_gui_8h_source_1l00193"/>00193 
+<anchor xml:id="_gui_8h_source_1l00199"/>00199 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;on_back_to_menu_7_clicked();
+<anchor xml:id="_gui_8h_source_1l00200"/>00200 
+<anchor xml:id="_gui_8h_source_1l00207"/>00207 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;on_start_button_clicked();
+<anchor xml:id="_gui_8h_source_1l00208"/>00208 
+<anchor xml:id="_gui_8h_source_1l00215"/>00215 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;on_addProductButton_clicked();
+<anchor xml:id="_gui_8h_source_1l00216"/>00216 
+<anchor xml:id="_gui_8h_source_1l00222"/>00222 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;on_removeButton_clicked();
+<anchor xml:id="_gui_8h_source_1l00223"/>00223 
+<anchor xml:id="_gui_8h_source_1l00229"/>00229 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;on_previousWarehouse_clicked();
+<anchor xml:id="_gui_8h_source_1l00230"/>00230 
+<anchor xml:id="_gui_8h_source_1l00237"/>00237 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;on_nextWarehouse_clicked();
+<anchor xml:id="_gui_8h_source_1l00238"/>00238 
+<anchor xml:id="_gui_8h_source_1l00244"/>00244 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;on_removeWarehouseButton_clicked();
+<anchor xml:id="_gui_8h_source_1l00245"/>00245 
+<anchor xml:id="_gui_8h_source_1l00246"/>00246 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_gui_8h_source_1l00247"/>00247 &#32;&#32;&#32;&#32;Ui::GUI&#32;*ui;&#32;
+<anchor xml:id="_gui_8h_source_1l00248"/>00248 
+<anchor xml:id="_gui_8h_source_1l00256"/>00256 &#32;&#32;&#32;&#32;<emphasis role="keyword">struct&#32;</emphasis>Product
+<anchor xml:id="_gui_8h_source_1l00257"/>00257 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8h_source_1l00258"/>00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QString&#32;name;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gui_8h_source_1l00259"/>00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;price;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gui_8h_source_1l00260"/>00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;quantity;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gui_8h_source_1l00261"/>00261 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_gui_8h_source_1l00262"/>00262 
+<anchor xml:id="_gui_8h_source_1l00270"/>00270 &#32;&#32;&#32;&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_class_warehouse">Warehouse</link>
+<anchor xml:id="_gui_8h_source_1l00271"/>00271 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8h_source_1l00272"/>00272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;id;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gui_8h_source_1l00273"/>00273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;capacity;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gui_8h_source_1l00274"/>00274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QString&#32;name;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gui_8h_source_1l00275"/>00275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QList&lt;Product&gt;&#32;products;&#32;&#32;
+<anchor xml:id="_gui_8h_source_1l00276"/>00276 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_gui_8h_source_1l00277"/>00277 
+<anchor xml:id="_gui_8h_source_1l00278"/>00278 &#32;&#32;&#32;&#32;QList&lt;Warehouse&gt;&#32;warehouses;&#32;
+<anchor xml:id="_gui_8h_source_1l00279"/>00279 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentWarehouseIndex&#32;=&#32;0;&#32;
+<anchor xml:id="_gui_8h_source_1l00280"/>00280 
+<anchor xml:id="_gui_8h_source_1l00281"/>00281 &#32;&#32;&#32;&#32;QString&#32;filename;&#32;
+<anchor xml:id="_gui_8h_source_1l00282"/>00282 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;seed&#32;=&#32;100;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gui_8h_source_1l00283"/>00283 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;cycles&#32;=&#32;10;&#32;
+<anchor xml:id="_gui_8h_source_1l00284"/>00284 
+<anchor xml:id="_gui_8h_source_1l00285"/>00285 &#32;&#32;&#32;&#32;QTimer&#32;*timer;&#32;
+<anchor xml:id="_gui_8h_source_1l00286"/>00286 
+<anchor xml:id="_gui_8h_source_1l00293"/>00293 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;loadCurrentWarehouseData();
+<anchor xml:id="_gui_8h_source_1l00294"/>00294 
+<anchor xml:id="_gui_8h_source_1l00301"/>00301 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;setupUpdateTimer();
+<anchor xml:id="_gui_8h_source_1l00302"/>00302 
+<anchor xml:id="_gui_8h_source_1l00309"/>00309 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;updateTablesFromCSV();
+<anchor xml:id="_gui_8h_source_1l00310"/>00310 
+<anchor xml:id="_gui_8h_source_1l00317"/>00317 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;onSimulationFinished();
+<anchor xml:id="_gui_8h_source_1l00318"/>00318 };
+<anchor xml:id="_gui_8h_source_1l00319"/>00319 
+<anchor xml:id="_gui_8h_source_1l00320"/>00320 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;GUI_H</emphasis>
+</programlisting></section>

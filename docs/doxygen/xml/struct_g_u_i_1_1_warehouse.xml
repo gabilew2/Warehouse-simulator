@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="struct_g_u_i_1_1_warehouse" kind="struct" language="C++" prot="private">
+    <compoundname>GUI::Warehouse</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_g_u_i_1_1_warehouse_1a21fde63709ed4333ed1c761d1851243b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GUI::Warehouse::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>GUI::Warehouse::id</qualifiedname>
+        <briefdescription>
+<para>Unique identifier for the warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="272" column="13" bodyfile="src/gui/gui.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_g_u_i_1_1_warehouse_1af05231202a10bb757fc1a7f12bf0eb2e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GUI::Warehouse::capacity</definition>
+        <argsstring></argsstring>
+        <name>capacity</name>
+        <qualifiedname>GUI::Warehouse::capacity</qualifiedname>
+        <briefdescription>
+<para>Total capacity of the warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="273" column="13" bodyfile="src/gui/gui.h" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_g_u_i_1_1_warehouse_1a82d06f8b6b8683dccad67a104efb6d10" prot="public" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString GUI::Warehouse::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>GUI::Warehouse::name</qualifiedname>
+        <briefdescription>
+<para>Name or location of the warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="274" column="17" bodyfile="src/gui/gui.h" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_g_u_i_1_1_warehouse_1ae84d94227814e868a7365ec8e486e58b" prot="public" static="no" mutable="no">
+        <type>QList&lt; <ref refid="class_product" kindref="compound">Product</ref> &gt;</type>
+        <definition>QList&lt;Product&gt; GUI::Warehouse::products</definition>
+        <argsstring></argsstring>
+        <name>products</name>
+        <qualifiedname>GUI::Warehouse::products</qualifiedname>
+        <briefdescription>
+<para>List of products stored in the warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="275" column="15" bodyfile="src/gui/gui.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents a warehouse with an ID, capacity, name, and a list of products. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This structure is used to store information about a warehouse, including its unique ID, total capacity, name, and a list of products that are stored in the warehouse. </para>
+    </detaileddescription>
+    <location file="src/gui/gui.h" line="270" column="5" bodyfile="src/gui/gui.h" bodystart="271" bodyend="276"/>
+    <listofallmembers>
+      <member refid="struct_g_u_i_1_1_warehouse_1af05231202a10bb757fc1a7f12bf0eb2e" prot="public" virt="non-virtual"><scope>GUI::Warehouse</scope><name>capacity</name></member>
+      <member refid="struct_g_u_i_1_1_warehouse_1a21fde63709ed4333ed1c761d1851243b" prot="public" virt="non-virtual"><scope>GUI::Warehouse</scope><name>id</name></member>
+      <member refid="struct_g_u_i_1_1_warehouse_1a82d06f8b6b8683dccad67a104efb6d10" prot="public" virt="non-virtual"><scope>GUI::Warehouse</scope><name>name</name></member>
+      <member refid="struct_g_u_i_1_1_warehouse_1ae84d94227814e868a7365ec8e486e58b" prot="public" virt="non-virtual"><scope>GUI::Warehouse</scope><name>products</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

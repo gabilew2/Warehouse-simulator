@@ -1,0 +1,74 @@
+.TH "WarehouseReport" 3 "Version 1.0.0" "Warehouse Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+WarehouseReport \- The \fBWarehouseReport\fP class extends the \fBReport\fP class to provide a report specifically for warehouse inventory\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <WarehouseReport\&.h>\fP
+.PP
+Inherits \fBReport\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWarehouseReport\fP (int warehouseId, double capacity, QList< \fBProductReport\fP > productList, double operationalCosts, double netProfit)"
+.br
+.RI "Construct a new \fBWarehouseReport\fP object\&. "
+.ti -1c
+.RI "QString \fBgenerateReport\fP () const"
+.br
+.RI "Generates a detailed warehouse inventory report\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBWarehouseReport\fP class extends the \fBReport\fP class to provide a report specifically for warehouse inventory\&. 
+
+This class inherits from \fBReport\fP and is responsible for generating a warehouse report, which includes details such as warehouse ID, capacity, and a list of products stored\&. 
+.PP
+Definition at line \fB19\fP of file \fBWarehouseReport\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "WarehouseReport::WarehouseReport (int warehouseId, double capacity, QList< \fBProductReport\fP > productList, double operationalCosts, double netProfit)"
+
+.PP
+Construct a new \fBWarehouseReport\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwarehouseId\fP Unique identifier for the warehouse\&. 
+.br
+\fIcapacity\fP Total storage capacity of the warehouse\&. 
+.br
+\fIproductList\fP List of products stored in the warehouse\&. 
+.br
+\fIoperationalCosts\fP Operational costs of the store\&. 
+.br
+\fInetProfit\fP Net profit of the store\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB11\fP of file \fBWarehouseReport\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "QString WarehouseReport::generateReport () const"
+
+.PP
+Generates a detailed warehouse inventory report\&. 
+.PP
+\fBReturns\fP
+.RS 4
+A formatted string representing the warehouse inventory report\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB21\fP of file \fBWarehouseReport\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Warehouse Simulator from the source code\&.

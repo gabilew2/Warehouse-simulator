@@ -1,0 +1,165 @@
+.TH "Product" 3 "Version 1.0.0" "Warehouse Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Product \- The \fBProduct\fP class represents a product with a name, price, and quantity\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Product\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProduct\fP (int \fBproductId\fP, QString name, double price, int quantity)"
+.br
+.RI "Construct a new \fBProduct\fP object\&. "
+.ti -1c
+.RI "\fBstatus\fP \fBsell\fP (int quantityToSell)"
+.br
+.RI "Sell a quantity of the product\&. "
+.ti -1c
+.RI "\fBstatus\fP \fBupdatePrice\fP (double newPrice)"
+.br
+.RI "Update the price of the product\&. "
+.ti -1c
+.RI "\fBstatus\fP \fBchangeQuantity\fP (int quantity)"
+.br
+.RI "Change the quantity of the product\&. "
+.ti -1c
+.RI "QString \fBgetName\fP () const"
+.br
+.RI "Get the name of the product\&. "
+.ti -1c
+.RI "double \fBgetPrice\fP () const"
+.br
+.RI "Get the price of the product\&. "
+.ti -1c
+.RI "int \fBgetQuantity\fP () const"
+.br
+.RI "Get the quantity of the product\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBproductId\fP"
+.br
+.RI "ID of the product\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBProduct\fP class represents a product with a name, price, and quantity\&. 
+
+This class provides methods to sell the product, update its price, and change its quantity\&. 
+.PP
+Definition at line \fB20\fP of file \fBProduct\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Product::Product (int productId, QString name, double price, int quantity)"
+
+.PP
+Construct a new \fBProduct\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproductId\fP ID of the product\&. 
+.br
+\fIname\fP Name of the product\&. 
+.br
+\fIprice\fP Price of the product\&. If negative, it will be set to 0\&. 
+.br
+\fIquantity\fP Quantity of the product\&. If negative, it will be set to 0\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB6\fP of file \fBProduct\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBstatus\fP Product::changeQuantity (int quantity)"
+
+.PP
+Change the quantity of the product\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIquantity\fP The new quantity of the product\&. Must be non-negative\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+status SUCCESS if the operation is successful, ERROR otherwise\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB71\fP of file \fBProduct\&.cpp\fP\&.
+.SS "QString Product::getName () const"
+
+.PP
+Get the name of the product\&. 
+.PP
+Definition at line \fB86\fP of file \fBProduct\&.cpp\fP\&.
+.SS "double Product::getPrice () const"
+
+.PP
+Get the price of the product\&. 
+.PP
+Definition at line \fB91\fP of file \fBProduct\&.cpp\fP\&.
+.SS "int Product::getQuantity () const"
+
+.PP
+Get the quantity of the product\&. 
+.PP
+Definition at line \fB96\fP of file \fBProduct\&.cpp\fP\&.
+.SS "\fBstatus\fP Product::sell (int quantityToSell)"
+
+.PP
+Sell a quantity of the product\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIquantityToSell\fP The quantity of the product to sell\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+status SUCCESS if the operation is successful, ERROR otherwise\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB34\fP of file \fBProduct\&.cpp\fP\&.
+.SS "\fBstatus\fP Product::updatePrice (double newPrice)"
+
+.PP
+Update the price of the product\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInewPrice\fP The new price of the product\&. Must be positive\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+status SUCCESS if the operation is successful, ERROR otherwise\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB55\fP of file \fBProduct\&.cpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int Product::productId"
+
+.PP
+ID of the product\&. 
+.PP
+Definition at line \fB27\fP of file \fBProduct\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Warehouse Simulator from the source code\&.

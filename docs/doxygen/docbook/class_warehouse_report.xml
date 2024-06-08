@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_warehouse_report" xml:lang="en-US">
+<title>WarehouseReport Class Reference</title>
+<indexterm><primary>WarehouseReport</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_warehouse_report">WarehouseReport</link> class extends the <link linkend="_class_report">Report</link> class to provide a report specifically for warehouse inventory. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;WarehouseReport.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for WarehouseReport:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_warehouse_report.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_warehouse_report_1abf15b4db1b71e7a1d2f91008fca126b7">WarehouseReport</link> (int warehouseId, double capacity, QList&lt; <link linkend="_struct_report_1_1_product_report">ProductReport</link> &gt; productList, double operationalCosts, double netProfit)</para>
+
+<para>Construct a new <link linkend="_class_warehouse_report">WarehouseReport</link> object. </para>
+</listitem>
+            <listitem><para>QString <link linkend="_class_warehouse_report_1a3a4c6655eb2584b3d842d0138b6e6ac9">generateReport</link> () const</para>
+
+<para>Generates a detailed warehouse inventory report. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_warehouse_report">WarehouseReport</link> class extends the <link linkend="_class_report">Report</link> class to provide a report specifically for warehouse inventory. </para>
+
+
+
+<para>This class inherits from <link linkend="_class_report">Report</link> and is responsible for generating a warehouse report, which includes details such as warehouse ID, capacity, and a list of products stored. </para>
+<para>
+Definition at line <link linkend="__warehouse_report_8h_source_1l00019">19</link> of file <link linkend="__warehouse_report_8h_source">WarehouseReport.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_warehouse_report_1abf15b4db1b71e7a1d2f91008fca126b7"/><section>
+    <title>WarehouseReport()</title>
+<indexterm><primary>WarehouseReport</primary><secondary>WarehouseReport</secondary></indexterm>
+<indexterm><primary>WarehouseReport</primary><secondary>WarehouseReport</secondary></indexterm>
+<para><computeroutput>WarehouseReport::WarehouseReport (int warehouseId, double capacity, QList&lt; <link linkend="_struct_report_1_1_product_report">ProductReport</link> &gt; productList, double operationalCosts, double netProfit)</computeroutput></para><para>
+
+<para>Construct a new <link linkend="_class_warehouse_report">WarehouseReport</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>warehouseId</entry><entry>
+<para>Unique identifier for the warehouse. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>capacity</entry><entry>
+<para>Total storage capacity of the warehouse. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>productList</entry><entry>
+<para>List of products stored in the warehouse. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>operationalCosts</entry><entry>
+<para>Operational costs of the store. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>netProfit</entry><entry>
+<para>Net profit of the store. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__warehouse_report_8cpp_source_1l00011">11</link> of file <link linkend="__warehouse_report_8cpp_source">WarehouseReport.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_warehouse_report_1a3a4c6655eb2584b3d842d0138b6e6ac9"/><section>
+    <title>generateReport()</title>
+<indexterm><primary>generateReport</primary><secondary>WarehouseReport</secondary></indexterm>
+<indexterm><primary>WarehouseReport</primary><secondary>generateReport</secondary></indexterm>
+<para><computeroutput>QString WarehouseReport::generateReport ( ) const</computeroutput></para><para>
+
+<para>Generates a detailed warehouse inventory report. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A formatted string representing the warehouse inventory report. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_report_8cpp_source_1l00021">21</link> of file <link linkend="__warehouse_report_8cpp_source">WarehouseReport.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/WarehouseReport/<link linkend="__warehouse_report_8h">WarehouseReport.h</link>src/WarehouseReport/<link linkend="__warehouse_report_8cpp">WarehouseReport.cpp</link></section>
+</section>

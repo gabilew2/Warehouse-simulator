@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__simulation_8h" xml:lang="en-US">
+<title>src/Simulation/Simulation.h File Reference</title>
+<indexterm><primary>src/Simulation/Simulation.h</primary></indexterm>
+<para>
+
+<para>Header file for the <link linkend="_class_simulation">Simulation</link> class. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;Warehouse/Warehouse.h&gt;<?linebreak?>#include &lt;WarehouseReport/WarehouseReport.h&gt;<?linebreak?>#include &lt;SalesReport/SalesReport.h&gt;<?linebreak?>#include &lt;Event/Event.h&gt;<?linebreak?>#include &lt;QList&gt;<?linebreak?>#include &lt;QDateTime&gt;<?linebreak?>#include &lt;QFile&gt;<?linebreak?>#include &lt;QRandomGenerator&gt;<?linebreak?>#include &lt;iostream&gt;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_simulation">Simulation</link></para>
+
+<para>The <link linkend="_class_simulation">Simulation</link> class manages the overall department store simulation. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file for the <link linkend="_class_simulation">Simulation</link> class. </para>
+
+<para>Declares the <link linkend="_class_simulation">Simulation</link> class and its members, which are responsible for managing the overall department store simulation. </para>
+<para>
+Definition in file <link linkend="__simulation_8h_source">Simulation.h</link>.</para>
+</section>
+</section>

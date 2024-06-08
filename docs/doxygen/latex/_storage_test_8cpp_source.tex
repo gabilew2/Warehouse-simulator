@@ -1,0 +1,35 @@
+\doxysection{Storage\+Test.\+cpp}
+\hypertarget{_storage_test_8cpp_source}{}\label{_storage_test_8cpp_source}\index{test/Storage/StorageTest.cpp@{test/Storage/StorageTest.cpp}}
+\mbox{\hyperlink{_storage_test_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <gtest/gtest.h>}}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_storage_8h}{Storage/Storage.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00012}\mbox{\hyperlink{_storage_test_8cpp_a1b22fe9aeb085abcac57c377738e5875}{00012}}\ \mbox{\hyperlink{_storage_test_8cpp_a1b22fe9aeb085abcac57c377738e5875}{TEST}}(StorageTest,\ itLives)}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00014}00014\ \ \ \ \ \mbox{\hyperlink{class_storage}{Storage}}(0);}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00015}00015\ \}}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00020}\mbox{\hyperlink{_storage_test_8cpp_ade26c6ad971a84351528a16738b056a6}{00020}}\ \mbox{\hyperlink{_storage_test_8cpp_a1b22fe9aeb085abcac57c377738e5875}{TEST}}(StorageTest,\ checkCapacityShouldReturnEmpty)}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{class_storage}{Storage}}\ storage(0);}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00023}00023\ \ \ \ \ EXPECT\_EQ(storage.\mbox{\hyperlink{class_storage_a21a267ec9e43c6147c56e56a347d5784}{checkCapacity}}(100),\ \mbox{\hyperlink{_storage_8h_aa3ad3663894c15a6c47a41a02d64e86fa2f0d18fc0d0fa4a6cd92dc328501874d}{EMPTY}});}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00029}\mbox{\hyperlink{_storage_test_8cpp_aad456949101b5328e0beaa3b0d59be77}{00029}}\ \mbox{\hyperlink{_storage_test_8cpp_a1b22fe9aeb085abcac57c377738e5875}{TEST}}(StorageTest,\ checkCapacityShouldReturnAvailable)}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00030}00030\ \{}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{class_storage}{Storage}}\ storage(10);}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00032}00032\ \ \ \ \ EXPECT\_EQ(storage.\mbox{\hyperlink{class_storage_a21a267ec9e43c6147c56e56a347d5784}{checkCapacity}}(100),\ \mbox{\hyperlink{_storage_8h_aa3ad3663894c15a6c47a41a02d64e86fa1e229ccb8b53a57de4ebb11c2d15272e}{AVAILABLE}});}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00033}00033\ \}}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00038}\mbox{\hyperlink{_storage_test_8cpp_a24b788d1e57b102603f7d66a66e5a8b4}{00038}}\ \mbox{\hyperlink{_storage_test_8cpp_a1b22fe9aeb085abcac57c377738e5875}{TEST}}(StorageTest,\ checkCapacityShouldReturnFully)}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00039}00039\ \{}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{class_storage}{Storage}}\ storage(100);}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00041}00041\ \ \ \ \ EXPECT\_EQ(storage.\mbox{\hyperlink{class_storage_a21a267ec9e43c6147c56e56a347d5784}{checkCapacity}}(100),\ \mbox{\hyperlink{_storage_8h_aa3ad3663894c15a6c47a41a02d64e86fa8fd6994b2300416d1ad947a50d833850}{FULLY}});}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{class_storage}{Storage}}\ storage2(150);}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00044}00044\ \ \ \ \ EXPECT\_EQ(storage2.\mbox{\hyperlink{class_storage_a21a267ec9e43c6147c56e56a347d5784}{checkCapacity}}(100),\ \mbox{\hyperlink{_storage_8h_aa3ad3663894c15a6c47a41a02d64e86fa8fd6994b2300416d1ad947a50d833850}{FULLY}});}
+\DoxyCodeLine{\Hypertarget{_storage_test_8cpp_source_l00045}00045\ \}}
+
+\end{DoxyCode}

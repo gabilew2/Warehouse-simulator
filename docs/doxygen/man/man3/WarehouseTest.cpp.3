@@ -1,0 +1,280 @@
+.TH "test/Warehouse/WarehouseTest.cpp" 3 "Version 1.0.0" "Warehouse Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+test/Warehouse/WarehouseTest.cpp \- Source file of tests for the \fBWarehouse\fP class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <gtest/gtest\&.h>\fP
+.br
+\fR#include 'Product/Product\&.h'\fP
+.br
+\fR#include 'Warehouse/Warehouse\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTEST\fP (WarehouseTest, itLives)"
+.br
+.RI "Test to ensure that a \fBWarehouse\fP object can be instantiated\&. "
+.ti -1c
+.RI "\fBTEST\fP (WarehouseTest, checkStatusShouldReturnEmpty)"
+.br
+.RI "Test to check if the warehouse status is EMPTY when capacity is zero or after products are removed\&. "
+.ti -1c
+.RI "\fBTEST\fP (WarehouseTest, checkStatusShouldReturnFully)"
+.br
+.RI "Test to check if the warehouse status is FULLY when capacity is full or exceeded\&. "
+.ti -1c
+.RI "\fBTEST\fP (WarehouseTest, checkStatusShouldReturnAvailable)"
+.br
+.RI "Test to check if the warehouse status is AVAILABLE when capacity is not full\&. "
+.ti -1c
+.RI "\fBTEST\fP (WarehouseTest, updateStatusShouldReturnSuccess)"
+.br
+.RI "Test to verify that updateStatus successfully updates the warehouse's capacity\&. "
+.ti -1c
+.RI "\fBTEST\fP (WarehouseTest, updateStatusShouldReturnError)"
+.br
+.RI "Test to verify that updateStatus returns an error when given a negative capacity\&. "
+.ti -1c
+.RI "\fBTEST\fP (WarehouseTest, changeQuantityShouldReturnSuccess)"
+.br
+.RI "Test to verify that changeQuantity successfully changes the quantity of a product\&. "
+.ti -1c
+.RI "\fBTEST\fP (WarehouseTest, changeQuantityShouldReturnError)"
+.br
+.RI "Test to verify that changeQuantity returns an error when given a negative quantity\&. "
+.ti -1c
+.RI "\fBTEST\fP (WarehouseTest, sellShouldReturnSuccess)"
+.br
+.RI "Test to verify that sell successfully sells the product and decreases the quantity\&. "
+.ti -1c
+.RI "\fBTEST\fP (WarehouseTest, sellShouldReturnError)"
+.br
+.RI "Test to verify that sell returns an error when trying to sell more than available quantity\&. "
+.ti -1c
+.RI "\fBTEST\fP (WarehouseTest, updatePriceShouldReturnSuccess)"
+.br
+.RI "Test to verify that updatePrice successfully updates the price of a product\&. "
+.ti -1c
+.RI "\fBTEST\fP (WarehouseTest, updatePriceShouldReturnError)"
+.br
+.RI "Test to verify that updatePrice returns an error when given a negative price\&. "
+.ti -1c
+.RI "\fBTEST\fP (WarehouseTest, addProductShouldReturnSuccess)"
+.br
+.RI "Test to verify that addProduct successfully adds a product to the warehouse\&. "
+.ti -1c
+.RI "\fBTEST\fP (WarehouseTest, addProductShouldReturnError)"
+.br
+.RI "Test to verify that addProduct returns an error when given a negative price or quantity\&. "
+.ti -1c
+.RI "\fBTEST\fP (WarehouseTest, getLocationShouldReturnCorrectValue)"
+.br
+.RI "Test to verify that getLocation returns the correct location of the warehouse\&. "
+.ti -1c
+.RI "\fBTEST\fP (WarehouseTest, getProductListShouldReturnCorrectValue)"
+.br
+.RI "Test to verify that getProductList returns the correct list of products\&. "
+.ti -1c
+.RI "\fBTEST\fP (WarehouseTest, getCurrentCapacityShouldReturnCorrectValue)"
+.br
+.RI "Test to verify that getCurrentCapacity returns the correct current capacity of the warehouse\&. "
+.ti -1c
+.RI "\fBTEST\fP (WarehouseTest, getNameShouldReturnCorrectValue)"
+.br
+.RI "Test to verify that getName returns the correct name of a product by its ID\&. "
+.ti -1c
+.RI "\fBTEST\fP (WarehouseTest, getPriceShouldReturnCorrectValue)"
+.br
+.RI "Test to verify that getPrice returns the correct price of a product by its ID\&. "
+.ti -1c
+.RI "\fBTEST\fP (WarehouseTest, getQuantityShouldReturnCorrectValue)"
+.br
+.RI "Test to verify that getQuantity returns the correct quantity of a product by its ID\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const QString \fBtestLocation\fP = 'Test Location'"
+.br
+.ti -1c
+.RI "const double \fBinitialCapacity\fP = 100\&.0"
+.br
+.ti -1c
+.RI "const QString \fBproductName\fP = 'Test Product'"
+.br
+.ti -1c
+.RI "const double \fBproductPrice\fP = 10\&.0"
+.br
+.ti -1c
+.RI "const int \fBproductQuantity\fP = 20"
+.br
+.ti -1c
+.RI "const int \fBproductId\fP = 1"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Source file of tests for the \fBWarehouse\fP class\&. 
+
+
+.PP
+Definition in file \fBWarehouseTest\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "TEST (WarehouseTest, addProductShouldReturnError)"
+
+.PP
+Test to verify that addProduct returns an error when given a negative price or quantity\&. 
+.PP
+Definition at line \fB171\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "TEST (WarehouseTest, addProductShouldReturnSuccess)"
+
+.PP
+Test to verify that addProduct successfully adds a product to the warehouse\&. 
+.PP
+Definition at line \fB161\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "TEST (WarehouseTest, changeQuantityShouldReturnError)"
+
+.PP
+Test to verify that changeQuantity returns an error when given a negative quantity\&. 
+.PP
+Definition at line \fB109\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "TEST (WarehouseTest, changeQuantityShouldReturnSuccess)"
+
+.PP
+Test to verify that changeQuantity successfully changes the quantity of a product\&. 
+.PP
+Definition at line \fB98\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "TEST (WarehouseTest, checkStatusShouldReturnAvailable)"
+
+.PP
+Test to check if the warehouse status is AVAILABLE when capacity is not full\&. 
+.PP
+Definition at line \fB50\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "TEST (WarehouseTest, checkStatusShouldReturnEmpty)"
+
+.PP
+Test to check if the warehouse status is EMPTY when capacity is zero or after products are removed\&. 
+.PP
+Definition at line \fB21\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "TEST (WarehouseTest, checkStatusShouldReturnFully)"
+
+.PP
+Test to check if the warehouse status is FULLY when capacity is full or exceeded\&. 
+.PP
+Definition at line \fB35\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "TEST (WarehouseTest, getCurrentCapacityShouldReturnCorrectValue)"
+
+.PP
+Test to verify that getCurrentCapacity returns the correct current capacity of the warehouse\&. 
+.PP
+Definition at line \fB205\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "TEST (WarehouseTest, getLocationShouldReturnCorrectValue)"
+
+.PP
+Test to verify that getLocation returns the correct location of the warehouse\&. 
+.PP
+Definition at line \fB180\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "TEST (WarehouseTest, getNameShouldReturnCorrectValue)"
+
+.PP
+Test to verify that getName returns the correct name of a product by its ID\&. 
+.PP
+Definition at line \fB214\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "TEST (WarehouseTest, getPriceShouldReturnCorrectValue)"
+
+.PP
+Test to verify that getPrice returns the correct price of a product by its ID\&. 
+.PP
+Definition at line \fB224\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "TEST (WarehouseTest, getProductListShouldReturnCorrectValue)"
+
+.PP
+Test to verify that getProductList returns the correct list of products\&. 
+.PP
+Definition at line \fB189\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "TEST (WarehouseTest, getQuantityShouldReturnCorrectValue)"
+
+.PP
+Test to verify that getQuantity returns the correct quantity of a product by its ID\&. 
+.PP
+Definition at line \fB234\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "TEST (WarehouseTest, itLives)"
+
+.PP
+Test to ensure that a \fBWarehouse\fP object can be instantiated\&. 
+.PP
+Definition at line \fB13\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "TEST (WarehouseTest, sellShouldReturnError)"
+
+.PP
+Test to verify that sell returns an error when trying to sell more than available quantity\&. 
+.PP
+Definition at line \fB130\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "TEST (WarehouseTest, sellShouldReturnSuccess)"
+
+.PP
+Test to verify that sell successfully sells the product and decreases the quantity\&. 
+.PP
+Definition at line \fB119\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "TEST (WarehouseTest, updatePriceShouldReturnError)"
+
+.PP
+Test to verify that updatePrice returns an error when given a negative price\&. 
+.PP
+Definition at line \fB151\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "TEST (WarehouseTest, updatePriceShouldReturnSuccess)"
+
+.PP
+Test to verify that updatePrice successfully updates the price of a product\&. 
+.PP
+Definition at line \fB140\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "TEST (WarehouseTest, updateStatusShouldReturnError)"
+
+.PP
+Test to verify that updateStatus returns an error when given a negative capacity\&. 
+.PP
+Definition at line \fB79\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "TEST (WarehouseTest, updateStatusShouldReturnSuccess)"
+
+.PP
+Test to verify that updateStatus successfully updates the warehouse's capacity\&. 
+.PP
+Definition at line \fB65\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "const double initialCapacity = 100\&.0"
+
+.PP
+Definition at line \fB89\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "const int productId = 1"
+
+.PP
+Definition at line \fB93\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "const QString productName = 'Test Product'"
+
+.PP
+Definition at line \fB90\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "const double productPrice = 10\&.0"
+
+.PP
+Definition at line \fB91\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "const int productQuantity = 20"
+
+.PP
+Definition at line \fB92\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SS "const QString testLocation = 'Test Location'"
+
+.PP
+Definition at line \fB88\fP of file \fBWarehouseTest\&.cpp\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Warehouse Simulator from the source code\&.

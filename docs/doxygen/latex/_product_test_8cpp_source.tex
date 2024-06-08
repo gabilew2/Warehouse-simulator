@@ -1,0 +1,88 @@
+\doxysection{Product\+Test.\+cpp}
+\hypertarget{_product_test_8cpp_source}{}\label{_product_test_8cpp_source}\index{test/Product/ProductTest.cpp@{test/Product/ProductTest.cpp}}
+\mbox{\hyperlink{_product_test_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <gtest/gtest.h>}}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_product_8h}{Product/Product.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00012}\mbox{\hyperlink{_product_test_8cpp_a96a8e9e4e75e447056fbc7a76ef9b341}{00012}}\ \mbox{\hyperlink{_product_test_8cpp_a96a8e9e4e75e447056fbc7a76ef9b341}{TEST}}(ProductTest,\ itLives)}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00014}00014\ \ \ \ \ \mbox{\hyperlink{class_product}{Product}}(0,\ QString::fromStdString(\textcolor{stringliteral}{"{}Lorem\ Ipsum"{}}),\ 1.00,\ 1);}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00015}00015\ \}}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00020}\mbox{\hyperlink{_product_test_8cpp_aca16e75bd00c6aafd757aa5b97016c43}{00020}}\ \mbox{\hyperlink{_product_test_8cpp_a96a8e9e4e75e447056fbc7a76ef9b341}{TEST}}(ProductTest,\ getNameShouldReturnName)}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{class_product}{Product}}\ product\ =\ \mbox{\hyperlink{class_product}{Product}}(0,\ QString::fromStdString(\textcolor{stringliteral}{"{}Lorem\ Ipsum"{}}),\ 1.00,\ 1);}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00023}00023\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_a4e07082760c0834ccc8cd44e44a6aae6}{getName}}(),QString::fromStdString(\textcolor{stringliteral}{"{}Lorem\ Ipsum"{}}));}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00029}\mbox{\hyperlink{_product_test_8cpp_a8cafa4a7e2e42d2eb7ba0ff05a752f52}{00029}}\ \mbox{\hyperlink{_product_test_8cpp_a96a8e9e4e75e447056fbc7a76ef9b341}{TEST}}(ProductTest,\ getQuantityShouldReturnInt)}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00030}00030\ \{}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{class_product}{Product}}\ product\ =\ \mbox{\hyperlink{class_product}{Product}}(0,\ QString::fromStdString(\textcolor{stringliteral}{"{}Lorem\ Ipsum"{}}),\ 1.00,\ 1);}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00032}00032\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_a6a449b90b669aa4380d229b44eca686f}{getQuantity}}(),1);}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00033}00033\ \}}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00038}\mbox{\hyperlink{_product_test_8cpp_a24680dae582076e6fdd3675174974907}{00038}}\ \mbox{\hyperlink{_product_test_8cpp_a96a8e9e4e75e447056fbc7a76ef9b341}{TEST}}(ProductTest,\ getPriceShouldReturnDouble)}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00039}00039\ \{}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{class_product}{Product}}\ product\ =\ \mbox{\hyperlink{class_product}{Product}}(0,\ QString::fromStdString(\textcolor{stringliteral}{"{}Lorem\ Ipsum"{}}),\ 1.00,\ 1);}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00041}00041\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_a3be25f647260d61df6063ef706261c7f}{getPrice}}(),1.00);}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00042}00042\ \}}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00047}\mbox{\hyperlink{_product_test_8cpp_a1df645a6d4641e8a0cbcdda4cd2baed9}{00047}}\ \mbox{\hyperlink{_product_test_8cpp_a96a8e9e4e75e447056fbc7a76ef9b341}{TEST}}(ProductTest,\ sellShouldReturnSuccess)}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00048}00048\ \{}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00049}00049\ \ \ \ \ \mbox{\hyperlink{class_product}{Product}}\ product\ =\ \mbox{\hyperlink{class_product}{Product}}(0,\ QString::fromStdString(\textcolor{stringliteral}{"{}Lorem\ Ipsum"{}}),\ 1.00,\ 1);}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00050}00050\ \ \ \ \ \mbox{\hyperlink{class_product}{Product}}\ product2\ =\ \mbox{\hyperlink{class_product}{Product}}(1,\ QString::fromStdString(\textcolor{stringliteral}{"{}Ipsum\ Lorem"{}}),\ 23.99,\ 56);}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00051}00051\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_ac914a618c6cedf1500f22a4e33ed4e83}{sell}}(1),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8}{SUCCESS}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00052}00052\ \ \ \ \ EXPECT\_EQ(product2.\mbox{\hyperlink{class_product_ac914a618c6cedf1500f22a4e33ed4e83}{sell}}(1),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8}{SUCCESS}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00053}00053\ \ \ \ \ EXPECT\_EQ(product2.\mbox{\hyperlink{class_product_ac914a618c6cedf1500f22a4e33ed4e83}{sell}}(53),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8}{SUCCESS}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00054}00054\ \ \ \ \ EXPECT\_EQ(product2.\mbox{\hyperlink{class_product_ac914a618c6cedf1500f22a4e33ed4e83}{sell}}(2),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8}{SUCCESS}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00060}\mbox{\hyperlink{_product_test_8cpp_ab4b33d0aab882649445fb76b4bf4772a}{00060}}\ \mbox{\hyperlink{_product_test_8cpp_a96a8e9e4e75e447056fbc7a76ef9b341}{TEST}}(ProductTest,\ sellShouldReturnError)}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00061}00061\ \{}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00062}00062\ \ \ \ \ \mbox{\hyperlink{class_product}{Product}}\ product\ =\ \mbox{\hyperlink{class_product}{Product}}(0,\ QString::fromStdString(\textcolor{stringliteral}{"{}Lorem\ Ipsum"{}}),\ 1.00,\ 0);}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00063}00063\ \ \ \ \ \mbox{\hyperlink{class_product}{Product}}\ product2\ =\ \mbox{\hyperlink{class_product}{Product}}(1,\ QString::fromStdString(\textcolor{stringliteral}{"{}Ipsum\ Lorem"{}}),\ 23.99,\ 1);}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00064}00064\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_ac914a618c6cedf1500f22a4e33ed4e83}{sell}}(1),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90}{ERROR}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00065}00065\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_ac914a618c6cedf1500f22a4e33ed4e83}{sell}}(-\/1),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90}{ERROR}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00066}00066\ \ \ \ \ EXPECT\_EQ(product2.\mbox{\hyperlink{class_product_ac914a618c6cedf1500f22a4e33ed4e83}{sell}}(2),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90}{ERROR}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00067}00067\ \ \ \ \ EXPECT\_EQ(product2.\mbox{\hyperlink{class_product_ac914a618c6cedf1500f22a4e33ed4e83}{sell}}(-\/1),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90}{ERROR}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00068}00068\ \}}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00073}\mbox{\hyperlink{_product_test_8cpp_a2001a6aad064ce90391d9c7b2ba77668}{00073}}\ \mbox{\hyperlink{_product_test_8cpp_a96a8e9e4e75e447056fbc7a76ef9b341}{TEST}}(ProductTest,\ updatePriceShouldReturnSuccess)}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00074}00074\ \{}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00075}00075\ \ \ \ \ \mbox{\hyperlink{class_product}{Product}}\ product\ =\ \mbox{\hyperlink{class_product}{Product}}(0,\ QString::fromStdString(\textcolor{stringliteral}{"{}Lorem\ Ipsum"{}}),\ 1.00,\ 0);}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00076}00076\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_af264aa2bae1159846e658148d44a621d}{updatePrice}}(1.00),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8}{SUCCESS}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00077}00077\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_af264aa2bae1159846e658148d44a621d}{updatePrice}}(59.99),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8}{SUCCESS}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00078}00078\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_af264aa2bae1159846e658148d44a621d}{updatePrice}}(545454),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8}{SUCCESS}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00079}00079\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_af264aa2bae1159846e658148d44a621d}{updatePrice}}(1),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8}{SUCCESS}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00080}00080\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_af264aa2bae1159846e658148d44a621d}{updatePrice}}(0.01),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8}{SUCCESS}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00081}00081\ \}}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00086}\mbox{\hyperlink{_product_test_8cpp_a66031b79869771178cd4282de57fa478}{00086}}\ \mbox{\hyperlink{_product_test_8cpp_a96a8e9e4e75e447056fbc7a76ef9b341}{TEST}}(ProductTest,\ updatePriceShouldReturnError)}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00087}00087\ \{}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00088}00088\ \ \ \ \ \mbox{\hyperlink{class_product}{Product}}\ product\ =\ \mbox{\hyperlink{class_product}{Product}}(0,\ QString::fromStdString(\textcolor{stringliteral}{"{}Lorem\ Ipsum"{}}),\ 1.00,\ 0);}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00089}00089\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_af264aa2bae1159846e658148d44a621d}{updatePrice}}(-\/1.00),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90}{ERROR}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00090}00090\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_af264aa2bae1159846e658148d44a621d}{updatePrice}}(-\/59.99),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90}{ERROR}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00091}00091\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_af264aa2bae1159846e658148d44a621d}{updatePrice}}(-\/545454),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90}{ERROR}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00092}00092\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_af264aa2bae1159846e658148d44a621d}{updatePrice}}(-\/1),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90}{ERROR}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00093}00093\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_af264aa2bae1159846e658148d44a621d}{updatePrice}}(-\/0.01),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90}{ERROR}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00094}00094\ \}}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00099}\mbox{\hyperlink{_product_test_8cpp_a441a4e44dc64a2bd8e0a5b73ff93ec92}{00099}}\ \mbox{\hyperlink{_product_test_8cpp_a96a8e9e4e75e447056fbc7a76ef9b341}{TEST}}(ProductTest,\ changeQuantityShouldReturnSuccess)}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00100}00100\ \{}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00101}00101\ \ \ \ \ \mbox{\hyperlink{class_product}{Product}}\ product\ =\ \mbox{\hyperlink{class_product}{Product}}(0,\ QString::fromStdString(\textcolor{stringliteral}{"{}Lorem\ Ipsum"{}}),\ 1.00,\ 3);}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00102}00102\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_a351a61b8013eaca0afb924887ac1495c}{changeQuantity}}(1),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8}{SUCCESS}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00103}00103\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_a351a61b8013eaca0afb924887ac1495c}{changeQuantity}}(59),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8}{SUCCESS}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00104}00104\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_a351a61b8013eaca0afb924887ac1495c}{changeQuantity}}(545454),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8}{SUCCESS}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00105}00105\ \}}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00110}\mbox{\hyperlink{_product_test_8cpp_aabd1480a5a311bb22ca89b02ac99f222}{00110}}\ \mbox{\hyperlink{_product_test_8cpp_a96a8e9e4e75e447056fbc7a76ef9b341}{TEST}}(ProductTest,\ changeQuantityShouldReturnError)}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00111}00111\ \{}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00112}00112\ \ \ \ \ \mbox{\hyperlink{class_product}{Product}}\ product\ =\ \mbox{\hyperlink{class_product}{Product}}(0,\ QString::fromStdString(\textcolor{stringliteral}{"{}Lorem\ Ipsum"{}}),\ 1.00,\ 3);}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00113}00113\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_a351a61b8013eaca0afb924887ac1495c}{changeQuantity}}(-\/1),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90}{ERROR}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00114}00114\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_a351a61b8013eaca0afb924887ac1495c}{changeQuantity}}(-\/59),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90}{ERROR}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00115}00115\ \ \ \ \ EXPECT\_EQ(product.\mbox{\hyperlink{class_product_a351a61b8013eaca0afb924887ac1495c}{changeQuantity}}(-\/545454),\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90}{ERROR}});}
+\DoxyCodeLine{\Hypertarget{_product_test_8cpp_source_l00116}00116\ \}}
+
+\end{DoxyCode}

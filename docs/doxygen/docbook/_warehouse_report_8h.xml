@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__warehouse_report_8h" xml:lang="en-US">
+<title>src/WarehouseReport/WarehouseReport.h File Reference</title>
+<indexterm><primary>src/WarehouseReport/WarehouseReport.h</primary></indexterm>
+<para>
+
+<para>Header file of the <link linkend="_class_warehouse_report">WarehouseReport</link> class. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;Report/Report.h&gt;<?linebreak?>#include &lt;QList&gt;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_warehouse_report">WarehouseReport</link></para>
+
+<para>The <link linkend="_class_warehouse_report">WarehouseReport</link> class extends the <link linkend="_class_report">Report</link> class to provide a report specifically for warehouse inventory. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file of the <link linkend="_class_warehouse_report">WarehouseReport</link> class. </para>
+<para>
+Definition in file <link linkend="__warehouse_report_8h_source">WarehouseReport.h</link>.</para>
+</section>
+</section>

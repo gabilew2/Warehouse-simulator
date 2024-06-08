@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_11a62a6baf0a40c6566461cad28c37c3" xml:lang="en-US">
+<title>test/Product Directory Reference</title>
+<indexterm><primary>test/Product Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__product_test_8cpp">ProductTest.cpp</link></para>
+
+<para>Source file of tests for the <link linkend="_class_product">Product</link> class. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

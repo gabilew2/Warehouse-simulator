@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_13e138d54eb8818da29c3992edef070a" kind="dir">
+    <compoundname>test</compoundname>
+    <innerdir refid="dir_772313337797893b8e78cf65bed5e137">test/Event</innerdir>
+    <innerdir refid="dir_11a62a6baf0a40c6566461cad28c37c3">test/Product</innerdir>
+    <innerdir refid="dir_c1205cd39917725f2fd64b8460b1dd7c">test/Report</innerdir>
+    <innerdir refid="dir_2dfb497bfc5e22987e950bb3bd899ae8">test/SalesReport</innerdir>
+    <innerdir refid="dir_223f32cc89cd3418fc837e1cc2b02301">test/Simulation</innerdir>
+    <innerdir refid="dir_1c9a8d3a878218fce437b9e8ab1a0a60">test/Storage</innerdir>
+    <innerdir refid="dir_ee3eab7a3c431e934262b701f19894ea">test/Warehouse</innerdir>
+    <innerdir refid="dir_98811f75bea6e8a5608eeccd6b4a7c0d">test/WarehouseReport</innerdir>
+    <innerfile refid="test_2main_8cpp">main.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="test/"/>
+  </compounddef>
+</doxygen>

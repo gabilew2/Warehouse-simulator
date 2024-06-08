@@ -1,0 +1,204 @@
+\doxysection{Product Class Reference}
+\hypertarget{class_product}{}\label{class_product}\index{Product@{Product}}
+
+
+The \doxylink{class_product}{Product} class represents a product with a name, price, and quantity.  
+
+
+
+
+{\ttfamily \#include $<$Product.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_product_a7d0e1fb8001c7be3380e383bc6cddfeb}{Product}} (int \mbox{\hyperlink{class_product_a62eb7009c46ed771b5136f878bb64c12}{product\+Id}}, QString name, double price, int quantity)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_product}{Product} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} \mbox{\hyperlink{class_product_ac914a618c6cedf1500f22a4e33ed4e83}{sell}} (int quantity\+To\+Sell)
+\begin{DoxyCompactList}\small\item\em Sell a quantity of the product. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} \mbox{\hyperlink{class_product_af264aa2bae1159846e658148d44a621d}{update\+Price}} (double new\+Price)
+\begin{DoxyCompactList}\small\item\em Update the price of the product. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} \mbox{\hyperlink{class_product_a351a61b8013eaca0afb924887ac1495c}{change\+Quantity}} (int quantity)
+\begin{DoxyCompactList}\small\item\em Change the quantity of the product. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_product_a4e07082760c0834ccc8cd44e44a6aae6}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get the name of the product. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_product_a3be25f647260d61df6063ef706261c7f}{get\+Price}} () const
+\begin{DoxyCompactList}\small\item\em Get the price of the product. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_product_a6a449b90b669aa4380d229b44eca686f}{get\+Quantity}} () const
+\begin{DoxyCompactList}\small\item\em Get the quantity of the product. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_product_a62eb7009c46ed771b5136f878bb64c12}{product\+Id}}
+\begin{DoxyCompactList}\small\item\em ID of the product. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_product}{Product} class represents a product with a name, price, and quantity. 
+
+This class provides methods to sell the product, update its price, and change its quantity. 
+
+Definition at line \mbox{\hyperlink{_product_8h_source_l00020}{20}} of file \mbox{\hyperlink{_product_8h_source}{Product.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_product_a7d0e1fb8001c7be3380e383bc6cddfeb}\label{class_product_a7d0e1fb8001c7be3380e383bc6cddfeb} 
+\index{Product@{Product}!Product@{Product}}
+\index{Product@{Product}!Product@{Product}}
+\doxysubsubsection{\texorpdfstring{Product()}{Product()}}
+{\footnotesize\ttfamily Product\+::\+Product (\begin{DoxyParamCaption}\item[{int}]{product\+Id,  }\item[{QString}]{name,  }\item[{double}]{price,  }\item[{int}]{quantity }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_product}{Product} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Id} & ID of the product. \\
+\hline
+{\em name} & Name of the product. \\
+\hline
+{\em price} & Price of the product. If negative, it will be set to 0. \\
+\hline
+{\em quantity} & Quantity of the product. If negative, it will be set to 0. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_product_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{_product_8cpp_source}{Product.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_product_a351a61b8013eaca0afb924887ac1495c}\label{class_product_a351a61b8013eaca0afb924887ac1495c} 
+\index{Product@{Product}!changeQuantity@{changeQuantity}}
+\index{changeQuantity@{changeQuantity}!Product@{Product}}
+\doxysubsubsection{\texorpdfstring{changeQuantity()}{changeQuantity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} Product\+::change\+Quantity (\begin{DoxyParamCaption}\item[{int}]{quantity }\end{DoxyParamCaption})}
+
+
+
+Change the quantity of the product. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quantity} & The new quantity of the product. Must be non-\/negative. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status SUCCESS if the operation is successful, ERROR otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_product_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{_product_8cpp_source}{Product.\+cpp}}.
+
+\Hypertarget{class_product_a4e07082760c0834ccc8cd44e44a6aae6}\label{class_product_a4e07082760c0834ccc8cd44e44a6aae6} 
+\index{Product@{Product}!getName@{getName}}
+\index{getName@{getName}!Product@{Product}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily QString Product\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the name of the product. 
+
+
+
+Definition at line \mbox{\hyperlink{_product_8cpp_source_l00086}{86}} of file \mbox{\hyperlink{_product_8cpp_source}{Product.\+cpp}}.
+
+\Hypertarget{class_product_a3be25f647260d61df6063ef706261c7f}\label{class_product_a3be25f647260d61df6063ef706261c7f} 
+\index{Product@{Product}!getPrice@{getPrice}}
+\index{getPrice@{getPrice}!Product@{Product}}
+\doxysubsubsection{\texorpdfstring{getPrice()}{getPrice()}}
+{\footnotesize\ttfamily double Product\+::get\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the price of the product. 
+
+
+
+Definition at line \mbox{\hyperlink{_product_8cpp_source_l00091}{91}} of file \mbox{\hyperlink{_product_8cpp_source}{Product.\+cpp}}.
+
+\Hypertarget{class_product_a6a449b90b669aa4380d229b44eca686f}\label{class_product_a6a449b90b669aa4380d229b44eca686f} 
+\index{Product@{Product}!getQuantity@{getQuantity}}
+\index{getQuantity@{getQuantity}!Product@{Product}}
+\doxysubsubsection{\texorpdfstring{getQuantity()}{getQuantity()}}
+{\footnotesize\ttfamily int Product\+::get\+Quantity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the quantity of the product. 
+
+
+
+Definition at line \mbox{\hyperlink{_product_8cpp_source_l00096}{96}} of file \mbox{\hyperlink{_product_8cpp_source}{Product.\+cpp}}.
+
+\Hypertarget{class_product_ac914a618c6cedf1500f22a4e33ed4e83}\label{class_product_ac914a618c6cedf1500f22a4e33ed4e83} 
+\index{Product@{Product}!sell@{sell}}
+\index{sell@{sell}!Product@{Product}}
+\doxysubsubsection{\texorpdfstring{sell()}{sell()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} Product\+::sell (\begin{DoxyParamCaption}\item[{int}]{quantity\+To\+Sell }\end{DoxyParamCaption})}
+
+
+
+Sell a quantity of the product. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quantity\+To\+Sell} & The quantity of the product to sell. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status SUCCESS if the operation is successful, ERROR otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_product_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{_product_8cpp_source}{Product.\+cpp}}.
+
+\Hypertarget{class_product_af264aa2bae1159846e658148d44a621d}\label{class_product_af264aa2bae1159846e658148d44a621d} 
+\index{Product@{Product}!updatePrice@{updatePrice}}
+\index{updatePrice@{updatePrice}!Product@{Product}}
+\doxysubsubsection{\texorpdfstring{updatePrice()}{updatePrice()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} Product\+::update\+Price (\begin{DoxyParamCaption}\item[{double}]{new\+Price }\end{DoxyParamCaption})}
+
+
+
+Update the price of the product. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Price} & The new price of the product. Must be positive. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status SUCCESS if the operation is successful, ERROR otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_product_8cpp_source_l00055}{55}} of file \mbox{\hyperlink{_product_8cpp_source}{Product.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_product_a62eb7009c46ed771b5136f878bb64c12}\label{class_product_a62eb7009c46ed771b5136f878bb64c12} 
+\index{Product@{Product}!productId@{productId}}
+\index{productId@{productId}!Product@{Product}}
+\doxysubsubsection{\texorpdfstring{productId}{productId}}
+{\footnotesize\ttfamily int Product\+::product\+Id}
+
+
+
+ID of the product. 
+
+
+
+Definition at line \mbox{\hyperlink{_product_8h_source_l00027}{27}} of file \mbox{\hyperlink{_product_8h_source}{Product.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Product/\mbox{\hyperlink{_product_8h}{Product.\+h}}\item 
+src/\+Product/\mbox{\hyperlink{_product_8cpp}{Product.\+cpp}}\end{DoxyCompactItemize}

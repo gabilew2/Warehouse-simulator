@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__warehouse_8cpp_source" xml:lang="en-US">
+<title>Warehouse.cpp</title>
+<indexterm><primary>src/Warehouse/Warehouse.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__warehouse_8cpp_source_1l00001"/>00001 
+<anchor xml:id="__warehouse_8cpp_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__warehouse_8h">Warehouse.h</link>&quot;</emphasis>
+<anchor xml:id="__warehouse_8cpp_source_1l00007"/>00007 
+<anchor xml:id="__warehouse_8cpp_source_1l00009"/>00009 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_warehouse_1a2f0e291212ae6770fe0c0494029a0d07">Warehouse::warehouseId</link>&#32;=&#32;0;
+<anchor xml:id="__warehouse_8cpp_source_1l00010"/>00010 
+<anchor xml:id="__warehouse_8cpp_source_1l00014"/><link linkend="_class_warehouse_1a436ed7c9254c6eca35764f8ec7b32192">00014</link> <link linkend="_class_warehouse_1a436ed7c9254c6eca35764f8ec7b32192">Warehouse::Warehouse</link>(QString&#32;location,&#32;<emphasis role="keywordtype">double</emphasis>&#32;warehouseCapacity)&#32;:&#32;<link linkend="_class_storage">Storage</link>(0)
+<anchor xml:id="__warehouse_8cpp_source_1l00015"/>00015 {
+<anchor xml:id="__warehouse_8cpp_source_1l00016"/>00016 &#32;&#32;&#32;&#32;++<link linkend="_class_warehouse_1a2f0e291212ae6770fe0c0494029a0d07">warehouseId</link>;
+<anchor xml:id="__warehouse_8cpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;this-&gt;location&#32;=&#32;location;
+<anchor xml:id="__warehouse_8cpp_source_1l00018"/>00018 
+<anchor xml:id="__warehouse_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(warehouseCapacity&#32;&gt;=&#32;0)
+<anchor xml:id="__warehouse_8cpp_source_1l00020"/>00020 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;warehouseCapacity&#32;=&#32;warehouseCapacity;
+<anchor xml:id="__warehouse_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__warehouse_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;warehouseCapacity&#32;=&#32;0;
+<anchor xml:id="__warehouse_8cpp_source_1l00026"/>00026 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00027"/>00027 }
+<anchor xml:id="__warehouse_8cpp_source_1l00028"/>00028 
+<anchor xml:id="__warehouse_8cpp_source_1l00033"/><link linkend="_class_warehouse_1ab5e7fee30cc7b17f6ed600c7e01f0887">00033</link> <link linkend="__storage_8h_1aa3ad3663894c15a6c47a41a02d64e86f">storageStatus</link>&#32;<link linkend="_class_warehouse_1ab5e7fee30cc7b17f6ed600c7e01f0887">Warehouse::checkStatus</link>()
+<anchor xml:id="__warehouse_8cpp_source_1l00034"/>00034 {
+<anchor xml:id="__warehouse_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(warehouseCapacity&#32;==&#32;0)
+<anchor xml:id="__warehouse_8cpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa2f0d18fc0d0fa4a6cd92dc328501874d">EMPTY</link>;
+<anchor xml:id="__warehouse_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00039"/>00039 
+<anchor xml:id="__warehouse_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;sumOfProductInstances&#32;=&#32;0;
+<anchor xml:id="__warehouse_8cpp_source_1l00041"/>00041 
+<anchor xml:id="__warehouse_8cpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<link linkend="_class_product">Product</link>&amp;&#32;product&#32;:&#32;productList)
+<anchor xml:id="__warehouse_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sumOfProductInstances&#32;+=&#32;product.getQuantity();
+<anchor xml:id="__warehouse_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00046"/>00046 
+<anchor xml:id="__warehouse_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(sumOfProductInstances&#32;==&#32;warehouseCapacity)
+<anchor xml:id="__warehouse_8cpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa8fd6994b2300416d1ad947a50d833850">FULLY</link>;
+<anchor xml:id="__warehouse_8cpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00051"/>00051 
+<anchor xml:id="__warehouse_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;<link linkend="_class_storage_1a32a3a3044e508911dae197650dcf813e">capacity</link>&#32;=&#32;sumOfProductInstances;
+<anchor xml:id="__warehouse_8cpp_source_1l00053"/>00053 
+<anchor xml:id="__warehouse_8cpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_storage_1a21a267ec9e43c6147c56e56a347d5784">checkCapacity</link>(warehouseCapacity);
+<anchor xml:id="__warehouse_8cpp_source_1l00055"/>00055 }
+<anchor xml:id="__warehouse_8cpp_source_1l00056"/>00056 
+<anchor xml:id="__warehouse_8cpp_source_1l00060"/><link linkend="_class_warehouse_1a5b272ddafc481192f471de223c91f4eb">00060</link> <link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link>&#32;<link linkend="_class_warehouse_1a5b272ddafc481192f471de223c91f4eb">Warehouse::updateStatus</link>(<emphasis role="keywordtype">int</emphasis>&#32;newCapacity)
+<anchor xml:id="__warehouse_8cpp_source_1l00061"/>00061 {
+<anchor xml:id="__warehouse_8cpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(newCapacity&#32;&lt;&#32;0)
+<anchor xml:id="__warehouse_8cpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>;
+<anchor xml:id="__warehouse_8cpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00066"/>00066 
+<anchor xml:id="__warehouse_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;sumOfProductInstances&#32;=&#32;<link linkend="_class_storage_1a32a3a3044e508911dae197650dcf813e">capacity</link>;
+<anchor xml:id="__warehouse_8cpp_source_1l00068"/>00068 
+<anchor xml:id="__warehouse_8cpp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(newCapacity&#32;&gt;=&#32;sumOfProductInstances)
+<anchor xml:id="__warehouse_8cpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;warehouseCapacity&#32;=&#32;newCapacity;
+<anchor xml:id="__warehouse_8cpp_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_storage_1a32a3a3044e508911dae197650dcf813e">capacity</link>&#32;=&#32;sumOfProductInstances;
+<anchor xml:id="__warehouse_8cpp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>;
+<anchor xml:id="__warehouse_8cpp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__warehouse_8cpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>;
+<anchor xml:id="__warehouse_8cpp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00079"/>00079 }
+<anchor xml:id="__warehouse_8cpp_source_1l00080"/>00080 
+<anchor xml:id="__warehouse_8cpp_source_1l00084"/><link linkend="_class_warehouse_1adcc66b057690967cc902d3e999db8af9">00084</link> <link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link>&#32;<link linkend="_class_warehouse_1adcc66b057690967cc902d3e999db8af9">Warehouse::addProduct</link>(QString&#32;name,&#32;<emphasis role="keywordtype">double</emphasis>&#32;price,&#32;<emphasis role="keywordtype">int</emphasis>&#32;quantity,&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>)
+<anchor xml:id="__warehouse_8cpp_source_1l00085"/>00085 {
+<anchor xml:id="__warehouse_8cpp_source_1l00086"/>00086 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;sumOfProductInstances&#32;=&#32;<link linkend="_class_storage_1a32a3a3044e508911dae197650dcf813e">capacity</link>;
+<anchor xml:id="__warehouse_8cpp_source_1l00087"/>00087 
+<anchor xml:id="__warehouse_8cpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(sumOfProductInstances&#32;+&#32;quantity&#32;&lt;=&#32;warehouseCapacity&#32;&amp;&amp;&#32;quantity&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;price&#32;&gt;=&#32;0)
+<anchor xml:id="__warehouse_8cpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<link linkend="_class_product">Product</link>&amp;&#32;product&#32;:&#32;productList)
+<anchor xml:id="__warehouse_8cpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(product.productId&#32;==&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>)
+<anchor xml:id="__warehouse_8cpp_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>;
+<anchor xml:id="__warehouse_8cpp_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00097"/>00097 
+<anchor xml:id="__warehouse_8cpp_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_product">Product</link>&#32;newProduct(<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>,&#32;name,&#32;price,&#32;quantity);
+<anchor xml:id="__warehouse_8cpp_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;productList.append(newProduct);
+<anchor xml:id="__warehouse_8cpp_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_storage_1a32a3a3044e508911dae197650dcf813e">capacity</link>&#32;+=&#32;quantity;
+<anchor xml:id="__warehouse_8cpp_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>;
+<anchor xml:id="__warehouse_8cpp_source_1l00102"/>00102 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__warehouse_8cpp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>;
+<anchor xml:id="__warehouse_8cpp_source_1l00106"/>00106 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00107"/>00107 }
+<anchor xml:id="__warehouse_8cpp_source_1l00108"/>00108 
+<anchor xml:id="__warehouse_8cpp_source_1l00112"/><link linkend="_class_warehouse_1af13dfa8e7d40770b45d28a7f19b6ea87">00112</link> <link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link>&#32;<link linkend="_class_warehouse_1af13dfa8e7d40770b45d28a7f19b6ea87">Warehouse::updatePrice</link>(<emphasis role="keywordtype">double</emphasis>&#32;newPrice,&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>)
+<anchor xml:id="__warehouse_8cpp_source_1l00113"/>00113 {
+<anchor xml:id="__warehouse_8cpp_source_1l00114"/>00114 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;productFound&#32;=&#32;<emphasis role="keyword">false</emphasis>;&#32;
+<anchor xml:id="__warehouse_8cpp_source_1l00115"/>00115 
+<anchor xml:id="__warehouse_8cpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<link linkend="_class_product">Product</link>&amp;&#32;product&#32;:&#32;productList)
+<anchor xml:id="__warehouse_8cpp_source_1l00117"/>00117 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(product.productId&#32;==&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>)
+<anchor xml:id="__warehouse_8cpp_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;product.updatePrice(newPrice);
+<anchor xml:id="__warehouse_8cpp_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00122"/>00122 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00123"/>00123 
+<anchor xml:id="__warehouse_8cpp_source_1l00124"/>00124 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(productFound&#32;==&#32;<emphasis role="keyword">false</emphasis>)
+<anchor xml:id="__warehouse_8cpp_source_1l00125"/>00125 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>;
+<anchor xml:id="__warehouse_8cpp_source_1l00127"/>00127 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00128"/>00128 }
+<anchor xml:id="__warehouse_8cpp_source_1l00129"/>00129 
+<anchor xml:id="__warehouse_8cpp_source_1l00133"/><link linkend="_class_warehouse_1a12c143bfa6b7443be317cc66897491e9">00133</link> <link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link>&#32;<link linkend="_class_warehouse_1a12c143bfa6b7443be317cc66897491e9">Warehouse::changeQuantity</link>(<emphasis role="keywordtype">int</emphasis>&#32;quantity,&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>)
+<anchor xml:id="__warehouse_8cpp_source_1l00134"/>00134 {
+<anchor xml:id="__warehouse_8cpp_source_1l00135"/>00135 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;sumOfProductInstances&#32;=&#32;<link linkend="_class_storage_1a32a3a3044e508911dae197650dcf813e">capacity</link>;
+<anchor xml:id="__warehouse_8cpp_source_1l00136"/>00136 
+<anchor xml:id="__warehouse_8cpp_source_1l00137"/>00137 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<link linkend="_class_product">Product</link>&amp;&#32;product&#32;:&#32;productList)
+<anchor xml:id="__warehouse_8cpp_source_1l00138"/>00138 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(product.productId&#32;==&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>)
+<anchor xml:id="__warehouse_8cpp_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentQuantity&#32;=&#32;product.getQuantity();
+<anchor xml:id="__warehouse_8cpp_source_1l00142"/>00142 
+<anchor xml:id="__warehouse_8cpp_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(sumOfProductInstances&#32;-&#32;currentQuantity&#32;+&#32;quantity&#32;&lt;=&#32;warehouseCapacity)
+<anchor xml:id="__warehouse_8cpp_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link>&#32;Status&#32;=&#32;product.changeQuantity(quantity);
+<anchor xml:id="__warehouse_8cpp_source_1l00146"/>00146 
+<anchor xml:id="__warehouse_8cpp_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(Status&#32;==&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>)
+<anchor xml:id="__warehouse_8cpp_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_storage_1a32a3a3044e508911dae197650dcf813e">capacity</link>&#32;=&#32;sumOfProductInstances&#32;-&#32;currentQuantity&#32;+&#32;quantity;
+<anchor xml:id="__warehouse_8cpp_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>;
+<anchor xml:id="__warehouse_8cpp_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__warehouse_8cpp_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>;
+<anchor xml:id="__warehouse_8cpp_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__warehouse_8cpp_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>;
+<anchor xml:id="__warehouse_8cpp_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00162"/>00162 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00163"/>00163 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>;
+<anchor xml:id="__warehouse_8cpp_source_1l00164"/>00164 }
+<anchor xml:id="__warehouse_8cpp_source_1l00165"/>00165 
+<anchor xml:id="__warehouse_8cpp_source_1l00169"/><link linkend="_class_warehouse_1a7ef00deb93a210331370beea2990c237">00169</link> <link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link>&#32;<link linkend="_class_warehouse_1a7ef00deb93a210331370beea2990c237">Warehouse::sell</link>(<emphasis role="keywordtype">int</emphasis>&#32;quantityToSell,&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>)
+<anchor xml:id="__warehouse_8cpp_source_1l00170"/>00170 {
+<anchor xml:id="__warehouse_8cpp_source_1l00171"/>00171 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<link linkend="_class_product">Product</link>&amp;&#32;product&#32;:&#32;productList)
+<anchor xml:id="__warehouse_8cpp_source_1l00172"/>00172 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(product.productId&#32;==&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>)
+<anchor xml:id="__warehouse_8cpp_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;product.sell(quantityToSell);
+<anchor xml:id="__warehouse_8cpp_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00177"/>00177 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00178"/>00178 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>;
+<anchor xml:id="__warehouse_8cpp_source_1l00179"/>00179 }
+<anchor xml:id="__warehouse_8cpp_source_1l00180"/>00180 
+<anchor xml:id="__warehouse_8cpp_source_1l00184"/><link linkend="_class_warehouse_1a52374d2018f3744d545803b9805bfa7e">00184</link> QString&#32;<link linkend="_class_warehouse_1a52374d2018f3744d545803b9805bfa7e">Warehouse::getName</link>(<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>)
+<anchor xml:id="__warehouse_8cpp_source_1l00185"/>00185 {
+<anchor xml:id="__warehouse_8cpp_source_1l00186"/>00186 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;productFound&#32;=&#32;<emphasis role="keyword">false</emphasis>;&#32;
+<anchor xml:id="__warehouse_8cpp_source_1l00187"/>00187 
+<anchor xml:id="__warehouse_8cpp_source_1l00188"/>00188 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<link linkend="_class_product">Product</link>&amp;&#32;product&#32;:&#32;productList)
+<anchor xml:id="__warehouse_8cpp_source_1l00189"/>00189 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00190"/>00190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(product.productId&#32;==&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>)
+<anchor xml:id="__warehouse_8cpp_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;product.getName();
+<anchor xml:id="__warehouse_8cpp_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00194"/>00194 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00195"/>00195 
+<anchor xml:id="__warehouse_8cpp_source_1l00196"/>00196 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(productFound&#32;==&#32;<emphasis role="keyword">false</emphasis>)
+<anchor xml:id="__warehouse_8cpp_source_1l00197"/>00197 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;ERROR&quot;</emphasis>;
+<anchor xml:id="__warehouse_8cpp_source_1l00199"/>00199 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00200"/>00200 }
+<anchor xml:id="__warehouse_8cpp_source_1l00201"/>00201 
+<anchor xml:id="__warehouse_8cpp_source_1l00205"/><link linkend="_class_warehouse_1aad96200e251b9e55dc51d6fd3dff9d56">00205</link> <emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_warehouse_1aad96200e251b9e55dc51d6fd3dff9d56">Warehouse::getPrice</link>(<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>)
+<anchor xml:id="__warehouse_8cpp_source_1l00206"/>00206 {
+<anchor xml:id="__warehouse_8cpp_source_1l00207"/>00207 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;productFound&#32;=&#32;<emphasis role="keyword">false</emphasis>;&#32;
+<anchor xml:id="__warehouse_8cpp_source_1l00208"/>00208 
+<anchor xml:id="__warehouse_8cpp_source_1l00209"/>00209 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<link linkend="_class_product">Product</link>&amp;&#32;product&#32;:&#32;productList)
+<anchor xml:id="__warehouse_8cpp_source_1l00210"/>00210 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00211"/>00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(product.productId&#32;==&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>)
+<anchor xml:id="__warehouse_8cpp_source_1l00212"/>00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00213"/>00213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;product.getPrice();
+<anchor xml:id="__warehouse_8cpp_source_1l00214"/>00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00215"/>00215 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00216"/>00216 
+<anchor xml:id="__warehouse_8cpp_source_1l00217"/>00217 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(productFound&#32;==&#32;<emphasis role="keyword">false</emphasis>)
+<anchor xml:id="__warehouse_8cpp_source_1l00218"/>00218 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00219"/>00219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;-1;
+<anchor xml:id="__warehouse_8cpp_source_1l00220"/>00220 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00221"/>00221 }
+<anchor xml:id="__warehouse_8cpp_source_1l00222"/>00222 
+<anchor xml:id="__warehouse_8cpp_source_1l00226"/><link linkend="_class_warehouse_1a08808180a2c1f6db033a3ecc94b3c205">00226</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_warehouse_1a08808180a2c1f6db033a3ecc94b3c205">Warehouse::getQuantity</link>(<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>)
+<anchor xml:id="__warehouse_8cpp_source_1l00227"/>00227 {
+<anchor xml:id="__warehouse_8cpp_source_1l00228"/>00228 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;productFound&#32;=&#32;<emphasis role="keyword">false</emphasis>;&#32;
+<anchor xml:id="__warehouse_8cpp_source_1l00229"/>00229 
+<anchor xml:id="__warehouse_8cpp_source_1l00230"/>00230 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<link linkend="_class_product">Product</link>&amp;&#32;product&#32;:&#32;productList)
+<anchor xml:id="__warehouse_8cpp_source_1l00231"/>00231 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00232"/>00232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(product.productId&#32;==&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>)
+<anchor xml:id="__warehouse_8cpp_source_1l00233"/>00233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00234"/>00234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;product.getQuantity();
+<anchor xml:id="__warehouse_8cpp_source_1l00235"/>00235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00236"/>00236 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00237"/>00237 
+<anchor xml:id="__warehouse_8cpp_source_1l00238"/>00238 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(productFound&#32;==&#32;<emphasis role="keyword">false</emphasis>)
+<anchor xml:id="__warehouse_8cpp_source_1l00239"/>00239 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_8cpp_source_1l00240"/>00240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;-1;
+<anchor xml:id="__warehouse_8cpp_source_1l00241"/>00241 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_8cpp_source_1l00242"/>00242 }
+<anchor xml:id="__warehouse_8cpp_source_1l00243"/>00243 
+<anchor xml:id="__warehouse_8cpp_source_1l00247"/><link linkend="_class_warehouse_1a3f817148fcf0caf2ba0b6be2dd27809d">00247</link> QString&#32;<link linkend="_class_warehouse_1a3f817148fcf0caf2ba0b6be2dd27809d">Warehouse::getLocation</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="__warehouse_8cpp_source_1l00248"/>00248 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="__warehouse_8cpp_source_1l00249"/>00249 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;location;
+<anchor xml:id="__warehouse_8cpp_source_1l00250"/>00250 }
+<anchor xml:id="__warehouse_8cpp_source_1l00251"/>00251 
+<anchor xml:id="__warehouse_8cpp_source_1l00255"/><link linkend="_class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e">00255</link> QList&lt;Product&gt;&#32;<link linkend="_class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e">Warehouse::getProductList</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="__warehouse_8cpp_source_1l00256"/>00256 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="__warehouse_8cpp_source_1l00257"/>00257 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;productList;
+<anchor xml:id="__warehouse_8cpp_source_1l00258"/>00258 }
+<anchor xml:id="__warehouse_8cpp_source_1l00259"/>00259 
+<anchor xml:id="__warehouse_8cpp_source_1l00263"/><link linkend="_class_warehouse_1ad5eb7e2175f702204e9e628c6658f777">00263</link> <emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_warehouse_1ad5eb7e2175f702204e9e628c6658f777">Warehouse::getCurrentCapacity</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="__warehouse_8cpp_source_1l00264"/>00264 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="__warehouse_8cpp_source_1l00265"/>00265 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;warehouseCapacity;
+<anchor xml:id="__warehouse_8cpp_source_1l00266"/>00266 }
+</programlisting></section>

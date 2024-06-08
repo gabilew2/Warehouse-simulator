@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__report_test_8cpp" xml:lang="en-US">
+<title>test/Report/ReportTest.cpp File Reference</title>
+<indexterm><primary>test/Report/ReportTest.cpp</primary></indexterm>
+<para>
+
+<para>Source file of tests for the <link linkend="_class_report">Report</link> class. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;gtest/gtest.h&gt;<?linebreak?>#include &quot;Report/Report.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__report_test_8cpp_1a17644524137e2dbac16993cc14c93d04">TEST</link> (ReportTest, generateReportShouldReturnNonEmptyString)</para>
+
+<para>Test to ensure that the generateReport method does not return an empty string. </para>
+</listitem>
+            <listitem><para><link linkend="__report_test_8cpp_1a70c9aaf81cbf005ad4aa89117010ef18">TEST</link> (ReportTest, GenerateReportShouldReturnExpectedFormat)</para>
+
+<para>Test to ensure that the generateReport method returns a string in the expected format. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Source file of tests for the <link linkend="_class_report">Report</link> class. </para>
+<para>
+Definition in file <link linkend="__report_test_8cpp_source">ReportTest.cpp</link>.</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__report_test_8cpp_1a70c9aaf81cbf005ad4aa89117010ef18"/><section>
+    <title>TEST()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>ReportTest.cpp</secondary></indexterm>
+<indexterm><primary>ReportTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (ReportTest , GenerateReportShouldReturnExpectedFormat )</computeroutput></para><para>
+
+<para>Test to ensure that the generateReport method returns a string in the expected format. </para>
+</para>
+<para>
+Definition at line <link linkend="__report_test_8cpp_source_1l00024">24</link> of file <link linkend="__report_test_8cpp_source">ReportTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__report_test_8cpp_1a17644524137e2dbac16993cc14c93d04"/><section>
+    <title>TEST()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>ReportTest.cpp</secondary></indexterm>
+<indexterm><primary>ReportTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (ReportTest , generateReportShouldReturnNonEmptyString )</computeroutput></para><para>
+
+<para>Test to ensure that the generateReport method does not return an empty string. </para>
+</para>
+<para>
+Definition at line <link linkend="__report_test_8cpp_source_1l00012">12</link> of file <link linkend="__report_test_8cpp_source">ReportTest.cpp</link>.</para>
+</section>
+</section>
+</section>

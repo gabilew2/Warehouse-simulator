@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__warehouse_report_test_8cpp" xml:lang="en-US">
+<title>test/WarehouseReport/WarehouseReportTest.cpp File Reference</title>
+<indexterm><primary>test/WarehouseReport/WarehouseReportTest.cpp</primary></indexterm>
+<para>
+
+<para>Source file of tests for the <link linkend="_class_warehouse_report">WarehouseReport</link> class. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;gtest/gtest.h&gt;<?linebreak?>#include &quot;WarehouseReport/WarehouseReport.h&quot;<?linebreak?>#include &lt;QDateTime&gt;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__warehouse_report_test_8cpp_1ae9a1d770b7e8098452a6dd98ecebeede">TEST</link> (WarehouseReportTest, itLives)</para>
+
+<para>Test case to ensure that a <link linkend="_class_warehouse_report">WarehouseReport</link> object can be instantiated. </para>
+</listitem>
+            <listitem><para><link linkend="__warehouse_report_test_8cpp_1ad584aba0a9d9a5df24f198ee9db878d6">TEST</link> (WarehouseReportTest, generateReportShouldReturnCorrectValue)</para>
+
+<para>Test case to verify that the <link linkend="_class_warehouse_report_1a3a4c6655eb2584b3d842d0138b6e6ac9">WarehouseReport::generateReport</link> method returns the correct CSV format. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Source file of tests for the <link linkend="_class_warehouse_report">WarehouseReport</link> class. </para>
+<para>
+Definition in file <link linkend="__warehouse_report_test_8cpp_source">WarehouseReportTest.cpp</link>.</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__warehouse_report_test_8cpp_1ad584aba0a9d9a5df24f198ee9db878d6"/><section>
+    <title>TEST()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseReportTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseReportTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseReportTest , generateReportShouldReturnCorrectValue )</computeroutput></para><para>
+
+<para>Test case to verify that the <link linkend="_class_warehouse_report_1a3a4c6655eb2584b3d842d0138b6e6ac9">WarehouseReport::generateReport</link> method returns the correct CSV format. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_report_test_8cpp_source_1l00027">27</link> of file <link linkend="__warehouse_report_test_8cpp_source">WarehouseReportTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_report_test_8cpp_1ae9a1d770b7e8098452a6dd98ecebeede"/><section>
+    <title>TEST()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseReportTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseReportTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseReportTest , itLives )</computeroutput></para><para>
+
+<para>Test case to ensure that a <link linkend="_class_warehouse_report">WarehouseReport</link> object can be instantiated. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_report_test_8cpp_source_1l00013">13</link> of file <link linkend="__warehouse_report_test_8cpp_source">WarehouseReportTest.cpp</link>.</para>
+</section>
+</section>
+</section>

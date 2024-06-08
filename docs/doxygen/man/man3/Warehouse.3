@@ -1,0 +1,302 @@
+.TH "Warehouse" 3 "Version 1.0.0" "Warehouse Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Warehouse \- The \fBWarehouse\fP class represents a warehouse with storage capacity\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Warehouse\&.h>\fP
+.PP
+Inherits \fBStorage\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWarehouse\fP (QString location, double warehouseCapacity)"
+.br
+.RI "Construct a new \fBWarehouse\fP object\&. "
+.ti -1c
+.RI "\fBstorageStatus\fP \fBcheckStatus\fP ()"
+.br
+.RI "Check the current status of the warehouse and updates the capacity attribute inherited from the \fBStorage\fP class\&. "
+.ti -1c
+.RI "\fBstatus\fP \fBupdateStatus\fP (int newCapacity)"
+.br
+.RI "Update the storage capacity of the warehouse\&. "
+.ti -1c
+.RI "\fBstatus\fP \fBaddProduct\fP (QString name, double price, int quantity, int \fBproductId\fP)"
+.br
+.RI "Add a new product to the warehouse\&. "
+.ti -1c
+.RI "\fBstatus\fP \fBupdatePrice\fP (double newPrice, int \fBproductId\fP)"
+.br
+.RI "Update the price of a product in the warehouse\&. "
+.ti -1c
+.RI "\fBstatus\fP \fBchangeQuantity\fP (int quantity, int \fBproductId\fP)"
+.br
+.RI "Change the quantity of a product in the warehouse\&. "
+.ti -1c
+.RI "\fBstatus\fP \fBsell\fP (int quantityToSell, int \fBproductId\fP)"
+.br
+.RI "Sell a quantity of a product from the warehouse\&. "
+.ti -1c
+.RI "QString \fBgetName\fP (int \fBproductId\fP)"
+.br
+.RI "Get the name of a product by its ID\&. "
+.ti -1c
+.RI "double \fBgetPrice\fP (int \fBproductId\fP)"
+.br
+.RI "Get the price of a product by its ID\&. "
+.ti -1c
+.RI "int \fBgetQuantity\fP (int \fBproductId\fP)"
+.br
+.RI "Get the quantity of a product by its ID\&. "
+.ti -1c
+.RI "QString \fBgetLocation\fP () const"
+.br
+.RI "Get the location of the warehouse\&. "
+.ti -1c
+.RI "QList< \fBProduct\fP > \fBgetProductList\fP () const"
+.br
+.RI "Get the list of the products\&. "
+.ti -1c
+.RI "double \fBgetCurrentCapacity\fP () const"
+.br
+.RI "Get the capacity of the warehouse\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fBwarehouseId\fP = 0"
+.br
+.RI "Unique identifier for the warehouse\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBWarehouse\fP class represents a warehouse with storage capacity\&. 
+
+This class inherits from \fBStorage\fP and provides additional functionality specific to warehouse operations\&. 
+.PP
+Definition at line \fB20\fP of file \fBWarehouse\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Warehouse::Warehouse (QString location, double warehouseCapacity)"
+
+.PP
+Construct a new \fBWarehouse\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP The location of the warehouse\&. 
+.br
+\fIwarehouseCapacity\fP The initial capacity of the warehouse\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB14\fP of file \fBWarehouse\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBstatus\fP Warehouse::addProduct (QString name, double price, int quantity, int productId)"
+
+.PP
+Add a new product to the warehouse\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP The name of the product\&. 
+.br
+\fIprice\fP The price of the product\&. 
+.br
+\fIquantity\fP The quantity of the product\&. 
+.br
+\fIproductId\fP ID of the product\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+status SUCCESS if the product is added, ERROR otherwise\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB84\fP of file \fBWarehouse\&.cpp\fP\&.
+.SS "\fBstatus\fP Warehouse::changeQuantity (int quantity, int productId)"
+
+.PP
+Change the quantity of a product in the warehouse\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIquantity\fP The new quantity of the product\&. 
+.br
+\fIproductId\fP The ID of the product\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+status SUCCESS if the quantity is updated, ERROR otherwise\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB133\fP of file \fBWarehouse\&.cpp\fP\&.
+.SS "\fBstorageStatus\fP Warehouse::checkStatus ()"
+
+.PP
+Check the current status of the warehouse and updates the capacity attribute inherited from the \fBStorage\fP class\&. Check the current status of the warehouse and update the capacity attribute inherited from the \fBStorage\fP class\&.
+.PP
+\fBReturns\fP
+.RS 4
+storageStatus The status of the warehouse: EMPTY, AVAILABLE, or FULL\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB33\fP of file \fBWarehouse\&.cpp\fP\&.
+.SS "double Warehouse::getCurrentCapacity () const"
+
+.PP
+Get the capacity of the warehouse\&. Get the current capacity of the warehouse\&. 
+.PP
+Definition at line \fB263\fP of file \fBWarehouse\&.cpp\fP\&.
+.SS "QString Warehouse::getLocation () const"
+
+.PP
+Get the location of the warehouse\&. 
+.PP
+Definition at line \fB247\fP of file \fBWarehouse\&.cpp\fP\&.
+.SS "QString Warehouse::getName (int productId)"
+
+.PP
+Get the name of a product by its ID\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproductId\fP The ID of the product\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+QString The name of the product\&. 
+.RE
+.PP
+< Contains false if the product was not found in the productList\&.
+.PP
+Definition at line \fB184\fP of file \fBWarehouse\&.cpp\fP\&.
+.SS "double Warehouse::getPrice (int productId)"
+
+.PP
+Get the price of a product by its ID\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproductId\fP The ID of the product\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+double The price of the product\&. 
+.RE
+.PP
+< Contains false if the product was not found in the productList\&.
+.PP
+Definition at line \fB205\fP of file \fBWarehouse\&.cpp\fP\&.
+.SS "QList< \fBProduct\fP > Warehouse::getProductList () const"
+
+.PP
+Get the list of the products\&. Get the list of the products stored in the warehouse\&. 
+.PP
+Definition at line \fB255\fP of file \fBWarehouse\&.cpp\fP\&.
+.SS "int Warehouse::getQuantity (int productId)"
+
+.PP
+Get the quantity of a product by its ID\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproductId\fP The ID of the product\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int The quantity of the product\&. 
+.RE
+.PP
+< Contains false if the product was not found in the productList\&.
+.PP
+Definition at line \fB226\fP of file \fBWarehouse\&.cpp\fP\&.
+.SS "\fBstatus\fP Warehouse::sell (int quantityToSell, int productId)"
+
+.PP
+Sell a quantity of a product from the warehouse\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIquantityToSell\fP The quantity of the product to sell\&. 
+.br
+\fIproductId\fP The ID of the product\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+status SUCCESS if the product is sold, ERROR otherwise\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB169\fP of file \fBWarehouse\&.cpp\fP\&.
+.SS "\fBstatus\fP Warehouse::updatePrice (double newPrice, int productId)"
+
+.PP
+Update the price of a product in the warehouse\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInewPrice\fP The new price of the product\&. 
+.br
+\fIproductId\fP The ID of the product\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+status SUCCESS if the price is updated, ERROR otherwise\&. 
+.RE
+.PP
+< Contains false if the product was not found in the productList\&.
+.PP
+Definition at line \fB112\fP of file \fBWarehouse\&.cpp\fP\&.
+.SS "\fBstatus\fP Warehouse::updateStatus (int newCapacity)"
+
+.PP
+Update the storage capacity of the warehouse\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInewCapacity\fP The new capacity of the warehouse\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+status SUCCESS if the operation is successful, ERROR otherwise\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB60\fP of file \fBWarehouse\&.cpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int Warehouse::warehouseId = 0\fR [static]\fP"
+
+.PP
+Unique identifier for the warehouse\&. Static variable initialization\&. 
+.PP
+Definition at line \fB35\fP of file \fBWarehouse\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Warehouse Simulator from the source code\&.

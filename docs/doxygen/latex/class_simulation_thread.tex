@@ -1,0 +1,68 @@
+\doxysection{Simulation\+Thread Class Reference}
+\hypertarget{class_simulation_thread}{}\label{class_simulation_thread}\index{SimulationThread@{SimulationThread}}
+
+
+The \doxylink{class_simulation_thread}{Simulation\+Thread} class is responsible for running the simulation in a separate thread.  
+
+
+
+
+{\ttfamily \#include $<$gui.\+h$>$}
+
+Inheritance diagram for Simulation\+Thread\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_simulation_thread}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_simulation_thread_a8ddb2d67e1c9e0f2e0602b015a52b648}{simulation\+Finished}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the simulation has finished running. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_simulation_thread_ac13a782fcf9163b7a6c3392e398d66b9}{run}} () override
+\begin{DoxyCompactList}\small\item\em Executes the simulation in a separate thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_simulation_thread}{Simulation\+Thread} class is responsible for running the simulation in a separate thread. 
+
+This class inherits from QThread and overrides the run method to execute the simulation. It emits a signal upon completion of the simulation to notify other components of its completion. 
+
+Definition at line \mbox{\hyperlink{gui_8h_source_l00047}{47}} of file \mbox{\hyperlink{gui_8h_source}{gui.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_simulation_thread_ac13a782fcf9163b7a6c3392e398d66b9}\label{class_simulation_thread_ac13a782fcf9163b7a6c3392e398d66b9} 
+\index{SimulationThread@{SimulationThread}!run@{run}}
+\index{run@{run}!SimulationThread@{SimulationThread}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Simulation\+Thread\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+Executes the simulation in a separate thread. 
+
+This function overrides the run method from QThread and is called when the thread starts. It initializes a \doxylink{class_simulation}{Simulation} object and runs the simulation. Upon completion, it emits the simulation\+Finished signal. 
+
+Definition at line \mbox{\hyperlink{gui_8h_source_l00058}{58}} of file \mbox{\hyperlink{gui_8h_source}{gui.\+h}}.
+
+\Hypertarget{class_simulation_thread_a8ddb2d67e1c9e0f2e0602b015a52b648}\label{class_simulation_thread_a8ddb2d67e1c9e0f2e0602b015a52b648} 
+\index{SimulationThread@{SimulationThread}!simulationFinished@{simulationFinished}}
+\index{simulationFinished@{simulationFinished}!SimulationThread@{SimulationThread}}
+\doxysubsubsection{\texorpdfstring{simulationFinished}{simulationFinished}}
+{\footnotesize\ttfamily void Simulation\+Thread\+::simulation\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted when the simulation has finished running. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/gui/\mbox{\hyperlink{gui_8h}{gui.\+h}}\end{DoxyCompactItemize}

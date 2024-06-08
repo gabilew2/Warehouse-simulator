@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_98811f75bea6e8a5608eeccd6b4a7c0d" xml:lang="en-US">
+<title>test/WarehouseReport Directory Reference</title>
+<indexterm><primary>test/WarehouseReport Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__warehouse_report_test_8cpp">WarehouseReportTest.cpp</link></para>
+
+<para>Source file of tests for the <link linkend="_class_warehouse_report">WarehouseReport</link> class. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

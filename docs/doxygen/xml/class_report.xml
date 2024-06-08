@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_report" kind="class" language="C++" prot="public">
+    <compoundname>Report</compoundname>
+    <derivedcompoundref refid="class_sales_report" prot="private" virt="non-virtual">SalesReport</derivedcompoundref>
+    <derivedcompoundref refid="class_warehouse_report" prot="private" virt="non-virtual">WarehouseReport</derivedcompoundref>
+    <includes refid="_report_8h" local="no">Report.h</includes>
+    <innerclass refid="struct_report_1_1_product_report" prot="public">Report::ProductReport</innerclass>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_report_1a6dbe558fca94c7dba5e005365503d476" prot="private" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double Report::operationalCosts</definition>
+        <argsstring></argsstring>
+        <name>operationalCosts</name>
+        <qualifiedname>Report::operationalCosts</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Operational costs of the store. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Report/Report.h" line="20" column="19" bodyfile="src/Report/Report.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_report_1a395280b122951348843086b6926aaa80" prot="private" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double Report::netProfit</definition>
+        <argsstring></argsstring>
+        <name>netProfit</name>
+        <qualifiedname>Report::netProfit</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Net profit of the store. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Report/Report.h" line="21" column="19" bodyfile="src/Report/Report.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_report_1a36e8866b9ef8fefbe4491f15d96ed503" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Report::Report</definition>
+        <argsstring>(double operationalCosts, double netProfit)</argsstring>
+        <name>Report</name>
+        <qualifiedname>Report::Report</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>operationalCosts</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>netProfit</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_report" kindref="compound">Report</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operationalCosts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Operational costs of the store. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>netProfit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Net profit of the store. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Report/Report.h" line="44" column="5" bodyfile="src/Report/Report.cpp" bodystart="17" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_report_1aab56d11c88e240affbc4b147474d4363" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString Report::generateReport</definition>
+        <argsstring>() const</argsstring>
+        <name>generateReport</name>
+        <qualifiedname>Report::generateReport</qualifiedname>
+        <briefdescription>
+<para>Generates a summary report as a QString. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method compiles the operational costs and net profits into a readable format. <simplesect kind="return"><para>QString A summary report of the store&apos;s financial status.</para>
+</simplesect>
+<simplesect kind="return"><para>QString A summary report of the store&apos;s financial status. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Report/Report.h" line="52" column="13" bodyfile="src/Report/Report.cpp" bodystart="28" bodyend="33"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_report_1a7f5c6f19874a36e59c63051ab5b60400" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Report::setOperationalCosts</definition>
+        <argsstring>(double costs)</argsstring>
+        <name>setOperationalCosts</name>
+        <qualifiedname>Report::setOperationalCosts</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>costs</declname>
+        </param>
+        <briefdescription>
+<para>Set the operational costs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Report/Report.h" line="55" column="17" bodyfile="src/Report/Report.cpp" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_report_1a4fe97f7f77d99b1e925c6024ed7c3913" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Report::setNetProfit</definition>
+        <argsstring>(double profit)</argsstring>
+        <name>setNetProfit</name>
+        <qualifiedname>Report::setNetProfit</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>profit</declname>
+        </param>
+        <briefdescription>
+<para>Set the net profit. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Report/Report.h" line="56" column="17" bodyfile="src/Report/Report.cpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_report_1a0280b260884973ffbb4ca95c438f30a6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Report::getOperationalCosts</definition>
+        <argsstring>()</argsstring>
+        <name>getOperationalCosts</name>
+        <qualifiedname>Report::getOperationalCosts</qualifiedname>
+        <briefdescription>
+<para>Get the operational costs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Report/Report.h" line="59" column="19" bodyfile="src/Report/Report.cpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_report_1af98f7f1cb07d06b29c081974cfc9a830" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Report::getNetProfit</definition>
+        <argsstring>()</argsstring>
+        <name>getNetProfit</name>
+        <qualifiedname>Report::getNetProfit</qualifiedname>
+        <briefdescription>
+<para>Get the net profit. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Report/Report.h" line="60" column="19" bodyfile="src/Report/Report.cpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents a report in the store simulation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is responsible for generating reports that summarize the operational costs and net profits. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Report</label>
+        <link refid="class_report"/>
+      </node>
+      <node id="2">
+        <label>SalesReport</label>
+        <link refid="class_sales_report"/>
+        <childnode refid="1" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>WarehouseReport</label>
+        <link refid="class_warehouse_report"/>
+        <childnode refid="1" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="src/Report/Report.h" line="17" column="1" bodyfile="src/Report/Report.h" bodystart="18" bodyend="61"/>
+    <listofallmembers>
+      <member refid="class_report_1aab56d11c88e240affbc4b147474d4363" prot="public" virt="non-virtual"><scope>Report</scope><name>generateReport</name></member>
+      <member refid="class_report_1af98f7f1cb07d06b29c081974cfc9a830" prot="public" virt="non-virtual"><scope>Report</scope><name>getNetProfit</name></member>
+      <member refid="class_report_1a0280b260884973ffbb4ca95c438f30a6" prot="public" virt="non-virtual"><scope>Report</scope><name>getOperationalCosts</name></member>
+      <member refid="class_report_1a395280b122951348843086b6926aaa80" prot="private" virt="non-virtual"><scope>Report</scope><name>netProfit</name></member>
+      <member refid="class_report_1a6dbe558fca94c7dba5e005365503d476" prot="private" virt="non-virtual"><scope>Report</scope><name>operationalCosts</name></member>
+      <member refid="class_report_1a36e8866b9ef8fefbe4491f15d96ed503" prot="public" virt="non-virtual"><scope>Report</scope><name>Report</name></member>
+      <member refid="class_report_1a4fe97f7f77d99b1e925c6024ed7c3913" prot="public" virt="non-virtual"><scope>Report</scope><name>setNetProfit</name></member>
+      <member refid="class_report_1a7f5c6f19874a36e59c63051ab5b60400" prot="public" virt="non-virtual"><scope>Report</scope><name>setOperationalCosts</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,22 @@
+\doxysection{Event\+Test.\+cpp}
+\hypertarget{_event_test_8cpp_source}{}\label{_event_test_8cpp_source}\index{test/Event/EventTest.cpp@{test/Event/EventTest.cpp}}
+\mbox{\hyperlink{_event_test_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_event_test_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_event_test_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <gtest/gtest.h>}}
+\DoxyCodeLine{\Hypertarget{_event_test_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_event_8h}{Event/Event.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_event_test_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_event_test_8cpp_source_l00012}\mbox{\hyperlink{_event_test_8cpp_a214e3d121f02b4fa5971edca99668626}{00012}}\ \mbox{\hyperlink{_event_test_8cpp_a214e3d121f02b4fa5971edca99668626}{TEST}}(EventTest,\ itLives)}
+\DoxyCodeLine{\Hypertarget{_event_test_8cpp_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{_event_test_8cpp_source_l00014}00014\ \ \ \ \ \mbox{\hyperlink{class_event}{Event}}\ event(\textcolor{stringliteral}{"{}Init"{}},\ QDateTime::currentDateTime());}
+\DoxyCodeLine{\Hypertarget{_event_test_8cpp_source_l00015}00015\ \}}
+\DoxyCodeLine{\Hypertarget{_event_test_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_event_test_8cpp_source_l00020}\mbox{\hyperlink{_event_test_8cpp_a6a7a17727afc00e53595ee22c45e48e7}{00020}}\ \mbox{\hyperlink{_event_test_8cpp_a214e3d121f02b4fa5971edca99668626}{TEST}}(EventTest,\ generateEventShouldReturnCorrectValue)}
+\DoxyCodeLine{\Hypertarget{_event_test_8cpp_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{_event_test_8cpp_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{class_event}{Event}}\ \textcolor{keyword}{event}\ =\ \mbox{\hyperlink{class_event_a0a53e36a36fd4bfac0bb3d0de9cc521c}{Event::generateEvent}}(\textcolor{stringliteral}{"{}Init"{}},\ 100);}
+\DoxyCodeLine{\Hypertarget{_event_test_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_event_test_8cpp_source_l00024}00024\ \ \ \ \ EXPECT\_FALSE(event.getEventType().isEmpty());}
+\DoxyCodeLine{\Hypertarget{_event_test_8cpp_source_l00025}00025\ \ \ \ \ EXPECT\_TRUE(event.getTime()\ >\ QDateTime::currentDateTime());}
+\DoxyCodeLine{\Hypertarget{_event_test_8cpp_source_l00026}00026\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,127 @@
+.TH "Event" 3 "Version 1.0.0" "Warehouse Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Event \- The \fBEvent\fP class represents an event in the warehouse simulation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Event\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEvent\fP (QString eventType, QDateTime time)"
+.br
+.RI "Constructor for the \fBEvent\fP class\&. "
+.ti -1c
+.RI "QString \fBgetEventType\fP () const"
+.br
+.RI "Retrieves the type of the event\&. "
+.ti -1c
+.RI "QDateTime \fBgetTime\fP () const"
+.br
+.RI "Retrieves the timestamp of the event\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBEvent\fP \fBgenerateEvent\fP (QString eventType, int seed)"
+.br
+.RI "Generates a random event based on the given seed\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBEvent\fP class represents an event in the warehouse simulation\&. 
+
+This class encapsulates the details of an event, including its type and the time it occurred\&. 
+.PP
+Definition at line \fB17\fP of file \fBEvent\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Event::Event (QString eventType, QDateTime time)"
+
+.PP
+Constructor for the \fBEvent\fP class\&. Construct a new \fBEvent\fP object\&.
+.PP
+Initializes a new instance of the \fBEvent\fP class with the specified type and time\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeventType\fP The type of the event\&. 
+.br
+\fItime\fP The timestamp when the event occurred\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB12\fP of file \fBEvent\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBEvent\fP Event::generateEvent (QString eventType, int seed)\fR [static]\fP"
+
+.PP
+Generates a random event based on the given seed\&. Generates an event with a random time offset\&.
+.PP
+This static method creates a new event with a random time offset based on the provided seed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeventType\fP The type of the event to generate\&. 
+.br
+\fIseed\fP The seed for the random number generator\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A new \fBEvent\fP instance with the specified type and a random time\&.
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIeventType\fP The type of the event to generate\&. 
+.br
+\fIseed\fP The seed for the random number generator\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A new \fBEvent\fP instance with the specified type and a random time\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB25\fP of file \fBEvent\&.cpp\fP\&.
+.SS "QString Event::getEventType () const"
+
+.PP
+Retrieves the type of the event\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The event type as a QString\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB38\fP of file \fBEvent\&.cpp\fP\&.
+.SS "QDateTime Event::getTime () const"
+
+.PP
+Retrieves the timestamp of the event\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The event time as a QDateTime\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB48\fP of file \fBEvent\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Warehouse Simulator from the source code\&.

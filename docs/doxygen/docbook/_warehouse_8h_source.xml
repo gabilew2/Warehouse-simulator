@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__warehouse_8h_source" xml:lang="en-US">
+<title>Warehouse.h</title>
+<indexterm><primary>src/Warehouse/Warehouse.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__warehouse_8h_source_1l00001"/>00001 
+<anchor xml:id="__warehouse_8h_source_1l00006"/>00006 <emphasis role="preprocessor">#ifndef&#32;WAREHOUSE_H</emphasis>
+<anchor xml:id="__warehouse_8h_source_1l00007"/>00007 <emphasis role="preprocessor">#define&#32;WAREHOUSE_H</emphasis>
+<anchor xml:id="__warehouse_8h_source_1l00008"/>00008 
+<anchor xml:id="__warehouse_8h_source_1l00009"/>00009 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__storage_8h">Storage/Storage.h</link>&quot;</emphasis>
+<anchor xml:id="__warehouse_8h_source_1l00010"/>00010 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__product_8h">Product/Product.h</link>&quot;</emphasis>
+<anchor xml:id="__warehouse_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&lt;QList&gt;</emphasis>
+<anchor xml:id="__warehouse_8h_source_1l00012"/>00012 
+<anchor xml:id="__warehouse_8h_source_1l00020"/><link linkend="_class_warehouse">00020</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_warehouse">Warehouse</link>&#32;:&#32;<link linkend="_class_storage">Storage</link>
+<anchor xml:id="__warehouse_8h_source_1l00021"/>00021 {
+<anchor xml:id="__warehouse_8h_source_1l00022"/>00022 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="__warehouse_8h_source_1l00023"/>00023 &#32;&#32;&#32;&#32;QString&#32;location;&#32;&#32;&#32;
+<anchor xml:id="__warehouse_8h_source_1l00024"/>00024 &#32;&#32;&#32;&#32;QList&lt;Product&gt;&#32;productList;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__warehouse_8h_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;warehouseCapacity;&#32;&#32;&#32;
+<anchor xml:id="__warehouse_8h_source_1l00026"/>00026 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__warehouse_8h_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<link linkend="_class_warehouse_1a436ed7c9254c6eca35764f8ec7b32192">Warehouse</link>(QString&#32;location,&#32;<emphasis role="keywordtype">double</emphasis>&#32;warehouseCapacity);
+<anchor xml:id="__warehouse_8h_source_1l00034"/>00034 
+<anchor xml:id="__warehouse_8h_source_1l00035"/><link linkend="_class_warehouse_1a2f0e291212ae6770fe0c0494029a0d07">00035</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_warehouse_1a2f0e291212ae6770fe0c0494029a0d07">warehouseId</link>;&#32;&#32;&#32;&#32;
+<anchor xml:id="__warehouse_8h_source_1l00036"/>00036 
+<anchor xml:id="__warehouse_8h_source_1l00043"/>00043 &#32;&#32;&#32;&#32;<link linkend="__storage_8h_1aa3ad3663894c15a6c47a41a02d64e86f">storageStatus</link>&#32;<link linkend="_class_warehouse_1ab5e7fee30cc7b17f6ed600c7e01f0887">checkStatus</link>();
+<anchor xml:id="__warehouse_8h_source_1l00044"/>00044 
+<anchor xml:id="__warehouse_8h_source_1l00051"/>00051 &#32;&#32;&#32;&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link>&#32;<link linkend="_class_warehouse_1a5b272ddafc481192f471de223c91f4eb">updateStatus</link>(<emphasis role="keywordtype">int</emphasis>&#32;newCapacity);
+<anchor xml:id="__warehouse_8h_source_1l00052"/>00052 
+<anchor xml:id="__warehouse_8h_source_1l00053"/>00053 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Product&#32;operations</emphasis>
+<anchor xml:id="__warehouse_8h_source_1l00054"/>00054 
+<anchor xml:id="__warehouse_8h_source_1l00064"/>00064 &#32;&#32;&#32;&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link>&#32;<link linkend="_class_warehouse_1adcc66b057690967cc902d3e999db8af9">addProduct</link>(QString&#32;name,&#32;<emphasis role="keywordtype">double</emphasis>&#32;price,&#32;<emphasis role="keywordtype">int</emphasis>&#32;quantity,&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>);
+<anchor xml:id="__warehouse_8h_source_1l00065"/>00065 
+<anchor xml:id="__warehouse_8h_source_1l00073"/>00073 &#32;&#32;&#32;&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link>&#32;<link linkend="_class_warehouse_1af13dfa8e7d40770b45d28a7f19b6ea87">updatePrice</link>(<emphasis role="keywordtype">double</emphasis>&#32;newPrice,&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>);
+<anchor xml:id="__warehouse_8h_source_1l00074"/>00074 
+<anchor xml:id="__warehouse_8h_source_1l00082"/>00082 &#32;&#32;&#32;&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link>&#32;<link linkend="_class_warehouse_1a12c143bfa6b7443be317cc66897491e9">changeQuantity</link>(<emphasis role="keywordtype">int</emphasis>&#32;quantity,&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>);
+<anchor xml:id="__warehouse_8h_source_1l00083"/>00083 
+<anchor xml:id="__warehouse_8h_source_1l00091"/>00091 &#32;&#32;&#32;&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link>&#32;<link linkend="_class_warehouse_1a7ef00deb93a210331370beea2990c237">sell</link>(<emphasis role="keywordtype">int</emphasis>&#32;quantityToSell,&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>);
+<anchor xml:id="__warehouse_8h_source_1l00092"/>00092 
+<anchor xml:id="__warehouse_8h_source_1l00099"/>00099 &#32;&#32;&#32;&#32;QString&#32;<link linkend="_class_warehouse_1a52374d2018f3744d545803b9805bfa7e">getName</link>(<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>);
+<anchor xml:id="__warehouse_8h_source_1l00100"/>00100 
+<anchor xml:id="__warehouse_8h_source_1l00107"/>00107 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_warehouse_1aad96200e251b9e55dc51d6fd3dff9d56">getPrice</link>(<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>);
+<anchor xml:id="__warehouse_8h_source_1l00108"/>00108 
+<anchor xml:id="__warehouse_8h_source_1l00115"/>00115 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_warehouse_1a08808180a2c1f6db033a3ecc94b3c205">getQuantity</link>(<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link>);
+<anchor xml:id="__warehouse_8h_source_1l00116"/>00116 
+<anchor xml:id="__warehouse_8h_source_1l00117"/>00117 
+<anchor xml:id="__warehouse_8h_source_1l00118"/>00118 
+<anchor xml:id="__warehouse_8h_source_1l00119"/>00119 &#32;&#32;&#32;&#32;<emphasis role="comment">//Getters</emphasis>
+<anchor xml:id="__warehouse_8h_source_1l00120"/>00120 &#32;&#32;&#32;&#32;QString&#32;<link linkend="_class_warehouse_1a3f817148fcf0caf2ba0b6be2dd27809d">getLocation</link>()&#32;<emphasis role="keyword">const</emphasis>;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__warehouse_8h_source_1l00121"/>00121 &#32;&#32;&#32;&#32;QList&lt;Product&gt;&#32;<link linkend="_class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e">getProductList</link>()&#32;<emphasis role="keyword">const</emphasis>;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__warehouse_8h_source_1l00122"/>00122 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_warehouse_1ad5eb7e2175f702204e9e628c6658f777">getCurrentCapacity</link>()&#32;<emphasis role="keyword">const</emphasis>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__warehouse_8h_source_1l00123"/>00123 };
+<anchor xml:id="__warehouse_8h_source_1l00124"/>00124 
+<anchor xml:id="__warehouse_8h_source_1l00125"/>00125 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__sales_report_8cpp_source" xml:lang="en-US">
+<title>SalesReport.cpp</title>
+<indexterm><primary>src/SalesReport/SalesReport.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__sales_report_8cpp_source_1l00001"/>00001 
+<anchor xml:id="__sales_report_8cpp_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__sales_report_8h">SalesReport.h</link>&quot;</emphasis>
+<anchor xml:id="__sales_report_8cpp_source_1l00007"/>00007 
+<anchor xml:id="__sales_report_8cpp_source_1l00011"/><link linkend="_class_sales_report_1a2bd4ee648c88804b8bbb581d1626c49f">00011</link> <link linkend="_class_sales_report_1a2bd4ee648c88804b8bbb581d1626c49f">SalesReport::SalesReport</link>(<emphasis role="keywordtype">int</emphasis>&#32;SalesId,&#32;QDateTime&#32;time,&#32;QList&lt;ProductReport&gt;&#32;productList,&#32;<emphasis role="keywordtype">double</emphasis>&#32;operationalCosts,&#32;<emphasis role="keywordtype">double</emphasis>&#32;netProfit)&#32;:&#32;<link linkend="_class_report">Report</link>(operationalCosts,&#32;netProfit)
+<anchor xml:id="__sales_report_8cpp_source_1l00012"/>00012 {
+<anchor xml:id="__sales_report_8cpp_source_1l00013"/>00013 &#32;&#32;&#32;&#32;<emphasis role="keyword">this</emphasis>&#32;-&gt;&#32;salesId&#32;=&#32;SalesId;
+<anchor xml:id="__sales_report_8cpp_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<emphasis role="keyword">this</emphasis>&#32;-&gt;&#32;time&#32;=&#32;time;
+<anchor xml:id="__sales_report_8cpp_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<emphasis role="keyword">this</emphasis>&#32;-&gt;&#32;productList&#32;=&#32;productList;
+<anchor xml:id="__sales_report_8cpp_source_1l00016"/>00016 }
+<anchor xml:id="__sales_report_8cpp_source_1l00017"/>00017 
+<anchor xml:id="__sales_report_8cpp_source_1l00021"/><link linkend="_class_sales_report_1adbcc82fb8fa70e87cd4f12bf4f3537ae">00021</link> QString&#32;<link linkend="_class_sales_report_1adbcc82fb8fa70e87cd4f12bf4f3537ae">SalesReport::generateReport</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="__sales_report_8cpp_source_1l00022"/>00022 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="__sales_report_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;QString&#32;report;
+<anchor xml:id="__sales_report_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;report&#32;+=&#32;QString(<emphasis role="stringliteral">&quot;Sales&#32;ID,Time\n%1,%2\n&quot;</emphasis>)
+<anchor xml:id="__sales_report_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.arg(salesId)
+<anchor xml:id="__sales_report_8cpp_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.arg(time.toString(<emphasis role="stringliteral">&quot;yyyy-MM-dd&#32;hh:mm:ss&quot;</emphasis>));
+<anchor xml:id="__sales_report_8cpp_source_1l00027"/>00027 
+<anchor xml:id="__sales_report_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;report&#32;+=&#32;<emphasis role="stringliteral">&quot;Product&#32;Name,Price,Quantity&#32;Sold\n&quot;</emphasis>;
+<anchor xml:id="__sales_report_8cpp_source_1l00029"/>00029 
+<anchor xml:id="__sales_report_8cpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_report_1_1_product_report">ProductReport</link>&amp;&#32;product&#32;:&#32;productList)
+<anchor xml:id="__sales_report_8cpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__sales_report_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;initialQuantity&#32;=&#32;0;
+<anchor xml:id="__sales_report_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;soldQuantity&#32;=&#32;abs(initialQuantity&#32;-&#32;product.quantity);
+<anchor xml:id="__sales_report_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;initialQuantity&#32;=&#32;soldQuantity;
+<anchor xml:id="__sales_report_8cpp_source_1l00035"/>00035 
+<anchor xml:id="__sales_report_8cpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(soldQuantity&#32;&lt;=&#32;0)
+<anchor xml:id="__sales_report_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__sales_report_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="__sales_report_8cpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__sales_report_8cpp_source_1l00040"/>00040 
+<anchor xml:id="__sales_report_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;report&#32;+=&#32;QString(<emphasis role="stringliteral">&quot;%1,%2,%3\n&quot;</emphasis>)
+<anchor xml:id="__sales_report_8cpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.arg(product.name)
+<anchor xml:id="__sales_report_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.arg(product.price)
+<anchor xml:id="__sales_report_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.arg(soldQuantity);
+<anchor xml:id="__sales_report_8cpp_source_1l00045"/>00045 
+<anchor xml:id="__sales_report_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_report_1a4fe97f7f77d99b1e925c6024ed7c3913">setNetProfit</link>(<link linkend="_class_report_1af98f7f1cb07d06b29c081974cfc9a830">getNetProfit</link>()+product.price&#32;*&#32;soldQuantity);
+<anchor xml:id="__sales_report_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__sales_report_8cpp_source_1l00048"/>00048 
+<anchor xml:id="__sales_report_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<link linkend="_class_report_1a4fe97f7f77d99b1e925c6024ed7c3913">setNetProfit</link>(<link linkend="_class_report_1af98f7f1cb07d06b29c081974cfc9a830">getNetProfit</link>()-<link linkend="_class_report_1a0280b260884973ffbb4ca95c438f30a6">getOperationalCosts</link>());
+<anchor xml:id="__sales_report_8cpp_source_1l00050"/>00050 
+<anchor xml:id="__sales_report_8cpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;report&#32;+=&#32;<link linkend="_class_report_1aab56d11c88e240affbc4b147474d4363">Report::generateReport</link>();
+<anchor xml:id="__sales_report_8cpp_source_1l00052"/>00052 
+<anchor xml:id="__sales_report_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;<link linkend="_class_report_1a4fe97f7f77d99b1e925c6024ed7c3913">setNetProfit</link>(<link linkend="_class_report_1af98f7f1cb07d06b29c081974cfc9a830">getNetProfit</link>()+<link linkend="_class_report_1a0280b260884973ffbb4ca95c438f30a6">getOperationalCosts</link>());
+<anchor xml:id="__sales_report_8cpp_source_1l00054"/>00054 
+<anchor xml:id="__sales_report_8cpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;report;
+<anchor xml:id="__sales_report_8cpp_source_1l00056"/>00056 }
+</programlisting></section>

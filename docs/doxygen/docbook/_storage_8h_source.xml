@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__storage_8h_source" xml:lang="en-US">
+<title>Storage.h</title>
+<indexterm><primary>src/Storage/Storage.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__storage_8h_source_1l00001"/>00001 
+<anchor xml:id="__storage_8h_source_1l00006"/>00006 <emphasis role="preprocessor">#ifndef&#32;STORAGE_H</emphasis>
+<anchor xml:id="__storage_8h_source_1l00007"/>00007 <emphasis role="preprocessor">#define&#32;STORAGE_H</emphasis>
+<anchor xml:id="__storage_8h_source_1l00008"/>00008 
+<anchor xml:id="__storage_8h_source_1l00010"/><link linkend="__storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa1e229ccb8b53a57de4ebb11c2d15272e">00010</link> <emphasis role="keyword">enum</emphasis>&#32;<link linkend="__storage_8h_1aa3ad3663894c15a6c47a41a02d64e86f">storageStatus</link>&#32;{<link linkend="__storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa2f0d18fc0d0fa4a6cd92dc328501874d">EMPTY</link>,&#32;<link linkend="__storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa1e229ccb8b53a57de4ebb11c2d15272e">AVAILABLE</link>,&#32;<link linkend="__storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa8fd6994b2300416d1ad947a50d833850">FULLY</link>};
+<anchor xml:id="__storage_8h_source_1l00011"/>00011 
+<anchor xml:id="__storage_8h_source_1l00019"/><link linkend="_class_storage">00019</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_storage">Storage</link>
+<anchor xml:id="__storage_8h_source_1l00020"/>00020 {
+<anchor xml:id="__storage_8h_source_1l00021"/>00021 <emphasis role="keyword">protected</emphasis>:
+<anchor xml:id="__storage_8h_source_1l00022"/><link linkend="_class_storage_1a32a3a3044e508911dae197650dcf813e">00022</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_storage_1a32a3a3044e508911dae197650dcf813e">capacity</link>;&#32;&#32;&#32;&#32;
+<anchor xml:id="__storage_8h_source_1l00023"/>00023 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__storage_8h_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<link linkend="_class_storage_1aa1694a20f74b18f46d68eb95d6d3f228">Storage</link>(<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_storage_1a32a3a3044e508911dae197650dcf813e">capacity</link>);
+<anchor xml:id="__storage_8h_source_1l00030"/>00030 
+<anchor xml:id="__storage_8h_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<link linkend="__storage_8h_1aa3ad3663894c15a6c47a41a02d64e86f">storageStatus</link>&#32;<link linkend="_class_storage_1a21a267ec9e43c6147c56e56a347d5784">checkCapacity</link>(<emphasis role="keywordtype">int</emphasis>&#32;totalCapacity)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="__storage_8h_source_1l00038"/>00038 };
+<anchor xml:id="__storage_8h_source_1l00039"/>00039 
+<anchor xml:id="__storage_8h_source_1l00040"/>00040 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

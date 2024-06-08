@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_1d5b92995486d5a4019a0f8ee18ed974" kind="dir">
+    <compoundname>src/SalesReport</compoundname>
+    <innerfile refid="_sales_report_8cpp">SalesReport.cpp</innerfile>
+    <innerfile refid="_sales_report_8h">SalesReport.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/SalesReport/"/>
+  </compounddef>
+</doxygen>

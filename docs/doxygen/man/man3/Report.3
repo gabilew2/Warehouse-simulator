@@ -1,0 +1,122 @@
+.TH "Report" 3 "Version 1.0.0" "Warehouse Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Report \- Represents a report in the store simulation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Report\&.h>\fP
+.PP
+Inherited by \fBSalesReport\fP\fR [private]\fP, and \fBWarehouseReport\fP\fR [private]\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBProductReport\fP"
+.br
+.RI "Represents a report for a single product\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBReport\fP (double operationalCosts, double netProfit)"
+.br
+.RI "Construct a new \fBReport\fP object\&. "
+.ti -1c
+.RI "QString \fBgenerateReport\fP () const"
+.br
+.RI "Generates a summary report as a QString\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBsetOperationalCosts\fP (double costs)"
+.br
+.RI "Set the operational costs\&. "
+.ti -1c
+.RI "static void \fBsetNetProfit\fP (double profit)"
+.br
+.RI "Set the net profit\&. "
+.ti -1c
+.RI "static double \fBgetOperationalCosts\fP ()"
+.br
+.RI "Get the operational costs\&. "
+.ti -1c
+.RI "static double \fBgetNetProfit\fP ()"
+.br
+.RI "Get the net profit\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Represents a report in the store simulation\&. 
+
+This class is responsible for generating reports that summarize the operational costs and net profits\&. 
+.PP
+Definition at line \fB17\fP of file \fBReport\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Report::Report (double operationalCosts, double netProfit)"
+
+.PP
+Construct a new \fBReport\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoperationalCosts\fP Operational costs of the store\&. 
+.br
+\fInetProfit\fP Net profit of the store\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB17\fP of file \fBReport\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "QString Report::generateReport () const"
+
+.PP
+Generates a summary report as a QString\&. This method compiles the operational costs and net profits into a readable format\&. 
+.PP
+\fBReturns\fP
+.RS 4
+QString A summary report of the store's financial status\&.
+.PP
+QString A summary report of the store's financial status\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB28\fP of file \fBReport\&.cpp\fP\&.
+.SS "double Report::getNetProfit ()\fR [static]\fP"
+
+.PP
+Get the net profit\&. 
+.PP
+Definition at line \fB52\fP of file \fBReport\&.cpp\fP\&.
+.SS "double Report::getOperationalCosts ()\fR [static]\fP"
+
+.PP
+Get the operational costs\&. 
+.PP
+Definition at line \fB47\fP of file \fBReport\&.cpp\fP\&.
+.SS "void Report::setNetProfit (double profit)\fR [static]\fP"
+
+.PP
+Set the net profit\&. 
+.PP
+Definition at line \fB41\fP of file \fBReport\&.cpp\fP\&.
+.SS "void Report::setOperationalCosts (double costs)\fR [static]\fP"
+
+.PP
+Set the operational costs\&. 
+.PP
+Definition at line \fB36\fP of file \fBReport\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Warehouse Simulator from the source code\&.

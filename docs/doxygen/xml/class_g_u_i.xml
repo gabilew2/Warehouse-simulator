@@ -1,0 +1,616 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_g_u_i" kind="class" language="C++" prot="public">
+    <compoundname>GUI</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QMainWindow</basecompoundref>
+    <includes refid="gui_8h" local="no">gui.h</includes>
+    <innerclass refid="struct_g_u_i_1_1_product" prot="private">GUI::Product</innerclass>
+    <innerclass refid="struct_g_u_i_1_1_warehouse" prot="private">GUI::Warehouse</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_g_u_i_1acdbca1224663f5a19bd1ad4e7c885886" prot="private" static="no" mutable="no">
+        <type>Ui::GUI *</type>
+        <definition>Ui::GUI* GUI::ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <qualifiedname>GUI::ui</qualifiedname>
+        <briefdescription>
+<para>Pointer to the user interface setup. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="247" column="13" bodyfile="src/gui/gui.h" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1a964a4af08d465a285ca4852ed5e8c820" prot="private" static="no" mutable="no">
+        <type>QList&lt; <ref refid="class_warehouse" kindref="compound">Warehouse</ref> &gt;</type>
+        <definition>QList&lt;Warehouse&gt; GUI::warehouses</definition>
+        <argsstring></argsstring>
+        <name>warehouses</name>
+        <qualifiedname>GUI::warehouses</qualifiedname>
+        <briefdescription>
+<para>List of all warehouses in the system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="278" column="11" bodyfile="src/gui/gui.h" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1af477d43b9f77815a2c24d8c1066c7c9f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GUI::currentWarehouseIndex</definition>
+        <argsstring></argsstring>
+        <name>currentWarehouseIndex</name>
+        <qualifiedname>GUI::currentWarehouseIndex</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Index of the currently selected warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="279" column="9" bodyfile="src/gui/gui.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1ab69db54e2e2715de8f67b2fd2d4d6e01" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString GUI::filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <qualifiedname>GUI::filename</qualifiedname>
+        <briefdescription>
+<para>Path to the configuration file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="281" column="13" bodyfile="src/gui/gui.h" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1aa1ae250851c54619cd79f213174551b9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GUI::seed</definition>
+        <argsstring></argsstring>
+        <name>seed</name>
+        <qualifiedname>GUI::seed</qualifiedname>
+        <initializer>= 100</initializer>
+        <briefdescription>
+<para>Seed value used for simulation randomness. Defoult: 100. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="282" column="9" bodyfile="src/gui/gui.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1ade0e19aea11fad3504da5628183a214d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GUI::cycles</definition>
+        <argsstring></argsstring>
+        <name>cycles</name>
+        <qualifiedname>GUI::cycles</qualifiedname>
+        <initializer>= 10</initializer>
+        <briefdescription>
+<para>Number of cycles the simulation will run. Default: 10. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="283" column="9" bodyfile="src/gui/gui.h" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1ac33a82b7f11accce2f194c3d96174d2c" prot="private" static="no" mutable="no">
+        <type>QTimer *</type>
+        <definition>QTimer* GUI::timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <qualifiedname>GUI::timer</qualifiedname>
+        <briefdescription>
+<para>Timer used for periodic updates during the simulation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="285" column="12" bodyfile="src/gui/gui.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_g_u_i_1aa73b900295e12a915b80f34c418f7653" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GUI::GUI</definition>
+        <argsstring>(GUIElement *parent=nullptr)</argsstring>
+        <name>GUI</name>
+        <qualifiedname>GUI::GUI</qualifiedname>
+        <param>
+          <type><ref refid="gui_8h_1a41dc4eccf37447afba3e984031346842" kindref="member">GUIElement</ref> *</type>
+          <declname>parent</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Constructor for the <ref refid="class_g_u_i" kindref="compound">GUI</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the parent widget, if any. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="92" column="14" bodyfile="src/gui/gui.cpp" bodystart="14" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_u_i_1ac9cae2328dcb5d83bdfaeca49a2eb695" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GUI::~GUI</definition>
+        <argsstring>()</argsstring>
+        <name>~GUI</name>
+        <qualifiedname>GUI::~GUI</qualifiedname>
+        <briefdescription>
+<para>Destructor for the <ref refid="class_g_u_i" kindref="compound">GUI</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="97" column="5" bodyfile="src/gui/gui.cpp" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_u_i_1ae63efaa6d38814299c42540a5d4ea00b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::render</definition>
+        <argsstring>()</argsstring>
+        <name>render</name>
+        <qualifiedname>GUI::render</qualifiedname>
+        <briefdescription>
+<para>Renders the graphical user interface elements. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is responsible for rendering the <ref refid="class_g_u_i" kindref="compound">GUI</ref> elements on the screen. It ensures that all widgets (buttons, labels, etc.) are displayed correctly based on their current state and properties. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="106" column="10" bodyfile="src/gui/gui.cpp" bodystart="33" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_u_i_1ab313545b5c5cfe552a77ec342c69b617" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::updateGUI</definition>
+        <argsstring>(GUIEvent &amp;event)</argsstring>
+        <name>updateGUI</name>
+        <qualifiedname>GUI::updateGUI</qualifiedname>
+        <param>
+          <type><ref refid="gui_8h_1a4bf30075a0d0136f8daa83c001a2d75e" kindref="member">GUIEvent</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Updates the <ref refid="class_g_u_i" kindref="compound">GUI</ref> based on the given event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function handles <ref refid="class_g_u_i" kindref="compound">GUI</ref> updates triggered by specific events. It takes a GUIEvent as a parameter and modifies the <ref refid="class_g_u_i" kindref="compound">GUI</ref> state or individual elements accordingly. For example, it may update the text of a label or enable/disable a button based on the event.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_g_u_i" kindref="compound">GUI</ref> event that triggers the update. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="118" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_u_i_1a0b4a1e6d6a100198309a25c11dde336c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::handleEvents</definition>
+        <argsstring>(GUIEvent &amp;event)</argsstring>
+        <name>handleEvents</name>
+        <qualifiedname>GUI::handleEvents</qualifiedname>
+        <param>
+          <type><ref refid="gui_8h_1a4bf30075a0d0136f8daa83c001a2d75e" kindref="member">GUIEvent</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Handles user-generated events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function processes user interactions (e.g., mouse clicks, keyboard input) and responds appropriately. It takes a GUIEvent as a parameter and performs actions based on the event type. For instance, it may execute a specific action when a button is clicked or update the <ref refid="class_g_u_i" kindref="compound">GUI</ref> state when a key is pressed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_g_u_i" kindref="compound">GUI</ref> event to handle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="130" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="class_g_u_i_1aac91db8762d3507e0f7123de26c4f2a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::on_addbutton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_addbutton_clicked</name>
+        <qualifiedname>GUI::on_addbutton_clicked</qualifiedname>
+        <briefdescription>
+<para>Slot called when the &apos;Add&apos; button is clicked. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This slot is responsible for initiating the process of adding a new warehouse. It prompts the user for warehouse details and updates the internal list of warehouses. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="139" column="10" bodyfile="src/gui/gui.cpp" bodystart="69" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_g_u_i_1ac9c94dd70c435067537350a48ef6dc71" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::on_back_to_menu_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_back_to_menu_clicked</name>
+        <qualifiedname>GUI::on_back_to_menu_clicked</qualifiedname>
+        <briefdescription>
+<para>Slot called when the &apos;Back to Menu&apos; button is clicked. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This slot returns the user to the main menu of the application by changing the current view. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="146" column="10" bodyfile="src/gui/gui.cpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_g_u_i_1ae77cc6818ac9de4cf50f8e2101ba02f0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::on_back_to_menu_2_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_back_to_menu_2_clicked</name>
+        <qualifiedname>GUI::on_back_to_menu_2_clicked</qualifiedname>
+        <briefdescription>
+<para>Slot called when the &apos;Back to Menu&apos; button is clicked on the second page. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Slot called when the &apos;Back to Menu&apos; button is clicked.</para>
+<para>This slot performs the same action as on_back_to_menu_clicked, but it is connected to the button on the second page of the stacked widget. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="154" column="10" bodyfile="src/gui/gui.cpp" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_g_u_i_1a187b0fa4d29e12848156bb0cffa32231" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::on_back_to_menu_3_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_back_to_menu_3_clicked</name>
+        <qualifiedname>GUI::on_back_to_menu_3_clicked</qualifiedname>
+        <briefdescription>
+<para>Slot called when the &apos;Back to Menu&apos; button is clicked on the third page. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Slot called when the &apos;Back to Menu&apos; button is clicked.</para>
+<para>This slot performs the same action as on_back_to_menu_clicked, but it is connected to the button on the third page of the stacked widget. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="162" column="10" bodyfile="src/gui/gui.cpp" bodystart="98" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_g_u_i_1ac0667e8e8d78da1905d17ffa7f5b00fa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::on_settings_button_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_settings_button_clicked</name>
+        <qualifiedname>GUI::on_settings_button_clicked</qualifiedname>
+        <briefdescription>
+<para>Slot called when the &apos;Settings&apos; button is clicked. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This slot navigates the user to the settings page of the application. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="169" column="10" bodyfile="src/gui/gui.cpp" bodystart="106" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_g_u_i_1ad01d82038fdc5e7f3154483c08b456a0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::on_start_simulation_button_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_start_simulation_button_clicked</name>
+        <qualifiedname>GUI::on_start_simulation_button_clicked</qualifiedname>
+        <briefdescription>
+<para>Slot called when the &apos;Start <ref refid="class_simulation" kindref="compound">Simulation</ref>&apos; button is clicked. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This slot initiates the simulation process by switching to the simulation view and starting the simulation thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="177" column="10" bodyfile="src/gui/gui.cpp" bodystart="114" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_g_u_i_1acbe4ad9b7ea40be19164cd456dcbdbf9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::on_aboutButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_aboutButton_clicked</name>
+        <qualifiedname>GUI::on_aboutButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Slot called when the &apos;About&apos; button is clicked. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This slot displays information about the Qt framework used in the application. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="184" column="10" bodyfile="src/gui/gui.cpp" bodystart="122" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_g_u_i_1a150295294219357905e7c96769732e10" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::on_configFileButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_configFileButton_clicked</name>
+        <qualifiedname>GUI::on_configFileButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Slot called when the &apos;Choose Config File&apos; button is clicked. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This slot allows the user to select a configuration file for the simulation settings. It updates the file path in the <ref refid="class_g_u_i" kindref="compound">GUI</ref> and loads the selected configuration. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="192" column="10" bodyfile="src/gui/gui.cpp" bodystart="130" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_g_u_i_1a995f9af1af33e0fd5c642f08bd5c8e14" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::on_back_to_menu_7_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_back_to_menu_7_clicked</name>
+        <qualifiedname>GUI::on_back_to_menu_7_clicked</qualifiedname>
+        <briefdescription>
+<para>Slot called when the &apos;Back to Menu&apos; button is clicked on the settings page. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Slot called when the &apos;Back to Menu&apos; button is clicked.</para>
+<para>This slot saves the current settings entered by the user and returns to the main menu. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="199" column="10" bodyfile="src/gui/gui.cpp" bodystart="199" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_g_u_i_1ade75f9798a3f44808e1a5855f789637f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::on_start_button_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_start_button_clicked</name>
+        <qualifiedname>GUI::on_start_button_clicked</qualifiedname>
+        <briefdescription>
+<para>Slot called when the &apos;Start&apos; button is clicked on the simulation page. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This slot begins the simulation with the current settings and warehouse data. It also sets up the update timer and prepares the <ref refid="class_g_u_i" kindref="compound">GUI</ref> for simulation output. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="207" column="10" bodyfile="src/gui/gui.cpp" bodystart="209" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_g_u_i_1a6f24aee8a41d0b43a20c8eda895aaa4f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::on_addProductButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_addProductButton_clicked</name>
+        <qualifiedname>GUI::on_addProductButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Slot called when the &apos;Add <ref refid="class_product" kindref="compound">Product</ref>&apos; button is clicked. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This slot is responsible for adding a new product to the current warehouse. It prompts the user for product details and updates the warehouse data accordingly. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="215" column="10" bodyfile="src/gui/gui.cpp" bodystart="260" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_g_u_i_1ac05e159fa67fbe347118149007451a00" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::on_removeButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_removeButton_clicked</name>
+        <qualifiedname>GUI::on_removeButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Slot called when the &apos;Remove&apos; button is clicked for a product. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This slot removes the selected product from the current warehouse and updates the <ref refid="class_g_u_i" kindref="compound">GUI</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="222" column="10" bodyfile="src/gui/gui.cpp" bodystart="288" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_g_u_i_1a4ef4d846b489c87fb1ead2eba6c960c0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::on_previousWarehouse_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_previousWarehouse_clicked</name>
+        <qualifiedname>GUI::on_previousWarehouse_clicked</qualifiedname>
+        <briefdescription>
+<para>Slot called when the &apos;Previous <ref refid="class_warehouse" kindref="compound">Warehouse</ref>&apos; button is clicked. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This slot switches the view to the previous warehouse in the list and updates the <ref refid="class_g_u_i" kindref="compound">GUI</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="229" column="10" bodyfile="src/gui/gui.cpp" bodystart="341" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_g_u_i_1a07f5a3dd06c1bd112ee5ef29666c46e7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::on_nextWarehouse_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_nextWarehouse_clicked</name>
+        <qualifiedname>GUI::on_nextWarehouse_clicked</qualifiedname>
+        <briefdescription>
+<para>Slot called when the &apos;Next <ref refid="class_warehouse" kindref="compound">Warehouse</ref>&apos; button is clicked. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This slot switches the view to the next warehouse in the list, adding a new warehouse if necessary, and updates the <ref refid="class_g_u_i" kindref="compound">GUI</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="237" column="10" bodyfile="src/gui/gui.cpp" bodystart="357" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_g_u_i_1a40ce03585d77507e5caa629f5422ba18" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::on_removeWarehouseButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_removeWarehouseButton_clicked</name>
+        <qualifiedname>GUI::on_removeWarehouseButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Slot called when the &apos;Remove <ref refid="class_warehouse" kindref="compound">Warehouse</ref>&apos; button is clicked. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This slot removes the current warehouse from the list and updates the <ref refid="class_g_u_i" kindref="compound">GUI</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="244" column="10" bodyfile="src/gui/gui.cpp" bodystart="378" bodyend="393"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_g_u_i_1a323876735bb64b4c3cd16107dd1a5014" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::loadCurrentWarehouseData</definition>
+        <argsstring>()</argsstring>
+        <name>loadCurrentWarehouseData</name>
+        <qualifiedname>GUI::loadCurrentWarehouseData</qualifiedname>
+        <briefdescription>
+<para>Loads data for the current warehouse into the <ref refid="class_g_u_i" kindref="compound">GUI</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function updates the product table with the information from the current warehouse. It is called whenever the warehouse data needs to be displayed or refreshed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="293" column="10" bodyfile="src/gui/gui.cpp" bodystart="315" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_u_i_1a1673c513985e98439783eb4afd27d89a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::setupUpdateTimer</definition>
+        <argsstring>()</argsstring>
+        <name>setupUpdateTimer</name>
+        <qualifiedname>GUI::setupUpdateTimer</qualifiedname>
+        <briefdescription>
+<para>Sets up a timer for periodic <ref refid="class_g_u_i" kindref="compound">GUI</ref> updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes a QTimer object to trigger periodic updates of the <ref refid="class_g_u_i" kindref="compound">GUI</ref>. It is used to refresh the <ref refid="class_g_u_i" kindref="compound">GUI</ref> at regular intervals, such as during a simulation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="301" column="10" bodyfile="src/gui/gui.cpp" bodystart="398" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_u_i_1afce32c08ac98088c09413462f0ee62e5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::updateTablesFromCSV</definition>
+        <argsstring>()</argsstring>
+        <name>updateTablesFromCSV</name>
+        <qualifiedname>GUI::updateTablesFromCSV</qualifiedname>
+        <briefdescription>
+<para>Updates the tables in the <ref refid="class_g_u_i" kindref="compound">GUI</ref> with data from a CSV file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads data from a CSV file and updates the statistics and report tables in the <ref refid="class_g_u_i" kindref="compound">GUI</ref>. It is typically called by the update timer to refresh the data displayed to the user. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="309" column="10" bodyfile="src/gui/gui.cpp" bodystart="408" bodyend="501"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_u_i_1a56c90d50ea5b9bb3feb713a757e7469e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI::onSimulationFinished</definition>
+        <argsstring>()</argsstring>
+        <name>onSimulationFinished</name>
+        <qualifiedname>GUI::onSimulationFinished</qualifiedname>
+        <briefdescription>
+<para>Slot called when the simulation has finished. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This slot is connected to the simulationFinished signal of the <ref refid="class_simulation_thread" kindref="compound">SimulationThread</ref>. It stops the update timer and prompts the user to save the simulation report and settings. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="317" column="10" bodyfile="src/gui/gui.cpp" bodystart="506" bodyend="570"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_g_u_i" kindref="compound">GUI</ref> class inherits from QMainWindow and represents the main window of the application. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class manages the user interface for the application. It sets up the main window and its associated widgets, and handles user interactions. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>GUI</label>
+        <link refid="class_g_u_i"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QMainWindow</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>GUI</label>
+        <link refid="class_g_u_i"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QMainWindow</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/gui/gui.h" line="82" column="1" bodyfile="src/gui/gui.h" bodystart="83" bodyend="318"/>
+    <listofallmembers>
+      <member refid="class_g_u_i_1af477d43b9f77815a2c24d8c1066c7c9f" prot="private" virt="non-virtual"><scope>GUI</scope><name>currentWarehouseIndex</name></member>
+      <member refid="class_g_u_i_1ade0e19aea11fad3504da5628183a214d" prot="private" virt="non-virtual"><scope>GUI</scope><name>cycles</name></member>
+      <member refid="class_g_u_i_1ab69db54e2e2715de8f67b2fd2d4d6e01" prot="private" virt="non-virtual"><scope>GUI</scope><name>filename</name></member>
+      <member refid="class_g_u_i_1aa73b900295e12a915b80f34c418f7653" prot="public" virt="non-virtual"><scope>GUI</scope><name>GUI</name></member>
+      <member refid="class_g_u_i_1a0b4a1e6d6a100198309a25c11dde336c" prot="public" virt="non-virtual"><scope>GUI</scope><name>handleEvents</name></member>
+      <member refid="class_g_u_i_1a323876735bb64b4c3cd16107dd1a5014" prot="private" virt="non-virtual"><scope>GUI</scope><name>loadCurrentWarehouseData</name></member>
+      <member refid="class_g_u_i_1acbe4ad9b7ea40be19164cd456dcbdbf9" prot="private" virt="non-virtual"><scope>GUI</scope><name>on_aboutButton_clicked</name></member>
+      <member refid="class_g_u_i_1aac91db8762d3507e0f7123de26c4f2a5" prot="private" virt="non-virtual"><scope>GUI</scope><name>on_addbutton_clicked</name></member>
+      <member refid="class_g_u_i_1a6f24aee8a41d0b43a20c8eda895aaa4f" prot="private" virt="non-virtual"><scope>GUI</scope><name>on_addProductButton_clicked</name></member>
+      <member refid="class_g_u_i_1ae77cc6818ac9de4cf50f8e2101ba02f0" prot="private" virt="non-virtual"><scope>GUI</scope><name>on_back_to_menu_2_clicked</name></member>
+      <member refid="class_g_u_i_1a187b0fa4d29e12848156bb0cffa32231" prot="private" virt="non-virtual"><scope>GUI</scope><name>on_back_to_menu_3_clicked</name></member>
+      <member refid="class_g_u_i_1a995f9af1af33e0fd5c642f08bd5c8e14" prot="private" virt="non-virtual"><scope>GUI</scope><name>on_back_to_menu_7_clicked</name></member>
+      <member refid="class_g_u_i_1ac9c94dd70c435067537350a48ef6dc71" prot="private" virt="non-virtual"><scope>GUI</scope><name>on_back_to_menu_clicked</name></member>
+      <member refid="class_g_u_i_1a150295294219357905e7c96769732e10" prot="private" virt="non-virtual"><scope>GUI</scope><name>on_configFileButton_clicked</name></member>
+      <member refid="class_g_u_i_1a07f5a3dd06c1bd112ee5ef29666c46e7" prot="private" virt="non-virtual"><scope>GUI</scope><name>on_nextWarehouse_clicked</name></member>
+      <member refid="class_g_u_i_1a4ef4d846b489c87fb1ead2eba6c960c0" prot="private" virt="non-virtual"><scope>GUI</scope><name>on_previousWarehouse_clicked</name></member>
+      <member refid="class_g_u_i_1ac05e159fa67fbe347118149007451a00" prot="private" virt="non-virtual"><scope>GUI</scope><name>on_removeButton_clicked</name></member>
+      <member refid="class_g_u_i_1a40ce03585d77507e5caa629f5422ba18" prot="private" virt="non-virtual"><scope>GUI</scope><name>on_removeWarehouseButton_clicked</name></member>
+      <member refid="class_g_u_i_1ac0667e8e8d78da1905d17ffa7f5b00fa" prot="private" virt="non-virtual"><scope>GUI</scope><name>on_settings_button_clicked</name></member>
+      <member refid="class_g_u_i_1ade75f9798a3f44808e1a5855f789637f" prot="private" virt="non-virtual"><scope>GUI</scope><name>on_start_button_clicked</name></member>
+      <member refid="class_g_u_i_1ad01d82038fdc5e7f3154483c08b456a0" prot="private" virt="non-virtual"><scope>GUI</scope><name>on_start_simulation_button_clicked</name></member>
+      <member refid="class_g_u_i_1a56c90d50ea5b9bb3feb713a757e7469e" prot="private" virt="non-virtual"><scope>GUI</scope><name>onSimulationFinished</name></member>
+      <member refid="class_g_u_i_1ae63efaa6d38814299c42540a5d4ea00b" prot="public" virt="non-virtual"><scope>GUI</scope><name>render</name></member>
+      <member refid="class_g_u_i_1aa1ae250851c54619cd79f213174551b9" prot="private" virt="non-virtual"><scope>GUI</scope><name>seed</name></member>
+      <member refid="class_g_u_i_1a1673c513985e98439783eb4afd27d89a" prot="private" virt="non-virtual"><scope>GUI</scope><name>setupUpdateTimer</name></member>
+      <member refid="class_g_u_i_1ac33a82b7f11accce2f194c3d96174d2c" prot="private" virt="non-virtual"><scope>GUI</scope><name>timer</name></member>
+      <member refid="class_g_u_i_1acdbca1224663f5a19bd1ad4e7c885886" prot="private" virt="non-virtual"><scope>GUI</scope><name>ui</name></member>
+      <member refid="class_g_u_i_1ab313545b5c5cfe552a77ec342c69b617" prot="public" virt="non-virtual"><scope>GUI</scope><name>updateGUI</name></member>
+      <member refid="class_g_u_i_1afce32c08ac98088c09413462f0ee62e5" prot="private" virt="non-virtual"><scope>GUI</scope><name>updateTablesFromCSV</name></member>
+      <member refid="class_g_u_i_1a964a4af08d465a285ca4852ed5e8c820" prot="private" virt="non-virtual"><scope>GUI</scope><name>warehouses</name></member>
+      <member refid="class_g_u_i_1ac9cae2328dcb5d83bdfaeca49a2eb695" prot="public" virt="non-virtual"><scope>GUI</scope><name>~GUI</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

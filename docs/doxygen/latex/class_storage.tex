@@ -1,0 +1,108 @@
+\doxysection{Storage Class Reference}
+\hypertarget{class_storage}{}\label{class_storage}\index{Storage@{Storage}}
+
+
+The \doxylink{class_storage}{Storage} class represents a storage unit with a certain capacity.  
+
+
+
+
+{\ttfamily \#include $<$Storage.\+h$>$}
+
+Inheritance diagram for Storage\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_storage}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_storage_aa1694a20f74b18f46d68eb95d6d3f228}{Storage}} (int \mbox{\hyperlink{class_storage_a32a3a3044e508911dae197650dcf813e}{capacity}})
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_storage}{Storage} object with a specified capacity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_storage_8h_aa3ad3663894c15a6c47a41a02d64e86f}{storage\+Status}} \mbox{\hyperlink{class_storage_a21a267ec9e43c6147c56e56a347d5784}{check\+Capacity}} (int total\+Capacity) const
+\begin{DoxyCompactList}\small\item\em Check the current capacity status of the storage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_storage_a32a3a3044e508911dae197650dcf813e}{capacity}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_storage}{Storage} fill level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_storage}{Storage} class represents a storage unit with a certain capacity. 
+
+This class provides a method to check the current status of the storage based on its capacity. 
+
+Definition at line \mbox{\hyperlink{_storage_8h_source_l00019}{19}} of file \mbox{\hyperlink{_storage_8h_source}{Storage.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_storage_aa1694a20f74b18f46d68eb95d6d3f228}\label{class_storage_aa1694a20f74b18f46d68eb95d6d3f228} 
+\index{Storage@{Storage}!Storage@{Storage}}
+\index{Storage@{Storage}!Storage@{Storage}}
+\doxysubsubsection{\texorpdfstring{Storage()}{Storage()}}
+{\footnotesize\ttfamily Storage\+::\+Storage (\begin{DoxyParamCaption}\item[{int}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_storage}{Storage} object with a specified capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & The initial capacity of the storage. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_storage_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_storage_8cpp_source}{Storage.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_storage_a21a267ec9e43c6147c56e56a347d5784}\label{class_storage_a21a267ec9e43c6147c56e56a347d5784} 
+\index{Storage@{Storage}!checkCapacity@{checkCapacity}}
+\index{checkCapacity@{checkCapacity}!Storage@{Storage}}
+\doxysubsubsection{\texorpdfstring{checkCapacity()}{checkCapacity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_storage_8h_aa3ad3663894c15a6c47a41a02d64e86f}{storage\+Status}} Storage\+::check\+Capacity (\begin{DoxyParamCaption}\item[{int}]{total\+Capacity }\end{DoxyParamCaption}) const}
+
+
+
+Check the current capacity status of the storage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em total\+Capacity} & The maximum capacity of the storage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+storage\+Status The status of the storage\+: EMPTY, AVAILABLE, or FULLY. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_storage_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{_storage_8cpp_source}{Storage.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_storage_a32a3a3044e508911dae197650dcf813e}\label{class_storage_a32a3a3044e508911dae197650dcf813e} 
+\index{Storage@{Storage}!capacity@{capacity}}
+\index{capacity@{capacity}!Storage@{Storage}}
+\doxysubsubsection{\texorpdfstring{capacity}{capacity}}
+{\footnotesize\ttfamily int Storage\+::capacity\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxylink{class_storage}{Storage} fill level. 
+
+
+
+Definition at line \mbox{\hyperlink{_storage_8h_source_l00022}{22}} of file \mbox{\hyperlink{_storage_8h_source}{Storage.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Storage/\mbox{\hyperlink{_storage_8h}{Storage.\+h}}\item 
+src/\+Storage/\mbox{\hyperlink{_storage_8cpp}{Storage.\+cpp}}\end{DoxyCompactItemize}

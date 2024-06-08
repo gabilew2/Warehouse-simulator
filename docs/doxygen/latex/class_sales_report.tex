@@ -1,0 +1,89 @@
+\doxysection{Sales\+Report Class Reference}
+\hypertarget{class_sales_report}{}\label{class_sales_report}\index{SalesReport@{SalesReport}}
+
+
+The \doxylink{class_sales_report}{Sales\+Report} class extends the \doxylink{class_report}{Report} class to provide a report specifically for sales.  
+
+
+
+
+{\ttfamily \#include $<$Sales\+Report.\+h$>$}
+
+Inheritance diagram for Sales\+Report\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sales_report}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sales_report_a2bd4ee648c88804b8bbb581d1626c49f}{Sales\+Report}} (int sales\+Id, QDate\+Time time, QList$<$ \mbox{\hyperlink{struct_report_1_1_product_report}{Product\+Report}} $>$ product\+List, double operational\+Costs, double net\+Profit)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_sales_report}{Sales\+Report} object. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_sales_report_adbcc82fb8fa70e87cd4f12bf4f3537ae}{generate\+Report}} () const
+\begin{DoxyCompactList}\small\item\em Generates a detailed sales report. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_sales_report}{Sales\+Report} class extends the \doxylink{class_report}{Report} class to provide a report specifically for sales. 
+
+This class inherits from \doxylink{class_report}{Report} and is responsible for generating a sales report, which includes details such as sales ID, time, and a list of products sold. 
+
+Definition at line \mbox{\hyperlink{_sales_report_8h_source_l00020}{20}} of file \mbox{\hyperlink{_sales_report_8h_source}{Sales\+Report.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_sales_report_a2bd4ee648c88804b8bbb581d1626c49f}\label{class_sales_report_a2bd4ee648c88804b8bbb581d1626c49f} 
+\index{SalesReport@{SalesReport}!SalesReport@{SalesReport}}
+\index{SalesReport@{SalesReport}!SalesReport@{SalesReport}}
+\doxysubsubsection{\texorpdfstring{SalesReport()}{SalesReport()}}
+{\footnotesize\ttfamily Sales\+Report\+::\+Sales\+Report (\begin{DoxyParamCaption}\item[{int}]{sales\+Id,  }\item[{QDate\+Time}]{time,  }\item[{QList$<$ \mbox{\hyperlink{struct_report_1_1_product_report}{Product\+Report}} $>$}]{product\+List,  }\item[{double}]{operational\+Costs,  }\item[{double}]{net\+Profit }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_sales_report}{Sales\+Report} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sales\+Id} & Unique identifier for the sales report. \\
+\hline
+{\em time} & The time when the report is generated. \\
+\hline
+{\em product\+List} & List of products included in the sales report. \\
+\hline
+{\em operational\+Costs} & Operational costs of the store. \\
+\hline
+{\em net\+Profit} & Net profit of the store. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_sales_report_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_sales_report_8cpp_source}{Sales\+Report.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sales_report_adbcc82fb8fa70e87cd4f12bf4f3537ae}\label{class_sales_report_adbcc82fb8fa70e87cd4f12bf4f3537ae} 
+\index{SalesReport@{SalesReport}!generateReport@{generateReport}}
+\index{generateReport@{generateReport}!SalesReport@{SalesReport}}
+\doxysubsubsection{\texorpdfstring{generateReport()}{generateReport()}}
+{\footnotesize\ttfamily QString Sales\+Report\+::generate\+Report (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Generates a detailed sales report. 
+
+\begin{DoxyReturn}{Returns}
+QString A formatted string representing the sales report. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_sales_report_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{_sales_report_8cpp_source}{Sales\+Report.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sales\+Report/\mbox{\hyperlink{_sales_report_8h}{Sales\+Report.\+h}}\item 
+src/\+Sales\+Report/\mbox{\hyperlink{_sales_report_8cpp}{Sales\+Report.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_event" xml:lang="en-US">
+<title>Event Class Reference</title>
+<indexterm><primary>Event</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_event">Event</link> class represents an event in the warehouse simulation. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Event.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_event_1ad93a0e3be8c8738a36970319e7110389">Event</link> (QString eventType, QDateTime time)</para>
+
+<para>Constructor for the <link linkend="_class_event">Event</link> class. </para>
+</listitem>
+            <listitem><para>QString <link linkend="_class_event_1a20074c3674655968a30e835b7e2e6cdb">getEventType</link> () const</para>
+
+<para>Retrieves the type of the event. </para>
+</listitem>
+            <listitem><para>QDateTime <link linkend="_class_event_1a7dba066f88bda41545ea19491dc69760">getTime</link> () const</para>
+
+<para>Retrieves the timestamp of the event. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_event">Event</link> <link linkend="_class_event_1a0a53e36a36fd4bfac0bb3d0de9cc521c">generateEvent</link> (QString eventType, int seed)</para>
+
+<para>Generates a random event based on the given seed. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_event">Event</link> class represents an event in the warehouse simulation. </para>
+
+
+
+<para>This class encapsulates the details of an event, including its type and the time it occurred. </para>
+<para>
+Definition at line <link linkend="__event_8h_source_1l00017">17</link> of file <link linkend="__event_8h_source">Event.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_event_1ad93a0e3be8c8738a36970319e7110389"/><section>
+    <title>Event()</title>
+<indexterm><primary>Event</primary><secondary>Event</secondary></indexterm>
+<indexterm><primary>Event</primary><secondary>Event</secondary></indexterm>
+<para><computeroutput>Event::Event (QString eventType, QDateTime time)</computeroutput></para><para>
+
+<para>Constructor for the <link linkend="_class_event">Event</link> class. </para>
+</para>
+
+<para>Construct a new <link linkend="_class_event">Event</link> object.</para>
+
+<para>Initializes a new instance of the <link linkend="_class_event">Event</link> class with the specified type and time. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>eventType</entry><entry>
+<para>The type of the event. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>time</entry><entry>
+<para>The timestamp when the event occurred. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__event_8cpp_source_1l00012">12</link> of file <link linkend="__event_8cpp_source">Event.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_event_1a0a53e36a36fd4bfac0bb3d0de9cc521c"/><section>
+    <title>generateEvent()</title>
+<indexterm><primary>generateEvent</primary><secondary>Event</secondary></indexterm>
+<indexterm><primary>Event</primary><secondary>generateEvent</secondary></indexterm>
+<para><computeroutput><link linkend="_class_event">Event</link> Event::generateEvent (QString eventType, int seed)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Generates a random event based on the given seed. </para>
+</para>
+
+<para>Generates an event with a random time offset.</para>
+
+<para>This static method creates a new event with a random time offset based on the provided seed. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>eventType</entry><entry>
+<para>The type of the event to generate. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>seed</entry><entry>
+<para>The seed for the random number generator. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A new <link linkend="_class_event">Event</link> instance with the specified type and a random time.</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>eventType</entry><entry>
+<para>The type of the event to generate. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>seed</entry><entry>
+<para>The seed for the random number generator. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A new <link linkend="_class_event">Event</link> instance with the specified type and a random time. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__event_8cpp_source_1l00025">25</link> of file <link linkend="__event_8cpp_source">Event.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_event_1a20074c3674655968a30e835b7e2e6cdb"/><section>
+    <title>getEventType()</title>
+<indexterm><primary>getEventType</primary><secondary>Event</secondary></indexterm>
+<indexterm><primary>Event</primary><secondary>getEventType</secondary></indexterm>
+<para><computeroutput>QString Event::getEventType ( ) const</computeroutput></para><para>
+
+<para>Retrieves the type of the event. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The event type as a QString. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__event_8cpp_source_1l00038">38</link> of file <link linkend="__event_8cpp_source">Event.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_event_1a7dba066f88bda41545ea19491dc69760"/><section>
+    <title>getTime()</title>
+<indexterm><primary>getTime</primary><secondary>Event</secondary></indexterm>
+<indexterm><primary>Event</primary><secondary>getTime</secondary></indexterm>
+<para><computeroutput>QDateTime Event::getTime ( ) const</computeroutput></para><para>
+
+<para>Retrieves the timestamp of the event. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The event time as a QDateTime. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__event_8cpp_source_1l00048">48</link> of file <link linkend="__event_8cpp_source">Event.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/Event/<link linkend="__event_8h">Event.h</link>src/Event/<link linkend="__event_8cpp">Event.cpp</link></section>
+</section>

@@ -1,0 +1,28 @@
+\doxysection{Sales\+Report.\+h}
+\hypertarget{_sales_report_8h_source}{}\label{_sales_report_8h_source}\index{src/SalesReport/SalesReport.h@{src/SalesReport/SalesReport.h}}
+\mbox{\hyperlink{_sales_report_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ SALESREPORT\_H}}
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00007}00007\ \textcolor{preprocessor}{\#define\ SALESREPORT\_H}}
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_report_8h}{Report/Report.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <QDateTime>}}
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <QList>}}
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00020}\mbox{\hyperlink{class_sales_report}{00020}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sales_report}{SalesReport}}\ :\ \mbox{\hyperlink{class_report}{Report}}}
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00022}00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00023}00023\ \ \ \ \ \textcolor{keywordtype}{int}\ salesId;\ }
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00024}00024\ \ \ \ \ QDateTime\ time;\ }
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00025}00025\ \ \ \ \ QList<ProductReport>\ productList;\ }
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00027}00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{class_sales_report_a2bd4ee648c88804b8bbb581d1626c49f}{SalesReport}}(\textcolor{keywordtype}{int}\ salesId,\ QDateTime\ time,\ QList<ProductReport>\ productList,\ \textcolor{keywordtype}{double}\ operationalCosts,\ \textcolor{keywordtype}{double}\ netProfit);}
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00043}00043\ \ \ \ \ QString\ \mbox{\hyperlink{class_sales_report_adbcc82fb8fa70e87cd4f12bf4f3537ae}{generateReport}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00044}00044\ \};}
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_sales_report_8h_source_l00046}00046\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SALESREPORT\_H}}
+
+\end{DoxyCode}

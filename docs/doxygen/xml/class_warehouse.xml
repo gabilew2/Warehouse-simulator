@@ -1,0 +1,557 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_warehouse" kind="class" language="C++" prot="public">
+    <compoundname>Warehouse</compoundname>
+    <basecompoundref refid="class_storage" prot="private" virt="non-virtual">Storage</basecompoundref>
+    <includes refid="_warehouse_8h" local="no">Warehouse.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_warehouse_1a69878e6b0791d43599d6ababfa049570" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString Warehouse::location</definition>
+        <argsstring></argsstring>
+        <name>location</name>
+        <qualifiedname>Warehouse::location</qualifiedname>
+        <briefdescription>
+<para>Location of the warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Warehouse/Warehouse.h" line="23" column="13" bodyfile="src/Warehouse/Warehouse.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_warehouse_1a32113c2df46f2b67e15aa98c0ebf7f6a" prot="private" static="no" mutable="no">
+        <type>QList&lt; <ref refid="class_product" kindref="compound">Product</ref> &gt;</type>
+        <definition>QList&lt;Product&gt; Warehouse::productList</definition>
+        <argsstring></argsstring>
+        <name>productList</name>
+        <qualifiedname>Warehouse::productList</qualifiedname>
+        <briefdescription>
+<para>List of products stored in the warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Warehouse/Warehouse.h" line="24" column="11" bodyfile="src/Warehouse/Warehouse.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_warehouse_1ad20fb04679565b5a4cab733dafc50894" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Warehouse::warehouseCapacity</definition>
+        <argsstring></argsstring>
+        <name>warehouseCapacity</name>
+        <qualifiedname>Warehouse::warehouseCapacity</qualifiedname>
+        <briefdescription>
+<para>The total capacity of the storage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Warehouse/Warehouse.h" line="25" column="12" bodyfile="src/Warehouse/Warehouse.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_warehouse_1a2f0e291212ae6770fe0c0494029a0d07" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Warehouse::warehouseId</definition>
+        <argsstring></argsstring>
+        <name>warehouseId</name>
+        <qualifiedname>Warehouse::warehouseId</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Unique identifier for the warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Static variable initialization. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Warehouse/Warehouse.h" line="35" column="16" bodyfile="src/Warehouse/Warehouse.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_warehouse_1a436ed7c9254c6eca35764f8ec7b32192" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Warehouse::Warehouse</definition>
+        <argsstring>(QString location, double warehouseCapacity)</argsstring>
+        <name>Warehouse</name>
+        <qualifiedname>Warehouse::Warehouse</qualifiedname>
+        <param>
+          <type>QString</type>
+          <declname>location</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>warehouseCapacity</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_warehouse" kindref="compound">Warehouse</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>location</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The location of the warehouse. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>warehouseCapacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial capacity of the warehouse. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Warehouse/Warehouse.h" line="33" column="5" bodyfile="src/Warehouse/Warehouse.cpp" bodystart="14" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_warehouse_1ab5e7fee30cc7b17f6ed600c7e01f0887" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86f" kindref="member">storageStatus</ref></type>
+        <definition>storageStatus Warehouse::checkStatus</definition>
+        <argsstring>()</argsstring>
+        <name>checkStatus</name>
+        <qualifiedname>Warehouse::checkStatus</qualifiedname>
+        <briefdescription>
+<para>Check the current status of the warehouse and updates the capacity attribute inherited from the <ref refid="class_storage" kindref="compound">Storage</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Check the current status of the warehouse and update the capacity attribute inherited from the <ref refid="class_storage" kindref="compound">Storage</ref> class.</para>
+<para><simplesect kind="return"><para>storageStatus The status of the warehouse: EMPTY, AVAILABLE, or FULL. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Warehouse/Warehouse.h" line="43" column="19" bodyfile="src/Warehouse/Warehouse.cpp" bodystart="33" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_warehouse_1a5b272ddafc481192f471de223c91f4eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></type>
+        <definition>status Warehouse::updateStatus</definition>
+        <argsstring>(int newCapacity)</argsstring>
+        <name>updateStatus</name>
+        <qualifiedname>Warehouse::updateStatus</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>newCapacity</declname>
+        </param>
+        <briefdescription>
+<para>Update the storage capacity of the warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newCapacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new capacity of the warehouse. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status SUCCESS if the operation is successful, ERROR otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Warehouse/Warehouse.h" line="51" column="12" bodyfile="src/Warehouse/Warehouse.cpp" bodystart="60" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_warehouse_1adcc66b057690967cc902d3e999db8af9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></type>
+        <definition>status Warehouse::addProduct</definition>
+        <argsstring>(QString name, double price, int quantity, int productId)</argsstring>
+        <name>addProduct</name>
+        <qualifiedname>Warehouse::addProduct</qualifiedname>
+        <param>
+          <type>QString</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>price</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>quantity</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>productId</declname>
+        </param>
+        <briefdescription>
+<para>Add a new product to the warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the product. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>price</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The price of the product. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>quantity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The quantity of the product. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>productId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the product. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status SUCCESS if the product is added, ERROR otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Warehouse/Warehouse.h" line="64" column="12" bodyfile="src/Warehouse/Warehouse.cpp" bodystart="84" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_warehouse_1af13dfa8e7d40770b45d28a7f19b6ea87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></type>
+        <definition>status Warehouse::updatePrice</definition>
+        <argsstring>(double newPrice, int productId)</argsstring>
+        <name>updatePrice</name>
+        <qualifiedname>Warehouse::updatePrice</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>newPrice</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>productId</declname>
+        </param>
+        <briefdescription>
+<para>Update the price of a product in the warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newPrice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new price of the product. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>productId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the product. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status SUCCESS if the price is updated, ERROR otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Contains false if the product was not found in the productList.</para>
+        </inbodydescription>
+        <location file="src/Warehouse/Warehouse.h" line="73" column="12" bodyfile="src/Warehouse/Warehouse.cpp" bodystart="112" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_warehouse_1a12c143bfa6b7443be317cc66897491e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></type>
+        <definition>status Warehouse::changeQuantity</definition>
+        <argsstring>(int quantity, int productId)</argsstring>
+        <name>changeQuantity</name>
+        <qualifiedname>Warehouse::changeQuantity</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>quantity</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>productId</declname>
+        </param>
+        <briefdescription>
+<para>Change the quantity of a product in the warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>quantity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new quantity of the product. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>productId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the product. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status SUCCESS if the quantity is updated, ERROR otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Warehouse/Warehouse.h" line="82" column="12" bodyfile="src/Warehouse/Warehouse.cpp" bodystart="133" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_warehouse_1a7ef00deb93a210331370beea2990c237" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></type>
+        <definition>status Warehouse::sell</definition>
+        <argsstring>(int quantityToSell, int productId)</argsstring>
+        <name>sell</name>
+        <qualifiedname>Warehouse::sell</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>quantityToSell</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>productId</declname>
+        </param>
+        <briefdescription>
+<para>Sell a quantity of a product from the warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>quantityToSell</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The quantity of the product to sell. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>productId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the product. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status SUCCESS if the product is sold, ERROR otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Warehouse/Warehouse.h" line="91" column="12" bodyfile="src/Warehouse/Warehouse.cpp" bodystart="169" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="class_warehouse_1a52374d2018f3744d545803b9805bfa7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString Warehouse::getName</definition>
+        <argsstring>(int productId)</argsstring>
+        <name>getName</name>
+        <qualifiedname>Warehouse::getName</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>productId</declname>
+        </param>
+        <briefdescription>
+<para>Get the name of a product by its ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>productId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the product. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>QString The name of the product. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Contains false if the product was not found in the productList.</para>
+        </inbodydescription>
+        <location file="src/Warehouse/Warehouse.h" line="99" column="13" bodyfile="src/Warehouse/Warehouse.cpp" bodystart="184" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="class_warehouse_1aad96200e251b9e55dc51d6fd3dff9d56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Warehouse::getPrice</definition>
+        <argsstring>(int productId)</argsstring>
+        <name>getPrice</name>
+        <qualifiedname>Warehouse::getPrice</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>productId</declname>
+        </param>
+        <briefdescription>
+<para>Get the price of a product by its ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>productId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the product. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double The price of the product. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Contains false if the product was not found in the productList.</para>
+        </inbodydescription>
+        <location file="src/Warehouse/Warehouse.h" line="107" column="12" bodyfile="src/Warehouse/Warehouse.cpp" bodystart="205" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="class_warehouse_1a08808180a2c1f6db033a3ecc94b3c205" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Warehouse::getQuantity</definition>
+        <argsstring>(int productId)</argsstring>
+        <name>getQuantity</name>
+        <qualifiedname>Warehouse::getQuantity</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>productId</declname>
+        </param>
+        <briefdescription>
+<para>Get the quantity of a product by its ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>productId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the product. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int The quantity of the product. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Contains false if the product was not found in the productList.</para>
+        </inbodydescription>
+        <location file="src/Warehouse/Warehouse.h" line="115" column="9" bodyfile="src/Warehouse/Warehouse.cpp" bodystart="226" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="class_warehouse_1a3f817148fcf0caf2ba0b6be2dd27809d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString Warehouse::getLocation</definition>
+        <argsstring>() const</argsstring>
+        <name>getLocation</name>
+        <qualifiedname>Warehouse::getLocation</qualifiedname>
+        <briefdescription>
+<para>Get the location of the warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Warehouse/Warehouse.h" line="120" column="13" bodyfile="src/Warehouse/Warehouse.cpp" bodystart="247" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QList&lt; <ref refid="class_product" kindref="compound">Product</ref> &gt;</type>
+        <definition>QList&lt; Product &gt; Warehouse::getProductList</definition>
+        <argsstring>() const</argsstring>
+        <name>getProductList</name>
+        <qualifiedname>Warehouse::getProductList</qualifiedname>
+        <briefdescription>
+<para>Get the list of the products. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the list of the products stored in the warehouse. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Warehouse/Warehouse.h" line="121" column="11" bodyfile="src/Warehouse/Warehouse.cpp" bodystart="255" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="class_warehouse_1ad5eb7e2175f702204e9e628c6658f777" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Warehouse::getCurrentCapacity</definition>
+        <argsstring>() const</argsstring>
+        <name>getCurrentCapacity</name>
+        <qualifiedname>Warehouse::getCurrentCapacity</qualifiedname>
+        <briefdescription>
+<para>Get the capacity of the warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the current capacity of the warehouse. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Warehouse/Warehouse.h" line="122" column="12" bodyfile="src/Warehouse/Warehouse.cpp" bodystart="263" bodyend="266"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_warehouse" kindref="compound">Warehouse</ref> class represents a warehouse with storage capacity. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class inherits from <ref refid="class_storage" kindref="compound">Storage</ref> and provides additional functionality specific to warehouse operations. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Storage</label>
+        <link refid="class_storage"/>
+      </node>
+      <node id="1">
+        <label>Warehouse</label>
+        <link refid="class_warehouse"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Storage</label>
+        <link refid="class_storage"/>
+      </node>
+      <node id="1">
+        <label>Warehouse</label>
+        <link refid="class_warehouse"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/Warehouse/Warehouse.h" line="20" column="1" bodyfile="src/Warehouse/Warehouse.h" bodystart="21" bodyend="123"/>
+    <listofallmembers>
+      <member refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" prot="public" virt="non-virtual"><scope>Warehouse</scope><name>addProduct</name></member>
+      <member refid="class_warehouse_1a12c143bfa6b7443be317cc66897491e9" prot="public" virt="non-virtual"><scope>Warehouse</scope><name>changeQuantity</name></member>
+      <member refid="class_warehouse_1ab5e7fee30cc7b17f6ed600c7e01f0887" prot="public" virt="non-virtual"><scope>Warehouse</scope><name>checkStatus</name></member>
+      <member refid="class_warehouse_1ad5eb7e2175f702204e9e628c6658f777" prot="public" virt="non-virtual"><scope>Warehouse</scope><name>getCurrentCapacity</name></member>
+      <member refid="class_warehouse_1a3f817148fcf0caf2ba0b6be2dd27809d" prot="public" virt="non-virtual"><scope>Warehouse</scope><name>getLocation</name></member>
+      <member refid="class_warehouse_1a52374d2018f3744d545803b9805bfa7e" prot="public" virt="non-virtual"><scope>Warehouse</scope><name>getName</name></member>
+      <member refid="class_warehouse_1aad96200e251b9e55dc51d6fd3dff9d56" prot="public" virt="non-virtual"><scope>Warehouse</scope><name>getPrice</name></member>
+      <member refid="class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e" prot="public" virt="non-virtual"><scope>Warehouse</scope><name>getProductList</name></member>
+      <member refid="class_warehouse_1a08808180a2c1f6db033a3ecc94b3c205" prot="public" virt="non-virtual"><scope>Warehouse</scope><name>getQuantity</name></member>
+      <member refid="class_warehouse_1a69878e6b0791d43599d6ababfa049570" prot="private" virt="non-virtual"><scope>Warehouse</scope><name>location</name></member>
+      <member refid="class_warehouse_1a32113c2df46f2b67e15aa98c0ebf7f6a" prot="private" virt="non-virtual"><scope>Warehouse</scope><name>productList</name></member>
+      <member refid="class_warehouse_1a7ef00deb93a210331370beea2990c237" prot="public" virt="non-virtual"><scope>Warehouse</scope><name>sell</name></member>
+      <member refid="class_warehouse_1af13dfa8e7d40770b45d28a7f19b6ea87" prot="public" virt="non-virtual"><scope>Warehouse</scope><name>updatePrice</name></member>
+      <member refid="class_warehouse_1a5b272ddafc481192f471de223c91f4eb" prot="public" virt="non-virtual"><scope>Warehouse</scope><name>updateStatus</name></member>
+      <member refid="class_warehouse_1a436ed7c9254c6eca35764f8ec7b32192" prot="public" virt="non-virtual"><scope>Warehouse</scope><name>Warehouse</name></member>
+      <member refid="class_warehouse_1ad20fb04679565b5a4cab733dafc50894" prot="private" virt="non-virtual"><scope>Warehouse</scope><name>warehouseCapacity</name></member>
+      <member refid="class_warehouse_1a2f0e291212ae6770fe0c0494029a0d07" prot="public" virt="non-virtual"><scope>Warehouse</scope><name>warehouseId</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_1c9a8d3a878218fce437b9e8ab1a0a60" kind="dir">
+    <compoundname>test/Storage</compoundname>
+    <innerfile refid="_storage_test_8cpp">StorageTest.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="test/Storage/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,87 @@
+.TH "Storage" 3 "Version 1.0.0" "Warehouse Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Storage \- The \fBStorage\fP class represents a storage unit with a certain capacity\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Storage\&.h>\fP
+.PP
+Inherited by \fBWarehouse\fP\fR [private]\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStorage\fP (int \fBcapacity\fP)"
+.br
+.RI "Construct a new \fBStorage\fP object with a specified capacity\&. "
+.ti -1c
+.RI "\fBstorageStatus\fP \fBcheckCapacity\fP (int totalCapacity) const"
+.br
+.RI "Check the current capacity status of the storage\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBcapacity\fP"
+.br
+.RI "\fBStorage\fP fill level\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBStorage\fP class represents a storage unit with a certain capacity\&. 
+
+This class provides a method to check the current status of the storage based on its capacity\&. 
+.PP
+Definition at line \fB19\fP of file \fBStorage\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Storage::Storage (int capacity)"
+
+.PP
+Construct a new \fBStorage\fP object with a specified capacity\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcapacity\fP The initial capacity of the storage\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB11\fP of file \fBStorage\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBstorageStatus\fP Storage::checkCapacity (int totalCapacity) const"
+
+.PP
+Check the current capacity status of the storage\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItotalCapacity\fP The maximum capacity of the storage\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+storageStatus The status of the storage: EMPTY, AVAILABLE, or FULLY\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB19\fP of file \fBStorage\&.cpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int Storage::capacity\fR [protected]\fP"
+
+.PP
+\fBStorage\fP fill level\&. 
+.PP
+Definition at line \fB22\fP of file \fBStorage\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Warehouse Simulator from the source code\&.

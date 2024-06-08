@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_simulation" kind="class" language="C++" prot="public">
+    <compoundname>Simulation</compoundname>
+    <includes refid="_simulation_8h" local="no">Simulation.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_simulation_1a47f7acf6a8bd01b4551d67e98b3f71ee" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Simulation::currentCycle</definition>
+        <argsstring></argsstring>
+        <name>currentCycle</name>
+        <qualifiedname>Simulation::currentCycle</qualifiedname>
+        <briefdescription>
+<para>Current simulation cycle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Simulation/Simulation.h" line="31" column="9" bodyfile="src/Simulation/Simulation.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulation_1a19603193117de9278f69b4e55b65268d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Simulation::seed</definition>
+        <argsstring></argsstring>
+        <name>seed</name>
+        <qualifiedname>Simulation::seed</qualifiedname>
+        <briefdescription>
+<para>Random number generator seed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Simulation/Simulation.h" line="32" column="9" bodyfile="src/Simulation/Simulation.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulation_1a3f53a42acb878aed67118b0e6790ec80" prot="private" static="no" mutable="no">
+        <type>QList&lt; <ref refid="class_event" kindref="compound">Event</ref> &gt;</type>
+        <definition>QList&lt;Event&gt; Simulation::events</definition>
+        <argsstring></argsstring>
+        <name>events</name>
+        <qualifiedname>Simulation::events</qualifiedname>
+        <briefdescription>
+<para>List of scheduled events. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Simulation/Simulation.h" line="33" column="11" bodyfile="src/Simulation/Simulation.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulation_1a155f9c035e9b4d97412d5a2c17cfd062" prot="private" static="no" mutable="no">
+        <type>QDateTime</type>
+        <definition>QDateTime Simulation::currentTime</definition>
+        <argsstring></argsstring>
+        <name>currentTime</name>
+        <qualifiedname>Simulation::currentTime</qualifiedname>
+        <briefdescription>
+<para>Current simulation time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Simulation/Simulation.h" line="34" column="15" bodyfile="src/Simulation/Simulation.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulation_1a2bea4eff5890af0760699c19d5d6ddc2" prot="private" static="no" mutable="no">
+        <type>QList&lt; <ref refid="class_warehouse" kindref="compound">Warehouse</ref> &gt;</type>
+        <definition>QList&lt;Warehouse&gt; Simulation::Warehouses</definition>
+        <argsstring></argsstring>
+        <name>Warehouses</name>
+        <qualifiedname>Simulation::Warehouses</qualifiedname>
+        <briefdescription>
+<para>List of warehouse objects. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Simulation/Simulation.h" line="35" column="11" bodyfile="src/Simulation/Simulation.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_simulation_1a5b224cc5b36bcc8eb29689aff223de41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Simulation::Simulation</definition>
+        <argsstring>()</argsstring>
+        <name>Simulation</name>
+        <qualifiedname>Simulation::Simulation</qualifiedname>
+        <briefdescription>
+<para>Construct a new <ref refid="class_simulation" kindref="compound">Simulation</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets up the initial state of the simulation, including loading settings and preparing the environment. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Simulation/Simulation.h" line="43" column="5" bodyfile="src/Simulation/Simulation.cpp" bodystart="6" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1aa0e23779d0aa555ae836a646b8b1d715" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></type>
+        <definition>status Simulation::conductCycle</definition>
+        <argsstring>()</argsstring>
+        <name>conductCycle</name>
+        <qualifiedname>Simulation::conductCycle</qualifiedname>
+        <briefdescription>
+<para>Conducts a simulation cycle, processing events for the current cycle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Processes events and updates the simulation state for each cycle. <simplesect kind="return"><para>Status of the cycle (success or failure). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Simulation/Simulation.h" line="51" column="12" bodyfile="src/Simulation/Simulation.cpp" bodystart="170" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1a0caa90613b0a2e52360c7cd6f5530023" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></type>
+        <definition>status Simulation::respondToEvent</definition>
+        <argsstring>(Event &amp;event)</argsstring>
+        <name>respondToEvent</name>
+        <qualifiedname>Simulation::respondToEvent</qualifiedname>
+        <param>
+          <type><ref refid="class_event" kindref="compound">Event</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Responds to a specific event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles the given event based on its type and updates the simulation state accordingly. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event to handle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Status of event handling (success or failure). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Simulation/Simulation.h" line="60" column="12" bodyfile="src/Simulation/Simulation.cpp" bodystart="198" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1ae5c367f87c0b5dc9740bc6d00e44e72c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulation::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <qualifiedname>Simulation::run</qualifiedname>
+        <briefdescription>
+<para>Initiates the simulation by running the main loop. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts the simulation loop, generating cycles, processing events, and generating reports. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Simulation/Simulation.h" line="67" column="10" bodyfile="src/Simulation/Simulation.cpp" bodystart="105" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1a03b8112bc675326b413cb67664dcd361" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulation::processEvents</definition>
+        <argsstring>()</argsstring>
+        <name>processEvents</name>
+        <qualifiedname>Simulation::processEvents</qualifiedname>
+        <briefdescription>
+<para>Processes all scheduled events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Invokes conductCycle to process events for the current cycle. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Simulation/Simulation.h" line="74" column="10" bodyfile="src/Simulation/Simulation.cpp" bodystart="159" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1ac2a7464b86a88a8ff09766825836590b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString Simulation::generateReport</definition>
+        <argsstring>()</argsstring>
+        <name>generateReport</name>
+        <qualifiedname>Simulation::generateReport</qualifiedname>
+        <briefdescription>
+<para>Generates a report summarizing simulation results. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Compiles data from the simulation into a formatted report string. <simplesect kind="return"><para>QString A summary report of the simulation results. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Simulation/Simulation.h" line="82" column="13" bodyfile="src/Simulation/Simulation.cpp" bodystart="298" bodyend="351"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_simulation" kindref="compound">Simulation</ref> class manages the overall department store simulation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class orchestrates the simulation process, including event handling, warehouse management, product operations, and reporting. </para>
+    </detaileddescription>
+    <location file="src/Simulation/Simulation.h" line="28" column="1" bodyfile="src/Simulation/Simulation.h" bodystart="29" bodyend="83"/>
+    <listofallmembers>
+      <member refid="class_simulation_1aa0e23779d0aa555ae836a646b8b1d715" prot="public" virt="non-virtual"><scope>Simulation</scope><name>conductCycle</name></member>
+      <member refid="class_simulation_1a47f7acf6a8bd01b4551d67e98b3f71ee" prot="private" virt="non-virtual"><scope>Simulation</scope><name>currentCycle</name></member>
+      <member refid="class_simulation_1a155f9c035e9b4d97412d5a2c17cfd062" prot="private" virt="non-virtual"><scope>Simulation</scope><name>currentTime</name></member>
+      <member refid="class_simulation_1a3f53a42acb878aed67118b0e6790ec80" prot="private" virt="non-virtual"><scope>Simulation</scope><name>events</name></member>
+      <member refid="class_simulation_1ac2a7464b86a88a8ff09766825836590b" prot="public" virt="non-virtual"><scope>Simulation</scope><name>generateReport</name></member>
+      <member refid="class_simulation_1a03b8112bc675326b413cb67664dcd361" prot="public" virt="non-virtual"><scope>Simulation</scope><name>processEvents</name></member>
+      <member refid="class_simulation_1a0caa90613b0a2e52360c7cd6f5530023" prot="public" virt="non-virtual"><scope>Simulation</scope><name>respondToEvent</name></member>
+      <member refid="class_simulation_1ae5c367f87c0b5dc9740bc6d00e44e72c" prot="public" virt="non-virtual"><scope>Simulation</scope><name>run</name></member>
+      <member refid="class_simulation_1a19603193117de9278f69b4e55b65268d" prot="private" virt="non-virtual"><scope>Simulation</scope><name>seed</name></member>
+      <member refid="class_simulation_1a5b224cc5b36bcc8eb29689aff223de41" prot="public" virt="non-virtual"><scope>Simulation</scope><name>Simulation</name></member>
+      <member refid="class_simulation_1a2bea4eff5890af0760699c19d5d6ddc2" prot="private" virt="non-virtual"><scope>Simulation</scope><name>Warehouses</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

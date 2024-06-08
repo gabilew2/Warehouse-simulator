@@ -1,0 +1,42 @@
+\doxysection{Warehouse\+Report\+Test.\+cpp}
+\hypertarget{_warehouse_report_test_8cpp_source}{}\label{_warehouse_report_test_8cpp_source}\index{test/WarehouseReport/WarehouseReportTest.cpp@{test/WarehouseReport/WarehouseReportTest.cpp}}
+\mbox{\hyperlink{_warehouse_report_test_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <gtest/gtest.h>}}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_warehouse_report_8h}{WarehouseReport/WarehouseReport.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <QDateTime>}}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00013}\mbox{\hyperlink{_warehouse_report_test_8cpp_ae9a1d770b7e8098452a6dd98ecebeede}{00013}}\ \mbox{\hyperlink{_warehouse_report_test_8cpp_ae9a1d770b7e8098452a6dd98ecebeede}{TEST}}(WarehouseReportTest,\ itLives)}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00014}00014\ \{}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordtype}{int}\ warehouseId\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{keywordtype}{double}\ capacity\ =\ 1000.0;}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00017}00017\ \ \ \ \ QList<Report::ProductReport>\ productList;}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00018}00018\ \ \ \ \ \textcolor{keywordtype}{double}\ operationalCosts\ =\ 2000.0;}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordtype}{double}\ netProfit\ =\ 5000.0;}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{class_warehouse_report}{WarehouseReport}}\ report(warehouseId,\ capacity,\ productList,\ operationalCosts,\ netProfit);}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00027}\mbox{\hyperlink{_warehouse_report_test_8cpp_ad584aba0a9d9a5df24f198ee9db878d6}{00027}}\ \mbox{\hyperlink{_warehouse_report_test_8cpp_ae9a1d770b7e8098452a6dd98ecebeede}{TEST}}(WarehouseReportTest,\ generateReportShouldReturnCorrectValue)}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00028}00028\ \{}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{int}\ warehouseId\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordtype}{double}\ capacity\ =\ 1000.0;}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00031}00031\ \ \ \ \ QList<Report::ProductReport>\ productList\ =}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Product1"{}},\ 10.0,\ 5\},}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Product2"{}},\ 20.0,\ 3\}}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordtype}{double}\ operationalCosts\ =\ 2000.0;}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{keywordtype}{double}\ netProfit\ =\ 5000.0;}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{class_warehouse_report}{WarehouseReport}}\ report(warehouseId,\ capacity,\ productList,\ operationalCosts,\ netProfit);}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00041}00041\ \ \ \ \ QString\ generatedCSV\ =\ report.\mbox{\hyperlink{class_warehouse_report_a3a4c6655eb2584b3d842d0138b6e6ac9}{generateReport}}();}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00043}00043\ \ \ \ \ QString\ expectedCSVStart\ =\ QString(\textcolor{stringliteral}{"{}Warehouse\ ID,Capacity\(\backslash\)n\%1,\%2\(\backslash\)nProduct\ Name,Price,Quantity\(\backslash\)n"{}}).arg(warehouseId).arg(capacity);}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00044}00044\ \ \ \ \ ASSERT\_TRUE(generatedCSV.startsWith(expectedCSVStart));}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{_warehouse_report_test_8cpp_source_l00046}00046\ }
+
+\end{DoxyCode}

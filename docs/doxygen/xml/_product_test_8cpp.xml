@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_product_test_8cpp" kind="file" language="C++">
+    <compoundname>ProductTest.cpp</compoundname>
+    <includes local="no">gtest/gtest.h</includes>
+    <includes refid="_product_8h" local="yes">Product/Product.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>Product/Product.h</label>
+        <link refid="_product_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>test/Product/ProductTest.cpp</label>
+        <link refid="_product_test_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QString</label>
+      </node>
+      <node id="2">
+        <label>gtest/gtest.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(ProductTest, itLives)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>ProductTest</type>
+        </param>
+        <param>
+          <type>itLives</type>
+        </param>
+        <briefdescription>
+<para>Test to ensure that a <ref refid="class_product" kindref="compound">Product</ref> object can be instantiated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Product/ProductTest.cpp" line="12" column="1" bodyfile="test/Product/ProductTest.cpp" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="_product_test_8cpp_1aca16e75bd00c6aafd757aa5b97016c43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(ProductTest, getNameShouldReturnName)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>ProductTest</type>
+        </param>
+        <param>
+          <type>getNameShouldReturnName</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that getName() returns the correct product name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Product/ProductTest.cpp" line="20" column="1" bodyfile="test/Product/ProductTest.cpp" bodystart="20" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="_product_test_8cpp_1a8cafa4a7e2e42d2eb7ba0ff05a752f52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(ProductTest, getQuantityShouldReturnInt)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>ProductTest</type>
+        </param>
+        <param>
+          <type>getQuantityShouldReturnInt</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that getQuantity() returns the correct quantity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Product/ProductTest.cpp" line="29" column="1" bodyfile="test/Product/ProductTest.cpp" bodystart="29" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="_product_test_8cpp_1a24680dae582076e6fdd3675174974907" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(ProductTest, getPriceShouldReturnDouble)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>ProductTest</type>
+        </param>
+        <param>
+          <type>getPriceShouldReturnDouble</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that getPrice() returns the correct price. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Product/ProductTest.cpp" line="38" column="1" bodyfile="test/Product/ProductTest.cpp" bodystart="38" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="_product_test_8cpp_1a1df645a6d4641e8a0cbcdda4cd2baed9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(ProductTest, sellShouldReturnSuccess)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>ProductTest</type>
+        </param>
+        <param>
+          <type>sellShouldReturnSuccess</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that sell() returns SUCCESS when selling a valid quantity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Product/ProductTest.cpp" line="47" column="1" bodyfile="test/Product/ProductTest.cpp" bodystart="47" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="_product_test_8cpp_1ab4b33d0aab882649445fb76b4bf4772a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(ProductTest, sellShouldReturnError)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>ProductTest</type>
+        </param>
+        <param>
+          <type>sellShouldReturnError</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that sell() returns ERROR when selling an invalid quantity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Product/ProductTest.cpp" line="60" column="1" bodyfile="test/Product/ProductTest.cpp" bodystart="60" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="_product_test_8cpp_1a2001a6aad064ce90391d9c7b2ba77668" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(ProductTest, updatePriceShouldReturnSuccess)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>ProductTest</type>
+        </param>
+        <param>
+          <type>updatePriceShouldReturnSuccess</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that updatePrice() returns SUCCESS when given a valid price. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Product/ProductTest.cpp" line="73" column="1" bodyfile="test/Product/ProductTest.cpp" bodystart="73" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="_product_test_8cpp_1a66031b79869771178cd4282de57fa478" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(ProductTest, updatePriceShouldReturnError)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>ProductTest</type>
+        </param>
+        <param>
+          <type>updatePriceShouldReturnError</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that updatePrice() returns ERROR when given an invalid price. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Product/ProductTest.cpp" line="86" column="1" bodyfile="test/Product/ProductTest.cpp" bodystart="86" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="_product_test_8cpp_1a441a4e44dc64a2bd8e0a5b73ff93ec92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(ProductTest, changeQuantityShouldReturnSuccess)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>ProductTest</type>
+        </param>
+        <param>
+          <type>changeQuantityShouldReturnSuccess</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that changeQuantity() returns SUCCESS when given a valid quantity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Product/ProductTest.cpp" line="99" column="1" bodyfile="test/Product/ProductTest.cpp" bodystart="99" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="_product_test_8cpp_1aabd1480a5a311bb22ca89b02ac99f222" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(ProductTest, changeQuantityShouldReturnError)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>ProductTest</type>
+        </param>
+        <param>
+          <type>changeQuantityShouldReturnError</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that changeQuantity() returns ERROR when given an invalid quantity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Product/ProductTest.cpp" line="110" column="1" bodyfile="test/Product/ProductTest.cpp" bodystart="110" bodyend="116"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Source file of tests for the <ref refid="class_product" kindref="compound">Product</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gtest/gtest.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_product_8h" kindref="compound">Product/Product.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="_product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341" refkind="member"><highlight class="normal"><ref refid="_product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341" kindref="member">TEST</ref>(ProductTest,<sp/>itLives)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_product" kindref="compound">Product</ref>(0,<sp/>QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>1.00,<sp/>1);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="_product_test_8cpp_1aca16e75bd00c6aafd757aa5b97016c43" refkind="member"><highlight class="normal"><ref refid="_product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341" kindref="member">TEST</ref>(ProductTest,<sp/>getNameShouldReturnName)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_product" kindref="compound">Product</ref><sp/>product<sp/>=<sp/><ref refid="class_product" kindref="compound">Product</ref>(0,<sp/>QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>1.00,<sp/>1);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1a4e07082760c0834ccc8cd44e44a6aae6" kindref="member">getName</ref>(),QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="_product_test_8cpp_1a8cafa4a7e2e42d2eb7ba0ff05a752f52" refkind="member"><highlight class="normal"><ref refid="_product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341" kindref="member">TEST</ref>(ProductTest,<sp/>getQuantityShouldReturnInt)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_product" kindref="compound">Product</ref><sp/>product<sp/>=<sp/><ref refid="class_product" kindref="compound">Product</ref>(0,<sp/>QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>1.00,<sp/>1);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1a6a449b90b669aa4380d229b44eca686f" kindref="member">getQuantity</ref>(),1);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="_product_test_8cpp_1a24680dae582076e6fdd3675174974907" refkind="member"><highlight class="normal"><ref refid="_product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341" kindref="member">TEST</ref>(ProductTest,<sp/>getPriceShouldReturnDouble)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_product" kindref="compound">Product</ref><sp/>product<sp/>=<sp/><ref refid="class_product" kindref="compound">Product</ref>(0,<sp/>QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>1.00,<sp/>1);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1a3be25f647260d61df6063ef706261c7f" kindref="member">getPrice</ref>(),1.00);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="_product_test_8cpp_1a1df645a6d4641e8a0cbcdda4cd2baed9" refkind="member"><highlight class="normal"><ref refid="_product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341" kindref="member">TEST</ref>(ProductTest,<sp/>sellShouldReturnSuccess)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_product" kindref="compound">Product</ref><sp/>product<sp/>=<sp/><ref refid="class_product" kindref="compound">Product</ref>(0,<sp/>QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>1.00,<sp/>1);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_product" kindref="compound">Product</ref><sp/>product2<sp/>=<sp/><ref refid="class_product" kindref="compound">Product</ref>(1,<sp/>QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Ipsum<sp/>Lorem&quot;</highlight><highlight class="normal">),<sp/>23.99,<sp/>56);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1ac914a618c6cedf1500f22a4e33ed4e83" kindref="member">sell</ref>(1),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product2.<ref refid="class_product_1ac914a618c6cedf1500f22a4e33ed4e83" kindref="member">sell</ref>(1),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product2.<ref refid="class_product_1ac914a618c6cedf1500f22a4e33ed4e83" kindref="member">sell</ref>(53),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product2.<ref refid="class_product_1ac914a618c6cedf1500f22a4e33ed4e83" kindref="member">sell</ref>(2),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="_product_test_8cpp_1ab4b33d0aab882649445fb76b4bf4772a" refkind="member"><highlight class="normal"><ref refid="_product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341" kindref="member">TEST</ref>(ProductTest,<sp/>sellShouldReturnError)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_product" kindref="compound">Product</ref><sp/>product<sp/>=<sp/><ref refid="class_product" kindref="compound">Product</ref>(0,<sp/>QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>1.00,<sp/>0);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_product" kindref="compound">Product</ref><sp/>product2<sp/>=<sp/><ref refid="class_product" kindref="compound">Product</ref>(1,<sp/>QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Ipsum<sp/>Lorem&quot;</highlight><highlight class="normal">),<sp/>23.99,<sp/>1);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1ac914a618c6cedf1500f22a4e33ed4e83" kindref="member">sell</ref>(1),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1ac914a618c6cedf1500f22a4e33ed4e83" kindref="member">sell</ref>(-1),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product2.<ref refid="class_product_1ac914a618c6cedf1500f22a4e33ed4e83" kindref="member">sell</ref>(2),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product2.<ref refid="class_product_1ac914a618c6cedf1500f22a4e33ed4e83" kindref="member">sell</ref>(-1),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="_product_test_8cpp_1a2001a6aad064ce90391d9c7b2ba77668" refkind="member"><highlight class="normal"><ref refid="_product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341" kindref="member">TEST</ref>(ProductTest,<sp/>updatePriceShouldReturnSuccess)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_product" kindref="compound">Product</ref><sp/>product<sp/>=<sp/><ref refid="class_product" kindref="compound">Product</ref>(0,<sp/>QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>1.00,<sp/>0);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1af264aa2bae1159846e658148d44a621d" kindref="member">updatePrice</ref>(1.00),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1af264aa2bae1159846e658148d44a621d" kindref="member">updatePrice</ref>(59.99),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1af264aa2bae1159846e658148d44a621d" kindref="member">updatePrice</ref>(545454),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1af264aa2bae1159846e658148d44a621d" kindref="member">updatePrice</ref>(1),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1af264aa2bae1159846e658148d44a621d" kindref="member">updatePrice</ref>(0.01),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="_product_test_8cpp_1a66031b79869771178cd4282de57fa478" refkind="member"><highlight class="normal"><ref refid="_product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341" kindref="member">TEST</ref>(ProductTest,<sp/>updatePriceShouldReturnError)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_product" kindref="compound">Product</ref><sp/>product<sp/>=<sp/><ref refid="class_product" kindref="compound">Product</ref>(0,<sp/>QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>1.00,<sp/>0);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1af264aa2bae1159846e658148d44a621d" kindref="member">updatePrice</ref>(-1.00),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1af264aa2bae1159846e658148d44a621d" kindref="member">updatePrice</ref>(-59.99),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1af264aa2bae1159846e658148d44a621d" kindref="member">updatePrice</ref>(-545454),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1af264aa2bae1159846e658148d44a621d" kindref="member">updatePrice</ref>(-1),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1af264aa2bae1159846e658148d44a621d" kindref="member">updatePrice</ref>(-0.01),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="_product_test_8cpp_1a441a4e44dc64a2bd8e0a5b73ff93ec92" refkind="member"><highlight class="normal"><ref refid="_product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341" kindref="member">TEST</ref>(ProductTest,<sp/>changeQuantityShouldReturnSuccess)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_product" kindref="compound">Product</ref><sp/>product<sp/>=<sp/><ref refid="class_product" kindref="compound">Product</ref>(0,<sp/>QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>1.00,<sp/>3);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1a351a61b8013eaca0afb924887ac1495c" kindref="member">changeQuantity</ref>(1),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1a351a61b8013eaca0afb924887ac1495c" kindref="member">changeQuantity</ref>(59),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1a351a61b8013eaca0afb924887ac1495c" kindref="member">changeQuantity</ref>(545454),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="_product_test_8cpp_1aabd1480a5a311bb22ca89b02ac99f222" refkind="member"><highlight class="normal"><ref refid="_product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341" kindref="member">TEST</ref>(ProductTest,<sp/>changeQuantityShouldReturnError)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_product" kindref="compound">Product</ref><sp/>product<sp/>=<sp/><ref refid="class_product" kindref="compound">Product</ref>(0,<sp/>QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>1.00,<sp/>3);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1a351a61b8013eaca0afb924887ac1495c" kindref="member">changeQuantity</ref>(-1),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1a351a61b8013eaca0afb924887ac1495c" kindref="member">changeQuantity</ref>(-59),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(product.<ref refid="class_product_1a351a61b8013eaca0afb924887ac1495c" kindref="member">changeQuantity</ref>(-545454),<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="test/Product/ProductTest.cpp"/>
+  </compounddef>
+</doxygen>

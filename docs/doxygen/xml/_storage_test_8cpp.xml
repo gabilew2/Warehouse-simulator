@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_storage_test_8cpp" kind="file" language="C++">
+    <compoundname>StorageTest.cpp</compoundname>
+    <includes local="no">gtest/gtest.h</includes>
+    <includes refid="_storage_8h" local="yes">Storage/Storage.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>Storage/Storage.h</label>
+        <link refid="_storage_8h"/>
+      </node>
+      <node id="1">
+        <label>test/Storage/StorageTest.cpp</label>
+        <link refid="_storage_test_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gtest/gtest.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_storage_test_8cpp_1a1b22fe9aeb085abcac57c377738e5875" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(StorageTest, itLives)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>StorageTest</type>
+        </param>
+        <param>
+          <type>itLives</type>
+        </param>
+        <briefdescription>
+<para>Test to ensure that a <ref refid="class_storage" kindref="compound">Storage</ref> object can be instantiated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Storage/StorageTest.cpp" line="12" column="1" bodyfile="test/Storage/StorageTest.cpp" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="_storage_test_8cpp_1ade26c6ad971a84351528a16738b056a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(StorageTest, checkCapacityShouldReturnEmpty)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>StorageTest</type>
+        </param>
+        <param>
+          <type>checkCapacityShouldReturnEmpty</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that a new <ref refid="class_storage" kindref="compound">Storage</ref> is EMPTY when initialized with zero capacity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Storage/StorageTest.cpp" line="20" column="1" bodyfile="test/Storage/StorageTest.cpp" bodystart="20" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="_storage_test_8cpp_1aad456949101b5328e0beaa3b0d59be77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(StorageTest, checkCapacityShouldReturnAvailable)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>StorageTest</type>
+        </param>
+        <param>
+          <type>checkCapacityShouldReturnAvailable</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that <ref refid="class_storage" kindref="compound">Storage</ref> is AVAILABLE when initialized with capacity less than total capacity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Storage/StorageTest.cpp" line="29" column="1" bodyfile="test/Storage/StorageTest.cpp" bodystart="29" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="_storage_test_8cpp_1a24b788d1e57b102603f7d66a66e5a8b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(StorageTest, checkCapacityShouldReturnFully)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>StorageTest</type>
+        </param>
+        <param>
+          <type>checkCapacityShouldReturnFully</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that <ref refid="class_storage" kindref="compound">Storage</ref> is FULLY when initialized with capacity equal to or greater than total capacity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Storage/StorageTest.cpp" line="38" column="1" bodyfile="test/Storage/StorageTest.cpp" bodystart="38" bodyend="45"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Source file of tests for the <ref refid="class_storage" kindref="compound">Storage</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gtest/gtest.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_storage_8h" kindref="compound">Storage/Storage.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="_storage_test_8cpp_1a1b22fe9aeb085abcac57c377738e5875" refkind="member"><highlight class="normal"><ref refid="_storage_test_8cpp_1a1b22fe9aeb085abcac57c377738e5875" kindref="member">TEST</ref>(StorageTest,<sp/>itLives)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_storage" kindref="compound">Storage</ref>(0);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="_storage_test_8cpp_1ade26c6ad971a84351528a16738b056a6" refkind="member"><highlight class="normal"><ref refid="_storage_test_8cpp_1a1b22fe9aeb085abcac57c377738e5875" kindref="member">TEST</ref>(StorageTest,<sp/>checkCapacityShouldReturnEmpty)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_storage" kindref="compound">Storage</ref><sp/>storage(0);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(storage.<ref refid="class_storage_1a21a267ec9e43c6147c56e56a347d5784" kindref="member">checkCapacity</ref>(100),<sp/><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa2f0d18fc0d0fa4a6cd92dc328501874d" kindref="member">EMPTY</ref>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="_storage_test_8cpp_1aad456949101b5328e0beaa3b0d59be77" refkind="member"><highlight class="normal"><ref refid="_storage_test_8cpp_1a1b22fe9aeb085abcac57c377738e5875" kindref="member">TEST</ref>(StorageTest,<sp/>checkCapacityShouldReturnAvailable)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_storage" kindref="compound">Storage</ref><sp/>storage(10);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(storage.<ref refid="class_storage_1a21a267ec9e43c6147c56e56a347d5784" kindref="member">checkCapacity</ref>(100),<sp/><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa1e229ccb8b53a57de4ebb11c2d15272e" kindref="member">AVAILABLE</ref>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="_storage_test_8cpp_1a24b788d1e57b102603f7d66a66e5a8b4" refkind="member"><highlight class="normal"><ref refid="_storage_test_8cpp_1a1b22fe9aeb085abcac57c377738e5875" kindref="member">TEST</ref>(StorageTest,<sp/>checkCapacityShouldReturnFully)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_storage" kindref="compound">Storage</ref><sp/>storage(100);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(storage.<ref refid="class_storage_1a21a267ec9e43c6147c56e56a347d5784" kindref="member">checkCapacity</ref>(100),<sp/><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa8fd6994b2300416d1ad947a50d833850" kindref="member">FULLY</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_storage" kindref="compound">Storage</ref><sp/>storage2(150);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(storage2.<ref refid="class_storage_1a21a267ec9e43c6147c56e56a347d5784" kindref="member">checkCapacity</ref>(100),<sp/><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa8fd6994b2300416d1ad947a50d833850" kindref="member">FULLY</ref>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="test/Storage/StorageTest.cpp"/>
+  </compounddef>
+</doxygen>

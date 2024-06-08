@@ -1,0 +1,145 @@
+\doxysection{Simulation Class Reference}
+\hypertarget{class_simulation}{}\label{class_simulation}\index{Simulation@{Simulation}}
+
+
+The \doxylink{class_simulation}{Simulation} class manages the overall department store simulation.  
+
+
+
+
+{\ttfamily \#include $<$Simulation.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_simulation_a5b224cc5b36bcc8eb29689aff223de41}{Simulation}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_simulation}{Simulation} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} \mbox{\hyperlink{class_simulation_aa0e23779d0aa555ae836a646b8b1d715}{conduct\+Cycle}} ()
+\begin{DoxyCompactList}\small\item\em Conducts a simulation cycle, processing events for the current cycle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} \mbox{\hyperlink{class_simulation_a0caa90613b0a2e52360c7cd6f5530023}{respond\+To\+Event}} (\mbox{\hyperlink{class_event}{Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Responds to a specific event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simulation_ae5c367f87c0b5dc9740bc6d00e44e72c}{run}} ()
+\begin{DoxyCompactList}\small\item\em Initiates the simulation by running the main loop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simulation_a03b8112bc675326b413cb67664dcd361}{process\+Events}} ()
+\begin{DoxyCompactList}\small\item\em Processes all scheduled events. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_simulation_ac2a7464b86a88a8ff09766825836590b}{generate\+Report}} ()
+\begin{DoxyCompactList}\small\item\em Generates a report summarizing simulation results. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_simulation}{Simulation} class manages the overall department store simulation. 
+
+This class orchestrates the simulation process, including event handling, warehouse management, product operations, and reporting. 
+
+Definition at line \mbox{\hyperlink{_simulation_8h_source_l00028}{28}} of file \mbox{\hyperlink{_simulation_8h_source}{Simulation.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_simulation_a5b224cc5b36bcc8eb29689aff223de41}\label{class_simulation_a5b224cc5b36bcc8eb29689aff223de41} 
+\index{Simulation@{Simulation}!Simulation@{Simulation}}
+\index{Simulation@{Simulation}!Simulation@{Simulation}}
+\doxysubsubsection{\texorpdfstring{Simulation()}{Simulation()}}
+{\footnotesize\ttfamily Simulation\+::\+Simulation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_simulation}{Simulation} object. 
+
+Sets up the initial state of the simulation, including loading settings and preparing the environment. 
+
+Definition at line \mbox{\hyperlink{_simulation_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{_simulation_8cpp_source}{Simulation.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_simulation_aa0e23779d0aa555ae836a646b8b1d715}\label{class_simulation_aa0e23779d0aa555ae836a646b8b1d715} 
+\index{Simulation@{Simulation}!conductCycle@{conductCycle}}
+\index{conductCycle@{conductCycle}!Simulation@{Simulation}}
+\doxysubsubsection{\texorpdfstring{conductCycle()}{conductCycle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} Simulation\+::conduct\+Cycle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Conducts a simulation cycle, processing events for the current cycle. 
+
+Processes events and updates the simulation state for each cycle. \begin{DoxyReturn}{Returns}
+Status of the cycle (success or failure). 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_simulation_8cpp_source_l00170}{170}} of file \mbox{\hyperlink{_simulation_8cpp_source}{Simulation.\+cpp}}.
+
+\Hypertarget{class_simulation_ac2a7464b86a88a8ff09766825836590b}\label{class_simulation_ac2a7464b86a88a8ff09766825836590b} 
+\index{Simulation@{Simulation}!generateReport@{generateReport}}
+\index{generateReport@{generateReport}!Simulation@{Simulation}}
+\doxysubsubsection{\texorpdfstring{generateReport()}{generateReport()}}
+{\footnotesize\ttfamily QString Simulation\+::generate\+Report (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates a report summarizing simulation results. 
+
+Compiles data from the simulation into a formatted report string. \begin{DoxyReturn}{Returns}
+QString A summary report of the simulation results. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_simulation_8cpp_source_l00298}{298}} of file \mbox{\hyperlink{_simulation_8cpp_source}{Simulation.\+cpp}}.
+
+\Hypertarget{class_simulation_a03b8112bc675326b413cb67664dcd361}\label{class_simulation_a03b8112bc675326b413cb67664dcd361} 
+\index{Simulation@{Simulation}!processEvents@{processEvents}}
+\index{processEvents@{processEvents}!Simulation@{Simulation}}
+\doxysubsubsection{\texorpdfstring{processEvents()}{processEvents()}}
+{\footnotesize\ttfamily void Simulation\+::process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Processes all scheduled events. 
+
+Invokes conduct\+Cycle to process events for the current cycle. 
+
+Definition at line \mbox{\hyperlink{_simulation_8cpp_source_l00159}{159}} of file \mbox{\hyperlink{_simulation_8cpp_source}{Simulation.\+cpp}}.
+
+\Hypertarget{class_simulation_a0caa90613b0a2e52360c7cd6f5530023}\label{class_simulation_a0caa90613b0a2e52360c7cd6f5530023} 
+\index{Simulation@{Simulation}!respondToEvent@{respondToEvent}}
+\index{respondToEvent@{respondToEvent}!Simulation@{Simulation}}
+\doxysubsubsection{\texorpdfstring{respondToEvent()}{respondToEvent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} Simulation\+::respond\+To\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event}{Event}} \&}]{event }\end{DoxyParamCaption})}
+
+
+
+Responds to a specific event. 
+
+Handles the given event based on its type and updates the simulation state accordingly. 
+\begin{DoxyParams}{Parameters}
+{\em event} & The event to handle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status of event handling (success or failure). 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_simulation_8cpp_source_l00198}{198}} of file \mbox{\hyperlink{_simulation_8cpp_source}{Simulation.\+cpp}}.
+
+\Hypertarget{class_simulation_ae5c367f87c0b5dc9740bc6d00e44e72c}\label{class_simulation_ae5c367f87c0b5dc9740bc6d00e44e72c} 
+\index{Simulation@{Simulation}!run@{run}}
+\index{run@{run}!Simulation@{Simulation}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Simulation\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initiates the simulation by running the main loop. 
+
+Starts the simulation loop, generating cycles, processing events, and generating reports. 
+
+Definition at line \mbox{\hyperlink{_simulation_8cpp_source_l00105}{105}} of file \mbox{\hyperlink{_simulation_8cpp_source}{Simulation.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Simulation/\mbox{\hyperlink{_simulation_8h}{Simulation.\+h}}\item 
+src/\+Simulation/\mbox{\hyperlink{_simulation_8cpp}{Simulation.\+cpp}}\end{DoxyCompactItemize}

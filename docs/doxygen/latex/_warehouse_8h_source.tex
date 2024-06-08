@@ -1,0 +1,54 @@
+\doxysection{Warehouse.\+h}
+\hypertarget{_warehouse_8h_source}{}\label{_warehouse_8h_source}\index{src/Warehouse/Warehouse.h@{src/Warehouse/Warehouse.h}}
+\mbox{\hyperlink{_warehouse_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ WAREHOUSE\_H}}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00007}00007\ \textcolor{preprocessor}{\#define\ WAREHOUSE\_H}}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_storage_8h}{Storage/Storage.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_product_8h}{Product/Product.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <QList>}}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00020}\mbox{\hyperlink{class_warehouse}{00020}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_warehouse}{Warehouse}}\ :\ \mbox{\hyperlink{class_storage}{Storage}}}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00022}00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00023}00023\ \ \ \ \ QString\ location;\ \ \ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00024}00024\ \ \ \ \ QList<Product>\ productList;\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{double}\ warehouseCapacity;\ \ \ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00026}00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{class_warehouse_a436ed7c9254c6eca35764f8ec7b32192}{Warehouse}}(QString\ location,\ \textcolor{keywordtype}{double}\ warehouseCapacity);}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00035}\mbox{\hyperlink{class_warehouse_a2f0e291212ae6770fe0c0494029a0d07}{00035}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_warehouse_a2f0e291212ae6770fe0c0494029a0d07}{warehouseId}};\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{_storage_8h_aa3ad3663894c15a6c47a41a02d64e86f}{storageStatus}}\ \mbox{\hyperlink{class_warehouse_ab5e7fee30cc7b17f6ed600c7e01f0887}{checkStatus}}();}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00051}00051\ \ \ \ \ \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}}\ \mbox{\hyperlink{class_warehouse_a5b272ddafc481192f471de223c91f4eb}{updateStatus}}(\textcolor{keywordtype}{int}\ newCapacity);}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00053}00053\ \ \ \ \ \textcolor{comment}{//\ Product\ operations}}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00064}00064\ \ \ \ \ \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}}\ \mbox{\hyperlink{class_warehouse_adcc66b057690967cc902d3e999db8af9}{addProduct}}(QString\ name,\ \textcolor{keywordtype}{double}\ price,\ \textcolor{keywordtype}{int}\ quantity,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_warehouse_test_8cpp_a9512f29d22751266efd5957638b64923}{productId}});}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00073}00073\ \ \ \ \ \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}}\ \mbox{\hyperlink{class_warehouse_af13dfa8e7d40770b45d28a7f19b6ea87}{updatePrice}}(\textcolor{keywordtype}{double}\ newPrice,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_warehouse_test_8cpp_a9512f29d22751266efd5957638b64923}{productId}});}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00082}00082\ \ \ \ \ \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}}\ \mbox{\hyperlink{class_warehouse_a12c143bfa6b7443be317cc66897491e9}{changeQuantity}}(\textcolor{keywordtype}{int}\ quantity,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_warehouse_test_8cpp_a9512f29d22751266efd5957638b64923}{productId}});}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00091}00091\ \ \ \ \ \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}}\ \mbox{\hyperlink{class_warehouse_a7ef00deb93a210331370beea2990c237}{sell}}(\textcolor{keywordtype}{int}\ quantityToSell,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_warehouse_test_8cpp_a9512f29d22751266efd5957638b64923}{productId}});}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00099}00099\ \ \ \ \ QString\ \mbox{\hyperlink{class_warehouse_a52374d2018f3744d545803b9805bfa7e}{getName}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{_warehouse_test_8cpp_a9512f29d22751266efd5957638b64923}{productId}});}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00107}00107\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_warehouse_aad96200e251b9e55dc51d6fd3dff9d56}{getPrice}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{_warehouse_test_8cpp_a9512f29d22751266efd5957638b64923}{productId}});}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00115}00115\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_warehouse_a08808180a2c1f6db033a3ecc94b3c205}{getQuantity}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{_warehouse_test_8cpp_a9512f29d22751266efd5957638b64923}{productId}});}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00119}00119\ \ \ \ \ \textcolor{comment}{//Getters}}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00120}00120\ \ \ \ \ QString\ \mbox{\hyperlink{class_warehouse_a3f817148fcf0caf2ba0b6be2dd27809d}{getLocation}}()\ \textcolor{keyword}{const};\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00121}00121\ \ \ \ \ QList<Product>\ \mbox{\hyperlink{class_warehouse_a4efdab42f0c8288c2a1654d86a67313e}{getProductList}}()\ \textcolor{keyword}{const};\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00122}00122\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_warehouse_ad5eb7e2175f702204e9e628c6658f777}{getCurrentCapacity}}()\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00123}00123\ \};}
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{_warehouse_8h_source_l00125}00125\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
