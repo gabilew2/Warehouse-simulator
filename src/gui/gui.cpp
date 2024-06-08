@@ -501,6 +501,7 @@ void GUI::updateTablesFromCSV()
 void GUI::onSimulationFinished()
 {
     timer -> stop();
+    updateTablesFromCSV();
 
     QMessageBox::StandardButton reply;
     reply = QMessageBox::question(this, "Save Report", "Do you want to save the report in a location other than the default one?", QMessageBox::Yes|QMessageBox::No);

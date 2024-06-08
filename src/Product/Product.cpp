@@ -1,14 +1,11 @@
 #include "Product.h"
 
-/** Static variable initialization. */
-int Product::productId = 0;
-
 /**
  * @brief Construct a new Product object.
  */
-Product::Product(QString name, double price, int quantity)
+Product::Product(int productId, QString name, double price, int quantity)
 {
-    ++productId;
+    this -> productId = productId;
 
     this -> name = name;
 
@@ -36,7 +33,12 @@ Product::Product(QString name, double price, int quantity)
  */
 status Product::sell(int quantityToSell)
 {
-    if(quantityToSell <= quantity && quantityToSell >= 0)
+    if(quantityToSell <= 0)
+    {
+        return ERROR; // Ensure quantityToSell is positive
+    }
+
+    if(quantityToSell <= quantity)
     {
         quantity -= quantityToSell;
         return SUCCESS;
@@ -79,11 +81,6 @@ status Product::changeQuantity(int quantity)
     }
 }
 
-void Product::resetProductId()
-{
-    productId = 0;
-}
-
 // Getters implementation
 
 QString Product::getName()
@@ -100,3 +97,4 @@ int Product::getQuantity()
 {
     return quantity;
 }
+

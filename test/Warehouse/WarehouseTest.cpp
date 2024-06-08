@@ -15,12 +15,11 @@ TEST(WarehouseTest, itLives)
  */
 TEST(WarehouseTest, checkStatusShouldReturnEmpty)
 {
-    Product::resetProductId();
     Warehouse warehouse = Warehouse(QString::fromStdString("Lorem Ipsum"), 0);
     EXPECT_EQ(warehouse.checkStatus(), EMPTY);
 
     warehouse.updateStatus(10);
-    warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 99.99, 10);
+    warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 99.99, 10, 1);
     warehouse.changeQuantity(0, 1);
     EXPECT_EQ(warehouse.checkStatus(), EMPTY);
 }
@@ -30,13 +29,12 @@ TEST(WarehouseTest, checkStatusShouldReturnEmpty)
  */
 TEST(WarehouseTest, checkStatusShouldReturnFully)
 {
-    Product::resetProductId();
     Warehouse warehouse = Warehouse(QString::fromStdString("Lorem Ipsum"), 1);
-    warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 100, 1);
+    warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 100, 1, 1);
     EXPECT_EQ(warehouse.checkStatus(), FULLY);
 
     warehouse.updateStatus(10);
-    warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 100, 9);
+    warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 100, 9, 2);
     warehouse.changeQuantity(2, 1);
     EXPECT_EQ(warehouse.checkStatus(), FULLY);
 }
@@ -46,13 +44,12 @@ TEST(WarehouseTest, checkStatusShouldReturnFully)
  */
 TEST(WarehouseTest, checkStatusShouldReturnAvailable)
 {
-    Product::resetProductId();
     Warehouse warehouse = Warehouse(QString::fromStdString("Lorem Ipsum"), 2);
-    warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 99.99, 1);
+    warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 99.99, 1, 0);
     EXPECT_EQ(warehouse.checkStatus(), AVAILABLE);
 
     warehouse.updateStatus(10);
-    warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 99.99, 8);
+    warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 99.99, 8, 1);
     warehouse.changeQuantity(2, 1);
     EXPECT_EQ(warehouse.checkStatus(), AVAILABLE);
 }
@@ -62,13 +59,12 @@ TEST(WarehouseTest, checkStatusShouldReturnAvailable)
  */
 TEST(WarehouseTest, updateStatusShouldReturnSuccess)
 {
-    Product::resetProductId();
     Warehouse warehouse = Warehouse(QString::fromStdString("Lorem Ipsum"), 0);
     EXPECT_EQ(warehouse.updateStatus(10), SUCCESS);
     EXPECT_EQ(warehouse.updateStatus(0), SUCCESS);
     EXPECT_EQ(warehouse.updateStatus(567.97), SUCCESS);
 
-    warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 99.99, 5);
+    warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 99.99, 5, 1);
     EXPECT_EQ(warehouse.updateStatus(1), ERROR);
 }
 
@@ -77,11 +73,10 @@ TEST(WarehouseTest, updateStatusShouldReturnSuccess)
  */
 TEST(WarehouseTest, updateStatusShouldReturnError)
 {
-    Product::resetProductId();
     Warehouse warehouse = Warehouse(QString::fromStdString("Lorem Ipsum"), 567);
     EXPECT_EQ(warehouse.updateStatus(-1), ERROR);
 
-    warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 100, 5);
+    warehouse.addProduct(QString::fromStdString("Lorem Ipsum"), 100, 5, 1);
     EXPECT_EQ(warehouse.updateStatus(1), ERROR);
 }
 
@@ -90,17 +85,17 @@ const double initialCapacity = 100.0;
 const QString productName = "Test Product";
 const double productPrice = 10.0;
 const int productQuantity = 20;
+const int productId = 1;
 
 /**
  * @brief Test to verify that changeQuantity successfully changes the quantity of a product.
  */
 TEST(WarehouseTest, changeQuantityShouldReturnSuccess)
 {
-    Product::resetProductId();
     Warehouse warehouse(testLocation, initialCapacity);
-    warehouse.addProduct(productName, productPrice, productQuantity);
-    EXPECT_EQ(warehouse.changeQuantity(30, 1), SUCCESS);
-    EXPECT_EQ(warehouse.getQuantity(1), 30);
+    warehouse.addProduct(productName, productPrice, productQuantity, productId);
+    EXPECT_EQ(warehouse.changeQuantity(30, productId), SUCCESS);
+    EXPECT_EQ(warehouse.getQuantity(productId), 30);
 }
 
 /**
@@ -108,10 +103,9 @@ TEST(WarehouseTest, changeQuantityShouldReturnSuccess)
  */
 TEST(WarehouseTest, changeQuantityShouldReturnError)
 {
-    Product::resetProductId();
     Warehouse warehouse(testLocation, initialCapacity);
-    warehouse.addProduct(productName, productPrice, productQuantity);
-    EXPECT_EQ(warehouse.changeQuantity(-5, 1), ERROR);
+    warehouse.addProduct(productName, productPrice, productQuantity, productId);
+    EXPECT_EQ(warehouse.changeQuantity(-5, productId), ERROR);
 }
 
 /**
@@ -119,11 +113,10 @@ TEST(WarehouseTest, changeQuantityShouldReturnError)
  */
 TEST(WarehouseTest, sellShouldReturnSuccess)
 {
-    Product::resetProductId();
     Warehouse warehouse(testLocation, initialCapacity);
-    warehouse.addProduct(productName, productPrice, productQuantity);
-    EXPECT_EQ(warehouse.sell(5, 1), SUCCESS);
-    EXPECT_EQ(warehouse.getQuantity(1), productQuantity - 5);
+    warehouse.addProduct(productName, productPrice, productQuantity, productId);
+    EXPECT_EQ(warehouse.sell(5, productId), SUCCESS);
+    EXPECT_EQ(warehouse.getQuantity(productId), productQuantity - 5);
 }
 
 /**
@@ -131,10 +124,9 @@ TEST(WarehouseTest, sellShouldReturnSuccess)
  */
 TEST(WarehouseTest, sellShouldReturnError)
 {
-    Product::resetProductId();
     Warehouse warehouse(testLocation, initialCapacity);
-    warehouse.addProduct(productName, productPrice, productQuantity);
-    EXPECT_EQ(warehouse.sell(productQuantity + 1, 1), ERROR);
+    warehouse.addProduct(productName, productPrice, productQuantity, productId);
+    EXPECT_EQ(warehouse.sell(productQuantity + 1, productId), ERROR);
 }
 
 /**
@@ -142,11 +134,10 @@ TEST(WarehouseTest, sellShouldReturnError)
  */
 TEST(WarehouseTest, updatePriceShouldReturnSuccess)
 {
-    Product::resetProductId();
     Warehouse warehouse(testLocation, initialCapacity);
-    warehouse.addProduct(productName, productPrice, productQuantity);
-    EXPECT_EQ(warehouse.updatePrice(15.0, 1), SUCCESS);
-    EXPECT_EQ(warehouse.getPrice(1), 15.0);
+    warehouse.addProduct(productName, productPrice, productQuantity, productId);
+    EXPECT_EQ(warehouse.updatePrice(15.0, productId), SUCCESS);
+    EXPECT_EQ(warehouse.getPrice(productId), 15.0);
 }
 
 /**
@@ -154,10 +145,9 @@ TEST(WarehouseTest, updatePriceShouldReturnSuccess)
  */
 TEST(WarehouseTest, updatePriceShouldReturnError)
 {
-    Product::resetProductId();
     Warehouse warehouse(testLocation, initialCapacity);
-    warehouse.addProduct(productName, productPrice, productQuantity);
-    EXPECT_EQ(warehouse.updatePrice(-1.0, 1), ERROR);
+    warehouse.addProduct(productName, productPrice, productQuantity, productId);
+    EXPECT_EQ(warehouse.updatePrice(-1.0, productId), ERROR);
 }
 
 /**
@@ -165,9 +155,8 @@ TEST(WarehouseTest, updatePriceShouldReturnError)
  */
 TEST(WarehouseTest, addProductShouldReturnSuccess)
 {
-    Product::resetProductId();
     Warehouse warehouse(testLocation, initialCapacity);
-    EXPECT_EQ(warehouse.addProduct(productName, productPrice, productQuantity), SUCCESS);
+    EXPECT_EQ(warehouse.addProduct(productName, productPrice, productQuantity, productId), SUCCESS);
     EXPECT_EQ(warehouse.getProductList().size(), 1);
 }
 
@@ -176,9 +165,8 @@ TEST(WarehouseTest, addProductShouldReturnSuccess)
  */
 TEST(WarehouseTest, addProductShouldReturnError)
 {
-    Product::resetProductId();
     Warehouse warehouse(testLocation, initialCapacity);
-    EXPECT_EQ(warehouse.addProduct(productName, -productPrice, productQuantity), ERROR);
+    EXPECT_EQ(warehouse.addProduct(productName, -productPrice, productQuantity, productId), ERROR);
 }
 
 /**
@@ -195,9 +183,8 @@ TEST(WarehouseTest, getLocationShouldReturnCorrectValue)
  */
 TEST(WarehouseTest, getProductListShouldReturnCorrectValue)
 {
-    Product::resetProductId();
     Warehouse warehouse(testLocation, initialCapacity);
-    warehouse.addProduct(productName, productPrice, productQuantity);
+    warehouse.addProduct(productName, productPrice, productQuantity, productId);
 
     QList<Product> productList = warehouse.getProductList();
 
@@ -221,10 +208,9 @@ TEST(WarehouseTest, getCurrentCapacityShouldReturnCorrectValue)
  */
 TEST(WarehouseTest, getNameShouldReturnCorrectValue)
 {
-    Product::resetProductId();
     Warehouse warehouse(testLocation, initialCapacity);
-    warehouse.addProduct(productName, productPrice, productQuantity);
-    EXPECT_EQ(warehouse.getName(1), productName);
+    warehouse.addProduct(productName, productPrice, productQuantity, productId);
+    EXPECT_EQ(warehouse.getName(productId), productName);
 }
 
 /**
@@ -232,10 +218,9 @@ TEST(WarehouseTest, getNameShouldReturnCorrectValue)
  */
 TEST(WarehouseTest, getPriceShouldReturnCorrectValue)
 {
-    Product::resetProductId();
     Warehouse warehouse(testLocation, initialCapacity);
-    warehouse.addProduct(productName, productPrice, productQuantity);
-    EXPECT_EQ(warehouse.getPrice(1), productPrice);
+    warehouse.addProduct(productName, productPrice, productQuantity, productId);
+    EXPECT_EQ(warehouse.getPrice(productId), productPrice);
 }
 
 /**
@@ -243,8 +228,7 @@ TEST(WarehouseTest, getPriceShouldReturnCorrectValue)
  */
 TEST(WarehouseTest, getQuantityShouldReturnCorrectValue)
 {
-    Product::resetProductId();
     Warehouse warehouse(testLocation, initialCapacity);
-    warehouse.addProduct(productName, productPrice, productQuantity);
-    EXPECT_EQ(warehouse.getQuantity(1), productQuantity);
+    warehouse.addProduct(productName, productPrice, productQuantity, productId);
+    EXPECT_EQ(warehouse.getQuantity(productId), productQuantity);
 }

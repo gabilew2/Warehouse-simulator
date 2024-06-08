@@ -26,6 +26,7 @@ private:
     QList<Event> events; ///< List of scheduled events.
     QDateTime currentTime; ///< Current simulation time.
     QList<Warehouse> Warehouses; ///< List of warehouse objects.
+    QRandomGenerator randomGenerator; ///< Pseudo-random generator for generating random events;
 
 public:
     /**

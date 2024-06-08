@@ -6,7 +6,7 @@
  */
 TEST(ProductTest, itLives)
 {
-    Product(QString::fromStdString("Lorem Ipsum"), 1.00, 1);
+    Product(0, QString::fromStdString("Lorem Ipsum"), 1.00, 1);
 }
 
 /**
@@ -14,7 +14,7 @@ TEST(ProductTest, itLives)
  */
 TEST(ProductTest, getNameShouldReturnName)
 {
-    Product product = Product(QString::fromStdString("Lorem Ipsum"), 1.00, 1);
+    Product product = Product(0, QString::fromStdString("Lorem Ipsum"), 1.00, 1);
     EXPECT_EQ(product.getName(),QString::fromStdString("Lorem Ipsum"));
 }
 
@@ -23,7 +23,7 @@ TEST(ProductTest, getNameShouldReturnName)
  */
 TEST(ProductTest, getQuantityShouldReturnInt)
 {
-    Product product = Product(QString::fromStdString("Lorem Ipsum"), 1.00, 1);
+    Product product = Product(0, QString::fromStdString("Lorem Ipsum"), 1.00, 1);
     EXPECT_EQ(product.getQuantity(),1);
 }
 
@@ -32,7 +32,7 @@ TEST(ProductTest, getQuantityShouldReturnInt)
  */
 TEST(ProductTest, getPriceShouldReturnDouble)
 {
-    Product product = Product(QString::fromStdString("Lorem Ipsum"), 1.00, 1);
+    Product product = Product(0, QString::fromStdString("Lorem Ipsum"), 1.00, 1);
     EXPECT_EQ(product.getPrice(),1.00);
 }
 
@@ -41,8 +41,8 @@ TEST(ProductTest, getPriceShouldReturnDouble)
  */
 TEST(ProductTest, sellShouldReturnSuccess)
 {
-    Product product = Product(QString::fromStdString("Lorem Ipsum"), 1.00, 1);
-    Product product2 = Product(QString::fromStdString("Ipsum Lorem"), 23.99, 56);
+    Product product = Product(0, QString::fromStdString("Lorem Ipsum"), 1.00, 1);
+    Product product2 = Product(1, QString::fromStdString("Ipsum Lorem"), 23.99, 56);
     EXPECT_EQ(product.sell(1),SUCCESS);
     EXPECT_EQ(product2.sell(1),SUCCESS);
     EXPECT_EQ(product2.sell(53),SUCCESS);
@@ -54,8 +54,8 @@ TEST(ProductTest, sellShouldReturnSuccess)
  */
 TEST(ProductTest, sellShouldReturnError)
 {
-    Product product = Product(QString::fromStdString("Lorem Ipsum"), 1.00, 0);
-    Product product2 = Product(QString::fromStdString("Ipsum Lorem"), 23.99, 1);
+    Product product = Product(0, QString::fromStdString("Lorem Ipsum"), 1.00, 0);
+    Product product2 = Product(1, QString::fromStdString("Ipsum Lorem"), 23.99, 1);
     EXPECT_EQ(product.sell(1),ERROR);
     EXPECT_EQ(product.sell(-1),ERROR);
     EXPECT_EQ(product2.sell(2),ERROR);
@@ -67,7 +67,7 @@ TEST(ProductTest, sellShouldReturnError)
  */
 TEST(ProductTest, updatePriceShouldReturnSuccess)
 {
-    Product product = Product(QString::fromStdString("Lorem Ipsum"), 1.00, 0);
+    Product product = Product(0, QString::fromStdString("Lorem Ipsum"), 1.00, 0);
     EXPECT_EQ(product.updatePrice(1.00),SUCCESS);
     EXPECT_EQ(product.updatePrice(59.99),SUCCESS);
     EXPECT_EQ(product.updatePrice(545454),SUCCESS);
@@ -80,7 +80,7 @@ TEST(ProductTest, updatePriceShouldReturnSuccess)
  */
 TEST(ProductTest, updatePriceShouldReturnError)
 {
-    Product product = Product(QString::fromStdString("Lorem Ipsum"), 1.00, 0);
+    Product product = Product(0, QString::fromStdString("Lorem Ipsum"), 1.00, 0);
     EXPECT_EQ(product.updatePrice(-1.00),ERROR);
     EXPECT_EQ(product.updatePrice(-59.99),ERROR);
     EXPECT_EQ(product.updatePrice(-545454),ERROR);
@@ -93,7 +93,7 @@ TEST(ProductTest, updatePriceShouldReturnError)
  */
 TEST(ProductTest, changeQuantityShouldReturnSuccess)
 {
-    Product product = Product(QString::fromStdString("Lorem Ipsum"), 1.00, 3);
+    Product product = Product(0, QString::fromStdString("Lorem Ipsum"), 1.00, 3);
     EXPECT_EQ(product.changeQuantity(1),SUCCESS);
     EXPECT_EQ(product.changeQuantity(59),SUCCESS);
     EXPECT_EQ(product.changeQuantity(545454),SUCCESS);
@@ -104,7 +104,7 @@ TEST(ProductTest, changeQuantityShouldReturnSuccess)
  */
 TEST(ProductTest, changeQuantityShouldReturnError)
 {
-    Product product = Product(QString::fromStdString("Lorem Ipsum"), 1.00, 3);
+    Product product = Product(0, QString::fromStdString("Lorem Ipsum"), 1.00, 3);
     EXPECT_EQ(product.changeQuantity(-1),ERROR);
     EXPECT_EQ(product.changeQuantity(-59),ERROR);
     EXPECT_EQ(product.changeQuantity(-545454),ERROR);

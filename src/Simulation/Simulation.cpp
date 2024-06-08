@@ -22,6 +22,7 @@ Simulation::Simulation()
     QTextStream in(&settings);
 
     seed = 100;
+    int productIdCounter = 1;
 
     while(!in.atEnd())
     {
@@ -35,6 +36,7 @@ Simulation::Simulation()
 
         if(fields[0] == "Warehouse")
         {
+            productIdCounter = 1;
             if(fields.size() < 3)
             {
                 std::cerr << "Error: Incomplete warehouse data." << std::endl;
@@ -57,8 +59,9 @@ Simulation::Simulation()
             QString name = fields[1];
             double price = fields[2].toDouble();
             int quantity = fields[3].toInt();
+            int productId = productIdCounter++;
 
-            if(selectWarehouse.addProduct(name, price, quantity) == SUCCESS)
+            if(selectWarehouse.addProduct(name, price, quantity, productId) == SUCCESS)
             {
                 std::cout << "SUCCESS" << std::endl;
             }
@@ -88,7 +91,8 @@ Simulation::Simulation()
             }
             std::cout << "Setting seed: ";
             int readSeed = fields[5].toInt();
-            this->seed = readSeed;
+            this -> seed = QRandomGenerator::global() -> generate()/readSeed;
+            randomGenerator = QRandomGenerator(seed);
             std::cout << readSeed << std::endl;
         }
     }
@@ -115,12 +119,25 @@ void Simulation::run()
 
     std::cout << "Generating cycles." << std::endl;
 
+    int cycles = currentCycle;
+
     while(currentCycle > 0)
     {
-        int numberOfEvents = QRandomGenerator::global()->bounded(100);
-        for(numberOfEvents; numberOfEvents > 0; --numberOfEvents)
+        int numberOfEvents = randomGenerator.bounded(seed);
+        for(int event = 0; event < numberOfEvents; ++event)
         {
             events.append(Event::generateEvent("Sell product", seed));
+        }
+
+        for(Warehouse& warehouse : Warehouses)
+        {
+            if(warehouse.checkStatus() != FULLY)
+            {
+                events.append(Event::generateEvent("Add Product", seed));
+                events.append(Event::generateEvent("Transfer Product", seed));
+                std::cout << "\033[33mWarning: Warehouse at " << warehouse.getLocation().toStdString()
+                          << " is full. Generated events to add more products or transfer them to another warehouse.\033[0m" << std::endl;
+            }
         }
 
         std::cout << "Processing cycle." << std::endl;
@@ -129,6 +146,7 @@ void Simulation::run()
         QString cycleReport = generateReport();
         report.append(cycleReport);
         std::cout << cycleReport.toStdString() << std::endl;
+        currentCycle--;
     }
 
     std::cout << report.toStdString() << std::endl;
@@ -144,8 +162,6 @@ void Simulation::processEvents()
     {
         std::cout << "Error while processing cycle" << std::endl;
     }
-
-    currentCycle--;
 }
 
 /**
@@ -181,25 +197,97 @@ status Simulation::conductCycle()
  */
 status Simulation::respondToEvent(Event& event)
 {
-    int warehouseId = QRandomGenerator::global()->bounded(Warehouses.size());
-    int productId = QRandomGenerator::global()->bounded((int)Warehouses[warehouseId].getCurrentCapacity());
+    int warehouseId = randomGenerator.bounded(Warehouses.size());
+    Warehouse& warehouse = Warehouses[warehouseId];
 
     if(event.getEventType() == "Sell product")
     {
         try
         {
-            Warehouse& warehouse = Warehouses[warehouseId];
-            status result = warehouse.sell(1,productId);
+            int productId = randomGenerator.bounded(warehouse.getProductList().size()) + 1;
+            status result = warehouse.sell(1, productId);
             if(result == ERROR)
             {
+                std::cerr << "ERROR: Unable to sell product." << std::endl;
                 return ERROR;
             }
         }
         catch (...)
         {
+            std::cerr << "Exception caught: Error while selling product." << std::endl;
             return ERROR;
         }
+    }
+    else if(event.getEventType() == "Add product")
+    {
+        try
+        {
+            int productId = randomGenerator.bounded(warehouse.getProductList().size()) + 1;
+            Product& product = warehouse.getProductList()[productId];
+            int additionalQuantity = 50;
+            status result = warehouse.changeQuantity(product.getQuantity() + additionalQuantity, productId);
+            if(result == ERROR)
+            {
+                std::cerr << "ERROR: Unable to add product quantity." << std::endl;
+                return ERROR;
+            }
+        }
+        catch (...)
+        {
+            std::cerr << "Exception caught: Error while adding product quantity." << std::endl;
+            return ERROR;
+        }
+    }
+    else if(event.getEventType() == "Transfer product")
+    {
+        try
+        {
+            int productId = randomGenerator.bounded(warehouse.getProductList().size()) + 1;
+            Product& productToTransfer = warehouse.getProductList()[productId];
+            QString productName = productToTransfer.getName();
 
+            auto targetWarehouseIt = Warehouses.end();
+            for (auto it = Warehouses.begin(); it != Warehouses.end(); ++it)
+            {
+                Warehouse& w = *it;
+                double usedCapacity = 0;
+                for (Product& p : w.getProductList())
+                {
+                    usedCapacity += p.getQuantity();
+                }
+                for (Product& p : w.getProductList())
+                {
+                    if (p.getName() == productName && w.getCurrentCapacity() > usedCapacity + productToTransfer.getQuantity())
+                    {
+                        targetWarehouseIt = it;
+                        break;
+                    }
+                }
+                if (targetWarehouseIt != Warehouses.end())
+                {
+                    break;
+                }
+            }
+
+            if(targetWarehouseIt != Warehouses.end())
+            {
+                Warehouse& targetWarehouse = *targetWarehouseIt;
+
+                int transferQuantity = productToTransfer.getQuantity();
+                warehouse.changeQuantity(warehouse.getQuantity(productId) - transferQuantity, productId);
+                targetWarehouse.changeQuantity(targetWarehouse.getQuantity(productId) + transferQuantity, productId);
+            }
+            else
+            {
+                std::cerr << "ERROR: No target warehouse found for product transfer." << std::endl;
+                return ERROR;
+            }
+        }
+        catch (...)
+        {
+            std::cerr << "Exception caught: Error while transferring product." << std::endl;
+            return ERROR;
+        }
     }
     return SUCCESS;
 }
@@ -217,6 +305,7 @@ QString Simulation::generateReport()
     for(Warehouse& warehouse : Warehouses)
     {
         QList<Report::ProductReport> productNames;
+        double featureOperationalCosts;
         for(Product& product : warehouse.getProductList())
         {
             Report::ProductReport productReport;
@@ -224,13 +313,17 @@ QString Simulation::generateReport()
             productReport.price = product.getPrice();
             productReport.quantity = product.getQuantity();
 
+            featureOperationalCosts += productReport.price + productReport.quantity;
+
             productNames.append(productReport);
         }
 
         static int salesId = 0;
 
-        WarehouseReport warehouseReport(id++, warehouse.getCurrentCapacity(), productNames, 0, 0);
-        SalesReport salesReport(salesId++, currentTime, productNames, 0, 0);
+        WarehouseReport warehouseReport(id++, warehouse.getCurrentCapacity(), productNames, Report::getOperationalCosts(), Report::getNetProfit());
+        SalesReport salesReport(salesId++, currentTime, productNames, Report::getOperationalCosts(), Report::getNetProfit());
+
+        Report::setOperationalCosts(Report::getOperationalCosts()+featureOperationalCosts);
 
         csvReport.append(warehouseReport.generateReport());
         csvReport.append(salesReport.generateReport());

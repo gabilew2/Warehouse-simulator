@@ -16,8 +16,8 @@ Event::Event(QString eventType, QDateTime time)
 Event Event::generateEvent(QString eventType, int seed)
 {
     QDateTime time = QDateTime::currentDateTime();
-    // FIXME
-    time = time.addMSecs(QRandomGenerator::global()->bounded(seed));
+    QRandomGenerator randomGenerator(seed);
+    time = time.addMSecs(randomGenerator.bounded(seed));
 
     return Event(eventType, time);
 }

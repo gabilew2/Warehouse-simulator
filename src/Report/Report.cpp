@@ -1,5 +1,8 @@
 #include "Report.h"
 
+double Report::operationalCosts = 0;
+double Report::netProfit = 0;
+
 /**
  * @brief Construct a new Report object.
  */
@@ -22,3 +25,24 @@ QString Report::generateReport()
     return report;
 }
 
+// Setters
+void Report::setOperationalCosts(double operationalCost)
+{
+    operationalCosts = operationalCost;
+}
+
+void Report::setNetProfit(double Profit)
+{
+    netProfit = Profit;
+}
+
+// Getters
+double Report::getOperationalCosts()
+{
+    return operationalCosts;
+}
+
+double Report::getNetProfit()
+{
+    return netProfit;
+}

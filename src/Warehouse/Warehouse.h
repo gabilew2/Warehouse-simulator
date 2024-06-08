@@ -53,9 +53,10 @@ public:
      * @param name The name of the product.
      * @param price The price of the product.
      * @param quantity The quantity of the product.
+     * @param productId ID of the product.
      * @return status SUCCESS if the product is added, ERROR otherwise.
      */
-    status addProduct(QString name, double price, int quantity);
+    status addProduct(QString name, double price, int quantity, int productId);
 
     /**
      * @brief Update the price of a product in the warehouse.

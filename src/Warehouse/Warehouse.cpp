@@ -76,13 +76,22 @@ status Warehouse::updateStatus(int newCapacity)
 /**
   * @brief Add a new product to the warehouse.
   */
-status Warehouse::addProduct(QString name, double price, int quantity)
+status Warehouse::addProduct(QString name, double price, int quantity, int productId)
 {
     int sumOfProductInstances = capacity;
 
     if(sumOfProductInstances + quantity <= warehouseCapacity && quantity >= 0 && price >= 0)
     {
-        productList.append(Product(name, price, quantity));
+        for (Product& product : productList)
+        {
+            if (product.productId == productId)
+            {
+                return ERROR;
+            }
+        }
+
+        Product newProduct(productId, name, price, quantity);
+        productList.append(newProduct);
         capacity += quantity;
         return SUCCESS;
     }
@@ -154,8 +163,6 @@ status Warehouse::changeQuantity(int quantity, int productId)
   */
 status Warehouse::sell(int quantityToSell, int productId)
 {
-    bool productFound = false; ///< Contains false if the product was not found in the productList.
-
     for(Product& product : productList)
     {
         if(product.productId == productId)
@@ -163,11 +170,7 @@ status Warehouse::sell(int quantityToSell, int productId)
             return product.sell(quantityToSell);
         }
     }
-
-    if(productFound == false)
-    {
-        return ERROR;
-    }
+    return ERROR;
 }
 
 /**

@@ -22,41 +22,13 @@ QString SalesReport::generateReport()
 
     report += "Product Name,Price,Quantity Sold\n";
 
-    QFile configFile("settings.csv");
-    if(!configFile.open(QIODevice::ReadOnly | QIODevice::Text))
-    {
-        report += "Cannot open config file.\n";
-        return report;
-    }
-
-    QTextStream in(&configFile);
-    QString line;
-    QMap<QString, int> initialQuantities;
-
-    // Read the initial quantities from the CSV file.
-    while(!in.atEnd())
-    {
-        line = in.readLine();
-        QStringList fields = line.split(',');
-
-        if(fields.isEmpty() || fields[0] != "Product")
-        {
-            continue;
-        }
-
-        QString productName = fields[1].trimmed();
-        int quantity = fields[3].toInt();
-        initialQuantities[productName] = quantity;
-    }
-
     for(const ProductReport& product : productList)
     {
-        int initialQuantity = initialQuantities.value(product.name, 0);
-        int soldQuantity = initialQuantity - product.quantity;
+        static int initialQuantity = 0;
+        int soldQuantity = abs(initialQuantity - product.quantity);
+        initialQuantity = soldQuantity;
 
-        operationalCosts += product.price * initialQuantity;
-
-        if(soldQuantity == 0)
+        if(soldQuantity <= 0)
         {
             continue;
         }
@@ -66,13 +38,14 @@ QString SalesReport::generateReport()
                       .arg(product.price)
                       .arg(soldQuantity);
 
-        netProfit += product.price * soldQuantity;
+        setNetProfit(getNetProfit()+product.price * soldQuantity);
     }
 
-    netProfit -= operationalCosts;
+    setNetProfit(getNetProfit()-getOperationalCosts());
 
     report += Report::generateReport();
 
-    configFile.close();
+    setNetProfit(getNetProfit()+getOperationalCosts());
+
     return report;
 }

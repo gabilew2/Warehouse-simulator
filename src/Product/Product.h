@@ -19,17 +19,17 @@ private:
     double price;   ///< Price of the product.
     int quantity;   ///< Quantity of the product in stock.
 public:
+    int productId;  ///< ID of the product.
 
     /**
      * @brief Construct a new Product object.
      *
+     * @param productId ID of the product.
      * @param name Name of the product.
      * @param price Price of the product. If negative, it will be set to 0.
      * @param quantity Quantity of the product. If negative, it will be set to 0.
      */
-    Product(QString name, double price, int quantity);
-
-    static int productId;   ///< Variable to keep track of product ID.
+    Product(int productId, QString name, double price, int quantity);
 
     /**
      * @brief Sell a quantity of the product.
@@ -54,14 +54,6 @@ public:
      * @return status SUCCESS if the operation is successful, ERROR otherwise.
      */
     status changeQuantity(int quantity);
-
-    /**
-     * @brief Reset the product ID.
-     *
-     * This static method resets the static product ID to 0. It is useful for testing purposes
-     * to ensure that each test starts with a clean slate of product IDs.
-     */
-    static void resetProductId();
 
     // Getters
     QString getName();  ///< Get the name of the product.

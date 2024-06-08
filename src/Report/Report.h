@@ -11,9 +11,9 @@
  */
 class Report
 {
-protected:
-    double operationalCosts; ///<   Operational costs of the store.
-    double netProfit;        ///<   Net profit of the store.
+private:
+    static double operationalCosts; ///<   Operational costs of the store.
+    static double netProfit;        ///<   Net profit of the store.
 
 public:
 
@@ -45,6 +45,14 @@ public:
      * @return QString A summary report of the store's financial status.
      */
     QString generateReport();
+
+    // Setters
+    static void setOperationalCosts(double operationalCost); ///< Set value of operationalCosts.
+    static void setNetProfit(double Profit);                 ///< Set value of netProfit.
+
+    //Getters
+    static double getOperationalCosts();          ///< Get value of operationalCosts.
+    static double getNetProfit();                 ///< Get value of netProfit.
 };
 
 #endif // REPORT_H
