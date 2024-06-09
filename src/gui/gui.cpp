@@ -408,7 +408,7 @@ void GUI::setupUpdateTimer()
 void GUI::updateTablesFromCSV()
 {
     ui -> raportList -> setRowCount(0);
-    int cycles = -1;
+    int cycles = 0;
     QFile report("SimulationReport.csv");
 
     if(!report.open(QIODevice::ReadOnly | QIODevice::Text))

@@ -118,7 +118,7 @@ public:
 
     //Getters
     QString getLocation() const;      ///< Get the location of the warehouse.
-    QList<Product> getProductList() const;     ///< Get the list of the products.
+    const QList<Product> getProductList() const;     ///< Get the list of the products.
     double getCurrentCapacity() const;         ///< Get the capacity of the warehouse.
 };
 

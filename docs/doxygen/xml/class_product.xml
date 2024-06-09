@@ -131,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Product/Product.h" line="37" column="5" bodyfile="src/Product/Product.cpp" bodystart="6" bodyend="29"/>
+        <location file="src/Product/Product.h" line="37" column="5" bodyfile="src/Product/Product.cpp" bodystart="11" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="class_product_1ac914a618c6cedf1500f22a4e33ed4e83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></type>
@@ -162,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Product/Product.h" line="45" column="12" bodyfile="src/Product/Product.cpp" bodystart="34" bodyend="50"/>
+        <location file="src/Product/Product.h" line="45" column="12" bodyfile="src/Product/Product.cpp" bodystart="39" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="class_product_1af264aa2bae1159846e658148d44a621d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></type>
@@ -193,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Product/Product.h" line="53" column="12" bodyfile="src/Product/Product.cpp" bodystart="55" bodyend="66"/>
+        <location file="src/Product/Product.h" line="53" column="12" bodyfile="src/Product/Product.cpp" bodystart="60" bodyend="71"/>
       </memberdef>
       <memberdef kind="function" id="class_product_1a351a61b8013eaca0afb924887ac1495c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></type>
@@ -224,7 +224,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Product/Product.h" line="61" column="12" bodyfile="src/Product/Product.cpp" bodystart="71" bodyend="82"/>
+        <location file="src/Product/Product.h" line="61" column="12" bodyfile="src/Product/Product.cpp" bodystart="76" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="class_product_1a4e07082760c0834ccc8cd44e44a6aae6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>QString</type>
@@ -239,7 +239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Product/Product.h" line="64" column="13" bodyfile="src/Product/Product.cpp" bodystart="86" bodyend="89"/>
+        <location file="src/Product/Product.h" line="64" column="13" bodyfile="src/Product/Product.cpp" bodystart="91" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="class_product_1a3be25f647260d61df6063ef706261c7f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -254,7 +254,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Product/Product.h" line="65" column="12" bodyfile="src/Product/Product.cpp" bodystart="91" bodyend="94"/>
+        <location file="src/Product/Product.h" line="65" column="12" bodyfile="src/Product/Product.cpp" bodystart="96" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="class_product_1a6a449b90b669aa4380d229b44eca686f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -269,7 +269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Product/Product.h" line="66" column="9" bodyfile="src/Product/Product.cpp" bodystart="96" bodyend="99"/>
+        <location file="src/Product/Product.h" line="66" column="9" bodyfile="src/Product/Product.cpp" bodystart="101" bodyend="104"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

@@ -2,4 +2,16 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__product_8cpp" xml:lang="en-US">
 <title>src/Product/Product.cpp File Reference</title>
 <indexterm><primary>src/Product/Product.cpp</primary></indexterm>
-<programlisting linenumbering="unnumbered">#include &quot;Product.h&quot;<?linebreak?></programlisting></section>
+<para>
+
+<para>Source file for the <link linkend="_class_product">Product</link> class. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;Product.h&quot;<?linebreak?></programlisting><section>
+<title>Detailed Description</title>
+
+<para>Source file for the <link linkend="_class_product">Product</link> class. </para>
+<para>
+Definition in file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
+</section>
+</section>

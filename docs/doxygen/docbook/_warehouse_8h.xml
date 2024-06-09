@@ -4,7 +4,7 @@
 <indexterm><primary>src/Warehouse/Warehouse.h</primary></indexterm>
 <para>
 
-<para>Source file of the <link linkend="_class_warehouse">Warehouse</link> class. </para>
+<para>Header file of the <link linkend="_class_warehouse">Warehouse</link> class. </para>
  
 </para>
 <programlisting linenumbering="unnumbered">#include &quot;Storage/Storage.h&quot;<?linebreak?>#include &quot;Product/Product.h&quot;<?linebreak?>#include &lt;QList&gt;<?linebreak?></programlisting><simplesect>
@@ -19,9 +19,7 @@
 <section>
 <title>Detailed Description</title>
 
-<para>Source file of the <link linkend="_class_warehouse">Warehouse</link> class. </para>
-
-<para>Header file of the <link linkend="_class_warehouse">Warehouse</link> class.</para>
+<para>Header file of the <link linkend="_class_warehouse">Warehouse</link> class. </para>
 <para>
 Definition in file <link linkend="__warehouse_8h_source">Warehouse.h</link>.</para>
 </section>

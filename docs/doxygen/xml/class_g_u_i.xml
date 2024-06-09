@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="247" column="13" bodyfile="src/gui/gui.h" bodystart="247" bodyend="-1"/>
+        <location file="src/gui/gui.h" line="214" column="13" bodyfile="src/gui/gui.h" bodystart="214" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_g_u_i_1a964a4af08d465a285ca4852ed5e8c820" prot="private" static="no" mutable="no">
         <type>QList&lt; <ref refid="class_warehouse" kindref="compound">Warehouse</ref> &gt;</type>
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="278" column="11" bodyfile="src/gui/gui.h" bodystart="278" bodyend="-1"/>
+        <location file="src/gui/gui.h" line="245" column="11" bodyfile="src/gui/gui.h" bodystart="245" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_g_u_i_1af477d43b9f77815a2c24d8c1066c7c9f" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="279" column="9" bodyfile="src/gui/gui.h" bodystart="279" bodyend="-1"/>
+        <location file="src/gui/gui.h" line="246" column="9" bodyfile="src/gui/gui.h" bodystart="246" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_g_u_i_1ab69db54e2e2715de8f67b2fd2d4d6e01" prot="private" static="no" mutable="no">
         <type>QString</type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="281" column="13" bodyfile="src/gui/gui.h" bodystart="281" bodyend="-1"/>
+        <location file="src/gui/gui.h" line="248" column="13" bodyfile="src/gui/gui.h" bodystart="248" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_g_u_i_1aa1ae250851c54619cd79f213174551b9" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="282" column="9" bodyfile="src/gui/gui.h" bodystart="282" bodyend="-1"/>
+        <location file="src/gui/gui.h" line="249" column="9" bodyfile="src/gui/gui.h" bodystart="249" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_g_u_i_1ade0e19aea11fad3504da5628183a214d" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -98,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="283" column="9" bodyfile="src/gui/gui.h" bodystart="283" bodyend="-1"/>
+        <location file="src/gui/gui.h" line="250" column="9" bodyfile="src/gui/gui.h" bodystart="250" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_g_u_i_1ac33a82b7f11accce2f194c3d96174d2c" prot="private" static="no" mutable="no">
         <type>QTimer *</type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="285" column="12" bodyfile="src/gui/gui.h" bodystart="285" bodyend="-1"/>
+        <location file="src/gui/gui.h" line="252" column="12" bodyfile="src/gui/gui.h" bodystart="252" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="92" column="14" bodyfile="src/gui/gui.cpp" bodystart="14" bodyend="20"/>
+        <location file="src/gui/gui.h" line="83" column="14" bodyfile="src/gui/gui.cpp" bodystart="14" bodyend="20"/>
       </memberdef>
       <memberdef kind="function" id="class_g_u_i_1ac9cae2328dcb5d83bdfaeca49a2eb695" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -160,7 +160,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="97" column="5" bodyfile="src/gui/gui.cpp" bodystart="25" bodyend="28"/>
+        <location file="src/gui/gui.h" line="88" column="5" bodyfile="src/gui/gui.cpp" bodystart="25" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="class_g_u_i_1ae63efaa6d38814299c42540a5d4ea00b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -176,67 +176,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="106" column="10" bodyfile="src/gui/gui.cpp" bodystart="33" bodyend="61"/>
-      </memberdef>
-      <memberdef kind="function" id="class_g_u_i_1ab313545b5c5cfe552a77ec342c69b617" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void GUI::updateGUI</definition>
-        <argsstring>(GUIEvent &amp;event)</argsstring>
-        <name>updateGUI</name>
-        <qualifiedname>GUI::updateGUI</qualifiedname>
-        <param>
-          <type><ref refid="gui_8h_1a4bf30075a0d0136f8daa83c001a2d75e" kindref="member">GUIEvent</ref> &amp;</type>
-          <declname>event</declname>
-        </param>
-        <briefdescription>
-<para>Updates the <ref refid="class_g_u_i" kindref="compound">GUI</ref> based on the given event. </para>
-        </briefdescription>
-        <detaileddescription>
-<para>This function handles <ref refid="class_g_u_i" kindref="compound">GUI</ref> updates triggered by specific events. It takes a GUIEvent as a parameter and modifies the <ref refid="class_g_u_i" kindref="compound">GUI</ref> state or individual elements accordingly. For example, it may update the text of a label or enable/disable a button based on the event.</para>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>event</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The <ref refid="class_g_u_i" kindref="compound">GUI</ref> event that triggers the update. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/gui/gui.h" line="118" column="10"/>
-      </memberdef>
-      <memberdef kind="function" id="class_g_u_i_1a0b4a1e6d6a100198309a25c11dde336c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void GUI::handleEvents</definition>
-        <argsstring>(GUIEvent &amp;event)</argsstring>
-        <name>handleEvents</name>
-        <qualifiedname>GUI::handleEvents</qualifiedname>
-        <param>
-          <type><ref refid="gui_8h_1a4bf30075a0d0136f8daa83c001a2d75e" kindref="member">GUIEvent</ref> &amp;</type>
-          <declname>event</declname>
-        </param>
-        <briefdescription>
-<para>Handles user-generated events. </para>
-        </briefdescription>
-        <detaileddescription>
-<para>This function processes user interactions (e.g., mouse clicks, keyboard input) and responds appropriately. It takes a GUIEvent as a parameter and performs actions based on the event type. For instance, it may execute a specific action when a button is clicked or update the <ref refid="class_g_u_i" kindref="compound">GUI</ref> state when a key is pressed.</para>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>event</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The <ref refid="class_g_u_i" kindref="compound">GUI</ref> event to handle. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/gui/gui.h" line="130" column="10"/>
+        <location file="src/gui/gui.h" line="97" column="10" bodyfile="src/gui/gui.cpp" bodystart="33" bodyend="61"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-slot">
@@ -254,7 +194,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="139" column="10" bodyfile="src/gui/gui.cpp" bodystart="69" bodyend="77"/>
+        <location file="src/gui/gui.h" line="106" column="10" bodyfile="src/gui/gui.cpp" bodystart="69" bodyend="77"/>
       </memberdef>
       <memberdef kind="slot" id="class_g_u_i_1ac9c94dd70c435067537350a48ef6dc71" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -270,7 +210,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="146" column="10" bodyfile="src/gui/gui.cpp" bodystart="82" bodyend="85"/>
+        <location file="src/gui/gui.h" line="113" column="10" bodyfile="src/gui/gui.cpp" bodystart="82" bodyend="85"/>
       </memberdef>
       <memberdef kind="slot" id="class_g_u_i_1ae77cc6818ac9de4cf50f8e2101ba02f0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -287,7 +227,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="154" column="10" bodyfile="src/gui/gui.cpp" bodystart="90" bodyend="93"/>
+        <location file="src/gui/gui.h" line="121" column="10" bodyfile="src/gui/gui.cpp" bodystart="90" bodyend="93"/>
       </memberdef>
       <memberdef kind="slot" id="class_g_u_i_1a187b0fa4d29e12848156bb0cffa32231" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -304,7 +244,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="162" column="10" bodyfile="src/gui/gui.cpp" bodystart="98" bodyend="101"/>
+        <location file="src/gui/gui.h" line="129" column="10" bodyfile="src/gui/gui.cpp" bodystart="98" bodyend="101"/>
       </memberdef>
       <memberdef kind="slot" id="class_g_u_i_1ac0667e8e8d78da1905d17ffa7f5b00fa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -320,7 +260,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="169" column="10" bodyfile="src/gui/gui.cpp" bodystart="106" bodyend="109"/>
+        <location file="src/gui/gui.h" line="136" column="10" bodyfile="src/gui/gui.cpp" bodystart="106" bodyend="109"/>
       </memberdef>
       <memberdef kind="slot" id="class_g_u_i_1ad01d82038fdc5e7f3154483c08b456a0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -336,7 +276,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="177" column="10" bodyfile="src/gui/gui.cpp" bodystart="114" bodyend="117"/>
+        <location file="src/gui/gui.h" line="144" column="10" bodyfile="src/gui/gui.cpp" bodystart="114" bodyend="117"/>
       </memberdef>
       <memberdef kind="slot" id="class_g_u_i_1acbe4ad9b7ea40be19164cd456dcbdbf9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -352,7 +292,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="184" column="10" bodyfile="src/gui/gui.cpp" bodystart="122" bodyend="125"/>
+        <location file="src/gui/gui.h" line="151" column="10" bodyfile="src/gui/gui.cpp" bodystart="122" bodyend="125"/>
       </memberdef>
       <memberdef kind="slot" id="class_g_u_i_1a150295294219357905e7c96769732e10" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -368,7 +308,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="192" column="10" bodyfile="src/gui/gui.cpp" bodystart="130" bodyend="194"/>
+        <location file="src/gui/gui.h" line="159" column="10" bodyfile="src/gui/gui.cpp" bodystart="130" bodyend="194"/>
       </memberdef>
       <memberdef kind="slot" id="class_g_u_i_1a995f9af1af33e0fd5c642f08bd5c8e14" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -385,7 +325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="199" column="10" bodyfile="src/gui/gui.cpp" bodystart="199" bodyend="204"/>
+        <location file="src/gui/gui.h" line="166" column="10" bodyfile="src/gui/gui.cpp" bodystart="199" bodyend="204"/>
       </memberdef>
       <memberdef kind="slot" id="class_g_u_i_1ade75f9798a3f44808e1a5855f789637f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -401,7 +341,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="207" column="10" bodyfile="src/gui/gui.cpp" bodystart="209" bodyend="255"/>
+        <location file="src/gui/gui.h" line="174" column="10" bodyfile="src/gui/gui.cpp" bodystart="209" bodyend="255"/>
       </memberdef>
       <memberdef kind="slot" id="class_g_u_i_1a6f24aee8a41d0b43a20c8eda895aaa4f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -417,7 +357,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="215" column="10" bodyfile="src/gui/gui.cpp" bodystart="260" bodyend="286"/>
+        <location file="src/gui/gui.h" line="182" column="10" bodyfile="src/gui/gui.cpp" bodystart="260" bodyend="286"/>
       </memberdef>
       <memberdef kind="slot" id="class_g_u_i_1ac05e159fa67fbe347118149007451a00" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -433,7 +373,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="222" column="10" bodyfile="src/gui/gui.cpp" bodystart="288" bodyend="310"/>
+        <location file="src/gui/gui.h" line="189" column="10" bodyfile="src/gui/gui.cpp" bodystart="288" bodyend="310"/>
       </memberdef>
       <memberdef kind="slot" id="class_g_u_i_1a4ef4d846b489c87fb1ead2eba6c960c0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -449,7 +389,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="229" column="10" bodyfile="src/gui/gui.cpp" bodystart="341" bodyend="352"/>
+        <location file="src/gui/gui.h" line="196" column="10" bodyfile="src/gui/gui.cpp" bodystart="341" bodyend="352"/>
       </memberdef>
       <memberdef kind="slot" id="class_g_u_i_1a07f5a3dd06c1bd112ee5ef29666c46e7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -465,7 +405,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="237" column="10" bodyfile="src/gui/gui.cpp" bodystart="357" bodyend="373"/>
+        <location file="src/gui/gui.h" line="204" column="10" bodyfile="src/gui/gui.cpp" bodystart="357" bodyend="373"/>
       </memberdef>
       <memberdef kind="slot" id="class_g_u_i_1a40ce03585d77507e5caa629f5422ba18" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -481,7 +421,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="244" column="10" bodyfile="src/gui/gui.cpp" bodystart="378" bodyend="393"/>
+        <location file="src/gui/gui.h" line="211" column="10" bodyfile="src/gui/gui.cpp" bodystart="378" bodyend="393"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -499,7 +439,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="293" column="10" bodyfile="src/gui/gui.cpp" bodystart="315" bodyend="336"/>
+        <location file="src/gui/gui.h" line="260" column="10" bodyfile="src/gui/gui.cpp" bodystart="315" bodyend="336"/>
       </memberdef>
       <memberdef kind="function" id="class_g_u_i_1a1673c513985e98439783eb4afd27d89a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -515,7 +455,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="301" column="10" bodyfile="src/gui/gui.cpp" bodystart="398" bodyend="403"/>
+        <location file="src/gui/gui.h" line="268" column="10" bodyfile="src/gui/gui.cpp" bodystart="398" bodyend="403"/>
       </memberdef>
       <memberdef kind="function" id="class_g_u_i_1afce32c08ac98088c09413462f0ee62e5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -531,7 +471,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="309" column="10" bodyfile="src/gui/gui.cpp" bodystart="408" bodyend="501"/>
+        <location file="src/gui/gui.h" line="276" column="10" bodyfile="src/gui/gui.cpp" bodystart="408" bodyend="501"/>
       </memberdef>
       <memberdef kind="function" id="class_g_u_i_1a56c90d50ea5b9bb3feb713a757e7469e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -547,7 +487,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="317" column="10" bodyfile="src/gui/gui.cpp" bodystart="506" bodyend="570"/>
+        <location file="src/gui/gui.h" line="284" column="10" bodyfile="src/gui/gui.cpp" bodystart="506" bodyend="570"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -578,13 +518,12 @@
         <label>QMainWindow</label>
       </node>
     </collaborationgraph>
-    <location file="src/gui/gui.h" line="82" column="1" bodyfile="src/gui/gui.h" bodystart="83" bodyend="318"/>
+    <location file="src/gui/gui.h" line="73" column="1" bodyfile="src/gui/gui.h" bodystart="74" bodyend="285"/>
     <listofallmembers>
       <member refid="class_g_u_i_1af477d43b9f77815a2c24d8c1066c7c9f" prot="private" virt="non-virtual"><scope>GUI</scope><name>currentWarehouseIndex</name></member>
       <member refid="class_g_u_i_1ade0e19aea11fad3504da5628183a214d" prot="private" virt="non-virtual"><scope>GUI</scope><name>cycles</name></member>
       <member refid="class_g_u_i_1ab69db54e2e2715de8f67b2fd2d4d6e01" prot="private" virt="non-virtual"><scope>GUI</scope><name>filename</name></member>
       <member refid="class_g_u_i_1aa73b900295e12a915b80f34c418f7653" prot="public" virt="non-virtual"><scope>GUI</scope><name>GUI</name></member>
-      <member refid="class_g_u_i_1a0b4a1e6d6a100198309a25c11dde336c" prot="public" virt="non-virtual"><scope>GUI</scope><name>handleEvents</name></member>
       <member refid="class_g_u_i_1a323876735bb64b4c3cd16107dd1a5014" prot="private" virt="non-virtual"><scope>GUI</scope><name>loadCurrentWarehouseData</name></member>
       <member refid="class_g_u_i_1acbe4ad9b7ea40be19164cd456dcbdbf9" prot="private" virt="non-virtual"><scope>GUI</scope><name>on_aboutButton_clicked</name></member>
       <member refid="class_g_u_i_1aac91db8762d3507e0f7123de26c4f2a5" prot="private" virt="non-virtual"><scope>GUI</scope><name>on_addbutton_clicked</name></member>
@@ -607,7 +546,6 @@
       <member refid="class_g_u_i_1a1673c513985e98439783eb4afd27d89a" prot="private" virt="non-virtual"><scope>GUI</scope><name>setupUpdateTimer</name></member>
       <member refid="class_g_u_i_1ac33a82b7f11accce2f194c3d96174d2c" prot="private" virt="non-virtual"><scope>GUI</scope><name>timer</name></member>
       <member refid="class_g_u_i_1acdbca1224663f5a19bd1ad4e7c885886" prot="private" virt="non-virtual"><scope>GUI</scope><name>ui</name></member>
-      <member refid="class_g_u_i_1ab313545b5c5cfe552a77ec342c69b617" prot="public" virt="non-virtual"><scope>GUI</scope><name>updateGUI</name></member>
       <member refid="class_g_u_i_1afce32c08ac98088c09413462f0ee62e5" prot="private" virt="non-virtual"><scope>GUI</scope><name>updateTablesFromCSV</name></member>
       <member refid="class_g_u_i_1a964a4af08d465a285ca4852ed5e8c820" prot="private" virt="non-virtual"><scope>GUI</scope><name>warehouses</name></member>
       <member refid="class_g_u_i_1ac9cae2328dcb5d83bdfaeca49a2eb695" prot="public" virt="non-virtual"><scope>GUI</scope><name>~GUI</name></member>

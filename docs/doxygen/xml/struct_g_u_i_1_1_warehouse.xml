@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="272" column="13" bodyfile="src/gui/gui.h" bodystart="272" bodyend="-1"/>
+        <location file="src/gui/gui.h" line="239" column="13" bodyfile="src/gui/gui.h" bodystart="239" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_g_u_i_1_1_warehouse_1af05231202a10bb757fc1a7f12bf0eb2e" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="273" column="13" bodyfile="src/gui/gui.h" bodystart="273" bodyend="-1"/>
+        <location file="src/gui/gui.h" line="240" column="13" bodyfile="src/gui/gui.h" bodystart="240" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_g_u_i_1_1_warehouse_1a82d06f8b6b8683dccad67a104efb6d10" prot="public" static="no" mutable="no">
         <type>QString</type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="274" column="17" bodyfile="src/gui/gui.h" bodystart="274" bodyend="-1"/>
+        <location file="src/gui/gui.h" line="241" column="17" bodyfile="src/gui/gui.h" bodystart="241" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_g_u_i_1_1_warehouse_1ae84d94227814e868a7365ec8e486e58b" prot="public" static="no" mutable="no">
         <type>QList&lt; <ref refid="class_product" kindref="compound">Product</ref> &gt;</type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="275" column="15" bodyfile="src/gui/gui.h" bodystart="275" bodyend="-1"/>
+        <location file="src/gui/gui.h" line="242" column="15" bodyfile="src/gui/gui.h" bodystart="242" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -70,7 +70,7 @@
     <detaileddescription>
 <para>This structure is used to store information about a warehouse, including its unique ID, total capacity, name, and a list of products that are stored in the warehouse. </para>
     </detaileddescription>
-    <location file="src/gui/gui.h" line="270" column="5" bodyfile="src/gui/gui.h" bodystart="271" bodyend="276"/>
+    <location file="src/gui/gui.h" line="237" column="5" bodyfile="src/gui/gui.h" bodystart="238" bodyend="243"/>
     <listofallmembers>
       <member refid="struct_g_u_i_1_1_warehouse_1af05231202a10bb757fc1a7f12bf0eb2e" prot="public" virt="non-virtual"><scope>GUI::Warehouse</scope><name>capacity</name></member>
       <member refid="struct_g_u_i_1_1_warehouse_1a21fde63709ed4333ed1c761d1851243b" prot="public" virt="non-virtual"><scope>GUI::Warehouse</scope><name>id</name></member>

@@ -111,7 +111,7 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__product_8cpp_source_1l00006">6</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
+Definition at line <link linkend="__product_8cpp_source_1l00011">11</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
 </section>
 </section>
 <section>
@@ -151,7 +151,7 @@ Parameters</title>
 </formalpara>
 </para>
 <para>
-Definition at line <link linkend="__product_8cpp_source_1l00071">71</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
+Definition at line <link linkend="__product_8cpp_source_1l00076">76</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
 </section>
 <anchor xml:id="_class_product_1a4e07082760c0834ccc8cd44e44a6aae6"/><section>
     <title>getName()</title>
@@ -162,7 +162,7 @@ Definition at line <link linkend="__product_8cpp_source_1l00071">71</link> of fi
 <para>Get the name of the product. </para>
 </para>
 <para>
-Definition at line <link linkend="__product_8cpp_source_1l00086">86</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
+Definition at line <link linkend="__product_8cpp_source_1l00091">91</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
 </section>
 <anchor xml:id="_class_product_1a3be25f647260d61df6063ef706261c7f"/><section>
     <title>getPrice()</title>
@@ -173,7 +173,7 @@ Definition at line <link linkend="__product_8cpp_source_1l00086">86</link> of fi
 <para>Get the price of the product. </para>
 </para>
 <para>
-Definition at line <link linkend="__product_8cpp_source_1l00091">91</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
+Definition at line <link linkend="__product_8cpp_source_1l00096">96</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
 </section>
 <anchor xml:id="_class_product_1a6a449b90b669aa4380d229b44eca686f"/><section>
     <title>getQuantity()</title>
@@ -184,7 +184,7 @@ Definition at line <link linkend="__product_8cpp_source_1l00091">91</link> of fi
 <para>Get the quantity of the product. </para>
 </para>
 <para>
-Definition at line <link linkend="__product_8cpp_source_1l00096">96</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
+Definition at line <link linkend="__product_8cpp_source_1l00101">101</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
 </section>
 <anchor xml:id="_class_product_1ac914a618c6cedf1500f22a4e33ed4e83"/><section>
     <title>sell()</title>
@@ -221,7 +221,7 @@ Parameters</title>
 </formalpara>
 </para>
 <para>
-Definition at line <link linkend="__product_8cpp_source_1l00034">34</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
+Definition at line <link linkend="__product_8cpp_source_1l00039">39</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
 </section>
 <anchor xml:id="_class_product_1af264aa2bae1159846e658148d44a621d"/><section>
     <title>updatePrice()</title>
@@ -258,7 +258,7 @@ Parameters</title>
 </formalpara>
 </para>
 <para>
-Definition at line <link linkend="__product_8cpp_source_1l00055">55</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
+Definition at line <link linkend="__product_8cpp_source_1l00060">60</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
 </section>
 </section>
 <section>

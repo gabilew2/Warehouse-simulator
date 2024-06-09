@@ -497,7 +497,7 @@
 <codeline lineno="408"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>GUI::updateTablesFromCSV()</highlight></codeline>
 <codeline lineno="409"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/>ui<sp/>-&gt;<sp/>raportList<sp/>-&gt;<sp/>setRowCount(0);</highlight></codeline>
-<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cycles<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cycles<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/>QFile<sp/>report(</highlight><highlight class="stringliteral">&quot;SimulationReport.csv&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="413"><highlight class="normal"></highlight></codeline>
 <codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!report.open(QIODevice::ReadOnly<sp/>|<sp/>QIODevice::Text))</highlight></codeline>

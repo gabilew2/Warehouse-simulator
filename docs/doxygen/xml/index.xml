@@ -19,8 +19,6 @@
     <member refid="class_g_u_i_1aa73b900295e12a915b80f34c418f7653" kind="function"><name>GUI</name></member>
     <member refid="class_g_u_i_1ac9cae2328dcb5d83bdfaeca49a2eb695" kind="function"><name>~GUI</name></member>
     <member refid="class_g_u_i_1ae63efaa6d38814299c42540a5d4ea00b" kind="function"><name>render</name></member>
-    <member refid="class_g_u_i_1ab313545b5c5cfe552a77ec342c69b617" kind="function"><name>updateGUI</name></member>
-    <member refid="class_g_u_i_1a0b4a1e6d6a100198309a25c11dde336c" kind="function"><name>handleEvents</name></member>
     <member refid="class_g_u_i_1aac91db8762d3507e0f7123de26c4f2a5" kind="slot"><name>on_addbutton_clicked</name></member>
     <member refid="class_g_u_i_1ac9c94dd70c435067537350a48ef6dc71" kind="slot"><name>on_back_to_menu_clicked</name></member>
     <member refid="class_g_u_i_1ae77cc6818ac9de4cf50f8e2101ba02f0" kind="slot"><name>on_back_to_menu_2_clicked</name></member>
@@ -91,7 +89,7 @@
     <member refid="class_simulation_1aa0e23779d0aa555ae836a646b8b1d715" kind="function"><name>conductCycle</name></member>
     <member refid="class_simulation_1a0caa90613b0a2e52360c7cd6f5530023" kind="function"><name>respondToEvent</name></member>
     <member refid="class_simulation_1ae5c367f87c0b5dc9740bc6d00e44e72c" kind="function"><name>run</name></member>
-    <member refid="class_simulation_1a03b8112bc675326b413cb67664dcd361" kind="function"><name>processEvents</name></member>
+    <member refid="class_simulation_1a470014a191023a8e7a485491695d4c9d" kind="function"><name>processEvents</name></member>
     <member refid="class_simulation_1ac2a7464b86a88a8ff09766825836590b" kind="function"><name>generateReport</name></member>
   </compound>
   <compound refid="class_simulation_thread" kind="class"><name>SimulationThread</name>
@@ -125,7 +123,7 @@
     <member refid="class_warehouse_1aad96200e251b9e55dc51d6fd3dff9d56" kind="function"><name>getPrice</name></member>
     <member refid="class_warehouse_1a08808180a2c1f6db033a3ecc94b3c205" kind="function"><name>getQuantity</name></member>
     <member refid="class_warehouse_1a3f817148fcf0caf2ba0b6be2dd27809d" kind="function"><name>getLocation</name></member>
-    <member refid="class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e" kind="function"><name>getProductList</name></member>
+    <member refid="class_warehouse_1ad6743eb02619226c049192647fc96939" kind="function"><name>getProductList</name></member>
     <member refid="class_warehouse_1ad5eb7e2175f702204e9e628c6658f777" kind="function"><name>getCurrentCapacity</name></member>
   </compound>
   <compound refid="class_warehouse_report" kind="class"><name>WarehouseReport</name>
@@ -146,7 +144,6 @@
   <compound refid="gui_8cpp" kind="file"><name>gui.cpp</name>
   </compound>
   <compound refid="gui_8h" kind="file"><name>gui.h</name>
-    <member refid="gui_8h_1a4bf30075a0d0136f8daa83c001a2d75e" kind="typedef"><name>GUIEvent</name></member>
     <member refid="gui_8h_1a41dc4eccf37447afba3e984031346842" kind="typedef"><name>GUIElement</name></member>
   </compound>
   <compound refid="src_2main_8cpp" kind="file"><name>main.cpp</name>

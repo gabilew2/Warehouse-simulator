@@ -1,3 +1,8 @@
+/**
+ * @file Product.cpp
+ * @brief Source file for the Product class.
+ */
+
 #include "Product.h"
 
 /**

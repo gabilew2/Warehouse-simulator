@@ -30,10 +30,6 @@
 <simplesect>
     <title>Typedefs    </title>
         <itemizedlist>
-            <listitem><para>using <link linkend="_gui_8h_1a4bf30075a0d0136f8daa83c001a2d75e">GUIEvent</link> = QEvent</para>
-
-<para>Alias for QEvent representing <link linkend="_class_g_u_i">GUI</link> events. </para>
-</listitem>
             <listitem><para>using <link linkend="_gui_8h_1a41dc4eccf37447afba3e984031346842">GUIElement</link> = QWidget</para>
 
 <para>Alias for QWidget representing <link linkend="_class_g_u_i">GUI</link> elements. </para>
@@ -62,20 +58,7 @@ Definition in file <link linkend="_gui_8h_source">gui.h</link>.</para>
 
 <para>GUIElement is an alias for QWidget and represents the basic unit of user interface elements in Qt. It can be used to refer to any widget that is part of the <link linkend="_class_g_u_i">GUI</link>, such as buttons, labels, text fields, etc. </para>
 <para>
-Definition at line <link linkend="_gui_8h_source_1l00038">38</link> of file <link linkend="_gui_8h_source">gui.h</link>.</para>
-</section>
-<anchor xml:id="_gui_8h_1a4bf30075a0d0136f8daa83c001a2d75e"/><section>
-    <title>GUIEvent</title>
-<indexterm><primary>GUIEvent</primary><secondary>gui.h</secondary></indexterm>
-<indexterm><primary>gui.h</primary><secondary>GUIEvent</secondary></indexterm>
-<para><computeroutput><link linkend="_gui_8h_1a4bf30075a0d0136f8daa83c001a2d75e">GUIEvent</link> = QEvent</computeroutput></para><para>
-
-<para>Alias for QEvent representing <link linkend="_class_g_u_i">GUI</link> events. </para>
-</para>
-
-<para>GUIEvent is an alias for QEvent and is used to handle all user interactions with the graphical user interface, such as mouse clicks, key presses, and more. </para>
-<para>
-Definition at line <link linkend="_gui_8h_source_1l00028">28</link> of file <link linkend="_gui_8h_source">gui.h</link>.</para>
+Definition at line <link linkend="_gui_8h_source_1l00029">29</link> of file <link linkend="_gui_8h_source">gui.h</link>.</para>
 </section>
 </section>
 </section>

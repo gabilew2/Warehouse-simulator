@@ -26,14 +26,6 @@ Inherits QMainWindow\&.
 .RI "void \fBrender\fP ()"
 .br
 .RI "Renders the graphical user interface elements\&. "
-.ti -1c
-.RI "void \fBupdateGUI\fP (\fBGUIEvent\fP &event)"
-.br
-.RI "Updates the \fBGUI\fP based on the given event\&. "
-.ti -1c
-.RI "void \fBhandleEvents\fP (\fBGUIEvent\fP &event)"
-.br
-.RI "Handles user-generated events\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -41,7 +33,7 @@ The \fBGUI\fP class inherits from QMainWindow and represents the main window of 
 
 This class manages the user interface for the application\&. It sets up the main window and its associated widgets, and handles user interactions\&. 
 .PP
-Definition at line \fB82\fP of file \fBgui\&.h\fP\&.
+Definition at line \fB73\fP of file \fBgui\&.h\fP\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "GUI::GUI (\fBGUIElement\fP * parent = \fRnullptr\fP)\fR [explicit]\fP"
@@ -65,34 +57,12 @@ Destructor for the \fBGUI\fP class\&.
 Definition at line \fB25\fP of file \fBgui\&.cpp\fP\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "void GUI::handleEvents (\fBGUIEvent\fP & event)"
-
-.PP
-Handles user-generated events\&. This function processes user interactions (e\&.g\&., mouse clicks, keyboard input) and responds appropriately\&. It takes a GUIEvent as a parameter and performs actions based on the event type\&. For instance, it may execute a specific action when a button is clicked or update the \fBGUI\fP state when a key is pressed\&.
-.PP
-\fBParameters\fP
-.RS 4
-\fIevent\fP The \fBGUI\fP event to handle\&. 
-.RE
-.PP
-
 .SS "void GUI::render ()"
 
 .PP
 Renders the graphical user interface elements\&. This function is responsible for rendering the \fBGUI\fP elements on the screen\&. It ensures that all widgets (buttons, labels, etc\&.) are displayed correctly based on their current state and properties\&. 
 .PP
 Definition at line \fB33\fP of file \fBgui\&.cpp\fP\&.
-.SS "void GUI::updateGUI (\fBGUIEvent\fP & event)"
-
-.PP
-Updates the \fBGUI\fP based on the given event\&. This function handles \fBGUI\fP updates triggered by specific events\&. It takes a GUIEvent as a parameter and modifies the \fBGUI\fP state or individual elements accordingly\&. For example, it may update the text of a label or enable/disable a button based on the event\&.
-.PP
-\fBParameters\fP
-.RS 4
-\fIevent\fP The \fBGUI\fP event that triggers the update\&. 
-.RE
-.PP
-
 
 .SH "Author"
 .PP 

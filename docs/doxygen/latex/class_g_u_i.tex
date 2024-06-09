@@ -23,11 +23,7 @@ Inheritance diagram for GUI\+:\begin{figure}[H]
 \mbox{\hyperlink{class_g_u_i_ac9cae2328dcb5d83bdfaeca49a2eb695}{\texorpdfstring{$\sim$}{\string~}\+GUI}} ()
 \begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_g_u_i}{GUI} class. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_g_u_i_ae63efaa6d38814299c42540a5d4ea00b}{render}} ()
-\begin{DoxyCompactList}\small\item\em Renders the graphical user interface elements. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_g_u_i_ab313545b5c5cfe552a77ec342c69b617}{update\+GUI}} (\mbox{\hyperlink{gui_8h_a4bf30075a0d0136f8daa83c001a2d75e}{GUIEvent}} \&event)
-\begin{DoxyCompactList}\small\item\em Updates the \doxylink{class_g_u_i}{GUI} based on the given event. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_g_u_i_a0b4a1e6d6a100198309a25c11dde336c}{handle\+Events}} (\mbox{\hyperlink{gui_8h_a4bf30075a0d0136f8daa83c001a2d75e}{GUIEvent}} \&event)
-\begin{DoxyCompactList}\small\item\em Handles user-\/generated events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Renders the graphical user interface elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -35,7 +31,7 @@ The \doxylink{class_g_u_i}{GUI} class inherits from QMain\+Window and represents
 
 This class manages the user interface for the application. It sets up the main window and its associated widgets, and handles user interactions. 
 
-Definition at line \mbox{\hyperlink{gui_8h_source_l00082}{82}} of file \mbox{\hyperlink{gui_8h_source}{gui.\+h}}.
+Definition at line \mbox{\hyperlink{gui_8h_source_l00073}{73}} of file \mbox{\hyperlink{gui_8h_source}{gui.\+h}}.
 
 
 
@@ -76,23 +72,6 @@ Definition at line \mbox{\hyperlink{gui_8cpp_source_l00025}{25}} of file \mbox{\
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_g_u_i_a0b4a1e6d6a100198309a25c11dde336c}\label{class_g_u_i_a0b4a1e6d6a100198309a25c11dde336c} 
-\index{GUI@{GUI}!handleEvents@{handleEvents}}
-\index{handleEvents@{handleEvents}!GUI@{GUI}}
-\doxysubsubsection{\texorpdfstring{handleEvents()}{handleEvents()}}
-{\footnotesize\ttfamily void GUI\+::handle\+Events (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gui_8h_a4bf30075a0d0136f8daa83c001a2d75e}{GUIEvent}} \&}]{event }\end{DoxyParamCaption})}
-
-
-
-Handles user-\/generated events. 
-
-This function processes user interactions (e.\+g., mouse clicks, keyboard input) and responds appropriately. It takes a GUIEvent as a parameter and performs actions based on the event type. For instance, it may execute a specific action when a button is clicked or update the \doxylink{class_g_u_i}{GUI} state when a key is pressed.
-
-
-\begin{DoxyParams}{Parameters}
-{\em event} & The \doxylink{class_g_u_i}{GUI} event to handle. \\
-\hline
-\end{DoxyParams}
 \Hypertarget{class_g_u_i_ae63efaa6d38814299c42540a5d4ea00b}\label{class_g_u_i_ae63efaa6d38814299c42540a5d4ea00b} 
 \index{GUI@{GUI}!render@{render}}
 \index{render@{render}!GUI@{GUI}}
@@ -107,23 +86,6 @@ This function is responsible for rendering the \doxylink{class_g_u_i}{GUI} eleme
 
 Definition at line \mbox{\hyperlink{gui_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{gui_8cpp_source}{gui.\+cpp}}.
 
-\Hypertarget{class_g_u_i_ab313545b5c5cfe552a77ec342c69b617}\label{class_g_u_i_ab313545b5c5cfe552a77ec342c69b617} 
-\index{GUI@{GUI}!updateGUI@{updateGUI}}
-\index{updateGUI@{updateGUI}!GUI@{GUI}}
-\doxysubsubsection{\texorpdfstring{updateGUI()}{updateGUI()}}
-{\footnotesize\ttfamily void GUI\+::update\+GUI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gui_8h_a4bf30075a0d0136f8daa83c001a2d75e}{GUIEvent}} \&}]{event }\end{DoxyParamCaption})}
-
-
-
-Updates the \doxylink{class_g_u_i}{GUI} based on the given event. 
-
-This function handles \doxylink{class_g_u_i}{GUI} updates triggered by specific events. It takes a GUIEvent as a parameter and modifies the \doxylink{class_g_u_i}{GUI} state or individual elements accordingly. For example, it may update the text of a label or enable/disable a button based on the event.
-
-
-\begin{DoxyParams}{Parameters}
-{\em event} & The \doxylink{class_g_u_i}{GUI} event that triggers the update. \\
-\hline
-\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

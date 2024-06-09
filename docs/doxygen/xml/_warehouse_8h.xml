@@ -94,10 +94,9 @@
     </invincdepgraph>
     <innerclass refid="class_warehouse" prot="public">Warehouse</innerclass>
     <briefdescription>
-<para>Source file of the <ref refid="class_warehouse" kindref="compound">Warehouse</ref> class. </para>
+<para>Header file of the <ref refid="class_warehouse" kindref="compound">Warehouse</ref> class. </para>
     </briefdescription>
     <detaileddescription>
-<para>Header file of the <ref refid="class_warehouse" kindref="compound">Warehouse</ref> class.</para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
@@ -143,7 +142,7 @@
 <codeline lineno="118"><highlight class="normal"></highlight></codeline>
 <codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Getters</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_warehouse_1a3f817148fcf0caf2ba0b6be2dd27809d" kindref="member">getLocation</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>QList&lt;Product&gt;<sp/><ref refid="class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e" kindref="member">getProductList</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QList&lt;Product&gt;<sp/><ref refid="class_warehouse_1ad6743eb02619226c049192647fc96939" kindref="member">getProductList</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_warehouse_1ad5eb7e2175f702204e9e628c6658f777" kindref="member">getCurrentCapacity</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="123"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="124"><highlight class="normal"></highlight></codeline>

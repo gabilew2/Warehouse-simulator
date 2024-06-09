@@ -1,5 +1,5 @@
 /**
- * @file Warehouse.h
+ * @file Warehouse.cpp
  * @brief Source file of the Warehouse class.
  */
 
@@ -252,7 +252,7 @@ QString Warehouse::getLocation() const
 /**
   * @brief Get the list of the products stored in the warehouse.
   */
-QList<Product> Warehouse::getProductList() const
+const QList<Product> Warehouse::getProductList() const
 {
     return productList;
 }

@@ -6,6 +6,8 @@
     <title>Files    </title>
         <itemizedlist>
             <listitem><para>file <link linkend="__simulation_8cpp">Simulation.cpp</link></para>
+
+<para>Source file for the <link linkend="_class_simulation">Simulation</link> class. </para>
 </listitem>
             <listitem><para>file <link linkend="__simulation_8h">Simulation.h</link></para>
 

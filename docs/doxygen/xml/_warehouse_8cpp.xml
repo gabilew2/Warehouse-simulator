@@ -38,6 +38,7 @@
       </node>
     </incdepgraph>
     <briefdescription>
+<para>Source file of the <ref refid="class_warehouse" kindref="compound">Warehouse</ref> class. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -254,7 +255,7 @@
 <codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>location;</highlight></codeline>
 <codeline lineno="250"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="251"><highlight class="normal"></highlight></codeline>
-<codeline lineno="255" refid="class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e" refkind="member"><highlight class="normal">QList&lt;Product&gt;<sp/><ref refid="class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e" kindref="member">Warehouse::getProductList</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="255" refid="class_warehouse_1ad6743eb02619226c049192647fc96939" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QList&lt;Product&gt;<sp/><ref refid="class_warehouse_1ad6743eb02619226c049192647fc96939" kindref="member">Warehouse::getProductList</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
 <codeline lineno="256"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>productList;</highlight></codeline>
 <codeline lineno="258"><highlight class="normal">}</highlight></codeline>

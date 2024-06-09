@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp'],['../test_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp']]],
-  ['main_2ecpp_1',['main.cpp',['../src_2main_8cpp.html',1,'(Global Namespace)'],['../test_2main_8cpp.html',1,'(Global Namespace)']]]
+  ['name_0',['name',['../struct_report_1_1_product_report.html#a3b1c5f3c0e92b0761fe098a093e45db2',1,'Report::ProductReport']]]
 ];

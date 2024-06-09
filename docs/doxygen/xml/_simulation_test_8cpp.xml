@@ -207,7 +207,7 @@
 <codeline lineno="20" refid="_simulation_test_8cpp_1a26b65653dbc8b10b57767b80f92df2aa" refkind="member"><highlight class="normal"><ref refid="_simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2" kindref="member">TEST</ref>(SimulationTest,<sp/>processEvents)</highlight></codeline>
 <codeline lineno="21"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_simulation" kindref="compound">Simulation</ref><sp/>simulation;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>simulation.<ref refid="class_simulation_1a03b8112bc675326b413cb67664dcd361" kindref="member">processEvents</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>simulation.<ref refid="class_simulation_1a470014a191023a8e7a485491695d4c9d" kindref="member">processEvents</ref>();</highlight></codeline>
 <codeline lineno="24"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29" refid="_simulation_test_8cpp_1af69bc463335db94e30c8a973335caa26" refkind="member"><highlight class="normal"><ref refid="_simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2" kindref="member">TEST</ref>(SimulationTest,<sp/>conductCycle)</highlight></codeline>

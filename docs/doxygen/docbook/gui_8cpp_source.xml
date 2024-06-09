@@ -343,7 +343,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_gui_8cpp_source_1l00408"/>00408 <emphasis role="keywordtype">void</emphasis>&#32;GUI::updateTablesFromCSV()
 <anchor xml:id="_gui_8cpp_source_1l00409"/>00409 {
 <anchor xml:id="_gui_8cpp_source_1l00410"/>00410 &#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;raportList&#32;-&gt;&#32;setRowCount(0);
-<anchor xml:id="_gui_8cpp_source_1l00411"/>00411 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;cycles&#32;=&#32;-1;
+<anchor xml:id="_gui_8cpp_source_1l00411"/>00411 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;cycles&#32;=&#32;0;
 <anchor xml:id="_gui_8cpp_source_1l00412"/>00412 &#32;&#32;&#32;&#32;QFile&#32;report(<emphasis role="stringliteral">&quot;SimulationReport.csv&quot;</emphasis>);
 <anchor xml:id="_gui_8cpp_source_1l00413"/>00413 
 <anchor xml:id="_gui_8cpp_source_1l00414"/>00414 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!report.open(QIODevice::ReadOnly&#32;|&#32;QIODevice::Text))

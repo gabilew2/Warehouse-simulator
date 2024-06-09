@@ -123,31 +123,25 @@ $(function(){initNavTree('_sales_report_8cpp_source.html',''); initResizable(); 
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_report_1_1_product_report.html">ProductReport</a>&amp; product : productList)</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">static</span> <span class="keywordtype">int</span> initialQuantity = 0;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordtype">int</span> soldQuantity = abs(initialQuantity - product.quantity);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        initialQuantity = soldQuantity;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">if</span>(soldQuantity &lt;= 0)</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        report += QString(<span class="stringliteral">&quot;%1,%2,%3\n&quot;</span>)</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                      .arg(product.name)</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                      .arg(product.price)</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                      .arg(soldQuantity);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_function" href="class_report.html#a4fe97f7f77d99b1e925c6024ed7c3913">setNetProfit</a>(<a class="code hl_function" href="class_report.html#af98f7f1cb07d06b29c081974cfc9a830">getNetProfit</a>()+product.price * soldQuantity);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">if</span>(product.quantity &gt; 0)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            report += QString(<span class="stringliteral">&quot;%1,%2,%3\n&quot;</span>)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                          .arg(product.name)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                          .arg(product.price)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                          .arg(product.quantity);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <a class="code hl_function" href="class_report.html#a4fe97f7f77d99b1e925c6024ed7c3913">setNetProfit</a>(<a class="code hl_function" href="class_report.html#af98f7f1cb07d06b29c081974cfc9a830">getNetProfit</a>() + product.price * product.quantity);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_function" href="class_report.html#a4fe97f7f77d99b1e925c6024ed7c3913">setNetProfit</a>(<a class="code hl_function" href="class_report.html#af98f7f1cb07d06b29c081974cfc9a830">getNetProfit</a>()-<a class="code hl_function" href="class_report.html#a0280b260884973ffbb4ca95c438f30a6">getOperationalCosts</a>());</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    report += <a class="code hl_function" href="class_report.html#aab56d11c88e240affbc4b147474d4363">Report::generateReport</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_function" href="class_report.html#a4fe97f7f77d99b1e925c6024ed7c3913">setNetProfit</a>(<a class="code hl_function" href="class_report.html#af98f7f1cb07d06b29c081974cfc9a830">getNetProfit</a>()+<a class="code hl_function" href="class_report.html#a0280b260884973ffbb4ca95c438f30a6">getOperationalCosts</a>());</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_function" href="class_report.html#a4fe97f7f77d99b1e925c6024ed7c3913">setNetProfit</a>(<a class="code hl_function" href="class_report.html#af98f7f1cb07d06b29c081974cfc9a830">getNetProfit</a>()-<a class="code hl_function" href="class_report.html#a0280b260884973ffbb4ca95c438f30a6">getOperationalCosts</a>());</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    report += <a class="code hl_function" href="class_report.html#aab56d11c88e240affbc4b147474d4363">Report::generateReport</a>();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_function" href="class_report.html#a4fe97f7f77d99b1e925c6024ed7c3913">setNetProfit</a>(<a class="code hl_function" href="class_report.html#af98f7f1cb07d06b29c081974cfc9a830">getNetProfit</a>()+<a class="code hl_function" href="class_report.html#a0280b260884973ffbb4ca95c438f30a6">getOperationalCosts</a>());</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">return</span> report;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">return</span> report;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
 </div>
 <div class="ttc" id="a_sales_report_8h_html"><div class="ttname"><a href="_sales_report_8h.html">SalesReport.h</a></div><div class="ttdoc">Header file for the SalesReport class.</div></div>
 <div class="ttc" id="aclass_report_html"><div class="ttname"><a href="class_report.html">Report</a></div><div class="ttdoc">Represents a report in the store simulation.</div><div class="ttdef"><b>Definition</b> <a href="_report_8h_source.html#l00017">Report.h:18</a></div></div>

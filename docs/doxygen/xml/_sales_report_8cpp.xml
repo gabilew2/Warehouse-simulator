@@ -63,31 +63,25 @@
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_report_1_1_product_report" kindref="compound">ProductReport</ref>&amp;<sp/>product<sp/>:<sp/>productList)</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>initialQuantity<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>soldQuantity<sp/>=<sp/>abs(initialQuantity<sp/>-<sp/>product.quantity);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>initialQuantity<sp/>=<sp/>soldQuantity;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(soldQuantity<sp/>&lt;=<sp/>0)</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>report<sp/>+=<sp/>QString(</highlight><highlight class="stringliteral">&quot;%1,%2,%3\n&quot;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.arg(product.name)</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.arg(product.price)</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.arg(soldQuantity);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_report_1a4fe97f7f77d99b1e925c6024ed7c3913" kindref="member">setNetProfit</ref>(<ref refid="class_report_1af98f7f1cb07d06b29c081974cfc9a830" kindref="member">getNetProfit</ref>()+product.price<sp/>*<sp/>soldQuantity);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(product.quantity<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>report<sp/>+=<sp/>QString(</highlight><highlight class="stringliteral">&quot;%1,%2,%3\n&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.arg(product.name)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.arg(product.price)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.arg(product.quantity);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_report_1a4fe97f7f77d99b1e925c6024ed7c3913" kindref="member">setNetProfit</ref>(<ref refid="class_report_1af98f7f1cb07d06b29c081974cfc9a830" kindref="member">getNetProfit</ref>()<sp/>+<sp/>product.price<sp/>*<sp/>product.quantity);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_report_1a4fe97f7f77d99b1e925c6024ed7c3913" kindref="member">setNetProfit</ref>(<ref refid="class_report_1af98f7f1cb07d06b29c081974cfc9a830" kindref="member">getNetProfit</ref>()-<ref refid="class_report_1a0280b260884973ffbb4ca95c438f30a6" kindref="member">getOperationalCosts</ref>());</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>report<sp/>+=<sp/><ref refid="class_report_1aab56d11c88e240affbc4b147474d4363" kindref="member">Report::generateReport</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_report_1a4fe97f7f77d99b1e925c6024ed7c3913" kindref="member">setNetProfit</ref>(<ref refid="class_report_1af98f7f1cb07d06b29c081974cfc9a830" kindref="member">getNetProfit</ref>()+<ref refid="class_report_1a0280b260884973ffbb4ca95c438f30a6" kindref="member">getOperationalCosts</ref>());</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_report_1a4fe97f7f77d99b1e925c6024ed7c3913" kindref="member">setNetProfit</ref>(<ref refid="class_report_1af98f7f1cb07d06b29c081974cfc9a830" kindref="member">getNetProfit</ref>()-<ref refid="class_report_1a0280b260884973ffbb4ca95c438f30a6" kindref="member">getOperationalCosts</ref>());</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>report<sp/>+=<sp/><ref refid="class_report_1aab56d11c88e240affbc4b147474d4363" kindref="member">Report::generateReport</ref>();</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_report_1a4fe97f7f77d99b1e925c6024ed7c3913" kindref="member">setNetProfit</ref>(<ref refid="class_report_1af98f7f1cb07d06b29c081974cfc9a830" kindref="member">getNetProfit</ref>()+<ref refid="class_report_1a0280b260884973ffbb4ca95c438f30a6" kindref="member">getOperationalCosts</ref>());</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>report;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>report;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/SalesReport/SalesReport.cpp"/>
   </compounddef>

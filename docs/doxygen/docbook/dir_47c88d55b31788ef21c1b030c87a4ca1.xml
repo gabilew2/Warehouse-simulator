@@ -6,10 +6,12 @@
     <title>Files    </title>
         <itemizedlist>
             <listitem><para>file <link linkend="__warehouse_8cpp">Warehouse.cpp</link></para>
+
+<para>Source file of the <link linkend="_class_warehouse">Warehouse</link> class. </para>
 </listitem>
             <listitem><para>file <link linkend="__warehouse_8h">Warehouse.h</link></para>
 
-<para>Source file of the <link linkend="_class_warehouse">Warehouse</link> class. </para>
+<para>Header file of the <link linkend="_class_warehouse">Warehouse</link> class. </para>
 </listitem>
         </itemizedlist>
 </simplesect>

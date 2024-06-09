@@ -33,7 +33,7 @@ The \fBSimulationThread\fP class is responsible for running the simulation in a 
 
 This class inherits from QThread and overrides the run method to execute the simulation\&. It emits a signal upon completion of the simulation to notify other components of its completion\&. 
 .PP
-Definition at line \fB47\fP of file \fBgui\&.h\fP\&.
+Definition at line \fB38\fP of file \fBgui\&.h\fP\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void SimulationThread::run ()\fR [inline]\fP, \fR [override]\fP"
@@ -41,7 +41,7 @@ Definition at line \fB47\fP of file \fBgui\&.h\fP\&.
 .PP
 Executes the simulation in a separate thread\&. This function overrides the run method from QThread and is called when the thread starts\&. It initializes a \fBSimulation\fP object and runs the simulation\&. Upon completion, it emits the simulationFinished signal\&. 
 .PP
-Definition at line \fB58\fP of file \fBgui\&.h\fP\&.
+Definition at line \fB49\fP of file \fBgui\&.h\fP\&.
 .SS "void SimulationThread::simulationFinished ()\fR [signal]\fP"
 
 .PP

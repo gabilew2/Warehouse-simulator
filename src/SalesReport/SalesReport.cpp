@@ -29,21 +29,15 @@ QString SalesReport::generateReport() const
 
     for(const ProductReport& product : productList)
     {
-        static int initialQuantity = 0;
-        int soldQuantity = abs(initialQuantity - product.quantity);
-        initialQuantity = soldQuantity;
-
-        if(soldQuantity <= 0)
+        if(product.quantity > 0)
         {
-            continue;
+            report += QString("%1,%2,%3\n")
+                          .arg(product.name)
+                          .arg(product.price)
+                          .arg(product.quantity);
+
+            setNetProfit(getNetProfit() + product.price * product.quantity);
         }
-
-        report += QString("%1,%2,%3\n")
-                      .arg(product.name)
-                      .arg(product.price)
-                      .arg(soldQuantity);
-
-        setNetProfit(getNetProfit()+product.price * soldQuantity);
     }
 
     setNetProfit(getNetProfit()-getOperationalCosts());

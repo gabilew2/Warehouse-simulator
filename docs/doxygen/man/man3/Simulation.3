@@ -29,7 +29,7 @@ Simulation \- The \fBSimulation\fP class manages the overall department store si
 .br
 .RI "Initiates the simulation by running the main loop\&. "
 .ti -1c
-.RI "void \fBprocessEvents\fP ()"
+.RI "\fBstatus\fP \fBprocessEvents\fP ()"
 .br
 .RI "Processes all scheduled events\&. "
 .ti -1c
@@ -51,7 +51,7 @@ Definition at line \fB28\fP of file \fBSimulation\&.h\fP\&.
 .PP
 Construct a new \fBSimulation\fP object\&. Sets up the initial state of the simulation, including loading settings and preparing the environment\&. 
 .PP
-Definition at line \fB6\fP of file \fBSimulation\&.cpp\fP\&.
+Definition at line \fB11\fP of file \fBSimulation\&.cpp\fP\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "\fBstatus\fP Simulation::conductCycle ()"
@@ -66,7 +66,7 @@ Status of the cycle (success or failure)\&.
 .PP
 
 .PP
-Definition at line \fB170\fP of file \fBSimulation\&.cpp\fP\&.
+Definition at line \fB191\fP of file \fBSimulation\&.cpp\fP\&.
 .SS "QString Simulation::generateReport ()"
 
 .PP
@@ -79,13 +79,20 @@ QString A summary report of the simulation results\&.
 .PP
 
 .PP
-Definition at line \fB298\fP of file \fBSimulation\&.cpp\fP\&.
-.SS "void Simulation::processEvents ()"
+Definition at line \fB332\fP of file \fBSimulation\&.cpp\fP\&.
+.SS "\fBstatus\fP Simulation::processEvents ()"
 
 .PP
 Processes all scheduled events\&. Invokes conductCycle to process events for the current cycle\&. 
 .PP
-Definition at line \fB159\fP of file \fBSimulation\&.cpp\fP\&.
+\fBReturns\fP
+.RS 4
+Status of proccessing events)\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB178\fP of file \fBSimulation\&.cpp\fP\&.
 .SS "\fBstatus\fP Simulation::respondToEvent (\fBEvent\fP & event)"
 
 .PP
@@ -103,13 +110,13 @@ Status of event handling (success or failure)\&.
 .PP
 
 .PP
-Definition at line \fB198\fP of file \fBSimulation\&.cpp\fP\&.
+Definition at line \fB229\fP of file \fBSimulation\&.cpp\fP\&.
 .SS "void Simulation::run ()"
 
 .PP
 Initiates the simulation by running the main loop\&. Starts the simulation loop, generating cycles, processing events, and generating reports\&. 
 .PP
-Definition at line \fB105\fP of file \fBSimulation\&.cpp\fP\&.
+Definition at line \fB110\fP of file \fBSimulation\&.cpp\fP\&.
 
 .SH "Author"
 .PP 

@@ -65,7 +65,7 @@
 
 <para>Get the location of the warehouse. </para>
 </listitem>
-            <listitem><para>QList&lt; <link linkend="_class_product">Product</link> &gt; <link linkend="_class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e">getProductList</link> () const</para>
+            <listitem><para>const QList&lt; <link linkend="_class_product">Product</link> &gt; <link linkend="_class_warehouse_1ad6743eb02619226c049192647fc96939">getProductList</link> () const</para>
 
 <para>Get the list of the products. </para>
 </listitem>
@@ -353,11 +353,11 @@ Parameters</title>
 <para>
 Definition at line <link linkend="__warehouse_8cpp_source_1l00205">205</link> of file <link linkend="__warehouse_8cpp_source">Warehouse.cpp</link>.</para>
 </section>
-<anchor xml:id="_class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e"/><section>
+<anchor xml:id="_class_warehouse_1ad6743eb02619226c049192647fc96939"/><section>
     <title>getProductList()</title>
 <indexterm><primary>getProductList</primary><secondary>Warehouse</secondary></indexterm>
 <indexterm><primary>Warehouse</primary><secondary>getProductList</secondary></indexterm>
-<para><computeroutput>QList&lt; <link linkend="_class_product">Product</link> &gt; Warehouse::getProductList ( ) const</computeroutput></para><para>
+<para><computeroutput>const QList&lt; <link linkend="_class_product">Product</link> &gt; Warehouse::getProductList ( ) const</computeroutput></para><para>
 
 <para>Get the list of the products. </para>
 </para>

@@ -9,12 +9,11 @@ var searchData=
   ['getnetprofit_6',['getNetProfit',['../class_report.html#af98f7f1cb07d06b29c081974cfc9a830',1,'Report']]],
   ['getoperationalcosts_7',['getOperationalCosts',['../class_report.html#a0280b260884973ffbb4ca95c438f30a6',1,'Report']]],
   ['getprice_8',['getPrice',['../class_product.html#a3be25f647260d61df6063ef706261c7f',1,'Product::getPrice()'],['../class_warehouse.html#aad96200e251b9e55dc51d6fd3dff9d56',1,'Warehouse::getPrice(int productId)']]],
-  ['getproductlist_9',['getProductList',['../class_warehouse.html#a4efdab42f0c8288c2a1654d86a67313e',1,'Warehouse']]],
+  ['getproductlist_9',['getProductList',['../class_warehouse.html#ad6743eb02619226c049192647fc96939',1,'Warehouse']]],
   ['getquantity_10',['getQuantity',['../class_product.html#a6a449b90b669aa4380d229b44eca686f',1,'Product::getQuantity()'],['../class_warehouse.html#a08808180a2c1f6db033a3ecc94b3c205',1,'Warehouse::getQuantity()']]],
   ['gettime_11',['getTime',['../class_event.html#a7dba066f88bda41545ea19491dc69760',1,'Event']]],
   ['gui_12',['GUI',['../class_g_u_i.html',1,'GUI'],['../class_g_u_i.html#aa73b900295e12a915b80f34c418f7653',1,'GUI::GUI()']]],
   ['gui_2ecpp_13',['gui.cpp',['../gui_8cpp.html',1,'']]],
   ['gui_2eh_14',['gui.h',['../gui_8h.html',1,'']]],
-  ['guielement_15',['GUIElement',['../gui_8h.html#a41dc4eccf37447afba3e984031346842',1,'gui.h']]],
-  ['guievent_16',['GUIEvent',['../gui_8h.html#a4bf30075a0d0136f8daa83c001a2d75e',1,'gui.h']]]
+  ['guielement_15',['GUIElement',['../gui_8h.html#a41dc4eccf37447afba3e984031346842',1,'gui.h']]]
 ];

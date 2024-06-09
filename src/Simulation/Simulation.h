@@ -70,8 +70,9 @@ public:
      * @brief Processes all scheduled events.
      *
      * Invokes conductCycle to process events for the current cycle.
+     * @return Status of proccessing events).
      */
-    void processEvents();
+    status processEvents();
 
     /**
      * @brief Generates a report summarizing simulation results.

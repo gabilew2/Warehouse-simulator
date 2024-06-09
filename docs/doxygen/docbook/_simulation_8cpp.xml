@@ -2,4 +2,16 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__simulation_8cpp" xml:lang="en-US">
 <title>src/Simulation/Simulation.cpp File Reference</title>
 <indexterm><primary>src/Simulation/Simulation.cpp</primary></indexterm>
-<programlisting linenumbering="unnumbered">#include &quot;Simulation.h&quot;<?linebreak?></programlisting></section>
+<para>
+
+<para>Source file for the <link linkend="_class_simulation">Simulation</link> class. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;Simulation.h&quot;<?linebreak?></programlisting><section>
+<title>Detailed Description</title>
+
+<para>Source file for the <link linkend="_class_simulation">Simulation</link> class. </para>
+<para>
+Definition in file <link linkend="__simulation_8cpp_source">Simulation.cpp</link>.</para>
+</section>
+</section>

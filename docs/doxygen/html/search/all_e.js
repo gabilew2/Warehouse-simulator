@@ -1,7 +1,13 @@
 var searchData=
 [
-  ['ui_0',['Ui',['../namespace_ui.html',1,'']]],
-  ['updategui_1',['updateGUI',['../class_g_u_i.html#ab313545b5c5cfe552a77ec342c69b617',1,'GUI']]],
-  ['updateprice_2',['updatePrice',['../class_product.html#af264aa2bae1159846e658148d44a621d',1,'Product::updatePrice()'],['../class_warehouse.html#af13dfa8e7d40770b45d28a7f19b6ea87',1,'Warehouse::updatePrice(double newPrice, int productId)']]],
-  ['updatestatus_3',['updateStatus',['../class_warehouse.html#a5b272ddafc481192f471de223c91f4eb',1,'Warehouse']]]
+  ['warehouse_0',['Warehouse',['../class_warehouse.html',1,'Warehouse'],['../class_warehouse.html#a436ed7c9254c6eca35764f8ec7b32192',1,'Warehouse::Warehouse()']]],
+  ['warehouse_20simulator_1',['Warehouse-simulator',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['warehouse_2ecpp_2',['Warehouse.cpp',['../_warehouse_8cpp.html',1,'']]],
+  ['warehouse_2eh_3',['Warehouse.h',['../_warehouse_8h.html',1,'']]],
+  ['warehouseid_4',['warehouseId',['../class_warehouse.html#a2f0e291212ae6770fe0c0494029a0d07',1,'Warehouse']]],
+  ['warehousereport_5',['WarehouseReport',['../class_warehouse_report.html',1,'WarehouseReport'],['../class_warehouse_report.html#abf15b4db1b71e7a1d2f91008fca126b7',1,'WarehouseReport::WarehouseReport()']]],
+  ['warehousereport_2ecpp_6',['WarehouseReport.cpp',['../_warehouse_report_8cpp.html',1,'']]],
+  ['warehousereport_2eh_7',['WarehouseReport.h',['../_warehouse_report_8h.html',1,'']]],
+  ['warehousereporttest_2ecpp_8',['WarehouseReportTest.cpp',['../_warehouse_report_test_8cpp.html',1,'']]],
+  ['warehousetest_2ecpp_9',['WarehouseTest.cpp',['../_warehouse_test_8cpp.html',1,'']]]
 ];

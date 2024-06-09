@@ -45,7 +45,7 @@
 
 <para>This class inherits from QThread and overrides the run method to execute the simulation. It emits a signal upon completion of the simulation to notify other components of its completion. </para>
 <para>
-Definition at line <link linkend="_gui_8h_source_1l00047">47</link> of file <link linkend="_gui_8h_source">gui.h</link>.</para>
+Definition at line <link linkend="_gui_8h_source_1l00038">38</link> of file <link linkend="_gui_8h_source">gui.h</link>.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -60,7 +60,7 @@ Definition at line <link linkend="_gui_8h_source_1l00047">47</link> of file <lin
 
 <para>This function overrides the run method from QThread and is called when the thread starts. It initializes a <link linkend="_class_simulation">Simulation</link> object and runs the simulation. Upon completion, it emits the simulationFinished signal. </para>
 <para>
-Definition at line <link linkend="_gui_8h_source_1l00058">58</link> of file <link linkend="_gui_8h_source">gui.h</link>.</para>
+Definition at line <link linkend="_gui_8h_source_1l00049">49</link> of file <link linkend="_gui_8h_source">gui.h</link>.</para>
 </section>
 <anchor xml:id="_class_simulation_thread_1a8ddb2d67e1c9e0f2e0602b015a52b648"/><section>
     <title>simulationFinished</title>

@@ -1,3 +1,8 @@
+/**
+ * @file Simulation.cpp
+ * @brief Source file for the Simulation class.
+ */
+
 #include "Simulation.h"
 
 /**
@@ -104,9 +109,7 @@ Simulation::Simulation()
  */
 void Simulation::run()
 {
-    std::cout << "Running simulation." << std::endl;
-
-    QString report;
+    std::cout << "Running simulation with " << currentCycle << " cycles." << std::endl;
 
     if(Warehouses.isEmpty())
     {
@@ -114,54 +117,72 @@ void Simulation::run()
         exit(1);
     }
 
-    generateReport();
-
     std::cout << "Generating cycles." << std::endl;
 
     int cycles = currentCycle;
 
     while(currentCycle > 0)
     {
-        int numberOfEvents = QRandomGenerator::global()->bounded(seed);
+        std::cout << "Processing cycle " << cycles - currentCycle << "." << std::endl;
+        int minProductsAvailable = std::numeric_limits<int>::max();
+        int totalProducts = 0;
 
-        for(int event = 0; event < numberOfEvents; ++event)
+        for (Warehouse& warehouse : Warehouses)
         {
-            events.append(Event::generateEvent("Sell product", seed));
-        }
-
-        for(Warehouse& warehouse : Warehouses)
-        {
-            if(warehouse.checkStatus() != FULLY)
+            const QList<Product>& productList = warehouse.getProductList();
+            if (productList.isEmpty())
             {
-                events.append(Event::generateEvent("Add Product", seed));
-                events.append(Event::generateEvent("Transfer Product", seed));
-                std::cout << "\033[33mWarning: Warehouse at " << warehouse.getLocation().toStdString()
-                          << " is full. Generated events to add more products or transfer them to another warehouse.\033[0m" << std::endl;
+                std::cout << "Warning: No products available in warehouse at " << warehouse.getLocation().toStdString() << std::endl;
+                continue;
+            }
+
+            int numberOfEvents = QRandomGenerator::global()->bounded(productList.size()) + 1;
+
+            std::cout << "Number of sale events to be generated for warehouse at " << warehouse.getLocation().toStdString() << ": " << numberOfEvents << std::endl;
+
+            for (int event = 0; event < numberOfEvents; ++event)
+            {
+                events.append(Event::generateEvent("Sell product", seed));
+                std::cout << "\033[33mInfo: Generating event - Sell product\033[0m" << std::endl;
             }
         }
 
-        std::cout << "Processing cycle." << std::endl;
-        processEvents();
+        if (events.isEmpty())
+        {
+            std::cout << "No events generated in this cycle." << std::endl;
+        }
+        else
+        {
+            QList<Warehouse> restoreWarehouse = Warehouses;
 
-        QString cycleReport = generateReport();
-        report.append(cycleReport);
-        std::cout << cycleReport.toStdString() << std::endl;
+            if (processEvents() == ERROR && currentCycle != cycles)
+            {
+                Warehouses = restoreWarehouse;
+            }
+
+            QString cycleReport = generateReport();
+            std::cout << cycleReport.toStdString() << std::endl;
+            events.clear();
+        }
+
+        std::cout << "Cycle " << cycles - currentCycle << " completed." << std::endl;
         currentCycle--;
     }
-
-    std::cout << report.toStdString() << std::endl;
-
+    std::cout << "Simulation completed." << std::endl;
 }
+
 
 /**
  * @brief Processes all scheduled events.
  */
-void Simulation::processEvents()
+status Simulation::processEvents()
 {
     if(conductCycle() == ERROR)
     {
         std::cout << "Error while processing cycle" << std::endl;
+        return ERROR;
     }
+    return SUCCESS;
 }
 
 /**
@@ -171,12 +192,17 @@ status Simulation::conductCycle()
 {
     qint64 deltaTime = 0;
 
+    int successEvents = 0;
+
     for(Event& event : events)
     {
-        if(!respondToEvent(event))
+        if(respondToEvent(event) == ERROR)
         {
             std::cout << "Error while processing event." << std::endl;
-            return ERROR;
+        }
+        else
+        {
+            successEvents++;
         }
 
         QDateTime Time = event.getTime();
@@ -185,6 +211,11 @@ status Simulation::conductCycle()
         {
             deltaTime = Time.msecsTo(currentTime);
         }
+    }
+
+    if(successEvents == 0)
+    {
+        return ERROR;
     }
 
     events.clear();
@@ -204,11 +235,20 @@ status Simulation::respondToEvent(Event& event)
     {
         try
         {
-            int productId = QRandomGenerator::global() -> bounded(warehouse.getProductList().size()) + 1;
-            status result = warehouse.sell(1, productId);
-            if(result == ERROR)
+            const QList<Product>& productList = warehouse.getProductList();
+            if (productList.isEmpty())
             {
-                std::cerr << "ERROR: Unable to sell product." << std::endl;
+                std::cerr << "ERROR: No products to sell." << std::endl;
+                return ERROR;
+            }
+
+            int productId = QRandomGenerator::global()->bounded(productList.size()) + productList.begin()->productId;
+            std::cout << "Attempting to sell" << productId;
+            status result = warehouse.sell(1, productId);
+
+            if (result == ERROR)
+            {
+                std::cout << "ERROR: Unable to sell product. Product doesn't exists." << std::endl;
                 return ERROR;
             }
         }
@@ -218,15 +258,22 @@ status Simulation::respondToEvent(Event& event)
             return ERROR;
         }
     }
-    else if(event.getEventType() == "Add product")
+    else if (event.getEventType() == "Add product")
     {
         try
         {
-            int productId = QRandomGenerator::global() -> bounded(warehouse.getProductList().size()) + 1;
-            Product& product = warehouse.getProductList()[productId];
-            int additionalQuantity = 50;
-            status result = warehouse.changeQuantity(product.getQuantity() + additionalQuantity, productId);
-            if(result == ERROR)
+            const QList<Product>& productList = warehouse.getProductList();
+            int productId = QRandomGenerator::global()->bounded(productList.size());
+            const Product& product = productList[productId];
+
+            status result;
+
+            while(warehouse.checkStatus() != FULLY)
+            {
+                result = warehouse.changeQuantity(product.getQuantity() + 1, productId);
+            }
+
+            if (result == ERROR)
             {
                 std::cerr << "ERROR: Unable to add product quantity." << std::endl;
                 return ERROR;
@@ -238,41 +285,27 @@ status Simulation::respondToEvent(Event& event)
             return ERROR;
         }
     }
-    else if(event.getEventType() == "Transfer product")
+    else if (event.getEventType() == "Transfer product")
     {
         try
         {
-            int productId = QRandomGenerator::global() -> bounded(warehouse.getProductList().size()) + 1;
-            Product& productToTransfer = warehouse.getProductList()[productId];
-            QString productName = productToTransfer.getName();
+            const QList<Product>& productList = warehouse.getProductList();
+            int productId = QRandomGenerator::global()->bounded(productList.size());
+            const Product& productToTransfer = productList[productId];
 
             auto targetWarehouseIt = Warehouses.end();
             for (auto it = Warehouses.begin(); it != Warehouses.end(); ++it)
             {
-                Warehouse& w = *it;
-                double usedCapacity = 0;
-                for (Product& p : w.getProductList())
+                if (it->getLocation() != warehouse.getLocation() && it-> checkStatus() == FULLY)
                 {
-                    usedCapacity += p.getQuantity();
-                }
-                for (Product& p : w.getProductList())
-                {
-                    if (p.getName() == productName && w.getCurrentCapacity() > usedCapacity + productToTransfer.getQuantity())
-                    {
-                        targetWarehouseIt = it;
-                        break;
-                    }
-                }
-                if (targetWarehouseIt != Warehouses.end())
-                {
+                    targetWarehouseIt = it;
                     break;
                 }
             }
 
-            if(targetWarehouseIt != Warehouses.end())
+            if (targetWarehouseIt != Warehouses.end())
             {
                 Warehouse& targetWarehouse = *targetWarehouseIt;
-
                 int transferQuantity = productToTransfer.getQuantity();
                 warehouse.changeQuantity(warehouse.getQuantity(productId) - transferQuantity, productId);
                 targetWarehouse.changeQuantity(targetWarehouse.getQuantity(productId) + transferQuantity, productId);
@@ -289,6 +322,7 @@ status Simulation::respondToEvent(Event& event)
             return ERROR;
         }
     }
+
     return SUCCESS;
 }
 
@@ -305,8 +339,8 @@ QString Simulation::generateReport()
     for(Warehouse& warehouse : Warehouses)
     {
         QList<Report::ProductReport> productNames;
-        double featureOperationalCosts;
-        for(Product& product : warehouse.getProductList())
+        double featureOperationalCosts = 0;
+        for(const Product& product : warehouse.getProductList())
         {
             Report::ProductReport productReport;
             productReport.name = product.getName();
@@ -328,9 +362,6 @@ QString Simulation::generateReport()
         csvReport.append(warehouseReport.generateReport());
         csvReport.append(salesReport.generateReport());
     }
-
-    // Display the CSV report on the screen
-    std::cout << csvReport.toStdString() << std::endl;
 
     // Save the CSV report to a file
     QFile csvFile("SimulationReport.csv");

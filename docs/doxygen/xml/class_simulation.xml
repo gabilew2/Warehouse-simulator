@@ -95,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Simulation/Simulation.h" line="43" column="5" bodyfile="src/Simulation/Simulation.cpp" bodystart="6" bodyend="100"/>
+        <location file="src/Simulation/Simulation.h" line="43" column="5" bodyfile="src/Simulation/Simulation.cpp" bodystart="11" bodyend="105"/>
       </memberdef>
       <memberdef kind="function" id="class_simulation_1aa0e23779d0aa555ae836a646b8b1d715" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Simulation/Simulation.h" line="51" column="12" bodyfile="src/Simulation/Simulation.cpp" bodystart="170" bodyend="193"/>
+        <location file="src/Simulation/Simulation.h" line="51" column="12" bodyfile="src/Simulation/Simulation.cpp" bodystart="191" bodyend="224"/>
       </memberdef>
       <memberdef kind="function" id="class_simulation_1a0caa90613b0a2e52360c7cd6f5530023" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></type>
@@ -144,7 +144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Simulation/Simulation.h" line="60" column="12" bodyfile="src/Simulation/Simulation.cpp" bodystart="198" bodyend="293"/>
+        <location file="src/Simulation/Simulation.h" line="60" column="12" bodyfile="src/Simulation/Simulation.cpp" bodystart="229" bodyend="327"/>
       </memberdef>
       <memberdef kind="function" id="class_simulation_1ae5c367f87c0b5dc9740bc6d00e44e72c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -160,11 +160,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Simulation/Simulation.h" line="67" column="10" bodyfile="src/Simulation/Simulation.cpp" bodystart="105" bodyend="154"/>
+        <location file="src/Simulation/Simulation.h" line="67" column="10" bodyfile="src/Simulation/Simulation.cpp" bodystart="110" bodyend="172"/>
       </memberdef>
-      <memberdef kind="function" id="class_simulation_1a03b8112bc675326b413cb67664dcd361" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Simulation::processEvents</definition>
+      <memberdef kind="function" id="class_simulation_1a470014a191023a8e7a485491695d4c9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></type>
+        <definition>status Simulation::processEvents</definition>
         <argsstring>()</argsstring>
         <name>processEvents</name>
         <qualifiedname>Simulation::processEvents</qualifiedname>
@@ -172,11 +172,13 @@
 <para>Processes all scheduled events. </para>
         </briefdescription>
         <detaileddescription>
-<para>Invokes conductCycle to process events for the current cycle. </para>
+<para>Invokes conductCycle to process events for the current cycle. <simplesect kind="return"><para>Status of proccessing events). </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Simulation/Simulation.h" line="74" column="10" bodyfile="src/Simulation/Simulation.cpp" bodystart="159" bodyend="165"/>
+        <location file="src/Simulation/Simulation.h" line="75" column="12" bodyfile="src/Simulation/Simulation.cpp" bodystart="178" bodyend="186"/>
       </memberdef>
       <memberdef kind="function" id="class_simulation_1ac2a7464b86a88a8ff09766825836590b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>QString</type>
@@ -194,7 +196,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Simulation/Simulation.h" line="82" column="13" bodyfile="src/Simulation/Simulation.cpp" bodystart="298" bodyend="351"/>
+        <location file="src/Simulation/Simulation.h" line="83" column="13" bodyfile="src/Simulation/Simulation.cpp" bodystart="332" bodyend="382"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -203,14 +205,14 @@
     <detaileddescription>
 <para>This class orchestrates the simulation process, including event handling, warehouse management, product operations, and reporting. </para>
     </detaileddescription>
-    <location file="src/Simulation/Simulation.h" line="28" column="1" bodyfile="src/Simulation/Simulation.h" bodystart="29" bodyend="83"/>
+    <location file="src/Simulation/Simulation.h" line="28" column="1" bodyfile="src/Simulation/Simulation.h" bodystart="29" bodyend="84"/>
     <listofallmembers>
       <member refid="class_simulation_1aa0e23779d0aa555ae836a646b8b1d715" prot="public" virt="non-virtual"><scope>Simulation</scope><name>conductCycle</name></member>
       <member refid="class_simulation_1a47f7acf6a8bd01b4551d67e98b3f71ee" prot="private" virt="non-virtual"><scope>Simulation</scope><name>currentCycle</name></member>
       <member refid="class_simulation_1a155f9c035e9b4d97412d5a2c17cfd062" prot="private" virt="non-virtual"><scope>Simulation</scope><name>currentTime</name></member>
       <member refid="class_simulation_1a3f53a42acb878aed67118b0e6790ec80" prot="private" virt="non-virtual"><scope>Simulation</scope><name>events</name></member>
       <member refid="class_simulation_1ac2a7464b86a88a8ff09766825836590b" prot="public" virt="non-virtual"><scope>Simulation</scope><name>generateReport</name></member>
-      <member refid="class_simulation_1a03b8112bc675326b413cb67664dcd361" prot="public" virt="non-virtual"><scope>Simulation</scope><name>processEvents</name></member>
+      <member refid="class_simulation_1a470014a191023a8e7a485491695d4c9d" prot="public" virt="non-virtual"><scope>Simulation</scope><name>processEvents</name></member>
       <member refid="class_simulation_1a0caa90613b0a2e52360c7cd6f5530023" prot="public" virt="non-virtual"><scope>Simulation</scope><name>respondToEvent</name></member>
       <member refid="class_simulation_1ae5c367f87c0b5dc9740bc6d00e44e72c" prot="public" virt="non-virtual"><scope>Simulation</scope><name>run</name></member>
       <member refid="class_simulation_1a19603193117de9278f69b4e55b65268d" prot="private" virt="non-virtual"><scope>Simulation</scope><name>seed</name></member>

@@ -20,7 +20,7 @@ The \doxylink{class_simulation}{Simulation} class manages the overall department
 \begin{DoxyCompactList}\small\item\em Responds to a specific event. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_simulation_ae5c367f87c0b5dc9740bc6d00e44e72c}{run}} ()
 \begin{DoxyCompactList}\small\item\em Initiates the simulation by running the main loop. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_simulation_a03b8112bc675326b413cb67664dcd361}{process\+Events}} ()
+\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} \mbox{\hyperlink{class_simulation_a470014a191023a8e7a485491695d4c9d}{process\+Events}} ()
 \begin{DoxyCompactList}\small\item\em Processes all scheduled events. \end{DoxyCompactList}\item 
 QString \mbox{\hyperlink{class_simulation_ac2a7464b86a88a8ff09766825836590b}{generate\+Report}} ()
 \begin{DoxyCompactList}\small\item\em Generates a report summarizing simulation results. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -48,7 +48,7 @@ Construct a new \doxylink{class_simulation}{Simulation} object.
 
 Sets up the initial state of the simulation, including loading settings and preparing the environment. 
 
-Definition at line \mbox{\hyperlink{_simulation_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{_simulation_8cpp_source}{Simulation.\+cpp}}.
+Definition at line \mbox{\hyperlink{_simulation_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_simulation_8cpp_source}{Simulation.\+cpp}}.
 
 
 
@@ -68,7 +68,7 @@ Status of the cycle (success or failure).
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_simulation_8cpp_source_l00170}{170}} of file \mbox{\hyperlink{_simulation_8cpp_source}{Simulation.\+cpp}}.
+Definition at line \mbox{\hyperlink{_simulation_8cpp_source_l00191}{191}} of file \mbox{\hyperlink{_simulation_8cpp_source}{Simulation.\+cpp}}.
 
 \Hypertarget{class_simulation_ac2a7464b86a88a8ff09766825836590b}\label{class_simulation_ac2a7464b86a88a8ff09766825836590b} 
 \index{Simulation@{Simulation}!generateReport@{generateReport}}
@@ -85,21 +85,24 @@ QString A summary report of the simulation results.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_simulation_8cpp_source_l00298}{298}} of file \mbox{\hyperlink{_simulation_8cpp_source}{Simulation.\+cpp}}.
+Definition at line \mbox{\hyperlink{_simulation_8cpp_source_l00332}{332}} of file \mbox{\hyperlink{_simulation_8cpp_source}{Simulation.\+cpp}}.
 
-\Hypertarget{class_simulation_a03b8112bc675326b413cb67664dcd361}\label{class_simulation_a03b8112bc675326b413cb67664dcd361} 
+\Hypertarget{class_simulation_a470014a191023a8e7a485491695d4c9d}\label{class_simulation_a470014a191023a8e7a485491695d4c9d} 
 \index{Simulation@{Simulation}!processEvents@{processEvents}}
 \index{processEvents@{processEvents}!Simulation@{Simulation}}
 \doxysubsubsection{\texorpdfstring{processEvents()}{processEvents()}}
-{\footnotesize\ttfamily void Simulation\+::process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} Simulation\+::process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Processes all scheduled events. 
 
-Invokes conduct\+Cycle to process events for the current cycle. 
+Invokes conduct\+Cycle to process events for the current cycle. \begin{DoxyReturn}{Returns}
+Status of proccessing events). 
+\end{DoxyReturn}
 
-Definition at line \mbox{\hyperlink{_simulation_8cpp_source_l00159}{159}} of file \mbox{\hyperlink{_simulation_8cpp_source}{Simulation.\+cpp}}.
+
+Definition at line \mbox{\hyperlink{_simulation_8cpp_source_l00178}{178}} of file \mbox{\hyperlink{_simulation_8cpp_source}{Simulation.\+cpp}}.
 
 \Hypertarget{class_simulation_a0caa90613b0a2e52360c7cd6f5530023}\label{class_simulation_a0caa90613b0a2e52360c7cd6f5530023} 
 \index{Simulation@{Simulation}!respondToEvent@{respondToEvent}}
@@ -121,7 +124,7 @@ Status of event handling (success or failure).
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_simulation_8cpp_source_l00198}{198}} of file \mbox{\hyperlink{_simulation_8cpp_source}{Simulation.\+cpp}}.
+Definition at line \mbox{\hyperlink{_simulation_8cpp_source_l00229}{229}} of file \mbox{\hyperlink{_simulation_8cpp_source}{Simulation.\+cpp}}.
 
 \Hypertarget{class_simulation_ae5c367f87c0b5dc9740bc6d00e44e72c}\label{class_simulation_ae5c367f87c0b5dc9740bc6d00e44e72c} 
 \index{Simulation@{Simulation}!run@{run}}
@@ -135,7 +138,7 @@ Initiates the simulation by running the main loop.
 
 Starts the simulation loop, generating cycles, processing events, and generating reports. 
 
-Definition at line \mbox{\hyperlink{_simulation_8cpp_source_l00105}{105}} of file \mbox{\hyperlink{_simulation_8cpp_source}{Simulation.\+cpp}}.
+Definition at line \mbox{\hyperlink{_simulation_8cpp_source_l00110}{110}} of file \mbox{\hyperlink{_simulation_8cpp_source}{Simulation.\+cpp}}.
 
 
 

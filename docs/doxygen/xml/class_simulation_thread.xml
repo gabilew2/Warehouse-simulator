@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="58" column="10" bodyfile="src/gui/gui.h" bodystart="58" bodyend="63"/>
+        <location file="src/gui/gui.h" line="49" column="10" bodyfile="src/gui/gui.h" bodystart="49" bodyend="54"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="signal">
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/gui/gui.h" line="68" column="10"/>
+        <location file="src/gui/gui.h" line="59" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -67,7 +67,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/gui/gui.h" line="47" column="1" bodyfile="src/gui/gui.h" bodystart="48" bodyend="69"/>
+    <location file="src/gui/gui.h" line="38" column="1" bodyfile="src/gui/gui.h" bodystart="39" bodyend="60"/>
     <listofallmembers>
       <member refid="class_simulation_thread_1ac13a782fcf9163b7a6c3392e398d66b9" prot="public" virt="non-virtual"><scope>SimulationThread</scope><name>run</name></member>
       <member refid="class_simulation_thread_1a8ddb2d67e1c9e0f2e0602b015a52b648" prot="public" virt="non-virtual"><scope>SimulationThread</scope><name>simulationFinished</name></member>

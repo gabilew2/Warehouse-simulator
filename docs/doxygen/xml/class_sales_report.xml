@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/SalesReport/SalesReport.h" line="43" column="13" bodyfile="src/SalesReport/SalesReport.cpp" bodystart="21" bodyend="56"/>
+        <location file="src/SalesReport/SalesReport.h" line="43" column="13" bodyfile="src/SalesReport/SalesReport.cpp" bodystart="21" bodyend="50"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

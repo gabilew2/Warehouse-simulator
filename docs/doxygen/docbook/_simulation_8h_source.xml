@@ -34,10 +34,10 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="__simulation_8h_source_1l00061"/>00061 
 <anchor xml:id="__simulation_8h_source_1l00067"/>00067 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_simulation_1ae5c367f87c0b5dc9740bc6d00e44e72c">run</link>();
 <anchor xml:id="__simulation_8h_source_1l00068"/>00068 
-<anchor xml:id="__simulation_8h_source_1l00074"/>00074 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_simulation_1a03b8112bc675326b413cb67664dcd361">processEvents</link>();
-<anchor xml:id="__simulation_8h_source_1l00075"/>00075 
-<anchor xml:id="__simulation_8h_source_1l00082"/>00082 &#32;&#32;&#32;&#32;QString&#32;<link linkend="_class_simulation_1ac2a7464b86a88a8ff09766825836590b">generateReport</link>();
-<anchor xml:id="__simulation_8h_source_1l00083"/>00083 };
-<anchor xml:id="__simulation_8h_source_1l00084"/>00084 
-<anchor xml:id="__simulation_8h_source_1l00085"/>00085 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="__simulation_8h_source_1l00075"/>00075 &#32;&#32;&#32;&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link>&#32;<link linkend="_class_simulation_1a470014a191023a8e7a485491695d4c9d">processEvents</link>();
+<anchor xml:id="__simulation_8h_source_1l00076"/>00076 
+<anchor xml:id="__simulation_8h_source_1l00083"/>00083 &#32;&#32;&#32;&#32;QString&#32;<link linkend="_class_simulation_1ac2a7464b86a88a8ff09766825836590b">generateReport</link>();
+<anchor xml:id="__simulation_8h_source_1l00084"/>00084 };
+<anchor xml:id="__simulation_8h_source_1l00085"/>00085 
+<anchor xml:id="__simulation_8h_source_1l00086"/>00086 <emphasis role="preprocessor">#endif</emphasis>
 </programlisting></section>

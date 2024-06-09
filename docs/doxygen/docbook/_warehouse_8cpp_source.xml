@@ -214,7 +214,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="__warehouse_8cpp_source_1l00249"/>00249 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;location;
 <anchor xml:id="__warehouse_8cpp_source_1l00250"/>00250 }
 <anchor xml:id="__warehouse_8cpp_source_1l00251"/>00251 
-<anchor xml:id="__warehouse_8cpp_source_1l00255"/><link linkend="_class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e">00255</link> QList&lt;Product&gt;&#32;<link linkend="_class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e">Warehouse::getProductList</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="__warehouse_8cpp_source_1l00255"/><link linkend="_class_warehouse_1ad6743eb02619226c049192647fc96939">00255</link> <emphasis role="keyword">const</emphasis>&#32;QList&lt;Product&gt;&#32;<link linkend="_class_warehouse_1ad6743eb02619226c049192647fc96939">Warehouse::getProductList</link>()<emphasis role="keyword">&#32;const</emphasis>
 <anchor xml:id="__warehouse_8cpp_source_1l00256"/>00256 <emphasis role="keyword"></emphasis>{
 <anchor xml:id="__warehouse_8cpp_source_1l00257"/>00257 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;productList;
 <anchor xml:id="__warehouse_8cpp_source_1l00258"/>00258 }

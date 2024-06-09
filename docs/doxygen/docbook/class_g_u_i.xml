@@ -33,14 +33,6 @@
 
 <para>Renders the graphical user interface elements. </para>
 </listitem>
-            <listitem><para>void <link linkend="_class_g_u_i_1ab313545b5c5cfe552a77ec342c69b617">updateGUI</link> (<link linkend="_gui_8h_1a4bf30075a0d0136f8daa83c001a2d75e">GUIEvent</link> &amp;event)</para>
-
-<para>Updates the <link linkend="_class_g_u_i">GUI</link> based on the given event. </para>
-</listitem>
-            <listitem><para>void <link linkend="_class_g_u_i_1a0b4a1e6d6a100198309a25c11dde336c">handleEvents</link> (<link linkend="_gui_8h_1a4bf30075a0d0136f8daa83c001a2d75e">GUIEvent</link> &amp;event)</para>
-
-<para>Handles user-generated events. </para>
-</listitem>
         </itemizedlist>
 </simplesect>
 <section>
@@ -52,7 +44,7 @@
 
 <para>This class manages the user interface for the application. It sets up the main window and its associated widgets, and handles user interactions. </para>
 <para>
-Definition at line <link linkend="_gui_8h_source_1l00082">82</link> of file <link linkend="_gui_8h_source">gui.h</link>.</para>
+Definition at line <link linkend="_gui_8h_source_1l00073">73</link> of file <link linkend="_gui_8h_source">gui.h</link>.</para>
 </section>
 <section>
 <title>Constructor &amp; Destructor Documentation</title>
@@ -104,39 +96,6 @@ Definition at line <link linkend="_gui_8cpp_source_1l00025">25</link> of file <l
 </section>
 <section>
 <title>Member Function Documentation</title>
-<anchor xml:id="_class_g_u_i_1a0b4a1e6d6a100198309a25c11dde336c"/><section>
-    <title>handleEvents()</title>
-<indexterm><primary>handleEvents</primary><secondary>GUI</secondary></indexterm>
-<indexterm><primary>GUI</primary><secondary>handleEvents</secondary></indexterm>
-<para><computeroutput>void GUI::handleEvents (<link linkend="_gui_8h_1a4bf30075a0d0136f8daa83c001a2d75e">GUIEvent</link> &amp; event)</computeroutput></para><para>
-
-<para>Handles user-generated events. </para>
-</para>
-
-<para>This function processes user interactions (e.g., mouse clicks, keyboard input) and responds appropriately. It takes a GUIEvent as a parameter and performs actions based on the event type. For instance, it may execute a specific action when a button is clicked or update the <link linkend="_class_g_u_i">GUI</link> state when a key is pressed.</para>
-
-<para>
-                <formalpara>
-                    <title>
-Parameters</title>
-                    <para>
-                    <table frame="all">
-                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
-                        <colspec colwidth="1*"/>
-                        <colspec colwidth="4*"/>
-                        <tbody>
-                            <row>
-<entry>event</entry><entry>
-<para>The <link linkend="_class_g_u_i">GUI</link> event to handle. </para>
-</entry>
-                            </row>
-                        </tbody>
-                        </tgroup>
-                    </table>
-                    </para>
-                </formalpara>
-                </para>
-</section>
 <anchor xml:id="_class_g_u_i_1ae63efaa6d38814299c42540a5d4ea00b"/><section>
     <title>render()</title>
 <indexterm><primary>render</primary><secondary>GUI</secondary></indexterm>
@@ -149,39 +108,6 @@ Parameters</title>
 <para>This function is responsible for rendering the <link linkend="_class_g_u_i">GUI</link> elements on the screen. It ensures that all widgets (buttons, labels, etc.) are displayed correctly based on their current state and properties. </para>
 <para>
 Definition at line <link linkend="_gui_8cpp_source_1l00033">33</link> of file <link linkend="_gui_8cpp_source">gui.cpp</link>.</para>
-</section>
-<anchor xml:id="_class_g_u_i_1ab313545b5c5cfe552a77ec342c69b617"/><section>
-    <title>updateGUI()</title>
-<indexterm><primary>updateGUI</primary><secondary>GUI</secondary></indexterm>
-<indexterm><primary>GUI</primary><secondary>updateGUI</secondary></indexterm>
-<para><computeroutput>void GUI::updateGUI (<link linkend="_gui_8h_1a4bf30075a0d0136f8daa83c001a2d75e">GUIEvent</link> &amp; event)</computeroutput></para><para>
-
-<para>Updates the <link linkend="_class_g_u_i">GUI</link> based on the given event. </para>
-</para>
-
-<para>This function handles <link linkend="_class_g_u_i">GUI</link> updates triggered by specific events. It takes a GUIEvent as a parameter and modifies the <link linkend="_class_g_u_i">GUI</link> state or individual elements accordingly. For example, it may update the text of a label or enable/disable a button based on the event.</para>
-
-<para>
-                <formalpara>
-                    <title>
-Parameters</title>
-                    <para>
-                    <table frame="all">
-                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
-                        <colspec colwidth="1*"/>
-                        <colspec colwidth="4*"/>
-                        <tbody>
-                            <row>
-<entry>event</entry><entry>
-<para>The <link linkend="_class_g_u_i">GUI</link> event that triggers the update. </para>
-</entry>
-                            </row>
-                        </tbody>
-                        </tgroup>
-                    </table>
-                    </para>
-                </formalpara>
-                </para>
 </section>
 <para>
 The documentation for this class was generated from the following files:</para>

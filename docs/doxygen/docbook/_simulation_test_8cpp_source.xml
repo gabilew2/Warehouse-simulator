@@ -14,7 +14,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="__simulation_test_8cpp_source_1l00020"/><link linkend="__simulation_test_8cpp_1a26b65653dbc8b10b57767b80f92df2aa">00020</link> <link linkend="__simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2">TEST</link>(SimulationTest,&#32;processEvents)
 <anchor xml:id="__simulation_test_8cpp_source_1l00021"/>00021 {
 <anchor xml:id="__simulation_test_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<link linkend="_class_simulation">Simulation</link>&#32;simulation;
-<anchor xml:id="__simulation_test_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;simulation.<link linkend="_class_simulation_1a03b8112bc675326b413cb67664dcd361">processEvents</link>();
+<anchor xml:id="__simulation_test_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;simulation.<link linkend="_class_simulation_1a470014a191023a8e7a485491695d4c9d">processEvents</link>();
 <anchor xml:id="__simulation_test_8cpp_source_1l00024"/>00024 }
 <anchor xml:id="__simulation_test_8cpp_source_1l00025"/>00025 
 <anchor xml:id="__simulation_test_8cpp_source_1l00029"/><link linkend="__simulation_test_8cpp_1af69bc463335db94e30c8a973335caa26">00029</link> <link linkend="__simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2">TEST</link>(SimulationTest,&#32;conductCycle)

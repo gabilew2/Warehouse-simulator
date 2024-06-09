@@ -1,11 +1,24 @@
 var searchData=
 [
-  ['readme_2emd_0',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['render_1',['render',['../class_g_u_i.html#ae63efaa6d38814299c42540a5d4ea00b',1,'GUI']]],
-  ['report_2',['Report',['../class_report.html',1,'Report'],['../class_report.html#a36e8866b9ef8fefbe4491f15d96ed503',1,'Report::Report()']]],
-  ['report_2ecpp_3',['Report.cpp',['../_report_8cpp.html',1,'']]],
-  ['report_2eh_4',['Report.h',['../_report_8h.html',1,'']]],
-  ['reporttest_2ecpp_5',['ReportTest.cpp',['../_report_test_8cpp.html',1,'']]],
-  ['respondtoevent_6',['respondToEvent',['../class_simulation.html#a0caa90613b0a2e52360c7cd6f5530023',1,'Simulation']]],
-  ['run_7',['run',['../class_simulation_thread.html#ac13a782fcf9163b7a6c3392e398d66b9',1,'SimulationThread::run()'],['../class_simulation.html#ae5c367f87c0b5dc9740bc6d00e44e72c',1,'Simulation::run()']]]
+  ['salesreport_0',['SalesReport',['../class_sales_report.html',1,'SalesReport'],['../class_sales_report.html#a2bd4ee648c88804b8bbb581d1626c49f',1,'SalesReport::SalesReport()']]],
+  ['salesreport_2ecpp_1',['SalesReport.cpp',['../_sales_report_8cpp.html',1,'']]],
+  ['salesreport_2eh_2',['SalesReport.h',['../_sales_report_8h.html',1,'']]],
+  ['salesreporttest_2ecpp_3',['SalesReportTest.cpp',['../_sales_report_test_8cpp.html',1,'']]],
+  ['sell_4',['sell',['../class_product.html#ac914a618c6cedf1500f22a4e33ed4e83',1,'Product::sell()'],['../class_warehouse.html#a7ef00deb93a210331370beea2990c237',1,'Warehouse::sell()']]],
+  ['setnetprofit_5',['setNetProfit',['../class_report.html#a4fe97f7f77d99b1e925c6024ed7c3913',1,'Report']]],
+  ['setoperationalcosts_6',['setOperationalCosts',['../class_report.html#a7f5c6f19874a36e59c63051ab5b60400',1,'Report']]],
+  ['simulation_7',['Simulation',['../class_simulation.html',1,'Simulation'],['../class_simulation.html#a5b224cc5b36bcc8eb29689aff223de41',1,'Simulation::Simulation()']]],
+  ['simulation_2ecpp_8',['Simulation.cpp',['../_simulation_8cpp.html',1,'']]],
+  ['simulation_2eh_9',['Simulation.h',['../_simulation_8h.html',1,'']]],
+  ['simulationfinished_10',['simulationFinished',['../class_simulation_thread.html#a8ddb2d67e1c9e0f2e0602b015a52b648',1,'SimulationThread']]],
+  ['simulationtest_2ecpp_11',['SimulationTest.cpp',['../_simulation_test_8cpp.html',1,'']]],
+  ['simulationthread_12',['SimulationThread',['../class_simulation_thread.html',1,'']]],
+  ['simulator_13',['Warehouse-simulator',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['status_14',['status',['../_product_8h.html#a015eb90e0de9f16e87bd149d4b9ce959',1,'Product.h']]],
+  ['storage_15',['Storage',['../class_storage.html',1,'Storage'],['../class_storage.html#aa1694a20f74b18f46d68eb95d6d3f228',1,'Storage::Storage()']]],
+  ['storage_2ecpp_16',['Storage.cpp',['../_storage_8cpp.html',1,'']]],
+  ['storage_2eh_17',['Storage.h',['../_storage_8h.html',1,'']]],
+  ['storagestatus_18',['storageStatus',['../_storage_8h.html#aa3ad3663894c15a6c47a41a02d64e86f',1,'Storage.h']]],
+  ['storagetest_2ecpp_19',['StorageTest.cpp',['../_storage_test_8cpp.html',1,'']]],
+  ['success_20',['SUCCESS',['../_product_8h.html#a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8',1,'Product.h']]]
 ];

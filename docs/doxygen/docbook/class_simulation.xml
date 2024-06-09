@@ -29,7 +29,7 @@
 
 <para>Initiates the simulation by running the main loop. </para>
 </listitem>
-            <listitem><para>void <link linkend="_class_simulation_1a03b8112bc675326b413cb67664dcd361">processEvents</link> ()</para>
+            <listitem><para><link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link> <link linkend="_class_simulation_1a470014a191023a8e7a485491695d4c9d">processEvents</link> ()</para>
 
 <para>Processes all scheduled events. </para>
 </listitem>
@@ -63,7 +63,7 @@ Definition at line <link linkend="__simulation_8h_source_1l00028">28</link> of f
 
 <para>Sets up the initial state of the simulation, including loading settings and preparing the environment. </para>
 <para>
-Definition at line <link linkend="__simulation_8cpp_source_1l00006">6</link> of file <link linkend="__simulation_8cpp_source">Simulation.cpp</link>.</para>
+Definition at line <link linkend="__simulation_8cpp_source_1l00011">11</link> of file <link linkend="__simulation_8cpp_source">Simulation.cpp</link>.</para>
 </section>
 </section>
 <section>
@@ -83,7 +83,7 @@ Definition at line <link linkend="__simulation_8cpp_source_1l00006">6</link> of 
 </formalpara>
 </para>
 <para>
-Definition at line <link linkend="__simulation_8cpp_source_1l00170">170</link> of file <link linkend="__simulation_8cpp_source">Simulation.cpp</link>.</para>
+Definition at line <link linkend="__simulation_8cpp_source_1l00191">191</link> of file <link linkend="__simulation_8cpp_source">Simulation.cpp</link>.</para>
 </section>
 <anchor xml:id="_class_simulation_1ac2a7464b86a88a8ff09766825836590b"/><section>
     <title>generateReport()</title>
@@ -100,20 +100,24 @@ Definition at line <link linkend="__simulation_8cpp_source_1l00170">170</link> o
 </formalpara>
 </para>
 <para>
-Definition at line <link linkend="__simulation_8cpp_source_1l00298">298</link> of file <link linkend="__simulation_8cpp_source">Simulation.cpp</link>.</para>
+Definition at line <link linkend="__simulation_8cpp_source_1l00332">332</link> of file <link linkend="__simulation_8cpp_source">Simulation.cpp</link>.</para>
 </section>
-<anchor xml:id="_class_simulation_1a03b8112bc675326b413cb67664dcd361"/><section>
+<anchor xml:id="_class_simulation_1a470014a191023a8e7a485491695d4c9d"/><section>
     <title>processEvents()</title>
 <indexterm><primary>processEvents</primary><secondary>Simulation</secondary></indexterm>
 <indexterm><primary>Simulation</primary><secondary>processEvents</secondary></indexterm>
-<para><computeroutput>void Simulation::processEvents ( )</computeroutput></para><para>
+<para><computeroutput><link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link> Simulation::processEvents ( )</computeroutput></para><para>
 
 <para>Processes all scheduled events. </para>
 </para>
 
-<para>Invokes conductCycle to process events for the current cycle. </para>
+<para>Invokes conductCycle to process events for the current cycle. <formalpara><title>Returns</title>
+
+<para>Status of proccessing events). </para>
+</formalpara>
+</para>
 <para>
-Definition at line <link linkend="__simulation_8cpp_source_1l00159">159</link> of file <link linkend="__simulation_8cpp_source">Simulation.cpp</link>.</para>
+Definition at line <link linkend="__simulation_8cpp_source_1l00178">178</link> of file <link linkend="__simulation_8cpp_source">Simulation.cpp</link>.</para>
 </section>
 <anchor xml:id="_class_simulation_1a0caa90613b0a2e52360c7cd6f5530023"/><section>
     <title>respondToEvent()</title>
@@ -150,7 +154,7 @@ Parameters</title>
 </formalpara>
 </para>
 <para>
-Definition at line <link linkend="__simulation_8cpp_source_1l00198">198</link> of file <link linkend="__simulation_8cpp_source">Simulation.cpp</link>.</para>
+Definition at line <link linkend="__simulation_8cpp_source_1l00229">229</link> of file <link linkend="__simulation_8cpp_source">Simulation.cpp</link>.</para>
 </section>
 <anchor xml:id="_class_simulation_1ae5c367f87c0b5dc9740bc6d00e44e72c"/><section>
     <title>run()</title>
@@ -163,7 +167,7 @@ Definition at line <link linkend="__simulation_8cpp_source_1l00198">198</link> o
 
 <para>Starts the simulation loop, generating cycles, processing events, and generating reports. </para>
 <para>
-Definition at line <link linkend="__simulation_8cpp_source_1l00105">105</link> of file <link linkend="__simulation_8cpp_source">Simulation.cpp</link>.</para>
+Definition at line <link linkend="__simulation_8cpp_source_1l00110">110</link> of file <link linkend="__simulation_8cpp_source">Simulation.cpp</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following files:</para>

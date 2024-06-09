@@ -45,7 +45,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="__warehouse_8h_source_1l00118"/>00118 
 <anchor xml:id="__warehouse_8h_source_1l00119"/>00119 &#32;&#32;&#32;&#32;<emphasis role="comment">//Getters</emphasis>
 <anchor xml:id="__warehouse_8h_source_1l00120"/>00120 &#32;&#32;&#32;&#32;QString&#32;<link linkend="_class_warehouse_1a3f817148fcf0caf2ba0b6be2dd27809d">getLocation</link>()&#32;<emphasis role="keyword">const</emphasis>;&#32;&#32;&#32;&#32;&#32;&#32;
-<anchor xml:id="__warehouse_8h_source_1l00121"/>00121 &#32;&#32;&#32;&#32;QList&lt;Product&gt;&#32;<link linkend="_class_warehouse_1a4efdab42f0c8288c2a1654d86a67313e">getProductList</link>()&#32;<emphasis role="keyword">const</emphasis>;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__warehouse_8h_source_1l00121"/>00121 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;QList&lt;Product&gt;&#32;<link linkend="_class_warehouse_1ad6743eb02619226c049192647fc96939">getProductList</link>()&#32;<emphasis role="keyword">const</emphasis>;&#32;&#32;&#32;&#32;&#32;
 <anchor xml:id="__warehouse_8h_source_1l00122"/>00122 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_warehouse_1ad5eb7e2175f702204e9e628c6658f777">getCurrentCapacity</link>()&#32;<emphasis role="keyword">const</emphasis>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
 <anchor xml:id="__warehouse_8h_source_1l00123"/>00123 };
 <anchor xml:id="__warehouse_8h_source_1l00124"/>00124 

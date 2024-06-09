@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['warehouse_0',['Warehouse',['../class_warehouse.html#a436ed7c9254c6eca35764f8ec7b32192',1,'Warehouse']]],
-  ['warehousereport_1',['WarehouseReport',['../class_warehouse_report.html#abf15b4db1b71e7a1d2f91008fca126b7',1,'WarehouseReport']]]
+  ['_7egui_0',['~GUI',['../class_g_u_i.html#ac9cae2328dcb5d83bdfaeca49a2eb695',1,'GUI']]]
 ];

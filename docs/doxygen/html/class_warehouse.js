@@ -8,7 +8,7 @@ var class_warehouse =
     [ "getLocation", "class_warehouse.html#a3f817148fcf0caf2ba0b6be2dd27809d", null ],
     [ "getName", "class_warehouse.html#a52374d2018f3744d545803b9805bfa7e", null ],
     [ "getPrice", "class_warehouse.html#aad96200e251b9e55dc51d6fd3dff9d56", null ],
-    [ "getProductList", "class_warehouse.html#a4efdab42f0c8288c2a1654d86a67313e", null ],
+    [ "getProductList", "class_warehouse.html#ad6743eb02619226c049192647fc96939", null ],
     [ "getQuantity", "class_warehouse.html#a08808180a2c1f6db033a3ecc94b3c205", null ],
     [ "sell", "class_warehouse.html#a7ef00deb93a210331370beea2990c237", null ],
     [ "updatePrice", "class_warehouse.html#af13dfa8e7d40770b45d28a7f19b6ea87", null ],
