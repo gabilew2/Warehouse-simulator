@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_simulation_test_8cpp" kind="file" language="C++">
+    <compoundname>SimulationTest.cpp</compoundname>
+    <includes local="no">gtest/gtest.h</includes>
+    <includes refid="_simulation_8h" local="yes">Simulation/Simulation.h</includes>
+    <incdepgraph>
+      <node id="13">
+        <label>Event/Event.h</label>
+        <link refid="_event_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Product/Product.h</label>
+        <link refid="_product_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Report/Report.h</label>
+        <link refid="_report_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>SalesReport/SalesReport.h</label>
+        <link refid="_sales_report_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Simulation/Simulation.h</label>
+        <link refid="_simulation_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Storage/Storage.h</label>
+        <link refid="_storage_8h"/>
+      </node>
+      <node id="4">
+        <label>Warehouse/Warehouse.h</label>
+        <link refid="_warehouse_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>WarehouseReport/WarehouseReport.h</label>
+        <link refid="_warehouse_report_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>test/Simulation/SimulationTest.cpp</label>
+        <link refid="_simulation_test_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>QDateTime</label>
+      </node>
+      <node id="14">
+        <label>QFile</label>
+      </node>
+      <node id="8">
+        <label>QList</label>
+      </node>
+      <node id="15">
+        <label>QRandomGenerator</label>
+      </node>
+      <node id="7">
+        <label>QString</label>
+      </node>
+      <node id="2">
+        <label>gtest/gtest.h</label>
+      </node>
+      <node id="16">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(SimulationTest, itLives)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>SimulationTest</type>
+        </param>
+        <param>
+          <type>itLives</type>
+        </param>
+        <briefdescription>
+<para>Test to ensure that the constructor initializes the current time correctly. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Simulation/SimulationTest.cpp" line="12" column="1" bodyfile="test/Simulation/SimulationTest.cpp" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="_simulation_test_8cpp_1a26b65653dbc8b10b57767b80f92df2aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(SimulationTest, processEvents)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>SimulationTest</type>
+        </param>
+        <param>
+          <type>processEvents</type>
+        </param>
+        <briefdescription>
+<para>Test to validate the processEvents method. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Simulation/SimulationTest.cpp" line="20" column="1" bodyfile="test/Simulation/SimulationTest.cpp" bodystart="20" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="_simulation_test_8cpp_1af69bc463335db94e30c8a973335caa26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(SimulationTest, conductCycle)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>SimulationTest</type>
+        </param>
+        <param>
+          <type>conductCycle</type>
+        </param>
+        <briefdescription>
+<para>Test to check if the conductCycle method processes the simulation cycle correctly. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Simulation/SimulationTest.cpp" line="30" column="1" bodyfile="test/Simulation/SimulationTest.cpp" bodystart="30" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="_simulation_test_8cpp_1af6c06f4cec53cf42a47dfd064957530b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(SimulationTest, generateReport)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>SimulationTest</type>
+        </param>
+        <param>
+          <type>generateReport</type>
+        </param>
+        <briefdescription>
+<para>Test to ensure that the generateReport method produces a report. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Simulation/SimulationTest.cpp" line="40" column="1" bodyfile="test/Simulation/SimulationTest.cpp" bodystart="40" bodyend="47"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Source file of tests for the <ref refid="class_simulation" kindref="compound">Simulation</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gtest/gtest.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_simulation_8h" kindref="compound">Simulation/Simulation.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="_simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2" refkind="member"><highlight class="normal"><ref refid="_simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2" kindref="member">TEST</ref>(SimulationTest,<sp/>itLives)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_simulation" kindref="compound">Simulation</ref><sp/>simulation<sp/>=<sp/><ref refid="class_simulation" kindref="compound">Simulation</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="_simulation_test_8cpp_1a26b65653dbc8b10b57767b80f92df2aa" refkind="member"><highlight class="normal"><ref refid="_simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2" kindref="member">TEST</ref>(SimulationTest,<sp/>processEvents)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_simulation" kindref="compound">Simulation</ref><sp/>simulation;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/>result<sp/>=<sp/>simulation.<ref refid="class_simulation_1a470014a191023a8e7a485491695d4c9d" kindref="member">processEvents</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_EQ(result,<sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="_simulation_test_8cpp_1af69bc463335db94e30c8a973335caa26" refkind="member"><highlight class="normal"><ref refid="_simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2" kindref="member">TEST</ref>(SimulationTest,<sp/>conductCycle)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_simulation" kindref="compound">Simulation</ref><sp/>simulation;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/>result<sp/>=<sp/>simulation.<ref refid="class_simulation_1aa0e23779d0aa555ae836a646b8b1d715" kindref="member">conductCycle</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_EQ(result,<sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="_simulation_test_8cpp_1af6c06f4cec53cf42a47dfd064957530b" refkind="member"><highlight class="normal"><ref refid="_simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2" kindref="member">TEST</ref>(SimulationTest,<sp/>generateReport)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_simulation" kindref="compound">Simulation</ref><sp/>simulation;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>report<sp/>=<sp/>simulation.<ref refid="class_simulation_1ac2a7464b86a88a8ff09766825836590b" kindref="member">generateReport</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_TRUE(report.contains(</highlight><highlight class="stringliteral">&quot;Warehouse<sp/>ID,&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_TRUE(report.contains(</highlight><highlight class="stringliteral">&quot;Capacity&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_TRUE(report.contains(</highlight><highlight class="stringliteral">&quot;Product<sp/>Name,Price,Quantity&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="test/Simulation/SimulationTest.cpp"/>
+  </compounddef>
+</doxygen>

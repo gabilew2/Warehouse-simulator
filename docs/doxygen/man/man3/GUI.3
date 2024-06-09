@@ -1,0 +1,69 @@
+.TH "GUI" 3 "Version 1.0.0" "Warehouse Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GUI \- The \fBGUI\fP class inherits from QMainWindow and represents the main window of the application\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <gui\&.h>\fP
+.PP
+Inherits QMainWindow\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGUI\fP (\fBGUIElement\fP *parent=nullptr)"
+.br
+.RI "Constructor for the \fBGUI\fP class\&. "
+.ti -1c
+.RI "\fB~GUI\fP ()"
+.br
+.RI "Destructor for the \fBGUI\fP class\&. "
+.ti -1c
+.RI "void \fBrender\fP ()"
+.br
+.RI "Renders the graphical user interface elements\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBGUI\fP class inherits from QMainWindow and represents the main window of the application\&. 
+
+This class manages the user interface for the application\&. It sets up the main window and its associated widgets, and handles user interactions\&. 
+.PP
+Definition at line \fB73\fP of file \fBgui\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GUI::GUI (\fBGUIElement\fP * parent = \fRnullptr\fP)\fR [explicit]\fP"
+
+.PP
+Constructor for the \fBGUI\fP class\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP Pointer to the parent widget, if any\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB14\fP of file \fBgui\&.cpp\fP\&.
+.SS "GUI::~GUI ()"
+
+.PP
+Destructor for the \fBGUI\fP class\&. 
+.PP
+Definition at line \fB25\fP of file \fBgui\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void GUI::render ()"
+
+.PP
+Renders the graphical user interface elements\&. This function is responsible for rendering the \fBGUI\fP elements on the screen\&. It ensures that all widgets (buttons, labels, etc\&.) are displayed correctly based on their current state and properties\&. 
+.PP
+Definition at line \fB33\fP of file \fBgui\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Warehouse Simulator from the source code\&.

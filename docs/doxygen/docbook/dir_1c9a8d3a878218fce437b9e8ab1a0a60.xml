@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_1c9a8d3a878218fce437b9e8ab1a0a60" xml:lang="en-US">
+<title>test/Storage Directory Reference</title>
+<indexterm><primary>test/Storage Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__storage_test_8cpp">StorageTest.cpp</link></para>
+
+<para>Source file of tests for the <link linkend="_class_storage">Storage</link> class. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

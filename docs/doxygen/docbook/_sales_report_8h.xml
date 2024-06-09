@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__sales_report_8h" xml:lang="en-US">
+<title>src/SalesReport/SalesReport.h File Reference</title>
+<indexterm><primary>src/SalesReport/SalesReport.h</primary></indexterm>
+<para>
+
+<para>Header file for the <link linkend="_class_sales_report">SalesReport</link> class. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;Report/Report.h&quot;<?linebreak?>#include &lt;QDateTime&gt;<?linebreak?>#include &lt;QList&gt;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_sales_report">SalesReport</link></para>
+
+<para>The <link linkend="_class_sales_report">SalesReport</link> class extends the <link linkend="_class_report">Report</link> class to provide a report specifically for sales. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file for the <link linkend="_class_sales_report">SalesReport</link> class. </para>
+<para>
+Definition in file <link linkend="__sales_report_8h_source">SalesReport.h</link>.</para>
+</section>
+</section>

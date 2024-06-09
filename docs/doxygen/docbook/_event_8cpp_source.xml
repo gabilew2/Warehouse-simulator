@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__event_8cpp_source" xml:lang="en-US">
+<title>Event.cpp</title>
+<indexterm><primary>src/Event/Event.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__event_8cpp_source_1l00001"/>00001 
+<anchor xml:id="__event_8cpp_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__event_8h">Event.h</link>&quot;</emphasis>
+<anchor xml:id="__event_8cpp_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&lt;QRandomGenerator&gt;</emphasis>
+<anchor xml:id="__event_8cpp_source_1l00008"/>00008 
+<anchor xml:id="__event_8cpp_source_1l00012"/><link linkend="_class_event_1ad93a0e3be8c8738a36970319e7110389">00012</link> <link linkend="_class_event_1ad93a0e3be8c8738a36970319e7110389">Event::Event</link>(QString&#32;eventType,&#32;QDateTime&#32;time)
+<anchor xml:id="__event_8cpp_source_1l00013"/>00013 {
+<anchor xml:id="__event_8cpp_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<emphasis role="keyword">this</emphasis>&#32;-&gt;&#32;eventType&#32;=&#32;eventType;
+<anchor xml:id="__event_8cpp_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<emphasis role="keyword">this</emphasis>&#32;-&gt;&#32;time&#32;=&#32;time;
+<anchor xml:id="__event_8cpp_source_1l00016"/>00016 }
+<anchor xml:id="__event_8cpp_source_1l00017"/>00017 
+<anchor xml:id="__event_8cpp_source_1l00025"/><link linkend="_class_event_1a0a53e36a36fd4bfac0bb3d0de9cc521c">00025</link> <link linkend="_class_event">Event</link>&#32;<link linkend="_class_event_1a0a53e36a36fd4bfac0bb3d0de9cc521c">Event::generateEvent</link>(QString&#32;eventType,&#32;<emphasis role="keywordtype">int</emphasis>&#32;seed)
+<anchor xml:id="__event_8cpp_source_1l00026"/>00026 {
+<anchor xml:id="__event_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;QDateTime&#32;time&#32;=&#32;QDateTime::currentDateTime().addMSecs(QRandomGenerator::global()&#32;-&gt;&#32;bounded(seed));
+<anchor xml:id="__event_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_event_1ad93a0e3be8c8738a36970319e7110389">Event</link>(eventType,&#32;time);
+<anchor xml:id="__event_8cpp_source_1l00029"/>00029 }
+<anchor xml:id="__event_8cpp_source_1l00030"/>00030 
+<anchor xml:id="__event_8cpp_source_1l00031"/>00031 <emphasis role="comment">//&#32;Getters&#32;implementation</emphasis>
+<anchor xml:id="__event_8cpp_source_1l00032"/>00032 
+<anchor xml:id="__event_8cpp_source_1l00038"/><link linkend="_class_event_1a20074c3674655968a30e835b7e2e6cdb">00038</link> QString&#32;<link linkend="_class_event_1a20074c3674655968a30e835b7e2e6cdb">Event::getEventType</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="__event_8cpp_source_1l00039"/>00039 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="__event_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;eventType;
+<anchor xml:id="__event_8cpp_source_1l00041"/>00041 }
+<anchor xml:id="__event_8cpp_source_1l00042"/>00042 
+<anchor xml:id="__event_8cpp_source_1l00048"/><link linkend="_class_event_1a7dba066f88bda41545ea19491dc69760">00048</link> QDateTime&#32;<link linkend="_class_event_1a7dba066f88bda41545ea19491dc69760">Event::getTime</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="__event_8cpp_source_1l00049"/>00049 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="__event_8cpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;time;
+<anchor xml:id="__event_8cpp_source_1l00051"/>00051 }
+</programlisting></section>

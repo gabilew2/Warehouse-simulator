@@ -1,0 +1,59 @@
+\doxysection{src/gui/gui.h File Reference}
+\hypertarget{gui_8h}{}\label{gui_8h}\index{src/gui/gui.h@{src/gui/gui.h}}
+
+
+Header file for the \doxylink{class_g_u_i}{GUI} class.  
+
+
+{\ttfamily \#include $<$QMain\+Window$>$}\newline
+{\ttfamily \#include "{}Simulation/\+Simulation.\+h"{}}\newline
+{\ttfamily \#include $<$QMessage\+Box$>$}\newline
+{\ttfamily \#include $<$QFile\+Dialog$>$}\newline
+{\ttfamily \#include $<$QFile$>$}\newline
+{\ttfamily \#include $<$QText\+Stream$>$}\newline
+{\ttfamily \#include $<$QInput\+Dialog$>$}\newline
+{\ttfamily \#include $<$QTimer$>$}\newline
+{\ttfamily \#include $<$QThread$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_simulation_thread}{Simulation\+Thread}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{class_simulation_thread}{Simulation\+Thread} class is responsible for running the simulation in a separate thread. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_u_i}{GUI}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{class_g_u_i}{GUI} class inherits from QMain\+Window and represents the main window of the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_ui}{Ui}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{gui_8h_a41dc4eccf37447afba3e984031346842}{GUIElement}} = QWidget
+\begin{DoxyCompactList}\small\item\em Alias for QWidget representing \doxylink{class_g_u_i}{GUI} elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the \doxylink{class_g_u_i}{GUI} class. 
+
+Declares the \doxylink{class_g_u_i}{GUI} class and its members, which manage the user interface for the application. 
+
+Definition in file \mbox{\hyperlink{gui_8h_source}{gui.\+h}}.
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{gui_8h_a41dc4eccf37447afba3e984031346842}\label{gui_8h_a41dc4eccf37447afba3e984031346842} 
+\index{gui.h@{gui.h}!GUIElement@{GUIElement}}
+\index{GUIElement@{GUIElement}!gui.h@{gui.h}}
+\doxysubsubsection{\texorpdfstring{GUIElement}{GUIElement}}
+{\footnotesize\ttfamily \mbox{\hyperlink{gui_8h_a41dc4eccf37447afba3e984031346842}{GUIElement}} = QWidget}
+
+
+
+Alias for QWidget representing \doxylink{class_g_u_i}{GUI} elements. 
+
+GUIElement is an alias for QWidget and represents the basic unit of user interface elements in Qt. It can be used to refer to any widget that is part of the \doxylink{class_g_u_i}{GUI}, such as buttons, labels, text fields, etc. 
+
+Definition at line \mbox{\hyperlink{gui_8h_source_l00029}{29}} of file \mbox{\hyperlink{gui_8h_source}{gui.\+h}}.
+

@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_sales_report" xml:lang="en-US">
+<title>SalesReport Class Reference</title>
+<indexterm><primary>SalesReport</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_sales_report">SalesReport</link> class extends the <link linkend="_class_report">Report</link> class to provide a report specifically for sales. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;SalesReport.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SalesReport:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_sales_report.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_sales_report_1a2bd4ee648c88804b8bbb581d1626c49f">SalesReport</link> (int salesId, QDateTime time, QList&lt; <link linkend="_struct_report_1_1_product_report">ProductReport</link> &gt; productList, double operationalCosts, double netProfit)</para>
+
+<para>Construct a new <link linkend="_class_sales_report">SalesReport</link> object. </para>
+</listitem>
+            <listitem><para>QString <link linkend="_class_sales_report_1adbcc82fb8fa70e87cd4f12bf4f3537ae">generateReport</link> () const</para>
+
+<para>Generates a detailed sales report. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_sales_report">SalesReport</link> class extends the <link linkend="_class_report">Report</link> class to provide a report specifically for sales. </para>
+
+
+
+<para>This class inherits from <link linkend="_class_report">Report</link> and is responsible for generating a sales report, which includes details such as sales ID, time, and a list of products sold. </para>
+<para>
+Definition at line <link linkend="__sales_report_8h_source_1l00020">20</link> of file <link linkend="__sales_report_8h_source">SalesReport.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_sales_report_1a2bd4ee648c88804b8bbb581d1626c49f"/><section>
+    <title>SalesReport()</title>
+<indexterm><primary>SalesReport</primary><secondary>SalesReport</secondary></indexterm>
+<indexterm><primary>SalesReport</primary><secondary>SalesReport</secondary></indexterm>
+<para><computeroutput>SalesReport::SalesReport (int salesId, QDateTime time, QList&lt; <link linkend="_struct_report_1_1_product_report">ProductReport</link> &gt; productList, double operationalCosts, double netProfit)</computeroutput></para><para>
+
+<para>Construct a new <link linkend="_class_sales_report">SalesReport</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>salesId</entry><entry>
+<para>Unique identifier for the sales report. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>time</entry><entry>
+<para>The time when the report is generated. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>productList</entry><entry>
+<para>List of products included in the sales report. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>operationalCosts</entry><entry>
+<para>Operational costs of the store. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>netProfit</entry><entry>
+<para>Net profit of the store. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__sales_report_8cpp_source_1l00011">11</link> of file <link linkend="__sales_report_8cpp_source">SalesReport.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_sales_report_1adbcc82fb8fa70e87cd4f12bf4f3537ae"/><section>
+    <title>generateReport()</title>
+<indexterm><primary>generateReport</primary><secondary>SalesReport</secondary></indexterm>
+<indexterm><primary>SalesReport</primary><secondary>generateReport</secondary></indexterm>
+<para><computeroutput>QString SalesReport::generateReport ( ) const</computeroutput></para><para>
+
+<para>Generates a detailed sales report. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>QString A formatted string representing the sales report. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__sales_report_8cpp_source_1l00021">21</link> of file <link linkend="__sales_report_8cpp_source">SalesReport.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/SalesReport/<link linkend="__sales_report_8h">SalesReport.h</link>src/SalesReport/<link linkend="__sales_report_8cpp">SalesReport.cpp</link></section>
+</section>

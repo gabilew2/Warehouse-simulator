@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__storage_8cpp" xml:lang="en-US">
+<title>src/Storage/Storage.cpp File Reference</title>
+<indexterm><primary>src/Storage/Storage.cpp</primary></indexterm>
+<para>
+
+<para>Source file of the <link linkend="_class_storage">Storage</link> class. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;Storage.h&quot;<?linebreak?></programlisting><section>
+<title>Detailed Description</title>
+
+<para>Source file of the <link linkend="_class_storage">Storage</link> class. </para>
+<para>
+Definition in file <link linkend="__storage_8cpp_source">Storage.cpp</link>.</para>
+</section>
+</section>

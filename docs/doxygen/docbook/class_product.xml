@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_product" xml:lang="en-US">
+<title>Product Class Reference</title>
+<indexterm><primary>Product</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_product">Product</link> class represents a product with a name, price, and quantity. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Product.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_product_1a7d0e1fb8001c7be3380e383bc6cddfeb">Product</link> (int <link linkend="_class_product_1a62eb7009c46ed771b5136f878bb64c12">productId</link>, QString name, double price, int quantity)</para>
+
+<para>Construct a new <link linkend="_class_product">Product</link> object. </para>
+</listitem>
+            <listitem><para><link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link> <link linkend="_class_product_1ac914a618c6cedf1500f22a4e33ed4e83">sell</link> (int quantityToSell)</para>
+
+<para>Sell a quantity of the product. </para>
+</listitem>
+            <listitem><para><link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link> <link linkend="_class_product_1af264aa2bae1159846e658148d44a621d">updatePrice</link> (double newPrice)</para>
+
+<para>Update the price of the product. </para>
+</listitem>
+            <listitem><para><link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link> <link linkend="_class_product_1a351a61b8013eaca0afb924887ac1495c">changeQuantity</link> (int quantity)</para>
+
+<para>Change the quantity of the product. </para>
+</listitem>
+            <listitem><para>QString <link linkend="_class_product_1a4e07082760c0834ccc8cd44e44a6aae6">getName</link> () const</para>
+
+<para>Get the name of the product. </para>
+</listitem>
+            <listitem><para>double <link linkend="_class_product_1a3be25f647260d61df6063ef706261c7f">getPrice</link> () const</para>
+
+<para>Get the price of the product. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_product_1a6a449b90b669aa4380d229b44eca686f">getQuantity</link> () const</para>
+
+<para>Get the quantity of the product. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_product_1a62eb7009c46ed771b5136f878bb64c12">productId</link></para>
+
+<para>ID of the product. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_product">Product</link> class represents a product with a name, price, and quantity. </para>
+
+
+
+<para>This class provides methods to sell the product, update its price, and change its quantity. </para>
+<para>
+Definition at line <link linkend="__product_8h_source_1l00020">20</link> of file <link linkend="__product_8h_source">Product.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_product_1a7d0e1fb8001c7be3380e383bc6cddfeb"/><section>
+    <title>Product()</title>
+<indexterm><primary>Product</primary><secondary>Product</secondary></indexterm>
+<indexterm><primary>Product</primary><secondary>Product</secondary></indexterm>
+<para><computeroutput>Product::Product (int productId, QString name, double price, int quantity)</computeroutput></para><para>
+
+<para>Construct a new <link linkend="_class_product">Product</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>productId</entry><entry>
+<para>ID of the product. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>name</entry><entry>
+<para>Name of the product. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>price</entry><entry>
+<para>Price of the product. If negative, it will be set to 0. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>quantity</entry><entry>
+<para>Quantity of the product. If negative, it will be set to 0. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__product_8cpp_source_1l00011">11</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_product_1a351a61b8013eaca0afb924887ac1495c"/><section>
+    <title>changeQuantity()</title>
+<indexterm><primary>changeQuantity</primary><secondary>Product</secondary></indexterm>
+<indexterm><primary>Product</primary><secondary>changeQuantity</secondary></indexterm>
+<para><computeroutput><link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link> Product::changeQuantity (int quantity)</computeroutput></para><para>
+
+<para>Change the quantity of the product. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>quantity</entry><entry>
+<para>The new quantity of the product. Must be non-negative. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>status SUCCESS if the operation is successful, ERROR otherwise. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__product_8cpp_source_1l00076">76</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_product_1a4e07082760c0834ccc8cd44e44a6aae6"/><section>
+    <title>getName()</title>
+<indexterm><primary>getName</primary><secondary>Product</secondary></indexterm>
+<indexterm><primary>Product</primary><secondary>getName</secondary></indexterm>
+<para><computeroutput>QString Product::getName ( ) const</computeroutput></para><para>
+
+<para>Get the name of the product. </para>
+</para>
+<para>
+Definition at line <link linkend="__product_8cpp_source_1l00091">91</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_product_1a3be25f647260d61df6063ef706261c7f"/><section>
+    <title>getPrice()</title>
+<indexterm><primary>getPrice</primary><secondary>Product</secondary></indexterm>
+<indexterm><primary>Product</primary><secondary>getPrice</secondary></indexterm>
+<para><computeroutput>double Product::getPrice ( ) const</computeroutput></para><para>
+
+<para>Get the price of the product. </para>
+</para>
+<para>
+Definition at line <link linkend="__product_8cpp_source_1l00096">96</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_product_1a6a449b90b669aa4380d229b44eca686f"/><section>
+    <title>getQuantity()</title>
+<indexterm><primary>getQuantity</primary><secondary>Product</secondary></indexterm>
+<indexterm><primary>Product</primary><secondary>getQuantity</secondary></indexterm>
+<para><computeroutput>int Product::getQuantity ( ) const</computeroutput></para><para>
+
+<para>Get the quantity of the product. </para>
+</para>
+<para>
+Definition at line <link linkend="__product_8cpp_source_1l00101">101</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_product_1ac914a618c6cedf1500f22a4e33ed4e83"/><section>
+    <title>sell()</title>
+<indexterm><primary>sell</primary><secondary>Product</secondary></indexterm>
+<indexterm><primary>Product</primary><secondary>sell</secondary></indexterm>
+<para><computeroutput><link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link> Product::sell (int quantityToSell)</computeroutput></para><para>
+
+<para>Sell a quantity of the product. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>quantityToSell</entry><entry>
+<para>The quantity of the product to sell. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>status SUCCESS if the operation is successful, ERROR otherwise. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__product_8cpp_source_1l00039">39</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_product_1af264aa2bae1159846e658148d44a621d"/><section>
+    <title>updatePrice()</title>
+<indexterm><primary>updatePrice</primary><secondary>Product</secondary></indexterm>
+<indexterm><primary>Product</primary><secondary>updatePrice</secondary></indexterm>
+<para><computeroutput><link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link> Product::updatePrice (double newPrice)</computeroutput></para><para>
+
+<para>Update the price of the product. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>newPrice</entry><entry>
+<para>The new price of the product. Must be positive. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>status SUCCESS if the operation is successful, ERROR otherwise. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__product_8cpp_source_1l00060">60</link> of file <link linkend="__product_8cpp_source">Product.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_product_1a62eb7009c46ed771b5136f878bb64c12"/><section>
+    <title>productId</title>
+<indexterm><primary>productId</primary><secondary>Product</secondary></indexterm>
+<indexterm><primary>Product</primary><secondary>productId</secondary></indexterm>
+<para><computeroutput>int Product::productId</computeroutput></para><para>
+
+<para>ID of the product. </para>
+</para>
+<para>
+Definition at line <link linkend="__product_8h_source_1l00027">27</link> of file <link linkend="__product_8h_source">Product.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/Product/<link linkend="__product_8h">Product.h</link>src/Product/<link linkend="__product_8cpp">Product.cpp</link></section>
+</section>

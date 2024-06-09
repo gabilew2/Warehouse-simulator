@@ -1,0 +1,387 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__warehouse_test_8cpp" xml:lang="en-US">
+<title>test/Warehouse/WarehouseTest.cpp File Reference</title>
+<indexterm><primary>test/Warehouse/WarehouseTest.cpp</primary></indexterm>
+<para>
+
+<para>Source file of tests for the <link linkend="_class_warehouse">Warehouse</link> class. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;gtest/gtest.h&gt;<?linebreak?>#include &quot;Product/Product.h&quot;<?linebreak?>#include &quot;Warehouse/Warehouse.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a">TEST</link> (WarehouseTest, itLives)</para>
+
+<para>Test to ensure that a <link linkend="_class_warehouse">Warehouse</link> object can be instantiated. </para>
+</listitem>
+            <listitem><para><link linkend="__warehouse_test_8cpp_1a8061dd778455c5f1d4cb65524669c294">TEST</link> (WarehouseTest, checkStatusShouldReturnEmpty)</para>
+
+<para>Test to check if the warehouse status is EMPTY when capacity is zero or after products are removed. </para>
+</listitem>
+            <listitem><para><link linkend="__warehouse_test_8cpp_1a067bf9aa424412bbcb641e0f7bd2e83b">TEST</link> (WarehouseTest, checkStatusShouldReturnFully)</para>
+
+<para>Test to check if the warehouse status is FULLY when capacity is full or exceeded. </para>
+</listitem>
+            <listitem><para><link linkend="__warehouse_test_8cpp_1a536e4b1c144e8d1185f37ac49f1d37de">TEST</link> (WarehouseTest, checkStatusShouldReturnAvailable)</para>
+
+<para>Test to check if the warehouse status is AVAILABLE when capacity is not full. </para>
+</listitem>
+            <listitem><para><link linkend="__warehouse_test_8cpp_1a23a72169513eb311372d8eb3e6e48aad">TEST</link> (WarehouseTest, updateStatusShouldReturnSuccess)</para>
+
+<para>Test to verify that updateStatus successfully updates the warehouse&apos;s capacity. </para>
+</listitem>
+            <listitem><para><link linkend="__warehouse_test_8cpp_1a960cce29a41d2d18b79882d41fe032c3">TEST</link> (WarehouseTest, updateStatusShouldReturnError)</para>
+
+<para>Test to verify that updateStatus returns an error when given a negative capacity. </para>
+</listitem>
+            <listitem><para><link linkend="__warehouse_test_8cpp_1aacc7288042363ed681a96e703e8fbe39">TEST</link> (WarehouseTest, changeQuantityShouldReturnSuccess)</para>
+
+<para>Test to verify that changeQuantity successfully changes the quantity of a product. </para>
+</listitem>
+            <listitem><para><link linkend="__warehouse_test_8cpp_1a16bfb05084226cee8f606690479a09e6">TEST</link> (WarehouseTest, changeQuantityShouldReturnError)</para>
+
+<para>Test to verify that changeQuantity returns an error when given a negative quantity. </para>
+</listitem>
+            <listitem><para><link linkend="__warehouse_test_8cpp_1a654d3c8fb5e0b30c46a03e650d9fe297">TEST</link> (WarehouseTest, sellShouldReturnSuccess)</para>
+
+<para>Test to verify that sell successfully sells the product and decreases the quantity. </para>
+</listitem>
+            <listitem><para><link linkend="__warehouse_test_8cpp_1a034587e0529ebabe6b76add6c2613a4a">TEST</link> (WarehouseTest, sellShouldReturnError)</para>
+
+<para>Test to verify that sell returns an error when trying to sell more than available quantity. </para>
+</listitem>
+            <listitem><para><link linkend="__warehouse_test_8cpp_1a120fbded0e0d02848b2912a79cf0b5d0">TEST</link> (WarehouseTest, updatePriceShouldReturnSuccess)</para>
+
+<para>Test to verify that updatePrice successfully updates the price of a product. </para>
+</listitem>
+            <listitem><para><link linkend="__warehouse_test_8cpp_1af8f62530a618d91142629ff371699200">TEST</link> (WarehouseTest, updatePriceShouldReturnError)</para>
+
+<para>Test to verify that updatePrice returns an error when given a negative price. </para>
+</listitem>
+            <listitem><para><link linkend="__warehouse_test_8cpp_1a02e7c715b5a15d6dfe37ca944c664164">TEST</link> (WarehouseTest, addProductShouldReturnSuccess)</para>
+
+<para>Test to verify that addProduct successfully adds a product to the warehouse. </para>
+</listitem>
+            <listitem><para><link linkend="__warehouse_test_8cpp_1a3ce92373ef50aa0ee4d875a9848c9fdf">TEST</link> (WarehouseTest, addProductShouldReturnError)</para>
+
+<para>Test to verify that addProduct returns an error when given a negative price or quantity. </para>
+</listitem>
+            <listitem><para><link linkend="__warehouse_test_8cpp_1accfba332ac6e954da803caaa71df6a4e">TEST</link> (WarehouseTest, getLocationShouldReturnCorrectValue)</para>
+
+<para>Test to verify that getLocation returns the correct location of the warehouse. </para>
+</listitem>
+            <listitem><para><link linkend="__warehouse_test_8cpp_1aae417a8f392dba448568492f98984bf2">TEST</link> (WarehouseTest, getProductListShouldReturnCorrectValue)</para>
+
+<para>Test to verify that getProductList returns the correct list of products. </para>
+</listitem>
+            <listitem><para><link linkend="__warehouse_test_8cpp_1a87a9b63f7c60f10ac6376b8e43a49826">TEST</link> (WarehouseTest, getCurrentCapacityShouldReturnCorrectValue)</para>
+
+<para>Test to verify that getCurrentCapacity returns the correct current capacity of the warehouse. </para>
+</listitem>
+            <listitem><para><link linkend="__warehouse_test_8cpp_1a55f9d131a897000c48d3bc867b3f3bee">TEST</link> (WarehouseTest, getNameShouldReturnCorrectValue)</para>
+
+<para>Test to verify that getName returns the correct name of a product by its ID. </para>
+</listitem>
+            <listitem><para><link linkend="__warehouse_test_8cpp_1a70dae60776189e1769e9e307ceba1339">TEST</link> (WarehouseTest, getPriceShouldReturnCorrectValue)</para>
+
+<para>Test to verify that getPrice returns the correct price of a product by its ID. </para>
+</listitem>
+            <listitem><para><link linkend="__warehouse_test_8cpp_1ad155dc4ed06881722d52ea9a11b44f1e">TEST</link> (WarehouseTest, getQuantityShouldReturnCorrectValue)</para>
+
+<para>Test to verify that getQuantity returns the correct quantity of a product by its ID. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>const QString <link linkend="__warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7">testLocation</link> = &quot;Test Location&quot;</para>
+</listitem>
+            <listitem><para>const double <link linkend="__warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40">initialCapacity</link> = 100.0</para>
+</listitem>
+            <listitem><para>const QString <link linkend="__warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464">productName</link> = &quot;Test Product&quot;</para>
+</listitem>
+            <listitem><para>const double <link linkend="__warehouse_test_8cpp_1ae7a0715775e530e41d79b8c2e2fe8635">productPrice</link> = 10.0</para>
+</listitem>
+            <listitem><para>const int <link linkend="__warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069">productQuantity</link> = 20</para>
+</listitem>
+            <listitem><para>const int <link linkend="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923">productId</link> = 1</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Source file of tests for the <link linkend="_class_warehouse">Warehouse</link> class. </para>
+<para>
+Definition in file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__warehouse_test_8cpp_1a3ce92373ef50aa0ee4d875a9848c9fdf"/><section>
+    <title>TEST()<computeroutput>[1/20]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseTest , addProductShouldReturnError )</computeroutput></para><para>
+
+<para>Test to verify that addProduct returns an error when given a negative price or quantity. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00171">171</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1a02e7c715b5a15d6dfe37ca944c664164"/><section>
+    <title>TEST()<computeroutput>[2/20]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseTest , addProductShouldReturnSuccess )</computeroutput></para><para>
+
+<para>Test to verify that addProduct successfully adds a product to the warehouse. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00161">161</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1a16bfb05084226cee8f606690479a09e6"/><section>
+    <title>TEST()<computeroutput>[3/20]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseTest , changeQuantityShouldReturnError )</computeroutput></para><para>
+
+<para>Test to verify that changeQuantity returns an error when given a negative quantity. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00109">109</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1aacc7288042363ed681a96e703e8fbe39"/><section>
+    <title>TEST()<computeroutput>[4/20]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseTest , changeQuantityShouldReturnSuccess )</computeroutput></para><para>
+
+<para>Test to verify that changeQuantity successfully changes the quantity of a product. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00098">98</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1a536e4b1c144e8d1185f37ac49f1d37de"/><section>
+    <title>TEST()<computeroutput>[5/20]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseTest , checkStatusShouldReturnAvailable )</computeroutput></para><para>
+
+<para>Test to check if the warehouse status is AVAILABLE when capacity is not full. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00050">50</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1a8061dd778455c5f1d4cb65524669c294"/><section>
+    <title>TEST()<computeroutput>[6/20]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseTest , checkStatusShouldReturnEmpty )</computeroutput></para><para>
+
+<para>Test to check if the warehouse status is EMPTY when capacity is zero or after products are removed. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00021">21</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1a067bf9aa424412bbcb641e0f7bd2e83b"/><section>
+    <title>TEST()<computeroutput>[7/20]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseTest , checkStatusShouldReturnFully )</computeroutput></para><para>
+
+<para>Test to check if the warehouse status is FULLY when capacity is full or exceeded. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00035">35</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1a87a9b63f7c60f10ac6376b8e43a49826"/><section>
+    <title>TEST()<computeroutput>[8/20]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseTest , getCurrentCapacityShouldReturnCorrectValue )</computeroutput></para><para>
+
+<para>Test to verify that getCurrentCapacity returns the correct current capacity of the warehouse. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00205">205</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1accfba332ac6e954da803caaa71df6a4e"/><section>
+    <title>TEST()<computeroutput>[9/20]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseTest , getLocationShouldReturnCorrectValue )</computeroutput></para><para>
+
+<para>Test to verify that getLocation returns the correct location of the warehouse. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00180">180</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1a55f9d131a897000c48d3bc867b3f3bee"/><section>
+    <title>TEST()<computeroutput>[10/20]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseTest , getNameShouldReturnCorrectValue )</computeroutput></para><para>
+
+<para>Test to verify that getName returns the correct name of a product by its ID. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00214">214</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1a70dae60776189e1769e9e307ceba1339"/><section>
+    <title>TEST()<computeroutput>[11/20]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseTest , getPriceShouldReturnCorrectValue )</computeroutput></para><para>
+
+<para>Test to verify that getPrice returns the correct price of a product by its ID. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00224">224</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1aae417a8f392dba448568492f98984bf2"/><section>
+    <title>TEST()<computeroutput>[12/20]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseTest , getProductListShouldReturnCorrectValue )</computeroutput></para><para>
+
+<para>Test to verify that getProductList returns the correct list of products. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00189">189</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1ad155dc4ed06881722d52ea9a11b44f1e"/><section>
+    <title>TEST()<computeroutput>[13/20]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseTest , getQuantityShouldReturnCorrectValue )</computeroutput></para><para>
+
+<para>Test to verify that getQuantity returns the correct quantity of a product by its ID. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00234">234</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a"/><section>
+    <title>TEST()<computeroutput>[14/20]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseTest , itLives )</computeroutput></para><para>
+
+<para>Test to ensure that a <link linkend="_class_warehouse">Warehouse</link> object can be instantiated. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00013">13</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1a034587e0529ebabe6b76add6c2613a4a"/><section>
+    <title>TEST()<computeroutput>[15/20]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseTest , sellShouldReturnError )</computeroutput></para><para>
+
+<para>Test to verify that sell returns an error when trying to sell more than available quantity. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00130">130</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1a654d3c8fb5e0b30c46a03e650d9fe297"/><section>
+    <title>TEST()<computeroutput>[16/20]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseTest , sellShouldReturnSuccess )</computeroutput></para><para>
+
+<para>Test to verify that sell successfully sells the product and decreases the quantity. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00119">119</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1af8f62530a618d91142629ff371699200"/><section>
+    <title>TEST()<computeroutput>[17/20]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseTest , updatePriceShouldReturnError )</computeroutput></para><para>
+
+<para>Test to verify that updatePrice returns an error when given a negative price. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00151">151</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1a120fbded0e0d02848b2912a79cf0b5d0"/><section>
+    <title>TEST()<computeroutput>[18/20]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseTest , updatePriceShouldReturnSuccess )</computeroutput></para><para>
+
+<para>Test to verify that updatePrice successfully updates the price of a product. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00140">140</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1a960cce29a41d2d18b79882d41fe032c3"/><section>
+    <title>TEST()<computeroutput>[19/20]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseTest , updateStatusShouldReturnError )</computeroutput></para><para>
+
+<para>Test to verify that updateStatus returns an error when given a negative capacity. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00079">79</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1a23a72169513eb311372d8eb3e6e48aad"/><section>
+    <title>TEST()<computeroutput>[20/20]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (WarehouseTest , updateStatusShouldReturnSuccess )</computeroutput></para><para>
+
+<para>Test to verify that updateStatus successfully updates the warehouse&apos;s capacity. </para>
+</para>
+<para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00065">65</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="__warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40"/><section>
+    <title>initialCapacity</title>
+<indexterm><primary>initialCapacity</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>initialCapacity</secondary></indexterm>
+<para><computeroutput>const double initialCapacity = 100.0</computeroutput></para><para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00089">89</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923"/><section>
+    <title>productId</title>
+<indexterm><primary>productId</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>productId</secondary></indexterm>
+<para><computeroutput>const int productId = 1</computeroutput></para><para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00093">93</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464"/><section>
+    <title>productName</title>
+<indexterm><primary>productName</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>productName</secondary></indexterm>
+<para><computeroutput>const QString productName = &quot;Test Product&quot;</computeroutput></para><para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00090">90</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1ae7a0715775e530e41d79b8c2e2fe8635"/><section>
+    <title>productPrice</title>
+<indexterm><primary>productPrice</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>productPrice</secondary></indexterm>
+<para><computeroutput>const double productPrice = 10.0</computeroutput></para><para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00091">91</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069"/><section>
+    <title>productQuantity</title>
+<indexterm><primary>productQuantity</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>productQuantity</secondary></indexterm>
+<para><computeroutput>const int productQuantity = 20</computeroutput></para><para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00092">92</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7"/><section>
+    <title>testLocation</title>
+<indexterm><primary>testLocation</primary><secondary>WarehouseTest.cpp</secondary></indexterm>
+<indexterm><primary>WarehouseTest.cpp</primary><secondary>testLocation</secondary></indexterm>
+<para><computeroutput>const QString testLocation = &quot;Test Location&quot;</computeroutput></para><para>
+Definition at line <link linkend="__warehouse_test_8cpp_source_1l00088">88</link> of file <link linkend="__warehouse_test_8cpp_source">WarehouseTest.cpp</link>.</para>
+</section>
+</section>
+</section>

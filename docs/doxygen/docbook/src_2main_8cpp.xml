@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_src_2main_8cpp" xml:lang="en-US">
+<title>src/main.cpp File Reference</title>
+<indexterm><primary>src/main.cpp</primary></indexterm>
+<para>
+
+<para>Main entry point for the <link linkend="_class_warehouse">Warehouse</link> Simulator application. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;gui/gui.h&quot;<?linebreak?>#include &quot;Simulation/Simulation.h&quot;<?linebreak?>#include &lt;iostream&gt;<?linebreak?>#include &lt;QFile&gt;<?linebreak?>#include &lt;QTextStream&gt;<?linebreak?>#include &lt;QApplication&gt;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_src_2main_8cpp_1a33b82bd3673a70e9b7e2dc97aaf112f1">createConfigFile</link> ()</para>
+
+<para>Creates a configuration file for the simulation. </para>
+</listitem>
+            <listitem><para>int <link linkend="_src_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97">main</link> (int argc, char *argv[])</para>
+
+<para>Main function of the application. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Main entry point for the <link linkend="_class_warehouse">Warehouse</link> Simulator application. </para>
+<para>
+Definition in file <link linkend="_src_2main_8cpp_source">main.cpp</link>.</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_src_2main_8cpp_1a33b82bd3673a70e9b7e2dc97aaf112f1"/><section>
+    <title>createConfigFile()</title>
+<indexterm><primary>createConfigFile</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>createConfigFile</secondary></indexterm>
+<para><computeroutput>void createConfigFile ( )</computeroutput></para><para>
+
+<para>Creates a configuration file for the simulation. </para>
+</para>
+
+<para>This function prompts the user to configure the simulation settings and writes them to a CSV file named &quot;settings.csv&quot;. </para>
+<para>
+Definition at line <link linkend="_src_2main_8cpp_source_1l00019">19</link> of file <link linkend="_src_2main_8cpp_source">main.cpp</link>.</para>
+</section>
+<anchor xml:id="_src_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main (int argc, char * argv[])</computeroutput></para><para>
+
+<para>Main function of the application. </para>
+</para>
+
+<para>This function initializes the application, processes command-line arguments, and starts the <link linkend="_class_g_u_i">GUI</link> or simulation based on the provided options.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argc</entry><entry>
+<para>Number of command-line arguments. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>argv</entry><entry>
+<para>Array of command-line arguments. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Exit code of the application. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_src_2main_8cpp_source_1l00155">155</link> of file <link linkend="_src_2main_8cpp_source">main.cpp</link>.</para>
+</section>
+</section>
+</section>

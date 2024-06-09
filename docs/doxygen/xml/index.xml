@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.10.0" xml:lang="en-US">
+  <compound refid="class_event" kind="class"><name>Event</name>
+    <member refid="class_event_1a6fba6813629303cd3446995b1ba3d1d9" kind="variable"><name>eventType</name></member>
+    <member refid="class_event_1a8e8535e580b94779452e0e8412de0283" kind="variable"><name>time</name></member>
+    <member refid="class_event_1ad93a0e3be8c8738a36970319e7110389" kind="function"><name>Event</name></member>
+    <member refid="class_event_1a20074c3674655968a30e835b7e2e6cdb" kind="function"><name>getEventType</name></member>
+    <member refid="class_event_1a7dba066f88bda41545ea19491dc69760" kind="function"><name>getTime</name></member>
+    <member refid="class_event_1a0a53e36a36fd4bfac0bb3d0de9cc521c" kind="function"><name>generateEvent</name></member>
+  </compound>
+  <compound refid="class_g_u_i" kind="class"><name>GUI</name>
+    <member refid="class_g_u_i_1acdbca1224663f5a19bd1ad4e7c885886" kind="variable"><name>ui</name></member>
+    <member refid="class_g_u_i_1a964a4af08d465a285ca4852ed5e8c820" kind="variable"><name>warehouses</name></member>
+    <member refid="class_g_u_i_1af477d43b9f77815a2c24d8c1066c7c9f" kind="variable"><name>currentWarehouseIndex</name></member>
+    <member refid="class_g_u_i_1ab69db54e2e2715de8f67b2fd2d4d6e01" kind="variable"><name>filename</name></member>
+    <member refid="class_g_u_i_1aa1ae250851c54619cd79f213174551b9" kind="variable"><name>seed</name></member>
+    <member refid="class_g_u_i_1ade0e19aea11fad3504da5628183a214d" kind="variable"><name>cycles</name></member>
+    <member refid="class_g_u_i_1ac33a82b7f11accce2f194c3d96174d2c" kind="variable"><name>timer</name></member>
+    <member refid="class_g_u_i_1aa73b900295e12a915b80f34c418f7653" kind="function"><name>GUI</name></member>
+    <member refid="class_g_u_i_1ac9cae2328dcb5d83bdfaeca49a2eb695" kind="function"><name>~GUI</name></member>
+    <member refid="class_g_u_i_1ae63efaa6d38814299c42540a5d4ea00b" kind="function"><name>render</name></member>
+    <member refid="class_g_u_i_1aac91db8762d3507e0f7123de26c4f2a5" kind="slot"><name>on_addbutton_clicked</name></member>
+    <member refid="class_g_u_i_1ac9c94dd70c435067537350a48ef6dc71" kind="slot"><name>on_back_to_menu_clicked</name></member>
+    <member refid="class_g_u_i_1ae77cc6818ac9de4cf50f8e2101ba02f0" kind="slot"><name>on_back_to_menu_2_clicked</name></member>
+    <member refid="class_g_u_i_1a187b0fa4d29e12848156bb0cffa32231" kind="slot"><name>on_back_to_menu_3_clicked</name></member>
+    <member refid="class_g_u_i_1ac0667e8e8d78da1905d17ffa7f5b00fa" kind="slot"><name>on_settings_button_clicked</name></member>
+    <member refid="class_g_u_i_1ad01d82038fdc5e7f3154483c08b456a0" kind="slot"><name>on_start_simulation_button_clicked</name></member>
+    <member refid="class_g_u_i_1acbe4ad9b7ea40be19164cd456dcbdbf9" kind="slot"><name>on_aboutButton_clicked</name></member>
+    <member refid="class_g_u_i_1a150295294219357905e7c96769732e10" kind="slot"><name>on_configFileButton_clicked</name></member>
+    <member refid="class_g_u_i_1a995f9af1af33e0fd5c642f08bd5c8e14" kind="slot"><name>on_back_to_menu_7_clicked</name></member>
+    <member refid="class_g_u_i_1ade75f9798a3f44808e1a5855f789637f" kind="slot"><name>on_start_button_clicked</name></member>
+    <member refid="class_g_u_i_1a6f24aee8a41d0b43a20c8eda895aaa4f" kind="slot"><name>on_addProductButton_clicked</name></member>
+    <member refid="class_g_u_i_1ac05e159fa67fbe347118149007451a00" kind="slot"><name>on_removeButton_clicked</name></member>
+    <member refid="class_g_u_i_1a4ef4d846b489c87fb1ead2eba6c960c0" kind="slot"><name>on_previousWarehouse_clicked</name></member>
+    <member refid="class_g_u_i_1a07f5a3dd06c1bd112ee5ef29666c46e7" kind="slot"><name>on_nextWarehouse_clicked</name></member>
+    <member refid="class_g_u_i_1a40ce03585d77507e5caa629f5422ba18" kind="slot"><name>on_removeWarehouseButton_clicked</name></member>
+    <member refid="class_g_u_i_1a323876735bb64b4c3cd16107dd1a5014" kind="function"><name>loadCurrentWarehouseData</name></member>
+    <member refid="class_g_u_i_1a1673c513985e98439783eb4afd27d89a" kind="function"><name>setupUpdateTimer</name></member>
+    <member refid="class_g_u_i_1afce32c08ac98088c09413462f0ee62e5" kind="function"><name>updateTablesFromCSV</name></member>
+    <member refid="class_g_u_i_1a56c90d50ea5b9bb3feb713a757e7469e" kind="function"><name>onSimulationFinished</name></member>
+  </compound>
+  <compound refid="struct_g_u_i_1_1_product" kind="struct"><name>GUI::Product</name>
+    <member refid="struct_g_u_i_1_1_product_1a21a971b640f109fd21c506a4c41bab01" kind="variable"><name>name</name></member>
+    <member refid="struct_g_u_i_1_1_product_1ab5d9c7e45610a3b93a415ff98c8850c5" kind="variable"><name>price</name></member>
+    <member refid="struct_g_u_i_1_1_product_1a14d56d2e7e91f279e14ad6a126823bfb" kind="variable"><name>quantity</name></member>
+  </compound>
+  <compound refid="class_product" kind="class"><name>Product</name>
+    <member refid="class_product_1a63b5e01d74ec0610e6af42ab518c4666" kind="variable"><name>name</name></member>
+    <member refid="class_product_1abb2572df7a832a509944905603ba5e4f" kind="variable"><name>price</name></member>
+    <member refid="class_product_1a299430b8756aba9f6d44af46831791cc" kind="variable"><name>quantity</name></member>
+    <member refid="class_product_1a62eb7009c46ed771b5136f878bb64c12" kind="variable"><name>productId</name></member>
+    <member refid="class_product_1a7d0e1fb8001c7be3380e383bc6cddfeb" kind="function"><name>Product</name></member>
+    <member refid="class_product_1ac914a618c6cedf1500f22a4e33ed4e83" kind="function"><name>sell</name></member>
+    <member refid="class_product_1af264aa2bae1159846e658148d44a621d" kind="function"><name>updatePrice</name></member>
+    <member refid="class_product_1a351a61b8013eaca0afb924887ac1495c" kind="function"><name>changeQuantity</name></member>
+    <member refid="class_product_1a4e07082760c0834ccc8cd44e44a6aae6" kind="function"><name>getName</name></member>
+    <member refid="class_product_1a3be25f647260d61df6063ef706261c7f" kind="function"><name>getPrice</name></member>
+    <member refid="class_product_1a6a449b90b669aa4380d229b44eca686f" kind="function"><name>getQuantity</name></member>
+  </compound>
+  <compound refid="struct_report_1_1_product_report" kind="struct"><name>Report::ProductReport</name>
+    <member refid="struct_report_1_1_product_report_1a3b1c5f3c0e92b0761fe098a093e45db2" kind="variable"><name>name</name></member>
+    <member refid="struct_report_1_1_product_report_1a7dd6e2e624439db443cdbb842ef7651f" kind="variable"><name>price</name></member>
+    <member refid="struct_report_1_1_product_report_1a2ed7f9fdb7c63a739e76ade173d6cdc7" kind="variable"><name>quantity</name></member>
+  </compound>
+  <compound refid="class_report" kind="class"><name>Report</name>
+    <member refid="class_report_1a6dbe558fca94c7dba5e005365503d476" kind="variable"><name>operationalCosts</name></member>
+    <member refid="class_report_1a395280b122951348843086b6926aaa80" kind="variable"><name>netProfit</name></member>
+    <member refid="class_report_1a36e8866b9ef8fefbe4491f15d96ed503" kind="function"><name>Report</name></member>
+    <member refid="class_report_1aab56d11c88e240affbc4b147474d4363" kind="function"><name>generateReport</name></member>
+    <member refid="class_report_1a7f5c6f19874a36e59c63051ab5b60400" kind="function"><name>setOperationalCosts</name></member>
+    <member refid="class_report_1a4fe97f7f77d99b1e925c6024ed7c3913" kind="function"><name>setNetProfit</name></member>
+    <member refid="class_report_1a0280b260884973ffbb4ca95c438f30a6" kind="function"><name>getOperationalCosts</name></member>
+    <member refid="class_report_1af98f7f1cb07d06b29c081974cfc9a830" kind="function"><name>getNetProfit</name></member>
+  </compound>
+  <compound refid="class_sales_report" kind="class"><name>SalesReport</name>
+    <member refid="class_sales_report_1a945b44ec8a63ce1d414efe2fda95271f" kind="variable"><name>salesId</name></member>
+    <member refid="class_sales_report_1a043d0d10e44e013010d260a8e7dd7d10" kind="variable"><name>time</name></member>
+    <member refid="class_sales_report_1a833d47b3c6a2cb5da7357fe35d926cba" kind="variable"><name>productList</name></member>
+    <member refid="class_sales_report_1a2bd4ee648c88804b8bbb581d1626c49f" kind="function"><name>SalesReport</name></member>
+    <member refid="class_sales_report_1adbcc82fb8fa70e87cd4f12bf4f3537ae" kind="function"><name>generateReport</name></member>
+  </compound>
+  <compound refid="class_simulation" kind="class"><name>Simulation</name>
+    <member refid="class_simulation_1a47f7acf6a8bd01b4551d67e98b3f71ee" kind="variable"><name>currentCycle</name></member>
+    <member refid="class_simulation_1a19603193117de9278f69b4e55b65268d" kind="variable"><name>seed</name></member>
+    <member refid="class_simulation_1a3f53a42acb878aed67118b0e6790ec80" kind="variable"><name>events</name></member>
+    <member refid="class_simulation_1a155f9c035e9b4d97412d5a2c17cfd062" kind="variable"><name>currentTime</name></member>
+    <member refid="class_simulation_1a2bea4eff5890af0760699c19d5d6ddc2" kind="variable"><name>Warehouses</name></member>
+    <member refid="class_simulation_1a5b224cc5b36bcc8eb29689aff223de41" kind="function"><name>Simulation</name></member>
+    <member refid="class_simulation_1aa0e23779d0aa555ae836a646b8b1d715" kind="function"><name>conductCycle</name></member>
+    <member refid="class_simulation_1a0caa90613b0a2e52360c7cd6f5530023" kind="function"><name>respondToEvent</name></member>
+    <member refid="class_simulation_1ae5c367f87c0b5dc9740bc6d00e44e72c" kind="function"><name>run</name></member>
+    <member refid="class_simulation_1a470014a191023a8e7a485491695d4c9d" kind="function"><name>processEvents</name></member>
+    <member refid="class_simulation_1ac2a7464b86a88a8ff09766825836590b" kind="function"><name>generateReport</name></member>
+  </compound>
+  <compound refid="class_simulation_thread" kind="class"><name>SimulationThread</name>
+    <member refid="class_simulation_thread_1ac13a782fcf9163b7a6c3392e398d66b9" kind="function"><name>run</name></member>
+    <member refid="class_simulation_thread_1a8ddb2d67e1c9e0f2e0602b015a52b648" kind="signal"><name>simulationFinished</name></member>
+  </compound>
+  <compound refid="class_storage" kind="class"><name>Storage</name>
+    <member refid="class_storage_1a32a3a3044e508911dae197650dcf813e" kind="variable"><name>capacity</name></member>
+    <member refid="class_storage_1aa1694a20f74b18f46d68eb95d6d3f228" kind="function"><name>Storage</name></member>
+    <member refid="class_storage_1a21a267ec9e43c6147c56e56a347d5784" kind="function"><name>checkCapacity</name></member>
+  </compound>
+  <compound refid="struct_g_u_i_1_1_warehouse" kind="struct"><name>GUI::Warehouse</name>
+    <member refid="struct_g_u_i_1_1_warehouse_1a21fde63709ed4333ed1c761d1851243b" kind="variable"><name>id</name></member>
+    <member refid="struct_g_u_i_1_1_warehouse_1af05231202a10bb757fc1a7f12bf0eb2e" kind="variable"><name>capacity</name></member>
+    <member refid="struct_g_u_i_1_1_warehouse_1a82d06f8b6b8683dccad67a104efb6d10" kind="variable"><name>name</name></member>
+    <member refid="struct_g_u_i_1_1_warehouse_1ae84d94227814e868a7365ec8e486e58b" kind="variable"><name>products</name></member>
+  </compound>
+  <compound refid="class_warehouse" kind="class"><name>Warehouse</name>
+    <member refid="class_warehouse_1a69878e6b0791d43599d6ababfa049570" kind="variable"><name>location</name></member>
+    <member refid="class_warehouse_1a32113c2df46f2b67e15aa98c0ebf7f6a" kind="variable"><name>productList</name></member>
+    <member refid="class_warehouse_1ad20fb04679565b5a4cab733dafc50894" kind="variable"><name>warehouseCapacity</name></member>
+    <member refid="class_warehouse_1a2f0e291212ae6770fe0c0494029a0d07" kind="variable"><name>warehouseId</name></member>
+    <member refid="class_warehouse_1a436ed7c9254c6eca35764f8ec7b32192" kind="function"><name>Warehouse</name></member>
+    <member refid="class_warehouse_1ab5e7fee30cc7b17f6ed600c7e01f0887" kind="function"><name>checkStatus</name></member>
+    <member refid="class_warehouse_1a5b272ddafc481192f471de223c91f4eb" kind="function"><name>updateStatus</name></member>
+    <member refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kind="function"><name>addProduct</name></member>
+    <member refid="class_warehouse_1af13dfa8e7d40770b45d28a7f19b6ea87" kind="function"><name>updatePrice</name></member>
+    <member refid="class_warehouse_1a12c143bfa6b7443be317cc66897491e9" kind="function"><name>changeQuantity</name></member>
+    <member refid="class_warehouse_1a7ef00deb93a210331370beea2990c237" kind="function"><name>sell</name></member>
+    <member refid="class_warehouse_1a52374d2018f3744d545803b9805bfa7e" kind="function"><name>getName</name></member>
+    <member refid="class_warehouse_1aad96200e251b9e55dc51d6fd3dff9d56" kind="function"><name>getPrice</name></member>
+    <member refid="class_warehouse_1a08808180a2c1f6db033a3ecc94b3c205" kind="function"><name>getQuantity</name></member>
+    <member refid="class_warehouse_1a3f817148fcf0caf2ba0b6be2dd27809d" kind="function"><name>getLocation</name></member>
+    <member refid="class_warehouse_1ad6743eb02619226c049192647fc96939" kind="function"><name>getProductList</name></member>
+    <member refid="class_warehouse_1ad5eb7e2175f702204e9e628c6658f777" kind="function"><name>getCurrentCapacity</name></member>
+  </compound>
+  <compound refid="class_warehouse_report" kind="class"><name>WarehouseReport</name>
+    <member refid="class_warehouse_report_1abdbe88064119ba018ab97b8fbd069019" kind="variable"><name>warehouseId</name></member>
+    <member refid="class_warehouse_report_1a925a5441d593b18d2089a43cd07309dd" kind="variable"><name>capacity</name></member>
+    <member refid="class_warehouse_report_1a560c941c282d96d167eecfbd1705a8ae" kind="variable"><name>productList</name></member>
+    <member refid="class_warehouse_report_1abf15b4db1b71e7a1d2f91008fca126b7" kind="function"><name>WarehouseReport</name></member>
+    <member refid="class_warehouse_report_1a3a4c6655eb2584b3d842d0138b6e6ac9" kind="function"><name>generateReport</name></member>
+  </compound>
+  <compound refid="namespace_ui" kind="namespace"><name>Ui</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="_event_8cpp" kind="file"><name>Event.cpp</name>
+  </compound>
+  <compound refid="_event_8h" kind="file"><name>Event.h</name>
+  </compound>
+  <compound refid="gui_8cpp" kind="file"><name>gui.cpp</name>
+  </compound>
+  <compound refid="gui_8h" kind="file"><name>gui.h</name>
+    <member refid="gui_8h_1a41dc4eccf37447afba3e984031346842" kind="typedef"><name>GUIElement</name></member>
+  </compound>
+  <compound refid="src_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="src_2main_8cpp_1a33b82bd3673a70e9b7e2dc97aaf112f1" kind="function"><name>createConfigFile</name></member>
+    <member refid="src_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="test_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="test_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_product_8cpp" kind="file"><name>Product.cpp</name>
+  </compound>
+  <compound refid="_product_8h" kind="file"><name>Product.h</name>
+    <member refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kind="enum"><name>status</name></member>
+    <member refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kind="enumvalue"><name>SUCCESS</name></member>
+    <member refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kind="enumvalue"><name>ERROR</name></member>
+  </compound>
+  <compound refid="_report_8cpp" kind="file"><name>Report.cpp</name>
+  </compound>
+  <compound refid="_report_8h" kind="file"><name>Report.h</name>
+  </compound>
+  <compound refid="_sales_report_8cpp" kind="file"><name>SalesReport.cpp</name>
+  </compound>
+  <compound refid="_sales_report_8h" kind="file"><name>SalesReport.h</name>
+  </compound>
+  <compound refid="_simulation_8cpp" kind="file"><name>Simulation.cpp</name>
+  </compound>
+  <compound refid="_simulation_8h" kind="file"><name>Simulation.h</name>
+  </compound>
+  <compound refid="_storage_8cpp" kind="file"><name>Storage.cpp</name>
+  </compound>
+  <compound refid="_storage_8h" kind="file"><name>Storage.h</name>
+    <member refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86f" kind="enum"><name>storageStatus</name></member>
+    <member refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa2f0d18fc0d0fa4a6cd92dc328501874d" kind="enumvalue"><name>EMPTY</name></member>
+    <member refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa1e229ccb8b53a57de4ebb11c2d15272e" kind="enumvalue"><name>AVAILABLE</name></member>
+    <member refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa8fd6994b2300416d1ad947a50d833850" kind="enumvalue"><name>FULLY</name></member>
+  </compound>
+  <compound refid="_warehouse_8cpp" kind="file"><name>Warehouse.cpp</name>
+  </compound>
+  <compound refid="_warehouse_8h" kind="file"><name>Warehouse.h</name>
+  </compound>
+  <compound refid="_warehouse_report_8cpp" kind="file"><name>WarehouseReport.cpp</name>
+  </compound>
+  <compound refid="_warehouse_report_8h" kind="file"><name>WarehouseReport.h</name>
+  </compound>
+  <compound refid="_event_test_8cpp" kind="file"><name>EventTest.cpp</name>
+    <member refid="_event_test_8cpp_1a214e3d121f02b4fa5971edca99668626" kind="function"><name>TEST</name></member>
+    <member refid="_event_test_8cpp_1a6a7a17727afc00e53595ee22c45e48e7" kind="function"><name>TEST</name></member>
+  </compound>
+  <compound refid="_product_test_8cpp" kind="file"><name>ProductTest.cpp</name>
+    <member refid="_product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341" kind="function"><name>TEST</name></member>
+    <member refid="_product_test_8cpp_1aca16e75bd00c6aafd757aa5b97016c43" kind="function"><name>TEST</name></member>
+    <member refid="_product_test_8cpp_1a8cafa4a7e2e42d2eb7ba0ff05a752f52" kind="function"><name>TEST</name></member>
+    <member refid="_product_test_8cpp_1a24680dae582076e6fdd3675174974907" kind="function"><name>TEST</name></member>
+    <member refid="_product_test_8cpp_1a1df645a6d4641e8a0cbcdda4cd2baed9" kind="function"><name>TEST</name></member>
+    <member refid="_product_test_8cpp_1ab4b33d0aab882649445fb76b4bf4772a" kind="function"><name>TEST</name></member>
+    <member refid="_product_test_8cpp_1a2001a6aad064ce90391d9c7b2ba77668" kind="function"><name>TEST</name></member>
+    <member refid="_product_test_8cpp_1a66031b79869771178cd4282de57fa478" kind="function"><name>TEST</name></member>
+    <member refid="_product_test_8cpp_1a441a4e44dc64a2bd8e0a5b73ff93ec92" kind="function"><name>TEST</name></member>
+    <member refid="_product_test_8cpp_1aabd1480a5a311bb22ca89b02ac99f222" kind="function"><name>TEST</name></member>
+  </compound>
+  <compound refid="_report_test_8cpp" kind="file"><name>ReportTest.cpp</name>
+    <member refid="_report_test_8cpp_1a17644524137e2dbac16993cc14c93d04" kind="function"><name>TEST</name></member>
+    <member refid="_report_test_8cpp_1a70c9aaf81cbf005ad4aa89117010ef18" kind="function"><name>TEST</name></member>
+  </compound>
+  <compound refid="_sales_report_test_8cpp" kind="file"><name>SalesReportTest.cpp</name>
+    <member refid="_sales_report_test_8cpp_1ad19cf150662059de206d5fd6d5d8270e" kind="function"><name>TEST</name></member>
+    <member refid="_sales_report_test_8cpp_1a817bd67323dee9caf6ba8cd143ac789d" kind="function"><name>TEST</name></member>
+  </compound>
+  <compound refid="_simulation_test_8cpp" kind="file"><name>SimulationTest.cpp</name>
+    <member refid="_simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2" kind="function"><name>TEST</name></member>
+    <member refid="_simulation_test_8cpp_1a26b65653dbc8b10b57767b80f92df2aa" kind="function"><name>TEST</name></member>
+    <member refid="_simulation_test_8cpp_1af69bc463335db94e30c8a973335caa26" kind="function"><name>TEST</name></member>
+    <member refid="_simulation_test_8cpp_1af6c06f4cec53cf42a47dfd064957530b" kind="function"><name>TEST</name></member>
+  </compound>
+  <compound refid="_storage_test_8cpp" kind="file"><name>StorageTest.cpp</name>
+    <member refid="_storage_test_8cpp_1a1b22fe9aeb085abcac57c377738e5875" kind="function"><name>TEST</name></member>
+    <member refid="_storage_test_8cpp_1ade26c6ad971a84351528a16738b056a6" kind="function"><name>TEST</name></member>
+    <member refid="_storage_test_8cpp_1aad456949101b5328e0beaa3b0d59be77" kind="function"><name>TEST</name></member>
+    <member refid="_storage_test_8cpp_1a24b788d1e57b102603f7d66a66e5a8b4" kind="function"><name>TEST</name></member>
+  </compound>
+  <compound refid="_warehouse_test_8cpp" kind="file"><name>WarehouseTest.cpp</name>
+    <member refid="_warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7" kind="variable"><name>testLocation</name></member>
+    <member refid="_warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40" kind="variable"><name>initialCapacity</name></member>
+    <member refid="_warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464" kind="variable"><name>productName</name></member>
+    <member refid="_warehouse_test_8cpp_1ae7a0715775e530e41d79b8c2e2fe8635" kind="variable"><name>productPrice</name></member>
+    <member refid="_warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069" kind="variable"><name>productQuantity</name></member>
+    <member refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kind="variable"><name>productId</name></member>
+    <member refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kind="function"><name>TEST</name></member>
+    <member refid="_warehouse_test_8cpp_1a8061dd778455c5f1d4cb65524669c294" kind="function"><name>TEST</name></member>
+    <member refid="_warehouse_test_8cpp_1a067bf9aa424412bbcb641e0f7bd2e83b" kind="function"><name>TEST</name></member>
+    <member refid="_warehouse_test_8cpp_1a536e4b1c144e8d1185f37ac49f1d37de" kind="function"><name>TEST</name></member>
+    <member refid="_warehouse_test_8cpp_1a23a72169513eb311372d8eb3e6e48aad" kind="function"><name>TEST</name></member>
+    <member refid="_warehouse_test_8cpp_1a960cce29a41d2d18b79882d41fe032c3" kind="function"><name>TEST</name></member>
+    <member refid="_warehouse_test_8cpp_1aacc7288042363ed681a96e703e8fbe39" kind="function"><name>TEST</name></member>
+    <member refid="_warehouse_test_8cpp_1a16bfb05084226cee8f606690479a09e6" kind="function"><name>TEST</name></member>
+    <member refid="_warehouse_test_8cpp_1a654d3c8fb5e0b30c46a03e650d9fe297" kind="function"><name>TEST</name></member>
+    <member refid="_warehouse_test_8cpp_1a034587e0529ebabe6b76add6c2613a4a" kind="function"><name>TEST</name></member>
+    <member refid="_warehouse_test_8cpp_1a120fbded0e0d02848b2912a79cf0b5d0" kind="function"><name>TEST</name></member>
+    <member refid="_warehouse_test_8cpp_1af8f62530a618d91142629ff371699200" kind="function"><name>TEST</name></member>
+    <member refid="_warehouse_test_8cpp_1a02e7c715b5a15d6dfe37ca944c664164" kind="function"><name>TEST</name></member>
+    <member refid="_warehouse_test_8cpp_1a3ce92373ef50aa0ee4d875a9848c9fdf" kind="function"><name>TEST</name></member>
+    <member refid="_warehouse_test_8cpp_1accfba332ac6e954da803caaa71df6a4e" kind="function"><name>TEST</name></member>
+    <member refid="_warehouse_test_8cpp_1aae417a8f392dba448568492f98984bf2" kind="function"><name>TEST</name></member>
+    <member refid="_warehouse_test_8cpp_1a87a9b63f7c60f10ac6376b8e43a49826" kind="function"><name>TEST</name></member>
+    <member refid="_warehouse_test_8cpp_1a55f9d131a897000c48d3bc867b3f3bee" kind="function"><name>TEST</name></member>
+    <member refid="_warehouse_test_8cpp_1a70dae60776189e1769e9e307ceba1339" kind="function"><name>TEST</name></member>
+    <member refid="_warehouse_test_8cpp_1ad155dc4ed06881722d52ea9a11b44f1e" kind="function"><name>TEST</name></member>
+  </compound>
+  <compound refid="_warehouse_report_test_8cpp" kind="file"><name>WarehouseReportTest.cpp</name>
+    <member refid="_warehouse_report_test_8cpp_1ae9a1d770b7e8098452a6dd98ecebeede" kind="function"><name>TEST</name></member>
+    <member refid="_warehouse_report_test_8cpp_1ad584aba0a9d9a5df24f198ee9db878d6" kind="function"><name>TEST</name></member>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e" kind="page"><name>md__r_e_a_d_m_e</name>
+  </compound>
+  <compound refid="dir_15f30029a8909ed3f59c87794e60d5e7" kind="dir"><name>src/Event</name>
+  </compound>
+  <compound refid="dir_772313337797893b8e78cf65bed5e137" kind="dir"><name>test/Event</name>
+  </compound>
+  <compound refid="dir_99d0482cf009f9d97a0877749b817f19" kind="dir"><name>src/gui</name>
+  </compound>
+  <compound refid="dir_566d7036d5dc54528c1df2d5979a6ce0" kind="dir"><name>src/Product</name>
+  </compound>
+  <compound refid="dir_11a62a6baf0a40c6566461cad28c37c3" kind="dir"><name>test/Product</name>
+  </compound>
+  <compound refid="dir_041e6991085cae880e75aa845de990e7" kind="dir"><name>src/Report</name>
+  </compound>
+  <compound refid="dir_c1205cd39917725f2fd64b8460b1dd7c" kind="dir"><name>test/Report</name>
+  </compound>
+  <compound refid="dir_1d5b92995486d5a4019a0f8ee18ed974" kind="dir"><name>src/SalesReport</name>
+  </compound>
+  <compound refid="dir_2dfb497bfc5e22987e950bb3bd899ae8" kind="dir"><name>test/SalesReport</name>
+  </compound>
+  <compound refid="dir_c487c1b7f672be8b2885393524f3e6ab" kind="dir"><name>src/Simulation</name>
+  </compound>
+  <compound refid="dir_223f32cc89cd3418fc837e1cc2b02301" kind="dir"><name>test/Simulation</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_e61c19fe538542bbffa80d70b1734032" kind="dir"><name>src/Storage</name>
+  </compound>
+  <compound refid="dir_1c9a8d3a878218fce437b9e8ab1a0a60" kind="dir"><name>test/Storage</name>
+  </compound>
+  <compound refid="dir_13e138d54eb8818da29c3992edef070a" kind="dir"><name>test</name>
+  </compound>
+  <compound refid="dir_47c88d55b31788ef21c1b030c87a4ca1" kind="dir"><name>src/Warehouse</name>
+  </compound>
+  <compound refid="dir_ee3eab7a3c431e934262b701f19894ea" kind="dir"><name>test/Warehouse</name>
+  </compound>
+  <compound refid="dir_d0710d3ce778ced575457e2eabd15d4d" kind="dir"><name>src/WarehouseReport</name>
+  </compound>
+  <compound refid="dir_98811f75bea6e8a5608eeccd6b4a7c0d" kind="dir"><name>test/WarehouseReport</name>
+  </compound>
+</doxygenindex>

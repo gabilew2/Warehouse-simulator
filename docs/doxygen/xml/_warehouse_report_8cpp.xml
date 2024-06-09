@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_warehouse_report_8cpp" kind="file" language="C++">
+    <compoundname>WarehouseReport.cpp</compoundname>
+    <includes refid="_warehouse_report_8h" local="yes">WarehouseReport.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>Report/Report.h</label>
+        <link refid="_report_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/WarehouseReport/WarehouseReport.cpp</label>
+        <link refid="_warehouse_report_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WarehouseReport.h</label>
+        <link refid="_warehouse_report_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QList</label>
+      </node>
+      <node id="4">
+        <label>QString</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Source file of the <ref refid="class_warehouse_report" kindref="compound">WarehouseReport</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_warehouse_report_8h" kindref="compound">WarehouseReport.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_warehouse_report_1abf15b4db1b71e7a1d2f91008fca126b7" refkind="member"><highlight class="normal"><ref refid="class_warehouse_report_1abf15b4db1b71e7a1d2f91008fca126b7" kindref="member">WarehouseReport::WarehouseReport</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>warehouseId,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>capacity,<sp/>QList&lt;ProductReport&gt;<sp/>productList,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>operationalCosts,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>netProfit)<sp/>:<sp/><ref refid="class_report" kindref="compound">Report</ref>(operationalCosts,<sp/>netProfit)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>warehouseId<sp/>=<sp/>warehouseId;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>capacity<sp/>=<sp/>capacity;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>productList<sp/>=<sp/>productList;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_warehouse_report_1a3a4c6655eb2584b3d842d0138b6e6ac9" refkind="member"><highlight class="normal">QString<sp/><ref refid="class_warehouse_report_1a3a4c6655eb2584b3d842d0138b6e6ac9" kindref="member">WarehouseReport::generateReport</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="22"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>report;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>report<sp/>+=<sp/>QString(</highlight><highlight class="stringliteral">&quot;Warehouse<sp/>ID,Capacity\n%1,%2\n&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.arg(warehouseId)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.arg(capacity);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>report<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;Product<sp/>Name,Price,Quantity\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_report_1_1_product_report" kindref="compound">ProductReport</ref>&amp;<sp/>product<sp/>:<sp/>productList)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>report<sp/>+=<sp/>QString(</highlight><highlight class="stringliteral">&quot;%1,%2,%3\n&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.arg(product.name)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.arg(product.price)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.arg(product.quantity);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>report;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/WarehouseReport/WarehouseReport.cpp"/>
+  </compounddef>
+</doxygen>

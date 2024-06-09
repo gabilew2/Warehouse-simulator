@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__event_8h_source" xml:lang="en-US">
+<title>Event.h</title>
+<indexterm><primary>src/Event/Event.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__event_8h_source_1l00001"/>00001 
+<anchor xml:id="__event_8h_source_1l00006"/>00006 <emphasis role="preprocessor">#ifndef&#32;EVENT_H</emphasis>
+<anchor xml:id="__event_8h_source_1l00007"/>00007 <emphasis role="preprocessor">#define&#32;EVENT_H</emphasis>
+<anchor xml:id="__event_8h_source_1l00008"/>00008 
+<anchor xml:id="__event_8h_source_1l00009"/>00009 <emphasis role="preprocessor">#include&#32;&lt;QDateTime&gt;</emphasis>
+<anchor xml:id="__event_8h_source_1l00010"/>00010 
+<anchor xml:id="__event_8h_source_1l00017"/><link linkend="_class_event">00017</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_event">Event</link>
+<anchor xml:id="__event_8h_source_1l00018"/>00018 {
+<anchor xml:id="__event_8h_source_1l00019"/>00019 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="__event_8h_source_1l00020"/>00020 &#32;&#32;&#32;&#32;QString&#32;eventType;&#32;
+<anchor xml:id="__event_8h_source_1l00021"/>00021 &#32;&#32;&#32;&#32;QDateTime&#32;time;&#32;&#32;&#32;&#32;
+<anchor xml:id="__event_8h_source_1l00022"/>00022 
+<anchor xml:id="__event_8h_source_1l00023"/>00023 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__event_8h_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<link linkend="_class_event_1ad93a0e3be8c8738a36970319e7110389">Event</link>(QString&#32;eventType,&#32;QDateTime&#32;time);
+<anchor xml:id="__event_8h_source_1l00032"/>00032 
+<anchor xml:id="__event_8h_source_1l00041"/>00041 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_event">Event</link>&#32;<link linkend="_class_event_1a0a53e36a36fd4bfac0bb3d0de9cc521c">generateEvent</link>(QString&#32;eventType,&#32;<emphasis role="keywordtype">int</emphasis>&#32;seed);
+<anchor xml:id="__event_8h_source_1l00042"/>00042 
+<anchor xml:id="__event_8h_source_1l00043"/>00043 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Getters</emphasis>
+<anchor xml:id="__event_8h_source_1l00044"/>00044 &#32;&#32;&#32;&#32;QString&#32;<link linkend="_class_event_1a20074c3674655968a30e835b7e2e6cdb">getEventType</link>()&#32;<emphasis role="keyword">const</emphasis>;&#32;
+<anchor xml:id="__event_8h_source_1l00045"/>00045 &#32;&#32;&#32;&#32;QDateTime&#32;<link linkend="_class_event_1a7dba066f88bda41545ea19491dc69760">getTime</link>()&#32;<emphasis role="keyword">const</emphasis>;&#32;&#32;&#32;&#32;
+<anchor xml:id="__event_8h_source_1l00046"/>00046 };
+<anchor xml:id="__event_8h_source_1l00047"/>00047 
+<anchor xml:id="__event_8h_source_1l00048"/>00048 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;EVENT_H</emphasis>
+</programlisting></section>

@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_simulation_8h" kind="file" language="C++">
+    <compoundname>Simulation.h</compoundname>
+    <includes refid="_warehouse_8h" local="no">Warehouse/Warehouse.h</includes>
+    <includes refid="_warehouse_report_8h" local="no">WarehouseReport/WarehouseReport.h</includes>
+    <includes refid="_sales_report_8h" local="no">SalesReport/SalesReport.h</includes>
+    <includes refid="_event_8h" local="no">Event/Event.h</includes>
+    <includes local="no">QList</includes>
+    <includes local="no">QDateTime</includes>
+    <includes local="no">QFile</includes>
+    <includes local="no">QRandomGenerator</includes>
+    <includes local="no">iostream</includes>
+    <includedby refid="_simulation_8cpp" local="yes">src/Simulation/Simulation.cpp</includedby>
+    <includedby refid="gui_8h" local="yes">src/gui/gui.h</includedby>
+    <includedby refid="src_2main_8cpp" local="yes">src/main.cpp</includedby>
+    <includedby refid="_simulation_test_8cpp" local="yes">test/Simulation/SimulationTest.cpp</includedby>
+    <incdepgraph>
+      <node id="11">
+        <label>Event/Event.h</label>
+        <link refid="_event_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Product/Product.h</label>
+        <link refid="_product_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Report/Report.h</label>
+        <link refid="_report_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SalesReport/SalesReport.h</label>
+        <link refid="_sales_report_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/Simulation/Simulation.h</label>
+        <link refid="_simulation_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Storage/Storage.h</label>
+        <link refid="_storage_8h"/>
+      </node>
+      <node id="2">
+        <label>Warehouse/Warehouse.h</label>
+        <link refid="_warehouse_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>WarehouseReport/WarehouseReport.h</label>
+        <link refid="_warehouse_report_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>QDateTime</label>
+      </node>
+      <node id="12">
+        <label>QFile</label>
+      </node>
+      <node id="6">
+        <label>QList</label>
+      </node>
+      <node id="13">
+        <label>QRandomGenerator</label>
+      </node>
+      <node id="5">
+        <label>QString</label>
+      </node>
+      <node id="14">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/Simulation/Simulation.cpp</label>
+        <link refid="_simulation_8cpp"/>
+      </node>
+      <node id="1">
+        <label>src/Simulation/Simulation.h</label>
+        <link refid="_simulation_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/gui/gui.cpp</label>
+        <link refid="gui_8cpp"/>
+      </node>
+      <node id="3">
+        <label>src/gui/gui.h</label>
+        <link refid="gui_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/main.cpp</label>
+        <link refid="src_2main_8cpp"/>
+      </node>
+      <node id="6">
+        <label>test/Simulation/SimulationTest.cpp</label>
+        <link refid="_simulation_test_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_simulation" prot="public">Simulation</innerclass>
+    <briefdescription>
+<para>Header file for the <ref refid="class_simulation" kindref="compound">Simulation</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Declares the <ref refid="class_simulation" kindref="compound">Simulation</ref> class and its members, which are responsible for managing the overall department store simulation. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SIMULATION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIMULATION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_warehouse_8h" kindref="compound">Warehouse/Warehouse.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_warehouse_report_8h" kindref="compound">WarehouseReport/WarehouseReport.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_sales_report_8h" kindref="compound">SalesReport/SalesReport.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_event_8h" kindref="compound">Event/Event.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QList&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDateTime&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QFile&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QRandomGenerator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_simulation" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_simulation" kindref="compound">Simulation</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>currentCycle;<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seed;<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>QList&lt;Event&gt;<sp/>events;<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>QDateTime<sp/>currentTime;<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>QList&lt;Warehouse&gt;<sp/>Warehouses;<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_simulation_1a5b224cc5b36bcc8eb29689aff223de41" kindref="member">Simulation</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/><ref refid="class_simulation_1aa0e23779d0aa555ae836a646b8b1d715" kindref="member">conductCycle</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/><ref refid="class_simulation_1a0caa90613b0a2e52360c7cd6f5530023" kindref="member">respondToEvent</ref>(<ref refid="class_event" kindref="compound">Event</ref>&amp;<sp/>event);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_1ae5c367f87c0b5dc9740bc6d00e44e72c" kindref="member">run</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/><ref refid="class_simulation_1a470014a191023a8e7a485491695d4c9d" kindref="member">processEvents</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_simulation_1ac2a7464b86a88a8ff09766825836590b" kindref="member">generateReport</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/Simulation/Simulation.h"/>
+  </compounddef>
+</doxygen>

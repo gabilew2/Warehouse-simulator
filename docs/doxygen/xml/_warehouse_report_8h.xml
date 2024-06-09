@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_warehouse_report_8h" kind="file" language="C++">
+    <compoundname>WarehouseReport.h</compoundname>
+    <includes refid="_report_8h" local="no">Report/Report.h</includes>
+    <includes local="no">QList</includes>
+    <includedby refid="_simulation_8h" local="no">src/Simulation/Simulation.h</includedby>
+    <includedby refid="_warehouse_report_8cpp" local="yes">src/WarehouseReport/WarehouseReport.cpp</includedby>
+    <includedby refid="_warehouse_report_test_8cpp" local="yes">test/WarehouseReport/WarehouseReportTest.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>Report/Report.h</label>
+        <link refid="_report_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/WarehouseReport/WarehouseReport.h</label>
+        <link refid="_warehouse_report_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QList</label>
+      </node>
+      <node id="3">
+        <label>QString</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>src/Simulation/Simulation.cpp</label>
+        <link refid="_simulation_8cpp"/>
+      </node>
+      <node id="2">
+        <label>src/Simulation/Simulation.h</label>
+        <link refid="_simulation_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>src/WarehouseReport/WarehouseReport.cpp</label>
+        <link refid="_warehouse_report_8cpp"/>
+      </node>
+      <node id="1">
+        <label>src/WarehouseReport/WarehouseReport.h</label>
+        <link refid="_warehouse_report_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/gui/gui.cpp</label>
+        <link refid="gui_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/gui/gui.h</label>
+        <link refid="gui_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>src/main.cpp</label>
+        <link refid="src_2main_8cpp"/>
+      </node>
+      <node id="7">
+        <label>test/Simulation/SimulationTest.cpp</label>
+        <link refid="_simulation_test_8cpp"/>
+      </node>
+      <node id="9">
+        <label>test/WarehouseReport/WarehouseReportTest.cpp</label>
+        <link refid="_warehouse_report_test_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_warehouse_report" prot="public">WarehouseReport</innerclass>
+    <briefdescription>
+<para>Header file of the <ref refid="class_warehouse_report" kindref="compound">WarehouseReport</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>WAREHOUSEREPORT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WAREHOUSEREPORT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_report_8h" kindref="compound">Report/Report.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QList&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="class_warehouse_report" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_warehouse_report" kindref="compound">WarehouseReport</ref><sp/>:<sp/><ref refid="class_report" kindref="compound">Report</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>warehouseId;<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>capacity;<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>QList&lt;ProductReport&gt;<sp/>productList;<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse_report_1abf15b4db1b71e7a1d2f91008fca126b7" kindref="member">WarehouseReport</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>warehouseId,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>capacity,<sp/>QList&lt;ProductReport&gt;<sp/>productList,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>operationalCosts,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>netProfit);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_warehouse_report_1a3a4c6655eb2584b3d842d0138b6e6ac9" kindref="member">generateReport</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/WarehouseReport/WarehouseReport.h"/>
+  </compounddef>
+</doxygen>

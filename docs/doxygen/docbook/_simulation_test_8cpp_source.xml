@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__simulation_test_8cpp_source" xml:lang="en-US">
+<title>SimulationTest.cpp</title>
+<indexterm><primary>test/Simulation/SimulationTest.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__simulation_test_8cpp_source_1l00001"/>00001 
+<anchor xml:id="__simulation_test_8cpp_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&lt;gtest/gtest.h&gt;</emphasis>
+<anchor xml:id="__simulation_test_8cpp_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__simulation_8h">Simulation/Simulation.h</link>&quot;</emphasis>
+<anchor xml:id="__simulation_test_8cpp_source_1l00008"/>00008 
+<anchor xml:id="__simulation_test_8cpp_source_1l00012"/><link linkend="__simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2">00012</link> <link linkend="__simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2">TEST</link>(SimulationTest,&#32;itLives)
+<anchor xml:id="__simulation_test_8cpp_source_1l00013"/>00013 {
+<anchor xml:id="__simulation_test_8cpp_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<link linkend="_class_simulation">Simulation</link>&#32;simulation&#32;=&#32;<link linkend="_class_simulation">Simulation</link>();
+<anchor xml:id="__simulation_test_8cpp_source_1l00015"/>00015 }
+<anchor xml:id="__simulation_test_8cpp_source_1l00016"/>00016 
+<anchor xml:id="__simulation_test_8cpp_source_1l00020"/><link linkend="__simulation_test_8cpp_1a26b65653dbc8b10b57767b80f92df2aa">00020</link> <link linkend="__simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2">TEST</link>(SimulationTest,&#32;processEvents)
+<anchor xml:id="__simulation_test_8cpp_source_1l00021"/>00021 {
+<anchor xml:id="__simulation_test_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<link linkend="_class_simulation">Simulation</link>&#32;simulation;
+<anchor xml:id="__simulation_test_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link>&#32;result&#32;=&#32;simulation.<link linkend="_class_simulation_1a470014a191023a8e7a485491695d4c9d">processEvents</link>();
+<anchor xml:id="__simulation_test_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;ASSERT_EQ(result,&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>);
+<anchor xml:id="__simulation_test_8cpp_source_1l00025"/>00025 }
+<anchor xml:id="__simulation_test_8cpp_source_1l00026"/>00026 
+<anchor xml:id="__simulation_test_8cpp_source_1l00030"/><link linkend="__simulation_test_8cpp_1af69bc463335db94e30c8a973335caa26">00030</link> <link linkend="__simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2">TEST</link>(SimulationTest,&#32;conductCycle)
+<anchor xml:id="__simulation_test_8cpp_source_1l00031"/>00031 {
+<anchor xml:id="__simulation_test_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;<link linkend="_class_simulation">Simulation</link>&#32;simulation;
+<anchor xml:id="__simulation_test_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link>&#32;result&#32;=&#32;simulation.<link linkend="_class_simulation_1aa0e23779d0aa555ae836a646b8b1d715">conductCycle</link>();
+<anchor xml:id="__simulation_test_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;ASSERT_EQ(result,&#32;<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>);
+<anchor xml:id="__simulation_test_8cpp_source_1l00035"/>00035 }
+<anchor xml:id="__simulation_test_8cpp_source_1l00036"/>00036 
+<anchor xml:id="__simulation_test_8cpp_source_1l00040"/><link linkend="__simulation_test_8cpp_1af6c06f4cec53cf42a47dfd064957530b">00040</link> <link linkend="__simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2">TEST</link>(SimulationTest,&#32;generateReport)
+<anchor xml:id="__simulation_test_8cpp_source_1l00041"/>00041 {
+<anchor xml:id="__simulation_test_8cpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<link linkend="_class_simulation">Simulation</link>&#32;simulation;
+<anchor xml:id="__simulation_test_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;QString&#32;report&#32;=&#32;simulation.<link linkend="_class_simulation_1ac2a7464b86a88a8ff09766825836590b">generateReport</link>();
+<anchor xml:id="__simulation_test_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;ASSERT_TRUE(report.contains(<emphasis role="stringliteral">&quot;Warehouse&#32;ID,&quot;</emphasis>));
+<anchor xml:id="__simulation_test_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;ASSERT_TRUE(report.contains(<emphasis role="stringliteral">&quot;Capacity&quot;</emphasis>));
+<anchor xml:id="__simulation_test_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;ASSERT_TRUE(report.contains(<emphasis role="stringliteral">&quot;Product&#32;Name,Price,Quantity&quot;</emphasis>));
+<anchor xml:id="__simulation_test_8cpp_source_1l00047"/>00047 }
+<anchor xml:id="__simulation_test_8cpp_source_1l00048"/>00048 
+</programlisting></section>

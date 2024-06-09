@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_event_test_8cpp" kind="file" language="C++">
+    <compoundname>EventTest.cpp</compoundname>
+    <includes local="no">gtest/gtest.h</includes>
+    <includes refid="_event_8h" local="yes">Event/Event.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>Event/Event.h</label>
+        <link refid="_event_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>test/Event/EventTest.cpp</label>
+        <link refid="_event_test_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QDateTime</label>
+      </node>
+      <node id="2">
+        <label>gtest/gtest.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_event_test_8cpp_1a214e3d121f02b4fa5971edca99668626" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(EventTest, itLives)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>EventTest</type>
+        </param>
+        <param>
+          <type>itLives</type>
+        </param>
+        <briefdescription>
+<para>Test to ensure that a <ref refid="class_event" kindref="compound">Event</ref> object can be instantiated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Event/EventTest.cpp" line="12" column="1" bodyfile="test/Event/EventTest.cpp" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="_event_test_8cpp_1a6a7a17727afc00e53595ee22c45e48e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(EventTest, generateEventShouldReturnCorrectValue)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>EventTest</type>
+        </param>
+        <param>
+          <type>generateEventShouldReturnCorrectValue</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that the method generates a valid event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Event/EventTest.cpp" line="20" column="1" bodyfile="test/Event/EventTest.cpp" bodystart="20" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Source file of tests for the <ref refid="class_event" kindref="compound">Event</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gtest/gtest.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_event_8h" kindref="compound">Event/Event.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="_event_test_8cpp_1a214e3d121f02b4fa5971edca99668626" refkind="member"><highlight class="normal"><ref refid="_event_test_8cpp_1a214e3d121f02b4fa5971edca99668626" kindref="member">TEST</ref>(EventTest,<sp/>itLives)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_event" kindref="compound">Event</ref><sp/>event(</highlight><highlight class="stringliteral">&quot;Init&quot;</highlight><highlight class="normal">,<sp/>QDateTime::currentDateTime());</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="_event_test_8cpp_1a6a7a17727afc00e53595ee22c45e48e7" refkind="member"><highlight class="normal"><ref refid="_event_test_8cpp_1a214e3d121f02b4fa5971edca99668626" kindref="member">TEST</ref>(EventTest,<sp/>generateEventShouldReturnCorrectValue)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_event" kindref="compound">Event</ref><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal"><sp/>=<sp/><ref refid="class_event_1a0a53e36a36fd4bfac0bb3d0de9cc521c" kindref="member">Event::generateEvent</ref>(</highlight><highlight class="stringliteral">&quot;Init&quot;</highlight><highlight class="normal">,<sp/>100);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_FALSE(event.getEventType().isEmpty());</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_TRUE(event.getTime()<sp/>&gt;<sp/>QDateTime::currentDateTime());</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="test/Event/EventTest.cpp"/>
+  </compounddef>
+</doxygen>

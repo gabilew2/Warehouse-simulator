@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_report_8cpp" kind="file" language="C++">
+    <compoundname>Report.cpp</compoundname>
+    <includes refid="_report_8h" local="yes">Report.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/Report/Report.cpp</label>
+        <link refid="_report_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Report.h</label>
+        <link refid="_report_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QString</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Source file for the <ref refid="class_report" kindref="compound">Report</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_report_8h" kindref="compound">Report.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Report::operationalCosts<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Report::netProfit<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_report_1a36e8866b9ef8fefbe4491f15d96ed503" refkind="member"><highlight class="normal"><ref refid="class_report_1a36e8866b9ef8fefbe4491f15d96ed503" kindref="member">Report::Report</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>operationalCosts,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>netProfit)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_report_1a7f5c6f19874a36e59c63051ab5b60400" kindref="member">setOperationalCosts</ref>(operationalCosts);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_report_1a4fe97f7f77d99b1e925c6024ed7c3913" kindref="member">setNetProfit</ref>(netProfit);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_report_1aab56d11c88e240affbc4b147474d4363" refkind="member"><highlight class="normal">QString<sp/><ref refid="class_report_1aab56d11c88e240affbc4b147474d4363" kindref="member">Report::generateReport</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="29"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QString(</highlight><highlight class="stringliteral">&quot;Operational<sp/>Costs,Net<sp/>Profit\n%1,%2\n&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.arg(<ref refid="class_report_1a0280b260884973ffbb4ca95c438f30a6" kindref="member">getOperationalCosts</ref>())</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.arg(<ref refid="class_report_1af98f7f1cb07d06b29c081974cfc9a830" kindref="member">getNetProfit</ref>());</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Setters<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_report_1a7f5c6f19874a36e59c63051ab5b60400" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_report_1a7f5c6f19874a36e59c63051ab5b60400" kindref="member">Report::setOperationalCosts</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>costs)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>operationalCosts<sp/>=<sp/>costs;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_report_1a4fe97f7f77d99b1e925c6024ed7c3913" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_report_1a4fe97f7f77d99b1e925c6024ed7c3913" kindref="member">Report::setNetProfit</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>profit)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>netProfit<sp/>=<sp/>profit;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Getters<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_report_1a0280b260884973ffbb4ca95c438f30a6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_report_1a0280b260884973ffbb4ca95c438f30a6" kindref="member">Report::getOperationalCosts</ref>()</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>operationalCosts;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_report_1af98f7f1cb07d06b29c081974cfc9a830" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_report_1af98f7f1cb07d06b29c081974cfc9a830" kindref="member">Report::getNetProfit</ref>()</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>netProfit;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Report/Report.cpp"/>
+  </compounddef>
+</doxygen>

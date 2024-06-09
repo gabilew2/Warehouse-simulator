@@ -1,0 +1,423 @@
+\doxysection{test/\+Warehouse/\+Warehouse\+Test.cpp File Reference}
+\hypertarget{_warehouse_test_8cpp}{}\label{_warehouse_test_8cpp}\index{test/Warehouse/WarehouseTest.cpp@{test/Warehouse/WarehouseTest.cpp}}
+
+
+Source file of tests for the \doxylink{class_warehouse}{Warehouse} class.  
+
+
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include "{}Product/\+Product.\+h"{}}\newline
+{\ttfamily \#include "{}Warehouse/\+Warehouse.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_warehouse_test_8cpp_a11e61acd582d93d437c4230e0965e89a}{TEST}} (Warehouse\+Test, it\+Lives)
+\begin{DoxyCompactList}\small\item\em Test to ensure that a \doxylink{class_warehouse}{Warehouse} object can be instantiated. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_warehouse_test_8cpp_a8061dd778455c5f1d4cb65524669c294}{TEST}} (Warehouse\+Test, check\+Status\+Should\+Return\+Empty)
+\begin{DoxyCompactList}\small\item\em Test to check if the warehouse status is EMPTY when capacity is zero or after products are removed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_warehouse_test_8cpp_a067bf9aa424412bbcb641e0f7bd2e83b}{TEST}} (Warehouse\+Test, check\+Status\+Should\+Return\+Fully)
+\begin{DoxyCompactList}\small\item\em Test to check if the warehouse status is FULLY when capacity is full or exceeded. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_warehouse_test_8cpp_a536e4b1c144e8d1185f37ac49f1d37de}{TEST}} (Warehouse\+Test, check\+Status\+Should\+Return\+Available)
+\begin{DoxyCompactList}\small\item\em Test to check if the warehouse status is AVAILABLE when capacity is not full. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_warehouse_test_8cpp_a23a72169513eb311372d8eb3e6e48aad}{TEST}} (Warehouse\+Test, update\+Status\+Should\+Return\+Success)
+\begin{DoxyCompactList}\small\item\em Test to verify that update\+Status successfully updates the warehouse\textquotesingle{}s capacity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_warehouse_test_8cpp_a960cce29a41d2d18b79882d41fe032c3}{TEST}} (Warehouse\+Test, update\+Status\+Should\+Return\+Error)
+\begin{DoxyCompactList}\small\item\em Test to verify that update\+Status returns an error when given a negative capacity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_warehouse_test_8cpp_aacc7288042363ed681a96e703e8fbe39}{TEST}} (Warehouse\+Test, change\+Quantity\+Should\+Return\+Success)
+\begin{DoxyCompactList}\small\item\em Test to verify that change\+Quantity successfully changes the quantity of a product. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_warehouse_test_8cpp_a16bfb05084226cee8f606690479a09e6}{TEST}} (Warehouse\+Test, change\+Quantity\+Should\+Return\+Error)
+\begin{DoxyCompactList}\small\item\em Test to verify that change\+Quantity returns an error when given a negative quantity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_warehouse_test_8cpp_a654d3c8fb5e0b30c46a03e650d9fe297}{TEST}} (Warehouse\+Test, sell\+Should\+Return\+Success)
+\begin{DoxyCompactList}\small\item\em Test to verify that sell successfully sells the product and decreases the quantity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_warehouse_test_8cpp_a034587e0529ebabe6b76add6c2613a4a}{TEST}} (Warehouse\+Test, sell\+Should\+Return\+Error)
+\begin{DoxyCompactList}\small\item\em Test to verify that sell returns an error when trying to sell more than available quantity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_warehouse_test_8cpp_a120fbded0e0d02848b2912a79cf0b5d0}{TEST}} (Warehouse\+Test, update\+Price\+Should\+Return\+Success)
+\begin{DoxyCompactList}\small\item\em Test to verify that update\+Price successfully updates the price of a product. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_warehouse_test_8cpp_af8f62530a618d91142629ff371699200}{TEST}} (Warehouse\+Test, update\+Price\+Should\+Return\+Error)
+\begin{DoxyCompactList}\small\item\em Test to verify that update\+Price returns an error when given a negative price. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_warehouse_test_8cpp_a02e7c715b5a15d6dfe37ca944c664164}{TEST}} (Warehouse\+Test, add\+Product\+Should\+Return\+Success)
+\begin{DoxyCompactList}\small\item\em Test to verify that add\+Product successfully adds a product to the warehouse. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_warehouse_test_8cpp_a3ce92373ef50aa0ee4d875a9848c9fdf}{TEST}} (Warehouse\+Test, add\+Product\+Should\+Return\+Error)
+\begin{DoxyCompactList}\small\item\em Test to verify that add\+Product returns an error when given a negative price or quantity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_warehouse_test_8cpp_accfba332ac6e954da803caaa71df6a4e}{TEST}} (Warehouse\+Test, get\+Location\+Should\+Return\+Correct\+Value)
+\begin{DoxyCompactList}\small\item\em Test to verify that get\+Location returns the correct location of the warehouse. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_warehouse_test_8cpp_aae417a8f392dba448568492f98984bf2}{TEST}} (Warehouse\+Test, get\+Product\+List\+Should\+Return\+Correct\+Value)
+\begin{DoxyCompactList}\small\item\em Test to verify that get\+Product\+List returns the correct list of products. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_warehouse_test_8cpp_a87a9b63f7c60f10ac6376b8e43a49826}{TEST}} (Warehouse\+Test, get\+Current\+Capacity\+Should\+Return\+Correct\+Value)
+\begin{DoxyCompactList}\small\item\em Test to verify that get\+Current\+Capacity returns the correct current capacity of the warehouse. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_warehouse_test_8cpp_a55f9d131a897000c48d3bc867b3f3bee}{TEST}} (Warehouse\+Test, get\+Name\+Should\+Return\+Correct\+Value)
+\begin{DoxyCompactList}\small\item\em Test to verify that get\+Name returns the correct name of a product by its ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_warehouse_test_8cpp_a70dae60776189e1769e9e307ceba1339}{TEST}} (Warehouse\+Test, get\+Price\+Should\+Return\+Correct\+Value)
+\begin{DoxyCompactList}\small\item\em Test to verify that get\+Price returns the correct price of a product by its ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_warehouse_test_8cpp_ad155dc4ed06881722d52ea9a11b44f1e}{TEST}} (Warehouse\+Test, get\+Quantity\+Should\+Return\+Correct\+Value)
+\begin{DoxyCompactList}\small\item\em Test to verify that get\+Quantity returns the correct quantity of a product by its ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const QString \mbox{\hyperlink{_warehouse_test_8cpp_a7980e04fdec8060f9ceea5f9b0809fa7}{test\+Location}} = "{}Test Location"{}
+\item 
+const double \mbox{\hyperlink{_warehouse_test_8cpp_a6cf5b9f39882aa18f4d792a2a1695b40}{initial\+Capacity}} = 100.\+0
+\item 
+const QString \mbox{\hyperlink{_warehouse_test_8cpp_a7491f2d1062b851596b1cef13d791464}{product\+Name}} = "{}Test Product"{}
+\item 
+const double \mbox{\hyperlink{_warehouse_test_8cpp_ae7a0715775e530e41d79b8c2e2fe8635}{product\+Price}} = 10.\+0
+\item 
+const int \mbox{\hyperlink{_warehouse_test_8cpp_a4f96ceeb9cc7f28b7d044cf79dde6069}{product\+Quantity}} = 20
+\item 
+const int \mbox{\hyperlink{_warehouse_test_8cpp_a9512f29d22751266efd5957638b64923}{product\+Id}} = 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Source file of tests for the \doxylink{class_warehouse}{Warehouse} class. 
+
+
+
+Definition in file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_warehouse_test_8cpp_a3ce92373ef50aa0ee4d875a9848c9fdf}\label{_warehouse_test_8cpp_a3ce92373ef50aa0ee4d875a9848c9fdf} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/20]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Warehouse\+Test}]{,  }\item[{add\+Product\+Should\+Return\+Error}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to verify that add\+Product returns an error when given a negative price or quantity. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00171}{171}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_a02e7c715b5a15d6dfe37ca944c664164}\label{_warehouse_test_8cpp_a02e7c715b5a15d6dfe37ca944c664164} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/20]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Warehouse\+Test}]{,  }\item[{add\+Product\+Should\+Return\+Success}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to verify that add\+Product successfully adds a product to the warehouse. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00161}{161}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_a16bfb05084226cee8f606690479a09e6}\label{_warehouse_test_8cpp_a16bfb05084226cee8f606690479a09e6} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/20]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Warehouse\+Test}]{,  }\item[{change\+Quantity\+Should\+Return\+Error}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to verify that change\+Quantity returns an error when given a negative quantity. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00109}{109}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_aacc7288042363ed681a96e703e8fbe39}\label{_warehouse_test_8cpp_aacc7288042363ed681a96e703e8fbe39} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/20]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Warehouse\+Test}]{,  }\item[{change\+Quantity\+Should\+Return\+Success}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to verify that change\+Quantity successfully changes the quantity of a product. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00098}{98}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_a536e4b1c144e8d1185f37ac49f1d37de}\label{_warehouse_test_8cpp_a536e4b1c144e8d1185f37ac49f1d37de} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/20]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Warehouse\+Test}]{,  }\item[{check\+Status\+Should\+Return\+Available}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to check if the warehouse status is AVAILABLE when capacity is not full. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_a8061dd778455c5f1d4cb65524669c294}\label{_warehouse_test_8cpp_a8061dd778455c5f1d4cb65524669c294} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/20]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Warehouse\+Test}]{,  }\item[{check\+Status\+Should\+Return\+Empty}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to check if the warehouse status is EMPTY when capacity is zero or after products are removed. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_a067bf9aa424412bbcb641e0f7bd2e83b}\label{_warehouse_test_8cpp_a067bf9aa424412bbcb641e0f7bd2e83b} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/20]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Warehouse\+Test}]{,  }\item[{check\+Status\+Should\+Return\+Fully}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to check if the warehouse status is FULLY when capacity is full or exceeded. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_a87a9b63f7c60f10ac6376b8e43a49826}\label{_warehouse_test_8cpp_a87a9b63f7c60f10ac6376b8e43a49826} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/20]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Warehouse\+Test}]{,  }\item[{get\+Current\+Capacity\+Should\+Return\+Correct\+Value}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to verify that get\+Current\+Capacity returns the correct current capacity of the warehouse. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00205}{205}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_accfba332ac6e954da803caaa71df6a4e}\label{_warehouse_test_8cpp_accfba332ac6e954da803caaa71df6a4e} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/20]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Warehouse\+Test}]{,  }\item[{get\+Location\+Should\+Return\+Correct\+Value}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to verify that get\+Location returns the correct location of the warehouse. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00180}{180}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_a55f9d131a897000c48d3bc867b3f3bee}\label{_warehouse_test_8cpp_a55f9d131a897000c48d3bc867b3f3bee} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [10/20]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Warehouse\+Test}]{,  }\item[{get\+Name\+Should\+Return\+Correct\+Value}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to verify that get\+Name returns the correct name of a product by its ID. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00214}{214}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_a70dae60776189e1769e9e307ceba1339}\label{_warehouse_test_8cpp_a70dae60776189e1769e9e307ceba1339} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [11/20]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Warehouse\+Test}]{,  }\item[{get\+Price\+Should\+Return\+Correct\+Value}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to verify that get\+Price returns the correct price of a product by its ID. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00224}{224}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_aae417a8f392dba448568492f98984bf2}\label{_warehouse_test_8cpp_aae417a8f392dba448568492f98984bf2} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [12/20]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Warehouse\+Test}]{,  }\item[{get\+Product\+List\+Should\+Return\+Correct\+Value}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to verify that get\+Product\+List returns the correct list of products. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00189}{189}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_ad155dc4ed06881722d52ea9a11b44f1e}\label{_warehouse_test_8cpp_ad155dc4ed06881722d52ea9a11b44f1e} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [13/20]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Warehouse\+Test}]{,  }\item[{get\+Quantity\+Should\+Return\+Correct\+Value}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to verify that get\+Quantity returns the correct quantity of a product by its ID. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00234}{234}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_a11e61acd582d93d437c4230e0965e89a}\label{_warehouse_test_8cpp_a11e61acd582d93d437c4230e0965e89a} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [14/20]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Warehouse\+Test}]{,  }\item[{it\+Lives}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to ensure that a \doxylink{class_warehouse}{Warehouse} object can be instantiated. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_a034587e0529ebabe6b76add6c2613a4a}\label{_warehouse_test_8cpp_a034587e0529ebabe6b76add6c2613a4a} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [15/20]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Warehouse\+Test}]{,  }\item[{sell\+Should\+Return\+Error}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to verify that sell returns an error when trying to sell more than available quantity. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00130}{130}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_a654d3c8fb5e0b30c46a03e650d9fe297}\label{_warehouse_test_8cpp_a654d3c8fb5e0b30c46a03e650d9fe297} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [16/20]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Warehouse\+Test}]{,  }\item[{sell\+Should\+Return\+Success}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to verify that sell successfully sells the product and decreases the quantity. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00119}{119}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_af8f62530a618d91142629ff371699200}\label{_warehouse_test_8cpp_af8f62530a618d91142629ff371699200} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [17/20]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Warehouse\+Test}]{,  }\item[{update\+Price\+Should\+Return\+Error}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to verify that update\+Price returns an error when given a negative price. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00151}{151}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_a120fbded0e0d02848b2912a79cf0b5d0}\label{_warehouse_test_8cpp_a120fbded0e0d02848b2912a79cf0b5d0} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [18/20]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Warehouse\+Test}]{,  }\item[{update\+Price\+Should\+Return\+Success}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to verify that update\+Price successfully updates the price of a product. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00140}{140}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_a960cce29a41d2d18b79882d41fe032c3}\label{_warehouse_test_8cpp_a960cce29a41d2d18b79882d41fe032c3} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [19/20]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Warehouse\+Test}]{,  }\item[{update\+Status\+Should\+Return\+Error}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to verify that update\+Status returns an error when given a negative capacity. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00079}{79}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_a23a72169513eb311372d8eb3e6e48aad}\label{_warehouse_test_8cpp_a23a72169513eb311372d8eb3e6e48aad} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [20/20]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Warehouse\+Test}]{,  }\item[{update\+Status\+Should\+Return\+Success}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to verify that update\+Status successfully updates the warehouse\textquotesingle{}s capacity. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00065}{65}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_warehouse_test_8cpp_a6cf5b9f39882aa18f4d792a2a1695b40}\label{_warehouse_test_8cpp_a6cf5b9f39882aa18f4d792a2a1695b40} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!initialCapacity@{initialCapacity}}
+\index{initialCapacity@{initialCapacity}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{initialCapacity}{initialCapacity}}
+{\footnotesize\ttfamily const double initial\+Capacity = 100.\+0}
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00089}{89}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_a9512f29d22751266efd5957638b64923}\label{_warehouse_test_8cpp_a9512f29d22751266efd5957638b64923} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!productId@{productId}}
+\index{productId@{productId}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{productId}{productId}}
+{\footnotesize\ttfamily const int product\+Id = 1}
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00093}{93}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_a7491f2d1062b851596b1cef13d791464}\label{_warehouse_test_8cpp_a7491f2d1062b851596b1cef13d791464} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!productName@{productName}}
+\index{productName@{productName}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{productName}{productName}}
+{\footnotesize\ttfamily const QString product\+Name = "{}Test Product"{}}
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00090}{90}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_ae7a0715775e530e41d79b8c2e2fe8635}\label{_warehouse_test_8cpp_ae7a0715775e530e41d79b8c2e2fe8635} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!productPrice@{productPrice}}
+\index{productPrice@{productPrice}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{productPrice}{productPrice}}
+{\footnotesize\ttfamily const double product\+Price = 10.\+0}
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00091}{91}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_a4f96ceeb9cc7f28b7d044cf79dde6069}\label{_warehouse_test_8cpp_a4f96ceeb9cc7f28b7d044cf79dde6069} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!productQuantity@{productQuantity}}
+\index{productQuantity@{productQuantity}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{productQuantity}{productQuantity}}
+{\footnotesize\ttfamily const int product\+Quantity = 20}
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00092}{92}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+
+\Hypertarget{_warehouse_test_8cpp_a7980e04fdec8060f9ceea5f9b0809fa7}\label{_warehouse_test_8cpp_a7980e04fdec8060f9ceea5f9b0809fa7} 
+\index{WarehouseTest.cpp@{WarehouseTest.cpp}!testLocation@{testLocation}}
+\index{testLocation@{testLocation}!WarehouseTest.cpp@{WarehouseTest.cpp}}
+\doxysubsubsection{\texorpdfstring{testLocation}{testLocation}}
+{\footnotesize\ttfamily const QString test\+Location = "{}Test Location"{}}
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_test_8cpp_source_l00088}{88}} of file \mbox{\hyperlink{_warehouse_test_8cpp_source}{Warehouse\+Test.\+cpp}}.
+

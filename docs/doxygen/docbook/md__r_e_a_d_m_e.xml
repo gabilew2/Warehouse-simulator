@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__r_e_a_d_m_e" xml:lang="en-US">
+<title>Warehouse-simulator</title>
+<indexterm><primary>Warehouse-simulator</primary></indexterm>
+
+<para><anchor xml:id="_md__r_e_a_d_m_e_1autotoc_md0"/> The <link linkend="_class_warehouse">Warehouse</link> <link linkend="_class_simulation">Simulation</link> project is a warehouse management support system that allows you to simulate and optimize warehouse processes. Thanks to it, users can model various scenarios, analyze results and make decisions in real time. The project integrates simulation algorithms with an interactive user interface, which allows for dynamic monitoring of warehouse stock and quick response to changes in the business environment.</para>
+
+<para>The main features of the project include defining warehouses, products, attributes, simulating warehouse operation in a time loop, generating events, user intervention and generating reports with simulation results. The aim of the project is to provide a tool supporting effective warehouse management, which will allow companies to increase operational efficiency and maximize profits. </para>
+</section>

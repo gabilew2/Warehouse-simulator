@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__event_test_8cpp" xml:lang="en-US">
+<title>test/Event/EventTest.cpp File Reference</title>
+<indexterm><primary>test/Event/EventTest.cpp</primary></indexterm>
+<para>
+
+<para>Source file of tests for the <link linkend="_class_event">Event</link> class. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;gtest/gtest.h&gt;<?linebreak?>#include &quot;Event/Event.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__event_test_8cpp_1a214e3d121f02b4fa5971edca99668626">TEST</link> (EventTest, itLives)</para>
+
+<para>Test to ensure that a <link linkend="_class_event">Event</link> object can be instantiated. </para>
+</listitem>
+            <listitem><para><link linkend="__event_test_8cpp_1a6a7a17727afc00e53595ee22c45e48e7">TEST</link> (EventTest, generateEventShouldReturnCorrectValue)</para>
+
+<para>Test to verify that the method generates a valid event. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Source file of tests for the <link linkend="_class_event">Event</link> class. </para>
+<para>
+Definition in file <link linkend="__event_test_8cpp_source">EventTest.cpp</link>.</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__event_test_8cpp_1a6a7a17727afc00e53595ee22c45e48e7"/><section>
+    <title>TEST()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>EventTest.cpp</secondary></indexterm>
+<indexterm><primary>EventTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (EventTest , generateEventShouldReturnCorrectValue )</computeroutput></para><para>
+
+<para>Test to verify that the method generates a valid event. </para>
+</para>
+<para>
+Definition at line <link linkend="__event_test_8cpp_source_1l00020">20</link> of file <link linkend="__event_test_8cpp_source">EventTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__event_test_8cpp_1a214e3d121f02b4fa5971edca99668626"/><section>
+    <title>TEST()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>EventTest.cpp</secondary></indexterm>
+<indexterm><primary>EventTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (EventTest , itLives )</computeroutput></para><para>
+
+<para>Test to ensure that a <link linkend="_class_event">Event</link> object can be instantiated. </para>
+</para>
+<para>
+Definition at line <link linkend="__event_test_8cpp_source_1l00012">12</link> of file <link linkend="__event_test_8cpp_source">EventTest.cpp</link>.</para>
+</section>
+</section>
+</section>

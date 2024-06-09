@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__report_8h_source" xml:lang="en-US">
+<title>Report.h</title>
+<indexterm><primary>src/Report/Report.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__report_8h_source_1l00001"/>00001 
+<anchor xml:id="__report_8h_source_1l00006"/>00006 <emphasis role="preprocessor">#ifndef&#32;REPORT_H</emphasis>
+<anchor xml:id="__report_8h_source_1l00007"/>00007 <emphasis role="preprocessor">#define&#32;REPORT_H</emphasis>
+<anchor xml:id="__report_8h_source_1l00008"/>00008 
+<anchor xml:id="__report_8h_source_1l00009"/>00009 <emphasis role="preprocessor">#include&#32;&lt;QString&gt;</emphasis>
+<anchor xml:id="__report_8h_source_1l00010"/>00010 
+<anchor xml:id="__report_8h_source_1l00017"/><link linkend="_class_report">00017</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_report">Report</link>
+<anchor xml:id="__report_8h_source_1l00018"/>00018 {
+<anchor xml:id="__report_8h_source_1l00019"/>00019 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="__report_8h_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;operationalCosts;&#32;
+<anchor xml:id="__report_8h_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;netProfit;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__report_8h_source_1l00022"/>00022 
+<anchor xml:id="__report_8h_source_1l00023"/>00023 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__report_8h_source_1l00024"/>00024 
+<anchor xml:id="__report_8h_source_1l00031"/><link linkend="_struct_report_1_1_product_report">00031</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_report_1_1_product_report">ProductReport</link>
+<anchor xml:id="__report_8h_source_1l00032"/>00032 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__report_8h_source_1l00033"/><link linkend="_struct_report_1_1_product_report_1a3b1c5f3c0e92b0761fe098a093e45db2">00033</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QString&#32;<link linkend="_struct_report_1_1_product_report_1a3b1c5f3c0e92b0761fe098a093e45db2">name</link>;&#32;&#32;&#32;
+<anchor xml:id="__report_8h_source_1l00034"/><link linkend="_struct_report_1_1_product_report_1a7dd6e2e624439db443cdbb842ef7651f">00034</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_struct_report_1_1_product_report_1a7dd6e2e624439db443cdbb842ef7651f">price</link>;&#32;&#32;&#32;
+<anchor xml:id="__report_8h_source_1l00035"/><link linkend="_struct_report_1_1_product_report_1a2ed7f9fdb7c63a739e76ade173d6cdc7">00035</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_report_1_1_product_report_1a2ed7f9fdb7c63a739e76ade173d6cdc7">quantity</link>;&#32;&#32;&#32;
+<anchor xml:id="__report_8h_source_1l00036"/>00036 &#32;&#32;&#32;&#32;};
+<anchor xml:id="__report_8h_source_1l00037"/>00037 
+<anchor xml:id="__report_8h_source_1l00044"/>00044 &#32;&#32;&#32;&#32;<link linkend="_class_report_1a36e8866b9ef8fefbe4491f15d96ed503">Report</link>(<emphasis role="keywordtype">double</emphasis>&#32;operationalCosts,&#32;<emphasis role="keywordtype">double</emphasis>&#32;netProfit);
+<anchor xml:id="__report_8h_source_1l00045"/>00045 
+<anchor xml:id="__report_8h_source_1l00052"/>00052 &#32;&#32;&#32;&#32;QString&#32;<link linkend="_class_report_1aab56d11c88e240affbc4b147474d4363">generateReport</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="__report_8h_source_1l00053"/>00053 
+<anchor xml:id="__report_8h_source_1l00054"/>00054 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Setters</emphasis>
+<anchor xml:id="__report_8h_source_1l00055"/>00055 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_report_1a7f5c6f19874a36e59c63051ab5b60400">setOperationalCosts</link>(<emphasis role="keywordtype">double</emphasis>&#32;costs);&#32;
+<anchor xml:id="__report_8h_source_1l00056"/>00056 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_report_1a4fe97f7f77d99b1e925c6024ed7c3913">setNetProfit</link>(<emphasis role="keywordtype">double</emphasis>&#32;profit);&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__report_8h_source_1l00057"/>00057 
+<anchor xml:id="__report_8h_source_1l00058"/>00058 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Getters</emphasis>
+<anchor xml:id="__report_8h_source_1l00059"/>00059 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_report_1a0280b260884973ffbb4ca95c438f30a6">getOperationalCosts</link>();&#32;
+<anchor xml:id="__report_8h_source_1l00060"/>00060 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_report_1af98f7f1cb07d06b29c081974cfc9a830">getNetProfit</link>();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__report_8h_source_1l00061"/>00061 };
+<anchor xml:id="__report_8h_source_1l00062"/>00062 
+<anchor xml:id="__report_8h_source_1l00063"/>00063 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;REPORT_H</emphasis>
+</programlisting></section>

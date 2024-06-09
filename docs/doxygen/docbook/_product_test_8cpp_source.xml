@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__product_test_8cpp_source" xml:lang="en-US">
+<title>ProductTest.cpp</title>
+<indexterm><primary>test/Product/ProductTest.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__product_test_8cpp_source_1l00001"/>00001 
+<anchor xml:id="__product_test_8cpp_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&lt;gtest/gtest.h&gt;</emphasis>
+<anchor xml:id="__product_test_8cpp_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__product_8h">Product/Product.h</link>&quot;</emphasis>
+<anchor xml:id="__product_test_8cpp_source_1l00008"/>00008 
+<anchor xml:id="__product_test_8cpp_source_1l00012"/><link linkend="__product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341">00012</link> <link linkend="__product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341">TEST</link>(ProductTest,&#32;itLives)
+<anchor xml:id="__product_test_8cpp_source_1l00013"/>00013 {
+<anchor xml:id="__product_test_8cpp_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<link linkend="_class_product">Product</link>(0,&#32;QString::fromStdString(<emphasis role="stringliteral">&quot;Lorem&#32;Ipsum&quot;</emphasis>),&#32;1.00,&#32;1);
+<anchor xml:id="__product_test_8cpp_source_1l00015"/>00015 }
+<anchor xml:id="__product_test_8cpp_source_1l00016"/>00016 
+<anchor xml:id="__product_test_8cpp_source_1l00020"/><link linkend="__product_test_8cpp_1aca16e75bd00c6aafd757aa5b97016c43">00020</link> <link linkend="__product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341">TEST</link>(ProductTest,&#32;getNameShouldReturnName)
+<anchor xml:id="__product_test_8cpp_source_1l00021"/>00021 {
+<anchor xml:id="__product_test_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<link linkend="_class_product">Product</link>&#32;product&#32;=&#32;<link linkend="_class_product">Product</link>(0,&#32;QString::fromStdString(<emphasis role="stringliteral">&quot;Lorem&#32;Ipsum&quot;</emphasis>),&#32;1.00,&#32;1);
+<anchor xml:id="__product_test_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1a4e07082760c0834ccc8cd44e44a6aae6">getName</link>(),QString::fromStdString(<emphasis role="stringliteral">&quot;Lorem&#32;Ipsum&quot;</emphasis>));
+<anchor xml:id="__product_test_8cpp_source_1l00024"/>00024 }
+<anchor xml:id="__product_test_8cpp_source_1l00025"/>00025 
+<anchor xml:id="__product_test_8cpp_source_1l00029"/><link linkend="__product_test_8cpp_1a8cafa4a7e2e42d2eb7ba0ff05a752f52">00029</link> <link linkend="__product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341">TEST</link>(ProductTest,&#32;getQuantityShouldReturnInt)
+<anchor xml:id="__product_test_8cpp_source_1l00030"/>00030 {
+<anchor xml:id="__product_test_8cpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<link linkend="_class_product">Product</link>&#32;product&#32;=&#32;<link linkend="_class_product">Product</link>(0,&#32;QString::fromStdString(<emphasis role="stringliteral">&quot;Lorem&#32;Ipsum&quot;</emphasis>),&#32;1.00,&#32;1);
+<anchor xml:id="__product_test_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1a6a449b90b669aa4380d229b44eca686f">getQuantity</link>(),1);
+<anchor xml:id="__product_test_8cpp_source_1l00033"/>00033 }
+<anchor xml:id="__product_test_8cpp_source_1l00034"/>00034 
+<anchor xml:id="__product_test_8cpp_source_1l00038"/><link linkend="__product_test_8cpp_1a24680dae582076e6fdd3675174974907">00038</link> <link linkend="__product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341">TEST</link>(ProductTest,&#32;getPriceShouldReturnDouble)
+<anchor xml:id="__product_test_8cpp_source_1l00039"/>00039 {
+<anchor xml:id="__product_test_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<link linkend="_class_product">Product</link>&#32;product&#32;=&#32;<link linkend="_class_product">Product</link>(0,&#32;QString::fromStdString(<emphasis role="stringliteral">&quot;Lorem&#32;Ipsum&quot;</emphasis>),&#32;1.00,&#32;1);
+<anchor xml:id="__product_test_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1a3be25f647260d61df6063ef706261c7f">getPrice</link>(),1.00);
+<anchor xml:id="__product_test_8cpp_source_1l00042"/>00042 }
+<anchor xml:id="__product_test_8cpp_source_1l00043"/>00043 
+<anchor xml:id="__product_test_8cpp_source_1l00047"/><link linkend="__product_test_8cpp_1a1df645a6d4641e8a0cbcdda4cd2baed9">00047</link> <link linkend="__product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341">TEST</link>(ProductTest,&#32;sellShouldReturnSuccess)
+<anchor xml:id="__product_test_8cpp_source_1l00048"/>00048 {
+<anchor xml:id="__product_test_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<link linkend="_class_product">Product</link>&#32;product&#32;=&#32;<link linkend="_class_product">Product</link>(0,&#32;QString::fromStdString(<emphasis role="stringliteral">&quot;Lorem&#32;Ipsum&quot;</emphasis>),&#32;1.00,&#32;1);
+<anchor xml:id="__product_test_8cpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;<link linkend="_class_product">Product</link>&#32;product2&#32;=&#32;<link linkend="_class_product">Product</link>(1,&#32;QString::fromStdString(<emphasis role="stringliteral">&quot;Ipsum&#32;Lorem&quot;</emphasis>),&#32;23.99,&#32;56);
+<anchor xml:id="__product_test_8cpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1ac914a618c6cedf1500f22a4e33ed4e83">sell</link>(1),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;EXPECT_EQ(product2.<link linkend="_class_product_1ac914a618c6cedf1500f22a4e33ed4e83">sell</link>(1),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;EXPECT_EQ(product2.<link linkend="_class_product_1ac914a618c6cedf1500f22a4e33ed4e83">sell</link>(53),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;EXPECT_EQ(product2.<link linkend="_class_product_1ac914a618c6cedf1500f22a4e33ed4e83">sell</link>(2),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00055"/>00055 }
+<anchor xml:id="__product_test_8cpp_source_1l00056"/>00056 
+<anchor xml:id="__product_test_8cpp_source_1l00060"/><link linkend="__product_test_8cpp_1ab4b33d0aab882649445fb76b4bf4772a">00060</link> <link linkend="__product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341">TEST</link>(ProductTest,&#32;sellShouldReturnError)
+<anchor xml:id="__product_test_8cpp_source_1l00061"/>00061 {
+<anchor xml:id="__product_test_8cpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;<link linkend="_class_product">Product</link>&#32;product&#32;=&#32;<link linkend="_class_product">Product</link>(0,&#32;QString::fromStdString(<emphasis role="stringliteral">&quot;Lorem&#32;Ipsum&quot;</emphasis>),&#32;1.00,&#32;0);
+<anchor xml:id="__product_test_8cpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;<link linkend="_class_product">Product</link>&#32;product2&#32;=&#32;<link linkend="_class_product">Product</link>(1,&#32;QString::fromStdString(<emphasis role="stringliteral">&quot;Ipsum&#32;Lorem&quot;</emphasis>),&#32;23.99,&#32;1);
+<anchor xml:id="__product_test_8cpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1ac914a618c6cedf1500f22a4e33ed4e83">sell</link>(1),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1ac914a618c6cedf1500f22a4e33ed4e83">sell</link>(-1),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00066"/>00066 &#32;&#32;&#32;&#32;EXPECT_EQ(product2.<link linkend="_class_product_1ac914a618c6cedf1500f22a4e33ed4e83">sell</link>(2),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;EXPECT_EQ(product2.<link linkend="_class_product_1ac914a618c6cedf1500f22a4e33ed4e83">sell</link>(-1),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00068"/>00068 }
+<anchor xml:id="__product_test_8cpp_source_1l00069"/>00069 
+<anchor xml:id="__product_test_8cpp_source_1l00073"/><link linkend="__product_test_8cpp_1a2001a6aad064ce90391d9c7b2ba77668">00073</link> <link linkend="__product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341">TEST</link>(ProductTest,&#32;updatePriceShouldReturnSuccess)
+<anchor xml:id="__product_test_8cpp_source_1l00074"/>00074 {
+<anchor xml:id="__product_test_8cpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;<link linkend="_class_product">Product</link>&#32;product&#32;=&#32;<link linkend="_class_product">Product</link>(0,&#32;QString::fromStdString(<emphasis role="stringliteral">&quot;Lorem&#32;Ipsum&quot;</emphasis>),&#32;1.00,&#32;0);
+<anchor xml:id="__product_test_8cpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1af264aa2bae1159846e658148d44a621d">updatePrice</link>(1.00),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1af264aa2bae1159846e658148d44a621d">updatePrice</link>(59.99),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1af264aa2bae1159846e658148d44a621d">updatePrice</link>(545454),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00079"/>00079 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1af264aa2bae1159846e658148d44a621d">updatePrice</link>(1),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1af264aa2bae1159846e658148d44a621d">updatePrice</link>(0.01),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00081"/>00081 }
+<anchor xml:id="__product_test_8cpp_source_1l00082"/>00082 
+<anchor xml:id="__product_test_8cpp_source_1l00086"/><link linkend="__product_test_8cpp_1a66031b79869771178cd4282de57fa478">00086</link> <link linkend="__product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341">TEST</link>(ProductTest,&#32;updatePriceShouldReturnError)
+<anchor xml:id="__product_test_8cpp_source_1l00087"/>00087 {
+<anchor xml:id="__product_test_8cpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;<link linkend="_class_product">Product</link>&#32;product&#32;=&#32;<link linkend="_class_product">Product</link>(0,&#32;QString::fromStdString(<emphasis role="stringliteral">&quot;Lorem&#32;Ipsum&quot;</emphasis>),&#32;1.00,&#32;0);
+<anchor xml:id="__product_test_8cpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1af264aa2bae1159846e658148d44a621d">updatePrice</link>(-1.00),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1af264aa2bae1159846e658148d44a621d">updatePrice</link>(-59.99),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1af264aa2bae1159846e658148d44a621d">updatePrice</link>(-545454),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1af264aa2bae1159846e658148d44a621d">updatePrice</link>(-1),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00093"/>00093 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1af264aa2bae1159846e658148d44a621d">updatePrice</link>(-0.01),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00094"/>00094 }
+<anchor xml:id="__product_test_8cpp_source_1l00095"/>00095 
+<anchor xml:id="__product_test_8cpp_source_1l00099"/><link linkend="__product_test_8cpp_1a441a4e44dc64a2bd8e0a5b73ff93ec92">00099</link> <link linkend="__product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341">TEST</link>(ProductTest,&#32;changeQuantityShouldReturnSuccess)
+<anchor xml:id="__product_test_8cpp_source_1l00100"/>00100 {
+<anchor xml:id="__product_test_8cpp_source_1l00101"/>00101 &#32;&#32;&#32;&#32;<link linkend="_class_product">Product</link>&#32;product&#32;=&#32;<link linkend="_class_product">Product</link>(0,&#32;QString::fromStdString(<emphasis role="stringliteral">&quot;Lorem&#32;Ipsum&quot;</emphasis>),&#32;1.00,&#32;3);
+<anchor xml:id="__product_test_8cpp_source_1l00102"/>00102 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1a351a61b8013eaca0afb924887ac1495c">changeQuantity</link>(1),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1a351a61b8013eaca0afb924887ac1495c">changeQuantity</link>(59),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1a351a61b8013eaca0afb924887ac1495c">changeQuantity</link>(545454),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00105"/>00105 }
+<anchor xml:id="__product_test_8cpp_source_1l00106"/>00106 
+<anchor xml:id="__product_test_8cpp_source_1l00110"/><link linkend="__product_test_8cpp_1aabd1480a5a311bb22ca89b02ac99f222">00110</link> <link linkend="__product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341">TEST</link>(ProductTest,&#32;changeQuantityShouldReturnError)
+<anchor xml:id="__product_test_8cpp_source_1l00111"/>00111 {
+<anchor xml:id="__product_test_8cpp_source_1l00112"/>00112 &#32;&#32;&#32;&#32;<link linkend="_class_product">Product</link>&#32;product&#32;=&#32;<link linkend="_class_product">Product</link>(0,&#32;QString::fromStdString(<emphasis role="stringliteral">&quot;Lorem&#32;Ipsum&quot;</emphasis>),&#32;1.00,&#32;3);
+<anchor xml:id="__product_test_8cpp_source_1l00113"/>00113 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1a351a61b8013eaca0afb924887ac1495c">changeQuantity</link>(-1),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00114"/>00114 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1a351a61b8013eaca0afb924887ac1495c">changeQuantity</link>(-59),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00115"/>00115 &#32;&#32;&#32;&#32;EXPECT_EQ(product.<link linkend="_class_product_1a351a61b8013eaca0afb924887ac1495c">changeQuantity</link>(-545454),<link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>);
+<anchor xml:id="__product_test_8cpp_source_1l00116"/>00116 }
+</programlisting></section>

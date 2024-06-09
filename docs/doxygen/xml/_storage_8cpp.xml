@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_storage_8cpp" kind="file" language="C++">
+    <compoundname>Storage.cpp</compoundname>
+    <includes refid="_storage_8h" local="yes">Storage.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/Storage/Storage.cpp</label>
+        <link refid="_storage_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Storage.h</label>
+        <link refid="_storage_8h"/>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Source file of the <ref refid="class_storage" kindref="compound">Storage</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_storage_8h" kindref="compound">Storage.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_storage_1aa1694a20f74b18f46d68eb95d6d3f228" refkind="member"><highlight class="normal"><ref refid="class_storage_1aa1694a20f74b18f46d68eb95d6d3f228" kindref="member">Storage::Storage</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>capacity)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="class_storage_1a32a3a3044e508911dae197650dcf813e" kindref="member">capacity</ref><sp/>=<sp/><ref refid="class_storage_1a32a3a3044e508911dae197650dcf813e" kindref="member">capacity</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="class_storage_1a21a267ec9e43c6147c56e56a347d5784" refkind="member"><highlight class="normal"><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86f" kindref="member">storageStatus</ref><sp/><ref refid="class_storage_1a21a267ec9e43c6147c56e56a347d5784" kindref="member">Storage::checkCapacity</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>totalCapacity)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="20"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_storage_1a32a3a3044e508911dae197650dcf813e" kindref="member">capacity</ref><sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa2f0d18fc0d0fa4a6cd92dc328501874d" kindref="member">EMPTY</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_storage_1a32a3a3044e508911dae197650dcf813e" kindref="member">capacity</ref><sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/><ref refid="class_storage_1a32a3a3044e508911dae197650dcf813e" kindref="member">capacity</ref><sp/>&lt;<sp/>totalCapacity)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa1e229ccb8b53a57de4ebb11c2d15272e" kindref="member">AVAILABLE</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa8fd6994b2300416d1ad947a50d833850" kindref="member">FULLY</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Storage/Storage.cpp"/>
+  </compounddef>
+</doxygen>

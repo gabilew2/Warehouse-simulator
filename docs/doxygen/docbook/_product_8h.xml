@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__product_8h" xml:lang="en-US">
+<title>src/Product/Product.h File Reference</title>
+<indexterm><primary>src/Product/Product.h</primary></indexterm>
+<para>
+
+<para>Header file for the <link linkend="_class_product">Product</link> class. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;QString&gt;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_product">Product</link></para>
+
+<para>The <link linkend="_class_product">Product</link> class represents a product with a name, price, and quantity. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link> { <link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>
+, <link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90">ERROR</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file for the <link linkend="_class_product">Product</link> class. </para>
+<para>
+Definition in file <link linkend="__product_8h_source">Product.h</link>.</para>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959"/><section>
+    <title>status</title>
+<indexterm><primary>status</primary><secondary>Product.h</secondary></indexterm>
+<indexterm><primary>Product.h</primary><secondary>status</secondary></indexterm>
+<para><computeroutput>enum <link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link></computeroutput></para>
+<para>Enum representing the status of operations on <link linkend="_class_product">Product</link>. </para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>SUCCESS</primary><secondary>Product.h</secondary></indexterm>
+<indexterm><primary>Product.h</primary><secondary>SUCCESS</secondary></indexterm>
+<anchor xml:id="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8"/>SUCCESS</entry><entry></entry></row><row><entry><indexterm><primary>ERROR</primary><secondary>Product.h</secondary></indexterm>
+<indexterm><primary>Product.h</primary><secondary>ERROR</secondary></indexterm>
+<anchor xml:id="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90"/>ERROR</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__product_8h_source_1l00012">12</link> of file <link linkend="__product_8h_source">Product.h</link>.</para>
+</section>
+</section>
+</section>

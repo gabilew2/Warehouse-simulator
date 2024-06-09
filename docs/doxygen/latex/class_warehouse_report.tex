@@ -1,0 +1,89 @@
+\doxysection{Warehouse\+Report Class Reference}
+\hypertarget{class_warehouse_report}{}\label{class_warehouse_report}\index{WarehouseReport@{WarehouseReport}}
+
+
+The \doxylink{class_warehouse_report}{Warehouse\+Report} class extends the \doxylink{class_report}{Report} class to provide a report specifically for warehouse inventory.  
+
+
+
+
+{\ttfamily \#include $<$Warehouse\+Report.\+h$>$}
+
+Inheritance diagram for Warehouse\+Report\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_warehouse_report}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_warehouse_report_abf15b4db1b71e7a1d2f91008fca126b7}{Warehouse\+Report}} (int warehouse\+Id, double capacity, QList$<$ \mbox{\hyperlink{struct_report_1_1_product_report}{Product\+Report}} $>$ product\+List, double operational\+Costs, double net\+Profit)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_warehouse_report}{Warehouse\+Report} object. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_warehouse_report_a3a4c6655eb2584b3d842d0138b6e6ac9}{generate\+Report}} () const
+\begin{DoxyCompactList}\small\item\em Generates a detailed warehouse inventory report. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_warehouse_report}{Warehouse\+Report} class extends the \doxylink{class_report}{Report} class to provide a report specifically for warehouse inventory. 
+
+This class inherits from \doxylink{class_report}{Report} and is responsible for generating a warehouse report, which includes details such as warehouse ID, capacity, and a list of products stored. 
+
+Definition at line \mbox{\hyperlink{_warehouse_report_8h_source_l00019}{19}} of file \mbox{\hyperlink{_warehouse_report_8h_source}{Warehouse\+Report.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_warehouse_report_abf15b4db1b71e7a1d2f91008fca126b7}\label{class_warehouse_report_abf15b4db1b71e7a1d2f91008fca126b7} 
+\index{WarehouseReport@{WarehouseReport}!WarehouseReport@{WarehouseReport}}
+\index{WarehouseReport@{WarehouseReport}!WarehouseReport@{WarehouseReport}}
+\doxysubsubsection{\texorpdfstring{WarehouseReport()}{WarehouseReport()}}
+{\footnotesize\ttfamily Warehouse\+Report\+::\+Warehouse\+Report (\begin{DoxyParamCaption}\item[{int}]{warehouse\+Id,  }\item[{double}]{capacity,  }\item[{QList$<$ \mbox{\hyperlink{struct_report_1_1_product_report}{Product\+Report}} $>$}]{product\+List,  }\item[{double}]{operational\+Costs,  }\item[{double}]{net\+Profit }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_warehouse_report}{Warehouse\+Report} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em warehouse\+Id} & Unique identifier for the warehouse. \\
+\hline
+{\em capacity} & Total storage capacity of the warehouse. \\
+\hline
+{\em product\+List} & List of products stored in the warehouse. \\
+\hline
+{\em operational\+Costs} & Operational costs of the store. \\
+\hline
+{\em net\+Profit} & Net profit of the store. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_warehouse_report_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_warehouse_report_8cpp_source}{Warehouse\+Report.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_warehouse_report_a3a4c6655eb2584b3d842d0138b6e6ac9}\label{class_warehouse_report_a3a4c6655eb2584b3d842d0138b6e6ac9} 
+\index{WarehouseReport@{WarehouseReport}!generateReport@{generateReport}}
+\index{generateReport@{generateReport}!WarehouseReport@{WarehouseReport}}
+\doxysubsubsection{\texorpdfstring{generateReport()}{generateReport()}}
+{\footnotesize\ttfamily QString Warehouse\+Report\+::generate\+Report (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Generates a detailed warehouse inventory report. 
+
+\begin{DoxyReturn}{Returns}
+A formatted string representing the warehouse inventory report. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_warehouse_report_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{_warehouse_report_8cpp_source}{Warehouse\+Report.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Warehouse\+Report/\mbox{\hyperlink{_warehouse_report_8h}{Warehouse\+Report.\+h}}\item 
+src/\+Warehouse\+Report/\mbox{\hyperlink{_warehouse_report_8cpp}{Warehouse\+Report.\+cpp}}\end{DoxyCompactItemize}

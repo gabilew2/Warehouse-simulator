@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_warehouse_report" kind="class" language="C++" prot="public">
+    <compoundname>WarehouseReport</compoundname>
+    <basecompoundref refid="class_report" prot="private" virt="non-virtual">Report</basecompoundref>
+    <includes refid="_warehouse_report_8h" local="no">WarehouseReport.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_warehouse_report_1abdbe88064119ba018ab97b8fbd069019" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int WarehouseReport::warehouseId</definition>
+        <argsstring></argsstring>
+        <name>warehouseId</name>
+        <qualifiedname>WarehouseReport::warehouseId</qualifiedname>
+        <briefdescription>
+<para>Unique identifier for the warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/WarehouseReport/WarehouseReport.h" line="22" column="9" bodyfile="src/WarehouseReport/WarehouseReport.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_warehouse_report_1a925a5441d593b18d2089a43cd07309dd" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double WarehouseReport::capacity</definition>
+        <argsstring></argsstring>
+        <name>capacity</name>
+        <qualifiedname>WarehouseReport::capacity</qualifiedname>
+        <briefdescription>
+<para>Total storage capacity of the warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/WarehouseReport/WarehouseReport.h" line="23" column="12" bodyfile="src/WarehouseReport/WarehouseReport.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_warehouse_report_1a560c941c282d96d167eecfbd1705a8ae" prot="private" static="no" mutable="no">
+        <type>QList&lt; <ref refid="struct_report_1_1_product_report" kindref="compound">ProductReport</ref> &gt;</type>
+        <definition>QList&lt;ProductReport&gt; WarehouseReport::productList</definition>
+        <argsstring></argsstring>
+        <name>productList</name>
+        <qualifiedname>WarehouseReport::productList</qualifiedname>
+        <briefdescription>
+<para>List of products stored in the warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/WarehouseReport/WarehouseReport.h" line="24" column="11" bodyfile="src/WarehouseReport/WarehouseReport.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_warehouse_report_1abf15b4db1b71e7a1d2f91008fca126b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WarehouseReport::WarehouseReport</definition>
+        <argsstring>(int warehouseId, double capacity, QList&lt; ProductReport &gt; productList, double operationalCosts, double netProfit)</argsstring>
+        <name>WarehouseReport</name>
+        <qualifiedname>WarehouseReport::WarehouseReport</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>warehouseId</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>capacity</declname>
+        </param>
+        <param>
+          <type>QList&lt; <ref refid="struct_report_1_1_product_report" kindref="compound">ProductReport</ref> &gt;</type>
+          <declname>productList</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>operationalCosts</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>netProfit</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_warehouse_report" kindref="compound">WarehouseReport</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>warehouseId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unique identifier for the warehouse. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>capacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total storage capacity of the warehouse. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>productList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of products stored in the warehouse. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>operationalCosts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Operational costs of the store. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>netProfit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Net profit of the store. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/WarehouseReport/WarehouseReport.h" line="36" column="5" bodyfile="src/WarehouseReport/WarehouseReport.cpp" bodystart="11" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_warehouse_report_1a3a4c6655eb2584b3d842d0138b6e6ac9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString WarehouseReport::generateReport</definition>
+        <argsstring>() const</argsstring>
+        <name>generateReport</name>
+        <qualifiedname>WarehouseReport::generateReport</qualifiedname>
+        <briefdescription>
+<para>Generates a detailed warehouse inventory report. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A formatted string representing the warehouse inventory report. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/WarehouseReport/WarehouseReport.h" line="42" column="13" bodyfile="src/WarehouseReport/WarehouseReport.cpp" bodystart="21" bodyend="38"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_warehouse_report" kindref="compound">WarehouseReport</ref> class extends the <ref refid="class_report" kindref="compound">Report</ref> class to provide a report specifically for warehouse inventory. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class inherits from <ref refid="class_report" kindref="compound">Report</ref> and is responsible for generating a warehouse report, which includes details such as warehouse ID, capacity, and a list of products stored. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Report</label>
+        <link refid="class_report"/>
+      </node>
+      <node id="1">
+        <label>WarehouseReport</label>
+        <link refid="class_warehouse_report"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Report</label>
+        <link refid="class_report"/>
+      </node>
+      <node id="1">
+        <label>WarehouseReport</label>
+        <link refid="class_warehouse_report"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/WarehouseReport/WarehouseReport.h" line="19" column="1" bodyfile="src/WarehouseReport/WarehouseReport.h" bodystart="20" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_warehouse_report_1a925a5441d593b18d2089a43cd07309dd" prot="private" virt="non-virtual"><scope>WarehouseReport</scope><name>capacity</name></member>
+      <member refid="class_warehouse_report_1a3a4c6655eb2584b3d842d0138b6e6ac9" prot="public" virt="non-virtual"><scope>WarehouseReport</scope><name>generateReport</name></member>
+      <member refid="class_warehouse_report_1a560c941c282d96d167eecfbd1705a8ae" prot="private" virt="non-virtual"><scope>WarehouseReport</scope><name>productList</name></member>
+      <member refid="class_warehouse_report_1abdbe88064119ba018ab97b8fbd069019" prot="private" virt="non-virtual"><scope>WarehouseReport</scope><name>warehouseId</name></member>
+      <member refid="class_warehouse_report_1abf15b4db1b71e7a1d2f91008fca126b7" prot="public" virt="non-virtual"><scope>WarehouseReport</scope><name>WarehouseReport</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

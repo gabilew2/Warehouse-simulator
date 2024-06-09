@@ -1,0 +1,1 @@
+add_ut(NAME WarehouseReport SOURCES WarehouseReportTest.cpp)

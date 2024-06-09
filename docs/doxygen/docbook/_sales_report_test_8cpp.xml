@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__sales_report_test_8cpp" xml:lang="en-US">
+<title>test/SalesReport/SalesReportTest.cpp File Reference</title>
+<indexterm><primary>test/SalesReport/SalesReportTest.cpp</primary></indexterm>
+<para>
+
+<para>Source file of tests for the <link linkend="_class_sales_report">SalesReport</link> class. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;gtest/gtest.h&gt;<?linebreak?>#include &quot;SalesReport/SalesReport.h&quot;<?linebreak?>#include &lt;QDateTime&gt;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__sales_report_test_8cpp_1ad19cf150662059de206d5fd6d5d8270e">TEST</link> (SalesReportTest, itLives)</para>
+
+<para>Test case to ensure that a <link linkend="_class_sales_report">SalesReport</link> object can be instantiated. </para>
+</listitem>
+            <listitem><para><link linkend="__sales_report_test_8cpp_1a817bd67323dee9caf6ba8cd143ac789d">TEST</link> (SalesReportTest, generateReportShouldReturnCorrectValue)</para>
+
+<para>Test case to verify that the <link linkend="_class_sales_report_1adbcc82fb8fa70e87cd4f12bf4f3537ae">SalesReport::generateReport</link> method returns the correct CSV format. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Source file of tests for the <link linkend="_class_sales_report">SalesReport</link> class. </para>
+<para>
+Definition in file <link linkend="__sales_report_test_8cpp_source">SalesReportTest.cpp</link>.</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__sales_report_test_8cpp_1a817bd67323dee9caf6ba8cd143ac789d"/><section>
+    <title>TEST()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>SalesReportTest.cpp</secondary></indexterm>
+<indexterm><primary>SalesReportTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (SalesReportTest , generateReportShouldReturnCorrectValue )</computeroutput></para><para>
+
+<para>Test case to verify that the <link linkend="_class_sales_report_1adbcc82fb8fa70e87cd4f12bf4f3537ae">SalesReport::generateReport</link> method returns the correct CSV format. </para>
+</para>
+<para>
+Definition at line <link linkend="__sales_report_test_8cpp_source_1l00027">27</link> of file <link linkend="__sales_report_test_8cpp_source">SalesReportTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__sales_report_test_8cpp_1ad19cf150662059de206d5fd6d5d8270e"/><section>
+    <title>TEST()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>SalesReportTest.cpp</secondary></indexterm>
+<indexterm><primary>SalesReportTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (SalesReportTest , itLives )</computeroutput></para><para>
+
+<para>Test case to ensure that a <link linkend="_class_sales_report">SalesReport</link> object can be instantiated. </para>
+</para>
+<para>
+Definition at line <link linkend="__sales_report_test_8cpp_source_1l00013">13</link> of file <link linkend="__sales_report_test_8cpp_source">SalesReportTest.cpp</link>.</para>
+</section>
+</section>
+</section>

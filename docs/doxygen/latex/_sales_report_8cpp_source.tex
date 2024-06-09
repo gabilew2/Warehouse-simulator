@@ -1,0 +1,46 @@
+\doxysection{Sales\+Report.\+cpp}
+\hypertarget{_sales_report_8cpp_source}{}\label{_sales_report_8cpp_source}\index{src/SalesReport/SalesReport.cpp@{src/SalesReport/SalesReport.cpp}}
+\mbox{\hyperlink{_sales_report_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_sales_report_8h}{SalesReport.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00011}\mbox{\hyperlink{class_sales_report_a2bd4ee648c88804b8bbb581d1626c49f}{00011}}\ \mbox{\hyperlink{class_sales_report_a2bd4ee648c88804b8bbb581d1626c49f}{SalesReport::SalesReport}}(\textcolor{keywordtype}{int}\ SalesId,\ QDateTime\ time,\ QList<ProductReport>\ productList,\ \textcolor{keywordtype}{double}\ operationalCosts,\ \textcolor{keywordtype}{double}\ netProfit)\ :\ \mbox{\hyperlink{class_report}{Report}}(operationalCosts,\ netProfit)}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{this}\ -\/>\ salesId\ =\ SalesId;}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{this}\ -\/>\ time\ =\ time;}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{this}\ -\/>\ productList\ =\ productList;}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00016}00016\ \}}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00021}\mbox{\hyperlink{class_sales_report_adbcc82fb8fa70e87cd4f12bf4f3537ae}{00021}}\ QString\ \mbox{\hyperlink{class_sales_report_adbcc82fb8fa70e87cd4f12bf4f3537ae}{SalesReport::generateReport}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00022}00022\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00023}00023\ \ \ \ \ QString\ report;}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00024}00024\ \ \ \ \ report\ +=\ QString(\textcolor{stringliteral}{"{}Sales\ ID,Time\(\backslash\)n\%1,\%2\(\backslash\)n"{}})}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .arg(salesId)}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .arg(time.toString(\textcolor{stringliteral}{"{}yyyy-\/MM-\/dd\ hh:mm:ss"{}}));}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00028}00028\ \ \ \ \ report\ +=\ \textcolor{stringliteral}{"{}Product\ Name,Price,Quantity\ Sold\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_report_1_1_product_report}{ProductReport}}\&\ product\ :\ productList)}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00031}00031\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(product.quantity\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ report\ +=\ QString(\textcolor{stringliteral}{"{}\%1,\%2,\%3\(\backslash\)n"{}})}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .arg(product.name)}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .arg(product.price)}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .arg(product.quantity);}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_report_a4fe97f7f77d99b1e925c6024ed7c3913}{setNetProfit}}(\mbox{\hyperlink{class_report_af98f7f1cb07d06b29c081974cfc9a830}{getNetProfit}}()\ +\ product.price\ *\ product.quantity);}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{class_report_a4fe97f7f77d99b1e925c6024ed7c3913}{setNetProfit}}(\mbox{\hyperlink{class_report_af98f7f1cb07d06b29c081974cfc9a830}{getNetProfit}}()-\/\mbox{\hyperlink{class_report_a0280b260884973ffbb4ca95c438f30a6}{getOperationalCosts}}());}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00045}00045\ \ \ \ \ report\ +=\ \mbox{\hyperlink{class_report_aab56d11c88e240affbc4b147474d4363}{Report::generateReport}}();}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00047}00047\ \ \ \ \ \mbox{\hyperlink{class_report_a4fe97f7f77d99b1e925c6024ed7c3913}{setNetProfit}}(\mbox{\hyperlink{class_report_af98f7f1cb07d06b29c081974cfc9a830}{getNetProfit}}()+\mbox{\hyperlink{class_report_a0280b260884973ffbb4ca95c438f30a6}{getOperationalCosts}}());}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{return}\ report;}
+\DoxyCodeLine{\Hypertarget{_sales_report_8cpp_source_l00050}00050\ \}}
+
+\end{DoxyCode}

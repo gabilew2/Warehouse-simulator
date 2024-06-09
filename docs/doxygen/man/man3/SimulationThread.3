@@ -1,0 +1,52 @@
+.TH "SimulationThread" 3 "Version 1.0.0" "Warehouse Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SimulationThread \- The \fBSimulationThread\fP class is responsible for running the simulation in a separate thread\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <gui\&.h>\fP
+.PP
+Inherits QThread\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBsimulationFinished\fP ()"
+.br
+.RI "Signal emitted when the simulation has finished running\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBrun\fP () override"
+.br
+.RI "Executes the simulation in a separate thread\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBSimulationThread\fP class is responsible for running the simulation in a separate thread\&. 
+
+This class inherits from QThread and overrides the run method to execute the simulation\&. It emits a signal upon completion of the simulation to notify other components of its completion\&. 
+.PP
+Definition at line \fB38\fP of file \fBgui\&.h\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void SimulationThread::run ()\fR [inline]\fP, \fR [override]\fP"
+
+.PP
+Executes the simulation in a separate thread\&. This function overrides the run method from QThread and is called when the thread starts\&. It initializes a \fBSimulation\fP object and runs the simulation\&. Upon completion, it emits the simulationFinished signal\&. 
+.PP
+Definition at line \fB49\fP of file \fBgui\&.h\fP\&.
+.SS "void SimulationThread::simulationFinished ()\fR [signal]\fP"
+
+.PP
+Signal emitted when the simulation has finished running\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Warehouse Simulator from the source code\&.

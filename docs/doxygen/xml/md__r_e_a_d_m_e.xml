@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="md__r_e_a_d_m_e" kind="page">
+    <compoundname>md__r_e_a_d_m_e</compoundname>
+    <title>Warehouse-simulator</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md__r_e_a_d_m_e_1autotoc_md0"/> The <ref refid="class_warehouse" kindref="compound">Warehouse</ref> <ref refid="class_simulation" kindref="compound">Simulation</ref> project is a warehouse management support system that allows you to simulate and optimize warehouse processes. Thanks to it, users can model various scenarios, analyze results and make decisions in real time. The project integrates simulation algorithms with an interactive user interface, which allows for dynamic monitoring of warehouse stock and quick response to changes in the business environment.</para>
+<para>The main features of the project include defining warehouses, products, attributes, simulating warehouse operation in a time loop, generating events, user intervention and generating reports with simulation results. The aim of the project is to provide a tool supporting effective warehouse management, which will allow companies to increase operational efficiency and maximize profits. </para>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

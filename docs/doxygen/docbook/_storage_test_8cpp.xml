@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__storage_test_8cpp" xml:lang="en-US">
+<title>test/Storage/StorageTest.cpp File Reference</title>
+<indexterm><primary>test/Storage/StorageTest.cpp</primary></indexterm>
+<para>
+
+<para>Source file of tests for the <link linkend="_class_storage">Storage</link> class. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;gtest/gtest.h&gt;<?linebreak?>#include &quot;Storage/Storage.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__storage_test_8cpp_1a1b22fe9aeb085abcac57c377738e5875">TEST</link> (StorageTest, itLives)</para>
+
+<para>Test to ensure that a <link linkend="_class_storage">Storage</link> object can be instantiated. </para>
+</listitem>
+            <listitem><para><link linkend="__storage_test_8cpp_1ade26c6ad971a84351528a16738b056a6">TEST</link> (StorageTest, checkCapacityShouldReturnEmpty)</para>
+
+<para>Test to verify that a new <link linkend="_class_storage">Storage</link> is EMPTY when initialized with zero capacity. </para>
+</listitem>
+            <listitem><para><link linkend="__storage_test_8cpp_1aad456949101b5328e0beaa3b0d59be77">TEST</link> (StorageTest, checkCapacityShouldReturnAvailable)</para>
+
+<para>Test to verify that <link linkend="_class_storage">Storage</link> is AVAILABLE when initialized with capacity less than total capacity. </para>
+</listitem>
+            <listitem><para><link linkend="__storage_test_8cpp_1a24b788d1e57b102603f7d66a66e5a8b4">TEST</link> (StorageTest, checkCapacityShouldReturnFully)</para>
+
+<para>Test to verify that <link linkend="_class_storage">Storage</link> is FULLY when initialized with capacity equal to or greater than total capacity. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Source file of tests for the <link linkend="_class_storage">Storage</link> class. </para>
+<para>
+Definition in file <link linkend="__storage_test_8cpp_source">StorageTest.cpp</link>.</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__storage_test_8cpp_1aad456949101b5328e0beaa3b0d59be77"/><section>
+    <title>TEST()<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>StorageTest.cpp</secondary></indexterm>
+<indexterm><primary>StorageTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (StorageTest , checkCapacityShouldReturnAvailable )</computeroutput></para><para>
+
+<para>Test to verify that <link linkend="_class_storage">Storage</link> is AVAILABLE when initialized with capacity less than total capacity. </para>
+</para>
+<para>
+Definition at line <link linkend="__storage_test_8cpp_source_1l00029">29</link> of file <link linkend="__storage_test_8cpp_source">StorageTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__storage_test_8cpp_1ade26c6ad971a84351528a16738b056a6"/><section>
+    <title>TEST()<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>StorageTest.cpp</secondary></indexterm>
+<indexterm><primary>StorageTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (StorageTest , checkCapacityShouldReturnEmpty )</computeroutput></para><para>
+
+<para>Test to verify that a new <link linkend="_class_storage">Storage</link> is EMPTY when initialized with zero capacity. </para>
+</para>
+<para>
+Definition at line <link linkend="__storage_test_8cpp_source_1l00020">20</link> of file <link linkend="__storage_test_8cpp_source">StorageTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__storage_test_8cpp_1a24b788d1e57b102603f7d66a66e5a8b4"/><section>
+    <title>TEST()<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>StorageTest.cpp</secondary></indexterm>
+<indexterm><primary>StorageTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (StorageTest , checkCapacityShouldReturnFully )</computeroutput></para><para>
+
+<para>Test to verify that <link linkend="_class_storage">Storage</link> is FULLY when initialized with capacity equal to or greater than total capacity. </para>
+</para>
+<para>
+Definition at line <link linkend="__storage_test_8cpp_source_1l00038">38</link> of file <link linkend="__storage_test_8cpp_source">StorageTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__storage_test_8cpp_1a1b22fe9aeb085abcac57c377738e5875"/><section>
+    <title>TEST()<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>StorageTest.cpp</secondary></indexterm>
+<indexterm><primary>StorageTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (StorageTest , itLives )</computeroutput></para><para>
+
+<para>Test to ensure that a <link linkend="_class_storage">Storage</link> object can be instantiated. </para>
+</para>
+<para>
+Definition at line <link linkend="__storage_test_8cpp_source_1l00012">12</link> of file <link linkend="__storage_test_8cpp_source">StorageTest.cpp</link>.</para>
+</section>
+</section>
+</section>

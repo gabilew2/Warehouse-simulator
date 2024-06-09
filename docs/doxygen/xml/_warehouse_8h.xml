@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_warehouse_8h" kind="file" language="C++">
+    <compoundname>Warehouse.h</compoundname>
+    <includes refid="_storage_8h" local="yes">Storage/Storage.h</includes>
+    <includes refid="_product_8h" local="yes">Product/Product.h</includes>
+    <includes local="no">QList</includes>
+    <includedby refid="_simulation_8h" local="no">src/Simulation/Simulation.h</includedby>
+    <includedby refid="_warehouse_8cpp" local="yes">src/Warehouse/Warehouse.cpp</includedby>
+    <includedby refid="_warehouse_test_8cpp" local="yes">test/Warehouse/WarehouseTest.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>Product/Product.h</label>
+        <link refid="_product_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Storage/Storage.h</label>
+        <link refid="_storage_8h"/>
+      </node>
+      <node id="1">
+        <label>src/Warehouse/Warehouse.h</label>
+        <link refid="_warehouse_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QList</label>
+      </node>
+      <node id="4">
+        <label>QString</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>src/Simulation/Simulation.cpp</label>
+        <link refid="_simulation_8cpp"/>
+      </node>
+      <node id="2">
+        <label>src/Simulation/Simulation.h</label>
+        <link refid="_simulation_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>src/Warehouse/Warehouse.cpp</label>
+        <link refid="_warehouse_8cpp"/>
+      </node>
+      <node id="1">
+        <label>src/Warehouse/Warehouse.h</label>
+        <link refid="_warehouse_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/gui/gui.cpp</label>
+        <link refid="gui_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/gui/gui.h</label>
+        <link refid="gui_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>src/main.cpp</label>
+        <link refid="src_2main_8cpp"/>
+      </node>
+      <node id="7">
+        <label>test/Simulation/SimulationTest.cpp</label>
+        <link refid="_simulation_test_8cpp"/>
+      </node>
+      <node id="9">
+        <label>test/Warehouse/WarehouseTest.cpp</label>
+        <link refid="_warehouse_test_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_warehouse" prot="public">Warehouse</innerclass>
+    <briefdescription>
+<para>Header file of the <ref refid="class_warehouse" kindref="compound">Warehouse</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>WAREHOUSE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WAREHOUSE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_storage_8h" kindref="compound">Storage/Storage.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_product_8h" kindref="compound">Product/Product.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QList&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_warehouse" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>:<sp/><ref refid="class_storage" kindref="compound">Storage</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>location;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>QList&lt;Product&gt;<sp/>productList;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>warehouseCapacity;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse_1a436ed7c9254c6eca35764f8ec7b32192" kindref="member">Warehouse</ref>(QString<sp/>location,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>warehouseCapacity);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_warehouse_1a2f0e291212ae6770fe0c0494029a0d07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_warehouse_1a2f0e291212ae6770fe0c0494029a0d07" kindref="member">warehouseId</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86f" kindref="member">storageStatus</ref><sp/><ref refid="class_warehouse_1ab5e7fee30cc7b17f6ed600c7e01f0887" kindref="member">checkStatus</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/><ref refid="class_warehouse_1a5b272ddafc481192f471de223c91f4eb" kindref="member">updateStatus</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>newCapacity);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Product<sp/>operations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/><ref refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kindref="member">addProduct</ref>(QString<sp/>name,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>price,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>quantity,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/><ref refid="class_warehouse_1af13dfa8e7d40770b45d28a7f19b6ea87" kindref="member">updatePrice</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>newPrice,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/><ref refid="class_warehouse_1a12c143bfa6b7443be317cc66897491e9" kindref="member">changeQuantity</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>quantity,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/><ref refid="class_warehouse_1a7ef00deb93a210331370beea2990c237" kindref="member">sell</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>quantityToSell,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_warehouse_1a52374d2018f3744d545803b9805bfa7e" kindref="member">getName</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_warehouse_1aad96200e251b9e55dc51d6fd3dff9d56" kindref="member">getPrice</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_warehouse_1a08808180a2c1f6db033a3ecc94b3c205" kindref="member">getQuantity</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Getters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_warehouse_1a3f817148fcf0caf2ba0b6be2dd27809d" kindref="member">getLocation</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QList&lt;Product&gt;<sp/><ref refid="class_warehouse_1ad6743eb02619226c049192647fc96939" kindref="member">getProductList</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_warehouse_1ad5eb7e2175f702204e9e628c6658f777" kindref="member">getCurrentCapacity</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/Warehouse/Warehouse.h"/>
+  </compounddef>
+</doxygen>

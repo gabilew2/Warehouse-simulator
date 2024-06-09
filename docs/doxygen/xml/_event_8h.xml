@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_event_8h" kind="file" language="C++">
+    <compoundname>Event.h</compoundname>
+    <includes local="no">QDateTime</includes>
+    <includedby refid="_event_8cpp" local="yes">src/Event/Event.cpp</includedby>
+    <includedby refid="_simulation_8h" local="no">src/Simulation/Simulation.h</includedby>
+    <includedby refid="_event_test_8cpp" local="yes">test/Event/EventTest.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/Event/Event.h</label>
+        <link refid="_event_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QDateTime</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/Event/Event.cpp</label>
+        <link refid="_event_8cpp"/>
+      </node>
+      <node id="1">
+        <label>src/Event/Event.h</label>
+        <link refid="_event_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/Simulation/Simulation.cpp</label>
+        <link refid="_simulation_8cpp"/>
+      </node>
+      <node id="3">
+        <label>src/Simulation/Simulation.h</label>
+        <link refid="_simulation_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>src/gui/gui.cpp</label>
+        <link refid="gui_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/gui/gui.h</label>
+        <link refid="gui_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>src/main.cpp</label>
+        <link refid="src_2main_8cpp"/>
+      </node>
+      <node id="9">
+        <label>test/Event/EventTest.cpp</label>
+        <link refid="_event_test_8cpp"/>
+      </node>
+      <node id="8">
+        <label>test/Simulation/SimulationTest.cpp</label>
+        <link refid="_simulation_test_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_event" prot="public">Event</innerclass>
+    <briefdescription>
+<para>Header file of the <ref refid="class_event" kindref="compound">Event</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EVENT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EVENT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDateTime&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_event" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_event" kindref="compound">Event</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>eventType;<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>QDateTime<sp/>time;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_event_1ad93a0e3be8c8738a36970319e7110389" kindref="member">Event</ref>(QString<sp/>eventType,<sp/>QDateTime<sp/>time);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_event" kindref="compound">Event</ref><sp/><ref refid="class_event_1a0a53e36a36fd4bfac0bb3d0de9cc521c" kindref="member">generateEvent</ref>(QString<sp/>eventType,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seed);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Getters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_event_1a20074c3674655968a30e835b7e2e6cdb" kindref="member">getEventType</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>QDateTime<sp/><ref refid="class_event_1a7dba066f88bda41545ea19491dc69760" kindref="member">getTime</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>EVENT_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/Event/Event.h"/>
+  </compounddef>
+</doxygen>

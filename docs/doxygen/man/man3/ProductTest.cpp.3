@@ -1,0 +1,130 @@
+.TH "test/Product/ProductTest.cpp" 3 "Version 1.0.0" "Warehouse Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+test/Product/ProductTest.cpp \- Source file of tests for the \fBProduct\fP class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <gtest/gtest\&.h>\fP
+.br
+\fR#include 'Product/Product\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTEST\fP (ProductTest, itLives)"
+.br
+.RI "Test to ensure that a \fBProduct\fP object can be instantiated\&. "
+.ti -1c
+.RI "\fBTEST\fP (ProductTest, getNameShouldReturnName)"
+.br
+.RI "Test to verify that getName() returns the correct product name\&. "
+.ti -1c
+.RI "\fBTEST\fP (ProductTest, getQuantityShouldReturnInt)"
+.br
+.RI "Test to verify that getQuantity() returns the correct quantity\&. "
+.ti -1c
+.RI "\fBTEST\fP (ProductTest, getPriceShouldReturnDouble)"
+.br
+.RI "Test to verify that getPrice() returns the correct price\&. "
+.ti -1c
+.RI "\fBTEST\fP (ProductTest, sellShouldReturnSuccess)"
+.br
+.RI "Test to verify that sell() returns SUCCESS when selling a valid quantity\&. "
+.ti -1c
+.RI "\fBTEST\fP (ProductTest, sellShouldReturnError)"
+.br
+.RI "Test to verify that sell() returns ERROR when selling an invalid quantity\&. "
+.ti -1c
+.RI "\fBTEST\fP (ProductTest, updatePriceShouldReturnSuccess)"
+.br
+.RI "Test to verify that updatePrice() returns SUCCESS when given a valid price\&. "
+.ti -1c
+.RI "\fBTEST\fP (ProductTest, updatePriceShouldReturnError)"
+.br
+.RI "Test to verify that updatePrice() returns ERROR when given an invalid price\&. "
+.ti -1c
+.RI "\fBTEST\fP (ProductTest, changeQuantityShouldReturnSuccess)"
+.br
+.RI "Test to verify that changeQuantity() returns SUCCESS when given a valid quantity\&. "
+.ti -1c
+.RI "\fBTEST\fP (ProductTest, changeQuantityShouldReturnError)"
+.br
+.RI "Test to verify that changeQuantity() returns ERROR when given an invalid quantity\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Source file of tests for the \fBProduct\fP class\&. 
+
+
+.PP
+Definition in file \fBProductTest\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "TEST (ProductTest, changeQuantityShouldReturnError)"
+
+.PP
+Test to verify that changeQuantity() returns ERROR when given an invalid quantity\&. 
+.PP
+Definition at line \fB110\fP of file \fBProductTest\&.cpp\fP\&.
+.SS "TEST (ProductTest, changeQuantityShouldReturnSuccess)"
+
+.PP
+Test to verify that changeQuantity() returns SUCCESS when given a valid quantity\&. 
+.PP
+Definition at line \fB99\fP of file \fBProductTest\&.cpp\fP\&.
+.SS "TEST (ProductTest, getNameShouldReturnName)"
+
+.PP
+Test to verify that getName() returns the correct product name\&. 
+.PP
+Definition at line \fB20\fP of file \fBProductTest\&.cpp\fP\&.
+.SS "TEST (ProductTest, getPriceShouldReturnDouble)"
+
+.PP
+Test to verify that getPrice() returns the correct price\&. 
+.PP
+Definition at line \fB38\fP of file \fBProductTest\&.cpp\fP\&.
+.SS "TEST (ProductTest, getQuantityShouldReturnInt)"
+
+.PP
+Test to verify that getQuantity() returns the correct quantity\&. 
+.PP
+Definition at line \fB29\fP of file \fBProductTest\&.cpp\fP\&.
+.SS "TEST (ProductTest, itLives)"
+
+.PP
+Test to ensure that a \fBProduct\fP object can be instantiated\&. 
+.PP
+Definition at line \fB12\fP of file \fBProductTest\&.cpp\fP\&.
+.SS "TEST (ProductTest, sellShouldReturnError)"
+
+.PP
+Test to verify that sell() returns ERROR when selling an invalid quantity\&. 
+.PP
+Definition at line \fB60\fP of file \fBProductTest\&.cpp\fP\&.
+.SS "TEST (ProductTest, sellShouldReturnSuccess)"
+
+.PP
+Test to verify that sell() returns SUCCESS when selling a valid quantity\&. 
+.PP
+Definition at line \fB47\fP of file \fBProductTest\&.cpp\fP\&.
+.SS "TEST (ProductTest, updatePriceShouldReturnError)"
+
+.PP
+Test to verify that updatePrice() returns ERROR when given an invalid price\&. 
+.PP
+Definition at line \fB86\fP of file \fBProductTest\&.cpp\fP\&.
+.SS "TEST (ProductTest, updatePriceShouldReturnSuccess)"
+
+.PP
+Test to verify that updatePrice() returns SUCCESS when given a valid price\&. 
+.PP
+Definition at line \fB73\fP of file \fBProductTest\&.cpp\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Warehouse Simulator from the source code\&.

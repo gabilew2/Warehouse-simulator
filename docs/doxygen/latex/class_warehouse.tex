@@ -1,0 +1,359 @@
+\doxysection{Warehouse Class Reference}
+\hypertarget{class_warehouse}{}\label{class_warehouse}\index{Warehouse@{Warehouse}}
+
+
+The \doxylink{class_warehouse}{Warehouse} class represents a warehouse with storage capacity.  
+
+
+
+
+{\ttfamily \#include $<$Warehouse.\+h$>$}
+
+Inheritance diagram for Warehouse\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_warehouse}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_warehouse_a436ed7c9254c6eca35764f8ec7b32192}{Warehouse}} (QString location, double warehouse\+Capacity)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_warehouse}{Warehouse} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_storage_8h_aa3ad3663894c15a6c47a41a02d64e86f}{storage\+Status}} \mbox{\hyperlink{class_warehouse_ab5e7fee30cc7b17f6ed600c7e01f0887}{check\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Check the current status of the warehouse and updates the capacity attribute inherited from the \doxylink{class_storage}{Storage} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} \mbox{\hyperlink{class_warehouse_a5b272ddafc481192f471de223c91f4eb}{update\+Status}} (int new\+Capacity)
+\begin{DoxyCompactList}\small\item\em Update the storage capacity of the warehouse. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} \mbox{\hyperlink{class_warehouse_adcc66b057690967cc902d3e999db8af9}{add\+Product}} (QString name, double price, int quantity, int \mbox{\hyperlink{_warehouse_test_8cpp_a9512f29d22751266efd5957638b64923}{product\+Id}})
+\begin{DoxyCompactList}\small\item\em Add a new product to the warehouse. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} \mbox{\hyperlink{class_warehouse_af13dfa8e7d40770b45d28a7f19b6ea87}{update\+Price}} (double new\+Price, int \mbox{\hyperlink{_warehouse_test_8cpp_a9512f29d22751266efd5957638b64923}{product\+Id}})
+\begin{DoxyCompactList}\small\item\em Update the price of a product in the warehouse. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} \mbox{\hyperlink{class_warehouse_a12c143bfa6b7443be317cc66897491e9}{change\+Quantity}} (int quantity, int \mbox{\hyperlink{_warehouse_test_8cpp_a9512f29d22751266efd5957638b64923}{product\+Id}})
+\begin{DoxyCompactList}\small\item\em Change the quantity of a product in the warehouse. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} \mbox{\hyperlink{class_warehouse_a7ef00deb93a210331370beea2990c237}{sell}} (int quantity\+To\+Sell, int \mbox{\hyperlink{_warehouse_test_8cpp_a9512f29d22751266efd5957638b64923}{product\+Id}})
+\begin{DoxyCompactList}\small\item\em Sell a quantity of a product from the warehouse. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_warehouse_a52374d2018f3744d545803b9805bfa7e}{get\+Name}} (int \mbox{\hyperlink{_warehouse_test_8cpp_a9512f29d22751266efd5957638b64923}{product\+Id}})
+\begin{DoxyCompactList}\small\item\em Get the name of a product by its ID. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_warehouse_aad96200e251b9e55dc51d6fd3dff9d56}{get\+Price}} (int \mbox{\hyperlink{_warehouse_test_8cpp_a9512f29d22751266efd5957638b64923}{product\+Id}})
+\begin{DoxyCompactList}\small\item\em Get the price of a product by its ID. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_warehouse_a08808180a2c1f6db033a3ecc94b3c205}{get\+Quantity}} (int \mbox{\hyperlink{_warehouse_test_8cpp_a9512f29d22751266efd5957638b64923}{product\+Id}})
+\begin{DoxyCompactList}\small\item\em Get the quantity of a product by its ID. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_warehouse_a3f817148fcf0caf2ba0b6be2dd27809d}{get\+Location}} () const
+\begin{DoxyCompactList}\small\item\em Get the location of the warehouse. \end{DoxyCompactList}\item 
+const QList$<$ \mbox{\hyperlink{class_product}{Product}} $>$ \mbox{\hyperlink{class_warehouse_ad6743eb02619226c049192647fc96939}{get\+Product\+List}} () const
+\begin{DoxyCompactList}\small\item\em Get the list of the products. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_warehouse_ad5eb7e2175f702204e9e628c6658f777}{get\+Current\+Capacity}} () const
+\begin{DoxyCompactList}\small\item\em Get the capacity of the warehouse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_warehouse_a2f0e291212ae6770fe0c0494029a0d07}{warehouse\+Id}} = 0
+\begin{DoxyCompactList}\small\item\em Unique identifier for the warehouse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_warehouse}{Warehouse} class represents a warehouse with storage capacity. 
+
+This class inherits from \doxylink{class_storage}{Storage} and provides additional functionality specific to warehouse operations. 
+
+Definition at line \mbox{\hyperlink{_warehouse_8h_source_l00020}{20}} of file \mbox{\hyperlink{_warehouse_8h_source}{Warehouse.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_warehouse_a436ed7c9254c6eca35764f8ec7b32192}\label{class_warehouse_a436ed7c9254c6eca35764f8ec7b32192} 
+\index{Warehouse@{Warehouse}!Warehouse@{Warehouse}}
+\index{Warehouse@{Warehouse}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{Warehouse()}{Warehouse()}}
+{\footnotesize\ttfamily Warehouse\+::\+Warehouse (\begin{DoxyParamCaption}\item[{QString}]{location,  }\item[{double}]{warehouse\+Capacity }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_warehouse}{Warehouse} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & The location of the warehouse. \\
+\hline
+{\em warehouse\+Capacity} & The initial capacity of the warehouse. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_warehouse_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{_warehouse_8cpp_source}{Warehouse.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_warehouse_adcc66b057690967cc902d3e999db8af9}\label{class_warehouse_adcc66b057690967cc902d3e999db8af9} 
+\index{Warehouse@{Warehouse}!addProduct@{addProduct}}
+\index{addProduct@{addProduct}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{addProduct()}{addProduct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} Warehouse\+::add\+Product (\begin{DoxyParamCaption}\item[{QString}]{name,  }\item[{double}]{price,  }\item[{int}]{quantity,  }\item[{int}]{product\+Id }\end{DoxyParamCaption})}
+
+
+
+Add a new product to the warehouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the product. \\
+\hline
+{\em price} & The price of the product. \\
+\hline
+{\em quantity} & The quantity of the product. \\
+\hline
+{\em product\+Id} & ID of the product. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status SUCCESS if the product is added, ERROR otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_warehouse_8cpp_source_l00084}{84}} of file \mbox{\hyperlink{_warehouse_8cpp_source}{Warehouse.\+cpp}}.
+
+\Hypertarget{class_warehouse_a12c143bfa6b7443be317cc66897491e9}\label{class_warehouse_a12c143bfa6b7443be317cc66897491e9} 
+\index{Warehouse@{Warehouse}!changeQuantity@{changeQuantity}}
+\index{changeQuantity@{changeQuantity}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{changeQuantity()}{changeQuantity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} Warehouse\+::change\+Quantity (\begin{DoxyParamCaption}\item[{int}]{quantity,  }\item[{int}]{product\+Id }\end{DoxyParamCaption})}
+
+
+
+Change the quantity of a product in the warehouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quantity} & The new quantity of the product. \\
+\hline
+{\em product\+Id} & The ID of the product. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status SUCCESS if the quantity is updated, ERROR otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_warehouse_8cpp_source_l00133}{133}} of file \mbox{\hyperlink{_warehouse_8cpp_source}{Warehouse.\+cpp}}.
+
+\Hypertarget{class_warehouse_ab5e7fee30cc7b17f6ed600c7e01f0887}\label{class_warehouse_ab5e7fee30cc7b17f6ed600c7e01f0887} 
+\index{Warehouse@{Warehouse}!checkStatus@{checkStatus}}
+\index{checkStatus@{checkStatus}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{checkStatus()}{checkStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_storage_8h_aa3ad3663894c15a6c47a41a02d64e86f}{storage\+Status}} Warehouse\+::check\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check the current status of the warehouse and updates the capacity attribute inherited from the \doxylink{class_storage}{Storage} class. 
+
+Check the current status of the warehouse and update the capacity attribute inherited from the \doxylink{class_storage}{Storage} class.
+
+\begin{DoxyReturn}{Returns}
+storage\+Status The status of the warehouse\+: EMPTY, AVAILABLE, or FULL. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_warehouse_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{_warehouse_8cpp_source}{Warehouse.\+cpp}}.
+
+\Hypertarget{class_warehouse_ad5eb7e2175f702204e9e628c6658f777}\label{class_warehouse_ad5eb7e2175f702204e9e628c6658f777} 
+\index{Warehouse@{Warehouse}!getCurrentCapacity@{getCurrentCapacity}}
+\index{getCurrentCapacity@{getCurrentCapacity}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{getCurrentCapacity()}{getCurrentCapacity()}}
+{\footnotesize\ttfamily double Warehouse\+::get\+Current\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the capacity of the warehouse. 
+
+Get the current capacity of the warehouse. 
+
+Definition at line \mbox{\hyperlink{_warehouse_8cpp_source_l00263}{263}} of file \mbox{\hyperlink{_warehouse_8cpp_source}{Warehouse.\+cpp}}.
+
+\Hypertarget{class_warehouse_a3f817148fcf0caf2ba0b6be2dd27809d}\label{class_warehouse_a3f817148fcf0caf2ba0b6be2dd27809d} 
+\index{Warehouse@{Warehouse}!getLocation@{getLocation}}
+\index{getLocation@{getLocation}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{getLocation()}{getLocation()}}
+{\footnotesize\ttfamily QString Warehouse\+::get\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the location of the warehouse. 
+
+
+
+Definition at line \mbox{\hyperlink{_warehouse_8cpp_source_l00247}{247}} of file \mbox{\hyperlink{_warehouse_8cpp_source}{Warehouse.\+cpp}}.
+
+\Hypertarget{class_warehouse_a52374d2018f3744d545803b9805bfa7e}\label{class_warehouse_a52374d2018f3744d545803b9805bfa7e} 
+\index{Warehouse@{Warehouse}!getName@{getName}}
+\index{getName@{getName}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily QString Warehouse\+::get\+Name (\begin{DoxyParamCaption}\item[{int}]{product\+Id }\end{DoxyParamCaption})}
+
+
+
+Get the name of a product by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Id} & The ID of the product. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QString The name of the product. 
+\end{DoxyReturn}
+\texorpdfstring{$<$}{<} Contains false if the product was not found in the product\+List.
+
+Definition at line \mbox{\hyperlink{_warehouse_8cpp_source_l00184}{184}} of file \mbox{\hyperlink{_warehouse_8cpp_source}{Warehouse.\+cpp}}.
+
+\Hypertarget{class_warehouse_aad96200e251b9e55dc51d6fd3dff9d56}\label{class_warehouse_aad96200e251b9e55dc51d6fd3dff9d56} 
+\index{Warehouse@{Warehouse}!getPrice@{getPrice}}
+\index{getPrice@{getPrice}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{getPrice()}{getPrice()}}
+{\footnotesize\ttfamily double Warehouse\+::get\+Price (\begin{DoxyParamCaption}\item[{int}]{product\+Id }\end{DoxyParamCaption})}
+
+
+
+Get the price of a product by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Id} & The ID of the product. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double The price of the product. 
+\end{DoxyReturn}
+\texorpdfstring{$<$}{<} Contains false if the product was not found in the product\+List.
+
+Definition at line \mbox{\hyperlink{_warehouse_8cpp_source_l00205}{205}} of file \mbox{\hyperlink{_warehouse_8cpp_source}{Warehouse.\+cpp}}.
+
+\Hypertarget{class_warehouse_ad6743eb02619226c049192647fc96939}\label{class_warehouse_ad6743eb02619226c049192647fc96939} 
+\index{Warehouse@{Warehouse}!getProductList@{getProductList}}
+\index{getProductList@{getProductList}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{getProductList()}{getProductList()}}
+{\footnotesize\ttfamily const QList$<$ \mbox{\hyperlink{class_product}{Product}} $>$ Warehouse\+::get\+Product\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the list of the products. 
+
+Get the list of the products stored in the warehouse. 
+
+Definition at line \mbox{\hyperlink{_warehouse_8cpp_source_l00255}{255}} of file \mbox{\hyperlink{_warehouse_8cpp_source}{Warehouse.\+cpp}}.
+
+\Hypertarget{class_warehouse_a08808180a2c1f6db033a3ecc94b3c205}\label{class_warehouse_a08808180a2c1f6db033a3ecc94b3c205} 
+\index{Warehouse@{Warehouse}!getQuantity@{getQuantity}}
+\index{getQuantity@{getQuantity}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{getQuantity()}{getQuantity()}}
+{\footnotesize\ttfamily int Warehouse\+::get\+Quantity (\begin{DoxyParamCaption}\item[{int}]{product\+Id }\end{DoxyParamCaption})}
+
+
+
+Get the quantity of a product by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Id} & The ID of the product. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The quantity of the product. 
+\end{DoxyReturn}
+\texorpdfstring{$<$}{<} Contains false if the product was not found in the product\+List.
+
+Definition at line \mbox{\hyperlink{_warehouse_8cpp_source_l00226}{226}} of file \mbox{\hyperlink{_warehouse_8cpp_source}{Warehouse.\+cpp}}.
+
+\Hypertarget{class_warehouse_a7ef00deb93a210331370beea2990c237}\label{class_warehouse_a7ef00deb93a210331370beea2990c237} 
+\index{Warehouse@{Warehouse}!sell@{sell}}
+\index{sell@{sell}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{sell()}{sell()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} Warehouse\+::sell (\begin{DoxyParamCaption}\item[{int}]{quantity\+To\+Sell,  }\item[{int}]{product\+Id }\end{DoxyParamCaption})}
+
+
+
+Sell a quantity of a product from the warehouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quantity\+To\+Sell} & The quantity of the product to sell. \\
+\hline
+{\em product\+Id} & The ID of the product. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status SUCCESS if the product is sold, ERROR otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_warehouse_8cpp_source_l00169}{169}} of file \mbox{\hyperlink{_warehouse_8cpp_source}{Warehouse.\+cpp}}.
+
+\Hypertarget{class_warehouse_af13dfa8e7d40770b45d28a7f19b6ea87}\label{class_warehouse_af13dfa8e7d40770b45d28a7f19b6ea87} 
+\index{Warehouse@{Warehouse}!updatePrice@{updatePrice}}
+\index{updatePrice@{updatePrice}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{updatePrice()}{updatePrice()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} Warehouse\+::update\+Price (\begin{DoxyParamCaption}\item[{double}]{new\+Price,  }\item[{int}]{product\+Id }\end{DoxyParamCaption})}
+
+
+
+Update the price of a product in the warehouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Price} & The new price of the product. \\
+\hline
+{\em product\+Id} & The ID of the product. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status SUCCESS if the price is updated, ERROR otherwise. 
+\end{DoxyReturn}
+\texorpdfstring{$<$}{<} Contains false if the product was not found in the product\+List.
+
+Definition at line \mbox{\hyperlink{_warehouse_8cpp_source_l00112}{112}} of file \mbox{\hyperlink{_warehouse_8cpp_source}{Warehouse.\+cpp}}.
+
+\Hypertarget{class_warehouse_a5b272ddafc481192f471de223c91f4eb}\label{class_warehouse_a5b272ddafc481192f471de223c91f4eb} 
+\index{Warehouse@{Warehouse}!updateStatus@{updateStatus}}
+\index{updateStatus@{updateStatus}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{updateStatus()}{updateStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} Warehouse\+::update\+Status (\begin{DoxyParamCaption}\item[{int}]{new\+Capacity }\end{DoxyParamCaption})}
+
+
+
+Update the storage capacity of the warehouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Capacity} & The new capacity of the warehouse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status SUCCESS if the operation is successful, ERROR otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_warehouse_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{_warehouse_8cpp_source}{Warehouse.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_warehouse_a2f0e291212ae6770fe0c0494029a0d07}\label{class_warehouse_a2f0e291212ae6770fe0c0494029a0d07} 
+\index{Warehouse@{Warehouse}!warehouseId@{warehouseId}}
+\index{warehouseId@{warehouseId}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{warehouseId}{warehouseId}}
+{\footnotesize\ttfamily int Warehouse\+::warehouse\+Id = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Unique identifier for the warehouse. 
+
+Static variable initialization. 
+
+Definition at line \mbox{\hyperlink{_warehouse_8h_source_l00035}{35}} of file \mbox{\hyperlink{_warehouse_8h_source}{Warehouse.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Warehouse/\mbox{\hyperlink{_warehouse_8h}{Warehouse.\+h}}\item 
+src/\+Warehouse/\mbox{\hyperlink{_warehouse_8cpp}{Warehouse.\+cpp}}\end{DoxyCompactItemize}

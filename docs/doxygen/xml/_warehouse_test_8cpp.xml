@@ -1,0 +1,721 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_warehouse_test_8cpp" kind="file" language="C++">
+    <compoundname>WarehouseTest.cpp</compoundname>
+    <includes local="no">gtest/gtest.h</includes>
+    <includes refid="_product_8h" local="yes">Product/Product.h</includes>
+    <includes refid="_warehouse_8h" local="yes">Warehouse/Warehouse.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>Product/Product.h</label>
+        <link refid="_product_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Storage/Storage.h</label>
+        <link refid="_storage_8h"/>
+      </node>
+      <node id="5">
+        <label>Warehouse/Warehouse.h</label>
+        <link refid="_warehouse_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>test/Warehouse/WarehouseTest.cpp</label>
+        <link refid="_warehouse_test_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>QList</label>
+      </node>
+      <node id="4">
+        <label>QString</label>
+      </node>
+      <node id="2">
+        <label>gtest/gtest.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="_warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7" prot="public" static="no" mutable="no">
+        <type>const QString</type>
+        <definition>const QString testLocation</definition>
+        <argsstring></argsstring>
+        <name>testLocation</name>
+        <initializer>= &quot;Test Location&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="88" column="15" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double initialCapacity</definition>
+        <argsstring></argsstring>
+        <name>initialCapacity</name>
+        <initializer>= 100.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="89" column="14" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464" prot="public" static="no" mutable="no">
+        <type>const QString</type>
+        <definition>const QString productName</definition>
+        <argsstring></argsstring>
+        <name>productName</name>
+        <initializer>= &quot;Test Product&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="90" column="15" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_warehouse_test_8cpp_1ae7a0715775e530e41d79b8c2e2fe8635" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double productPrice</definition>
+        <argsstring></argsstring>
+        <name>productPrice</name>
+        <initializer>= 10.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="91" column="14" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int productQuantity</definition>
+        <argsstring></argsstring>
+        <name>productQuantity</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="92" column="11" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int productId</definition>
+        <argsstring></argsstring>
+        <name>productId</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="93" column="11" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(WarehouseTest, itLives)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>WarehouseTest</type>
+        </param>
+        <param>
+          <type>itLives</type>
+        </param>
+        <briefdescription>
+<para>Test to ensure that a <ref refid="class_warehouse" kindref="compound">Warehouse</ref> object can be instantiated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="13" column="1" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="_warehouse_test_8cpp_1a8061dd778455c5f1d4cb65524669c294" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(WarehouseTest, checkStatusShouldReturnEmpty)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>WarehouseTest</type>
+        </param>
+        <param>
+          <type>checkStatusShouldReturnEmpty</type>
+        </param>
+        <briefdescription>
+<para>Test to check if the warehouse status is EMPTY when capacity is zero or after products are removed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="21" column="1" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="21" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="_warehouse_test_8cpp_1a067bf9aa424412bbcb641e0f7bd2e83b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(WarehouseTest, checkStatusShouldReturnFully)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>WarehouseTest</type>
+        </param>
+        <param>
+          <type>checkStatusShouldReturnFully</type>
+        </param>
+        <briefdescription>
+<para>Test to check if the warehouse status is FULLY when capacity is full or exceeded. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="35" column="1" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="35" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="_warehouse_test_8cpp_1a536e4b1c144e8d1185f37ac49f1d37de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(WarehouseTest, checkStatusShouldReturnAvailable)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>WarehouseTest</type>
+        </param>
+        <param>
+          <type>checkStatusShouldReturnAvailable</type>
+        </param>
+        <briefdescription>
+<para>Test to check if the warehouse status is AVAILABLE when capacity is not full. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="50" column="1" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="50" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="_warehouse_test_8cpp_1a23a72169513eb311372d8eb3e6e48aad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(WarehouseTest, updateStatusShouldReturnSuccess)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>WarehouseTest</type>
+        </param>
+        <param>
+          <type>updateStatusShouldReturnSuccess</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that updateStatus successfully updates the warehouse&apos;s capacity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="65" column="1" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="65" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="_warehouse_test_8cpp_1a960cce29a41d2d18b79882d41fe032c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(WarehouseTest, updateStatusShouldReturnError)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>WarehouseTest</type>
+        </param>
+        <param>
+          <type>updateStatusShouldReturnError</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that updateStatus returns an error when given a negative capacity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="79" column="1" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="79" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="_warehouse_test_8cpp_1aacc7288042363ed681a96e703e8fbe39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(WarehouseTest, changeQuantityShouldReturnSuccess)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>WarehouseTest</type>
+        </param>
+        <param>
+          <type>changeQuantityShouldReturnSuccess</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that changeQuantity successfully changes the quantity of a product. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="98" column="1" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="98" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="_warehouse_test_8cpp_1a16bfb05084226cee8f606690479a09e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(WarehouseTest, changeQuantityShouldReturnError)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>WarehouseTest</type>
+        </param>
+        <param>
+          <type>changeQuantityShouldReturnError</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that changeQuantity returns an error when given a negative quantity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="109" column="1" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="109" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="_warehouse_test_8cpp_1a654d3c8fb5e0b30c46a03e650d9fe297" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(WarehouseTest, sellShouldReturnSuccess)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>WarehouseTest</type>
+        </param>
+        <param>
+          <type>sellShouldReturnSuccess</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that sell successfully sells the product and decreases the quantity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="119" column="1" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="119" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="_warehouse_test_8cpp_1a034587e0529ebabe6b76add6c2613a4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(WarehouseTest, sellShouldReturnError)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>WarehouseTest</type>
+        </param>
+        <param>
+          <type>sellShouldReturnError</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that sell returns an error when trying to sell more than available quantity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="130" column="1" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="130" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="_warehouse_test_8cpp_1a120fbded0e0d02848b2912a79cf0b5d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(WarehouseTest, updatePriceShouldReturnSuccess)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>WarehouseTest</type>
+        </param>
+        <param>
+          <type>updatePriceShouldReturnSuccess</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that updatePrice successfully updates the price of a product. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="140" column="1" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="140" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="_warehouse_test_8cpp_1af8f62530a618d91142629ff371699200" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(WarehouseTest, updatePriceShouldReturnError)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>WarehouseTest</type>
+        </param>
+        <param>
+          <type>updatePriceShouldReturnError</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that updatePrice returns an error when given a negative price. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="151" column="1" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="151" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="_warehouse_test_8cpp_1a02e7c715b5a15d6dfe37ca944c664164" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(WarehouseTest, addProductShouldReturnSuccess)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>WarehouseTest</type>
+        </param>
+        <param>
+          <type>addProductShouldReturnSuccess</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that addProduct successfully adds a product to the warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="161" column="1" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="161" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="_warehouse_test_8cpp_1a3ce92373ef50aa0ee4d875a9848c9fdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(WarehouseTest, addProductShouldReturnError)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>WarehouseTest</type>
+        </param>
+        <param>
+          <type>addProductShouldReturnError</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that addProduct returns an error when given a negative price or quantity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="171" column="1" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="171" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="_warehouse_test_8cpp_1accfba332ac6e954da803caaa71df6a4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(WarehouseTest, getLocationShouldReturnCorrectValue)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>WarehouseTest</type>
+        </param>
+        <param>
+          <type>getLocationShouldReturnCorrectValue</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that getLocation returns the correct location of the warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="180" column="1" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="180" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="_warehouse_test_8cpp_1aae417a8f392dba448568492f98984bf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(WarehouseTest, getProductListShouldReturnCorrectValue)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>WarehouseTest</type>
+        </param>
+        <param>
+          <type>getProductListShouldReturnCorrectValue</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that getProductList returns the correct list of products. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="189" column="1" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="189" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="_warehouse_test_8cpp_1a87a9b63f7c60f10ac6376b8e43a49826" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(WarehouseTest, getCurrentCapacityShouldReturnCorrectValue)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>WarehouseTest</type>
+        </param>
+        <param>
+          <type>getCurrentCapacityShouldReturnCorrectValue</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that getCurrentCapacity returns the correct current capacity of the warehouse. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="205" column="1" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="205" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="_warehouse_test_8cpp_1a55f9d131a897000c48d3bc867b3f3bee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(WarehouseTest, getNameShouldReturnCorrectValue)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>WarehouseTest</type>
+        </param>
+        <param>
+          <type>getNameShouldReturnCorrectValue</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that getName returns the correct name of a product by its ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="214" column="1" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="214" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="_warehouse_test_8cpp_1a70dae60776189e1769e9e307ceba1339" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(WarehouseTest, getPriceShouldReturnCorrectValue)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>WarehouseTest</type>
+        </param>
+        <param>
+          <type>getPriceShouldReturnCorrectValue</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that getPrice returns the correct price of a product by its ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="224" column="1" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="224" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="_warehouse_test_8cpp_1ad155dc4ed06881722d52ea9a11b44f1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(WarehouseTest, getQuantityShouldReturnCorrectValue)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>WarehouseTest</type>
+        </param>
+        <param>
+          <type>getQuantityShouldReturnCorrectValue</type>
+        </param>
+        <briefdescription>
+<para>Test to verify that getQuantity returns the correct quantity of a product by its ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Warehouse/WarehouseTest.cpp" line="234" column="1" bodyfile="test/Warehouse/WarehouseTest.cpp" bodystart="234" bodyend="239"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Source file of tests for the <ref refid="class_warehouse" kindref="compound">Warehouse</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gtest/gtest.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_product_8h" kindref="compound">Product/Product.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_warehouse_8h" kindref="compound">Warehouse/Warehouse.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" refkind="member"><highlight class="normal"><ref refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kindref="member">TEST</ref>(WarehouseTest,<sp/>itLives)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>warehouse<sp/>=<sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref>(QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>532);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="_warehouse_test_8cpp_1a8061dd778455c5f1d4cb65524669c294" refkind="member"><highlight class="normal"><ref refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kindref="member">TEST</ref>(WarehouseTest,<sp/>checkStatusShouldReturnEmpty)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>warehouse<sp/>=<sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref>(QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>0);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1ab5e7fee30cc7b17f6ed600c7e01f0887" kindref="member">checkStatus</ref>(),<sp/><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa2f0d18fc0d0fa4a6cd92dc328501874d" kindref="member">EMPTY</ref>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1a5b272ddafc481192f471de223c91f4eb" kindref="member">updateStatus</ref>(10);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kindref="member">addProduct</ref>(QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>99.99,<sp/>10,<sp/>1);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1a12c143bfa6b7443be317cc66897491e9" kindref="member">changeQuantity</ref>(0,<sp/>1);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1ab5e7fee30cc7b17f6ed600c7e01f0887" kindref="member">checkStatus</ref>(),<sp/><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa2f0d18fc0d0fa4a6cd92dc328501874d" kindref="member">EMPTY</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="_warehouse_test_8cpp_1a067bf9aa424412bbcb641e0f7bd2e83b" refkind="member"><highlight class="normal"><ref refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kindref="member">TEST</ref>(WarehouseTest,<sp/>checkStatusShouldReturnFully)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>warehouse<sp/>=<sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref>(QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>1);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kindref="member">addProduct</ref>(QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>100,<sp/>1,<sp/>1);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1ab5e7fee30cc7b17f6ed600c7e01f0887" kindref="member">checkStatus</ref>(),<sp/><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa8fd6994b2300416d1ad947a50d833850" kindref="member">FULLY</ref>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1a5b272ddafc481192f471de223c91f4eb" kindref="member">updateStatus</ref>(10);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kindref="member">addProduct</ref>(QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>100,<sp/>9,<sp/>2);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1a12c143bfa6b7443be317cc66897491e9" kindref="member">changeQuantity</ref>(2,<sp/>1);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1ab5e7fee30cc7b17f6ed600c7e01f0887" kindref="member">checkStatus</ref>(),<sp/><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa8fd6994b2300416d1ad947a50d833850" kindref="member">FULLY</ref>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="_warehouse_test_8cpp_1a536e4b1c144e8d1185f37ac49f1d37de" refkind="member"><highlight class="normal"><ref refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kindref="member">TEST</ref>(WarehouseTest,<sp/>checkStatusShouldReturnAvailable)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>warehouse<sp/>=<sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref>(QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>2);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kindref="member">addProduct</ref>(QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>99.99,<sp/>1,<sp/>0);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1ab5e7fee30cc7b17f6ed600c7e01f0887" kindref="member">checkStatus</ref>(),<sp/><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa1e229ccb8b53a57de4ebb11c2d15272e" kindref="member">AVAILABLE</ref>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1a5b272ddafc481192f471de223c91f4eb" kindref="member">updateStatus</ref>(10);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kindref="member">addProduct</ref>(QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>99.99,<sp/>8,<sp/>1);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1a12c143bfa6b7443be317cc66897491e9" kindref="member">changeQuantity</ref>(2,<sp/>1);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1ab5e7fee30cc7b17f6ed600c7e01f0887" kindref="member">checkStatus</ref>(),<sp/><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa1e229ccb8b53a57de4ebb11c2d15272e" kindref="member">AVAILABLE</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="_warehouse_test_8cpp_1a23a72169513eb311372d8eb3e6e48aad" refkind="member"><highlight class="normal"><ref refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kindref="member">TEST</ref>(WarehouseTest,<sp/>updateStatusShouldReturnSuccess)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>warehouse<sp/>=<sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref>(QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>0);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1a5b272ddafc481192f471de223c91f4eb" kindref="member">updateStatus</ref>(10),<sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1a5b272ddafc481192f471de223c91f4eb" kindref="member">updateStatus</ref>(0),<sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1a5b272ddafc481192f471de223c91f4eb" kindref="member">updateStatus</ref>(567.97),<sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kindref="member">addProduct</ref>(QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>99.99,<sp/>5,<sp/>1);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1a5b272ddafc481192f471de223c91f4eb" kindref="member">updateStatus</ref>(1),<sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="_warehouse_test_8cpp_1a960cce29a41d2d18b79882d41fe032c3" refkind="member"><highlight class="normal"><ref refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kindref="member">TEST</ref>(WarehouseTest,<sp/>updateStatusShouldReturnError)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>warehouse<sp/>=<sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref>(QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>567);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1a5b272ddafc481192f471de223c91f4eb" kindref="member">updateStatus</ref>(-1),<sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kindref="member">addProduct</ref>(QString::fromStdString(</highlight><highlight class="stringliteral">&quot;Lorem<sp/>Ipsum&quot;</highlight><highlight class="normal">),<sp/>100,<sp/>5,<sp/>1);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1a5b272ddafc481192f471de223c91f4eb" kindref="member">updateStatus</ref>(1),<sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="_warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/><ref refid="_warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7" kindref="member">testLocation</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Test<sp/>Location&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89" refid="_warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="_warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40" kindref="member">initialCapacity</ref><sp/>=<sp/>100.0;</highlight></codeline>
+<codeline lineno="90" refid="_warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/><ref refid="_warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464" kindref="member">productName</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Test<sp/>Product&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91" refid="_warehouse_test_8cpp_1ae7a0715775e530e41d79b8c2e2fe8635" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="_warehouse_test_8cpp_1ae7a0715775e530e41d79b8c2e2fe8635" kindref="member">productPrice</ref><sp/>=<sp/>10.0;</highlight></codeline>
+<codeline lineno="92" refid="_warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069" kindref="member">productQuantity</ref><sp/>=<sp/>20;</highlight></codeline>
+<codeline lineno="93" refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="_warehouse_test_8cpp_1aacc7288042363ed681a96e703e8fbe39" refkind="member"><highlight class="normal"><ref refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kindref="member">TEST</ref>(WarehouseTest,<sp/>changeQuantityShouldReturnSuccess)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>warehouse(<ref refid="_warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7" kindref="member">testLocation</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40" kindref="member">initialCapacity</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kindref="member">addProduct</ref>(<ref refid="_warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464" kindref="member">productName</ref>,<sp/><ref refid="_warehouse_test_8cpp_1ae7a0715775e530e41d79b8c2e2fe8635" kindref="member">productPrice</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069" kindref="member">productQuantity</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1a12c143bfa6b7443be317cc66897491e9" kindref="member">changeQuantity</ref>(30,<sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>),<sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1a08808180a2c1f6db033a3ecc94b3c205" kindref="member">getQuantity</ref>(<ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>),<sp/>30);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="_warehouse_test_8cpp_1a16bfb05084226cee8f606690479a09e6" refkind="member"><highlight class="normal"><ref refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kindref="member">TEST</ref>(WarehouseTest,<sp/>changeQuantityShouldReturnError)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>warehouse(<ref refid="_warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7" kindref="member">testLocation</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40" kindref="member">initialCapacity</ref>);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kindref="member">addProduct</ref>(<ref refid="_warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464" kindref="member">productName</ref>,<sp/><ref refid="_warehouse_test_8cpp_1ae7a0715775e530e41d79b8c2e2fe8635" kindref="member">productPrice</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069" kindref="member">productQuantity</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1a12c143bfa6b7443be317cc66897491e9" kindref="member">changeQuantity</ref>(-5,<sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>),<sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="_warehouse_test_8cpp_1a654d3c8fb5e0b30c46a03e650d9fe297" refkind="member"><highlight class="normal"><ref refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kindref="member">TEST</ref>(WarehouseTest,<sp/>sellShouldReturnSuccess)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>warehouse(<ref refid="_warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7" kindref="member">testLocation</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40" kindref="member">initialCapacity</ref>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kindref="member">addProduct</ref>(<ref refid="_warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464" kindref="member">productName</ref>,<sp/><ref refid="_warehouse_test_8cpp_1ae7a0715775e530e41d79b8c2e2fe8635" kindref="member">productPrice</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069" kindref="member">productQuantity</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1a7ef00deb93a210331370beea2990c237" kindref="member">sell</ref>(5,<sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>),<sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1a08808180a2c1f6db033a3ecc94b3c205" kindref="member">getQuantity</ref>(<ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>),<sp/><ref refid="_warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069" kindref="member">productQuantity</ref><sp/>-<sp/>5);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="_warehouse_test_8cpp_1a034587e0529ebabe6b76add6c2613a4a" refkind="member"><highlight class="normal"><ref refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kindref="member">TEST</ref>(WarehouseTest,<sp/>sellShouldReturnError)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>warehouse(<ref refid="_warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7" kindref="member">testLocation</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40" kindref="member">initialCapacity</ref>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kindref="member">addProduct</ref>(<ref refid="_warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464" kindref="member">productName</ref>,<sp/><ref refid="_warehouse_test_8cpp_1ae7a0715775e530e41d79b8c2e2fe8635" kindref="member">productPrice</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069" kindref="member">productQuantity</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1a7ef00deb93a210331370beea2990c237" kindref="member">sell</ref>(<ref refid="_warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069" kindref="member">productQuantity</ref><sp/>+<sp/>1,<sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>),<sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="_warehouse_test_8cpp_1a120fbded0e0d02848b2912a79cf0b5d0" refkind="member"><highlight class="normal"><ref refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kindref="member">TEST</ref>(WarehouseTest,<sp/>updatePriceShouldReturnSuccess)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>warehouse(<ref refid="_warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7" kindref="member">testLocation</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40" kindref="member">initialCapacity</ref>);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kindref="member">addProduct</ref>(<ref refid="_warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464" kindref="member">productName</ref>,<sp/><ref refid="_warehouse_test_8cpp_1ae7a0715775e530e41d79b8c2e2fe8635" kindref="member">productPrice</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069" kindref="member">productQuantity</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1af13dfa8e7d40770b45d28a7f19b6ea87" kindref="member">updatePrice</ref>(15.0,<sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>),<sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1aad96200e251b9e55dc51d6fd3dff9d56" kindref="member">getPrice</ref>(<ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>),<sp/>15.0);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="_warehouse_test_8cpp_1af8f62530a618d91142629ff371699200" refkind="member"><highlight class="normal"><ref refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kindref="member">TEST</ref>(WarehouseTest,<sp/>updatePriceShouldReturnError)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>warehouse(<ref refid="_warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7" kindref="member">testLocation</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40" kindref="member">initialCapacity</ref>);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kindref="member">addProduct</ref>(<ref refid="_warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464" kindref="member">productName</ref>,<sp/><ref refid="_warehouse_test_8cpp_1ae7a0715775e530e41d79b8c2e2fe8635" kindref="member">productPrice</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069" kindref="member">productQuantity</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1af13dfa8e7d40770b45d28a7f19b6ea87" kindref="member">updatePrice</ref>(-1.0,<sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>),<sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="_warehouse_test_8cpp_1a02e7c715b5a15d6dfe37ca944c664164" refkind="member"><highlight class="normal"><ref refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kindref="member">TEST</ref>(WarehouseTest,<sp/>addProductShouldReturnSuccess)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>warehouse(<ref refid="_warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7" kindref="member">testLocation</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40" kindref="member">initialCapacity</ref>);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kindref="member">addProduct</ref>(<ref refid="_warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464" kindref="member">productName</ref>,<sp/><ref refid="_warehouse_test_8cpp_1ae7a0715775e530e41d79b8c2e2fe8635" kindref="member">productPrice</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069" kindref="member">productQuantity</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>),<sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1ad6743eb02619226c049192647fc96939" kindref="member">getProductList</ref>().size(),<sp/>1);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="_warehouse_test_8cpp_1a3ce92373ef50aa0ee4d875a9848c9fdf" refkind="member"><highlight class="normal"><ref refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kindref="member">TEST</ref>(WarehouseTest,<sp/>addProductShouldReturnError)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>warehouse(<ref refid="_warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7" kindref="member">testLocation</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40" kindref="member">initialCapacity</ref>);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kindref="member">addProduct</ref>(<ref refid="_warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464" kindref="member">productName</ref>,<sp/>-<ref refid="_warehouse_test_8cpp_1ae7a0715775e530e41d79b8c2e2fe8635" kindref="member">productPrice</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069" kindref="member">productQuantity</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>),<sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="_warehouse_test_8cpp_1accfba332ac6e954da803caaa71df6a4e" refkind="member"><highlight class="normal"><ref refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kindref="member">TEST</ref>(WarehouseTest,<sp/>getLocationShouldReturnCorrectValue)</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>warehouse(<ref refid="_warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7" kindref="member">testLocation</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40" kindref="member">initialCapacity</ref>);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1a3f817148fcf0caf2ba0b6be2dd27809d" kindref="member">getLocation</ref>(),<sp/><ref refid="_warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7" kindref="member">testLocation</ref>);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189" refid="_warehouse_test_8cpp_1aae417a8f392dba448568492f98984bf2" refkind="member"><highlight class="normal"><ref refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kindref="member">TEST</ref>(WarehouseTest,<sp/>getProductListShouldReturnCorrectValue)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>warehouse(<ref refid="_warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7" kindref="member">testLocation</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40" kindref="member">initialCapacity</ref>);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kindref="member">addProduct</ref>(<ref refid="_warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464" kindref="member">productName</ref>,<sp/><ref refid="_warehouse_test_8cpp_1ae7a0715775e530e41d79b8c2e2fe8635" kindref="member">productPrice</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069" kindref="member">productQuantity</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>QList&lt;Product&gt;<sp/>productList<sp/>=<sp/>warehouse.<ref refid="class_warehouse_1ad6743eb02619226c049192647fc96939" kindref="member">getProductList</ref>();</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_EQ(productList.size(),<sp/>1);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(productList[0].getName(),<sp/><ref refid="_warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464" kindref="member">productName</ref>);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(productList[0].getPrice(),<sp/><ref refid="_warehouse_test_8cpp_1ae7a0715775e530e41d79b8c2e2fe8635" kindref="member">productPrice</ref>);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(productList[0].getQuantity(),<sp/><ref refid="_warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069" kindref="member">productQuantity</ref>);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="_warehouse_test_8cpp_1a87a9b63f7c60f10ac6376b8e43a49826" refkind="member"><highlight class="normal"><ref refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kindref="member">TEST</ref>(WarehouseTest,<sp/>getCurrentCapacityShouldReturnCorrectValue)</highlight></codeline>
+<codeline lineno="206"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>warehouse(<ref refid="_warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7" kindref="member">testLocation</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40" kindref="member">initialCapacity</ref>);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1ad5eb7e2175f702204e9e628c6658f777" kindref="member">getCurrentCapacity</ref>(),<sp/><ref refid="_warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40" kindref="member">initialCapacity</ref>);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214" refid="_warehouse_test_8cpp_1a55f9d131a897000c48d3bc867b3f3bee" refkind="member"><highlight class="normal"><ref refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kindref="member">TEST</ref>(WarehouseTest,<sp/>getNameShouldReturnCorrectValue)</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>warehouse(<ref refid="_warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7" kindref="member">testLocation</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40" kindref="member">initialCapacity</ref>);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kindref="member">addProduct</ref>(<ref refid="_warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464" kindref="member">productName</ref>,<sp/><ref refid="_warehouse_test_8cpp_1ae7a0715775e530e41d79b8c2e2fe8635" kindref="member">productPrice</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069" kindref="member">productQuantity</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1a52374d2018f3744d545803b9805bfa7e" kindref="member">getName</ref>(<ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>),<sp/><ref refid="_warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464" kindref="member">productName</ref>);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224" refid="_warehouse_test_8cpp_1a70dae60776189e1769e9e307ceba1339" refkind="member"><highlight class="normal"><ref refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kindref="member">TEST</ref>(WarehouseTest,<sp/>getPriceShouldReturnCorrectValue)</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>warehouse(<ref refid="_warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7" kindref="member">testLocation</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40" kindref="member">initialCapacity</ref>);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kindref="member">addProduct</ref>(<ref refid="_warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464" kindref="member">productName</ref>,<sp/><ref refid="_warehouse_test_8cpp_1ae7a0715775e530e41d79b8c2e2fe8635" kindref="member">productPrice</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069" kindref="member">productQuantity</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1aad96200e251b9e55dc51d6fd3dff9d56" kindref="member">getPrice</ref>(<ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>),<sp/><ref refid="_warehouse_test_8cpp_1ae7a0715775e530e41d79b8c2e2fe8635" kindref="member">productPrice</ref>);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="_warehouse_test_8cpp_1ad155dc4ed06881722d52ea9a11b44f1e" refkind="member"><highlight class="normal"><ref refid="_warehouse_test_8cpp_1a11e61acd582d93d437c4230e0965e89a" kindref="member">TEST</ref>(WarehouseTest,<sp/>getQuantityShouldReturnCorrectValue)</highlight></codeline>
+<codeline lineno="235"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warehouse" kindref="compound">Warehouse</ref><sp/>warehouse(<ref refid="_warehouse_test_8cpp_1a7980e04fdec8060f9ceea5f9b0809fa7" kindref="member">testLocation</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a6cf5b9f39882aa18f4d792a2a1695b40" kindref="member">initialCapacity</ref>);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>warehouse.<ref refid="class_warehouse_1adcc66b057690967cc902d3e999db8af9" kindref="member">addProduct</ref>(<ref refid="_warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464" kindref="member">productName</ref>,<sp/><ref refid="_warehouse_test_8cpp_1ae7a0715775e530e41d79b8c2e2fe8635" kindref="member">productPrice</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069" kindref="member">productQuantity</ref>,<sp/><ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(warehouse.<ref refid="class_warehouse_1a08808180a2c1f6db033a3ecc94b3c205" kindref="member">getQuantity</ref>(<ref refid="_warehouse_test_8cpp_1a9512f29d22751266efd5957638b64923" kindref="member">productId</ref>),<sp/><ref refid="_warehouse_test_8cpp_1a4f96ceeb9cc7f28b7d044cf79dde6069" kindref="member">productQuantity</ref>);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="test/Warehouse/WarehouseTest.cpp"/>
+  </compounddef>
+</doxygen>

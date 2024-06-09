@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_test_2main_8cpp_source" xml:lang="en-US">
+<title>main.cpp</title>
+<indexterm><primary>test/main.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_test_2main_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&lt;gtest/gtest.h&gt;</emphasis>
+<anchor xml:id="_test_2main_8cpp_source_1l00002"/>00002 
+<anchor xml:id="_test_2main_8cpp_source_1l00003"/><link linkend="_test_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97">00003</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_src_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97">main</link>(<emphasis role="keywordtype">int</emphasis>&#32;argc,&#32;<emphasis role="keywordtype">char</emphasis>&#32;*argv[])&#32;{
+<anchor xml:id="_test_2main_8cpp_source_1l00004"/>00004 &#32;&#32;&#32;&#32;::testing::InitGoogleTest(&amp;argc,&#32;argv);
+<anchor xml:id="_test_2main_8cpp_source_1l00005"/>00005 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;RUN_ALL_TESTS();
+<anchor xml:id="_test_2main_8cpp_source_1l00006"/>00006 }
+</programlisting></section>

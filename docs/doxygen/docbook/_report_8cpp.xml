@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__report_8cpp" xml:lang="en-US">
+<title>src/Report/Report.cpp File Reference</title>
+<indexterm><primary>src/Report/Report.cpp</primary></indexterm>
+<para>
+
+<para>Source file for the <link linkend="_class_report">Report</link> class. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;Report.h&quot;<?linebreak?></programlisting><section>
+<title>Detailed Description</title>
+
+<para>Source file for the <link linkend="_class_report">Report</link> class. </para>
+<para>
+Definition in file <link linkend="__report_8cpp_source">Report.cpp</link>.</para>
+</section>
+</section>

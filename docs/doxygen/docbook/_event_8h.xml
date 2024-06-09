@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__event_8h" xml:lang="en-US">
+<title>src/Event/Event.h File Reference</title>
+<indexterm><primary>src/Event/Event.h</primary></indexterm>
+<para>
+
+<para>Header file of the <link linkend="_class_event">Event</link> class. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;QDateTime&gt;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_event">Event</link></para>
+
+<para>The <link linkend="_class_event">Event</link> class represents an event in the warehouse simulation. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file of the <link linkend="_class_event">Event</link> class. </para>
+<para>
+Definition in file <link linkend="__event_8h_source">Event.h</link>.</para>
+</section>
+</section>

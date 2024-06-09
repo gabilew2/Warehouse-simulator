@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_d0710d3ce778ced575457e2eabd15d4d" xml:lang="en-US">
+<title>src/WarehouseReport Directory Reference</title>
+<indexterm><primary>src/WarehouseReport Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__warehouse_report_8cpp">WarehouseReport.cpp</link></para>
+
+<para>Source file of the <link linkend="_class_warehouse_report">WarehouseReport</link> class. </para>
+</listitem>
+            <listitem><para>file <link linkend="__warehouse_report_8h">WarehouseReport.h</link></para>
+
+<para>Header file of the <link linkend="_class_warehouse_report">WarehouseReport</link> class. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

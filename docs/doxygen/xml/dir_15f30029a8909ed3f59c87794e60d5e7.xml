@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_15f30029a8909ed3f59c87794e60d5e7" kind="dir">
+    <compoundname>src/Event</compoundname>
+    <innerfile refid="_event_8cpp">Event.cpp</innerfile>
+    <innerfile refid="_event_8h">Event.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Event/"/>
+  </compounddef>
+</doxygen>

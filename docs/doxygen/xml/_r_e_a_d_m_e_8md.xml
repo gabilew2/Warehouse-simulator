@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Warehouse-simulator</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>Warehouse<sp/>Simulation<sp/>project<sp/>is<sp/>a<sp/>warehouse<sp/>management<sp/>support<sp/>system<sp/>that<sp/>allows<sp/>you<sp/>to<sp/>simulate<sp/>and<sp/>optimize<sp/>warehouse<sp/>processes.<sp/>Thanks<sp/>to<sp/>it,<sp/>users<sp/>can<sp/>model<sp/>various<sp/>scenarios,<sp/>analyze<sp/>results<sp/>and<sp/>make<sp/>decisions<sp/>in<sp/>real<sp/>time.<sp/>The<sp/>project<sp/>integrates<sp/>simulation<sp/>algorithms<sp/>with<sp/>an<sp/>interactive<sp/>user<sp/>interface,<sp/>which<sp/>allows<sp/>for<sp/>dynamic<sp/>monitoring<sp/>of<sp/>warehouse<sp/>stock<sp/>and<sp/>quick<sp/>response<sp/>to<sp/>changes<sp/>in<sp/>the<sp/>business<sp/>environment.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>main<sp/>features<sp/>of<sp/>the<sp/>project<sp/>include<sp/>defining<sp/>warehouses,<sp/>products,<sp/>attributes,<sp/>simulating<sp/>warehouse<sp/>operation<sp/>in<sp/>a<sp/>time<sp/>loop,<sp/>generating<sp/>events,<sp/>user<sp/>intervention<sp/>and<sp/>generating<sp/>reports<sp/>with<sp/>simulation<sp/>results.<sp/>The<sp/>aim<sp/>of<sp/>the<sp/>project<sp/>is<sp/>to<sp/>provide<sp/>a<sp/>tool<sp/>supporting<sp/>effective<sp/>warehouse<sp/>management,<sp/>which<sp/>will<sp/>allow<sp/>companies<sp/>to<sp/>increase<sp/>operational<sp/>efficiency<sp/>and<sp/>maximize<sp/>profits.</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

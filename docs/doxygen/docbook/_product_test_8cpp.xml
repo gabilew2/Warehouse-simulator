@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__product_test_8cpp" xml:lang="en-US">
+<title>test/Product/ProductTest.cpp File Reference</title>
+<indexterm><primary>test/Product/ProductTest.cpp</primary></indexterm>
+<para>
+
+<para>Source file of tests for the <link linkend="_class_product">Product</link> class. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;gtest/gtest.h&gt;<?linebreak?>#include &quot;Product/Product.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341">TEST</link> (ProductTest, itLives)</para>
+
+<para>Test to ensure that a <link linkend="_class_product">Product</link> object can be instantiated. </para>
+</listitem>
+            <listitem><para><link linkend="__product_test_8cpp_1aca16e75bd00c6aafd757aa5b97016c43">TEST</link> (ProductTest, getNameShouldReturnName)</para>
+
+<para>Test to verify that getName() returns the correct product name. </para>
+</listitem>
+            <listitem><para><link linkend="__product_test_8cpp_1a8cafa4a7e2e42d2eb7ba0ff05a752f52">TEST</link> (ProductTest, getQuantityShouldReturnInt)</para>
+
+<para>Test to verify that getQuantity() returns the correct quantity. </para>
+</listitem>
+            <listitem><para><link linkend="__product_test_8cpp_1a24680dae582076e6fdd3675174974907">TEST</link> (ProductTest, getPriceShouldReturnDouble)</para>
+
+<para>Test to verify that getPrice() returns the correct price. </para>
+</listitem>
+            <listitem><para><link linkend="__product_test_8cpp_1a1df645a6d4641e8a0cbcdda4cd2baed9">TEST</link> (ProductTest, sellShouldReturnSuccess)</para>
+
+<para>Test to verify that sell() returns SUCCESS when selling a valid quantity. </para>
+</listitem>
+            <listitem><para><link linkend="__product_test_8cpp_1ab4b33d0aab882649445fb76b4bf4772a">TEST</link> (ProductTest, sellShouldReturnError)</para>
+
+<para>Test to verify that sell() returns ERROR when selling an invalid quantity. </para>
+</listitem>
+            <listitem><para><link linkend="__product_test_8cpp_1a2001a6aad064ce90391d9c7b2ba77668">TEST</link> (ProductTest, updatePriceShouldReturnSuccess)</para>
+
+<para>Test to verify that updatePrice() returns SUCCESS when given a valid price. </para>
+</listitem>
+            <listitem><para><link linkend="__product_test_8cpp_1a66031b79869771178cd4282de57fa478">TEST</link> (ProductTest, updatePriceShouldReturnError)</para>
+
+<para>Test to verify that updatePrice() returns ERROR when given an invalid price. </para>
+</listitem>
+            <listitem><para><link linkend="__product_test_8cpp_1a441a4e44dc64a2bd8e0a5b73ff93ec92">TEST</link> (ProductTest, changeQuantityShouldReturnSuccess)</para>
+
+<para>Test to verify that changeQuantity() returns SUCCESS when given a valid quantity. </para>
+</listitem>
+            <listitem><para><link linkend="__product_test_8cpp_1aabd1480a5a311bb22ca89b02ac99f222">TEST</link> (ProductTest, changeQuantityShouldReturnError)</para>
+
+<para>Test to verify that changeQuantity() returns ERROR when given an invalid quantity. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Source file of tests for the <link linkend="_class_product">Product</link> class. </para>
+<para>
+Definition in file <link linkend="__product_test_8cpp_source">ProductTest.cpp</link>.</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__product_test_8cpp_1aabd1480a5a311bb22ca89b02ac99f222"/><section>
+    <title>TEST()<computeroutput>[1/10]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>ProductTest.cpp</secondary></indexterm>
+<indexterm><primary>ProductTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (ProductTest , changeQuantityShouldReturnError )</computeroutput></para><para>
+
+<para>Test to verify that changeQuantity() returns ERROR when given an invalid quantity. </para>
+</para>
+<para>
+Definition at line <link linkend="__product_test_8cpp_source_1l00110">110</link> of file <link linkend="__product_test_8cpp_source">ProductTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__product_test_8cpp_1a441a4e44dc64a2bd8e0a5b73ff93ec92"/><section>
+    <title>TEST()<computeroutput>[2/10]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>ProductTest.cpp</secondary></indexterm>
+<indexterm><primary>ProductTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (ProductTest , changeQuantityShouldReturnSuccess )</computeroutput></para><para>
+
+<para>Test to verify that changeQuantity() returns SUCCESS when given a valid quantity. </para>
+</para>
+<para>
+Definition at line <link linkend="__product_test_8cpp_source_1l00099">99</link> of file <link linkend="__product_test_8cpp_source">ProductTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__product_test_8cpp_1aca16e75bd00c6aafd757aa5b97016c43"/><section>
+    <title>TEST()<computeroutput>[3/10]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>ProductTest.cpp</secondary></indexterm>
+<indexterm><primary>ProductTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (ProductTest , getNameShouldReturnName )</computeroutput></para><para>
+
+<para>Test to verify that getName() returns the correct product name. </para>
+</para>
+<para>
+Definition at line <link linkend="__product_test_8cpp_source_1l00020">20</link> of file <link linkend="__product_test_8cpp_source">ProductTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__product_test_8cpp_1a24680dae582076e6fdd3675174974907"/><section>
+    <title>TEST()<computeroutput>[4/10]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>ProductTest.cpp</secondary></indexterm>
+<indexterm><primary>ProductTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (ProductTest , getPriceShouldReturnDouble )</computeroutput></para><para>
+
+<para>Test to verify that getPrice() returns the correct price. </para>
+</para>
+<para>
+Definition at line <link linkend="__product_test_8cpp_source_1l00038">38</link> of file <link linkend="__product_test_8cpp_source">ProductTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__product_test_8cpp_1a8cafa4a7e2e42d2eb7ba0ff05a752f52"/><section>
+    <title>TEST()<computeroutput>[5/10]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>ProductTest.cpp</secondary></indexterm>
+<indexterm><primary>ProductTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (ProductTest , getQuantityShouldReturnInt )</computeroutput></para><para>
+
+<para>Test to verify that getQuantity() returns the correct quantity. </para>
+</para>
+<para>
+Definition at line <link linkend="__product_test_8cpp_source_1l00029">29</link> of file <link linkend="__product_test_8cpp_source">ProductTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__product_test_8cpp_1a96a8e9e4e75e447056fbc7a76ef9b341"/><section>
+    <title>TEST()<computeroutput>[6/10]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>ProductTest.cpp</secondary></indexterm>
+<indexterm><primary>ProductTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (ProductTest , itLives )</computeroutput></para><para>
+
+<para>Test to ensure that a <link linkend="_class_product">Product</link> object can be instantiated. </para>
+</para>
+<para>
+Definition at line <link linkend="__product_test_8cpp_source_1l00012">12</link> of file <link linkend="__product_test_8cpp_source">ProductTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__product_test_8cpp_1ab4b33d0aab882649445fb76b4bf4772a"/><section>
+    <title>TEST()<computeroutput>[7/10]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>ProductTest.cpp</secondary></indexterm>
+<indexterm><primary>ProductTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (ProductTest , sellShouldReturnError )</computeroutput></para><para>
+
+<para>Test to verify that sell() returns ERROR when selling an invalid quantity. </para>
+</para>
+<para>
+Definition at line <link linkend="__product_test_8cpp_source_1l00060">60</link> of file <link linkend="__product_test_8cpp_source">ProductTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__product_test_8cpp_1a1df645a6d4641e8a0cbcdda4cd2baed9"/><section>
+    <title>TEST()<computeroutput>[8/10]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>ProductTest.cpp</secondary></indexterm>
+<indexterm><primary>ProductTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (ProductTest , sellShouldReturnSuccess )</computeroutput></para><para>
+
+<para>Test to verify that sell() returns SUCCESS when selling a valid quantity. </para>
+</para>
+<para>
+Definition at line <link linkend="__product_test_8cpp_source_1l00047">47</link> of file <link linkend="__product_test_8cpp_source">ProductTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__product_test_8cpp_1a66031b79869771178cd4282de57fa478"/><section>
+    <title>TEST()<computeroutput>[9/10]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>ProductTest.cpp</secondary></indexterm>
+<indexterm><primary>ProductTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (ProductTest , updatePriceShouldReturnError )</computeroutput></para><para>
+
+<para>Test to verify that updatePrice() returns ERROR when given an invalid price. </para>
+</para>
+<para>
+Definition at line <link linkend="__product_test_8cpp_source_1l00086">86</link> of file <link linkend="__product_test_8cpp_source">ProductTest.cpp</link>.</para>
+</section>
+<anchor xml:id="__product_test_8cpp_1a2001a6aad064ce90391d9c7b2ba77668"/><section>
+    <title>TEST()<computeroutput>[10/10]</computeroutput></title>
+<indexterm><primary>TEST</primary><secondary>ProductTest.cpp</secondary></indexterm>
+<indexterm><primary>ProductTest.cpp</primary><secondary>TEST</secondary></indexterm>
+<para><computeroutput>TEST (ProductTest , updatePriceShouldReturnSuccess )</computeroutput></para><para>
+
+<para>Test to verify that updatePrice() returns SUCCESS when given a valid price. </para>
+</para>
+<para>
+Definition at line <link linkend="__product_test_8cpp_source_1l00073">73</link> of file <link linkend="__product_test_8cpp_source">ProductTest.cpp</link>.</para>
+</section>
+</section>
+</section>

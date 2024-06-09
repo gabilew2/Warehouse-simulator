@@ -1,0 +1,28 @@
+\doxysection{Report\+Test.\+cpp}
+\hypertarget{_report_test_8cpp_source}{}\label{_report_test_8cpp_source}\index{test/Report/ReportTest.cpp@{test/Report/ReportTest.cpp}}
+\mbox{\hyperlink{_report_test_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <gtest/gtest.h>}}
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_report_8h}{Report/Report.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00012}\mbox{\hyperlink{_report_test_8cpp_a17644524137e2dbac16993cc14c93d04}{00012}}\ \mbox{\hyperlink{_report_test_8cpp_a17644524137e2dbac16993cc14c93d04}{TEST}}(ReportTest,\ generateReportShouldReturnNonEmptyString)}
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00014}00014\ \ \ \ \ \mbox{\hyperlink{class_report}{Report}}\ report(1000.0,\ 500.0);}
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00016}00016\ \ \ \ \ QString\ reportString\ =\ report.\mbox{\hyperlink{class_report_aab56d11c88e240affbc4b147474d4363}{generateReport}}();}
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00018}00018\ \ \ \ \ EXPECT\_FALSE(reportString.isEmpty());}
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00024}\mbox{\hyperlink{_report_test_8cpp_a70c9aaf81cbf005ad4aa89117010ef18}{00024}}\ \mbox{\hyperlink{_report_test_8cpp_a17644524137e2dbac16993cc14c93d04}{TEST}}(ReportTest,\ GenerateReportShouldReturnExpectedFormat)}
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00025}00025\ \{}
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{class_report}{Report}}\ report(1000.0,\ 500.0);}
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00028}00028\ \ \ \ \ QString\ reportString\ =\ report.\mbox{\hyperlink{class_report_aab56d11c88e240affbc4b147474d4363}{generateReport}}();}
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00030}00030\ \ \ \ \ EXPECT\_TRUE(reportString.contains(\textcolor{stringliteral}{"{}Operational\ Costs"{}}));}
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00031}00031\ \ \ \ \ EXPECT\_TRUE(reportString.contains(\textcolor{stringliteral}{"{}Net\ Profit"{}}));}
+\DoxyCodeLine{\Hypertarget{_report_test_8cpp_source_l00032}00032\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_product_8h" kind="file" language="C++">
+    <compoundname>Product.h</compoundname>
+    <includes local="no">QString</includes>
+    <includedby refid="_product_8cpp" local="yes">src/Product/Product.cpp</includedby>
+    <includedby refid="_warehouse_8h" local="yes">src/Warehouse/Warehouse.h</includedby>
+    <includedby refid="_product_test_8cpp" local="yes">test/Product/ProductTest.cpp</includedby>
+    <includedby refid="_warehouse_test_8cpp" local="yes">test/Warehouse/WarehouseTest.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/Product/Product.h</label>
+        <link refid="_product_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QString</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/Product/Product.cpp</label>
+        <link refid="_product_8cpp"/>
+      </node>
+      <node id="1">
+        <label>src/Product/Product.h</label>
+        <link refid="_product_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/Simulation/Simulation.cpp</label>
+        <link refid="_simulation_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/Simulation/Simulation.h</label>
+        <link refid="_simulation_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>src/Warehouse/Warehouse.cpp</label>
+        <link refid="_warehouse_8cpp"/>
+      </node>
+      <node id="3">
+        <label>src/Warehouse/Warehouse.h</label>
+        <link refid="_warehouse_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>src/gui/gui.cpp</label>
+        <link refid="gui_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/gui/gui.h</label>
+        <link refid="gui_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>src/main.cpp</label>
+        <link refid="src_2main_8cpp"/>
+      </node>
+      <node id="12">
+        <label>test/Product/ProductTest.cpp</label>
+        <link refid="_product_test_8cpp"/>
+      </node>
+      <node id="9">
+        <label>test/Simulation/SimulationTest.cpp</label>
+        <link refid="_simulation_test_8cpp"/>
+      </node>
+      <node id="11">
+        <label>test/Warehouse/WarehouseTest.cpp</label>
+        <link refid="_warehouse_test_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_product" prot="public">Product</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" prot="public" static="no" strong="no">
+        <type></type>
+        <name>status</name>
+        <enumvalue id="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" prot="public">
+          <name>SUCCESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" prot="public">
+          <name>ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum representing the status of operations on <ref refid="class_product" kindref="compound">Product</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Product/Product.h" line="12" column="1" bodyfile="src/Product/Product.h" bodystart="12" bodyend="12"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Header file for the <ref refid="class_product" kindref="compound">Product</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PRODUCT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRODUCT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QString&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/>{<ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>,<sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>};</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_product" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_product" kindref="compound">Product</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>name;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>price;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>quantity;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27" refid="class_product_1a62eb7009c46ed771b5136f878bb64c12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_product_1a62eb7009c46ed771b5136f878bb64c12" kindref="member">productId</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_product_1a7d0e1fb8001c7be3380e383bc6cddfeb" kindref="member">Product</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_product_1a62eb7009c46ed771b5136f878bb64c12" kindref="member">productId</ref>,<sp/>QString<sp/>name,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>price,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>quantity);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/><ref refid="class_product_1ac914a618c6cedf1500f22a4e33ed4e83" kindref="member">sell</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>quantityToSell);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/><ref refid="class_product_1af264aa2bae1159846e658148d44a621d" kindref="member">updatePrice</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>newPrice);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/><ref refid="class_product_1a351a61b8013eaca0afb924887ac1495c" kindref="member">changeQuantity</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>quantity);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Getters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_product_1a4e07082760c0834ccc8cd44e44a6aae6" kindref="member">getName</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_product_1a3be25f647260d61df6063ef706261c7f" kindref="member">getPrice</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_product_1a6a449b90b669aa4380d229b44eca686f" kindref="member">getQuantity</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>PRODUCT_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/Product/Product.h"/>
+  </compounddef>
+</doxygen>

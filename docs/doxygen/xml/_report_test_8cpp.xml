@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_report_test_8cpp" kind="file" language="C++">
+    <compoundname>ReportTest.cpp</compoundname>
+    <includes local="no">gtest/gtest.h</includes>
+    <includes refid="_report_8h" local="yes">Report/Report.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>Report/Report.h</label>
+        <link refid="_report_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>test/Report/ReportTest.cpp</label>
+        <link refid="_report_test_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QString</label>
+      </node>
+      <node id="2">
+        <label>gtest/gtest.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_report_test_8cpp_1a17644524137e2dbac16993cc14c93d04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(ReportTest, generateReportShouldReturnNonEmptyString)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>ReportTest</type>
+        </param>
+        <param>
+          <type>generateReportShouldReturnNonEmptyString</type>
+        </param>
+        <briefdescription>
+<para>Test to ensure that the generateReport method does not return an empty string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Report/ReportTest.cpp" line="12" column="1" bodyfile="test/Report/ReportTest.cpp" bodystart="12" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="_report_test_8cpp_1a70c9aaf81cbf005ad4aa89117010ef18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(ReportTest, GenerateReportShouldReturnExpectedFormat)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>ReportTest</type>
+        </param>
+        <param>
+          <type>GenerateReportShouldReturnExpectedFormat</type>
+        </param>
+        <briefdescription>
+<para>Test to ensure that the generateReport method returns a string in the expected format. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/Report/ReportTest.cpp" line="24" column="1" bodyfile="test/Report/ReportTest.cpp" bodystart="24" bodyend="32"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Source file of tests for the <ref refid="class_report" kindref="compound">Report</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gtest/gtest.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_report_8h" kindref="compound">Report/Report.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="_report_test_8cpp_1a17644524137e2dbac16993cc14c93d04" refkind="member"><highlight class="normal"><ref refid="_report_test_8cpp_1a17644524137e2dbac16993cc14c93d04" kindref="member">TEST</ref>(ReportTest,<sp/>generateReportShouldReturnNonEmptyString)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_report" kindref="compound">Report</ref><sp/>report(1000.0,<sp/>500.0);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>reportString<sp/>=<sp/>report.<ref refid="class_report_1aab56d11c88e240affbc4b147474d4363" kindref="member">generateReport</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_FALSE(reportString.isEmpty());</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="_report_test_8cpp_1a70c9aaf81cbf005ad4aa89117010ef18" refkind="member"><highlight class="normal"><ref refid="_report_test_8cpp_1a17644524137e2dbac16993cc14c93d04" kindref="member">TEST</ref>(ReportTest,<sp/>GenerateReportShouldReturnExpectedFormat)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_report" kindref="compound">Report</ref><sp/>report(1000.0,<sp/>500.0);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>reportString<sp/>=<sp/>report.<ref refid="class_report_1aab56d11c88e240affbc4b147474d4363" kindref="member">generateReport</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_TRUE(reportString.contains(</highlight><highlight class="stringliteral">&quot;Operational<sp/>Costs&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_TRUE(reportString.contains(</highlight><highlight class="stringliteral">&quot;Net<sp/>Profit&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="test/Report/ReportTest.cpp"/>
+  </compounddef>
+</doxygen>

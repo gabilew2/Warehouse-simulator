@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_report" xml:lang="en-US">
+<title>Report Class Reference</title>
+<indexterm><primary>Report</primary></indexterm>
+<para>
+
+<para>Represents a report in the store simulation. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Report.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for Report:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_report.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_report_1_1_product_report">ProductReport</link></para>
+
+<para>Represents a report for a single product. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_report_1a36e8866b9ef8fefbe4491f15d96ed503">Report</link> (double operationalCosts, double netProfit)</para>
+
+<para>Construct a new <link linkend="_class_report">Report</link> object. </para>
+</listitem>
+            <listitem><para>QString <link linkend="_class_report_1aab56d11c88e240affbc4b147474d4363">generateReport</link> () const</para>
+
+<para>Generates a summary report as a QString. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_report_1a7f5c6f19874a36e59c63051ab5b60400">setOperationalCosts</link> (double costs)</para>
+
+<para>Set the operational costs. </para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_report_1a4fe97f7f77d99b1e925c6024ed7c3913">setNetProfit</link> (double profit)</para>
+
+<para>Set the net profit. </para>
+</listitem>
+            <listitem><para>static double <link linkend="_class_report_1a0280b260884973ffbb4ca95c438f30a6">getOperationalCosts</link> ()</para>
+
+<para>Get the operational costs. </para>
+</listitem>
+            <listitem><para>static double <link linkend="_class_report_1af98f7f1cb07d06b29c081974cfc9a830">getNetProfit</link> ()</para>
+
+<para>Get the net profit. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents a report in the store simulation. </para>
+
+
+
+<para>This class is responsible for generating reports that summarize the operational costs and net profits. </para>
+<para>
+Definition at line <link linkend="__report_8h_source_1l00017">17</link> of file <link linkend="__report_8h_source">Report.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_report_1a36e8866b9ef8fefbe4491f15d96ed503"/><section>
+    <title>Report()</title>
+<indexterm><primary>Report</primary><secondary>Report</secondary></indexterm>
+<indexterm><primary>Report</primary><secondary>Report</secondary></indexterm>
+<para><computeroutput>Report::Report (double operationalCosts, double netProfit)</computeroutput></para><para>
+
+<para>Construct a new <link linkend="_class_report">Report</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>operationalCosts</entry><entry>
+<para>Operational costs of the store. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>netProfit</entry><entry>
+<para>Net profit of the store. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__report_8cpp_source_1l00017">17</link> of file <link linkend="__report_8cpp_source">Report.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_report_1aab56d11c88e240affbc4b147474d4363"/><section>
+    <title>generateReport()</title>
+<indexterm><primary>generateReport</primary><secondary>Report</secondary></indexterm>
+<indexterm><primary>Report</primary><secondary>generateReport</secondary></indexterm>
+<para><computeroutput>QString Report::generateReport ( ) const</computeroutput></para><para>
+
+<para>Generates a summary report as a QString. </para>
+</para>
+
+<para>This method compiles the operational costs and net profits into a readable format. <formalpara><title>Returns</title>
+
+<para>QString A summary report of the store&apos;s financial status.</para>
+
+<para>QString A summary report of the store&apos;s financial status. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__report_8cpp_source_1l00028">28</link> of file <link linkend="__report_8cpp_source">Report.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_report_1af98f7f1cb07d06b29c081974cfc9a830"/><section>
+    <title>getNetProfit()</title>
+<indexterm><primary>getNetProfit</primary><secondary>Report</secondary></indexterm>
+<indexterm><primary>Report</primary><secondary>getNetProfit</secondary></indexterm>
+<para><computeroutput>double Report::getNetProfit ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Get the net profit. </para>
+</para>
+<para>
+Definition at line <link linkend="__report_8cpp_source_1l00052">52</link> of file <link linkend="__report_8cpp_source">Report.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_report_1a0280b260884973ffbb4ca95c438f30a6"/><section>
+    <title>getOperationalCosts()</title>
+<indexterm><primary>getOperationalCosts</primary><secondary>Report</secondary></indexterm>
+<indexterm><primary>Report</primary><secondary>getOperationalCosts</secondary></indexterm>
+<para><computeroutput>double Report::getOperationalCosts ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Get the operational costs. </para>
+</para>
+<para>
+Definition at line <link linkend="__report_8cpp_source_1l00047">47</link> of file <link linkend="__report_8cpp_source">Report.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_report_1a4fe97f7f77d99b1e925c6024ed7c3913"/><section>
+    <title>setNetProfit()</title>
+<indexterm><primary>setNetProfit</primary><secondary>Report</secondary></indexterm>
+<indexterm><primary>Report</primary><secondary>setNetProfit</secondary></indexterm>
+<para><computeroutput>void Report::setNetProfit (double profit)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Set the net profit. </para>
+</para>
+<para>
+Definition at line <link linkend="__report_8cpp_source_1l00041">41</link> of file <link linkend="__report_8cpp_source">Report.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_report_1a7f5c6f19874a36e59c63051ab5b60400"/><section>
+    <title>setOperationalCosts()</title>
+<indexterm><primary>setOperationalCosts</primary><secondary>Report</secondary></indexterm>
+<indexterm><primary>Report</primary><secondary>setOperationalCosts</secondary></indexterm>
+<para><computeroutput>void Report::setOperationalCosts (double costs)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Set the operational costs. </para>
+</para>
+<para>
+Definition at line <link linkend="__report_8cpp_source_1l00036">36</link> of file <link linkend="__report_8cpp_source">Report.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/Report/<link linkend="__report_8h">Report.h</link>src/Report/<link linkend="__report_8cpp">Report.cpp</link></section>
+</section>

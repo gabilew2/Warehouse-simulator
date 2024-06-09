@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_product" kind="class" language="C++" prot="public">
+    <compoundname>Product</compoundname>
+    <includes refid="_product_8h" local="no">Product.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_product_1a63b5e01d74ec0610e6af42ab518c4666" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString Product::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>Product::name</qualifiedname>
+        <briefdescription>
+<para>Name of the product. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Product/Product.h" line="23" column="13" bodyfile="src/Product/Product.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_product_1abb2572df7a832a509944905603ba5e4f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Product::price</definition>
+        <argsstring></argsstring>
+        <name>price</name>
+        <qualifiedname>Product::price</qualifiedname>
+        <briefdescription>
+<para>Price of the product. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Product/Product.h" line="24" column="12" bodyfile="src/Product/Product.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_product_1a299430b8756aba9f6d44af46831791cc" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Product::quantity</definition>
+        <argsstring></argsstring>
+        <name>quantity</name>
+        <qualifiedname>Product::quantity</qualifiedname>
+        <briefdescription>
+<para>Quantity of the product in stock. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Product/Product.h" line="25" column="9" bodyfile="src/Product/Product.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_product_1a62eb7009c46ed771b5136f878bb64c12" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Product::productId</definition>
+        <argsstring></argsstring>
+        <name>productId</name>
+        <qualifiedname>Product::productId</qualifiedname>
+        <briefdescription>
+<para>ID of the product. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Product/Product.h" line="27" column="9" bodyfile="src/Product/Product.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_product_1a7d0e1fb8001c7be3380e383bc6cddfeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Product::Product</definition>
+        <argsstring>(int productId, QString name, double price, int quantity)</argsstring>
+        <name>Product</name>
+        <qualifiedname>Product::Product</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>productId</declname>
+        </param>
+        <param>
+          <type>QString</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>price</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>quantity</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_product" kindref="compound">Product</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>productId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the product. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the product. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>price</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Price of the product. If negative, it will be set to 0. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>quantity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Quantity of the product. If negative, it will be set to 0. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Product/Product.h" line="37" column="5" bodyfile="src/Product/Product.cpp" bodystart="11" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_product_1ac914a618c6cedf1500f22a4e33ed4e83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></type>
+        <definition>status Product::sell</definition>
+        <argsstring>(int quantityToSell)</argsstring>
+        <name>sell</name>
+        <qualifiedname>Product::sell</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>quantityToSell</declname>
+        </param>
+        <briefdescription>
+<para>Sell a quantity of the product. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>quantityToSell</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The quantity of the product to sell. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status SUCCESS if the operation is successful, ERROR otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Product/Product.h" line="45" column="12" bodyfile="src/Product/Product.cpp" bodystart="39" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_product_1af264aa2bae1159846e658148d44a621d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></type>
+        <definition>status Product::updatePrice</definition>
+        <argsstring>(double newPrice)</argsstring>
+        <name>updatePrice</name>
+        <qualifiedname>Product::updatePrice</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>newPrice</declname>
+        </param>
+        <briefdescription>
+<para>Update the price of the product. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newPrice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new price of the product. Must be positive. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status SUCCESS if the operation is successful, ERROR otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Product/Product.h" line="53" column="12" bodyfile="src/Product/Product.cpp" bodystart="60" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_product_1a351a61b8013eaca0afb924887ac1495c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref></type>
+        <definition>status Product::changeQuantity</definition>
+        <argsstring>(int quantity)</argsstring>
+        <name>changeQuantity</name>
+        <qualifiedname>Product::changeQuantity</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>quantity</declname>
+        </param>
+        <briefdescription>
+<para>Change the quantity of the product. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>quantity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new quantity of the product. Must be non-negative. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status SUCCESS if the operation is successful, ERROR otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Product/Product.h" line="61" column="12" bodyfile="src/Product/Product.cpp" bodystart="76" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_product_1a4e07082760c0834ccc8cd44e44a6aae6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString Product::getName</definition>
+        <argsstring>() const</argsstring>
+        <name>getName</name>
+        <qualifiedname>Product::getName</qualifiedname>
+        <briefdescription>
+<para>Get the name of the product. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Product/Product.h" line="64" column="13" bodyfile="src/Product/Product.cpp" bodystart="91" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_product_1a3be25f647260d61df6063ef706261c7f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Product::getPrice</definition>
+        <argsstring>() const</argsstring>
+        <name>getPrice</name>
+        <qualifiedname>Product::getPrice</qualifiedname>
+        <briefdescription>
+<para>Get the price of the product. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Product/Product.h" line="65" column="12" bodyfile="src/Product/Product.cpp" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_product_1a6a449b90b669aa4380d229b44eca686f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Product::getQuantity</definition>
+        <argsstring>() const</argsstring>
+        <name>getQuantity</name>
+        <qualifiedname>Product::getQuantity</qualifiedname>
+        <briefdescription>
+<para>Get the quantity of the product. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Product/Product.h" line="66" column="9" bodyfile="src/Product/Product.cpp" bodystart="101" bodyend="104"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_product" kindref="compound">Product</ref> class represents a product with a name, price, and quantity. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class provides methods to sell the product, update its price, and change its quantity. </para>
+    </detaileddescription>
+    <location file="src/Product/Product.h" line="20" column="1" bodyfile="src/Product/Product.h" bodystart="21" bodyend="67"/>
+    <listofallmembers>
+      <member refid="class_product_1a351a61b8013eaca0afb924887ac1495c" prot="public" virt="non-virtual"><scope>Product</scope><name>changeQuantity</name></member>
+      <member refid="class_product_1a4e07082760c0834ccc8cd44e44a6aae6" prot="public" virt="non-virtual"><scope>Product</scope><name>getName</name></member>
+      <member refid="class_product_1a3be25f647260d61df6063ef706261c7f" prot="public" virt="non-virtual"><scope>Product</scope><name>getPrice</name></member>
+      <member refid="class_product_1a6a449b90b669aa4380d229b44eca686f" prot="public" virt="non-virtual"><scope>Product</scope><name>getQuantity</name></member>
+      <member refid="class_product_1a63b5e01d74ec0610e6af42ab518c4666" prot="private" virt="non-virtual"><scope>Product</scope><name>name</name></member>
+      <member refid="class_product_1abb2572df7a832a509944905603ba5e4f" prot="private" virt="non-virtual"><scope>Product</scope><name>price</name></member>
+      <member refid="class_product_1a7d0e1fb8001c7be3380e383bc6cddfeb" prot="public" virt="non-virtual"><scope>Product</scope><name>Product</name></member>
+      <member refid="class_product_1a62eb7009c46ed771b5136f878bb64c12" prot="public" virt="non-virtual"><scope>Product</scope><name>productId</name></member>
+      <member refid="class_product_1a299430b8756aba9f6d44af46831791cc" prot="private" virt="non-virtual"><scope>Product</scope><name>quantity</name></member>
+      <member refid="class_product_1ac914a618c6cedf1500f22a4e33ed4e83" prot="public" virt="non-virtual"><scope>Product</scope><name>sell</name></member>
+      <member refid="class_product_1af264aa2bae1159846e658148d44a621d" prot="public" virt="non-virtual"><scope>Product</scope><name>updatePrice</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

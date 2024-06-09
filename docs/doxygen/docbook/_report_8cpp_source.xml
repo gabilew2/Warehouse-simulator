@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__report_8cpp_source" xml:lang="en-US">
+<title>Report.cpp</title>
+<indexterm><primary>src/Report/Report.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__report_8cpp_source_1l00001"/>00001 
+<anchor xml:id="__report_8cpp_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__report_8h">Report.h</link>&quot;</emphasis>
+<anchor xml:id="__report_8cpp_source_1l00007"/>00007 
+<anchor xml:id="__report_8cpp_source_1l00008"/>00008 <emphasis role="keywordtype">double</emphasis>&#32;Report::operationalCosts&#32;=&#32;0;
+<anchor xml:id="__report_8cpp_source_1l00009"/>00009 <emphasis role="keywordtype">double</emphasis>&#32;Report::netProfit&#32;=&#32;0;
+<anchor xml:id="__report_8cpp_source_1l00010"/>00010 
+<anchor xml:id="__report_8cpp_source_1l00017"/><link linkend="_class_report_1a36e8866b9ef8fefbe4491f15d96ed503">00017</link> <link linkend="_class_report_1a36e8866b9ef8fefbe4491f15d96ed503">Report::Report</link>(<emphasis role="keywordtype">double</emphasis>&#32;operationalCosts,&#32;<emphasis role="keywordtype">double</emphasis>&#32;netProfit)
+<anchor xml:id="__report_8cpp_source_1l00018"/>00018 {
+<anchor xml:id="__report_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<link linkend="_class_report_1a7f5c6f19874a36e59c63051ab5b60400">setOperationalCosts</link>(operationalCosts);
+<anchor xml:id="__report_8cpp_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<link linkend="_class_report_1a4fe97f7f77d99b1e925c6024ed7c3913">setNetProfit</link>(netProfit);
+<anchor xml:id="__report_8cpp_source_1l00021"/>00021 }
+<anchor xml:id="__report_8cpp_source_1l00022"/>00022 
+<anchor xml:id="__report_8cpp_source_1l00028"/><link linkend="_class_report_1aab56d11c88e240affbc4b147474d4363">00028</link> QString&#32;<link linkend="_class_report_1aab56d11c88e240affbc4b147474d4363">Report::generateReport</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="__report_8cpp_source_1l00029"/>00029 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="__report_8cpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;QString(<emphasis role="stringliteral">&quot;Operational&#32;Costs,Net&#32;Profit\n%1,%2\n&quot;</emphasis>)
+<anchor xml:id="__report_8cpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.arg(<link linkend="_class_report_1a0280b260884973ffbb4ca95c438f30a6">getOperationalCosts</link>())
+<anchor xml:id="__report_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.arg(<link linkend="_class_report_1af98f7f1cb07d06b29c081974cfc9a830">getNetProfit</link>());
+<anchor xml:id="__report_8cpp_source_1l00033"/>00033 }
+<anchor xml:id="__report_8cpp_source_1l00034"/>00034 
+<anchor xml:id="__report_8cpp_source_1l00035"/>00035 <emphasis role="comment">//&#32;Setters&#32;implementation</emphasis>
+<anchor xml:id="__report_8cpp_source_1l00036"/><link linkend="_class_report_1a7f5c6f19874a36e59c63051ab5b60400">00036</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_report_1a7f5c6f19874a36e59c63051ab5b60400">Report::setOperationalCosts</link>(<emphasis role="keywordtype">double</emphasis>&#32;costs)
+<anchor xml:id="__report_8cpp_source_1l00037"/>00037 {
+<anchor xml:id="__report_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;operationalCosts&#32;=&#32;costs;
+<anchor xml:id="__report_8cpp_source_1l00039"/>00039 }
+<anchor xml:id="__report_8cpp_source_1l00040"/>00040 
+<anchor xml:id="__report_8cpp_source_1l00041"/><link linkend="_class_report_1a4fe97f7f77d99b1e925c6024ed7c3913">00041</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_report_1a4fe97f7f77d99b1e925c6024ed7c3913">Report::setNetProfit</link>(<emphasis role="keywordtype">double</emphasis>&#32;profit)
+<anchor xml:id="__report_8cpp_source_1l00042"/>00042 {
+<anchor xml:id="__report_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;netProfit&#32;=&#32;profit;
+<anchor xml:id="__report_8cpp_source_1l00044"/>00044 }
+<anchor xml:id="__report_8cpp_source_1l00045"/>00045 
+<anchor xml:id="__report_8cpp_source_1l00046"/>00046 <emphasis role="comment">//&#32;Getters&#32;implementation</emphasis>
+<anchor xml:id="__report_8cpp_source_1l00047"/><link linkend="_class_report_1a0280b260884973ffbb4ca95c438f30a6">00047</link> <emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_report_1a0280b260884973ffbb4ca95c438f30a6">Report::getOperationalCosts</link>()
+<anchor xml:id="__report_8cpp_source_1l00048"/>00048 {
+<anchor xml:id="__report_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;operationalCosts;
+<anchor xml:id="__report_8cpp_source_1l00050"/>00050 }
+<anchor xml:id="__report_8cpp_source_1l00051"/>00051 
+<anchor xml:id="__report_8cpp_source_1l00052"/><link linkend="_class_report_1af98f7f1cb07d06b29c081974cfc9a830">00052</link> <emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_report_1af98f7f1cb07d06b29c081974cfc9a830">Report::getNetProfit</link>()
+<anchor xml:id="__report_8cpp_source_1l00053"/>00053 {
+<anchor xml:id="__report_8cpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;netProfit;
+<anchor xml:id="__report_8cpp_source_1l00055"/>00055 }
+</programlisting></section>

@@ -1,0 +1,503 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gui_8cpp_source" xml:lang="en-US">
+<title>gui.cpp</title>
+<indexterm><primary>src/gui/gui.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_gui_8cpp_source_1l00001"/>00001 
+<anchor xml:id="_gui_8cpp_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_gui_8h">gui.h</link>&quot;</emphasis>
+<anchor xml:id="_gui_8cpp_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&quot;./ui_gui.h&quot;</emphasis>
+<anchor xml:id="_gui_8cpp_source_1l00008"/>00008 
+<anchor xml:id="_gui_8cpp_source_1l00014"/><link linkend="_class_g_u_i_1aa73b900295e12a915b80f34c418f7653">00014</link> <link linkend="_class_g_u_i_1aa73b900295e12a915b80f34c418f7653">GUI::GUI</link>(<link linkend="_gui_8h_1a41dc4eccf37447afba3e984031346842">GUIElement</link>&#32;*parent)
+<anchor xml:id="_gui_8cpp_source_1l00015"/>00015 &#32;&#32;&#32;&#32;:&#32;QMainWindow(parent)
+<anchor xml:id="_gui_8cpp_source_1l00016"/>00016 &#32;&#32;&#32;&#32;,&#32;ui(new&#32;<link linkend="_namespace_ui">Ui</link>::<link linkend="_class_g_u_i">GUI</link>)
+<anchor xml:id="_gui_8cpp_source_1l00017"/>00017 {
+<anchor xml:id="_gui_8cpp_source_1l00018"/>00018 &#32;&#32;&#32;&#32;ui-&gt;setupUi(<emphasis role="keyword">this</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<link linkend="_class_g_u_i_1ae63efaa6d38814299c42540a5d4ea00b">render</link>();
+<anchor xml:id="_gui_8cpp_source_1l00020"/>00020 }
+<anchor xml:id="_gui_8cpp_source_1l00021"/>00021 
+<anchor xml:id="_gui_8cpp_source_1l00025"/><link linkend="_class_g_u_i_1ac9cae2328dcb5d83bdfaeca49a2eb695">00025</link> <link linkend="_class_g_u_i_1ac9cae2328dcb5d83bdfaeca49a2eb695">GUI::~GUI</link>()
+<anchor xml:id="_gui_8cpp_source_1l00026"/>00026 {
+<anchor xml:id="_gui_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>&#32;ui;
+<anchor xml:id="_gui_8cpp_source_1l00028"/>00028 }
+<anchor xml:id="_gui_8cpp_source_1l00029"/>00029 
+<anchor xml:id="_gui_8cpp_source_1l00033"/><link linkend="_class_g_u_i_1ae63efaa6d38814299c42540a5d4ea00b">00033</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_u_i_1ae63efaa6d38814299c42540a5d4ea00b">GUI::render</link>()&#32;
+<anchor xml:id="_gui_8cpp_source_1l00034"/>00034 {
+<anchor xml:id="_gui_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;stackedWidget&#32;-&gt;&#32;setCurrentIndex(0);
+<anchor xml:id="_gui_8cpp_source_1l00036"/>00036 
+<anchor xml:id="_gui_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<emphasis role="comment">//Warehouse&#32;page</emphasis>
+<anchor xml:id="_gui_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;Warehouse&#32;warehouse;
+<anchor xml:id="_gui_8cpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;warehouse.id&#32;=&#32;1;
+<anchor xml:id="_gui_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;warehouses.append(warehouse);
+<anchor xml:id="_gui_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;loadCurrentWarehouseData();
+<anchor xml:id="_gui_8cpp_source_1l00042"/>00042 
+<anchor xml:id="_gui_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;ui-&gt;productTable-&gt;setEditTriggers(QAbstractItemView::NoEditTriggers);
+<anchor xml:id="_gui_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;ui-&gt;productTable-&gt;horizontalHeader()-&gt;setSectionResizeMode(QHeaderView::Stretch);
+<anchor xml:id="_gui_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;ui-&gt;productTable-&gt;setStyleSheet(<emphasis role="stringliteral">&quot;QHeaderView::section&#32;{&#32;font-size:&#32;15pt;&#32;}&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00046"/>00046 
+<anchor xml:id="_gui_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<emphasis role="comment">//Settings&#32;page</emphasis>
+<anchor xml:id="_gui_8cpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;configFileEdit&#32;-&gt;&#32;setDisabled(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;seedEdit&#32;-&gt;&#32;setText(QString::number(seed));
+<anchor xml:id="_gui_8cpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;cyclesEdit&#32;-&gt;&#32;setText(QString::number(cycles));
+<anchor xml:id="_gui_8cpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;configFileEdit&#32;-&gt;&#32;setText(filename);
+<anchor xml:id="_gui_8cpp_source_1l00052"/>00052 
+<anchor xml:id="_gui_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;<emphasis role="comment">//Simulation&#32;page</emphasis>
+<anchor xml:id="_gui_8cpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;ui-&gt;statisticList-&gt;setEditTriggers(QAbstractItemView::NoEditTriggers);
+<anchor xml:id="_gui_8cpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;ui-&gt;statisticList-&gt;horizontalHeader()-&gt;setSectionResizeMode(QHeaderView::Stretch);
+<anchor xml:id="_gui_8cpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;ui-&gt;statisticList-&gt;setStyleSheet(<emphasis role="stringliteral">&quot;QHeaderView::section&#32;{&#32;font-size:&#32;15pt;&#32;}&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00057"/>00057 
+<anchor xml:id="_gui_8cpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;ui-&gt;raportList-&gt;setEditTriggers(QAbstractItemView::NoEditTriggers);
+<anchor xml:id="_gui_8cpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;ui-&gt;raportList-&gt;horizontalHeader()-&gt;setSectionResizeMode(QHeaderView::Stretch);
+<anchor xml:id="_gui_8cpp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;ui-&gt;raportList-&gt;setStyleSheet(<emphasis role="stringliteral">&quot;QHeaderView::section&#32;{&#32;font-size:&#32;15pt;&#32;}&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00061"/>00061 }
+<anchor xml:id="_gui_8cpp_source_1l00062"/>00062 
+<anchor xml:id="_gui_8cpp_source_1l00069"/>00069 <emphasis role="keywordtype">void</emphasis>&#32;GUI::on_addbutton_clicked()
+<anchor xml:id="_gui_8cpp_source_1l00070"/>00070 {
+<anchor xml:id="_gui_8cpp_source_1l00071"/>00071 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(warehouses[0].name&#32;==&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>)
+<anchor xml:id="_gui_8cpp_source_1l00072"/>00072 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;warehouses[0].name&#32;=&#32;QInputDialog::getText(<emphasis role="keyword">this</emphasis>,&#32;<emphasis role="stringliteral">&quot;Add&#32;warehouse&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Please&#32;enter&#32;warehouse&#32;location&#32;below:&#32;&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;warehouses[0].capacity&#32;=&#32;QInputDialog::getInt(<emphasis role="keyword">this</emphasis>,&#32;<emphasis role="stringliteral">&quot;Add&#32;warehouse&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Please&#32;enter&#32;warehouse&#32;capacity&#32;below:&#32;&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;ui-&gt;stackedWidget-&gt;setCurrentIndex(1);
+<anchor xml:id="_gui_8cpp_source_1l00077"/>00077 }
+<anchor xml:id="_gui_8cpp_source_1l00078"/>00078 
+<anchor xml:id="_gui_8cpp_source_1l00082"/>00082 <emphasis role="keywordtype">void</emphasis>&#32;GUI::on_back_to_menu_clicked()
+<anchor xml:id="_gui_8cpp_source_1l00083"/>00083 {
+<anchor xml:id="_gui_8cpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;ui-&gt;stackedWidget-&gt;setCurrentIndex(0);
+<anchor xml:id="_gui_8cpp_source_1l00085"/>00085 }
+<anchor xml:id="_gui_8cpp_source_1l00086"/>00086 
+<anchor xml:id="_gui_8cpp_source_1l00090"/>00090 <emphasis role="keywordtype">void</emphasis>&#32;GUI::on_back_to_menu_2_clicked()
+<anchor xml:id="_gui_8cpp_source_1l00091"/>00091 {
+<anchor xml:id="_gui_8cpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;ui-&gt;stackedWidget-&gt;setCurrentIndex(0);
+<anchor xml:id="_gui_8cpp_source_1l00093"/>00093 }
+<anchor xml:id="_gui_8cpp_source_1l00094"/>00094 
+<anchor xml:id="_gui_8cpp_source_1l00098"/>00098 <emphasis role="keywordtype">void</emphasis>&#32;GUI::on_back_to_menu_3_clicked()
+<anchor xml:id="_gui_8cpp_source_1l00099"/>00099 {
+<anchor xml:id="_gui_8cpp_source_1l00100"/>00100 &#32;&#32;&#32;&#32;ui-&gt;stackedWidget-&gt;setCurrentIndex(0);
+<anchor xml:id="_gui_8cpp_source_1l00101"/>00101 }
+<anchor xml:id="_gui_8cpp_source_1l00102"/>00102 
+<anchor xml:id="_gui_8cpp_source_1l00106"/>00106 <emphasis role="keywordtype">void</emphasis>&#32;GUI::on_settings_button_clicked()
+<anchor xml:id="_gui_8cpp_source_1l00107"/>00107 {
+<anchor xml:id="_gui_8cpp_source_1l00108"/>00108 &#32;&#32;&#32;&#32;ui-&gt;stackedWidget-&gt;setCurrentIndex(2);
+<anchor xml:id="_gui_8cpp_source_1l00109"/>00109 }
+<anchor xml:id="_gui_8cpp_source_1l00110"/>00110 
+<anchor xml:id="_gui_8cpp_source_1l00114"/>00114 <emphasis role="keywordtype">void</emphasis>&#32;GUI::on_start_simulation_button_clicked()
+<anchor xml:id="_gui_8cpp_source_1l00115"/>00115 {
+<anchor xml:id="_gui_8cpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;ui-&gt;stackedWidget-&gt;setCurrentIndex(3);
+<anchor xml:id="_gui_8cpp_source_1l00117"/>00117 }
+<anchor xml:id="_gui_8cpp_source_1l00118"/>00118 
+<anchor xml:id="_gui_8cpp_source_1l00122"/>00122 <emphasis role="keywordtype">void</emphasis>&#32;GUI::on_aboutButton_clicked()
+<anchor xml:id="_gui_8cpp_source_1l00123"/>00123 {
+<anchor xml:id="_gui_8cpp_source_1l00124"/>00124 &#32;&#32;&#32;&#32;QApplication::aboutQt();
+<anchor xml:id="_gui_8cpp_source_1l00125"/>00125 }
+<anchor xml:id="_gui_8cpp_source_1l00126"/>00126 
+<anchor xml:id="_gui_8cpp_source_1l00130"/>00130 <emphasis role="keywordtype">void</emphasis>&#32;GUI::on_configFileButton_clicked()
+<anchor xml:id="_gui_8cpp_source_1l00131"/>00131 {
+<anchor xml:id="_gui_8cpp_source_1l00132"/>00132 &#32;&#32;&#32;&#32;filename&#32;=&#32;QFileDialog::getOpenFileName(<emphasis role="keyword">this</emphasis>,&#32;<emphasis role="stringliteral">&quot;Choose&#32;setting&#32;file&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;settings.csv&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;*.csv&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00133"/>00133 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(filename&#32;==&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>)
+<anchor xml:id="_gui_8cpp_source_1l00134"/>00134 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QMessageBox::information(<emphasis role="keyword">this</emphasis>,&#32;<emphasis role="stringliteral">&quot;Settings&#32;&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;No&#32;file&#32;selected.&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;configFileEdit&#32;-&gt;&#32;setText(filename);
+<anchor xml:id="_gui_8cpp_source_1l00137"/>00137 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00138"/>00138 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_gui_8cpp_source_1l00139"/>00139 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;configFileEdit&#32;-&gt;&#32;setText(filename);
+<anchor xml:id="_gui_8cpp_source_1l00141"/>00141 
+<anchor xml:id="_gui_8cpp_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QFile&#32;file(filename);
+<anchor xml:id="_gui_8cpp_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!file.open(QIODevice::ReadOnly&#32;|&#32;QIODevice::Text))&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QMessageBox::critical(<emphasis role="keyword">this</emphasis>,&#32;<emphasis role="stringliteral">&quot;Load&#32;Data&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Cannot&#32;open&#32;file.&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_gui_8cpp_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00147"/>00147 
+<anchor xml:id="_gui_8cpp_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QTextStream&#32;in(&amp;file);
+<anchor xml:id="_gui_8cpp_source_1l00149"/>00149 
+<anchor xml:id="_gui_8cpp_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;warehouses.clear();
+<anchor xml:id="_gui_8cpp_source_1l00151"/>00151 
+<anchor xml:id="_gui_8cpp_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_warehouse">Warehouse</link>&#32;*currentWarehouse&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+<anchor xml:id="_gui_8cpp_source_1l00153"/>00153 
+<anchor xml:id="_gui_8cpp_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(!in.atEnd())
+<anchor xml:id="_gui_8cpp_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QString&#32;line&#32;=&#32;in.readLine();
+<anchor xml:id="_gui_8cpp_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QStringList&#32;fields&#32;=&#32;line.split(<emphasis role="stringliteral">&quot;,&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(fields[0]&#32;==&#32;<emphasis role="stringliteral">&quot;Warehouse&quot;</emphasis>)
+<anchor xml:id="_gui_8cpp_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_warehouse">Warehouse</link>&#32;warehouse;
+<anchor xml:id="_gui_8cpp_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;warehouse.id&#32;=&#32;warehouses.size()&#32;+&#32;1;
+<anchor xml:id="_gui_8cpp_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;warehouse.name&#32;=&#32;fields[1];
+<anchor xml:id="_gui_8cpp_source_1l00163"/>00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;warehouse.capacity&#32;=&#32;fields[2].toInt();
+<anchor xml:id="_gui_8cpp_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;warehouses.append(warehouse);
+<anchor xml:id="_gui_8cpp_source_1l00165"/>00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentWarehouse&#32;=&#32;&amp;warehouses.last();
+<anchor xml:id="_gui_8cpp_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(fields[0]&#32;==&#32;<emphasis role="stringliteral">&quot;Product&quot;</emphasis>&#32;&amp;&amp;&#32;currentWarehouse)
+<anchor xml:id="_gui_8cpp_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00169"/>00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(fields.size()&#32;&lt;&#32;4)
+<anchor xml:id="_gui_8cpp_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QMessageBox::critical(<emphasis role="keyword">this</emphasis>,&#32;<emphasis role="stringliteral">&quot;Load&#32;Data&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Incorrect&#32;product&#32;line&#32;format.&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="_gui_8cpp_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_product">Product</link>&#32;product;
+<anchor xml:id="_gui_8cpp_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;product.name&#32;=&#32;fields[1];
+<anchor xml:id="_gui_8cpp_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;product.price&#32;=&#32;fields[2].toDouble();
+<anchor xml:id="_gui_8cpp_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;product.quantity&#32;=&#32;fields[3].toInt();
+<anchor xml:id="_gui_8cpp_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentWarehouse-&gt;products.append(product);
+<anchor xml:id="_gui_8cpp_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(fields[0]&#32;==&#32;<emphasis role="stringliteral">&quot;Seed&quot;</emphasis>)
+<anchor xml:id="_gui_8cpp_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;seed&#32;=&#32;fields[5].toInt();
+<anchor xml:id="_gui_8cpp_source_1l00183"/>00183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;seedEdit&#32;-&gt;&#32;setText(QString::number(seed));
+<anchor xml:id="_gui_8cpp_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(fields[0]&#32;==&#32;<emphasis role="stringliteral">&quot;Cycles&quot;</emphasis>)
+<anchor xml:id="_gui_8cpp_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cycles&#32;=&#32;fields[4].toInt();
+<anchor xml:id="_gui_8cpp_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;cyclesEdit&#32;-&gt;&#32;setText(QString::number(cycles));
+<anchor xml:id="_gui_8cpp_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00190"/>00190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;file.close();
+<anchor xml:id="_gui_8cpp_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;loadCurrentWarehouseData();
+<anchor xml:id="_gui_8cpp_source_1l00193"/>00193 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00194"/>00194 }
+<anchor xml:id="_gui_8cpp_source_1l00195"/>00195 
+<anchor xml:id="_gui_8cpp_source_1l00199"/>00199 <emphasis role="keywordtype">void</emphasis>&#32;GUI::on_back_to_menu_7_clicked()
+<anchor xml:id="_gui_8cpp_source_1l00200"/>00200 {
+<anchor xml:id="_gui_8cpp_source_1l00201"/>00201 &#32;&#32;&#32;&#32;seed&#32;=&#32;ui&#32;-&gt;&#32;seedEdit&#32;-&gt;&#32;text().toInt();
+<anchor xml:id="_gui_8cpp_source_1l00202"/>00202 &#32;&#32;&#32;&#32;cycles&#32;=&#32;ui&#32;-&gt;&#32;cyclesEdit&#32;-&gt;&#32;text().toInt();
+<anchor xml:id="_gui_8cpp_source_1l00203"/>00203 &#32;&#32;&#32;&#32;ui-&gt;stackedWidget-&gt;setCurrentIndex(0);
+<anchor xml:id="_gui_8cpp_source_1l00204"/>00204 }
+<anchor xml:id="_gui_8cpp_source_1l00205"/>00205 
+<anchor xml:id="_gui_8cpp_source_1l00209"/>00209 <emphasis role="keywordtype">void</emphasis>&#32;GUI::on_start_button_clicked()
+<anchor xml:id="_gui_8cpp_source_1l00210"/>00210 {
+<anchor xml:id="_gui_8cpp_source_1l00211"/>00211 &#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;statisticList&#32;-&gt;&#32;setRowCount(0);
+<anchor xml:id="_gui_8cpp_source_1l00212"/>00212 
+<anchor xml:id="_gui_8cpp_source_1l00213"/>00213 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(warehouses.isEmpty()&#32;||&#32;seed&#32;==&#32;0&#32;||&#32;cycles&#32;==&#32;0&#32;||&#32;warehouses[0].products.isEmpty())
+<anchor xml:id="_gui_8cpp_source_1l00214"/>00214 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00215"/>00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QMessageBox::warning(<emphasis role="keyword">this</emphasis>,&#32;<emphasis role="stringliteral">&quot;Start&#32;Simulation&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Cannot&#32;start&#32;simulation&#32;without&#32;initial&#32;conditions.&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00216"/>00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_gui_8cpp_source_1l00217"/>00217 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00218"/>00218 
+<anchor xml:id="_gui_8cpp_source_1l00219"/>00219 &#32;&#32;&#32;&#32;QFile&#32;file(<emphasis role="stringliteral">&quot;settings.csv&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00220"/>00220 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!file.open(QIODevice::WriteOnly&#32;|&#32;QIODevice::Text))&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00221"/>00221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QMessageBox::critical(<emphasis role="keyword">this</emphasis>,&#32;<emphasis role="stringliteral">&quot;Save&#32;Data&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Cannot&#32;open&#32;file.&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00222"/>00222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_gui_8cpp_source_1l00223"/>00223 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00224"/>00224 
+<anchor xml:id="_gui_8cpp_source_1l00225"/>00225 &#32;&#32;&#32;&#32;QTextStream&#32;out(&amp;file);
+<anchor xml:id="_gui_8cpp_source_1l00226"/>00226 &#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Type,Location,Capacity,Name,Price,Quantity,Cycles,Seed\n&quot;</emphasis>;
+<anchor xml:id="_gui_8cpp_source_1l00227"/>00227 
+<anchor xml:id="_gui_8cpp_source_1l00228"/>00228 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_warehouse">Warehouse</link>&#32;&amp;warehouse&#32;:&#32;warehouses)
+<anchor xml:id="_gui_8cpp_source_1l00229"/>00229 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00230"/>00230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Warehouse,&quot;</emphasis>&#32;&lt;&lt;&#32;warehouse.name&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;,&quot;</emphasis>&#32;&lt;&lt;&#32;warehouse.capacity&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n&quot;</emphasis>;
+<anchor xml:id="_gui_8cpp_source_1l00231"/>00231 
+<anchor xml:id="_gui_8cpp_source_1l00232"/>00232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_product">Product</link>&#32;&amp;product&#32;:&#32;warehouse.products)
+<anchor xml:id="_gui_8cpp_source_1l00233"/>00233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00234"/>00234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;row&#32;=&#32;ui&#32;-&gt;&#32;statisticList&#32;-&gt;&#32;rowCount();
+<anchor xml:id="_gui_8cpp_source_1l00235"/>00235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;statisticList&#32;-&gt;&#32;insertRow(row);
+<anchor xml:id="_gui_8cpp_source_1l00236"/>00236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;statisticList&#32;-&gt;&#32;setItem(row,&#32;0,&#32;<emphasis role="keyword">new</emphasis>&#32;QTableWidgetItem(QString::number(warehouse.id-1)));
+<anchor xml:id="_gui_8cpp_source_1l00237"/>00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;statisticList&#32;-&gt;&#32;setItem(row,&#32;1,&#32;<emphasis role="keyword">new</emphasis>&#32;QTableWidgetItem(QString::number(row+1)));
+<anchor xml:id="_gui_8cpp_source_1l00238"/>00238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;statisticList&#32;-&gt;&#32;setItem(row,&#32;2,&#32;<emphasis role="keyword">new</emphasis>&#32;QTableWidgetItem(product.name));
+<anchor xml:id="_gui_8cpp_source_1l00239"/>00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;statisticList&#32;-&gt;&#32;setItem(row,&#32;3,&#32;<emphasis role="keyword">new</emphasis>&#32;QTableWidgetItem(QString::number(product.price)));
+<anchor xml:id="_gui_8cpp_source_1l00240"/>00240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;statisticList&#32;-&gt;&#32;setItem(row,&#32;4,&#32;<emphasis role="keyword">new</emphasis>&#32;QTableWidgetItem(QString::number(product.quantity)));
+<anchor xml:id="_gui_8cpp_source_1l00241"/>00241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Product,&quot;</emphasis>&#32;&lt;&lt;&#32;product.name&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;,&quot;</emphasis>&#32;&lt;&lt;&#32;product.price&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;,&quot;</emphasis>&#32;&lt;&lt;&#32;product.quantity&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n&quot;</emphasis>;
+<anchor xml:id="_gui_8cpp_source_1l00242"/>00242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00243"/>00243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Cycles,,,,&quot;</emphasis>&#32;&lt;&lt;&#32;cycles&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n&quot;</emphasis>;
+<anchor xml:id="_gui_8cpp_source_1l00244"/>00244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Seed,,,,,&quot;</emphasis>&#32;&lt;&lt;&#32;seed&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n&quot;</emphasis>;
+<anchor xml:id="_gui_8cpp_source_1l00245"/>00245 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00246"/>00246 &#32;&#32;&#32;&#32;file.close();
+<anchor xml:id="_gui_8cpp_source_1l00247"/>00247 
+<anchor xml:id="_gui_8cpp_source_1l00248"/>00248 &#32;&#32;&#32;&#32;<link linkend="_class_simulation_thread">SimulationThread</link>&#32;*simulationThread&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_class_simulation_thread">SimulationThread</link>();
+<anchor xml:id="_gui_8cpp_source_1l00249"/>00249 &#32;&#32;&#32;&#32;connect(simulationThread,&#32;&amp;SimulationThread::finished,&#32;simulationThread,&#32;&amp;QObject::deleteLater);
+<anchor xml:id="_gui_8cpp_source_1l00250"/>00250 &#32;&#32;&#32;&#32;connect(simulationThread,&#32;&amp;<link linkend="_class_simulation_thread_1a8ddb2d67e1c9e0f2e0602b015a52b648">SimulationThread::simulationFinished</link>,&#32;<emphasis role="keyword">this</emphasis>,&#32;&amp;GUI::onSimulationFinished);
+<anchor xml:id="_gui_8cpp_source_1l00251"/>00251 &#32;&#32;&#32;&#32;simulationThread-&gt;start();
+<anchor xml:id="_gui_8cpp_source_1l00252"/>00252 
+<anchor xml:id="_gui_8cpp_source_1l00253"/>00253 &#32;&#32;&#32;&#32;setupUpdateTimer();
+<anchor xml:id="_gui_8cpp_source_1l00254"/>00254 &#32;&#32;&#32;&#32;updateTablesFromCSV();
+<anchor xml:id="_gui_8cpp_source_1l00255"/>00255 }
+<anchor xml:id="_gui_8cpp_source_1l00256"/>00256 
+<anchor xml:id="_gui_8cpp_source_1l00260"/>00260 <emphasis role="keywordtype">void</emphasis>&#32;GUI::on_addProductButton_clicked()
+<anchor xml:id="_gui_8cpp_source_1l00261"/>00261 {
+<anchor xml:id="_gui_8cpp_source_1l00262"/>00262 &#32;&#32;&#32;&#32;QString&#32;name&#32;=&#32;ui-&gt;productNameEntry-&gt;text();
+<anchor xml:id="_gui_8cpp_source_1l00263"/>00263 &#32;&#32;&#32;&#32;QString&#32;price&#32;=&#32;ui-&gt;productPriceEntry-&gt;text();
+<anchor xml:id="_gui_8cpp_source_1l00264"/>00264 &#32;&#32;&#32;&#32;QString&#32;quantity&#32;=&#32;ui-&gt;productQuantityEntry-&gt;text();
+<anchor xml:id="_gui_8cpp_source_1l00265"/>00265 
+<anchor xml:id="_gui_8cpp_source_1l00266"/>00266 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;priceValidation,&#32;quantityValidation;
+<anchor xml:id="_gui_8cpp_source_1l00267"/>00267 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;priceValue&#32;=&#32;price.toDouble(&amp;priceValidation);
+<anchor xml:id="_gui_8cpp_source_1l00268"/>00268 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;quantityValue&#32;=&#32;quantity.toInt(&amp;quantityValidation);
+<anchor xml:id="_gui_8cpp_source_1l00269"/>00269 
+<anchor xml:id="_gui_8cpp_source_1l00270"/>00270 &#32;&#32;&#32;&#32;<link linkend="_class_warehouse">Warehouse</link>&#32;&amp;currentWarehouse&#32;=&#32;warehouses[currentWarehouseIndex];
+<anchor xml:id="_gui_8cpp_source_1l00271"/>00271 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentCapacity&#32;=&#32;0;
+<anchor xml:id="_gui_8cpp_source_1l00272"/>00272 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_product">Product</link>&#32;&amp;product&#32;:&#32;currentWarehouse.products)
+<anchor xml:id="_gui_8cpp_source_1l00273"/>00273 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00274"/>00274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentCapacity&#32;+=&#32;product.quantity;
+<anchor xml:id="_gui_8cpp_source_1l00275"/>00275 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00276"/>00276 
+<anchor xml:id="_gui_8cpp_source_1l00277"/>00277 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!priceValidation&#32;||&#32;!quantityValidation&#32;||&#32;priceValue&#32;&lt;&#32;0&#32;||&#32;quantityValue&#32;&lt;&#32;0&#32;||&#32;currentCapacity&#32;+&#32;quantityValue&#32;&gt;&#32;currentWarehouse.capacity)
+<anchor xml:id="_gui_8cpp_source_1l00278"/>00278 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00279"/>00279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QMessageBox::warning(<emphasis role="keyword">this</emphasis>,&#32;<emphasis role="stringliteral">&quot;Add&#32;Product&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Wrong&#32;product&#32;parameters&#32;or&#32;exceeding&#32;warehouse&#32;capacity.&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00280"/>00280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_gui_8cpp_source_1l00281"/>00281 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00282"/>00282 
+<anchor xml:id="_gui_8cpp_source_1l00283"/>00283 &#32;&#32;&#32;&#32;<link linkend="_class_product">Product</link>&#32;newProduct{name,&#32;priceValue,&#32;quantityValue};
+<anchor xml:id="_gui_8cpp_source_1l00284"/>00284 &#32;&#32;&#32;&#32;currentWarehouse.products.append(newProduct);
+<anchor xml:id="_gui_8cpp_source_1l00285"/>00285 &#32;&#32;&#32;&#32;loadCurrentWarehouseData();
+<anchor xml:id="_gui_8cpp_source_1l00286"/>00286 }
+<anchor xml:id="_gui_8cpp_source_1l00287"/>00287 
+<anchor xml:id="_gui_8cpp_source_1l00288"/>00288 <emphasis role="keywordtype">void</emphasis>&#32;GUI::on_removeButton_clicked()
+<anchor xml:id="_gui_8cpp_source_1l00289"/>00289 {
+<anchor xml:id="_gui_8cpp_source_1l00290"/>00290 &#32;&#32;&#32;&#32;QPushButton&#32;*button&#32;=&#32;qobject_cast&lt;QPushButton&#32;*&gt;(sender());
+<anchor xml:id="_gui_8cpp_source_1l00291"/>00291 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(button)
+<anchor xml:id="_gui_8cpp_source_1l00292"/>00292 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00293"/>00293 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;row&#32;=&#32;button-&gt;property(<emphasis role="stringliteral">&quot;row&quot;</emphasis>).toInt();
+<anchor xml:id="_gui_8cpp_source_1l00294"/>00294 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui-&gt;productTable-&gt;removeRow(row);
+<anchor xml:id="_gui_8cpp_source_1l00295"/>00295 
+<anchor xml:id="_gui_8cpp_source_1l00296"/>00296 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_warehouse">Warehouse</link>&#32;&amp;currentWarehouse&#32;=&#32;warehouses[currentWarehouseIndex];
+<anchor xml:id="_gui_8cpp_source_1l00297"/>00297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(row&#32;&lt;&#32;currentWarehouse.products.size())
+<anchor xml:id="_gui_8cpp_source_1l00298"/>00298 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00299"/>00299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentWarehouse.products.removeAt(row);
+<anchor xml:id="_gui_8cpp_source_1l00300"/>00300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00301"/>00301 
+<anchor xml:id="_gui_8cpp_source_1l00302"/>00302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;currentRow&#32;=&#32;row;&#32;currentRow&#32;&lt;&#32;ui-&gt;productTable-&gt;rowCount();&#32;++currentRow)
+<anchor xml:id="_gui_8cpp_source_1l00303"/>00303 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00304"/>00304 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QPushButton&#32;*btnRemove&#32;=&#32;qobject_cast&lt;QPushButton&#32;*&gt;(ui-&gt;productTable-&gt;cellWidget(currentRow,&#32;3));
+<anchor xml:id="_gui_8cpp_source_1l00305"/>00305 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;btnRemove-&gt;setProperty(<emphasis role="stringliteral">&quot;row&quot;</emphasis>,&#32;currentRow);
+<anchor xml:id="_gui_8cpp_source_1l00306"/>00306 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00307"/>00307 
+<anchor xml:id="_gui_8cpp_source_1l00308"/>00308 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui-&gt;productTable-&gt;update();
+<anchor xml:id="_gui_8cpp_source_1l00309"/>00309 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00310"/>00310 }
+<anchor xml:id="_gui_8cpp_source_1l00311"/>00311 
+<anchor xml:id="_gui_8cpp_source_1l00315"/>00315 <emphasis role="keywordtype">void</emphasis>&#32;GUI::loadCurrentWarehouseData()
+<anchor xml:id="_gui_8cpp_source_1l00316"/>00316 {
+<anchor xml:id="_gui_8cpp_source_1l00317"/>00317 &#32;&#32;&#32;&#32;ui-&gt;productTable-&gt;setRowCount(0);
+<anchor xml:id="_gui_8cpp_source_1l00318"/>00318 &#32;&#32;&#32;&#32;<link linkend="_class_warehouse">Warehouse</link>&#32;&amp;currentWarehouse&#32;=&#32;warehouses[currentWarehouseIndex];
+<anchor xml:id="_gui_8cpp_source_1l00319"/>00319 
+<anchor xml:id="_gui_8cpp_source_1l00320"/>00320 &#32;&#32;&#32;&#32;ui-&gt;warehouseLabel-&gt;setText(<emphasis role="stringliteral">&quot;Warehouse&#32;&quot;</emphasis>&#32;+&#32;QString::number(currentWarehouse.id));
+<anchor xml:id="_gui_8cpp_source_1l00321"/>00321 
+<anchor xml:id="_gui_8cpp_source_1l00322"/>00322 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_product">Product</link>&#32;&amp;product&#32;:&#32;currentWarehouse.products)
+<anchor xml:id="_gui_8cpp_source_1l00323"/>00323 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00324"/>00324 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentRow&#32;=&#32;ui-&gt;productTable-&gt;rowCount();
+<anchor xml:id="_gui_8cpp_source_1l00325"/>00325 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui-&gt;productTable-&gt;insertRow(currentRow);
+<anchor xml:id="_gui_8cpp_source_1l00326"/>00326 
+<anchor xml:id="_gui_8cpp_source_1l00327"/>00327 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui-&gt;productTable-&gt;setItem(currentRow,&#32;0,&#32;<emphasis role="keyword">new</emphasis>&#32;QTableWidgetItem(product.name));
+<anchor xml:id="_gui_8cpp_source_1l00328"/>00328 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui-&gt;productTable-&gt;setItem(currentRow,&#32;1,&#32;<emphasis role="keyword">new</emphasis>&#32;QTableWidgetItem(QString::number(product.price)));
+<anchor xml:id="_gui_8cpp_source_1l00329"/>00329 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui-&gt;productTable-&gt;setItem(currentRow,&#32;2,&#32;<emphasis role="keyword">new</emphasis>&#32;QTableWidgetItem(QString::number(product.quantity)));
+<anchor xml:id="_gui_8cpp_source_1l00330"/>00330 
+<anchor xml:id="_gui_8cpp_source_1l00331"/>00331 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QPushButton&#32;*btnRemove&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;QPushButton(<emphasis role="stringliteral">&quot;Remove&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00332"/>00332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;btnRemove-&gt;setProperty(<emphasis role="stringliteral">&quot;row&quot;</emphasis>,&#32;currentRow);
+<anchor xml:id="_gui_8cpp_source_1l00333"/>00333 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;connect(btnRemove,&#32;&amp;QPushButton::clicked,&#32;<emphasis role="keyword">this</emphasis>,&#32;&amp;GUI::on_removeButton_clicked);
+<anchor xml:id="_gui_8cpp_source_1l00334"/>00334 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui-&gt;productTable-&gt;setCellWidget(currentRow,&#32;3,&#32;btnRemove);
+<anchor xml:id="_gui_8cpp_source_1l00335"/>00335 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00336"/>00336 }
+<anchor xml:id="_gui_8cpp_source_1l00337"/>00337 
+<anchor xml:id="_gui_8cpp_source_1l00341"/>00341 <emphasis role="keywordtype">void</emphasis>&#32;GUI::on_previousWarehouse_clicked()
+<anchor xml:id="_gui_8cpp_source_1l00342"/>00342 {
+<anchor xml:id="_gui_8cpp_source_1l00343"/>00343 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(currentWarehouseIndex&#32;&gt;&#32;0)
+<anchor xml:id="_gui_8cpp_source_1l00344"/>00344 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00345"/>00345 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentWarehouseIndex--;
+<anchor xml:id="_gui_8cpp_source_1l00346"/>00346 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00347"/>00347 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_gui_8cpp_source_1l00348"/>00348 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00349"/>00349 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentWarehouseIndex&#32;=&#32;warehouses.size()&#32;-&#32;1;
+<anchor xml:id="_gui_8cpp_source_1l00350"/>00350 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00351"/>00351 &#32;&#32;&#32;&#32;loadCurrentWarehouseData();
+<anchor xml:id="_gui_8cpp_source_1l00352"/>00352 }
+<anchor xml:id="_gui_8cpp_source_1l00353"/>00353 
+<anchor xml:id="_gui_8cpp_source_1l00357"/>00357 <emphasis role="keywordtype">void</emphasis>&#32;GUI::on_nextWarehouse_clicked()
+<anchor xml:id="_gui_8cpp_source_1l00358"/>00358 {
+<anchor xml:id="_gui_8cpp_source_1l00359"/>00359 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(currentWarehouseIndex&#32;==&#32;warehouses.size()&#32;-&#32;1)
+<anchor xml:id="_gui_8cpp_source_1l00360"/>00360 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00361"/>00361 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_warehouse">Warehouse</link>&#32;newWarehouse;
+<anchor xml:id="_gui_8cpp_source_1l00362"/>00362 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;newWarehouse.id&#32;=&#32;warehouses.size()&#32;+&#32;1;
+<anchor xml:id="_gui_8cpp_source_1l00363"/>00363 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;newWarehouse.name&#32;=&#32;QInputDialog::getText(<emphasis role="keyword">this</emphasis>,&#32;<emphasis role="stringliteral">&quot;Add&#32;warehouse&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Please&#32;enter&#32;warehouse&#32;location&#32;below:&#32;&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00364"/>00364 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;newWarehouse.capacity&#32;=&#32;QInputDialog::getInt(<emphasis role="keyword">this</emphasis>,&#32;<emphasis role="stringliteral">&quot;Add&#32;warehouse&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Please&#32;enter&#32;warehouse&#32;capacity&#32;below:&#32;&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00365"/>00365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;warehouses.append(newWarehouse);
+<anchor xml:id="_gui_8cpp_source_1l00366"/>00366 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentWarehouseIndex&#32;=&#32;warehouses.size()&#32;-&#32;1;
+<anchor xml:id="_gui_8cpp_source_1l00367"/>00367 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00368"/>00368 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_gui_8cpp_source_1l00369"/>00369 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00370"/>00370 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentWarehouseIndex&#32;=&#32;(currentWarehouseIndex&#32;+&#32;1)&#32;%&#32;warehouses.size();
+<anchor xml:id="_gui_8cpp_source_1l00371"/>00371 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00372"/>00372 &#32;&#32;&#32;&#32;loadCurrentWarehouseData();
+<anchor xml:id="_gui_8cpp_source_1l00373"/>00373 }
+<anchor xml:id="_gui_8cpp_source_1l00374"/>00374 
+<anchor xml:id="_gui_8cpp_source_1l00378"/>00378 <emphasis role="keywordtype">void</emphasis>&#32;GUI::on_removeWarehouseButton_clicked()
+<anchor xml:id="_gui_8cpp_source_1l00379"/>00379 {
+<anchor xml:id="_gui_8cpp_source_1l00380"/>00380 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(warehouses.size()&#32;&gt;&#32;1&#32;&amp;&amp;&#32;currentWarehouseIndex&#32;&lt;&#32;warehouses.size())
+<anchor xml:id="_gui_8cpp_source_1l00381"/>00381 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00382"/>00382 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;warehouses.removeAt(currentWarehouseIndex);
+<anchor xml:id="_gui_8cpp_source_1l00383"/>00383 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(currentWarehouseIndex&#32;==&#32;warehouses.size())
+<anchor xml:id="_gui_8cpp_source_1l00384"/>00384 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00385"/>00385 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentWarehouseIndex--;
+<anchor xml:id="_gui_8cpp_source_1l00386"/>00386 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00387"/>00387 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;loadCurrentWarehouseData();
+<anchor xml:id="_gui_8cpp_source_1l00388"/>00388 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00389"/>00389 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_gui_8cpp_source_1l00390"/>00390 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00391"/>00391 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QMessageBox::warning(<emphasis role="keyword">this</emphasis>,&#32;<emphasis role="stringliteral">&quot;Remove&#32;Warehouse&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Cannot&#32;remove&#32;the&#32;only&#32;warehouse.&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00392"/>00392 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00393"/>00393 }
+<anchor xml:id="_gui_8cpp_source_1l00394"/>00394 
+<anchor xml:id="_gui_8cpp_source_1l00398"/>00398 <emphasis role="keywordtype">void</emphasis>&#32;GUI::setupUpdateTimer()
+<anchor xml:id="_gui_8cpp_source_1l00399"/>00399 {
+<anchor xml:id="_gui_8cpp_source_1l00400"/>00400 &#32;&#32;&#32;&#32;timer&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;QTimer(<emphasis role="keyword">this</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00401"/>00401 &#32;&#32;&#32;&#32;connect(timer,&#32;&amp;QTimer::timeout,&#32;<emphasis role="keyword">this</emphasis>,&#32;&amp;GUI::updateTablesFromCSV);
+<anchor xml:id="_gui_8cpp_source_1l00402"/>00402 &#32;&#32;&#32;&#32;timer-&gt;start(1000);
+<anchor xml:id="_gui_8cpp_source_1l00403"/>00403 }
+<anchor xml:id="_gui_8cpp_source_1l00404"/>00404 
+<anchor xml:id="_gui_8cpp_source_1l00408"/>00408 <emphasis role="keywordtype">void</emphasis>&#32;GUI::updateTablesFromCSV()
+<anchor xml:id="_gui_8cpp_source_1l00409"/>00409 {
+<anchor xml:id="_gui_8cpp_source_1l00410"/>00410 &#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;raportList&#32;-&gt;&#32;setRowCount(0);
+<anchor xml:id="_gui_8cpp_source_1l00411"/>00411 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;cycles&#32;=&#32;0;
+<anchor xml:id="_gui_8cpp_source_1l00412"/>00412 &#32;&#32;&#32;&#32;QFile&#32;report(<emphasis role="stringliteral">&quot;SimulationReport.csv&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00413"/>00413 
+<anchor xml:id="_gui_8cpp_source_1l00414"/>00414 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!report.open(QIODevice::ReadOnly&#32;|&#32;QIODevice::Text))
+<anchor xml:id="_gui_8cpp_source_1l00415"/>00415 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00416"/>00416 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QMessageBox::critical(<emphasis role="keyword">this</emphasis>,&#32;<emphasis role="stringliteral">&quot;Read&#32;Report&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Cannot&#32;open&#32;report&#32;file&#32;to&#32;read.&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00417"/>00417 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_gui_8cpp_source_1l00418"/>00418 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00419"/>00419 
+<anchor xml:id="_gui_8cpp_source_1l00420"/>00420 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentWarehouse;
+<anchor xml:id="_gui_8cpp_source_1l00421"/>00421 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;statisticRow&#32;=&#32;0;
+<anchor xml:id="_gui_8cpp_source_1l00422"/>00422 
+<anchor xml:id="_gui_8cpp_source_1l00423"/>00423 &#32;&#32;&#32;&#32;QTextStream&#32;in(&amp;report);
+<anchor xml:id="_gui_8cpp_source_1l00424"/>00424 
+<anchor xml:id="_gui_8cpp_source_1l00425"/>00425 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(!in.atEnd())
+<anchor xml:id="_gui_8cpp_source_1l00426"/>00426 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00427"/>00427 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QString&#32;line&#32;=&#32;in.readLine();
+<anchor xml:id="_gui_8cpp_source_1l00428"/>00428 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(line.isEmpty())
+<anchor xml:id="_gui_8cpp_source_1l00429"/>00429 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00430"/>00430 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;statisticRow&#32;=&#32;0;
+<anchor xml:id="_gui_8cpp_source_1l00431"/>00431 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cycles++;
+<anchor xml:id="_gui_8cpp_source_1l00432"/>00432 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00433"/>00433 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(line.contains(<emphasis role="stringliteral">&quot;Warehouse&#32;ID,Capacity&quot;</emphasis>))
+<anchor xml:id="_gui_8cpp_source_1l00434"/>00434 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00435"/>00435 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;line&#32;=&#32;in.readLine();
+<anchor xml:id="_gui_8cpp_source_1l00436"/>00436 
+<anchor xml:id="_gui_8cpp_source_1l00437"/>00437 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QStringList&#32;fields&#32;=&#32;line.split(<emphasis role="charliteral">&apos;,&apos;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00438"/>00438 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentWarehouse&#32;=&#32;fields[0].toInt();
+<anchor xml:id="_gui_8cpp_source_1l00439"/>00439 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;capacity&#32;=&#32;fields[1].toInt();
+<anchor xml:id="_gui_8cpp_source_1l00440"/>00440 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QString&#32;location&#32;=&#32;warehouses[currentWarehouse].name;
+<anchor xml:id="_gui_8cpp_source_1l00441"/>00441 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;sold&#32;=&#32;0;
+<anchor xml:id="_gui_8cpp_source_1l00442"/>00442 
+<anchor xml:id="_gui_8cpp_source_1l00443"/>00443 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;line&#32;=&#32;in.readLine();
+<anchor xml:id="_gui_8cpp_source_1l00444"/>00444 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!line.contains(<emphasis role="stringliteral">&quot;Product&#32;Name,Price,Quantity&quot;</emphasis>))
+<anchor xml:id="_gui_8cpp_source_1l00445"/>00445 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00446"/>00446 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_gui_8cpp_source_1l00447"/>00447 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00448"/>00448 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;line&#32;=&#32;in.readLine();
+<anchor xml:id="_gui_8cpp_source_1l00449"/>00449 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(!line.contains(<emphasis role="stringliteral">&quot;Sales&#32;ID,Time&quot;</emphasis>))
+<anchor xml:id="_gui_8cpp_source_1l00450"/>00450 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00451"/>00451 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QString&#32;<link linkend="__warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464">productName</link>;
+<anchor xml:id="_gui_8cpp_source_1l00452"/>00452 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;price;
+<anchor xml:id="_gui_8cpp_source_1l00453"/>00453 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;quantity;
+<anchor xml:id="_gui_8cpp_source_1l00454"/>00454 
+<anchor xml:id="_gui_8cpp_source_1l00455"/>00455 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fields&#32;=&#32;line.split(<emphasis role="stringliteral">&quot;,&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00456"/>00456 
+<anchor xml:id="_gui_8cpp_source_1l00457"/>00457 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464">productName</link>&#32;=&#32;fields[0];
+<anchor xml:id="_gui_8cpp_source_1l00458"/>00458 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;price&#32;=&#32;fields[1].toDouble();
+<anchor xml:id="_gui_8cpp_source_1l00459"/>00459 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;quantity&#32;=&#32;fields[2].toInt();
+<anchor xml:id="_gui_8cpp_source_1l00460"/>00460 
+<anchor xml:id="_gui_8cpp_source_1l00461"/>00461 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;statisticList&#32;-&gt;&#32;item(statisticRow,&#32;2)&#32;-&gt;&#32;setText(<link linkend="__warehouse_test_8cpp_1a7491f2d1062b851596b1cef13d791464">productName</link>);
+<anchor xml:id="_gui_8cpp_source_1l00462"/>00462 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;statisticList&#32;-&gt;&#32;item(statisticRow,&#32;3)&#32;-&gt;&#32;setText(QString::number(price));
+<anchor xml:id="_gui_8cpp_source_1l00463"/>00463 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;statisticList&#32;-&gt;&#32;item(statisticRow,&#32;4)&#32;-&gt;&#32;setText(QString::number(quantity));
+<anchor xml:id="_gui_8cpp_source_1l00464"/>00464 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;statisticList&#32;-&gt;&#32;update();
+<anchor xml:id="_gui_8cpp_source_1l00465"/>00465 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;statisticRow++;
+<anchor xml:id="_gui_8cpp_source_1l00466"/>00466 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;line&#32;=&#32;in.readLine();
+<anchor xml:id="_gui_8cpp_source_1l00467"/>00467 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00468"/>00468 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;line&#32;=&#32;in.readLine();
+<anchor xml:id="_gui_8cpp_source_1l00469"/>00469 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;line&#32;=&#32;in.readLine();
+<anchor xml:id="_gui_8cpp_source_1l00470"/>00470 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!line.contains(<emphasis role="stringliteral">&quot;Product&#32;Name,Price,Quantity&quot;</emphasis>))
+<anchor xml:id="_gui_8cpp_source_1l00471"/>00471 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00472"/>00472 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_gui_8cpp_source_1l00473"/>00473 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00474"/>00474 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;line&#32;=&#32;in.readLine();
+<anchor xml:id="_gui_8cpp_source_1l00475"/>00475 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(!line.contains(<emphasis role="stringliteral">&quot;Operational&#32;Costs,Net&#32;Profit&quot;</emphasis>))
+<anchor xml:id="_gui_8cpp_source_1l00476"/>00476 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00477"/>00477 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fields&#32;=&#32;line.split(<emphasis role="stringliteral">&quot;,&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00478"/>00478 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sold&#32;+=&#32;fields[2].toInt();
+<anchor xml:id="_gui_8cpp_source_1l00479"/>00479 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;line&#32;=&#32;in.readLine();
+<anchor xml:id="_gui_8cpp_source_1l00480"/>00480 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00481"/>00481 
+<anchor xml:id="_gui_8cpp_source_1l00482"/>00482 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;line&#32;=&#32;in.readLine();
+<anchor xml:id="_gui_8cpp_source_1l00483"/>00483 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fields&#32;=&#32;line.split(<emphasis role="stringliteral">&quot;,&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00484"/>00484 
+<anchor xml:id="_gui_8cpp_source_1l00485"/>00485 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;costs&#32;=&#32;fields[0].toDouble();
+<anchor xml:id="_gui_8cpp_source_1l00486"/>00486 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;netProfit&#32;=&#32;fields[1].toDouble();
+<anchor xml:id="_gui_8cpp_source_1l00487"/>00487 
+<anchor xml:id="_gui_8cpp_source_1l00488"/>00488 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;row&#32;=&#32;ui&#32;-&gt;&#32;raportList&#32;-&gt;&#32;rowCount();
+<anchor xml:id="_gui_8cpp_source_1l00489"/>00489 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;raportList&#32;-&gt;&#32;insertRow(row);
+<anchor xml:id="_gui_8cpp_source_1l00490"/>00490 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;raportList&#32;-&gt;&#32;setItem(row,&#32;0,&#32;<emphasis role="keyword">new</emphasis>&#32;QTableWidgetItem(QString::number(cycles)));
+<anchor xml:id="_gui_8cpp_source_1l00491"/>00491 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;raportList&#32;-&gt;&#32;setItem(row,&#32;1,&#32;<emphasis role="keyword">new</emphasis>&#32;QTableWidgetItem(QString::number(currentWarehouse)));
+<anchor xml:id="_gui_8cpp_source_1l00492"/>00492 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;raportList&#32;-&gt;&#32;setItem(row,&#32;2,&#32;<emphasis role="keyword">new</emphasis>&#32;QTableWidgetItem(location));
+<anchor xml:id="_gui_8cpp_source_1l00493"/>00493 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;raportList&#32;-&gt;&#32;setItem(row,&#32;3,&#32;<emphasis role="keyword">new</emphasis>&#32;QTableWidgetItem(QString::number(sold)));
+<anchor xml:id="_gui_8cpp_source_1l00494"/>00494 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;raportList&#32;-&gt;&#32;setItem(row,&#32;4,&#32;<emphasis role="keyword">new</emphasis>&#32;QTableWidgetItem(QString::number(capacity)));
+<anchor xml:id="_gui_8cpp_source_1l00495"/>00495 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;raportList&#32;-&gt;&#32;setItem(row,&#32;5,&#32;<emphasis role="keyword">new</emphasis>&#32;QTableWidgetItem(QString::number(costs)));
+<anchor xml:id="_gui_8cpp_source_1l00496"/>00496 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;raportList&#32;-&gt;&#32;setItem(row,&#32;6,&#32;<emphasis role="keyword">new</emphasis>&#32;QTableWidgetItem(QString::number(netProfit)));
+<anchor xml:id="_gui_8cpp_source_1l00497"/>00497 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ui&#32;-&gt;&#32;raportList&#32;-&gt;&#32;update();
+<anchor xml:id="_gui_8cpp_source_1l00498"/>00498 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00499"/>00499 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00500"/>00500 &#32;&#32;&#32;&#32;report.close();
+<anchor xml:id="_gui_8cpp_source_1l00501"/>00501 }
+<anchor xml:id="_gui_8cpp_source_1l00502"/>00502 
+<anchor xml:id="_gui_8cpp_source_1l00506"/>00506 <emphasis role="keywordtype">void</emphasis>&#32;GUI::onSimulationFinished()
+<anchor xml:id="_gui_8cpp_source_1l00507"/>00507 {
+<anchor xml:id="_gui_8cpp_source_1l00508"/>00508 &#32;&#32;&#32;&#32;timer&#32;-&gt;&#32;stop();
+<anchor xml:id="_gui_8cpp_source_1l00509"/>00509 &#32;&#32;&#32;&#32;updateTablesFromCSV();
+<anchor xml:id="_gui_8cpp_source_1l00510"/>00510 
+<anchor xml:id="_gui_8cpp_source_1l00511"/>00511 &#32;&#32;&#32;&#32;QMessageBox::StandardButton&#32;reply;
+<anchor xml:id="_gui_8cpp_source_1l00512"/>00512 &#32;&#32;&#32;&#32;reply&#32;=&#32;QMessageBox::question(<emphasis role="keyword">this</emphasis>,&#32;<emphasis role="stringliteral">&quot;Save&#32;Report&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Do&#32;you&#32;want&#32;to&#32;save&#32;the&#32;report&#32;in&#32;a&#32;location&#32;other&#32;than&#32;the&#32;default&#32;one?&quot;</emphasis>,&#32;QMessageBox::Yes|QMessageBox::No);
+<anchor xml:id="_gui_8cpp_source_1l00513"/>00513 
+<anchor xml:id="_gui_8cpp_source_1l00514"/>00514 &#32;&#32;&#32;&#32;QString&#32;filePath;
+<anchor xml:id="_gui_8cpp_source_1l00515"/>00515 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(reply&#32;==&#32;QMessageBox::Yes)
+<anchor xml:id="_gui_8cpp_source_1l00516"/>00516 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00517"/>00517 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;filePath&#32;=&#32;QFileDialog::getSaveFileName(<emphasis role="keyword">this</emphasis>,&#32;<emphasis role="stringliteral">&quot;Save&#32;Report&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;SimulationReport.csv&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;*.csv&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00518"/>00518 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!filePath.isEmpty())
+<anchor xml:id="_gui_8cpp_source_1l00519"/>00519 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00520"/>00520 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QFile::copy(<emphasis role="stringliteral">&quot;SimulationReport.csv&quot;</emphasis>,&#32;filePath);
+<anchor xml:id="_gui_8cpp_source_1l00521"/>00521 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00522"/>00522 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00523"/>00523 
+<anchor xml:id="_gui_8cpp_source_1l00524"/>00524 &#32;&#32;&#32;&#32;reply&#32;=&#32;QMessageBox::question(<emphasis role="keyword">this</emphasis>,&#32;<emphasis role="stringliteral">&quot;Save&#32;data&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Do&#32;you&#32;want&#32;to&#32;save&#32;data&#32;from&#32;the&#32;table&#32;&apos;Raport&apos;?&quot;</emphasis>,&#32;QMessageBox::Yes|QMessageBox::No);
+<anchor xml:id="_gui_8cpp_source_1l00525"/>00525 
+<anchor xml:id="_gui_8cpp_source_1l00526"/>00526 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(reply&#32;==&#32;QMessageBox::Yes)
+<anchor xml:id="_gui_8cpp_source_1l00527"/>00527 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00528"/>00528 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;filePath&#32;=&#32;QFileDialog::getSaveFileName(<emphasis role="keyword">this</emphasis>,&#32;<emphasis role="stringliteral">&quot;Save&#32;Report&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;GUIReport.csv&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;*.csv&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00529"/>00529 
+<anchor xml:id="_gui_8cpp_source_1l00530"/>00530 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QFile&#32;file(filePath);
+<anchor xml:id="_gui_8cpp_source_1l00531"/>00531 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(file.open(QIODevice::WriteOnly&#32;|&#32;QIODevice::Text))
+<anchor xml:id="_gui_8cpp_source_1l00532"/>00532 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00533"/>00533 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QTextStream&#32;stream(&amp;file);
+<anchor xml:id="_gui_8cpp_source_1l00534"/>00534 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;stream&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Cycle,Warehouse&#32;ID,Location,Sold&#32;Products,Capacity,Operational&#32;Costs,Net&#32;Profit\n&quot;</emphasis>;
+<anchor xml:id="_gui_8cpp_source_1l00535"/>00535 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;row&#32;=&#32;0;&#32;row&#32;&lt;&#32;ui-&gt;raportList-&gt;rowCount();&#32;++row)
+<anchor xml:id="_gui_8cpp_source_1l00536"/>00536 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00537"/>00537 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QStringList&#32;rowData;
+<anchor xml:id="_gui_8cpp_source_1l00538"/>00538 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;column&#32;=&#32;0;&#32;column&#32;&lt;&#32;ui-&gt;raportList-&gt;columnCount();&#32;++column)
+<anchor xml:id="_gui_8cpp_source_1l00539"/>00539 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00540"/>00540 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QTableWidgetItem&#32;*item&#32;=&#32;ui-&gt;raportList-&gt;item(row,&#32;column);
+<anchor xml:id="_gui_8cpp_source_1l00541"/>00541 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(item)
+<anchor xml:id="_gui_8cpp_source_1l00542"/>00542 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00543"/>00543 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rowData&#32;&lt;&lt;&#32;item&#32;-&gt;&#32;text();
+<anchor xml:id="_gui_8cpp_source_1l00544"/>00544 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00545"/>00545 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_gui_8cpp_source_1l00546"/>00546 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00547"/>00547 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rowData&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+<anchor xml:id="_gui_8cpp_source_1l00548"/>00548 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00549"/>00549 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00550"/>00550 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;stream&#32;&lt;&lt;&#32;rowData.join(<emphasis role="stringliteral">&quot;,&quot;</emphasis>)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n&quot;</emphasis>;
+<anchor xml:id="_gui_8cpp_source_1l00551"/>00551 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00552"/>00552 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;file.close();
+<anchor xml:id="_gui_8cpp_source_1l00553"/>00553 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00554"/>00554 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_gui_8cpp_source_1l00555"/>00555 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00556"/>00556 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QMessageBox::critical(<emphasis role="keyword">this</emphasis>,&#32;<emphasis role="stringliteral">&quot;Export&#32;to&#32;CSV&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Cannot&#32;open&#32;file&#32;for&#32;writing.&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00557"/>00557 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00558"/>00558 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00559"/>00559 
+<anchor xml:id="_gui_8cpp_source_1l00560"/>00560 &#32;&#32;&#32;&#32;reply&#32;=&#32;QMessageBox::question(<emphasis role="keyword">this</emphasis>,&#32;<emphasis role="stringliteral">&quot;Save&#32;Settings&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Do&#32;you&#32;want&#32;to&#32;save&#32;yours&#32;settings&#32;in&#32;a&#32;location&#32;other&#32;than&#32;the&#32;default&#32;one?&quot;</emphasis>,&#32;QMessageBox::Yes|QMessageBox::No);
+<anchor xml:id="_gui_8cpp_source_1l00561"/>00561 
+<anchor xml:id="_gui_8cpp_source_1l00562"/>00562 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(reply&#32;==&#32;QMessageBox::Yes)
+<anchor xml:id="_gui_8cpp_source_1l00563"/>00563 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00564"/>00564 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;filePath&#32;=&#32;QFileDialog::getSaveFileName(<emphasis role="keyword">this</emphasis>,&#32;<emphasis role="stringliteral">&quot;Save&#32;Settings&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;settings.csv&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;*.csv&quot;</emphasis>);
+<anchor xml:id="_gui_8cpp_source_1l00565"/>00565 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!filePath.isEmpty())
+<anchor xml:id="_gui_8cpp_source_1l00566"/>00566 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gui_8cpp_source_1l00567"/>00567 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QFile::copy(<emphasis role="stringliteral">&quot;settings.csv&quot;</emphasis>,&#32;filePath);
+<anchor xml:id="_gui_8cpp_source_1l00568"/>00568 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00569"/>00569 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gui_8cpp_source_1l00570"/>00570 }
+</programlisting></section>

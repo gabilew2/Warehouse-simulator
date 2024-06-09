@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="en-US">
+<title>Class List</title>
+Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_class_event">Event</link>
+<para><link linkend="_class_event">Event</link> in the warehouse simulation </para>
+<link linkend="_class_g_u_i">GUI</link>
+<para>Inherits from QMainWindow and represents the main window of the application </para>
+<link linkend="_class_product">Product</link>
+<para><link linkend="_class_product">Product</link> with a name, price, and quantity </para>
+<link linkend="_struct_report_1_1_product_report">Report::ProductReport</link>
+<para>Represents a report for a single product </para>
+<link linkend="_class_report">Report</link>
+<para>Represents a report in the store simulation </para>
+<link linkend="_class_sales_report">SalesReport</link>
+<para>Extends the <link linkend="_class_report">Report</link> class to provide a report specifically for sales </para>
+<link linkend="_class_simulation">Simulation</link>
+<para>Manages the overall department store simulation </para>
+<link linkend="_class_simulation_thread">SimulationThread</link>
+<para>Responsible for running the simulation in a separate thread </para>
+<link linkend="_class_storage">Storage</link>
+<para><link linkend="_class_storage">Storage</link> unit with a certain capacity </para>
+<link linkend="_class_warehouse">Warehouse</link>
+<para><link linkend="_class_warehouse">Warehouse</link> with storage capacity </para>
+<link linkend="_class_warehouse_report">WarehouseReport</link>
+<para>Extends the <link linkend="_class_report">Report</link> class to provide a report specifically for warehouse inventory </para>
+</section>

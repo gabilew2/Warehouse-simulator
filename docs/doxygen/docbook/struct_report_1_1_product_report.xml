@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_report_1_1_product_report" xml:lang="en-US">
+<title>Report::ProductReport Struct Reference</title>
+<indexterm><primary>Report::ProductReport</primary></indexterm>
+<para>
+
+<para>Represents a report for a single product. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Report.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_report_1_1_product_report_1a2ed7f9fdb7c63a739e76ade173d6cdc7">QString</link> <link linkend="_struct_report_1_1_product_report_1a3b1c5f3c0e92b0761fe098a093e45db2">name</link></para>
+
+<para>Name of the product. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_report_1_1_product_report_1a2ed7f9fdb7c63a739e76ade173d6cdc7">double</link> <link linkend="_struct_report_1_1_product_report_1a7dd6e2e624439db443cdbb842ef7651f">price</link></para>
+
+<para>Price of the product. </para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_report_1_1_product_report_1a2ed7f9fdb7c63a739e76ade173d6cdc7">quantity</link></para>
+
+<para>Quantity of the product. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents a report for a single product. </para>
+
+
+
+<para>This structure holds the details of a product for reporting purposes, including its name, price, and quantity. </para>
+<para>
+Definition at line <link linkend="__report_8h_source_1l00031">31</link> of file <link linkend="__report_8h_source">Report.h</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_report_1_1_product_report_1a3b1c5f3c0e92b0761fe098a093e45db2"/><section>
+    <title>name</title>
+<indexterm><primary>name</primary><secondary>Report::ProductReport</secondary></indexterm>
+<indexterm><primary>Report::ProductReport</primary><secondary>name</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_report_1_1_product_report_1a2ed7f9fdb7c63a739e76ade173d6cdc7">QString</link> Report::ProductReport::name</computeroutput></para><para>
+
+<para>Name of the product. </para>
+</para>
+<para>
+Definition at line <link linkend="__report_8h_source_1l00033">33</link> of file <link linkend="__report_8h_source">Report.h</link>.</para>
+</section>
+<anchor xml:id="_struct_report_1_1_product_report_1a7dd6e2e624439db443cdbb842ef7651f"/><section>
+    <title>price</title>
+<indexterm><primary>price</primary><secondary>Report::ProductReport</secondary></indexterm>
+<indexterm><primary>Report::ProductReport</primary><secondary>price</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_report_1_1_product_report_1a2ed7f9fdb7c63a739e76ade173d6cdc7">double</link> Report::ProductReport::price</computeroutput></para><para>
+
+<para>Price of the product. </para>
+</para>
+<para>
+Definition at line <link linkend="__report_8h_source_1l00034">34</link> of file <link linkend="__report_8h_source">Report.h</link>.</para>
+</section>
+<anchor xml:id="_struct_report_1_1_product_report_1a2ed7f9fdb7c63a739e76ade173d6cdc7"/><section>
+    <title>quantity</title>
+<indexterm><primary>quantity</primary><secondary>Report::ProductReport</secondary></indexterm>
+<indexterm><primary>Report::ProductReport</primary><secondary>quantity</secondary></indexterm>
+<para><computeroutput>int Report::ProductReport::quantity</computeroutput></para><para>
+
+<para>Quantity of the product. </para>
+</para>
+<para>
+Definition at line <link linkend="__report_8h_source_1l00035">35</link> of file <link linkend="__report_8h_source">Report.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+src/Report/<link linkend="__report_8h">Report.h</link></section>
+</section>

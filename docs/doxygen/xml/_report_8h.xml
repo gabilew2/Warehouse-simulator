@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_report_8h" kind="file" language="C++">
+    <compoundname>Report.h</compoundname>
+    <includes local="no">QString</includes>
+    <includedby refid="_report_8cpp" local="yes">src/Report/Report.cpp</includedby>
+    <includedby refid="_sales_report_8h" local="yes">src/SalesReport/SalesReport.h</includedby>
+    <includedby refid="_warehouse_report_8h" local="no">src/WarehouseReport/WarehouseReport.h</includedby>
+    <includedby refid="_report_test_8cpp" local="yes">test/Report/ReportTest.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/Report/Report.h</label>
+        <link refid="_report_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QString</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/Report/Report.cpp</label>
+        <link refid="_report_8cpp"/>
+      </node>
+      <node id="1">
+        <label>src/Report/Report.h</label>
+        <link refid="_report_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/SalesReport/SalesReport.cpp</label>
+        <link refid="_sales_report_8cpp"/>
+      </node>
+      <node id="3">
+        <label>src/SalesReport/SalesReport.h</label>
+        <link refid="_sales_report_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>src/Simulation/Simulation.cpp</label>
+        <link refid="_simulation_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/Simulation/Simulation.h</label>
+        <link refid="_simulation_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>src/WarehouseReport/WarehouseReport.cpp</label>
+        <link refid="_warehouse_report_8cpp"/>
+      </node>
+      <node id="12">
+        <label>src/WarehouseReport/WarehouseReport.h</label>
+        <link refid="_warehouse_report_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>src/gui/gui.cpp</label>
+        <link refid="gui_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/gui/gui.h</label>
+        <link refid="gui_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>src/main.cpp</label>
+        <link refid="src_2main_8cpp"/>
+      </node>
+      <node id="15">
+        <label>test/Report/ReportTest.cpp</label>
+        <link refid="_report_test_8cpp"/>
+      </node>
+      <node id="11">
+        <label>test/SalesReport/SalesReportTest.cpp</label>
+        <link refid="_sales_report_test_8cpp"/>
+      </node>
+      <node id="10">
+        <label>test/Simulation/SimulationTest.cpp</label>
+        <link refid="_simulation_test_8cpp"/>
+      </node>
+      <node id="14">
+        <label>test/WarehouseReport/WarehouseReportTest.cpp</label>
+        <link refid="_warehouse_report_test_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_report" prot="public">Report</innerclass>
+    <innerclass refid="struct_report_1_1_product_report" prot="public">Report::ProductReport</innerclass>
+    <briefdescription>
+<para>Header file for the <ref refid="class_report" kindref="compound">Report</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>REPORT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REPORT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QString&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_report" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_report" kindref="compound">Report</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>operationalCosts;<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>netProfit;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="struct_report_1_1_product_report" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_report_1_1_product_report" kindref="compound">ProductReport</ref></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33" refid="struct_report_1_1_product_report_1a3b1c5f3c0e92b0761fe098a093e45db2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_report_1_1_product_report_1a2ed7f9fdb7c63a739e76ade173d6cdc7" kindref="member">QString</ref><sp/><ref refid="struct_report_1_1_product_report_1a3b1c5f3c0e92b0761fe098a093e45db2" kindref="member">name</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34" refid="struct_report_1_1_product_report_1a7dd6e2e624439db443cdbb842ef7651f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct_report_1_1_product_report_1a7dd6e2e624439db443cdbb842ef7651f" kindref="member">price</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35" refid="struct_report_1_1_product_report_1a2ed7f9fdb7c63a739e76ade173d6cdc7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_report_1_1_product_report_1a2ed7f9fdb7c63a739e76ade173d6cdc7" kindref="member">quantity</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_report_1a36e8866b9ef8fefbe4491f15d96ed503" kindref="member">Report</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>operationalCosts,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>netProfit);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_report_1aab56d11c88e240affbc4b147474d4363" kindref="member">generateReport</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_report_1a7f5c6f19874a36e59c63051ab5b60400" kindref="member">setOperationalCosts</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>costs);<sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_report_1a4fe97f7f77d99b1e925c6024ed7c3913" kindref="member">setNetProfit</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>profit);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Getters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_report_1a0280b260884973ffbb4ca95c438f30a6" kindref="member">getOperationalCosts</ref>();<sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_report_1af98f7f1cb07d06b29c081974cfc9a830" kindref="member">getNetProfit</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>REPORT_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/Report/Report.h"/>
+  </compounddef>
+</doxygen>

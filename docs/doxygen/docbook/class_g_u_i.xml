@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_u_i" xml:lang="en-US">
+<title>GUI Class Reference</title>
+<indexterm><primary>GUI</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_g_u_i">GUI</link> class inherits from QMainWindow and represents the main window of the application. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;gui.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for GUI:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_u_i.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_g_u_i_1aa73b900295e12a915b80f34c418f7653">GUI</link> (<link linkend="_gui_8h_1a41dc4eccf37447afba3e984031346842">GUIElement</link> *parent=nullptr)</para>
+
+<para>Constructor for the <link linkend="_class_g_u_i">GUI</link> class. </para>
+</listitem>
+            <listitem><para><link linkend="_class_g_u_i_1ac9cae2328dcb5d83bdfaeca49a2eb695">~GUI</link> ()</para>
+
+<para>Destructor for the <link linkend="_class_g_u_i">GUI</link> class. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_u_i_1ae63efaa6d38814299c42540a5d4ea00b">render</link> ()</para>
+
+<para>Renders the graphical user interface elements. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_g_u_i">GUI</link> class inherits from QMainWindow and represents the main window of the application. </para>
+
+
+
+<para>This class manages the user interface for the application. It sets up the main window and its associated widgets, and handles user interactions. </para>
+<para>
+Definition at line <link linkend="_gui_8h_source_1l00073">73</link> of file <link linkend="_gui_8h_source">gui.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_g_u_i_1aa73b900295e12a915b80f34c418f7653"/><section>
+    <title>GUI()</title>
+<indexterm><primary>GUI</primary><secondary>GUI</secondary></indexterm>
+<indexterm><primary>GUI</primary><secondary>GUI</secondary></indexterm>
+<para><computeroutput>GUI::GUI (<link linkend="_gui_8h_1a41dc4eccf37447afba3e984031346842">GUIElement</link> * parent = <computeroutput>nullptr</computeroutput>
+)<computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>Constructor for the <link linkend="_class_g_u_i">GUI</link> class. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>parent</entry><entry>
+<para>Pointer to the parent widget, if any. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_gui_8cpp_source_1l00014">14</link> of file <link linkend="_gui_8cpp_source">gui.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_u_i_1ac9cae2328dcb5d83bdfaeca49a2eb695"/><section>
+    <title>~GUI()</title>
+<indexterm><primary>~GUI</primary><secondary>GUI</secondary></indexterm>
+<indexterm><primary>GUI</primary><secondary>~GUI</secondary></indexterm>
+<para><computeroutput>GUI::~GUI ( )</computeroutput></para><para>
+
+<para>Destructor for the <link linkend="_class_g_u_i">GUI</link> class. </para>
+</para>
+<para>
+Definition at line <link linkend="_gui_8cpp_source_1l00025">25</link> of file <link linkend="_gui_8cpp_source">gui.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_u_i_1ae63efaa6d38814299c42540a5d4ea00b"/><section>
+    <title>render()</title>
+<indexterm><primary>render</primary><secondary>GUI</secondary></indexterm>
+<indexterm><primary>GUI</primary><secondary>render</secondary></indexterm>
+<para><computeroutput>void GUI::render ( )</computeroutput></para><para>
+
+<para>Renders the graphical user interface elements. </para>
+</para>
+
+<para>This function is responsible for rendering the <link linkend="_class_g_u_i">GUI</link> elements on the screen. It ensures that all widgets (buttons, labels, etc.) are displayed correctly based on their current state and properties. </para>
+<para>
+Definition at line <link linkend="_gui_8cpp_source_1l00033">33</link> of file <link linkend="_gui_8cpp_source">gui.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/gui/<link linkend="_gui_8h">gui.h</link>src/gui/<link linkend="_gui_8cpp">gui.cpp</link></section>
+</section>

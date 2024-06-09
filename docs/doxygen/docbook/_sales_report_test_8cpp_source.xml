@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__sales_report_test_8cpp_source" xml:lang="en-US">
+<title>SalesReportTest.cpp</title>
+<indexterm><primary>test/SalesReport/SalesReportTest.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__sales_report_test_8cpp_source_1l00001"/>00001 
+<anchor xml:id="__sales_report_test_8cpp_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&lt;gtest/gtest.h&gt;</emphasis>
+<anchor xml:id="__sales_report_test_8cpp_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__sales_report_8h">SalesReport/SalesReport.h</link>&quot;</emphasis>
+<anchor xml:id="__sales_report_test_8cpp_source_1l00008"/>00008 <emphasis role="preprocessor">#include&#32;&lt;QDateTime&gt;</emphasis>
+<anchor xml:id="__sales_report_test_8cpp_source_1l00009"/>00009 
+<anchor xml:id="__sales_report_test_8cpp_source_1l00013"/><link linkend="__sales_report_test_8cpp_1ad19cf150662059de206d5fd6d5d8270e">00013</link> <link linkend="__sales_report_test_8cpp_1ad19cf150662059de206d5fd6d5d8270e">TEST</link>(SalesReportTest,&#32;itLives)
+<anchor xml:id="__sales_report_test_8cpp_source_1l00014"/>00014 {
+<anchor xml:id="__sales_report_test_8cpp_source_1l00015"/>00015 &#32;&#32;&#32;&#32;QDateTime&#32;time&#32;=&#32;QDateTime::currentDateTime();
+<anchor xml:id="__sales_report_test_8cpp_source_1l00016"/>00016 &#32;&#32;&#32;&#32;QList&lt;Report::ProductReport&gt;&#32;productList;
+<anchor xml:id="__sales_report_test_8cpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;operationalCosts&#32;=&#32;5000.0;
+<anchor xml:id="__sales_report_test_8cpp_source_1l00018"/>00018 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;netProfit&#32;=&#32;10000.0;
+<anchor xml:id="__sales_report_test_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;salesId&#32;=&#32;1;
+<anchor xml:id="__sales_report_test_8cpp_source_1l00020"/>00020 
+<anchor xml:id="__sales_report_test_8cpp_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<link linkend="_class_sales_report">SalesReport</link>&#32;salesReport(salesId,&#32;time,&#32;productList,&#32;operationalCosts,&#32;netProfit);
+<anchor xml:id="__sales_report_test_8cpp_source_1l00022"/>00022 }
+<anchor xml:id="__sales_report_test_8cpp_source_1l00023"/>00023 
+<anchor xml:id="__sales_report_test_8cpp_source_1l00027"/><link linkend="__sales_report_test_8cpp_1a817bd67323dee9caf6ba8cd143ac789d">00027</link> <link linkend="__sales_report_test_8cpp_1ad19cf150662059de206d5fd6d5d8270e">TEST</link>(SalesReportTest,&#32;generateReportShouldReturnCorrectValue)
+<anchor xml:id="__sales_report_test_8cpp_source_1l00028"/>00028 {
+<anchor xml:id="__sales_report_test_8cpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;QDateTime&#32;time&#32;=&#32;QDateTime::currentDateTime();
+<anchor xml:id="__sales_report_test_8cpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;QList&lt;Report::ProductReport&gt;&#32;productList&#32;=
+<anchor xml:id="__sales_report_test_8cpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__sales_report_test_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="stringliteral">&quot;Product1&quot;</emphasis>,&#32;10.0,&#32;5},
+<anchor xml:id="__sales_report_test_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="stringliteral">&quot;Product2&quot;</emphasis>,&#32;20.0,&#32;3}
+<anchor xml:id="__sales_report_test_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+<anchor xml:id="__sales_report_test_8cpp_source_1l00035"/>00035 
+<anchor xml:id="__sales_report_test_8cpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;operationalCosts&#32;=&#32;5000.0;
+<anchor xml:id="__sales_report_test_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;netProfit&#32;=&#32;10000.0;
+<anchor xml:id="__sales_report_test_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;salesId&#32;=&#32;1;
+<anchor xml:id="__sales_report_test_8cpp_source_1l00039"/>00039 
+<anchor xml:id="__sales_report_test_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<link linkend="_class_sales_report">SalesReport</link>&#32;report(salesId,&#32;time,&#32;productList,&#32;operationalCosts,&#32;netProfit);
+<anchor xml:id="__sales_report_test_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;QString&#32;generatedCSV&#32;=&#32;report.<link linkend="_class_sales_report_1adbcc82fb8fa70e87cd4f12bf4f3537ae">generateReport</link>();
+<anchor xml:id="__sales_report_test_8cpp_source_1l00042"/>00042 
+<anchor xml:id="__sales_report_test_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;QString&#32;expectedCSVStart&#32;=&#32;QString(<emphasis role="stringliteral">&quot;Sales&#32;ID,Time\n%1,%2\n&quot;</emphasis>).arg(salesId).arg(time.toString(<emphasis role="stringliteral">&quot;yyyy-MM-dd&#32;hh:mm:ss&quot;</emphasis>));
+<anchor xml:id="__sales_report_test_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;ASSERT_TRUE(generatedCSV.startsWith(expectedCSVStart));
+<anchor xml:id="__sales_report_test_8cpp_source_1l00045"/>00045 }
+</programlisting></section>

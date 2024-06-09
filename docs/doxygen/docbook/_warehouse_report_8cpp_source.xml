@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__warehouse_report_8cpp_source" xml:lang="en-US">
+<title>WarehouseReport.cpp</title>
+<indexterm><primary>src/WarehouseReport/WarehouseReport.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__warehouse_report_8cpp_source_1l00001"/>00001 
+<anchor xml:id="__warehouse_report_8cpp_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__warehouse_report_8h">WarehouseReport.h</link>&quot;</emphasis>
+<anchor xml:id="__warehouse_report_8cpp_source_1l00007"/>00007 
+<anchor xml:id="__warehouse_report_8cpp_source_1l00011"/><link linkend="_class_warehouse_report_1abf15b4db1b71e7a1d2f91008fca126b7">00011</link> <link linkend="_class_warehouse_report_1abf15b4db1b71e7a1d2f91008fca126b7">WarehouseReport::WarehouseReport</link>(<emphasis role="keywordtype">int</emphasis>&#32;warehouseId,&#32;<emphasis role="keywordtype">double</emphasis>&#32;capacity,&#32;QList&lt;ProductReport&gt;&#32;productList,&#32;<emphasis role="keywordtype">double</emphasis>&#32;operationalCosts,&#32;<emphasis role="keywordtype">double</emphasis>&#32;netProfit)&#32;:&#32;<link linkend="_class_report">Report</link>(operationalCosts,&#32;netProfit)
+<anchor xml:id="__warehouse_report_8cpp_source_1l00012"/>00012 {
+<anchor xml:id="__warehouse_report_8cpp_source_1l00013"/>00013 &#32;&#32;&#32;&#32;<emphasis role="keyword">this</emphasis>&#32;-&gt;&#32;warehouseId&#32;=&#32;warehouseId;
+<anchor xml:id="__warehouse_report_8cpp_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<emphasis role="keyword">this</emphasis>&#32;-&gt;&#32;capacity&#32;=&#32;capacity;
+<anchor xml:id="__warehouse_report_8cpp_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<emphasis role="keyword">this</emphasis>&#32;-&gt;&#32;productList&#32;=&#32;productList;
+<anchor xml:id="__warehouse_report_8cpp_source_1l00016"/>00016 }
+<anchor xml:id="__warehouse_report_8cpp_source_1l00017"/>00017 
+<anchor xml:id="__warehouse_report_8cpp_source_1l00021"/><link linkend="_class_warehouse_report_1a3a4c6655eb2584b3d842d0138b6e6ac9">00021</link> QString&#32;<link linkend="_class_warehouse_report_1a3a4c6655eb2584b3d842d0138b6e6ac9">WarehouseReport::generateReport</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="__warehouse_report_8cpp_source_1l00022"/>00022 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="__warehouse_report_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;QString&#32;report;
+<anchor xml:id="__warehouse_report_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;report&#32;+=&#32;QString(<emphasis role="stringliteral">&quot;Warehouse&#32;ID,Capacity\n%1,%2\n&quot;</emphasis>)
+<anchor xml:id="__warehouse_report_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.arg(warehouseId)
+<anchor xml:id="__warehouse_report_8cpp_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.arg(capacity);
+<anchor xml:id="__warehouse_report_8cpp_source_1l00027"/>00027 
+<anchor xml:id="__warehouse_report_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;report&#32;+=&#32;<emphasis role="stringliteral">&quot;Product&#32;Name,Price,Quantity\n&quot;</emphasis>;
+<anchor xml:id="__warehouse_report_8cpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_report_1_1_product_report">ProductReport</link>&amp;&#32;product&#32;:&#32;productList)
+<anchor xml:id="__warehouse_report_8cpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__warehouse_report_8cpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;report&#32;+=&#32;QString(<emphasis role="stringliteral">&quot;%1,%2,%3\n&quot;</emphasis>)
+<anchor xml:id="__warehouse_report_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.arg(product.name)
+<anchor xml:id="__warehouse_report_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.arg(product.price)
+<anchor xml:id="__warehouse_report_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.arg(product.quantity);
+<anchor xml:id="__warehouse_report_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__warehouse_report_8cpp_source_1l00036"/>00036 
+<anchor xml:id="__warehouse_report_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;report;
+<anchor xml:id="__warehouse_report_8cpp_source_1l00038"/>00038 }
+</programlisting></section>

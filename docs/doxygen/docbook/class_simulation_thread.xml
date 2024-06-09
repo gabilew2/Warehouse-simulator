@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_simulation_thread" xml:lang="en-US">
+<title>SimulationThread Class Reference</title>
+<indexterm><primary>SimulationThread</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_simulation_thread">SimulationThread</link> class is responsible for running the simulation in a separate thread. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;gui.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SimulationThread:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_simulation_thread.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Signals    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_simulation_thread_1a8ddb2d67e1c9e0f2e0602b015a52b648">simulationFinished</link> ()</para>
+
+<para>Signal emitted when the simulation has finished running. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_simulation_thread_1ac13a782fcf9163b7a6c3392e398d66b9">run</link> () override</para>
+
+<para>Executes the simulation in a separate thread. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_simulation_thread">SimulationThread</link> class is responsible for running the simulation in a separate thread. </para>
+
+
+
+<para>This class inherits from QThread and overrides the run method to execute the simulation. It emits a signal upon completion of the simulation to notify other components of its completion. </para>
+<para>
+Definition at line <link linkend="_gui_8h_source_1l00038">38</link> of file <link linkend="_gui_8h_source">gui.h</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_simulation_thread_1ac13a782fcf9163b7a6c3392e398d66b9"/><section>
+    <title>run()</title>
+<indexterm><primary>run</primary><secondary>SimulationThread</secondary></indexterm>
+<indexterm><primary>SimulationThread</primary><secondary>run</secondary></indexterm>
+<para><computeroutput>void SimulationThread::run ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[override]</computeroutput></computeroutput></para><para>
+
+<para>Executes the simulation in a separate thread. </para>
+</para>
+
+<para>This function overrides the run method from QThread and is called when the thread starts. It initializes a <link linkend="_class_simulation">Simulation</link> object and runs the simulation. Upon completion, it emits the simulationFinished signal. </para>
+<para>
+Definition at line <link linkend="_gui_8h_source_1l00049">49</link> of file <link linkend="_gui_8h_source">gui.h</link>.</para>
+</section>
+<anchor xml:id="_class_simulation_thread_1a8ddb2d67e1c9e0f2e0602b015a52b648"/><section>
+    <title>simulationFinished</title>
+<indexterm><primary>simulationFinished</primary><secondary>SimulationThread</secondary></indexterm>
+<indexterm><primary>SimulationThread</primary><secondary>simulationFinished</secondary></indexterm>
+<para><computeroutput>void SimulationThread::simulationFinished ( )<computeroutput>[signal]</computeroutput></computeroutput></para><para>
+
+<para>Signal emitted when the simulation has finished running. </para>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/gui/<link linkend="_gui_8h">gui.h</link></section>
+</section>

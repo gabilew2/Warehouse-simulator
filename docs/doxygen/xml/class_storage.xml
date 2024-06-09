@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_storage" kind="class" language="C++" prot="public">
+    <compoundname>Storage</compoundname>
+    <derivedcompoundref refid="class_warehouse" prot="private" virt="non-virtual">Warehouse</derivedcompoundref>
+    <includes refid="_storage_8h" local="no">Storage.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_storage_1a32a3a3044e508911dae197650dcf813e" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Storage::capacity</definition>
+        <argsstring></argsstring>
+        <name>capacity</name>
+        <qualifiedname>Storage::capacity</qualifiedname>
+        <briefdescription>
+<para><ref refid="class_storage" kindref="compound">Storage</ref> fill level. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Storage/Storage.h" line="22" column="9" bodyfile="src/Storage/Storage.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_storage_1aa1694a20f74b18f46d68eb95d6d3f228" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Storage::Storage</definition>
+        <argsstring>(int capacity)</argsstring>
+        <name>Storage</name>
+        <qualifiedname>Storage::Storage</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>capacity</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_storage" kindref="compound">Storage</ref> object with a specified capacity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>capacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial capacity of the storage. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Storage/Storage.h" line="29" column="5" bodyfile="src/Storage/Storage.cpp" bodystart="11" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_1a21a267ec9e43c6147c56e56a347d5784" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_storage_8h_1aa3ad3663894c15a6c47a41a02d64e86f" kindref="member">storageStatus</ref></type>
+        <definition>storageStatus Storage::checkCapacity</definition>
+        <argsstring>(int totalCapacity) const</argsstring>
+        <name>checkCapacity</name>
+        <qualifiedname>Storage::checkCapacity</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>totalCapacity</declname>
+        </param>
+        <briefdescription>
+<para>Check the current capacity status of the storage. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>totalCapacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum capacity of the storage. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>storageStatus The status of the storage: EMPTY, AVAILABLE, or FULLY. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Storage/Storage.h" line="37" column="19" bodyfile="src/Storage/Storage.cpp" bodystart="19" bodyend="33"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_storage" kindref="compound">Storage</ref> class represents a storage unit with a certain capacity. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class provides a method to check the current status of the storage based on its capacity. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Storage</label>
+        <link refid="class_storage"/>
+      </node>
+      <node id="2">
+        <label>Warehouse</label>
+        <link refid="class_warehouse"/>
+        <childnode refid="1" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="src/Storage/Storage.h" line="19" column="1" bodyfile="src/Storage/Storage.h" bodystart="20" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_storage_1a32a3a3044e508911dae197650dcf813e" prot="protected" virt="non-virtual"><scope>Storage</scope><name>capacity</name></member>
+      <member refid="class_storage_1a21a267ec9e43c6147c56e56a347d5784" prot="public" virt="non-virtual"><scope>Storage</scope><name>checkCapacity</name></member>
+      <member refid="class_storage_1aa1694a20f74b18f46d68eb95d6d3f228" prot="public" virt="non-virtual"><scope>Storage</scope><name>Storage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_simulation_thread" kind="class" language="C++" prot="public">
+    <compoundname>SimulationThread</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QThread</basecompoundref>
+    <includes refid="gui_8h" local="no">gui.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_simulation_thread_1ac13a782fcf9163b7a6c3392e398d66b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SimulationThread::run</definition>
+        <argsstring>() override</argsstring>
+        <name>run</name>
+        <qualifiedname>SimulationThread::run</qualifiedname>
+        <briefdescription>
+<para>Executes the simulation in a separate thread. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function overrides the run method from QThread and is called when the thread starts. It initializes a <ref refid="class_simulation" kindref="compound">Simulation</ref> object and runs the simulation. Upon completion, it emits the simulationFinished signal. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="49" column="10" bodyfile="src/gui/gui.h" bodystart="49" bodyend="54"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="signal">
+      <memberdef kind="signal" id="class_simulation_thread_1a8ddb2d67e1c9e0f2e0602b015a52b648" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SimulationThread::simulationFinished</definition>
+        <argsstring>()</argsstring>
+        <name>simulationFinished</name>
+        <qualifiedname>SimulationThread::simulationFinished</qualifiedname>
+        <briefdescription>
+<para>Signal emitted when the simulation has finished running. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/gui.h" line="59" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_simulation_thread" kindref="compound">SimulationThread</ref> class is responsible for running the simulation in a separate thread. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class inherits from QThread and overrides the run method to execute the simulation. It emits a signal upon completion of the simulation to notify other components of its completion. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>QThread</label>
+      </node>
+      <node id="1">
+        <label>SimulationThread</label>
+        <link refid="class_simulation_thread"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>QThread</label>
+      </node>
+      <node id="1">
+        <label>SimulationThread</label>
+        <link refid="class_simulation_thread"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/gui/gui.h" line="38" column="1" bodyfile="src/gui/gui.h" bodystart="39" bodyend="60"/>
+    <listofallmembers>
+      <member refid="class_simulation_thread_1ac13a782fcf9163b7a6c3392e398d66b9" prot="public" virt="non-virtual"><scope>SimulationThread</scope><name>run</name></member>
+      <member refid="class_simulation_thread_1a8ddb2d67e1c9e0f2e0602b015a52b648" prot="public" virt="non-virtual"><scope>SimulationThread</scope><name>simulationFinished</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

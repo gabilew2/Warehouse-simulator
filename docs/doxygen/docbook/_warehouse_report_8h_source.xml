@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__warehouse_report_8h_source" xml:lang="en-US">
+<title>WarehouseReport.h</title>
+<indexterm><primary>src/WarehouseReport/WarehouseReport.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__warehouse_report_8h_source_1l00001"/>00001 
+<anchor xml:id="__warehouse_report_8h_source_1l00006"/>00006 <emphasis role="preprocessor">#ifndef&#32;WAREHOUSEREPORT_H</emphasis>
+<anchor xml:id="__warehouse_report_8h_source_1l00007"/>00007 <emphasis role="preprocessor">#define&#32;WAREHOUSEREPORT_H</emphasis>
+<anchor xml:id="__warehouse_report_8h_source_1l00008"/>00008 
+<anchor xml:id="__warehouse_report_8h_source_1l00009"/>00009 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="__report_8h">Report/Report.h</link>&gt;</emphasis>
+<anchor xml:id="__warehouse_report_8h_source_1l00010"/>00010 <emphasis role="preprocessor">#include&#32;&lt;QList&gt;</emphasis>
+<anchor xml:id="__warehouse_report_8h_source_1l00011"/>00011 
+<anchor xml:id="__warehouse_report_8h_source_1l00019"/><link linkend="_class_warehouse_report">00019</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_warehouse_report">WarehouseReport</link>&#32;:&#32;<link linkend="_class_report">Report</link>
+<anchor xml:id="__warehouse_report_8h_source_1l00020"/>00020 {
+<anchor xml:id="__warehouse_report_8h_source_1l00021"/>00021 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="__warehouse_report_8h_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;warehouseId;&#32;
+<anchor xml:id="__warehouse_report_8h_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;capacity;&#32;
+<anchor xml:id="__warehouse_report_8h_source_1l00024"/>00024 &#32;&#32;&#32;&#32;QList&lt;ProductReport&gt;&#32;productList;&#32;
+<anchor xml:id="__warehouse_report_8h_source_1l00025"/>00025 
+<anchor xml:id="__warehouse_report_8h_source_1l00026"/>00026 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__warehouse_report_8h_source_1l00036"/>00036 &#32;&#32;&#32;&#32;<link linkend="_class_warehouse_report_1abf15b4db1b71e7a1d2f91008fca126b7">WarehouseReport</link>(<emphasis role="keywordtype">int</emphasis>&#32;warehouseId,&#32;<emphasis role="keywordtype">double</emphasis>&#32;capacity,&#32;QList&lt;ProductReport&gt;&#32;productList,&#32;<emphasis role="keywordtype">double</emphasis>&#32;operationalCosts,&#32;<emphasis role="keywordtype">double</emphasis>&#32;netProfit);
+<anchor xml:id="__warehouse_report_8h_source_1l00037"/>00037 
+<anchor xml:id="__warehouse_report_8h_source_1l00042"/>00042 &#32;&#32;&#32;&#32;QString&#32;<link linkend="_class_warehouse_report_1a3a4c6655eb2584b3d842d0138b6e6ac9">generateReport</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="__warehouse_report_8h_source_1l00043"/>00043 };
+<anchor xml:id="__warehouse_report_8h_source_1l00044"/>00044 
+<anchor xml:id="__warehouse_report_8h_source_1l00045"/>00045 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

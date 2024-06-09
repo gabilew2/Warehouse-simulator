@@ -1,0 +1,41 @@
+\doxysection{Report.\+h}
+\hypertarget{_report_8h_source}{}\label{_report_8h_source}\index{src/Report/Report.h@{src/Report/Report.h}}
+\mbox{\hyperlink{_report_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ REPORT\_H}}
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00007}00007\ \textcolor{preprocessor}{\#define\ REPORT\_H}}
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00017}\mbox{\hyperlink{class_report}{00017}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_report}{Report}}}
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00018}00018\ \{}
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00019}00019\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ operationalCosts;\ }
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ netProfit;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00023}00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00031}\mbox{\hyperlink{struct_report_1_1_product_report}{00031}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_report_1_1_product_report}{ProductReport}}}
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00032}00032\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00033}\mbox{\hyperlink{struct_report_1_1_product_report_a3b1c5f3c0e92b0761fe098a093e45db2}{00033}}\ \ \ \ \ \ \ \ \ QString\ \mbox{\hyperlink{struct_report_1_1_product_report_a3b1c5f3c0e92b0761fe098a093e45db2}{name}};\ \ \ }
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00034}\mbox{\hyperlink{struct_report_1_1_product_report_a7dd6e2e624439db443cdbb842ef7651f}{00034}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_report_1_1_product_report_a7dd6e2e624439db443cdbb842ef7651f}{price}};\ \ \ }
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00035}\mbox{\hyperlink{struct_report_1_1_product_report_a2ed7f9fdb7c63a739e76ade173d6cdc7}{00035}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_report_1_1_product_report_a2ed7f9fdb7c63a739e76ade173d6cdc7}{quantity}};\ \ \ }
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00036}00036\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{class_report_a36e8866b9ef8fefbe4491f15d96ed503}{Report}}(\textcolor{keywordtype}{double}\ operationalCosts,\ \textcolor{keywordtype}{double}\ netProfit);}
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00052}00052\ \ \ \ \ QString\ \mbox{\hyperlink{class_report_aab56d11c88e240affbc4b147474d4363}{generateReport}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00054}00054\ \ \ \ \ \textcolor{comment}{//\ Setters}}
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00055}00055\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_report_a7f5c6f19874a36e59c63051ab5b60400}{setOperationalCosts}}(\textcolor{keywordtype}{double}\ costs);\ }
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00056}00056\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_report_a4fe97f7f77d99b1e925c6024ed7c3913}{setNetProfit}}(\textcolor{keywordtype}{double}\ profit);\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00058}00058\ \ \ \ \ \textcolor{comment}{//\ Getters}}
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00059}00059\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_report_a0280b260884973ffbb4ca95c438f30a6}{getOperationalCosts}}();\ }
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00060}00060\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_report_af98f7f1cb07d06b29c081974cfc9a830}{getNetProfit}}();\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00061}00061\ \};}
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_report_8h_source_l00063}00063\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ REPORT\_H}}
+
+\end{DoxyCode}

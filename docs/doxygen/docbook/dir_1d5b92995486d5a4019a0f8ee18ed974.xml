@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_1d5b92995486d5a4019a0f8ee18ed974" xml:lang="en-US">
+<title>src/SalesReport Directory Reference</title>
+<indexterm><primary>src/SalesReport Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__sales_report_8cpp">SalesReport.cpp</link></para>
+
+<para>Source file for the <link linkend="_class_sales_report">SalesReport</link> class. </para>
+</listitem>
+            <listitem><para>file <link linkend="__sales_report_8h">SalesReport.h</link></para>
+
+<para>Header file for the <link linkend="_class_sales_report">SalesReport</link> class. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

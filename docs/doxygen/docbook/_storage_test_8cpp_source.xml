@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__storage_test_8cpp_source" xml:lang="en-US">
+<title>StorageTest.cpp</title>
+<indexterm><primary>test/Storage/StorageTest.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__storage_test_8cpp_source_1l00001"/>00001 
+<anchor xml:id="__storage_test_8cpp_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&lt;gtest/gtest.h&gt;</emphasis>
+<anchor xml:id="__storage_test_8cpp_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__storage_8h">Storage/Storage.h</link>&quot;</emphasis>
+<anchor xml:id="__storage_test_8cpp_source_1l00008"/>00008 
+<anchor xml:id="__storage_test_8cpp_source_1l00012"/><link linkend="__storage_test_8cpp_1a1b22fe9aeb085abcac57c377738e5875">00012</link> <link linkend="__storage_test_8cpp_1a1b22fe9aeb085abcac57c377738e5875">TEST</link>(StorageTest,&#32;itLives)
+<anchor xml:id="__storage_test_8cpp_source_1l00013"/>00013 {
+<anchor xml:id="__storage_test_8cpp_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<link linkend="_class_storage">Storage</link>(0);
+<anchor xml:id="__storage_test_8cpp_source_1l00015"/>00015 }
+<anchor xml:id="__storage_test_8cpp_source_1l00016"/>00016 
+<anchor xml:id="__storage_test_8cpp_source_1l00020"/><link linkend="__storage_test_8cpp_1ade26c6ad971a84351528a16738b056a6">00020</link> <link linkend="__storage_test_8cpp_1a1b22fe9aeb085abcac57c377738e5875">TEST</link>(StorageTest,&#32;checkCapacityShouldReturnEmpty)
+<anchor xml:id="__storage_test_8cpp_source_1l00021"/>00021 {
+<anchor xml:id="__storage_test_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<link linkend="_class_storage">Storage</link>&#32;storage(0);
+<anchor xml:id="__storage_test_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;EXPECT_EQ(storage.<link linkend="_class_storage_1a21a267ec9e43c6147c56e56a347d5784">checkCapacity</link>(100),&#32;<link linkend="__storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa2f0d18fc0d0fa4a6cd92dc328501874d">EMPTY</link>);
+<anchor xml:id="__storage_test_8cpp_source_1l00024"/>00024 }
+<anchor xml:id="__storage_test_8cpp_source_1l00025"/>00025 
+<anchor xml:id="__storage_test_8cpp_source_1l00029"/><link linkend="__storage_test_8cpp_1aad456949101b5328e0beaa3b0d59be77">00029</link> <link linkend="__storage_test_8cpp_1a1b22fe9aeb085abcac57c377738e5875">TEST</link>(StorageTest,&#32;checkCapacityShouldReturnAvailable)
+<anchor xml:id="__storage_test_8cpp_source_1l00030"/>00030 {
+<anchor xml:id="__storage_test_8cpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<link linkend="_class_storage">Storage</link>&#32;storage(10);
+<anchor xml:id="__storage_test_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;EXPECT_EQ(storage.<link linkend="_class_storage_1a21a267ec9e43c6147c56e56a347d5784">checkCapacity</link>(100),&#32;<link linkend="__storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa1e229ccb8b53a57de4ebb11c2d15272e">AVAILABLE</link>);
+<anchor xml:id="__storage_test_8cpp_source_1l00033"/>00033 }
+<anchor xml:id="__storage_test_8cpp_source_1l00034"/>00034 
+<anchor xml:id="__storage_test_8cpp_source_1l00038"/><link linkend="__storage_test_8cpp_1a24b788d1e57b102603f7d66a66e5a8b4">00038</link> <link linkend="__storage_test_8cpp_1a1b22fe9aeb085abcac57c377738e5875">TEST</link>(StorageTest,&#32;checkCapacityShouldReturnFully)
+<anchor xml:id="__storage_test_8cpp_source_1l00039"/>00039 {
+<anchor xml:id="__storage_test_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<link linkend="_class_storage">Storage</link>&#32;storage(100);
+<anchor xml:id="__storage_test_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;EXPECT_EQ(storage.<link linkend="_class_storage_1a21a267ec9e43c6147c56e56a347d5784">checkCapacity</link>(100),&#32;<link linkend="__storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa8fd6994b2300416d1ad947a50d833850">FULLY</link>);
+<anchor xml:id="__storage_test_8cpp_source_1l00042"/>00042 
+<anchor xml:id="__storage_test_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;<link linkend="_class_storage">Storage</link>&#32;storage2(150);
+<anchor xml:id="__storage_test_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;EXPECT_EQ(storage2.<link linkend="_class_storage_1a21a267ec9e43c6147c56e56a347d5784">checkCapacity</link>(100),&#32;<link linkend="__storage_8h_1aa3ad3663894c15a6c47a41a02d64e86fa8fd6994b2300416d1ad947a50d833850">FULLY</link>);
+<anchor xml:id="__storage_test_8cpp_source_1l00045"/>00045 }
+</programlisting></section>

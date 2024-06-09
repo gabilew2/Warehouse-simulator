@@ -3,6 +3,15 @@ set(PROJECT_SOURCES
 )
 
 add_subdirectory(gui)
+add_subdirectory(Event)
+add_subdirectory(Product)
+add_subdirectory(Report)
+add_subdirectory(SalesReport)
+add_subdirectory(Simulation)
+add_subdirectory(Storage)
+add_subdirectory(Warehouse)
+add_subdirectory(WarehouseReport)
+
 
 add_executable(${CMAKE_PROJECT_NAME} ${PROJECT_SOURCES})
 
@@ -12,6 +21,14 @@ target_compile_definitions(${CMAKE_PROJECT_NAME}
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE
     Threads::Threads
     GuiLib
+    SimulationLib
+    WarehouseLib
+    SalesReportLib
+    WarehouseReportLib
+    EventLib
+    ProductLib
+    ReportLib
+    StorageLib
     Qt6::Widgets
 )
 

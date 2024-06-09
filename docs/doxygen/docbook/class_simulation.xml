@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_simulation" xml:lang="en-US">
+<title>Simulation Class Reference</title>
+<indexterm><primary>Simulation</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_simulation">Simulation</link> class manages the overall department store simulation. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Simulation.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_simulation_1a5b224cc5b36bcc8eb29689aff223de41">Simulation</link> ()</para>
+
+<para>Construct a new <link linkend="_class_simulation">Simulation</link> object. </para>
+</listitem>
+            <listitem><para><link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link> <link linkend="_class_simulation_1aa0e23779d0aa555ae836a646b8b1d715">conductCycle</link> ()</para>
+
+<para>Conducts a simulation cycle, processing events for the current cycle. </para>
+</listitem>
+            <listitem><para><link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link> <link linkend="_class_simulation_1a0caa90613b0a2e52360c7cd6f5530023">respondToEvent</link> (<link linkend="_class_event">Event</link> &amp;event)</para>
+
+<para>Responds to a specific event. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_simulation_1ae5c367f87c0b5dc9740bc6d00e44e72c">run</link> ()</para>
+
+<para>Initiates the simulation by running the main loop. </para>
+</listitem>
+            <listitem><para><link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link> <link linkend="_class_simulation_1a470014a191023a8e7a485491695d4c9d">processEvents</link> ()</para>
+
+<para>Processes all scheduled events. </para>
+</listitem>
+            <listitem><para>QString <link linkend="_class_simulation_1ac2a7464b86a88a8ff09766825836590b">generateReport</link> ()</para>
+
+<para>Generates a report summarizing simulation results. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_simulation">Simulation</link> class manages the overall department store simulation. </para>
+
+
+
+<para>This class orchestrates the simulation process, including event handling, warehouse management, product operations, and reporting. </para>
+<para>
+Definition at line <link linkend="__simulation_8h_source_1l00028">28</link> of file <link linkend="__simulation_8h_source">Simulation.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_simulation_1a5b224cc5b36bcc8eb29689aff223de41"/><section>
+    <title>Simulation()</title>
+<indexterm><primary>Simulation</primary><secondary>Simulation</secondary></indexterm>
+<indexterm><primary>Simulation</primary><secondary>Simulation</secondary></indexterm>
+<para><computeroutput>Simulation::Simulation ( )</computeroutput></para><para>
+
+<para>Construct a new <link linkend="_class_simulation">Simulation</link> object. </para>
+</para>
+
+<para>Sets up the initial state of the simulation, including loading settings and preparing the environment. </para>
+<para>
+Definition at line <link linkend="__simulation_8cpp_source_1l00011">11</link> of file <link linkend="__simulation_8cpp_source">Simulation.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_simulation_1aa0e23779d0aa555ae836a646b8b1d715"/><section>
+    <title>conductCycle()</title>
+<indexterm><primary>conductCycle</primary><secondary>Simulation</secondary></indexterm>
+<indexterm><primary>Simulation</primary><secondary>conductCycle</secondary></indexterm>
+<para><computeroutput><link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link> Simulation::conductCycle ( )</computeroutput></para><para>
+
+<para>Conducts a simulation cycle, processing events for the current cycle. </para>
+</para>
+
+<para>Processes events and updates the simulation state for each cycle. <formalpara><title>Returns</title>
+
+<para>Status of the cycle (success or failure). </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__simulation_8cpp_source_1l00191">191</link> of file <link linkend="__simulation_8cpp_source">Simulation.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_simulation_1ac2a7464b86a88a8ff09766825836590b"/><section>
+    <title>generateReport()</title>
+<indexterm><primary>generateReport</primary><secondary>Simulation</secondary></indexterm>
+<indexterm><primary>Simulation</primary><secondary>generateReport</secondary></indexterm>
+<para><computeroutput>QString Simulation::generateReport ( )</computeroutput></para><para>
+
+<para>Generates a report summarizing simulation results. </para>
+</para>
+
+<para>Compiles data from the simulation into a formatted report string. <formalpara><title>Returns</title>
+
+<para>QString A summary report of the simulation results. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__simulation_8cpp_source_1l00332">332</link> of file <link linkend="__simulation_8cpp_source">Simulation.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_simulation_1a470014a191023a8e7a485491695d4c9d"/><section>
+    <title>processEvents()</title>
+<indexterm><primary>processEvents</primary><secondary>Simulation</secondary></indexterm>
+<indexterm><primary>Simulation</primary><secondary>processEvents</secondary></indexterm>
+<para><computeroutput><link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link> Simulation::processEvents ( )</computeroutput></para><para>
+
+<para>Processes all scheduled events. </para>
+</para>
+
+<para>Invokes conductCycle to process events for the current cycle. <formalpara><title>Returns</title>
+
+<para>Status of proccessing events). </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__simulation_8cpp_source_1l00178">178</link> of file <link linkend="__simulation_8cpp_source">Simulation.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_simulation_1a0caa90613b0a2e52360c7cd6f5530023"/><section>
+    <title>respondToEvent()</title>
+<indexterm><primary>respondToEvent</primary><secondary>Simulation</secondary></indexterm>
+<indexterm><primary>Simulation</primary><secondary>respondToEvent</secondary></indexterm>
+<para><computeroutput><link linkend="__product_8h_1a015eb90e0de9f16e87bd149d4b9ce959">status</link> Simulation::respondToEvent (<link linkend="_class_event">Event</link> &amp; event)</computeroutput></para><para>
+
+<para>Responds to a specific event. </para>
+</para>
+
+<para>Handles the given event based on its type and updates the simulation state accordingly. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>event</entry><entry>
+<para>The event to handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Status of event handling (success or failure). </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__simulation_8cpp_source_1l00229">229</link> of file <link linkend="__simulation_8cpp_source">Simulation.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_simulation_1ae5c367f87c0b5dc9740bc6d00e44e72c"/><section>
+    <title>run()</title>
+<indexterm><primary>run</primary><secondary>Simulation</secondary></indexterm>
+<indexterm><primary>Simulation</primary><secondary>run</secondary></indexterm>
+<para><computeroutput>void Simulation::run ( )</computeroutput></para><para>
+
+<para>Initiates the simulation by running the main loop. </para>
+</para>
+
+<para>Starts the simulation loop, generating cycles, processing events, and generating reports. </para>
+<para>
+Definition at line <link linkend="__simulation_8cpp_source_1l00110">110</link> of file <link linkend="__simulation_8cpp_source">Simulation.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/Simulation/<link linkend="__simulation_8h">Simulation.h</link>src/Simulation/<link linkend="__simulation_8cpp">Simulation.cpp</link></section>
+</section>

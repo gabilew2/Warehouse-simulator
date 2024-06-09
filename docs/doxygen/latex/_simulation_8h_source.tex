@@ -1,0 +1,44 @@
+\doxysection{Simulation.\+h}
+\hypertarget{_simulation_8h_source}{}\label{_simulation_8h_source}\index{src/Simulation/Simulation.h@{src/Simulation/Simulation.h}}
+\mbox{\hyperlink{_simulation_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ SIMULATION\_H}}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ SIMULATION\_H}}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_warehouse_8h}{Warehouse/Warehouse.h}}>}}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_warehouse_report_8h}{WarehouseReport/WarehouseReport.h}}>}}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_sales_report_8h}{SalesReport/SalesReport.h}}>}}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_event_8h}{Event/Event.h}}>}}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <QList>}}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <QDateTime>}}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <QFile>}}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <QRandomGenerator>}}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00019}00019\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00028}\mbox{\hyperlink{class_simulation}{00028}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_simulation}{Simulation}}}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00029}00029\ \{}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00030}00030\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00031}00031\ \ \ \ \ \textcolor{keywordtype}{int}\ currentCycle;\ }
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00032}00032\ \ \ \ \ \textcolor{keywordtype}{int}\ seed;\ }
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00033}00033\ \ \ \ \ QList<Event>\ events;\ }
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00034}00034\ \ \ \ \ QDateTime\ currentTime;\ }
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00035}00035\ \ \ \ \ QList<Warehouse>\ Warehouses;\ }
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00037}00037\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{class_simulation_a5b224cc5b36bcc8eb29689aff223de41}{Simulation}}();}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00051}00051\ \ \ \ \ \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}}\ \mbox{\hyperlink{class_simulation_aa0e23779d0aa555ae836a646b8b1d715}{conductCycle}}();}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00060}00060\ \ \ \ \ \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}}\ \mbox{\hyperlink{class_simulation_a0caa90613b0a2e52360c7cd6f5530023}{respondToEvent}}(\mbox{\hyperlink{class_event}{Event}}\&\ event);}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00067}00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_simulation_ae5c367f87c0b5dc9740bc6d00e44e72c}{run}}();}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00075}00075\ \ \ \ \ \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}}\ \mbox{\hyperlink{class_simulation_a470014a191023a8e7a485491695d4c9d}{processEvents}}();}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00083}00083\ \ \ \ \ QString\ \mbox{\hyperlink{class_simulation_ac2a7464b86a88a8ff09766825836590b}{generateReport}}();}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00084}00084\ \};}
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_simulation_8h_source_l00086}00086\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
