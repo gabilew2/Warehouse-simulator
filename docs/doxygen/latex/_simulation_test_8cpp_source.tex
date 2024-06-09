@@ -14,24 +14,25 @@
 \DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00020}\mbox{\hyperlink{_simulation_test_8cpp_a26b65653dbc8b10b57767b80f92df2aa}{00020}}\ \mbox{\hyperlink{_simulation_test_8cpp_aa076ee82fea3693037730bc0b51196c2}{TEST}}(SimulationTest,\ processEvents)}
 \DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00021}00021\ \{}
 \DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{class_simulation}{Simulation}}\ simulation;}
-\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00023}00023\ \ \ \ \ simulation.\mbox{\hyperlink{class_simulation_a470014a191023a8e7a485491695d4c9d}{processEvents}}();}
-\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00024}00024\ \}}
-\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00025}00025\ }
-\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00029}\mbox{\hyperlink{_simulation_test_8cpp_af69bc463335db94e30c8a973335caa26}{00029}}\ \mbox{\hyperlink{_simulation_test_8cpp_aa076ee82fea3693037730bc0b51196c2}{TEST}}(SimulationTest,\ conductCycle)}
-\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00030}00030\ \{}
-\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{class_simulation}{Simulation}}\ simulation;}
-\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}}\ result\ =\ simulation.\mbox{\hyperlink{class_simulation_aa0e23779d0aa555ae836a646b8b1d715}{conductCycle}}();}
-\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00033}00033\ \ \ \ \ ASSERT\_EQ(result,\ \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8}{SUCCESS}});}
-\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00034}00034\ \}}
-\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00039}\mbox{\hyperlink{_simulation_test_8cpp_af6c06f4cec53cf42a47dfd064957530b}{00039}}\ \mbox{\hyperlink{_simulation_test_8cpp_aa076ee82fea3693037730bc0b51196c2}{TEST}}(SimulationTest,\ generateReport)}
-\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00040}00040\ \{}
-\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00041}00041\ \ \ \ \ \mbox{\hyperlink{class_simulation}{Simulation}}\ simulation;}
-\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00042}00042\ \ \ \ \ QString\ report\ =\ simulation.\mbox{\hyperlink{class_simulation_ac2a7464b86a88a8ff09766825836590b}{generateReport}}();}
-\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00043}00043\ \ \ \ \ ASSERT\_TRUE(report.contains(\textcolor{stringliteral}{"{}Warehouse\ ID,"{}}));}
-\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00044}00044\ \ \ \ \ ASSERT\_TRUE(report.contains(\textcolor{stringliteral}{"{}Capacity"{}}));}
-\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00045}00045\ \ \ \ \ ASSERT\_TRUE(report.contains(\textcolor{stringliteral}{"{}Product\ Name,Price,Quantity"{}}));}
-\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00046}00046\ \}}
-\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}}\ result\ =\ simulation.\mbox{\hyperlink{class_simulation_a470014a191023a8e7a485491695d4c9d}{processEvents}}();}
+\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00024}00024\ \ \ \ \ ASSERT\_EQ(result,\ \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90}{ERROR}});}
+\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00025}00025\ \}}
+\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00030}\mbox{\hyperlink{_simulation_test_8cpp_af69bc463335db94e30c8a973335caa26}{00030}}\ \mbox{\hyperlink{_simulation_test_8cpp_aa076ee82fea3693037730bc0b51196c2}{TEST}}(SimulationTest,\ conductCycle)}
+\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00031}00031\ \{}
+\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{class_simulation}{Simulation}}\ simulation;}
+\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}}\ result\ =\ simulation.\mbox{\hyperlink{class_simulation_aa0e23779d0aa555ae836a646b8b1d715}{conductCycle}}();}
+\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00034}00034\ \ \ \ \ ASSERT\_EQ(result,\ \mbox{\hyperlink{_product_8h_a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90}{ERROR}});}
+\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00035}00035\ \}}
+\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00040}\mbox{\hyperlink{_simulation_test_8cpp_af6c06f4cec53cf42a47dfd064957530b}{00040}}\ \mbox{\hyperlink{_simulation_test_8cpp_aa076ee82fea3693037730bc0b51196c2}{TEST}}(SimulationTest,\ generateReport)}
+\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00041}00041\ \{}
+\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00042}00042\ \ \ \ \ \mbox{\hyperlink{class_simulation}{Simulation}}\ simulation;}
+\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00043}00043\ \ \ \ \ QString\ report\ =\ simulation.\mbox{\hyperlink{class_simulation_ac2a7464b86a88a8ff09766825836590b}{generateReport}}();}
+\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00044}00044\ \ \ \ \ ASSERT\_TRUE(report.contains(\textcolor{stringliteral}{"{}Warehouse\ ID,"{}}));}
+\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00045}00045\ \ \ \ \ ASSERT\_TRUE(report.contains(\textcolor{stringliteral}{"{}Capacity"{}}));}
+\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00046}00046\ \ \ \ \ ASSERT\_TRUE(report.contains(\textcolor{stringliteral}{"{}Product\ Name,Price,Quantity"{}}));}
+\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00047}00047\ \}}
+\DoxyCodeLine{\Hypertarget{_simulation_test_8cpp_source_l00048}00048\ }
 
 \end{DoxyCode}

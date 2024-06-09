@@ -6650,7 +6650,7 @@ Test to validate the processEvents method. }{
 {\b TEST} (SimulationTest, conductCycle)\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Test to check if the conductCycle method processes the simulation cycle successfully. }{
+Test to check if the conductCycle method processes the simulation cycle correctly. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
@@ -6690,9 +6690,9 @@ TEST (SimulationTest , conductCycle )}}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Test to check if the conductCycle method processes the simulation cycle successfully. }}\par
+Test to check if the conductCycle method processes the simulation cycle correctly. }}\par
 {
-Definition at line {\b 29} of file {\b SimulationTest.cpp}.}\par
+Definition at line {\b 30} of file {\b SimulationTest.cpp}.}\par
 }
 {\xe \v TEST\:SimulationTest.cpp}
 {\xe \v SimulationTest.cpp\:TEST}
@@ -6709,7 +6709,7 @@ TEST (SimulationTest , generateReport )}}
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Test to ensure that the generateReport method produces a report. }}\par
 {
-Definition at line {\b 39} of file {\b SimulationTest.cpp}.}\par
+Definition at line {\b 40} of file {\b SimulationTest.cpp}.}\par
 }
 {\xe \v TEST\:SimulationTest.cpp}
 {\xe \v SimulationTest.cpp\:TEST}
@@ -6769,25 +6769,26 @@ Go to the documentation of this file.\par
 00020 TEST(SimulationTest, processEvents)\par
 00021 \{\par
 00022     Simulation simulation;\par
-00023     simulation.processEvents();\par
-00024 \}\par
-00025 \par
-00029 TEST(SimulationTest, conductCycle)\par
-00030 \{\par
-00031     Simulation simulation;\par
-00032     status result = simulation.conductCycle();\par
-00033     ASSERT_EQ(result, SUCCESS);\par
-00034 \}\par
-00035 \par
-00039 TEST(SimulationTest, generateReport)\par
-00040 \{\par
-00041     Simulation simulation;\par
-00042     QString report = simulation.generateReport();\par
-00043     ASSERT_TRUE(report.contains({\cf22 "Warehouse ID,"}));\par
-00044     ASSERT_TRUE(report.contains({\cf22 "Capacity"}));\par
-00045     ASSERT_TRUE(report.contains({\cf22 "Product Name,Price,Quantity"}));\par
-00046 \}\par
-00047 \par
+00023     status result = simulation.processEvents();\par
+00024     ASSERT_EQ(result, ERROR);\par
+00025 \}\par
+00026 \par
+00030 TEST(SimulationTest, conductCycle)\par
+00031 \{\par
+00032     Simulation simulation;\par
+00033     status result = simulation.conductCycle();\par
+00034     ASSERT_EQ(result, ERROR);\par
+00035 \}\par
+00036 \par
+00040 TEST(SimulationTest, generateReport)\par
+00041 \{\par
+00042     Simulation simulation;\par
+00043     QString report = simulation.generateReport();\par
+00044     ASSERT_TRUE(report.contains({\cf22 "Warehouse ID,"}));\par
+00045     ASSERT_TRUE(report.contains({\cf22 "Capacity"}));\par
+00046     ASSERT_TRUE(report.contains({\cf22 "Product Name,Price,Quantity"}));\par
+00047 \}\par
+00048 \par
 }
 \par \pard\plain 
 

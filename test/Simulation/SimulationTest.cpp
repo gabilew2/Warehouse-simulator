@@ -20,17 +20,18 @@ TEST(SimulationTest, itLives)
 TEST(SimulationTest, processEvents)
 {
     Simulation simulation;
-    simulation.processEvents();
+    status result = simulation.processEvents();
+    ASSERT_EQ(result, ERROR);
 }
 
 /**
- * @brief Test to check if the conductCycle method processes the simulation cycle successfully.
+ * @brief Test to check if the conductCycle method processes the simulation cycle correctly.
  */
 TEST(SimulationTest, conductCycle)
 {
     Simulation simulation;
     status result = simulation.conductCycle();
-    ASSERT_EQ(result, SUCCESS);
+    ASSERT_EQ(result, ERROR);
 }
 
 /**

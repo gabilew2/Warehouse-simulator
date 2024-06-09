@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="test/Simulation/SimulationTest.cpp" line="20" column="1" bodyfile="test/Simulation/SimulationTest.cpp" bodystart="20" bodyend="24"/>
+        <location file="test/Simulation/SimulationTest.cpp" line="20" column="1" bodyfile="test/Simulation/SimulationTest.cpp" bodystart="20" bodyend="25"/>
       </memberdef>
       <memberdef kind="function" id="_simulation_test_8cpp_1af69bc463335db94e30c8a973335caa26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -160,13 +160,13 @@
           <type>conductCycle</type>
         </param>
         <briefdescription>
-<para>Test to check if the conductCycle method processes the simulation cycle successfully. </para>
+<para>Test to check if the conductCycle method processes the simulation cycle correctly. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="test/Simulation/SimulationTest.cpp" line="29" column="1" bodyfile="test/Simulation/SimulationTest.cpp" bodystart="29" bodyend="34"/>
+        <location file="test/Simulation/SimulationTest.cpp" line="30" column="1" bodyfile="test/Simulation/SimulationTest.cpp" bodystart="30" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="_simulation_test_8cpp_1af6c06f4cec53cf42a47dfd064957530b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -186,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="test/Simulation/SimulationTest.cpp" line="39" column="1" bodyfile="test/Simulation/SimulationTest.cpp" bodystart="39" bodyend="46"/>
+        <location file="test/Simulation/SimulationTest.cpp" line="40" column="1" bodyfile="test/Simulation/SimulationTest.cpp" bodystart="40" bodyend="47"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -207,25 +207,26 @@
 <codeline lineno="20" refid="_simulation_test_8cpp_1a26b65653dbc8b10b57767b80f92df2aa" refkind="member"><highlight class="normal"><ref refid="_simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2" kindref="member">TEST</ref>(SimulationTest,<sp/>processEvents)</highlight></codeline>
 <codeline lineno="21"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_simulation" kindref="compound">Simulation</ref><sp/>simulation;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>simulation.<ref refid="class_simulation_1a470014a191023a8e7a485491695d4c9d" kindref="member">processEvents</ref>();</highlight></codeline>
-<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29" refid="_simulation_test_8cpp_1af69bc463335db94e30c8a973335caa26" refkind="member"><highlight class="normal"><ref refid="_simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2" kindref="member">TEST</ref>(SimulationTest,<sp/>conductCycle)</highlight></codeline>
-<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_simulation" kindref="compound">Simulation</ref><sp/>simulation;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/>result<sp/>=<sp/>simulation.<ref refid="class_simulation_1aa0e23779d0aa555ae836a646b8b1d715" kindref="member">conductCycle</ref>();</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_EQ(result,<sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959ac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">SUCCESS</ref>);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="_simulation_test_8cpp_1af6c06f4cec53cf42a47dfd064957530b" refkind="member"><highlight class="normal"><ref refid="_simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2" kindref="member">TEST</ref>(SimulationTest,<sp/>generateReport)</highlight></codeline>
-<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_simulation" kindref="compound">Simulation</ref><sp/>simulation;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>report<sp/>=<sp/>simulation.<ref refid="class_simulation_1ac2a7464b86a88a8ff09766825836590b" kindref="member">generateReport</ref>();</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_TRUE(report.contains(</highlight><highlight class="stringliteral">&quot;Warehouse<sp/>ID,&quot;</highlight><highlight class="normal">));</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_TRUE(report.contains(</highlight><highlight class="stringliteral">&quot;Capacity&quot;</highlight><highlight class="normal">));</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_TRUE(report.contains(</highlight><highlight class="stringliteral">&quot;Product<sp/>Name,Price,Quantity&quot;</highlight><highlight class="normal">));</highlight></codeline>
-<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/>result<sp/>=<sp/>simulation.<ref refid="class_simulation_1a470014a191023a8e7a485491695d4c9d" kindref="member">processEvents</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_EQ(result,<sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="_simulation_test_8cpp_1af69bc463335db94e30c8a973335caa26" refkind="member"><highlight class="normal"><ref refid="_simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2" kindref="member">TEST</ref>(SimulationTest,<sp/>conductCycle)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_simulation" kindref="compound">Simulation</ref><sp/>simulation;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959" kindref="member">status</ref><sp/>result<sp/>=<sp/>simulation.<ref refid="class_simulation_1aa0e23779d0aa555ae836a646b8b1d715" kindref="member">conductCycle</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_EQ(result,<sp/><ref refid="_product_8h_1a015eb90e0de9f16e87bd149d4b9ce959a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="_simulation_test_8cpp_1af6c06f4cec53cf42a47dfd064957530b" refkind="member"><highlight class="normal"><ref refid="_simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2" kindref="member">TEST</ref>(SimulationTest,<sp/>generateReport)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_simulation" kindref="compound">Simulation</ref><sp/>simulation;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>report<sp/>=<sp/>simulation.<ref refid="class_simulation_1ac2a7464b86a88a8ff09766825836590b" kindref="member">generateReport</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_TRUE(report.contains(</highlight><highlight class="stringliteral">&quot;Warehouse<sp/>ID,&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_TRUE(report.contains(</highlight><highlight class="stringliteral">&quot;Capacity&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_TRUE(report.contains(</highlight><highlight class="stringliteral">&quot;Product<sp/>Name,Price,Quantity&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="test/Simulation/SimulationTest.cpp"/>
   </compounddef>

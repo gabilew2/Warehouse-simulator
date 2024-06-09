@@ -20,7 +20,7 @@
 </listitem>
             <listitem><para><link linkend="__simulation_test_8cpp_1af69bc463335db94e30c8a973335caa26">TEST</link> (SimulationTest, conductCycle)</para>
 
-<para>Test to check if the conductCycle method processes the simulation cycle successfully. </para>
+<para>Test to check if the conductCycle method processes the simulation cycle correctly. </para>
 </listitem>
             <listitem><para><link linkend="__simulation_test_8cpp_1af6c06f4cec53cf42a47dfd064957530b">TEST</link> (SimulationTest, generateReport)</para>
 
@@ -43,10 +43,10 @@ Definition in file <link linkend="__simulation_test_8cpp_source">SimulationTest.
 <indexterm><primary>SimulationTest.cpp</primary><secondary>TEST</secondary></indexterm>
 <para><computeroutput>TEST (SimulationTest , conductCycle )</computeroutput></para><para>
 
-<para>Test to check if the conductCycle method processes the simulation cycle successfully. </para>
+<para>Test to check if the conductCycle method processes the simulation cycle correctly. </para>
 </para>
 <para>
-Definition at line <link linkend="__simulation_test_8cpp_source_1l00029">29</link> of file <link linkend="__simulation_test_8cpp_source">SimulationTest.cpp</link>.</para>
+Definition at line <link linkend="__simulation_test_8cpp_source_1l00030">30</link> of file <link linkend="__simulation_test_8cpp_source">SimulationTest.cpp</link>.</para>
 </section>
 <anchor xml:id="__simulation_test_8cpp_1af6c06f4cec53cf42a47dfd064957530b"/><section>
     <title>TEST()<computeroutput>[2/4]</computeroutput></title>
@@ -57,7 +57,7 @@ Definition at line <link linkend="__simulation_test_8cpp_source_1l00029">29</lin
 <para>Test to ensure that the generateReport method produces a report. </para>
 </para>
 <para>
-Definition at line <link linkend="__simulation_test_8cpp_source_1l00039">39</link> of file <link linkend="__simulation_test_8cpp_source">SimulationTest.cpp</link>.</para>
+Definition at line <link linkend="__simulation_test_8cpp_source_1l00040">40</link> of file <link linkend="__simulation_test_8cpp_source">SimulationTest.cpp</link>.</para>
 </section>
 <anchor xml:id="__simulation_test_8cpp_1aa076ee82fea3693037730bc0b51196c2"/><section>
     <title>TEST()<computeroutput>[3/4]</computeroutput></title>
